@@ -41,11 +41,22 @@ function footballPoints(wins, ties) {
   let points = 3*wins + ties;
   return points;
 }
-// console.log(footballPoints(10, 15));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let counterMax = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    let counter = 0;
+    for (let j = 0; j < array.length; j += 1) {
+      if (array[i] == array[j]) {
+        counter += 1;
+      }
+    if (counter > counterMax) {
+      counterMax = counter;
+    }
+    }
+  }
+  return counterMax;
 }
 
 // Desafio 7
