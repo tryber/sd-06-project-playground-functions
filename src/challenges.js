@@ -7,12 +7,12 @@ return false;
 }
 // Desafio 2
 function calcArea(base, height) {
-return base * height/2;=
+return base * height/2;
 }
 
 // Desafio 3
 function splitSentence() {
-return splitSentence.split(" ", 2)
+return splitSentence.split(" ", 2);
 }
 
 // Desafio 4
