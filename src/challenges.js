@@ -19,7 +19,6 @@ function splitSentence(frase) {
   // seu código aqui
   let acumulador = "";
   let novaLista = [];
-  
   for (let indice in frase) {
     let elemento = frase[indice]
     if (elemento !== " ") {
@@ -68,7 +67,7 @@ function highestCount(arrayNumeros) {
     }
   }
   return ocorrencias;
-} 
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
