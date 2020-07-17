@@ -9,8 +9,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let wordsSentence = sentence.split(' ');
+  return wordsSentence
 }
 
 // Desafio 4
@@ -34,8 +35,8 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  
 }
 
 // Desafio 9
