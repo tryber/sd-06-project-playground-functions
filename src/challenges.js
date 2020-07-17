@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(aboolean, bboolean) {
-  let control = false
-  if(aboolean >= bboolean && aboolean % 2 === 0){
-    control = true
+  if (aboolean === true && bboolean === true) {
+    return true
+  }else{
+  return false;
   }
-  return control;  
 }
 
 
@@ -18,14 +18,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(word) {
   let text = word.split(' ',5)
-
   return text;
 }
 
 // Desafio 4
 function concatName(array) {
   let concatenado = '';
-  for(let i = 0; i < array.length; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     concatenado = array[array.length-1] +", "+ array[0];
   }
   return concatenado;
@@ -34,13 +33,12 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontosTotais = wins * 3 + ties;
-  
-  return pontosTotais 
+  return pontosTotais
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  
 }
 
 // Desafio 7
