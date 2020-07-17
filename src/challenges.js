@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(c1, c2) {
 if (c1 === true && c2 === true){
-re = true;
+return true;
 } 
-re = false;
-return re;
+return false;
 }
 // Desafio 2
 function calcArea() {
