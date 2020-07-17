@@ -12,7 +12,7 @@ function calcArea(base, height) {
   // seu código aqui
   return (base * height)/2;
 }
-console.log(calcArea(15,28))
+
 
 // Desafio 3
 
@@ -20,7 +20,7 @@ function splitSentence(string) {
   // seu código aqui
   return string.split(' ')
 }
-console.log(splitSentence('go Trybe'))
+
 
 // Desafio 4
 function concatName(array) {
@@ -28,7 +28,7 @@ function concatName(array) {
   let last = array.length-1;
   return  array[last]+', '+array[0];
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -37,7 +37,7 @@ function footballPoints(wins,ties) {
   let emp = ties;
   return vit + emp;
 }
-console.log(footballPoints(5,3))
+
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
@@ -55,7 +55,7 @@ function highestCount(array) {
   }
   return time;
 } 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2'
   }
 }
-console.log(catAndMouse(4,4,4))
+
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
@@ -86,7 +86,7 @@ function fizzBuzz(array) {
     }
     return novo;
   }
-console.log(fizzBuzz([7,9]))
+
 // Desafio 9
 function encode() {
   // seu código aqui
