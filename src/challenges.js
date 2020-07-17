@@ -1,52 +1,51 @@
 // Desafio 1
 let valor1, valor2;
 function compareTrue(valor1, valor2) {
-  if( valor1 === true && valor2 === true ){
+  if( valor1 && valor2 === true){
     return true;
   }else{
     return false;
   }
 }
-console.log(compareTrue(valor1,valor2));
+//console.log(compareTrue(valor1,valor2));
 
 
 // Desafio 2
 let base;
 let altura;
 function calcArea(base,altura) {
-  return (base*altura)/2;
+  let area = (base*altura)/2;
+  return area
 }
-console.log(calcArea(5, 10));
+//console.log(calcArea(5, 10));
 
 // Desafio 3
 function splitSentence(testaString) {
   //testaString = "Go Trybe"
-  //let splitTestaString = testaString.split(" ");
-  
 }
 
 
 
 // Desafio 4
-let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+//let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName() {
   let arrayPrimeiroUltimo=[];
-  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length -1])+"," + arrayNomes[0];
+  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length -1]) + ',' + arrayNomes[0];
 }
-console.log(concatName());
+//console.log(concatName());
 
 // Desafio 5
 function footballPoints(ties, wins) {
-  return (ties * 1) + (wins * 3);
-  
+  let pontuacao = (ties * 1) + (wins * 3);
+  return pontuacao;
 }
-console.log(footballPoints(2,3));
+//console.log(footballPoints(2,3));
 
 
 // Desafio 6
-let arrayNumeros = [9, 1, 2, 3, 9, 5, 7],
+
 function highestCount() {
-  // seu código aqui
+  //seu código aqui
 }
 
 // Desafio 7
@@ -72,9 +71,6 @@ function fizzBuzz(arrayNumeros) {
   }
 }
   console.log(fizzBuzz(arrayNumeros));
-
-  
-
 
 // Desafio 9
 function encode() {
