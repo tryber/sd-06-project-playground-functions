@@ -31,14 +31,14 @@ function splitSentence(input) {
 
 // Desafio 4
 function concatName(arrayInput) {
-  let newString = arrayInput[arrayInput.length - 1] + ", " + arrayInput[0];
+  let newString = arrayInput[arrayInput.length - 1] + ', ' + arrayInput[0];
 
   return newString;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
