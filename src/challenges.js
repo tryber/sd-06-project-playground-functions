@@ -1,8 +1,7 @@
 // Desafio 1
-let valor1 = 0
-let valor2 = 1
+
 function compareTrue(valor1, valor2) {
-  if( valor1 === 0 && valor2 === 1 ){
+  if( valor1 === true && valor2 === true ){
     return true;
   }else{
     return false;
@@ -36,14 +35,14 @@ function concatName() {
 console.log(concatName());
 
 // Desafio 5
-let wins = 3;
-let ties = 1;
-function footballPoints() {
+function footballPoints(ties, wins) {
+  return (ties * 1) + (wins * 3);
   
 }
 
 
 // Desafio 6
+let arrayNumeros = [9, 1, 2, 3, 9, 5, 7],
 function highestCount() {
   // seu código aqui
 }
