@@ -65,7 +65,7 @@ function fizzBuzz(numbersArray) {
   for (let i = 0; i < numbersArray.length; i++){
     if (numbersArray[i] % 3 === 0) {
       return "fizz";
-    } else if (numbersArray[i] %  === 0) {
+    } else if (numbersArray[i] % 5 === 0) {
       return "buzz";
     } else if (numbersArray[i] % 3 === 0 && numbersArray[i] % 5 === 0) {
       return "fizzBuzz";
@@ -95,14 +95,30 @@ if (wordString[i] === "a"){
 } else if (wordString[i] === "o"){
   charEncode = "4";
 } else if (wordString[i] === "u") {
-  charEncode = 5;
+  charEncode = "5";
 }
 wordEncoded += charEncode;
 } return wordEncoded;
 }
-function decode() {
-  // seu código aqui
-}
+
+function decode(wordString) {
+  for ( let i = 0; i < wordString.length; i++){
+    let charDecode = wordString[i];
+    let wordDecoded;
+    if (wordString[i] === "1"){
+      charDecode = "a";
+    } else if (wordString[i] === "2"){
+      charDecode = "e";
+    } else if (wordString[i] === "3"){
+      charDecode = "i";
+    } else if (wordString[i] === "4"){
+      charDecode = "o";
+    } else if (wordString[i] === "5") {
+      charDecode = "u";
+    }
+    wordDecoded += charDecode;
+    } return wordDecoded;
+    }
 
 // Desafio 10
 function techList() {
