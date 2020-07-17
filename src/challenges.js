@@ -133,12 +133,16 @@ function decode(encodedString) {
 }
 
 // Desafio 10
-function techList(techlist, name) {
+function techList(techList, name) {
+  if (techList.length === 0) {
+    return 'Vazio!';
+  }
+  
   const objectList = [];
-  techlist.sort();
-
-  for (let i = 0; i < techlist.length; i += 1) {
-    const tech = techlist[i];
+  techList.sort();
+  
+  for (let i = 0; i < techList.length; i += 1) {
+    const tech = techList[i];
     objectList.push({tech, name});
   }
 
