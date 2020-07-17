@@ -32,14 +32,14 @@ function highestCount(numbers) {
   let highNumber = 0;
   let index = 0;
   let count = 0;
-  for (i in numbers){
-    if (numbers[index] <= numbers [i]){
+  for (let i in numbers) {
+    if (numbers[index] <= numbers[i]) {
       highNumber = numbers[i];
       index = i;
     }
   }
-  for (j in numbers){
-    if (numbers[j] === highNumber){
+  for (let j in numbers) {
+    if (numbers[j] === highNumber) {
       count += 1;
     }
   }
@@ -50,17 +50,13 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   if (mouse > cat1) {
     cat1 = mouse - cat1;
-  }
-  else{
-    cat1 = cat1 - mouse;
-  }
-  if (mouse > cat2) {
-    cat2 = mouse - cat2;
-  }
-  else {
-    cat2 = cat2 - mouse;
-  }
-  if (cat1 === cat2) {
+  } else {
+    cat1 -= mouse;
+  } if (mouse > cat2) {
+    cat2 = (mouse - cat2);
+  } else {
+    cat2 -= mouse;
+  } if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
   } else if (cat1 < cat2) {
     return 'cat1';
@@ -70,15 +66,15 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let newArray =[];
-  for(num in array) {
+  let newArray = [];
+  for (let num in array) {
     if (array[num] % 3 === 0 && array[num] % 5 === 0) {
       newArray.push('fizzBuzz');
-    }else if (array[num] % 3 === 0) {
+    } else if ((array[num] % 3) === 0) {
       newArray.push('fizz');
-    }else if (array[num] % 5 === 0) {
+    } else if (array[num] % 5 === 0) {
       newArray.push('buzz');
-    }else {
+    } else {
       newArray.push('bug!');
     }
   }
@@ -87,19 +83,17 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let string2 = "";
-  
-  for (indice in string) {
-    
+  let string2 = ' ';
+  for (let indice in string) {
     if (string[indice] === 'a') {
       string2 += '1';
-    } else if(string[indice] === 'e') {
+    } else if (string[indice] === 'e') {
       string2 += '2';
-    } else if(string[indice] === 'i') {
+    } else if (string[indice] === 'i') {
       string2 += '3';
-    } else if(string[indice] === 'o') {
+    } else if (string[indice] === 'o') {
       string2 += '4';
-    } else if(string[indice] === 'u') {
+    } else if (string[indice] === 'u') {
       string2 += '5';
     } else {
       string2 += string[indice];
@@ -108,19 +102,17 @@ function encode(string) {
   return string2;
 }
 function decode(string) {
-  let string2 = "";
-  
-  for (indice in string) {
-    
+  let string2 = ' ';
+  for (let indice in string) {
     if (string[indice] === '1') {
       string2 += 'a';
-    } else if(string[indice] === '2') {
+    } else if (string[indice] === '2') {
       string2 += 'e';
-    } else if(string[indice] === '3') {
+    } else if (string[indice] === '3') {
       string2 += 'i';
-    } else if(string[indice] === '4') {
+    } else if (string[indice] === '4') {
       string2 += 'o';
-    } else if(string[indice] === '5') {
+    } else if (string[indice] === '5') {
       string2 += 'u';
     } else {
       string2 += string[indice];
@@ -131,25 +123,23 @@ function decode(string) {
 
 // Desafio 10
 function techList(tec, name) {
-  let object = []
-
+  let object = [];
   if (tec.length === 0) {
     return 'Vazio!';
-  } else {
-    for (let indice = (tec.length-1); indice >= 0; indice-=1 ) {
-      object[indice] = {tech: tec[indice]};
-      object[indice].name = name;
-    }
-    object.sort(function (a, b) {
-      if (a.tech > b.tech) {
-        return 1;
-      }
-      if (a.tech < b.tech) {
-        return -1;
-      }
-      return 0;
-    });
   }
+  for (let indice = (tec.length - 1); indice >= 0; indice -= 1) {
+    object[indice] = { tech: tec[indice] };
+    object[indice].name = name;
+  }
+  object.sort(function(a, b) {
+    if (a.tech > b.tech) {
+      return 1;
+    }
+    if (a.tech < b.tech) {
+      return -1;
+    }
+    return 0;
+  });
   return object;
 }
 
