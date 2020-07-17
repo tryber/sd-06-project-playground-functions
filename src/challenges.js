@@ -52,21 +52,66 @@ console.log(footballPoints(3, 2))
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+let n = 0;
+let atual = 0;
+let numeroRepetido = 0;
+let abencoado = 0;
+
+function highestCount(array){
+    for (let i in array){
+    
+        for(let j in array){
+            if(array[i]===array[j]){
+                 n++;
+            }
+            //  if(array[i]>array[n]){
+            //         n++;
+            //  }
+        }
+   
+    }
+
+    return n;
 }
+
+console.log(highestCount([2, 2, 10, 3, 5, 3, 7, 3, 3]));
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let resultCat1 = cat1 - mouse;
+  let resultCat2 = cat2 - mouse;
+  let result;
+  if (resultCat1 === resultCat2) {
+    result = "Os gatos trombam e o rato foge"
+  } else if (resultCat1 > resultCat2) {
+    result = "Gato 2 pega o rato"
+  } else {
+    result = "Gato 1 pega o rato"
+  }
+  return result;
 }
+console.log(catAndMouse(2, 3, 3))
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let result
+let arrayNumeros = [8, 5]
+//function fizzBuzz(arrayNumeros) {
+  for (let i = 0; i <= arrayNumeros; i++) {
+    if (i % 3 === 0 && i % 5 ===0) {
+      arrayNumeros[i] = "fizzBuzz";
+    } else if ( i % 5 === 0) {
+      arrayNumeros[i] = "buzz";
+    } else if (i % 3 === 0) {
+      arrayNumeros[i] = "fizz";
+    } else {
+      arrayNumeros[i] = "bug";
+    }
+  //}
+  //return result
 }
+console.log(arrayNumeros[i]);
 
 
 // Desafio 9
