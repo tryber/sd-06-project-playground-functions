@@ -14,8 +14,8 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(String) {
+  retur String.split; 
 }
 
 // Desafio 4
@@ -88,4 +88,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
