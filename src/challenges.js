@@ -32,7 +32,7 @@ function splitSentence(lucas) {
 function concatName(meuNome) {
   // seu código aqui
 let meuNome = ['Lucas', 'Souza', 'de', 'Miranda'];
-let meuNomeConcat = meuNome[meuNome.length -1] + ", " + meuNome[0]
+let meuNomeConcat = meuNome[meuNome.length -1] + ', ' + meuNome[0]
 return meuNomeconcat;
 
 
