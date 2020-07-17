@@ -18,8 +18,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomeCompleto) {
+  let nome = nomeCompleto[0] + ' ' + nomeCompleto[nomeCompleto.length-1];
+  return nome;
 }
 
 // Desafio 5
@@ -76,7 +77,7 @@ console.log('Exercício 2: ' + calcArea(30,30));
 
 console.log('Exercício 3: ' + splitSentence('go Trybe'));
 
-console.log('Exercício 4: ' );
+console.log('Exercício 4: ' + concatName(['Vagner','Pereira','de','Sousa']));
 
 console.log('Exercício 5: ' );
 
