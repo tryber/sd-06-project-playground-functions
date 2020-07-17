@@ -36,6 +36,7 @@ function splitSentence(string) {
 // splitSentence("ola tudo bem");
 
 
+
 // Desafio 4
 function concatName() {
   // seu código aqui
