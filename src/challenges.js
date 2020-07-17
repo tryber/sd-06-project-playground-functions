@@ -93,21 +93,22 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   // seu código aqui
+  let novaArray = [];
   for (let i in arrayNumeros) {
     let numero = arrayNumeros[i];
   
-    if (numero % 3 === 0 || numero % 5 === 0) {
-      return 'fizzBuzz';
+    if (numero % 3 === 0 && numero % 5 === 0) {
+      novaArray.push('fizzBuzz');
     } else if (numero % 3 === 0) {
-      return 'fizz';
+      novaArray.push('fizz');
     } else if (numero % 5 === 0) {
-      return 'buzz';
+      novaArray.push('buzz');
     } else {
-      return 'bug';
+      novaArray.push('bug!');;
     }
   }
+  return novaArray;
 }
-
 
 // Desafio 9
 function encode() {
