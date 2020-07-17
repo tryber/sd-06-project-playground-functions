@@ -20,7 +20,7 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(teste) {
   let primeira = teste[0];
-  let ultima = teste[ teste.length -1];
+  let ultima = teste[(teste.length -1)];
   let arrayResponse = '';
   arrayResponse = ultima.concat(', ').concat(primeira);
   return arrayResponse;
@@ -32,8 +32,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(a) {
+  let maior = 0;
+  let cont = 0;
+
+  a.forEach(e => {
+      if (e > maior) {
+        maior = e;  
+      }
+  });
+  a.forEach(e => {
+   if ( e === maior) {
+     cont+= 1;  
+   }
+  });
+  return cont;
 }
 
 // Desafio 7
