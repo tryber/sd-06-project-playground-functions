@@ -39,7 +39,7 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let vitorias = wins * 3;
-  let pontos = vitorias - ties;
+  let pontos = vitorias + ties;
   return pontos;
 }
 
