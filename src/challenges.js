@@ -22,7 +22,7 @@ function splitSentence(frase) {
 function concatName(names) {
   let resultadoNome = "";
   resultadoNome = names[names.length -1] + ", " + names[0];
-  return "'" + resultadoNome + "'"
+  return resultadoNome
 }
 
 // Desafio 5
@@ -51,8 +51,16 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  distanciaCat1 = mouse - cat1;
-  distanciaCat2 = mouse - cat2;
+  if (mouse > cat1){
+    distanciaCat1 = mouse - cat1;
+  } else {
+    distanciaCat1 = cat1 - mouse;
+  }
+  if (mouse > cat2){  
+    distanciaCat2 = mouse - cat2;
+  } else {
+    distanciaCat2 = cat2 - mouse;
+  }
   if (distanciaCat1 > distanciaCat2){
     return ("cat2");
   } else if (distanciaCat1 < distanciaCat2){
