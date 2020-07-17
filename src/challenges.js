@@ -45,18 +45,19 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let counterMax = 0;
+  let bigger = 0;
+  let counter = 0;
   for (let i = 0; i < array.length; i += 1) {
-    let counter = 0;
-    for (let j = 0; j < array.length; j += 1) {
-      if (array[i] === array[j]) {
-        counter += 1;
-      }
-    }
-    if (counter > counterMax) {
-      counterMax = counter;
+    if (array[i] > bigger) {
+      bigger = array[i];
     }
   }
-  return counterMax - 1;
+  for (let j = 0; j < array.length; j += 1) {
+    if (array[j] === bigger) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
@@ -64,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance1 = cat1 - mouse;
   let distance2 = cat2 - mouse;
   if (distance1 === distance2) {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
   } else if (distance1 < distance2) {
     return 'cat1';
   }
