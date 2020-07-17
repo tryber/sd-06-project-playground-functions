@@ -58,18 +58,17 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(n) {
   let result = [];
-  for (let index = 0; index < n.length; index += 1){
+  for (let index = 0; index < n.length; index += 1) {
     let fiveDivisionResult = n[index] % 5;
     let threeDivisionResult = n[index] % 3;
-    
     if (threeDivisionResult === 0 && fiveDivisionResult === 0) {
-      result.push('FizzBuzz');
+      result.push('fizzBuzz');
     } else if (threeDivisionResult === 0) {
-      result.push('Fizz');
+      result.push('fizz');
     } else if (fiveDivisionResult === 0) {
-      result.push('Buzz');
+      result.push('buzz');
     } else {
-      result.push('Bug');
+      result.push('bug!');
     }
   }
   return result;
