@@ -86,22 +86,19 @@ function fizzBuzz(array) {
             if (array[i] % 5 === 0) {
                 //é divisível pelos dois
                 console.log("fizzBuzz");
-                return "fizzBuzz";
             } else {
                 console.log("fizz");
-                return "fizz";
             }
         } else if (array[i] % 5 === 0) {
             //é divisível por 5
             console.log("buzz");
-            return "buzz";
         } else {
+            // não é divisível por nenhum deles
             console.log("bug!");
-            return "bug!";
         }
     }
 }
-fizzBuzz[[2, 15, 7, 9, 45]]
+fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode(string) {
@@ -184,7 +181,7 @@ function techList(array, name) {
     console.log(objects);
     return objects;
 }
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Ricardo");
+//techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Ricardo");
 
 // Desafio 11
 function generatePhoneNumber() {
