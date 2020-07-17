@@ -24,7 +24,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let string = "";
+  let string = '';
   for (let i = array.length - 1; i >= 0; i -= array.length - 1) {
     string.push(array[i])
   }
@@ -34,7 +34,7 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  vitorias = wins*3;
+  let vitorias = wins * 3;
   let pontos = vitorias - ties;
   return pontos;
 }
@@ -49,7 +49,7 @@ function highestCount(numeros) {
       maiorNumero = numeros[n]
     }
   }
-  for (n = 0; n<numeros.length; n+=1) {
+  for (let n = 0; n < numeros.length; n+=1) {
     if (maiorNumero === numeros[n]) {
       contagem += 1;
     }
