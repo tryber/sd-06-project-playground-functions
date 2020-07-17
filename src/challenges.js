@@ -67,13 +67,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
     if (cat1pos < cat2pos) {
         console.log("O cat1 está mais perto do rato");
-        return cat1;
+        return "cat1";
     } else if (cat2pos < cat1pos) {
         console.log("O cat2 está mais perto do rato");
-        return cat2;
+        return "cat2";
     } else {
         console.log("Os gatos trombam e o rato foge.");
-        return "Os gatos trombam e o rato foge.";
+        return "os gatos trombam e o rato foge";
     }
 }
 
