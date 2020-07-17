@@ -40,9 +40,21 @@ function footballPoints(wins,ties) {
 console.log("Exercicio 5: " + footballPoints(20,10));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let maiornumero = numbers[0];
+  let contagem = 0;
+  for(let i = 0; i < numbers.length; i++) {
+    if(numbers[i] > maiornumero) 
+      maiornumero = numbers[i];
+  }
+  for(let i = 0; i < numbers.length; i++) {
+    if(numbers[i] === maiornumero){
+    contagem +=1
+    }
+  }
+  return contagem
 }
+console.log("Exercicio 6: " + highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
