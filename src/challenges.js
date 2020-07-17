@@ -1,7 +1,7 @@
 // Desafio 1
-console.log(`*** 1 ***`);
-let firstBoolean = true;
-let secondBoolean = false;
+console.log('*** 1 ***');
+const firstBoolean = true;
+const secondBoolean = false;
 
 function compareTrue(firstBoolean, secondBoolean) {
   return firstBoolean && secondBoolean;
