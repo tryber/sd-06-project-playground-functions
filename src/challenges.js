@@ -28,9 +28,11 @@ function splitSentence(palavra) {
 // Desafio 4
 function concatName(arrayDeNomes) {
   // seu código aqui
+  let qtdNomes = arrayDeNomes.length;
   let primeiroItem = arrayDeNomes[0];
-  let ultimoItem = arrayDeNomes[arrayDeNomes.length - 1
-  return ultimoItem + ", " + primeiroItem;
+  let ultimoItem = arrayDeNomes[qtdNomes - 1];
+  // return ultimoItem + ", " + primeiroItem;
+  return console.log(ultimoItem + ", " + primeiroItem);
 }
 
 // Desafio 5
