@@ -25,7 +25,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  resultado = 0;
+  let resultado = 0;
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === array[i + 1]) {
       resultado += 1;
@@ -39,9 +39,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = cat1 - mouse;
   let distanciaCat2 = cat2 - mouse;
   if (distanciaCat1 < distanciaCat2) {
-    return cat1;
+    return "cat1";
   } else if (distanciaCat2 < distanciaCat1) {
-    return cat2;
+    return "cat2";
   } else {
     return "os gatos trombam e o rato foge"
   }
