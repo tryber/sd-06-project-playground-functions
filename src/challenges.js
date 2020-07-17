@@ -58,13 +58,13 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = 0;
   let dist2 = 0;
-  
+
   if (cat1 > mouse) {
     dist1 = cat1 - mouse;
   } else {
     dist1 = mouse - cat1;
   }
-  
+
   if (cat2 > mouse) {
     dist2 = cat2 - mouse;
   } else {
@@ -80,8 +80,16 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
+      return 'fizz';
+    } else if (array[i] % 3 !== 0 && array[i] % 5 === 0) {
+      return 'buzz';
+    } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      return 'fizzBuzz';
+    }
+    return 'bug!';
 }
 
 // Desafio 9
