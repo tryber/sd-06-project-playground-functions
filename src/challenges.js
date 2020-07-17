@@ -7,16 +7,29 @@ function compareTrue( bool1 , bool2 ) {
     return false;
   }
 }
-console.log(calcArea(10,2.30));
-;// Desafio 2
+
+// Desafio 2
 function calcArea( base , height ) {
   // seu código aqui
-  return base*height/2;
+  return base * height/2;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence( str ) {
   // seu código aqui
+  var txt = "";
+  var strArray = [];
+  var counter = 0;
+  for (let i = 0; i < str.length; i = i + 1) {
+    if ( str[i] != " " ) {
+      txt = txt + str[i]
+    } else if ( str[i] == " " && txt != ""){ 
+      strArray[counter] = txt;
+      txt = "";
+      counter = counter + 1;
+    }
+  }
+  return strArray;
 }
 
 // Desafio 4
