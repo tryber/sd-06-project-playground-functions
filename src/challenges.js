@@ -42,10 +42,17 @@ function footballPoints(wins,ties) {
 console.log(footballPoints(3,4));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numerosSortidos) {
+  let aux = numerosSortidos[0];
+  for(posicao in numerosSortidos){
+    if(aux < numerosSortidos[posicao]){
+      aux = numerosSortidos[posicao];
+    }
+  }
+  return aux;
 }
-
+numerosSortidos = [4,1,2,6,5,9,8,9,4,1,9];
+console.log(highestCount(numerosSortidos));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
