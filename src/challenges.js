@@ -145,16 +145,18 @@ function encode(string) {
   result = result.replace(/u/g,5);
   return result;
 }
+console.log(encode("hi there!"));
 
 function decode(string) {
   // seu código aqui
-  let result = string.replace(/1/g,a);
-  result = result.replace(/2/g,e);
-  result = result.replace(/3/g,i);
-  result = result.replace(/4/g,o;
-  result = result.replace(/5/g,u);
+  let result = string.replace(/1/g,"a");
+  result = result.replace(/2/g,"e");
+  result = result.replace(/3/g,"i");
+  result = result.replace(/4/g,"o");
+  result = result.replace(/5/g,"u");
   return result;
 }
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
