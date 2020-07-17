@@ -87,9 +87,9 @@ function fizzBuzz(array) {
     if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
       answer.push('fizz');
     } else if (array[i] % 3 !== 0 && array[i] % 5 === 0) {
-      answer('buzz');
+      answer.push('buzz');
     } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      answer('fizzBuzz');
+      answer.push('fizzBuzz');
     }
     answer.push('bug!');
   }
