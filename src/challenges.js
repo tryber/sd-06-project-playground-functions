@@ -111,11 +111,64 @@ function fizzBuzz(arrayNumeros) {
 }
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+  let novaFrase = [];
+  for (let i in frase) {
+    let letra = frase[i];
+    let conversao = codec(letra);
+    novaFrase.push(conversao);
+  }
+  return novaFrase.join("");
 }
-function decode() {
+
+function decode(frase) {
   // seu código aqui
+  let novaFrase = [];
+  for (let i in frase) {
+    let letra = frase[i];
+    let conversao = codec(letra);
+    novaFrase.push(conversao);
+  }
+  return novaFrase.join("");
+}
+
+function codec(letter) {
+  switch (letter) {
+    case "a":
+      return 1;    
+      break;
+    case "e":
+      return 2;
+      break;
+    case "i":
+      return 3;
+      break;
+    case "o":
+      return 4;
+      break;
+    case "u":
+      return 5;
+      break;
+    case "1":
+      return "a";
+      break;
+    case "2":
+      return "e";
+      break;
+    case "3":
+      return "i";
+      break;
+    case "4":
+      return "o";
+      break;
+    case "5":
+      return "u";
+      break;
+    default:
+      return letter;
+      break;
+  }
 }
 
 // Desafio 10
