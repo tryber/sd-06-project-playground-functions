@@ -11,9 +11,9 @@ compareTrue (93663639,93663639)
 
 // Desafio 2
 function calcArea(base, height) {
-  let areaTriangulo  = (base*height)/2
-  console.log(areaTriangulo)
-}
+  let areaTriangulo  = (base*height)/2}
+  console.log(calcArea=(areaTriangulo))
+
 calcArea=(2,3)
 // Desafio 3
 // seu código aqui
@@ -24,10 +24,17 @@ function splitSentence(string) {
 console.log(splitSentence=("todos amigos"))
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let arrayResposta=[]
+  for (let i=array.length-1; i>=0;i--){
+    if(i==array.length-1 || i==0){
+    arrayResposta.push(array[i])
+    }
+  }return arrayResposta
+  
 }
-
+console.log(concatName(["Lucas","João","Pedro"]))
 // Desafio 5
 function footballPoints() {
   // seu código aqui
