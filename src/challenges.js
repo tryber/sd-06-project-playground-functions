@@ -49,13 +49,30 @@ function highestCount(valores) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(mouse - cat1 > mouse - cat2 || mouse === cat2){
-    return cat2
-  }else if(mouse - cat1 < mouse - cat2 || mouse === cat2){
-    return cat1
-  }else if(cat1 === cat2){
-    return "os gatos trombam e o rato foge"
-  }
+  let posicaoCat1 = 0;
+  let posicaoCat2 = 0;
+  let pegaOuNaoPega = ""
+// os valores (mouse, cat1, cat2) não necessariamente incorrem em uma subtração de resultado positivo. Há que considerar a unidade da posição.
+  if(mouse > cat1){
+    posicaoCat1 = mouse - cat1
+  } else if(mouse < cat1){
+    posicaoCat1 = cat1 - mouse
+  } // valor da posição do gato1
+  if(mouse > cat2){
+    posicaoCat2 = mouse - cat2
+  } else if( mouse < cat2){
+    posicaoCat2 = cat2 - mouse
+  }// valor da posição do gato2
+
+  if(posicaoCat2 > posicaoCat1){
+    pegaOuNaoPega = "cat1"
+  } else if ( posicaoCat1 > posicaoCat2){
+    pegaOuNaoPega = "cat2"
+  } else {
+    pegaOuNaoPega = "os gatos trombam e o rato foge"
+  }// quem poderia pegar o rato ou se nenhum pega
+  return pegaOuNaoPega
+
 }
 
 // Desafio 8
@@ -76,8 +93,8 @@ function fizzBuzz(valoresFizzBuzz) {
 }
 
 // Desafio 9
-function encode(suaFraseParaNumero) {
-  for(let indice = 0; indice < suaFraseParaNumero.length; indice += 1){
+function encode(fraseParaNumero) {
+  for(let indice = 0; indice < fraseParaNumero.length; indice += 1){
 
   }
 }
