@@ -14,8 +14,8 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-let nomeString = "go Trybe";
 function splitSentence(nomeString) {
+  let nomeString = "go Trybe";
   return nomeString.split;
 }
 
