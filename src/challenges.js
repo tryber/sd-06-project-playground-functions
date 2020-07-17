@@ -1,6 +1,4 @@
 // Desafio 1
-let firstValue = 10;
-let secondValue = 10;
 function compareTrue(firstValue,secondValue) {
   if (firstValue === 10 && secondValue === 10){
     return true;
