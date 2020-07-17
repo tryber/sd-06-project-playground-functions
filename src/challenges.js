@@ -55,17 +55,15 @@ function highestCount(inteiros) {
   }
   let repetido = 0;
   let numero = 0;
-  let iNumero = 0;
   for (let i in inteiros) {
     if (numMaior === inteiros[i]) {
         numero++;
       }
     if (numero > repetido) {
       repetido = numero;
-      iNumero = i;
     }
   }
-  return inteiros[iNumero];
+  return repetido;
 }
 
 // Desafio 7
