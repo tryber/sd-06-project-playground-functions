@@ -80,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
     }
 
     if (catpos1 < catpos2) {
-        // cat1 mais perto
+        // cat1 mais perto do rato
         console.log("Cat1 pegou o rato!");
         return "Cat1";
     } else if (catpos2 < catpos1) {
