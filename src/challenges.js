@@ -101,11 +101,49 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
+function encode(palavra) {
   // seu código aqui
+  let verifica = palavra.split('');
+  let trocado = [];
+  for (let i in palavra) {
+    if (verifica[i] == a) {
+      verifica[i] = 1;
+    } else if (verifica[i] == e) {
+      verifica[i] = 2;
+    } else if (verifica[i] == i) {
+      verifica[i] = 3;
+    } else if (verifica[i] == o) {
+      verifica[i] = 4;
+    } else if ( verifica[i] == u) {
+      verifica[i] = 5;
+    } else {
+      verifica[i] = verifica[i];
+    }
+    trocado = verifica.split(" ");
+  }
+  return trocado;
 }
-function decode() {
+function decode(palavra) {
   // seu código aqui
+  let verifica = palavra.split('');
+  let trocado = [];
+  for (let i in palavra) {
+    if (verifica[i] == 1) {
+      verifica[i] = a;
+    } else if (verifica[i] == 2) {
+      verifica[i] = e;
+    } else if (verifica[i] == 3) {
+      verifica[i] = i;
+    } else if (verifica[i] == 4) {
+      verifica[i] = o;
+    } else if ( verifica[i] == 5) {
+      verifica[i] = u;
+    } else {
+      verifica[i] = verifica[i];
+    }
+    trocado = verifica.split(" ");
+  }
+  return trocado;
 }
 
 // Desafio 10
