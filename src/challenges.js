@@ -33,11 +33,14 @@ function concatName(string) {
   palavras += string[0];
   return palavras;
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let somaPontos = (wins*3) + ties ;
+  return somaPontos
 }
+//console.log(footballPoints(1, 3));
 
 // Desafio 6
 function highestCount() {
