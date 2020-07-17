@@ -155,21 +155,25 @@ function decode(fraseDecode) {
 }
 
 // Desafio 10
-
 function techList(arrayTecnologia, name) {
   let arrayTotal = [];
   let arrayOrdenado = arrayTecnologia.sort();
   let objeto = {};
   // seu código aqui
-  for (i in arrayOrdenado){
-    objeto = {
-      tech: arrayOrdenado[i],
-      name: name,
+  if (arrayTecnologia.length === 0){
+    return 'Vazio!';
+  }else{  
+    for (i in arrayOrdenado){
+      objeto = {
+        tech: arrayOrdenado[i],
+        name: name,
+      }
+      arrayTotal[i] = objeto;
     }
-    arrayTotal[i] = objeto;
-  }
-  return arrayTotal;  
+    return arrayTotal;
+  }    
 }
+
 
 
 
