@@ -43,8 +43,9 @@ function footballPoints(wins, ties) {
 // Desafio 6 
  
 function highestCount(array) {  
+   
     let position = 0;
-  let cont = 0;
+    let cont = 0;
 
   for (let newArray in array){ 
     if (array[position] <= array[newArray]){   
@@ -55,14 +56,45 @@ function highestCount(array) {
   return cont;
 }
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Desafio 7 
+
+function catAndMouse(mouse, cat1, cat2) {
+  
+let distancia1 = mouse - cat1;
+let distancia2 = mouse - cat2;
+
+if (distancia1 === distancia2){
+  return 'os gatos trombam e o rato foge';
+}else if (distancia1 < distancia2){
+  return 'cat1';
+}else {
+  return 'cat2';
+}
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+// Desafio 8 
+/*Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+
+Para cada número da Array que seja divisível por 3, apresente uma string "fizz";
+Para cada número da Array que seja divisível por 5, apresente uma string "buzz";
+Caso o número seja divisível por 3 ou 5, retorne a string "fizzBuzz";
+Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].*/
+
+function fizzBuzz(arrayNew) {
+  
+  let new=0;
+
+  for (i = 0; i<arrayNew.length; i++){
+    if ((arrayNew[i]%3==0) && (arrayNew[i]%5!==0)){
+      new[i] = 'fizz';
+    }else if ((arrayNew[i]%5==0) && (arrayNew[i]%3!==0)){
+      new[i] = 'buzz';
+    }else if ((arrayNew[i]%3==0) && (arrayNew[i]%5==0)){
+      new[i] = 'fizzBuzz';
+  }
+
 }
 
 // Desafio 9
