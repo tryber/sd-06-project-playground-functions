@@ -17,10 +17,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let newArray = [];
-  newArray[0] = array[array.length - 1];
-  newArray[1] = array[0];
-  return newArray;
+  let newString = '';
+  newString += array[array.length - 1];
+  newString += ', ';
+  newString += array[0];
+  return newString;
 }
 
 // Desafio 5
