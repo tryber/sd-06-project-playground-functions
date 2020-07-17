@@ -4,8 +4,10 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let areaTriang;
+  areaTriang = (base * height)/2;
+  return areaTriang;
 }
 
 // Desafio 3
