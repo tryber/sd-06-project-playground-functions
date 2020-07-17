@@ -135,6 +135,7 @@ function decode(encodedString) {
 // Desafio 10
 function techList(techlist, name) {
   const objectList = [];
+  techlist.sort();
 
   for (let i = 0; i < techlist.length; i += 1) {
     const tech = techlist[i];
