@@ -177,19 +177,21 @@ function techList(arrayTecnologias, name) {
   if (arrayTecnologias === undefined){
     return "Vazio!";
   }else{
+    let ordenarArray = arrayTecnologias;
+    ordenarArray.sort();
     let saidaTec = [];
-    for (let indiceTec in arrayTecnologias){
+    for (let indiceTec in ordenarArray){
       saidaTec.push({
-        tech: arrayTecnologias[indiceTec],
+        tech: ordenarArray[indiceTec],
         nome: name
       });
     }
     return saidaTec;
   }
 }
-/* let valor1 = ["python", "datacience", "ruby"];
+let valor1 = ["Python", "React", "Ruby", "Jest"];
 let valor2 = "Clayton Miguel";
-console.log(techList(valor1, valor2)); */
+console.log(techList(valor1, valor2));
 
 
 // Desafio 11
