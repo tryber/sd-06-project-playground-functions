@@ -45,8 +45,6 @@ function concatName(listaNomes) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let wins = wins;
-  let ties = ties;
   let points = (wins * 3) + (ties);
 
   return points;
@@ -70,7 +68,7 @@ function highestCount(arrayNumeros) {
     }
   }
   return ocorrencias;
-}
+} 
 
 // Desafio 7
 function catAndMouse() {
