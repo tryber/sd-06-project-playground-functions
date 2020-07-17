@@ -1,7 +1,7 @@
 // Desafio 1
 let t1 = true 
 let t2 = false
-function compareTrue(t1,t2) { t1 && t2 == true ? 'true' : 'false'
+function compareTrue(t1,t2) { t1 && t2 == true ? true : false; 
     // seu código aqui
   }
   
