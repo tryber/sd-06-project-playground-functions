@@ -159,9 +159,23 @@ return listaObjetos;
 // console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+
+  if (array.length != 11){
+    return "Array com tamanho incorreto.";
+  }
+
+  for(let pos = 0; pos < array.length; pos += 1) {
+    if ((array[pos] < 0) || (array[pos] > 9)) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  let resultado = '';
+  return resultado;
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
