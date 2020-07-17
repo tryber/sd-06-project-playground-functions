@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
-  resultado = false
+  let resultado = false
   if (value1 === true && value2 === true) {
     resultado = true;
   }
@@ -64,8 +64,8 @@ function highestCount(numeros) {
 // Desafio 7
 function catAndMouse(positionMouse, positionCat1, positionCat2) {
   // seu código aqui
-  let distanciaMouseCat1 = positionMouse - positionCat1;
-  let distanciaMouseCat2 = positionMouse - positionCat2
+  let distanciaMouseCat1 = positionCat1 - positionMouse;
+  let distanciaMouseCat2 = positionCat2 - positionMouse;
   let mensagem = '';
   if (distanciaMouseCat1 < distanciaMouseCat2) {
     mensagem = 'cat1';
