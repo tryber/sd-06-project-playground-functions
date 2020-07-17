@@ -29,13 +29,6 @@ let resultSplit = splitSentence('Go Trybe');
 console.log(resultSplit);
 
 // Desafio 4
-/* Concatenação de strings
-Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM',
-independente do tamanho da array.
-
-Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'],
-a função deverá retornar Paolillo, Lucas. */
-
 function concatName(arrayConcatenar) {
      for (let indice in arrayConcatenar){
       conta = index.length;
@@ -46,21 +39,14 @@ function concatName(arrayConcatenar) {
       }
       let resultado = arra
     }
-    return (retorno); *
+    return (retorno);
   }
-
-
-
 let arrayConcatenar = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 let stringConcatenada = concatName(arrayConcatenar);
 console.log(stringConcatenada);
 
 
 // Desafio 5
-/* Escreva uma função com o nome footballPoints que receba o número
- de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
-Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto. */
-
 function footballPoints(ties, wins) {
 
     let pontuacao = (ties * 1) + (wins * 3);
