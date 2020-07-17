@@ -62,7 +62,7 @@ function highestCount(arrayOfNumbers) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let positiveArray = [cat1, cat2, mouse];
 
   for (let i in positiveArray) {
@@ -89,6 +89,8 @@ function catAndMouse(cat1, cat2, mouse) {
     return "cat2";
   }
 }
+
+console.log(catAndMouse(1,0,2));
 
 // Desafio 8
 function fizzBuzz() {
