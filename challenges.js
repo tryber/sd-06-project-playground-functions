@@ -7,7 +7,7 @@ function compareTrue(bol1, bol2){
         return false;
     }
 }
-console.log(compareTrue(true, true));
+console.log(compareTrue());
 
 
 //Exercício 2
@@ -15,7 +15,7 @@ function calcArea(base, height){
     let area = (base*height) / 2;
     return area; 
 }
-console.log(calcArea(2,50));
+console.log(calcArea());
 
 
 //Exercicio 3
@@ -23,7 +23,7 @@ function splitSentence(string){
     let novaString = string.split(" ");
     return novaString; 
 }
-console.log(splitSentence("Banana doce"));
+console.log(splitSentence());
 
 
 //Exercício 4
