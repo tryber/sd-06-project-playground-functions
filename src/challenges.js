@@ -13,7 +13,7 @@ console.log(compareTrue(true, true));
 // Desafio 2
 // Cálculo área de um triângulo - com base -> base / altura -> height
 function calcArea(base, height) {
-  area = base * height / 2
+  let area = base * height / 2
   return area
 }
 
