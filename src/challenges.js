@@ -9,8 +9,6 @@ function compareTrue(colorExternal, colorInternal) {
     }
 }
 
-console.log(compareTrue("blue", "red"))
-
 // Desafio 2
 function calcArea() {
   // seu código aqui
