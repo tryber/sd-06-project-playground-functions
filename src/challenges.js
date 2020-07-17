@@ -4,7 +4,7 @@ function compareTrue (param1, param2) {
     return true;
   } else if (param1 === false && param2 === false){
     return false;
-  } else if (param 1 === false || param2 === false){
+  } else if (param1 === false || param2 === false){
     return false;
   }
 }
