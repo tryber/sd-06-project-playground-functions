@@ -42,8 +42,8 @@ function highestCount(numbers) {
 // Desafio 7 - OK
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let ditanciaCat1 = mouse - cat1;
-  let ditanciaCat2 = mouse - cat2;
+  let ditanciaCat1 = Math.abs(mouse - cat1);
+  let ditanciaCat2 = Math.abs(mouse - cat2);
 
   if (ditanciaCat1 === ditanciaCat2) {
     return ("os gatos trombam e o rato foge");
@@ -118,5 +118,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
 
