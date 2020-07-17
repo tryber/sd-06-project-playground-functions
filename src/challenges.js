@@ -1,14 +1,14 @@
 // Desafio 1
-let value1 = "a";
-let value2 = "b";
-function compareTrue(value1, value2) {
-  if( value1 === a && value2 === b ){
+let valor1 = 0
+let valor2 = 1
+function compareTrue(valor1, valor2) {
+  if( valor1 === 0 && valor2 === 1 ){
     return true;
   }else{
     return false;
   }
 }
-
+console.log(compareTrue(0,1));
 
 // Desafio 2
 let base;
@@ -28,14 +28,20 @@ function splitSentence(testaString) {
 
 
 // Desafio 4
+let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName() {
-  // seu código aqui
+  let arrayPrimeiroUltimo=[];
+  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length -1]) + arrayNomes[0];
 }
+console.log(concatName());
 
 // Desafio 5
+let wins = 3;
+let ties = 1;
 function footballPoints() {
-  // seu código aqui
+  
 }
+
 
 // Desafio 6
 function highestCount() {
