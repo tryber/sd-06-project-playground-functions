@@ -66,7 +66,7 @@ function fizzBuzz(array) {
   // seu código aqui
   let arrayResposta =[]
 for(let i=0;i<array.length;i++){
-  if(array[i]%5==0 && array[i]%3==0){
+  if(array[i]%5==0 || array[i]%3==0){
     arrayResposta.push("fizzBuzz")
   }
   else if(array[i]%3==0){
