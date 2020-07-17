@@ -14,7 +14,6 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
@@ -22,16 +21,16 @@ function splitSentence(frase) {
   return array;
 }
 
-
-
-
-
-
-
 // Desafio 4
-function concatName() {
+function concatName(nomes) {
   // seu código aqui
+  return nomes[nomes.length - 1] + ', ' +  nomes[0];
 }
+
+
+
+
+
 
 // Desafio 5
 function footballPoints() {
