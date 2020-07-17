@@ -18,8 +18,9 @@ function splitSentence(frase) {
   let frase = "go Trybe";
   let pala1 = frase.length;
   let pala2 = frase[frase.length-1];
-  return( frase[0], frase[1]);
-}
+
+  //return( frase[0], frase[1]);
+}console.log(frase);
 
 // Desafio 4
 function concatName() {
