@@ -31,16 +31,18 @@ console.log(concatName(array))
 
 // Desafio 5
 function footballPoints(wins, ties) {
-    let campeonato = 0
+    let campeonato = 0;
     if (final === "wins") {
         campeonato = campeonato + 3
-        return campeonato
+        return campeonato;
     } else if (final === "ties") {
         campeonato = campeonato + 1
-        return campeonato
+        return campeonato;
     }
+
+
 }
-//console.log(footballPoints("wins"))
+console.log(footballPoints("wins"))
 
 // Desafio 6
 function highestCount() {
