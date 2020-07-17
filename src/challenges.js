@@ -24,8 +24,8 @@ function splitSentence(str){
 
 // Desafio 4
 function concatName (nomescompleto) {
-  let nomes = nomescompleto[nomescompleto.length-1] +', '+ nomescompleto[0]
-  return nomes
+  let nomes = nomescompleto[nomescompleto.length-1] +', '+ nomescompleto[0];
+  return nomes;
 }
   console.log("Exercicio 4: " + concatName(['veruska','lucas','lara']));
    
