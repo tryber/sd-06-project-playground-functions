@@ -7,9 +7,8 @@ function compareTrue(value1, value2) {
 function calcArea(base, height) {
     return (base * height) / 2;
 }
-  /*Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
-Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].*/
-// Desafio 3
+ 
+//Desafio 3
 function splitSentence(str) {
   let word = ''
   let array = [];
@@ -24,11 +23,11 @@ function splitSentence(str) {
     array.push(word);
     return array;
 }
-console.log(splitSentence("go trybe"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  str =  array[array.length-1] + ', ' + array[0];
+  return str
 }
 
 // Desafio 5
