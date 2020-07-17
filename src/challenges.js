@@ -1,5 +1,4 @@
 // Desafio 1
-let res;
 function compareTrue(num, num1) {
   // seu código aqui
   if(num < 10 && num1 > 10){
@@ -8,12 +7,14 @@ function compareTrue(num, num1) {
     return 'false'
   }
 }
-console.log(compareTrue( 9,8))
+console.log(compareTrue( 12,8))
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return base * height;
 }
+console.log(calcArea(15,28))
 
 // Desafio 3
 function splitSentence() {
