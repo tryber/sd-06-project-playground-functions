@@ -85,7 +85,7 @@ function catAndMouse(mouse, cat1, cat2) {
     pos1 = mouse - cat1;
   }
   if (pos1 === pos2) {
-    chaseStatus = "os gatos trombam e rato foge"
+    chaseStatus = "os gatos trombam e o rato foge"
   } else if (pos1 > pos2) {
     chaseStatus = "cat2"
   } else {
