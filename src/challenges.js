@@ -139,7 +139,7 @@ function techList(array, nome) {
   for (let i = 0 ; i < array.length ; i += 1) {
     let aux = {};
     aux.tech = array[i];
-    aux.nome = nome;
+    aux.name = nome;
     result.push(aux);
   }
   result.sort(ordenarPorNome);
