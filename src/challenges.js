@@ -15,12 +15,12 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  return [arr[0], arr[arr.length - 1]];
+  return [arr[arr.length - 1], arr[0]];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return 3 * wins + ties;
 }
 
 // Desafio 6
