@@ -3,10 +3,11 @@ function compareTrue(a,b) {
   let resultado = a && b;
   return resultado;
 }
-console.log(compareTrue(false,false));
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  let area = base * height /2;
+  return area;
 }
 
 // Desafio 3
