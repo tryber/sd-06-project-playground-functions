@@ -145,11 +145,11 @@ function generatePhoneNumber(array) {
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] < 0 || array[i] > 9 || vezesRepetidas > 3) {
       return 'não é possível gerar um número de telefone com esses valores';
-    }
-  } else {
-    return numeroTelefone;
+    } else {
+      return numeroTelefone;
+  } 
   }
-}
+
 
 // Repeticao +3x
 // Dado o array, para cada numero do array verificar se ele se repete
