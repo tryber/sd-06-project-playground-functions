@@ -30,7 +30,7 @@ function splitSentence(string) {
     }
     
   }
-  
+
   stringArray.push(word);
   return stringArray;
   
@@ -44,7 +44,7 @@ function concatName(stringArray) {
   let firstItemIndex = 0;
   let returnedString = "";
   
-  for (let index = lastItemIndex; index > 0; index -= 1){
+  for (let index = lastItemIndex; index >= 0; index -= 1){
     if (index == lastItemIndex){
       returnedString = stringArray[index] + ", ";
     }
@@ -53,7 +53,7 @@ function concatName(stringArray) {
     }
   }
 
-  return stringArray;
+  return returnedString;
  
 }
 
