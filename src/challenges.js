@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // Opening Pull Request
+function compareTrue(boolean1, boolean2) {
+  if (boolean1 && boolean2 === 'true') {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -82,4 +86,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
