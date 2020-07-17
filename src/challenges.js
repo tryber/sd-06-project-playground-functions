@@ -121,26 +121,52 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 function encode(stringToEncode) {
   // seu código aqui
   let charactersExchange = {a : 1, e : 2, i : 3, o : 4, u : 5,};
-  let encodedString = "";
+  let encodedString = ""
   for (index in stringToEncode) {
-    for (indexObj in charactersExchange) {
-      console.log(indexObj + " and " + stringToEncode[index])
-
-      if (stringToEncode[index] == indexObj) {
-        encodedString += charactersExchange[indexObj]
-      } else if (encodedString[index] != stringToEncode[index]) {
-        encodedString += stringToEncode[index]
-      }
-    } 
+    if (stringToEncode[index] == "a") {
+      encodedString += "1";
+    } else if (stringToEncode[index] == "e") {
+      encodedString += "2";
+    } else if (stringToEncode[index] == "i") {
+      encodedString += "3";
+    } else if (stringToEncode[index] == "o") {
+      encodedString += "4";
+    } else if (stringToEncode[index] == "u") {
+      encodedString += "5";
+    } else {
+      encodedString += stringToEncode[index]
+    }
   }
-  return encodedString
+  return encodedString;
 }
 
 console.log(encode("hi there!"))
 
-function decode() {
+function decode(stringToDecode) {
   // seu código aqui
+  let charactersExchange = {a : 1, e : 2, i : 3, o : 4, u : 5,};
+  let decodedString = "";
+
+  for (index in stringToDecode) {
+    if (stringToDecode[index] == "1") {
+      decodedString += "a";
+    } else if (stringToDecode[index] == "2") {
+      decodedString += "e";
+    } else if (stringToDecode[index] == "3") {
+      decodedString += "i";
+    } else if (stringToDecode[index] == "4") {
+      decodedString += "o";
+    } else if (stringToDecode[index] == "5") {
+      decodedString += "u";
+    } else {
+      decodedString += stringToDecode[index];
+    }
+  }
+  return decodedString;
 }
+
+console.log(decode("h3 th2r2!"))
+
 
 // Desafio 10
 function techList() {
