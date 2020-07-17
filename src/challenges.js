@@ -33,8 +33,9 @@ function highestCount(arr) {
   for (let index = 0; index < arr.length; index += 1) {
     if (highestNumber < arr[index]) {
       highestNumber = arr[index];
+      count = 1;
     }
-    if (highestNumber === arr[index]) {
+    else if (highestNumber === arr[index]) {
       count += 1;
     }
   }
