@@ -160,13 +160,33 @@ function generatePhoneNumber(cellnumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+  let check = false;
+  let lado1 = false;
+  let lado2 = false;
+  let lado3 = false;
+
+  if (lineA > (Math.abs(lineB - lineC)) && lineA < lineB + lineC){
+    lado1 = true;
+  } else if (lineB > (Math.abs(lineA - lineC)) && lineB < lineA + lineC){
+    lado2 = true;
+  } else if (lineC > (Math.abs(lineB - lineA)) && lineC < lineB + lineA){
+    lado3 = true;
+  }
+  if (lado1 === lado2 === lado3 === true){
+    check = true;
+  }
+  return check;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebidas) {
+  let numbers = bebidas.match(/\d+/g);
+  let soma = 0;
+  for (i in numbers){
+    soma += Number(numbers[i]);
+  }
+  return soma + " copos de água"
 }
 
 
