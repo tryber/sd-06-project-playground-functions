@@ -101,7 +101,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(param) {
   let resultado = [];
 
-  for (x = 0; x < param.length; x += 1) {
+  for (let x = 0; x < param.length; x += 1) {
     if (param[x] % 3 === 0 && param[x] % 5 === 0) {
       resultado.push('fizzBuzz');
     } else if (param[x] % 3 !== 0 && param[x] % 5 === 0) {
@@ -117,12 +117,50 @@ function fizzBuzz(param) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(param) {
+  let encodada = '';
+
+  for (let letra = 0; letra < param.length; letra += 1) {
+    if (param[letra] === 'a') {
+      encodada += '1';
+    } else if (param[letra] === 'e') {
+      encodada += '2';
+    } else if (param[letra] === 'i') {
+      encodada += '3';
+    } else if (param[letra] === 'o') {
+      encodada += '4';
+    } else if (param[letra] === 'u') {
+      encodada += '5';
+    } else {
+      encodada += param[letra];
+    }
+  }
+
+  return encodada;
 }
-function decode() {
-  // seu código aqui
+function decode(param) {
+  let decodada = '';
+
+  for (let letra = 0; letra < param.length; letra += 1) {
+    if (param[letra] === '1') {
+      decodada += 'a';
+    } else if (param[letra] === '2') {
+      decodada += 'e';
+    } else if (param[letra] === '3') {
+      decodada += 'i';
+    } else if (param[letra] === '4') {
+      decodada += 'o';
+    } else if (param[letra] === '5') {
+      decodada += 'u';
+    } else {
+      decodada += param[letra];
+    }
+  }
+
+  return decodada;
 }
+let x = 'hello';
+console.log(encode(x));
 
 // Desafio 10
 function techList() {
