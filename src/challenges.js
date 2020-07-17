@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(string1, string2) {
-  if (string1 == 1 && string2 == 2) {
-    return true
+  if (string1 === 1 && string2 === 2) {
+    return true;
   } else {
-    false
+    return false;
   }
 }
 
