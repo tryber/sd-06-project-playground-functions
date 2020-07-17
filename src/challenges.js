@@ -23,8 +23,6 @@ function concatName(array) {
   return novaArray;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-
 // Desafio 5
 function footballPoints(wins, ties) {
   return wins * 3 + ties;
@@ -51,7 +49,6 @@ function highestCount(array) {
   return quantidade;
 }
 
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   distanciaCat1 = mouse - cat1;
@@ -67,7 +64,6 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return resultado;
 }
-
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -90,17 +86,53 @@ function fizzBuzz(array) {
   return novaArray;
 }
 
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
-// ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let cutString = string.split('');
+  let stringEncode = '';
+
+  for (letra in cutString){
+    if (cutString[letra] === 'a') {
+      stringEncode += '1';
+    } else if (cutString[letra] === 'e') {
+      stringEncode += '2';
+    } else if (cutString[letra] === 'i') {
+      stringEncode += '3';
+    } else if (cutString[letra] === 'o') {
+      stringEncode += '4';
+    } else if (cutString[letra] === 'u') {
+      stringEncode += '5';
+    } else {
+      stringEncode += cutString[letra];
+    }
+  }
+
+ return stringEncode;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let cutString = string.split('');
+  let stringDecode = '';
+
+  for (letra in cutString){
+    if (cutString[letra] === '1') {
+      stringDecode += 'a';
+    } else if (cutString[letra] === '2') {
+      stringDecode += 'e';
+    } else if (cutString[letra] === '3') {
+      stringDecode += 'i';
+    } else if (cutString[letra] === '4') {
+      stringDecode += 'o';
+    } else if (cutString[letra] === '5') {
+      stringDecode += 'u';
+    } else {
+      stringDecode += cutString[letra];
+    }
+  }
+
+ return stringDecode;
 }
+
+// console.log(decode('h3 th2r2!'))
 
 // Desafio 10
 function techList() {
