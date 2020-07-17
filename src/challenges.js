@@ -2,19 +2,17 @@
 function compareTrue(firstBoolean, secondBoolean) {
   if (firstBoolean && secondBoolean) {
     return true;
-  } else {
-    return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return console.log((base * height) / 2);
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  return phrase.split(" ");
 }
 
 // Desafio 4
