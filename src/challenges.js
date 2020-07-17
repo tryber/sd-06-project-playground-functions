@@ -52,9 +52,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (Math.sign(distanceCat1) < 0) {
       distanceCat1 *= -1;
-  } else if (Math.sign(distanceCat2) < 0) {
+  } 
+  if (Math.sign(distanceCat2) < 0) {
       distanceCat2 *= -1
-
   }
 
   if (distanceCat1 < distanceCat2) {
@@ -66,7 +66,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 }
 
-console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(numbers) {
