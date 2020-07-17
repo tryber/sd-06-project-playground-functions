@@ -41,10 +41,10 @@ function concatName(stringArray) {
   let returnedString = "";
   
   for (let index = lastItemIndex; index < 0; index -= 1){
-    if (index === lastItemIndex){
+    if (index == lastItemIndex){
       returnedString = stringArray[index] + ", ";
     }
-    if else (index === firstItemIndex){
+    if else (index == firstItemIndex){
       returnedString += stringArray[index];
     }
   }
@@ -59,7 +59,7 @@ function footballPoints(wins, ties) {
   let winPoints = wins * 3;
   let tiePoints = ties * 1;
 
-  return winPoints + tiePoints
+  return winPoints + tiePoints;
 }
 
 // Desafio 6
