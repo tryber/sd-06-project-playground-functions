@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  // Opening Pull Request
 }
 
 // Desafio 2
