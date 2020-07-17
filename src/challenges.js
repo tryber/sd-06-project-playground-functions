@@ -57,9 +57,9 @@ function catAndMouse(cat1, cat2, mouse) {
     distancia2 = mouse - cat2;
   }
   if(distancia1 > distancia2){
-    return 'cat1';
-  } else if (distancia2 > distancia1){
     return 'cat2';
+  } else if (distancia2 > distancia1){
+    return 'cat1';
   } else {
     return "os gatos trombam e o rato foge";
   }
@@ -83,11 +83,45 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  const vogais = {
+    a : 1,
+    e : 2,
+    i : 3,
+    o : 4,
+    u : 5,
+  };
+  let array = [];
+  for(let i = 0; i < string.length; i++) {
+    let char = string.charAt(i);
+    if(char in vogais) {
+      array.push(vogais[char]);
+    } else {
+      array.push([char])
+    }
+  }
+  let final = array.join('')
+  return final
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  const numeros = {
+    1 : 'a',
+    2 : 'e',
+    3 : 'i',
+    4 : 'o',
+    5 : 'u',
+  };
+  let array = [];
+  for(let i = 0; i < string.length; i++) {
+    let char = string.charAt(i);
+    if(char in numeros) {
+      array.push(numeros[char]);
+    } else {
+      array.push([char])
+    }
+  }
+  let final = array.join('')
+  return final
 }
 
 // Desafio 10
