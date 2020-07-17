@@ -52,14 +52,14 @@ function catAndMouse(mouse, cat1, cat2) {
   if(Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
     return "cat1";
   }
-  else if(Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
+  else if(Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
     return "cat2";
   }
   else {
     return "os gatos trombam e o rato foge";
   }
 }
-//console.log(catAndMouse(5, 3, 7));
+//console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -90,26 +90,47 @@ function encode(str) {
     "o": '4',
     "u": '5',
   }
-  
+  array = str.split('');
   for(let j = 0 ; j < str.length ; j += 1){
     for (let key in convert){
       if (key == str[j]) {
-        str[j] = convert[str[j]];
+        array[j] = convert[str[j]];
       }
     }
   }
-  return str;
+  array = array.join('');
+  return array;
 }
 
 //console.log(encode("hi there!"));
 
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let convert = {
+    "1": 'a',
+    "2": 'e',
+    "3": 'i',
+    "4": 'o',
+    "5": 'u',
+  }
+  array = str.split('');
+  for(let j = 0 ; j < str.length ; j += 1){
+    for (let key in convert){
+      if (key == str[j]) {
+        array[j] = convert[str[j]];
+      }
+    }
+  }
+  array = array.join('');
+  return array;
 }
+//console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, nome) {
+  let result = [];
+  for (let i = 0 ; i < array.length ; i += 1) {
+
+  }
 }
 
 // Desafio 11
