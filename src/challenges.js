@@ -9,8 +9,11 @@ function calcArea(base, altura) {
 }
 // Desafio 3
 function splitSentence(sentence) {
-    sentence.split(' ');
+    divisao = sentence.split(' ');
+    return divisao;
+
 }
+console.log(splitSentence("hello world"))
 
 
 // Desafio 4
