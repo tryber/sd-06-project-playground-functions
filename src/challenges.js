@@ -46,17 +46,31 @@ function highestCount(arrayNumbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if ((mouse - cat1) === (mouse - cat2)) {
-    return 'os gatos trombam e o rato foge';
+    return "os gatos trombam e o rato foge";
   }
   if ((mouse - cat1) > (mouse - cat2)) {
-    return 'cat1';
+    return "cat1";
   }
-  return 'cat2';
+  return "cat2";
 }
 
 // Desafio 8
-function fizzBuzz() {
- 
+function fizzBuzz(array) {
+  var results = [];
+    if (array === 1) {
+      return '1';
+    } else {
+      if (n % 3 === 0 && array % 5 === 0) {
+        results.push('FizzBuzz');
+      } else if (array % 5 === 0) {
+        results.push('Buzz');
+      } else if (array % 3 === 0) {
+        results.push('Fizz');
+        else if (array % 3 != 0 && array % 5 != 0){
+          results.push('bug!');
+      } else {
+        results.push(''+ array);
+      }
 }
 
 // Desafio 9
