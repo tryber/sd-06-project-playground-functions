@@ -73,13 +73,29 @@ function catAndMouse(mouse, cat1, cat2) {
         return cat2;
     } else {
         console.log("Os gatos trombam e o rato foge.");
+        return "Os gatos trombam e o rato foge.";
     }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
     // seu código aqui
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 3 === 0) {
+            //é divisível ṕor 3
+            if (array[i] % 5 === 0) {
+                //é divisível pelos dois
+                console.log(fizzBuzz);
+            }
+        } else if (array[i] % 5 === 0) {
+            //é divisível por 5
+            console.log("buzz");
+        } else {
+            console.log("bug!");
+        }
+    }
 }
+fizzBuzz[[2, 15, 7, 9, 45]]
 
 // Desafio 9
 function encode() {
