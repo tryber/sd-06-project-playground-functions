@@ -89,13 +89,24 @@ function fizzBuzz(arrayNumeros) {
 //  console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(stringLetras) {
+  let resultado = stringLetras.replace(/a/gi, 1)
+  resultado = resultado.replace(/e/gi,2);
+  resultado = resultado.replace(/i/gi,3);
+  resultado = resultado.replace(/o/gi,4);
+  resultado = resultado.replace(/u/gi,5);
+  return resultado;
 }
 
+function decode(stringNumeros) {
+  let resultado = stringNumeros.replace(/1/gi, 'a')
+  resultado = resultado.replace(/2/gi,'e');
+  resultado = resultado.replace(/3/gi,'i');
+  resultado = resultado.replace(/4/gi,'o');
+  resultado = resultado.replace(/5/gi,'u');
+  return resultado;
+}
+ 
 // Desafio 10
 function techList() {
   // seu código aqui
