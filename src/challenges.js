@@ -5,7 +5,7 @@ function compareTrue(string1, string2) {
   }
   return false;
 }
-
+console.log(compareTrue(1,2));
 // Desafio 2
 function calcArea() {
   // seu código aqui
