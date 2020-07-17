@@ -70,16 +70,16 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
     let i = a[x]
     
     if(i % 3 == 0 && i % 5 == 0){
-      console.log('fizzBuzz')
+      return 'fizzBuzz'
     }
     else if (i % 3 == 0){
-      console.log('fizz')
+      return 'fizz'
     }
     else if (i % 5 == 0){
-      console.log('buzz')
+      return 'buzz'
     }
     else
-      console.log('bug!')
+      return 'bug!'
   }
 }
 
