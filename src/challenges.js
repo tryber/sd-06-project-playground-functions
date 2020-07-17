@@ -3,18 +3,20 @@ function compareTrue(a,b) {
   let resultado = a && b;
   return resultado;
 }
-
+console.log(compareTrue(false,false));
 // Desafio 2
 function calcArea(base,height) {
   let area = base * height /2;
   return area;
 }
+console.log(calcArea(20,20));
 
 // Desafio 3
 function splitSentence(frase) {
   frase = frase.split(" ");
   return frase;
 }
+console.log(splitSentence("comer bem"));
 
 // Desafio 4
 function concatName(nomes) {
@@ -22,13 +24,14 @@ function concatName(nomes) {
   for(let chave in nomes){
       if(chave == 0){
         novoNome += nomes[(nomes.length-1)-chave]+", ";
-       if(chave == nomes.length-1){
-        novoNome += nomes[(nomes.length-1)-chave];
-       }
+      }
+      if(chave == nomes.length-1){
+      novoNome += nomes[(nomes.length-1)-chave];
+      }
   }
-  return novoNome;
+  return novoNome;  
 }
-nomes = ['joao', 'grillo', 'xico', 'padeiro', 'vicentao'];
+nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(nomes));
 
 // Desafio 5
