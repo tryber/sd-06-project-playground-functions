@@ -91,9 +91,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-
-
-let numeros = [2, 15, 7, 9, 45];
 // Desafio 8
 function fizzBuzz(numeros) {
   // seu código aqui
@@ -111,15 +108,36 @@ function fizzBuzz(numeros) {
   }
   return numDivisibles;
 }
-console.log(fizzBuzz(numeros));
-
-
-
 
 // Desafio 9
-function encode() {
+frase = "This is an encoding test";
+function encode(frase) {
   // seu código aqui
+  arrayFrase = frase.split('');
+  for (i in arrayFrase){
+    switch (arrayFrase[i]){
+      case 'a':
+        arrayFrase[i] = '1';
+        break;
+      case 'e':
+        arrayFrase[i] = '2';
+        break;
+      case 'i':
+        arrayFrase[i] = '3';
+        break;
+      case 'o':
+        arrayFrase[i] = '4';
+        break;
+      case 'u':
+        arrayFrase[i] = '5';
+    }
+  }
+  arrayFrase = arrayFrase.join('');
+  return arrayFrase;
 }
+
+
+
 function decode() {
   // seu código aqui
 }
