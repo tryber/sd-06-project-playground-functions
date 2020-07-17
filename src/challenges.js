@@ -33,8 +33,9 @@ function splitSentence( str ) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName( strArray ) {
   // seu código aqui
+  return strArray[strArray.length-1] + ", " + strArray[0];
 }
 
 // Desafio 5
