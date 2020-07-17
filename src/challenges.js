@@ -22,7 +22,7 @@ function splitSentence(stringOriginal) {
 //       palavra += charAt(i);
 //     }
 //   }
-// }
+}
 // Desafio 4
 function concatName() {
   // seu código aqui
