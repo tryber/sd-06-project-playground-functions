@@ -20,11 +20,10 @@ function splitSentence(string) {
   let frase = string.split(" ");
   return frase;
 }
-let array = []
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(array) {
+  let plv = array[array.length - 1] + ", " + array[0];
+  return plv;
 
 // Desafio 5
 function footballPoints() {
