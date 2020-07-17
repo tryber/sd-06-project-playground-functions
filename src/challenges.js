@@ -193,7 +193,7 @@ function techList(array, name) {
         //sorting
         let sortedArray = array.sort();
 
-        // seu código aqui
+        // seu código aqui.
         let objects = [];
         for (let i = 0; i < sortedArray.length; i++) {
             objects[i] = {
