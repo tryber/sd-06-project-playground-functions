@@ -1,7 +1,18 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui_
+function compareTrue(value1, value2) {
+  // seu código aqui
+  let result = false
+  if (value1 === true && value2 === true) {
+    result = true;
+  } else if (value1 === false && value2 === false) {
+    result = false;
+  }
+  return result;
 }
+
+console.log(compareTrue (true, true));
+
+
 
 // Desafio 2
 function calcArea() {
