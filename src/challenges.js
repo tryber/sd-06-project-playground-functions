@@ -111,7 +111,7 @@ function fizzBuzz(arrayFizzBuzz) {
 
 // Desafio 9
 function encode(string) {
-let newString = '';
+  let newString = '';
 
   for (let char in string) {
     if (string[char] === 'a') {
@@ -155,8 +155,16 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayOfTechs, name) {
+  let person = {};
+
+  for(let tech in arrayOfTechs) {
+    person.tech = arrayOfTechs[tech];
+  }
+
+  person.name = name;
+
+  return person;
 }
 
 // Desafio 11
