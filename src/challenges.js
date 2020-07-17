@@ -76,10 +76,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let mousePos = mouse;
   let cat1Pos = cat1;
   let cat2Pos = cat2;
-  let distMouseCat1 = mousePos - cat1Pos;
-  let distMouseCat2 = mousePos - cat2Pos;
+  let distMouseCat1 = Math.abs(mousePos - cat1Pos);
+  let distMouseCat2 = Math.abs(mousePos - cat2Pos);
 
-  if (cat1Pos === cat2Pos) {
+  if (distMouseCat1 === distMouseCat2) {
     return 'Os gatos trombam e o rato foge';
   }
 
