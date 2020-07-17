@@ -22,9 +22,14 @@ console.log(calcArea(5, 10));
 
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  resultado = string.split(" ");
+
+  return resultado;
 }
+
+console.log(splitSentence("Bruna e Julia"))
+
 
 // Desafio 4
 function concatName() {
