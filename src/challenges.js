@@ -105,10 +105,10 @@ function catAndMouse(param1,param2,param3) {
   let dist2=Math.abs(gat2-rat);
 
   if (dist1<dist2){
-    return "gato1 posicao:" + gat1
+    return "cat1"
   }
   else if(dist1>dist2){
-    return "gato2 posicao:" + gat2
+    return "cat2"
   }
   else {
     return "os gatos trombam e o rato foge"
@@ -162,7 +162,7 @@ function encode(frase) {
   return codificada
 }
 
-function decode(decodificada) {
+function decode(codificada) {
   decodificada=codificada.replace(/1/g,"a").replace(/2/g,"e").replace(/3/g,"i").replace(/4/g,"o").replace(/5/g,"u");
   return decodificada
 }
