@@ -128,15 +128,20 @@ function decode(string) {
   }
   return string2;
 }
-// let code = encode('hi there!');
-// console.log(code);
-// let descode = decode(code);
-// console.log(descode);
-// Desafio 10
-function techList() {
-  // seu código aqui
-}
 
+// Desafio 10
+function techList(tec, name) {
+  let object = []
+  if (tec === null || tec === undefined || tec === '') {
+    return 'Vazio!';
+  }else {
+    for(indice in tec){
+      object[indice] = {tech: tec[indice], name: name};
+    }
+  }
+  return object;
+}
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Marx"));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
