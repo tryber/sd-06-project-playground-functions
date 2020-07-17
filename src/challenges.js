@@ -21,9 +21,23 @@ function calcArea(base, altura) {
 // console.log(calcArea(5, 10));
 
 // Desafio 3
+let testaString = "Go Trybe"
 function splitSentence(testaString) {
-  //testaString = "Go Trybe"
+    let palavra = "";
+    for (index in testaString){
+      if (testaString[index] != " "){
+        palavra += testaString[index];
+      }
+      else if (testaString[index] == " "){
+        testaString.push(palavra);
+        palavra = "";
+      }
+    }
+    testaString.push(palavra);
+    return testaString;
 }
+console.log(splitSentence(testaString));
+
 
 // Desafio 4
 let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
@@ -60,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let arrayNumeros=[];
+let arrayNumeros=[2,3,5,15];
 function fizzBuzz(arrayNumeros) {
   let newArrayNumeros=[];
   for (let indice in arrayNumeros){ 
@@ -68,7 +82,7 @@ function fizzBuzz(arrayNumeros) {
       newArrayNumeros[indice] = "fizzBuzz";
     } else if( arrayNumeros[indice] % 3 === 0) {
       newArrayNumeros[indice] = "fizz";
-    } else if ( arrayNumeros[i] % 5 === 0) {
+    } else if ( arrayNumeros[indice] % 5 === 0) {
       newArrayNumeros[indice] = "buzz";
     } else {
       newArrayNumeros[indice] = "bug!";
@@ -79,9 +93,15 @@ function fizzBuzz(arrayNumeros) {
   console.log(fizzBuzz(arrayNumeros));
 
 // Desafio 9
+
 function encode() {
-  // seu código aqui
+  let arrayVogais = ['a','e','i','o','u'];
+  for(let i=1; i <= arrayVogais.length; i++){
+    console.log(i);
+  }
+  
 }
+console.log(encode());
 function decode() {
   // seu código aqui
 }
