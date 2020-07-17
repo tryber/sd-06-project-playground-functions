@@ -94,7 +94,7 @@ function encode(param1) {
   param1 = param1.replace(/o/g, "4");
   param1 = param1.replace(/u/g, "5");
 
-  console.log(param1);
+  return param1;
 }
 
 function decode(param2) {
@@ -104,12 +104,21 @@ function decode(param2) {
   param2 = param2.replace(/4/g, "o");
   param2 = param2.replace(/5/g, "u");
 
-  console.log(param2);
+  return param2;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech,name) {
+  let resultado = [];
+  if (tech.length !== 0){
+    tech.sort();  
+    for (i in tech){
+        resultado.push({"tech": tech[i], "name": name})
+    }
+  } else {
+    resultado = "Vazio!"
+  }
+  return resultado
 }
 
 // Desafio 11
