@@ -23,14 +23,12 @@ return arrayString;
 
 // Desafio 4
 function concatName(name1) {
-  let name2 = "";
-  for(let index = name1.length -1 ; index >= 0 ; index -= 1){
-   name2 += name1[index];
-   name2 += ", ";
-  }
+  let n = name1.length-1;
+  let name2 = name1[n] +", "+ name1[0];
   return name2;
 }
-
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(array))
 
 // Desafio 5
 function footballPoints(wins, ties) {
