@@ -1,9 +1,6 @@
 // Desafio 1
-let value1 = true;
-let value2 = true;
-
 function compareTrue(value1, value2) {
-  if ((value1 && value2) == true) {
+  if ((value1 && value2) === true) {
     return true;
   }
   else {
