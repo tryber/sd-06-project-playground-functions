@@ -52,14 +52,7 @@ function highestCount(numeros) {
   }
   return contador;
 }
-// seu código aqui
-  //if (mouse + cat1 > mouse + cat2){
-  //  return 'cat2';
-  //}else if (mouse + cat2 > mouse + cat1){
-  //  return 'cat1';
-  //}else if (mouse - cat2 == mouse - cat1){
-  //  return 'os gatos trombam e o rato foge';
-  //}
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let contadorCat1 = 0;
@@ -161,13 +154,25 @@ function decode(fraseDecode) {
   return arrayFraseDecode;
 }
 
-
-
-
 // Desafio 10
-function techList() {
+
+function techList(arrayTecnologia, name) {
+  let arrayTotal = [];
+  let arrayOrdenado = arrayTecnologia.sort();
+  let objeto = {};
   // seu código aqui
+  for (i in arrayOrdenado){
+    objeto = {
+      tech: arrayOrdenado[i],
+      name: name,
+    }
+    arrayTotal[i] = objeto;
+  }
+  return arrayTotal;  
 }
+
+
+
 
 // Desafio 11
 function generatePhoneNumber() {
