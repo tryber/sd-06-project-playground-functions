@@ -22,7 +22,7 @@ function splitSentence( str ) {
   var counter = 0;
   for (let i = 0; i < str.length; i = i + 1) {
     if ( str[i] != " " ) {
-      txt = txt + str[i]
+      txt = txt + str[i];
     } else if ( str[i] == " " && txt != ""){ 
       strArray[counter] = txt;
       txt = "";
@@ -64,8 +64,15 @@ function highestCount( numArray ) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse( mouse , cat1 , cat2 ) {
   // seu código aqui
+  if ( ((cat1-mouse)**2)**0.5 < ((cat2-mouse)**2)**0.5 ) {
+    return 'cat1';
+  } else if ( ((cat1-mouse)**2)**0.5 > ((cat2-mouse)**2)**0.5 ) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
