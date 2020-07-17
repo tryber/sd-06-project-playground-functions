@@ -2,14 +2,13 @@
 let value1 = true;
 let value2 = true;
 
-function compareTrue() {
-  if ((value1 && value2) === true) {
+function compareTrue(value1, value2) {
+  if ((value1 && value2) == true) {
     return true;
   }
   else {
     return false;
   }
-  console.log (compareTrue);
 }
 
 // Desafio 2
