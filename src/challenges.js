@@ -1,23 +1,30 @@
 // Desafio 1
-function compareTrue() {
-  if
+function compareTrue(param1,param2) {
+  if (param1 === true && param2 === true){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let arrayInvertido = [];
+  arrayInvertido.push(names[names.length -1]);
+  arrayInvertido.push(names[0]);
+  return arrayInvertido;
 }
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
