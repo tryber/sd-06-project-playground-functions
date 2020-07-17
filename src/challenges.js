@@ -17,9 +17,16 @@ function splitSentence(string) {
 console.log(splitSentence("Hj é sexta, só que tem projeto pro final de semana!"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let firstName = "";
+  let lastName = "";
+  for (let index in array) {
+    firstName = array[array.length - 1];
+    lastName = array[0];
+  }
+  return firstName + ", " + lastName;
 }
+console.log(concatName(["Ana", "Pedro", "Julia"]));  
 
 // Desafio 5
 function footballPoints(wins, ties) {
