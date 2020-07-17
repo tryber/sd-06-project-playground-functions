@@ -13,14 +13,28 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  // // let splitPoints = 0;
+  // let sentenceArr = [];
+
+  // for (index in phrase) {
+  //   if (phrase[index] === " ") {
+  //     sentenceArr.push(phrase.slice(splitPoints,index));
+  //     splitPoints = index;
+  //   }
+  //   if (index === phrase.length - 1) {
+  //     sentenceArr.push(phrase.slice(splitPoints,index));
+  //   }
+  // }
+  // return (sentenceArr);
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+  return arrayStrings[arrayStrings.length-1] + ", " +arrayStrings[0] + ".";
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
