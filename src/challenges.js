@@ -22,6 +22,7 @@ function calcArea(base,altura) {
 // Desafio 3
 function splitSentence(testaString) {
   //testaString = "Go Trybe"
+
 }
 
 
@@ -29,8 +30,7 @@ function splitSentence(testaString) {
 // Desafio 4
 //let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName() {
-  let arrayPrimeiroUltimo=[];
-  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length -1]) + ',' + arrayNomes[0];
+  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length -1]) + "," + arrayNomes[0];
 }
 //console.log(concatName());
 
@@ -49,26 +49,33 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
+  if (distanciaCat1 > distanciaCat2){
+    return "cat2";
+  }else if (distanciaCat1 < distanciaCat2){
+    return "cat1";
+  }else{
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-let arrayNumeros=[];
 function fizzBuzz(arrayNumeros) {
-  arrayNumeros = [2,3,4,5,6,7,8,9,10];
-  for (let i = 0; i < arrayNumeros.lenght; i += 1){
+  let newArrayNumeros=[];
+  for (let indice in arrayNumeros){
     if ( arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0){
-      return "fizzBuzz";
+      newArrayNumeros[i] = "fizzBuzz";
     }else if( arrayNumeros[i] % 3 === 0){
-      return "fizz";
+      newArrayNumeros[i] = "fizz";
     }else if ( arrayNumeros[i] % 5 === 0){
-      return "buzz";
+      newArrayNumeros[i] = "buzz";
     }else{
-      return "bug!";
+      newArrayNumeros[i] = "bug!";
     }
-    console.log(fizzBuzz("oi"));
   }
+  return newArrayNumeros;
 }
   console.log(fizzBuzz(arrayNumeros));
 
