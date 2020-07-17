@@ -19,9 +19,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  novaArray = [array[array.length - 1], array[0]];
+  novaArray = array[array.length - 1] + ', ' + array[0];
   return novaArray;
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
