@@ -46,13 +46,9 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
-  let distance = 0;
-  let distanceCat1 = 0;
-  let distanceCat2 = 0;
-
-  distanceCat1 = mouse - cat1;
-  distanceCat2 = mouse - cat2;
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
 
   if (distanceCat1 < distanceCat2) {
       return "cat1";
@@ -63,7 +59,7 @@ function catAndMouse(cat1, cat2, mouse) {
 
 }
 
-console.log(catAndMouse(5, 5, 8));
+console.log(catAndMouse(8, 3, 3));
 
 // Desafio 8
 function fizzBuzz(numbers) {
