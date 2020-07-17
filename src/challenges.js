@@ -18,18 +18,17 @@ function splitSentence(param) {
   let palavras = [];
   let limiteDaUltimaPalavra = -1;
 
-  for (letra = 0; letra < param.length; letra += 1){
+  for (letra = 0; letra < param.length; letra += 1) {
     let palavra = '';
 
     if (param[letra] === ' ' || letra === param.length - 1) {
       for (letraPalavra = limiteDaUltimaPalavra + 1; letraPalavra <= letra; letraPalavra += 1) {
-        if (param[letraPalavra] != ' ') {
+        if (param[letraPalavra] !== ' ') {
           palavra += param[letraPalavra];
         }
       }
-      
       palavras.push(palavra);
-      limiteDaUltimaPalavra = letra;  
+      limiteDaUltimaPalavra = letra;
     }
   }
 
@@ -38,19 +37,15 @@ function splitSentence(param) {
 
 // Desafio 4
 function concatName(param) {
-  resultado = param[param.length -1] + ', ' + param[0];
+  let resultado = `${param[param.length -1]}, ${param[0]}`;
   return resultado;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let total = wins * 3 + ties * 1;
+  let total = (wins * 3) + (ties * 1);
   return total;
 }
-
-let wins = 3;
-let ties = 3; 
-console.log(footballPoints(wins, ties));
 
 // Desafio 6
 function highestCount() {
