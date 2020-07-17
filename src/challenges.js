@@ -22,13 +22,18 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array_string) {
+  let word_1="";
+  word_1=d[0]+", "+d[d.length-1];
+  return word_1;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let point=0;
+  wins=wins*3;
+  points=wins+ties;
+  return points;
 }
 
 // Desafio 6
