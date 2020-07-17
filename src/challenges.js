@@ -61,8 +61,18 @@ if (distCat1 < distCat2){
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbersArray) {
+  for (let i = 0; i < numbersArray.length; i++){
+    if (numbersArray[i] % 3 === 0) {
+      return "fizz";
+    } else if (numbersArray[i] %  === 0) {
+      return "buzz";
+    } else if (numbersArray[i] % 3 === 0 && numbersArray[i] % 5 === 0) {
+      return "fizzBuzz";
+    } else {
+      return "bug!"
+    }
+  }
 }
 
 // Desafio 9
