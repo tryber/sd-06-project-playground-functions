@@ -10,7 +10,7 @@ function compareTrue(myVar1, myVar2) {
   }
   return result
 }
-console.log(compareTrue(var1, var2));
+// console.log(compareTrue(var1, var2));
 
 
 // -------------- Desafio 2
@@ -20,12 +20,12 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area
 }
-console.log(calcArea(bas, hei));
+// console.log(calcArea(bas, hei));
 
 
 // --------------- Desafio 3
-let frase = 'go Trybe';
-let fraseSeparada = [];
+// let frase = 'go Trybe';
+// let fraseSeparada = [];
 function splitSentence(myText) {
   let word = '';
   for (let i = 0; i < myText.length; i += 1) {
@@ -35,14 +35,12 @@ function splitSentence(myText) {
       fraseSeparada.push(word);
       word = '';
     }
-    // inclui a ultima palavra
-    if (i ==  myText.length-1) {
-      fraseSeparada.push(word);  
-    }
   }
+  // inclui a ultima palavra
+  fraseSeparada.push(word);  
   return fraseSeparada;
 }
-console.log(splitSentence(frase));
+// console.log(splitSentence(frase));
 
 
 // ---------------- Desafio 4
@@ -51,7 +49,7 @@ function concatName(myName) {
   let nameConcat = myName[myName.length-1] + ', ' + myName[0]
   return nameConcat
 }
-console.log(concatName(name));
+// console.log(concatName(name));
 
 
 // --------------- Desafio 5
@@ -62,7 +60,7 @@ function footballPoints(wins, ties) {
   points = (wins * 3) + (ties * 1);
   return points;
 }
-console.log("Total de pontos: " + footballPoints(win, tie));
+// console.log("Total de pontos: " + footballPoints(win, tie));
 
 
 // Desafio 6
