@@ -24,8 +24,11 @@ function concatName(entrada) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  if (wins < 0 | ties < 0) {
+    return "Você inseriu dados negativos. Por favor, corrija as informações."
+  }
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
