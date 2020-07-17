@@ -20,9 +20,11 @@ function splitSentence(frase) {
 function concatName(nomes) {
   let novoNome = "";
   for(let chave in nomes){
-      if(chave == 0 || chave == nomes.length-1){
-        novoNome += " "+nomes[(nomes.length-1)-chave];
-      }
+      if(chave == 0){
+        novoNome += nomes[(nomes.length-1)-chave]+", ";
+       if(chave == nomes.length-1){
+        novoNome += nomes[(nomes.length-1)-chave];
+       }
   }
   return novoNome;
 }
