@@ -91,8 +91,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumeros) {
   // seu código aqui
+  let novaArray = [];
+
+  for (let i in arrayNumeros) {
+    let numero = arrayNumeros[i];
+
+    if (numero % 3 === 0 || numero % 5 === 0) {
+      return 'fizzBuzz';
+    } else if (numero % 3 === 0) {
+      return 'fizz';
+    } else if (numero % 5 === 0) {
+      return 'buzz';
+    } else {
+      return 'bug';
+    }
 }
 
 // Desafio 9
