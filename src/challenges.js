@@ -22,7 +22,7 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName(array_string) {
+function concatName(d) {
   let word_1="";
   word_1=d[0]+", "+d[d.length-1];
   return word_1;
@@ -62,10 +62,10 @@ function catAndMouse(mouse, cat1, cat2) {
   dist2=cat2-mouse;
   Math.abs(dist2);
   if(dist1>dist2){
-    return cat2;
+    return "cat2";
   }
   else{
-    return cat1;
+    return "cat1";
   }
 
 }
