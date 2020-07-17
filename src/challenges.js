@@ -21,7 +21,7 @@ function splitSentence(parametroString) {
 
 // Desafio 4
 function concatName(array) {
-  console.log(array[array.lenght - 1]+","+array[0])
+  return array[array.lenght-1]+','+array[0])
 }
 
 // Desafio 5
@@ -48,8 +48,12 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+  if (distanceCat1 < distanceCat2){
+    return 
+  }
 }
 
 // Desafio 8
