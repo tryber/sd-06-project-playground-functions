@@ -14,13 +14,17 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   // seu código aqui
+  return frase.split (" ");
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let ultimoPrimeiro = "";
+  ultimoPrimeiro += array[array.length - 1] + ', ' + array[0]
+  return ultimoPrimeiro;
 }
 
 // Desafio 5
@@ -44,16 +48,16 @@ function fizzBuzz(array) {
   let arrayResultado = [];
   for (let i = 0; i < array.length; i++) {
     if ((array[i] % 3 == 0) && (array[i] % 5 == 0)) {
-    arrayResultado.push("fizzBuzz");
+    arrayResultado.push('fizzBuzz');
     } else if (array[i] % 3 == 0) {
-    arrayResultado.push("fizz");
+    arrayResultado.push('fizz');
     } else if (array[i] % 5 == 0) {
-    arrayResultado.push("buzz");
+    arrayResultado.push('buzz');
     } else {
-    arrayResultado.push("bug!");   
+    arrayResultado.push('bug!');   
     }
   }
-  return(arrayResultado);
+  return arrayResultado;
 }
 
 // Desafio 9
