@@ -35,28 +35,26 @@ function footballPoints(wins, ties) {
   let points = winsPoints + ties;
   return points;
 }
-let arrTeste = [9, 1, 2, 3, 9, 5, 7, 9 , 9];
-// Desafio 6
-function highestCount(arrTeste) {
-  let nTeste = 0;
-  let contador = 0;
-  let contRepetido = 0;
 
-  for (let i in arrTeste) {
-      nTeste = arrTeste[i]
-      for (let indice in arrTeste) {
-          if (nTeste == arrTeste[indice]) {
-              contador += 1;  
-          }
-      }
-      if (contador > contRepetido) {
-          contRepetido = contador;
-      }
-      contador = 0;
-  }
-  return contRepetido;
+// Desafio 6
+function highestCount(inteiros) {
+  let indiceMaior = 0;
+    let contador = 0;
+
+    for (let indice in inteiros) {
+        if(inteiros[indiceMaior] < inteiros[indice]){
+            indiceMaior = indice;
+        }
+    }
+    
+    for (let i in inteiros) {
+        if (inteiros[indiceMaior] === inteiros[i]) {
+            contador += 1;
+        }
+    }
+    return contador;
 }
-console.log(highestCount(arrTeste));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaC1 = mouse - cat1;
