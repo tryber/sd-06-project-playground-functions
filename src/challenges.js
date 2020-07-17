@@ -66,6 +66,8 @@ function catAndMouse(positionMouse, positionCat1, positionCat2) {
   // seu código aqui
   let distanciaMouseCat1 = positionCat1 - positionMouse;
   let distanciaMouseCat2 = positionCat2 - positionMouse;
+  distanciaMouseCat1 = Math.abs(distanciaMouseCat1);
+  distanciaMouseCat2 = Math.abs(distanciaMouseCat2);
   let mensagem = '';
   if (distanciaMouseCat1 < distanciaMouseCat2) {
     mensagem = 'cat1';
