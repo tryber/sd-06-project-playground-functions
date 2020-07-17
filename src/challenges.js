@@ -32,24 +32,54 @@ function highestCount(numbers) {
   for(let i= 1; i < numbers.length; i++) {
     if(numbers[i] > maiorNumero){
       maiorNumero = numbers[i]
-    }
-  }
+    };
+  };
   for(n in numbers){
     if(numbers[n] === maiorNumero) {
       contador++
-    }
-  }
+    };
+  };
   return contador
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2, mouse) {
+  let distancia1;
+  let distancia2;
+  if(cat1 >= mouse){
+    distancia1 = cat1 - mouse;
+  } else {
+    distancia1 = mouse - cat1;
+  }
+  if(cat2 >= mouse){
+    distancia2 = cat2 - mouse;
+  } else {
+    distancia2 = mouse - cat2;
+  }
+  if(distancia1 > distancia2){
+    return cat1;
+  } else if (distancia2 > distancia1){
+    return cat2;
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let arrayFinal = [];
+  for(n in numbers) {
+    if(numbers[n] % 3 === 0 && numbers[n] % 5 === 0) {
+      arrayFinal[n] = "fizzBuzz";
+    } else if (numbers[n] % 3 === 0 && numbers[n] % 5 != 0) {
+      arrayFinal[n] = "fizz";
+    } else if (numbers[n] % 3 != 0 && numbers[n] % 5 === 0){
+      arrayFinal[n] = "buzz";
+    } else {
+      arrayFinal[n] = 'bug!';
+    }
+  }
+  return arrayFinal
 }
 
 // Desafio 9
