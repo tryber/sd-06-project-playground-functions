@@ -62,8 +62,32 @@ function highestCount(arrayOfNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2, mouse) {
+  let positiveArray = [cat1, cat2, mouse];
+
+  for (let i in positiveArray) {
+    if (positiveArray[i] < 0) {
+      positiveArray[i] = positiveArray[i] * -1;
+    }
+  }
+
+  function closerToMouse(predator, prey) {
+    if (predator > prey) {
+      return predator - prey;
+    } else if (prey > predator) {
+      return prey - predator;
+    }
+
+    return 0;
+  }
+
+  if (closerToMouse(cat1, mouse) === closerToMouse(cat2, mouse)) {
+    return "os gatos trombam e o rato foge";
+  } else if (closerToMouse(cat1, mouse) < closerToMouse(cat2, mouse)) {
+    return "cat1";
+  } else {
+    return "cat2";
+  }
 }
 
 // Desafio 8
