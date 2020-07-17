@@ -48,7 +48,7 @@ function highestCount(a = [9, 1, 2, 3, 9, 5, 7]) {
 }
 
 // Desafio 7
-function catAndMouse(mouse = 10, cat1 = 13, cat2 = 12) {
+function catAndMouse(mouse = 0, cat1 = 3, cat2 = 2) {
   cat1Mouse = cat1 - mouse;
   cat2Mouse = cat2 - mouse;
   
