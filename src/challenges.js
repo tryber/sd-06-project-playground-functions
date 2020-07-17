@@ -41,8 +41,9 @@ function concatName(array) {
   let arrayStrings = [];
   arrayStrings.push(array[array.length - 1]);
   arrayStrings.push(array[0]);
-  return arrayStrings[0] + ', ' + arrayStrings[1];
+  return '${arrayStrings[0]}, ${arrayStrings[1]}';
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(win, ties) {
@@ -64,12 +65,12 @@ function highestCount(numbers) {
     let numberCount = 0;
     for (let n of numbers) {
       if (n > highNum) {
-        highNum = i;
+        highNum = n;
       }
     }
-    for (n of numbers) {
+    for (let n of numbers) {
       if (n === highNum) {
-        numberCount++;
+        numberCount += 1;
       }
     }
     return numberCount;
@@ -78,8 +79,19 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distCat1 = Math.abs(mouse - cat1);
+  let distCat2 = Math.abs(mouse - cat2);
+  let result = '';
+  if (distCat1 < distCat2) {
+    result = 'cat1';
+  } else if (distCat1 > distCat2) {
+    result = 'cat2';
+  } else {
+    result = 'os gatos trombam e o rato foge';
+  }
+  return result;
 }
 
 // Desafio 8
