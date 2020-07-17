@@ -5,7 +5,7 @@ function compareTrue() {
 
 // Desafio 2
 function calcArea() {
-  // seu código aqui
+    // seu código aqui
 }
 
 // Desafio 3
