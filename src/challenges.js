@@ -1,13 +1,15 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(idade,salario) {
   // seu código aqui
-    idade=18
-    salario=1000
     if(idade>=18 && salario>=500){
-      return
+      console.log(true)
+      return true
+    }else{
+      console.log(false)
+      return false
     }
 }
-
+compareTrue(17,1000)
 // Desafio 2
 function calcArea() {
   // seu código aqui
