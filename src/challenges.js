@@ -39,7 +39,7 @@ function footballPoints(wins,ties){
 
 // Desafio 6
 function highestCount(array) {
-  
+
   let highestNumber = 0;
   let counter = 0;
 
@@ -217,8 +217,30 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+
+  let sideA = false;
+  let sideB = false;
+  let sideC = false;
+
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
+    sideA = true;
+  }
+
+  if ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC))) {
+    sideB = true;
+  }
+
+  if ((lineC < lineB + lineA) && (lineC > Math.abs(lineB - lineA))) {
+    sideC = true;
+  }
+
+
+  if (sideA && sideB && sideC) {
+    return true;
+  }
+
+  return false
 }
 
 // Desafio 13
