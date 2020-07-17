@@ -41,7 +41,7 @@ function concatName(array) {
   let arrayStrings = [];
   arrayStrings.push(array[array.length - 1]);
   arrayStrings.push(array[0]);
-  return arrayStrings[0] + ', ' + arrayStrings[1];
+  return arrayStrings.toString();
 }
 
 // Desafio 5
@@ -63,12 +63,12 @@ function highestCount(numbers) {
   let numberCount = 0;
   for (let n of numbers) {
     if (n > highNum) {
-    highNum = n;
+      highNum = n;
     }
   }
   for (let n of numbers) {
     if (n === highNum) {
-    numberCount += 1;
+      numberCount += 1;
     }
   }
   return numberCount;
@@ -93,7 +93,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-  for (i in array) {
+  for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       array[i] = 'fizzBuzz';
     } else if (array[i] % 3 === 0) {
@@ -108,11 +108,60 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let stringArray = string.split('');
+  let encodedString = [];
+  for (let i in stringArray) {
+    switch(stringArray[i]) {
+      case 'a':
+        encodedString.push('1');
+        break;
+      case 'e':
+        encodedString.push('2');
+        break;
+      case 'i':
+        encodedString.push('3');
+        break;
+      case 'o':
+        encodedString.push('4');
+        break;
+      case 'u':
+        encodedString.push('5');
+        break;
+      default:
+        encodedString.push(stringArray[i]);
+    }
+  }
+  return encodedString.join('');
 }
-function decode() {
+
+function decode(string) {
   // seu código aqui
+  let stringArray = string.split('');
+  let encodedString = [];
+  for (let i in stringArray) {
+    switch(stringArray[i]) {
+      case '1':
+        encodedString.push('a');
+        break;
+      case '2':
+        encodedString.push('e');
+        break;
+      case '3':
+        encodedString.push('i');
+        break;
+      case '4':
+        encodedString.push('o');
+        break;
+      case '5':
+        encodedString.push('u');
+        break;
+      default:
+        encodedString.push(stringArray[i]);
+    }
+  }
+  return encodedString.join('');
 }
 
 // Desafio 10
