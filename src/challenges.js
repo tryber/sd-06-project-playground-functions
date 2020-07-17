@@ -37,18 +37,57 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior=array[0];
+  let cont=0;
+  
+  for(let i=0; i<array.length;i+=1){
+    if(array[i]===maior){
+      cont++;
+    }
+    if(array[i]>maior){
+      maior=array[i];
+      cont=1;
+    }
+  }
+  return cont;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1=0;
+  let dist2=0;
+  dist1=cat1-mouse;
+  Math.abs(dist1);
+  dist2=cat2-mouse;
+  Math.abs(dist2);
+  if(dist1>dist2){
+    return cat2;
+  }
+  else{
+    return cat1;
+  }
+
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array_1) {
+  let array_2=[];
+  for(let i=0; i<array_1.length;i+=1){
+    if(array[i]%3===0){
+      array_2+="fizz";
+    }
+    if(array[i]%5===0){
+      array_2+="buzz";
+    }
+    if(array[i]%5===0 && array[i]%3===0){
+      array_2+="fizzbuzz";
+    }
+    else{
+      array_2+="bug";
+    }
+    
+  }
 }
 
 // Desafio 9
