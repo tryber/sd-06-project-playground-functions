@@ -44,13 +44,25 @@ function highestCount(a = [9, 1, 2, 3, 9, 5, 7]) {
       contHigher ++
     }
   }
+  return contHigher
 }
-
-highestCount();
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse = 10, cat1 = 20, cat2 = 15) {
+  cat1Mouse = (cat1 - mouse);
+  cat2Mouse = cat2 - mouse;
+  
+  if ( cat1Mouse == cat2Mouse){
+    return 'os gatos trombam e o rato foge'
+  }
+  else
+    if ( cat1Mouse < cat2Mouse){
+      return 'cat1'
+    }
+    else
+      return 'cat2'
 }
+
 
 // Desafio 8
 function fizzBuzz() {
