@@ -24,12 +24,13 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(arrayString) {
   // seu código aqui
-  let newString = "";
+  let newString = '';
+  let comma = ', ';
   for (let index = arrayString.length - 1; index >= 0; index -= 1) {
     if (index === 0) {
       newString += arrayString[index];
     } else {
-      newString += arrayString[index] + ", ";
+      newString += arrayString[index] + comma;
     }
   }
   return newString;
