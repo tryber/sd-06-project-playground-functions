@@ -103,7 +103,7 @@ function encode(string) {
   let final = array.join('');
   return final;
 }
-function decode(string) {
+function decode(fraseNumerada) {
   const numeros = {
     1 : 'a',
     2 : 'e',
@@ -112,8 +112,8 @@ function decode(string) {
     5 : 'u',
   };
   let array = [];
-  for(let i = 0; i < string.length; i++) {
-    let char = string.charAt(i);
+  for(let i = 0; i < fraseNumerada.length; i++) {
+    let char = fraseNumerada.charAt(i);
     if(char in numeros) {
       array.push(numeros[char]);
     } else {
@@ -139,13 +139,23 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let final = true
+  if(lineA > (lineB + lineC) || lineA < Math.abs(lineB - lineC)){
+    final = false
+  }
+  else if(lineB > (lineA + lineC) || lineB < Math.abs(lineA - lineC)){
+    final = false
+  }
+  else if(lineC > (lineB + lineA) || lineC < Math.abs(lineB - lineA)){
+    final = false
+  }
+  return final
 }
 
 // Desafio 13
