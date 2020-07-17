@@ -9,7 +9,7 @@ function compareTrue(val1, val2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let calc = (base * height)/2;ß
+  let calc = (base * height)/2;
   return calc;
 
 
@@ -22,7 +22,7 @@ function splitSentence() {
 // Desafio 4
 function concatName(array) {
   for (const key in array) {
-    return array[array.length] +", "+ array[0];
+    return array[array.length - 1] +", "+ array[0];
   }
 }
 
