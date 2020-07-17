@@ -74,7 +74,6 @@ function fizzBuzz(n) {
   }
   return result;
 }
-}
 
 // Desafio 9
 function encode() {
