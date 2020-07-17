@@ -125,8 +125,6 @@ function fizzBuzz(fizzBuzzNumbers) {
 // console.log(fizzBuzz(fizzBuzzNumbers));
 
 // Desafio 9
-const decodedString = 'hi there!';
-
 function encode(decodedString) {
   let encoded = '';
 
@@ -149,11 +147,7 @@ function encode(decodedString) {
   return encoded;
 }
 
-// console.log(encode(encodedString));
-
-const encodedString = 'h3 th2r2!';
-
-function decode() {
+function decode(encodedString) {
   let decoded = '';
 
   for (let i = 0; i < encodedString.length; i++) {
@@ -174,8 +168,6 @@ function decode() {
 
   return decoded;
 }
-
-// console.log(decode(encodedString));
 
 // Desafio 10
 function techList() {
