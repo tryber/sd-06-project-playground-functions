@@ -22,7 +22,7 @@ function splitSentence(frase) {
 function concatName(names) {
   let resultadoNome = "";
   resultadoNome = names[names.length -1] + ", " + names[0];
-  return resultadoNome;
+  return "'" + resultadoNome + "'"
 }
 
 // Desafio 5
@@ -33,13 +33,11 @@ function footballPoints(wins,ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let highNumber = 0;
-  let index = 0;
+  let highNumber = numbers[0];
   let count = 0;
   for (i in numbers){
-    if (numbers[index] < numbers [i]){
+    if (highNumber < numbers [i]){
       highNumber = numbers[i];
-      index = i;
     }
   }
   for (j in numbers){
@@ -49,6 +47,7 @@ function highestCount(numbers) {
   }
   return count;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -64,15 +63,35 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let arrayFinal = [];
+  for (i in numbers){
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0){
+      arrayFinal.push("fizzBuzz");
+    } else if (numbers[i] % 5 === 0){
+      arrayFinal.push("buzz");
+    } else if (numbers[i] % 3 === 0){
+      arrayFinal.push("fizz");
+    } else {
+      arrayFinal.push("bug!");
+    }
+  }
+  return arrayFinal;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(param1) {
+  let vogais = ["a", "e", "i", "o", "u"];
+  let resultado = "";
+  for (i in vogais){
+    if (vogais[i] === "a"){
+      resultado = param1.replace("a", "1");
+    }
+  }
+  console.log(resultado);
 }
-function decode() {
+
+function decode(param2) {
   // seu código aqui
 }
 
