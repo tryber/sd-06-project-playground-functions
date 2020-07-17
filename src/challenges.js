@@ -28,11 +28,15 @@ function splitSentence(string) {
       stringArray.push(word);
       word = "";
     }
+    
   }
-
+  
+  stringArray.push(word);
   return stringArray;
   
 }
+
+splitSentence("go trybe")
 
 // Desafio 4
 function concatName(stringArray) {
