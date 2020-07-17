@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(statement1, statement2) {
-  if (statement1 && statement2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return (statement1 && statement2);
 }
 
 // Desafio 2
@@ -131,8 +127,15 @@ function decode(m2ss1g2) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techNames, name) {
+  if (techNames.length === 0) {
+    return "Vazio!";
+  } else {
+    let listOfTech = [];
+    for (let i in techNames) {
+
+    }
+  }
 }
 
 // Desafio 11
