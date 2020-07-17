@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
+  resultado = false
   if (value1 === true && value2 === true) {
-    return true;
-  } else {
-    return false;
+    resultado = true;
   }
+  return resultado;
 }
 
 // Desafio 2
@@ -66,14 +66,15 @@ function catAndMouse(positionMouse, positionCat1, positionCat2) {
   // seu código aqui
   let distanciaMouseCat1 = positionMouse - positionCat1;
   let distanciaMouseCat2 = positionMouse - positionCat2
-  let mensagem = ''
+  let mensagem = '';
   if (distanciaMouseCat1 < distanciaMouseCat2) {
     mensagem = 'cat1';
   } else if (distanciaMouseCat2 < distanciaMouseCat1) {
     mensagem = 'cat2';
   } else {
-    mensagem = "os gatos trombam e o rato foge";
+    mensagem = 'os gatos trombam e o rato foge';
   }
+  return mensagem
 }
 
 // Desafio 8
