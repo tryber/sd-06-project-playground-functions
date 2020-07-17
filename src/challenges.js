@@ -1,14 +1,14 @@
 // Desafio 1
-let value1 = 1;
-let value2 = 2;
+let value1 = "a";
+let value2 = "b";
 function compareTrue(value1, value2) {
-  if( value1 === 1 && value2 === 2 ){
+  if( value1 === a && value2 === b ){
     return true;
   }else{
     return false;
   }
-
 }
+
 
 // Desafio 2
 let base;
@@ -16,12 +16,16 @@ let altura;
 function calcArea(base,altura) {
   return (base*altura)/2;
 }
-console.log(calcArea(5,10));
+
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(testaString) {
+  //testaString = "Go Trybe"
+  //let splitTestaString = testaString.split(" ");
+  
 }
+
+
 
 // Desafio 4
 function concatName() {
@@ -44,8 +48,24 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let arrayNumeros=[];
+function fizzBuzz(arrayNumeros) {
+  arrayNumeros = [2,3,4,5,6,7,8,9,10];
+  for (let i = 0; i < arrayNumeros.lenght; i += 1){
+    if ( arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0){
+      return "fizzBuzz";
+    }else if( arrayNumeros[i] % 3 === 0){
+      return "fizz";
+    }else if ( arrayNumeros[i] % 5 === 0){
+      return "buzz";
+    }else{
+      return "bug!";
+    }
+
+  }
+  console.log(fizzBuzz(arrayNumeros));
+
+  
 }
 
 // Desafio 9
