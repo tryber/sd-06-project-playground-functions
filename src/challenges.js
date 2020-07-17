@@ -1,11 +1,17 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(a, b) {
   // seu código aqui
+  if (a === true && b === true){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, altura) {
   // seu código aqui
+  return base * altura;
 }
 
 // Desafio 3
@@ -19,8 +25,11 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(vitoria, empate) {
   // seu código aqui
+  vitoria = vitoria * 3;
+  empate = empate * 1;
+  return vitoria + empate;
 }
 
 // Desafio 6
