@@ -40,14 +40,38 @@ function concatName(arr) {
 console.log(concatName(arr))
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  let pontos = wins*3 + ties ;
+  return pontos
   // seu código aqui
 }
 
+console.log(footballPoints(3,1))
+
 // Desafio 6
-function highestCount() {
+function highestCount(arr2) {
+  let highestNumber = arr2[0];
+
+  for(let index=0; index < arr2.length; index +=1) {
+      if (arr2[index]> highestNumber) {
+          highestNumber = arr2 [index];
+      }
+  }
+
+  let count = 0;
+  for(let index = 0; index < arr2.length; index +=1){
+      if (highestNumber == arr2[index]) {
+          count += 1;
+      }
+  }
+
+  return count;
   // seu código aqui
 }
+
+let array = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(array));
+
 
 // Desafio 7
 function catAndMouse() {
