@@ -23,8 +23,8 @@ function concatName(words) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, tries) {
+  return(wins * 3 + tries)
 }
 
 // Desafio 6
