@@ -132,16 +132,27 @@ function decode(string) {
 // Desafio 10
 function techList(tec, name) {
   let object = []
-  if (tec === null || tec === undefined || tec === '') {
+
+  if (tec.length === 0) {
     return 'Vazio!';
-  }else {
-    for(indice in tec){
-      object[indice] = {tech: tec[indice], name: name};
+  } else {
+    for (let indice = (tec.length-1); indice >= 0; indice-=1 ) {
+      object[indice] = {tech: tec[indice]};
+      object[indice].name = name;
     }
+    object.sort(function (a, b) {
+      if (a.tech > b.tech) {
+        return 1;
+      }
+      if (a.tech < b.tech) {
+        return -1;
+      }
+      return 0;
+    });
   }
   return object;
 }
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Marx"));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
