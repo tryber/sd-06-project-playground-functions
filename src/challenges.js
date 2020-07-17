@@ -134,28 +134,27 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-  
-  let listaObjetos = [];
-  array.sort();
 
-  for(let pos = 0; pos < array.length; pos += 1) {
-    let objeto = {};
+  let resultado = '';
+  let listaObjetos = [];  
 
-    if (array[pos] === '') {
-      objeto.tech = 'Vazio!';
-    } else {
+  if (array.length == 0) {
+    listaObjetos = 'Vazio!';
+  } else {
+    array.sort();
+    for(let pos = 0; pos < array.length; pos += 1) {
+      let objeto = {};
+
       objeto.tech = array[pos];
+      objeto.name = name;
+      listaObjetos.push(objeto);
     }
-    
-    objeto.name = name;
-    listaObjetos.push(objeto);
   }
 
-return listaObjetos;  
+return listaObjetos; 
 }
 
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber() {
