@@ -1,5 +1,5 @@
 // Desafio 1
-
+let valor1, valor2;
 function compareTrue(valor1, valor2) {
   if( valor1 === true && valor2 === true ){
     return true;
@@ -7,7 +7,8 @@ function compareTrue(valor1, valor2) {
     return false;
   }
 }
-console.log(compareTrue(0,1));
+console.log(compareTrue(valor1,valor2));
+
 
 // Desafio 2
 let base;
@@ -15,7 +16,7 @@ let altura;
 function calcArea(base,altura) {
   return (base*altura)/2;
 }
-
+console.log(calcArea(5, 10));
 
 // Desafio 3
 function splitSentence(testaString) {
@@ -30,7 +31,7 @@ function splitSentence(testaString) {
 let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName() {
   let arrayPrimeiroUltimo=[];
-  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length -1]) + arrayNomes[0];
+  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length -1])+"," + arrayNomes[0];
 }
 console.log(concatName());
 
@@ -39,6 +40,7 @@ function footballPoints(ties, wins) {
   return (ties * 1) + (wins * 3);
   
 }
+console.log(footballPoints(2,3));
 
 
 // Desafio 6
@@ -66,12 +68,13 @@ function fizzBuzz(arrayNumeros) {
     }else{
       return "bug!";
     }
-
+    console.log(fizzBuzz("oi"));
   }
+}
   console.log(fizzBuzz(arrayNumeros));
 
   
-}
+
 
 // Desafio 9
 function encode() {
