@@ -1,12 +1,13 @@
 // Desafio 1
 function compareTrue(valor1,valor2) {
   // seu código aqui
-  if(valor1 != valor2){
-    console.log(false)
-}else{console.log(true)}
+  if(valor1==true && valor2==true){
+   return true
+  } 
+  else{return false}
 }
 
-compareTrue (93663639,93663639)
+console.log(compareTrue (93663639,93663639))
 
 
 // Desafio 2
@@ -14,7 +15,7 @@ function calcArea(base, height) {
   let areaTriangulo  = (base*height)/2
   return areaTriangulo}
 
-console.log(calcArea(2,3))
+
 // Desafio 3
 // seu código aqui
 function splitSentence(string) {
@@ -61,11 +62,23 @@ else if(
 
 console.log(catAndMouse(2,1,3))
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
-
+  let arrayResposta =[]
+for(let i=0;i<array.length;i++){
+  if(array[i]%5==0 && array[i]%3==0){
+    arrayResposta.push("fizzBuzz")
+  }
+  else if(array[i]%3==0){
+    arrayResposta.push("fizz")
+  }
+  else if (array[i]%5==0){
+    arrayResposta.push("buzz")
+  }
+  else { arrayResposta.push("bug")}
+}return arrayResposta
 }
-console.log(fizzBuzz())
+console.log(fizzBuzz([2, 15, 7, 9, 45],))
 
 // Desafio 9
 function encode() {
