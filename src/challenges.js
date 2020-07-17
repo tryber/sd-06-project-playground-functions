@@ -64,7 +64,7 @@ function highestCount(arrayNumeros) {
 
   for (let i in arrayNumeros) {
     if (arrayNumeros[i] === maiorValor) {
-      ocorrencias++;
+      ocorrencias +=1;
     }
   }
   return ocorrencias;
