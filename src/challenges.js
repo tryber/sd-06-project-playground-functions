@@ -22,7 +22,7 @@ function splitSentence(nomeString) {
 function concatName(ultimoItemEPrimeiroItem) {
   let ultimoItem = ultimoItemEPrimeiroItem.length - 1;
   let primeiroItem = ultimoItemEPrimeiroItem.concat[0];
-  return ultimoItem[0] + " " + primeiroItem;
+  return ultiultimoItemEPrimeiroItem[primeiroItem] + " " + prultimoItemEPrimeiroItem[ultimoItem];
 }
 
 // Desafio 5
