@@ -28,7 +28,7 @@ function highestCount(array) {
   let maior = array[0];
   let count = 0;
 
-  for (let i = 0; i < array.length; i += 1) {
+  for (let i=0; i<array.length; i++) {
 
     if (array[i] === maior) {
       count += 1;
@@ -45,8 +45,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distancia1 = cat1 - mouse;
-  distancia2 = cat2 - mouse;;
+  let distancia1 = cat1 - mouse;
+  let distancia2 = cat2 - mouse;;
 
   if (distancia1 > distancia2) {
     return "cat2"
@@ -54,7 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (distancia2 > distancia1) {
     return "cat1"
   }
-  return "os gatos trombam e o rato foge" 
+  return "os gatos trombam e o rato foge"
 }
 
 // Desafio 8
