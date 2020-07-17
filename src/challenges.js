@@ -13,9 +13,13 @@ let resultado = compareTrue(a, b);
 console.log(resultado);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+// Área do triângulo
+
+function calcArea(base, altura) {
+   return ((base * altura) / 2);
 }
+ area = calcArea(15, 4);
+ console.log(area);
 
 // Desafio 3
 function splitSentence() {
