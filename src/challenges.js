@@ -70,7 +70,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     resposta = 'os gatos trombam e o rato foge';
   }
-  //retorno
   return resposta;
 }
 
@@ -93,12 +92,12 @@ function fizzBuzz(meuArray) {
 
 // Desafio 9
 function encode(minhaString) {
-  let resposta = minhaString.replace('a', '1').replace('e', '2').replace('i', '3').replace('o','4').replace('u', '5');
-  return resposta;
+  let codifica = minhaString.replace('a', '1').replace('e', '2').replace('i', '3').replace('o', '4').replace('u', '5');
+  return codifica;
 }
 function decode(minhaString) {
-  let resposta = minhaString.replace('1', 'a').replace('2', 'e').replace('3', 'i').replace('4', 'o').replace('5', 'u');
-  return resposta;
+  let descodifica = minhaString.replace('1', 'a').replace('2', 'e').replace('3', 'i').replace('4', 'o').replace('5', 'u');
+  return descodifica;
 }
 
 // Desafio 10
