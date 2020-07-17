@@ -1,11 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-    return value1 && value2
-        //comparando valores
+    return value1 && value2;
+    //comparando valores
 }
 
-
-/*// Desafio 2
+// Desafio 2
 function calcArea() {
     // seu código aqui
 }
@@ -85,4 +84,4 @@ module.exports = {
     hydrate,
     splitSentence,
     triangleCheck,
-}*/
+}
