@@ -1,9 +1,9 @@
 //Desafio 1
 function compareTrue(param1, param2) {
   if (param1 == true && param2 == true) {
-  return true
+  return true;
 } else {
-  return false
+  return false;
   }
 }
 
@@ -11,7 +11,7 @@ function compareTrue(param1, param2) {
 function calcArea(base, height) {
   // seu código aqui
   let area = (base * height) / 2;
-  return area
+  return areaDoTri
 }
 
 // Desafio 3
@@ -47,8 +47,22 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(n) {
   // seu código aqui
+  for(let i = 1 ; i <= numero ; i++)
+  let numero = "";
+  
+  if(i % 3==0){
+    numero = "fizz"
+  } else if (i % 5==0) {
+    numero = "buzz"
+  } else if (i % 3==0 && i % 3==0) {
+    numero = "fizzbuzz"
+  } else {
+    numero = i
+
+  return numero
+  }
 }
 
 // Desafio 9
