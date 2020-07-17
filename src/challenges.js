@@ -1,16 +1,13 @@
 // Desafio 1
 
-let booleano01 = 10;
-let booleano02 = 10;
-
 function compareTrue(booleano01, booleano02) {
-  if (booleano01&&booleano02 === 10) 
-    return true
-  
-  else {
 
-  }
-  return false
+if (booleano01 === true && booleano02 === true) {
+  return true;
+}
+else {
+  return false;
+}
 }
 
 // Desafio 2
