@@ -10,12 +10,13 @@ function compareTrue(valor1, valor2) {
 // Desafio 2
 function calcArea(base, heigth) {
   let soma = (base * heigth) / 2;
-  return soma; 
+  return soma;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+let nomeString = "go Trybe";
+function splitSentence(nomeString) {
+  return nomeString.split;
 }
 
 // Desafio 4
