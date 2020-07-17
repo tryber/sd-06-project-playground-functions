@@ -44,44 +44,44 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-    let distanceCat1 = Math.abs(mouse - cat1);
-    let distanceCat2 = Math.abs(mouse - cat2);
-    if (distanceCat1 < distanceCat2){
-      return "cat1";
-     } else if (distanceCat1 > distanceCat2) {
-       return "cat2";
-     } else {
-       return "os gatos trombam e o rato foge";
-     }
-}
+//function catAndMouse(mouse, cat1, cat2) {
+//    let distanceCat1 = Math.abs(mouse - cat1);
+//    let distanceCat2 = Math.abs(mouse - cat2);
+//    if (distanceCat1 < distanceCat2){
+//      return "cat1";
+//     } else if (distanceCat1 > distanceCat2) {
+//       return "cat2";
+//     } else {
+//       return "os gatos trombam e o rato foge";
+//     }
+//}
 
-// Desafio 8????????????????????????/
-function fizzBuzz(array) {
-  var results = [];
-    if (array === 1) {
-      return '1';
-    } else {
-      if (n % 3 === 0 && array % 5 === 0) {
-        results.push('FizzBuzz');
-        if (array % 3 != 0 && array % 5 != 0){
-          results.push('bug!');
-      } else if (array % 5 === 0) {
-        results.push('Buzz');
-      } else if (array % 3 === 0) {
-        results.push('Fizz');
-         if (array % 3 != 0 && array % 5 != 0){
-          results.push('bug!');
-      } else {
-        results.push(''+ array);
-      }
-    }
-}
-    }
+// Desafio 8
+//function fizzBuzz(array) {
+//  var results = [];
+//    if (array === 1) {
+//      return '1';
+//    } else {
+//      if (n % 3 === 0 && array % 5 === 0) {
+//        results.push('FizzBuzz');
+//        if (array % 3 != 0 && array % 5 != 0){
+//          results.push('bug!');
+//      } else if (array % 5 === 0) {
+//        results.push('Buzz');
+//      } else if (array % 3 === 0) {
+//        results.push('Fizz');
+//         if (array % 3 != 0 && array % 5 != 0){
+//         results.push('bug!');
+//      } else {
+//        results.push(''+ array);
+ //     }
+//    }
+//}
+//    }
 
 // Desafio 9
 function encode() {
-///////////////////////
+
 }
 function decode() {
   
@@ -124,4 +124,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-}
+//}
