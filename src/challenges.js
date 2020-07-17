@@ -28,15 +28,15 @@ function splitSentence(lucas) {
   return lucas;
 }
 
-// // Desafio 4
-// function concatName(meuNome) {
-//   // seu código aqui
-// let meuNome = ['Lucas', 'Souza', 'de', 'Miranda'];
-// let meuNomeConcat = meuNome[meuNome.length -1] + ', ' + meuNome[0]
-// return meuNomeconcat;
+// Desafio 4
+function concatName(meuNome) {
+  // seu código aqui
+let meuNome = ['Lucas', 'Souza', 'de', 'Miranda'];
+let meuNomeConcat = meuNome[meuNome.length -1] + ', ' + meuNome[0]
+return meuNomeconcat;
 
 
-// }
+}
 
 
 // Desafio 5
