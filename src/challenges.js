@@ -27,7 +27,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
     // seu código aqui
-    resultado = array[0] + ", " + array[array.length - 1]
+    resultado = array[array.length - 1] + ", " + array[0];
     console.log(resultado);
     return resultado;
 }
