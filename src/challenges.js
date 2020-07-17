@@ -37,19 +37,8 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz() {
-/*  for (let index = 0; index < args.length; index += 1){
-    if ((args[index] % 3 == 0) && (args[index] % 5 == 0)){
-      return console.log("fizzBuzz");
-    } else if((args[index] % 3 != 0) && (args[index] % 5 != 0)){
-      return console.log("bug!");
-    } else if (args[index] % 3 == 0){
-      return console.log("fizz");
-    } else if (args[index] % 5 == 0){
-      return console.log("buzz");
-    } 
-  }
+  // seu código aqui
 }
-*/
 // Desafio 9
 function encode() {
   // seu código aqui
