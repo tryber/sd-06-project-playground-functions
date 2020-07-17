@@ -1,17 +1,20 @@
 // Desafio 1
-function compareTrue() {
-  o // seu código aqui
+function compareTrue(value1, value2) {
+  return value1 && value2;  
 }
+console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base*height)/2
 }
+console.log(calcArea(3, 1))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(" ");
 }
+console.log(splitSentence("Hj é sexta, só que tem projeto pro final de semana!"));
 
 // Desafio 4
 function concatName() {
@@ -30,7 +33,7 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  math.abs()
 }
 
 // Desafio 8
