@@ -98,12 +98,68 @@ function fizzBuzz(array) {
 fizzBuzz[[2, 15, 7, 9, 45]]
 
 // Desafio 9
-function encode() {
+function encode(string) {
     // seu código aqui
+    // transforma a string em array. Vira 'frase'
+    let frase = string.split("");
+
+    // troca as letras
+    for (let i = 0; i < frase.length; i++) {
+        switch (frase[i]) {
+            case "a":
+                frase[i] = "1";
+                break;
+            case "e":
+                frase[i] = "2";
+                break;
+            case "i":
+                frase[i] = "3";
+                break;
+            case "o":
+                frase[i] = "4";
+                break;
+            case "u":
+                frase[i] = "5";
+                break;
+            default:
+        }
+    }
+    //junta de novo (o contrario de split)
+    frase = frase.join("");
+    console.log(frase)
+    return frase;
 }
 
-function decode() {
+function decode(string) {
     // seu código aqui
+    // transforma a string em array. Vira 'frase'
+    let frase = string.split("");
+
+    // troca as letras
+    for (let i = 0; i < frase.length; i++) {
+        switch (frase[i]) {
+            case "1":
+                frase[i] = "a";
+                break;
+            case "2":
+                frase[i] = "e";
+                break;
+            case "3":
+                frase[i] = "i";
+                break;
+            case "4":
+                frase[i] = "o";
+                break;
+            case "5":
+                frase[i] = "u";
+                break;
+            default:
+        }
+    }
+    //junta de novo (o contrario de split)
+    frase = frase.join("");
+    console.log(frase)
+    return frase;
 }
 
 // Desafio 10
