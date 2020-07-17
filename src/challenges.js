@@ -109,7 +109,7 @@ function fizzBuzz(array3) {
     }else if (array3[indice] % 3 === 0){
       saida = "fizz";      
     }else if (array3[indice] % 5 === 0){
-      saida = "Buzz";      
+      saida = "buzz";      
     }else{
       saida = "bug!";      
     }
@@ -164,11 +164,11 @@ function decode(stringParametro2) {
   }
   return palavraAntiNumerica;
 }
-let valor1 = "hi there!";
+/* let valor1 = "hi there!";
 let valor2 = "h3 th2r2!";
-/* let valor3 = 2; */
+let valor3 = 2;
 console.log(encode(valor1));
-console.log(decode(valor2));
+console.log(decode(valor2)); */
 
 
 // Desafio 10
