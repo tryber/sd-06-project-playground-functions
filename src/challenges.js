@@ -17,35 +17,41 @@ console.log(compareTrue(var1, var2));
 let bas = 12;
 let hei = 8;
 function calcArea(base, height) {
-  let area = (base*height)/2;
+  let area = (base * height) / 2;
   return area
 }
 console.log(calcArea(bas, hei));
 
 
 // --------------- Desafio 3
-let frase = "vamos que vamos";
+let frase = 'go Trybe';
 let fraseSeparada = [];
 function splitSentence(myText) {
-  let word = "";
-  for (i = 0; i < myText.length; i += 1){
-    if (myText[i] !== " "){
+  let word = '';
+  for (let i = 0; i < myText.length; i += 1) {
+    if (myText[i] !== ' ') {
       word += myText[i];
     } else {
       fraseSeparada.push(word);
-      word = "";
+      word = '';
+    }
+    // inclui a ultima palavra
+    if (i ==  myText.length-1) {
+      fraseSeparada.push(word);  
     }
   }
-  fraseSeparada.push(word);
   return fraseSeparada;
 }
 console.log(splitSentence(frase));
 
 
 // ---------------- Desafio 4
-function concatName() {
-  // seu código aqui
+let name = ['Ricardo', 'Alexandre', 'de', 'Souza', 'Ribeiro']
+function concatName(myName) {
+  let nameConcat = myName[myName.length-1] + ', ' + myName[0]
+  return nameConcat
 }
+console.log(concatName(name));
 
 // Desafio 5
 function footballPoints() {
