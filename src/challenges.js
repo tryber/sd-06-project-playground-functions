@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if(param1 && param2){
+  if (param1 && param2) {
     return true;
-  }else{
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -77,11 +76,55 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let aux = str.split('');
+  for(index in aux){
+    if(aux[index] === 'a'){
+      aux[index] = '1';
+    }else
+    if(aux[index] === 'e'){
+      aux[index] = '2';
+    }else
+    if(aux[index] === 'i'){
+      aux[index] = '3';
+    }else
+    if(aux[index] === 'o'){
+      aux[index] = '4';
+    }else 
+    if(aux[index] === 'u'){
+      aux[index] = '5';
+    }
+  }
+  str = '';
+  for(index in aux){
+    str += aux[index];
+  }
+  return str;
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let aux = str.split('');
+  for(index in aux){
+    if(aux[index] === '1'){
+      aux[index] = 'a';
+    }else
+    if(aux[index] === '2'){
+      aux[index] = 'e';
+    }else
+    if(aux[index] === '3'){
+      aux[index] = 'i';
+    }else
+    if(aux[index] === '4'){
+      aux[index] = 'o';
+    }else 
+    if(aux[index] === '5'){
+      aux[index] = 'u';
+    }
+  }
+  str = '';
+  for(index in aux){
+    str += aux[index];
+  }
+  return str;
 }
 
 // Desafio 10
@@ -120,7 +163,9 @@ console.log('Exercício 7: ' + catAndMouse(10, 8, 7));
 
 console.log('Exercício 8: ' + fizzBuzz([2, 15, 7, 9, 45]));
 
-console.log('Exercício 9: ' );
+console.log('Exercício 9: ' + encode('hi there!'));
+
+console.log('Exercício 9: ' + decode('h3 th2r2!'));
 
 console.log('Exercício 10: ' );
 
