@@ -24,20 +24,22 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(arrayString) {
   // seu código aqui
-  let newString = '';
-  for (let index = arrayString.length - 1; index >= 0; index -= 1){
-    if (index === 0){
-      newString += arrayString[index];  
+  let newString = "";
+  for (let index = arrayString.length - 1; index >= 0; index -= 1) {
+    if (index === 0) {
+      newString += arrayString[index];
     } else {
-      newString += arrayString[index] + ', ';
+      newString += arrayString[index] + ", ";
     }
   }
   return newString;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let points = (wins * 3) + ties;
+  return points;
 }
 
 // Desafio 6
