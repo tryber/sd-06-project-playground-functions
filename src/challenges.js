@@ -48,9 +48,9 @@ function catAndMouse(mouse, cat1, cat2) {
     outroGato2 = mouse - cat2;
   }
   if (outroGato1 > outroGato2){
-    return cat2;
+    return "cat2";
   } else if (outroGato2 > outroGato1){
-    return cat1;
+    return "cat1";
   } else {
     return trombadaCabulosa;
   }
