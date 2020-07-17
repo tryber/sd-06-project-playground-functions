@@ -1,12 +1,10 @@
 // Desafio 1
-function compareTrue(let parametro1 = true,let parametro2 = true) {
-  let resposta;
-  if (resposta = parametro1 && parametro2) {
-    resposta = true;
+function compareTrue(parametro1, parametro2)
+  if (parametro1 && parametro2) {
+    return true;
   }else {
-    resposta = false;
+    return false;
   }
-  console.log(resposta);
 }
 
 // Desafio 2
