@@ -26,8 +26,9 @@ function concatName(ultimoItemEPrimeiroItem) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let numeroDeVitoria = "" * 3;
-  let numeroDeEmpates = "";
+  
+  let totalDeVitorias = numeroDeVitoria + 3;
+
   for (let i = 0; i <= wins.length; i += +1) {
     let numeroDeVitoria = numeroDeVitoria + i;
 
@@ -35,7 +36,7 @@ function footballPoints(wins, ties) {
       let numeroDeEmpates = numeroDeEmpates + j;
     }
   }
-  return numeroDeVitoria + numeroDeEmpates;
+  return totalDeVitorias + numeroDeEmpates;
 }
 
 // Desafio 6
