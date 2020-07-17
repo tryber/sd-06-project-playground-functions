@@ -2,25 +2,25 @@
 function compareTrue(BOOLEAN1, BOOLEAN2) {
 
   if (BOOLEAN1 && BOOLEAN2) {
-    return true;
+    return true
   } else {
-    return false;
+    return false
   }
 
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  area = (base * height) / 2;
-  return area;
+  area = (base * height) / 2
+  return area
 }
 
 // Desafio 3
 function splitSentence(str) {
 
-  let word = "";
-  let sentence = [];
-  let wordIndex = 0;
+  let word = ""
+  let sentence = []
+  let wordIndex = 0
 
   for (let i = 0; i < str.length; i++) {
     if (str[i] == " ") {
@@ -52,18 +52,23 @@ function splitSentence(str) {
 
 }
 
-let str1 = "O abacaxi é amarelo";
+let uhum = "The quick brown fox jumps over the lazy dog"
 
-console.log(splitSentence(str1));
+console.log(splitSentence(uhum))
 
 // Desafio 4
 function concatName(arrayStrings) {
 
-  let arrayStringsInv = [];
+  let arrayStringsInv = []
 
-  
+  arrayStringsInv[0] = arrayStrings[arrayStrings.length - 1]
+  arrayStringsInv[1] = arrayStrings[0]
+
+  return arrayStringsInv
 
 }
+
+console.log(concatName(uhum))
 
 // Desafio 5
 function footballPoints() {
