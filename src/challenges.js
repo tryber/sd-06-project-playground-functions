@@ -43,9 +43,12 @@ console.log(concatName(['Júlia', 'Pôrto', 'Trybe', 'Course']))
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let result = (wins * 3) + ties;
+  return result
 }
+
+console.log(footballPoints(3, 2))
 
 
 // Desafio 6
