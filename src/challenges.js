@@ -15,14 +15,12 @@ let height = 4;
 function calcArea(base, height) {
   return (base*height)/2;
 }
-let string = "go Trybe";
-let separador = " "
 // Desafio 3
-function splitSentence(string, separador) {
-  let retorno = string.split(separador);
-  return retorno;
+function splitSentence(string) {
+  let frase = string.split(" ");
+  return frase;
 }
-
+let array = []
 // Desafio 4
 function concatName() {
   // seu código aqui
