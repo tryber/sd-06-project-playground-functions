@@ -45,7 +45,7 @@ function highestCount(array) {
   let time = 0;
   for (let i in array) {
     if (array[maiorNum] < array[i]) {
-      maiorNum = indice;
+      maiorNum = i;
     }
   };
   for (let c in array) {
