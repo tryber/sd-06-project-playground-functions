@@ -145,24 +145,29 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let final = true
+  let final = true;
   if(lineA > (lineB + lineC) || lineA < Math.abs(lineB - lineC)){
-    final = false
+    final = false;
   }
   else if(lineB > (lineA + lineC) || lineB < Math.abs(lineA - lineC)){
-    final = false
+    final = false;
   }
   else if(lineC > (lineB + lineA) || lineC < Math.abs(lineB - lineA)){
-    final = false
+    final = false;
   }
-  return final
+  return final;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = string.match(/\d+/g).map(Number);
+  console.log(numbers)
+  let soma = numbers[0]
+  for(let i = 1; i < numbers.length; i++){
+    soma += numbers[i]
+  }
+  return `${soma} copos de água`
 }
-
 
 module.exports = {
   calcArea,
