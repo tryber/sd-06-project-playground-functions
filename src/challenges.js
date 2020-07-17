@@ -13,13 +13,13 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-console.log (calcArea(7, 4))
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let split = string.split(" ");
+  return split;
 }
-
+console.log (splitSentence("Alo galera de cowboy Alo galera de pião quem gosta de rodeio bate forte com a mão"))
 // Desafio 4
 function concatName() {
   // seu código aqui
