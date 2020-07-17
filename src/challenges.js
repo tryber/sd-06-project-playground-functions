@@ -1,5 +1,5 @@
 // Projeto alterado por mim para o commit inicial!!
-//Vamos com tudo!!
+// Vamos com tudo!!
 
 // Desafio 1
 function compareTrue(valor1, valor2) {
@@ -10,11 +10,9 @@ function compareTrue(valor1, valor2) {
   }
 }
 
-compareTrue(true, true);
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return ((base * height)/2);
 }
 
 // Desafio 3
