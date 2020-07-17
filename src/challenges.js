@@ -7,12 +7,12 @@ function compareTrue(num, num1) {
     return 'false'
   }
 }
-console.log(compareTrue( 12,8))
+console.log(compareTrue( 12,12))
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return base * height;
+  return (base * height)/2;
 }
 console.log(calcArea(15,28))
 
