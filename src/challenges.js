@@ -1,8 +1,16 @@
 // Projeto - Ricardo Ribeiro
+
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+let var1 = false;
+let var2 = true;
+function compareTrue(myVar1, myVar2) {
+  let result = false;
+  if (myVar1 && myVar2) {
+    result = true;
+  }
+  return result
 }
+console.log(compareTrue(var1, var2));
 
 // Desafio 2
 function calcArea() {
