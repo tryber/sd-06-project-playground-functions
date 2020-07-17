@@ -39,20 +39,24 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(2, 3));
 
 // Desafio 6
-let numbers = [9, 1, 2, 3, 9, 5, 7];
-// console.log(highestCount(numbers));
+let numbers = [9, 1, 9, 3, 9, 5, 7];
+console.log(highestCount(numbers));
 
 function highestCount() {
   let maiorNum = 0;
   let result = 0;
+
   for (let i = 0; i < numbers.length; i += 1) {
+    // colocar mais um for para comparar os numeros
     if (maiorNum < numbers[i]) {
       maiorNum = numbers[i];
     }
-
+  }
+  for (let i = 0; i < numbers.length; i += 1) {
     if (maiorNum === numbers[i]) {
-      result += 1;
+      result = result + 1;
     }
+   
   }
   return result;
 }
@@ -64,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (gato1 < gato2) {
     return 'cat1';
-  } else if (cat1 === mouse && cat2 === mouse){
+  } else if (cat1 === mouse && cat2 === mouse) {
     return 'os gatos trombam e o rato foge';
   }
 
