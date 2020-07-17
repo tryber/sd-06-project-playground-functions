@@ -19,6 +19,7 @@ function splitSentence(frase) {
   // seu código aqui
   let acumulador = "";
   let novaLista = [];
+  
   for (let indice in frase) {
     let elemento = frase[indice]
     if (elemento !== " ") {
@@ -67,7 +68,7 @@ function highestCount(arrayNumeros) {
     }
   }
   return ocorrencias;
-}
+} 
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -92,11 +93,9 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
   // seu código aqui
-  let novaArray = [];
-
   for (let i in arrayNumeros) {
     let numero = arrayNumeros[i];
-
+  
     if (numero % 3 === 0 || numero % 5 === 0) {
       return 'fizzBuzz';
     } else if (numero % 3 === 0) {
@@ -106,7 +105,9 @@ function fizzBuzz(arrayNumeros) {
     } else {
       return 'bug';
     }
+  }
 }
+
 
 // Desafio 9
 function encode() {
