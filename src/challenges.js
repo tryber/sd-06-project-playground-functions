@@ -84,7 +84,7 @@ function fizzBuzz(arrayNumeros) {
   for (let n = 0; n < arrayNumeros.length; n += 1) {
     if (arrayNumeros[n] % 3 === 0 && arrayNumeros[n] % 5 === 0) {
       resultado.push("fizzBuzz");
-    } else if (arrayNumeros[n] % 3 === 0){
+    } else if (arrayNumeros[n] % 3 === 0) {
       resultado.push("fizz");
     } else if (arrayNumeros[n % 5 === 0]) {
       resultado.push("buzz")
@@ -92,6 +92,7 @@ function fizzBuzz(arrayNumeros) {
       resultado.push("bug!");
     }
   }
+  return resultado
 }
 
 // Desafio 9
