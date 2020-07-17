@@ -45,8 +45,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let maiorNumero = array[0];
+  let repeticao = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > maiorNumero) {
+      maiorNumero = array[index];
+    }
+  }
+  for (let index = 0; index < array.length; index += 1) {
+    if (maiorNumero == array[index]) {
+      repeticao += 1;
+    }
+  }
+  return repeticao;
 }
 
 // Desafio 7
@@ -73,22 +86,41 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  //
 }
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
+  // Para cada item da lista deve retornar em um unico objeto a tecnologia e o nome
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
+  // var contador = 0;
+  // for(let i = 0; i < array.length; i += 1) {
+  //   if (array[i] < 0 || array[i] > 9 || ) { } else {}
+  // }
+  // var item of array) {
+  //    if (item > 0) contador ++;
+  // } else { console.log('não é possível gerar um número de telefone com esses valores'); }
+
+  // if (array.length > 11) {
+  //   return 'Array com tamanho incorreto'
+  // } else if () {
+
+  // } else {
+  //   return '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array [4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10] + array[11]; 
+  // }
 }
+
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
