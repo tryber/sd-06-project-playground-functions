@@ -119,10 +119,10 @@ function encode(palavras) {
       verifica[i] = verifica[i];
     }
     for (let i in verifica) {
-      palavra.push(verifica[i]);
+      palavras.push(verifica[i]);
     }
   }
-  return palavra;
+  return palavras;
 }
 function decode(palavras) {
   // seu código aqui
