@@ -60,12 +60,12 @@ function highestCount(inteiros) {
     if (numMaior === inteiros[i]) {
         numero++;
       }
-  }
     if (numero > repetido) {
       repetido = numero;
       iNumero = i;
     }
-  return iNumeros;
+  }
+  return inteiros[iNumeros];
 }
 
 // Desafio 7
