@@ -1,6 +1,4 @@
 // Desafio 1
-console.log('*** 1 ***');
-
 const firstBoolean = true;
 const secondBoolean = false;
 
@@ -8,11 +6,9 @@ function compareTrue(firstBoolean, secondBoolean) {
   return firstBoolean && secondBoolean;
 }
 
-console.log(compareTrue(firstBoolean, secondBoolean));
+// console.log(compareTrue(firstBoolean, secondBoolean));
 
 // Desafio 2
-console.log('*** 2 ***');
-
 const base = 2;
 const height = 7;
 
@@ -20,11 +16,9 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-console.log(calcArea(base, height));
+// console.log(calcArea(base, height));
 
 // Desafio 3
-console.log('*** 3 ***');
-
 const string = 'go Trybe melhor curso';
 
 function splitSentence(string) {
@@ -45,9 +39,11 @@ function splitSentence(string) {
   return splitSentence;
 }
 
-console.log(splitSentence(string));
+// console.log(splitSentence(string));
 
 // Desafio 4
+console.log('*** 3 ***');
+
 function concatName() {
   // seu código aqui
 }
