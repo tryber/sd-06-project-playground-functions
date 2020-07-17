@@ -7,20 +7,18 @@ function compareTrue(boo1, boo2) {
       teste = true;
       return teste;
     }
-    else {
-      teste = false;
-      return teste;
-    }
-  } 
+    teste = false;
+    return teste;
+  }
   return 'erro: parâmetros devem ser true ou false.';
 }
 
 // Desafio 2
-function calcArea(base, alt) {
+function calcArea(base, height) {
   // seu código aqui
   let areaDoTriangulo = 0;
-  if (typeof base === 'number' && typeof alt === 'number' && base > 0 && alt > 0) {
-    areaDoTriangulo = (base * alt) / 2;
+  if (typeof base === 'number' && typeof height === 'number' && base > 0 && height > 0) {
+    areaDoTriangulo = (base * height) / 2;
     return areaDoTriangulo;
   }
   return 'erro: insira dois números positivos.';
@@ -43,7 +41,7 @@ function concatName(array) {
   let arrayStrings = [];
   arrayStrings.push(array[array.length - 1]);
   arrayStrings.push(array[0]);
-  return arrayStrings;
+  return arrayStrings[0] + ', ' + arrayStrings[1];
 }
 
 // Desafio 5
@@ -59,8 +57,24 @@ function footballPoints(win, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
+  if (Array.isArray(numbers) === true) {
+    let highNum = numbers[0];
+    let numberCount = 0;
+    for (let n of numbers) {
+      if (n > highNum) {
+        highNum = i;
+      }
+    }
+    for (n of numbers) {
+      if (n === highNum) {
+        numberCount++;
+      }
+    }
+    return numberCount;
+  }
+  return 'erro: parâmetro deve ser um array';
 }
 
 // Desafio 7
