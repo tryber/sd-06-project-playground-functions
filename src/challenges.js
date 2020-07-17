@@ -43,8 +43,10 @@ function catAndMouse(mouse, cat1, cat2) {
     winner = 'cat1';
   } else if (mouse - cat1 < mouse - cat2) {
     winner = 'cat2';
-  } else {
+  } else if ( cat1 && cat2 === mouse) {
     winner = 'os gatos trombam e o rato foge';
+  } else {
+    winner = 'empate'
   }
 
   return winner
