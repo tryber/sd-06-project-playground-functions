@@ -1,45 +1,61 @@
 // Desafio 1
-function compareTrue(boolOne,boolTwo) {
-  if (boolOne===true && boolTwo===true){
+function compareTrue(boolOne ,boolTwo) {
+  if (boolOne === true && boolTwo === true) {
     return true;
   } else {
     return false;
   }
 }
-//console.log(compareTrue(false,true));
+//  console.log(compareTrue(false,true));
 
 // Desafio 2
-function calcArea(base , height) {
+function calcArea(base ,height) {
   return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(palavras) {
-  let novoArray = palavras.split(" ");
+  let novoArray = palavras.split(' ');
   return novoArray;
 }
-//console.log(splitSentence("teste trybe escola"));
+//  console.log(splitSentence("teste trybe escola"));
 
 // Desafio 4
 function concatName(arrayPalavras) {
   let palavras = "";
-    palavras += arrayPalavras[arrayPalavras.length-1];
-    palavras += ", "
-    palavras += arrayPalavras[0];
-    return palavras;
+  palavras += arrayPalavras[arrayPalavras.length - 1];
+  palavras += ", "
+  palavras += arrayPalavras[0];
+  return palavras;
   // seu código aqui
 }
-//console.log(concatName(['teste','trybe','escola']));
+//  console.log(concatName(['teste','trybe','escola']));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
+  return  wins * 3 + ties;
   // seu código aqui
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumeros) {
+  // primeiro: achar o maior
+  let menorNumero = 0;
+  let contador = 0;
+  for (let x in arrayNumeros) {
+    if (arrayNumeros[x] > menorNumero) {
+      menorNumero = arrayNumeros[x];
+    }
+  }
+  // segundo: comparar o maior
+  for (let x in arrayNumeros) {
+    if (arrayNumeros[x] == menorNumero) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
+
 
 // Desafio 7
 function catAndMouse() {
