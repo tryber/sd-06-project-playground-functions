@@ -244,8 +244,19 @@ function triangleCheck(lineA,lineB,lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+
+  let water = 0;
+
+  let numbers = string.match(/\d+/g).map(Number);
+
+  for(let i = 0; i < numbers.length; i++) {
+    water += numbers[i]
+  }
+
+  if (water == 1) { return `1 copo de água` }
+
+  return `${water} copos de água`
 }
 
 
