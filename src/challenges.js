@@ -27,8 +27,6 @@ function concatName(nomes) {
   return nomes[nomes.length - 1] + ', ' +  nomes[0];
 }
 
-
-
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
@@ -38,9 +36,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numeros) {
   // seu código aqui
+  let numMaior = 0;
+  let contador = 0;
+  for (let i = 0; i < numeros.length; i += 1){
+    if (numeros[i] > numMaior){
+      numMaior = numeros[i];
+    }
+  }
+  for (let e = 0; e < numeros.length; e += 1){
+    if (numeros[e] === numMaior){
+      contador += 1;
+    }
+  }
+  return contador;
 }
+
 
 // Desafio 7
 function catAndMouse() {
