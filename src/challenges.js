@@ -1,5 +1,4 @@
 // Desafio 1
-
 function compareTrue(a, b) {
   // seu código aqui
   if (a === true && a === b) {
@@ -9,6 +8,7 @@ function compareTrue(a, b) {
   }
 }
 
+
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
@@ -16,11 +16,13 @@ function calcArea(base, height) {
   return area;
 }
 
+
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
   return string.split(' ');
 }
+
 
 // Desafio 4
 function concatName(array) {
@@ -33,6 +35,7 @@ function concatName(array) {
   return stringConcat;
 }
 
+
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
@@ -42,6 +45,7 @@ function footballPoints(wins, ties) {
   let points = (3 * wins) + ties
   return points;
 }
+
 
 // Desafio 6
 function highestCount(array) {
@@ -72,10 +76,9 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distancia1 > distancia2) {
     return 'cat2';
   } else {
-    return 'Os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
 }
-
 
 
 // Desafio 8
