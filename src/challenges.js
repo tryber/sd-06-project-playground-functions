@@ -11,9 +11,13 @@ function compareTrue(value1, value2) {
 console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+// Cálculo área de um triângulo - com base -> base / altura -> height
+function calcArea(base, height) {
+  area = base * height / 2
+  return area
 }
+
+console.log(calcArea(10, 5))
 
 // Desafio 3
 function splitSentence() {
