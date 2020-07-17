@@ -8,7 +8,7 @@ console.log(compareTrue(true, true));
 function calcArea(base, height) {
   return (base*height)/2
 }
-console.log(calcArea(3, 1))
+console.log(calcArea(3, 1));
 
 // Desafio 3
 function splitSentence(string) {
@@ -31,13 +31,27 @@ console.log(concatName(["Ana", "Pedro", "Julia"]));
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins *3 + ties * 1);
-}console.log(footballPoints(2, 3));
+}
+console.log(footballPoints(2, 3));
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let hNumber = array[0];
+  let count = 0;
+  for (let index in array) {
+    if (hNumber < array[index]) {
+      hNumber = array[index];
+    } 
+  }
+  for (let indexTwo in array) {
+    if (hNumber === array[indexTwo]) {
+      count += 1;
+    }
+  }
+  return count;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
