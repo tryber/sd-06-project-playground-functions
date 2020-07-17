@@ -186,7 +186,11 @@ function hydrate(bebidas) {
   for (i in numbers){
     soma += Number(numbers[i]);
   }
-  return soma + " copos de água"
+  if (soma === 1){
+    return soma + " copo de água"
+  } else {
+    return soma + " copos de água"
+  }  
 }
 
 
