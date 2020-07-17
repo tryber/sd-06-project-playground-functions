@@ -71,8 +71,15 @@ function concatName(arrayStrings) {
 console.log(concatName(uhum))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  
+  let points = 0
+
+  points += wins * 3
+  points += ties * 1
+
+  return points
+  
 }
 
 // Desafio 6
