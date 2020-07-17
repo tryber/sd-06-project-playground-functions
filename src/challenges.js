@@ -31,19 +31,24 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  mouse = 0;
-  if (cat1 === cat2) {
-    return 'os gatos trombam e o rato foge';
-  } else if (cat1 < cat2) {
-    return 'cat1';
-  } else {
-    return 'cat2';
-  }
+  // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let words = [];
+  for (let index in numbers) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      words[words.length] = 'fizzBuzz';
+    } else if (numbers[index] % 3 === 0) {
+      words[words.length] = 'fizz';
+    } else if (numbers[index] % 5 === 0) {
+      words[words.length] = 'buzz';
+    } else {
+      words[words.length] = 'bug!';
+    }
+  }
+  return words;
 }
 
 // Desafio 9
