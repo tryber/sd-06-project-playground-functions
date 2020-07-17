@@ -1,8 +1,7 @@
 // Desafio 1
 function compareTrue(b1, b2) {
-  let result = false;
+  let result = false; 
   if (b1 === true && b2 === true){
-    result = true;
   }else {
     result = false;
   }
@@ -29,7 +28,9 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + ties;
+  return points; 
 }
 
 // Desafio 6
