@@ -5,19 +5,29 @@
 function compareTrue(valor1, valor2) {
   if ((valor1 === true) && (valor2 === true)) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;  
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height)/2);
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let nome = "";
+  arrayNome = [];
+  for (index = 0; index < str.length; index += 1) {
+    if (str[index] !== " ") {
+      nome += str[index];
+  } else {
+    arrayNome.push(nome);
+    nome = "";
+  }
+  }
+  arr.push(nome);
+  return arrayNome;
 }
 
 // Desafio 4
