@@ -7,22 +7,24 @@ function compareTrue(value1, value2) {
   }
 } console.log(compareTrue(false, false));
 
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
+  let calc = (base * height) / 2;
+  return calc;
+} console.log(calcArea(10, 10));
+ 
 
-}
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 3
 function splitSentence() {
