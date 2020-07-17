@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(bol1, bol2) {
-   if (bol1 && bol2 === true) {
+  if (bol1 && bol2 === true) {
     return true
   } else {
     return false
@@ -8,17 +8,15 @@ function compareTrue(bol1, bol2) {
 }
 
 // Desafio 2
-let resultado = 0;
 function calcArea(base, height) {
-  resultado = (base * height)/2
+  let resultado = (base * height) / 2
   return resultado
 }
-calcArea(4,5)
-console.log(resultado)
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(" ");
+  return array
 }
 
 // Desafio 4
@@ -50,6 +48,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
