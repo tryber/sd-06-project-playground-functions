@@ -125,18 +125,39 @@ function techList(array, name) {
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
+  let vezesRepetidas = repeticaoNumero(array);
   let numeroTelefone = '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array [4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
   if (array.length !== 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0 || array[i] > 9) {
+    if (array[i] < 0 || array[i] > 9 || vezesRepetidas >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      return numeroTelefone;
     }
   }
+  return numeroTelefone;
+}
 
+// Repeticao +3x
+// Dado o array, para cada numero do array verificar se ele se repete
+// Caso ele repita repeticao +1;
+function repeticaoNumero(array) {
+  let numeroRepetido = array[0];
+  let contador = 0;
+  for (let i in array) {
+    for (let j in array) {
+      if (numeroRepetido === array[j]) {
+        contador += 1;
+      }
+    }
+    if (contador > 3) {
+      break;
+    } else {
+      numeroRepetido = array[i];
+      contador = 0;
+    }
+  }
+  return contador;
 }
 
 
