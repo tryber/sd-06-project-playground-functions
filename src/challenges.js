@@ -2,8 +2,6 @@
 function compareTrue(bol1, bol2) {
   if (bol1 && bol2 === true) {
     return true;
-  } else {
-    return false;
   }
 }
 
@@ -22,14 +20,19 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(names) {
-  let first = names [0];
-  let last = names [names.length - 1];
-  let concat = last + ", " + first;
+  let first = names[0];
+  let last = names[names.length - 1];
+  let concat = last + ', ' + first;
   return concat;
 }
+
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let win = wins * 3;
+  let tie = ties * 1;
+  let points = win + tie;
+  return points;
 }
 
 // Desafio 6
