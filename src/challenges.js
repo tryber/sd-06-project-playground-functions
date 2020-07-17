@@ -13,7 +13,10 @@ function calcArea(base = 10, height = 8) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(a = 'go Trybe') {
+  for ( x in a ){
+    return a[x]
+  }
 }
 
 // Desafio 4
