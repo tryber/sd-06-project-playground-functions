@@ -1,11 +1,12 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  if (a === true && b === true){
-    return true;
-  }else{
-    return false;
+  if (a === true && b === true) {
+    let resultado = true;
+  } else {
+    resultado = false;
   }
+  return resultado;
 }
 
 // Desafio 2
@@ -27,8 +28,8 @@ function concatName() {
 // Desafio 5
 function footballPoints(vitoria, empate) {
   // seu código aqui
-  vitoria = vitoria * 3;
-  empate = empate * 1;
+  vitoria *= 3;
+  empate *= 1;
   return vitoria + empate;
 }
 
