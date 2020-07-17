@@ -1,8 +1,8 @@
 // Desafio 1
-let value = 1;
-let value = 2;
+let value1 = 1;
+let value2 = 2;
 function compareTrue(value1, value2) {
-  if( value1 === 1 && value2 ){
+  if( value1 === 1 && value2 === 2 ){
     return true;
   }else{
     return false;
@@ -11,9 +11,12 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+let base;
+let altura;
+function calcArea(base,altura) {
+  return (base*altura)/2;
 }
+console.log(calcArea(5,10));
 
 // Desafio 3
 function splitSentence() {
