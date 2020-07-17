@@ -6,23 +6,23 @@ function compareTrue(valor1, valor2) {
   }
   return false;
 }
-// console.log(compareTrue(true, true));
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-// console.log(calcArea(10, 20));
+console.log(calcArea(10, 20));
 
 // Desafio 3
 
 function splitSentence(frase) {
   return frase.split(' ');
 }
-// console.log(splitSentence('go trybe'));
+console.log(splitSentence('go trybe'));
 
 // Desafio 4
-// let array = ['foguete', 'não', 'tem', 'ré'];
+let array = ['foguete', 'não', 'tem', 'ré'];
 function concatName() {
   let first = array[0];
   let last = array[array.length -1];
@@ -39,8 +39,8 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(2, 3));
 
 // Desafio 6
-// let numbers = [0, 4, 4, 4, 9, 2, 1];
-// console.log(highestCount(numbers));
+let numbers = [0, 4, 4, 4, 9, 2, 1];
+console.log(highestCount(numbers));
 
 function highestCount() {
   let maiorNum = 0;
@@ -73,7 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return 'cat2';
 }
-// console.log(catAndMouse(4, 1, 2));
+console.log(catAndMouse(4, 1, 2));
 
 // Desafio 8
 function fizzBuzz() {
