@@ -28,7 +28,7 @@ console.log(splitSentence(string));
 // Desafio 4
 function concatName(arrayString) {
   let concatenate = arraySring.toString();
-  for (index in arrayString) {
+  for (let index in arrayString) {
     concatenate = arrayString[index] + " , " + arrayString[0];
   }
   return concatenate;
@@ -37,9 +37,14 @@ arraySring = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(arraySring));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let pointWins = 3*wins;
+  let pointTies = ties;
+
+  let totalPoints = pointWins + pointTies;
+  return totalPoints;
 }
+console.log(footballPoints(1,4));
 
 // Desafio 6
 function highestCount() {
