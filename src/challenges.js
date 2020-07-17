@@ -54,7 +54,7 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNumeros) {
   // seu código aqui
   let maiorValor = arrayNumeros[0];
-  let occorrencias = 0;
+  let ocorrencias = 0;
 
   for (let i in arrayNumeros) {
     if (arrayNumeros[i] > maiorValor) {
