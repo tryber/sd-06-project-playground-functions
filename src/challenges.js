@@ -1,12 +1,20 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(value1, value2) {
   // seu código aqui
-  // primeiro commit
+  if (value1 === true && value2 === true){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  const base = 4;
+  const height = 2
+  return (base*height)/2
 }
 
 // Desafio 3
@@ -25,8 +33,12 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arr) {
   // seu código aqui
+    let highestNumber = arr[0];
+    for (let i = 0; i < arr.length; i+= 1){
+      highestNumber
+    }
 }
 
 // Desafio 7
