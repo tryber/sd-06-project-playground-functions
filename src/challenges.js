@@ -162,12 +162,20 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(10, 14, 8));
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
 
+// Desafio 13
+function hydrate(string) {
+  let r = /\d+/g;
+  let total = 0;
+  r = string.match(r);
+  for (indice in r) {
+    total += Number(r[indice]);
+  }
+  if (total === 1) {
+    return `${total} copo de água`;
+  }
+  return `${total} copos de água`;
+}
 
 module.exports = {
   calcArea,
