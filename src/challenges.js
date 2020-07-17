@@ -22,10 +22,10 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName(array) {
+function concatName(numbers) {
   let concatenado = '';
-  for (let i = 0; i < array.length; i += 1) {
-    concatenado = array[array.length-1] +", "+ array[0];
+  for (let i = 0; i < numbers.length; i += 1) {
+    concatenado = numbers[numbers.length-1] +", "+ numbers[0];
   }
   return concatenado;
 }
@@ -39,21 +39,20 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
 	// seu código aqui
-	let howMany = 0;
 	let highNum = numbers[0];
-  
-	for (index in numbers) {
+	let repeticao = 0;
+	for (let index = 0; index < numbers.length; index += 1) {
 	  if (numbers[index] > highNum) {
-		highNum = numbers[index]
+		highNum = numbers[index];
 	  }
-	} for (index in numbers) {
-	  if (numbers[index] === highNum)
-		howMany += 1
 	}
-	return (howMany)
+	for (let index = 0; index < numbers.length; index += 1) {
+	  if (highNum == numbers[index]) {
+		repeticao += 1;
+	  }
+	}
+	return repeticao;
   }
-  
-  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse() {
@@ -63,28 +62,74 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = [];
-  for(let i = 0; i <= numbers.length; i += 1){
-    if(numbers[i] / 3 === 0){
-      result = "fizz";
-    }else if (numbers[i] / 5 === 0){
-      result = "buzz";
-    }else if (numbers[i] / 3 === 0 && numbers[i] / 5 === 0) {
-      result = "fizzBuzz"
+  for(let index in numbers){
+    if(numbers[index] % 3 === 0){
+      result.push("fizz");
+    }else if (numbers[index] % 5 === 0){
+      result.push("buzz");
+    }else if (numbers[index] % 3 === 0 || numbers[index] / 5 === 0) {
+      result.push("fizzBuzz");
     }else{
-      result = "bug!"
+      result.push("bug!");
     }
   }
   return result
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(word) {
   // seu código aqui
+  let newLetter = "";
+  for ( let i = 0; i < word.length; i = i + 1) {
+    switch (word[i]) {
+      case 'a':
+        newLetter = newLetter + '1';
+        break;
+      case 'e':
+        newLetter = newLetter + '2';
+        break;
+      case 'i':
+        newLetter = newLetter + '3';
+        break;
+      case 'o':
+        newLetter = newLetter + '4';
+        break;
+      case 'u':
+        newLetter = newLetter + '5';
+        break;
+      default:
+        newLetter = newLetter + word[i];
+    }
+  }
+  return newLetter;
 }
-function decode() {
-  // seu código aqui
+
+function decode(word) {
+  let newLetter = "";
+  for ( let i = 0; i < word.length; i = i + 1) {
+    switch (word[i]) {
+      case '1':
+        newLetter = newLetter + 'a';
+        break;
+      case '2':
+        newLetter = newLetter + 'e';
+        break;
+      case '3':
+        newLetter = newLetter + 'i';
+        break;
+      case '4':
+        newLetter = newLetter + 'o';
+        break;
+      case '5':
+        newLetter = newLetter + 'u';
+        break;
+      default:
+        newLetter = newLetter + word[i];
+    }
+  }
+  return newLetter;
 }
+
 
 // Desafio 10
 function techList() {
