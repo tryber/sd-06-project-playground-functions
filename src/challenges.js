@@ -33,7 +33,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(lista) {
   let guardaNomes = '';
-  guardaNomes += lista[lista.length - 1] + ', ' + lista[0];
+  guardaNomes = lista[lista.length - 1] + ', ' + lista[0];
   return guardaNomes;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));teste questão 4
