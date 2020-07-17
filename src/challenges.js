@@ -16,7 +16,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" ");
+  let array = string.split(' ');
   return array;
 }
 
@@ -37,11 +37,12 @@ function highestCount(numberArray) {
   let highestNumber = numberArray[0];
   let counter = 0;
   for (let i = 0; i < numberArray.length; i += 1) {
-    if (numberArray[i] > highestNumber) {
-      highestNumber = numberArray[i];
-    }
     if (highestNumber === numberArray[i]) {
       counter += 1;
+    }
+    if (numberArray[i] > highestNumber) {
+      highestNumber = numberArray[i];
+      counter = 1;
     }
   }
   return counter;
@@ -49,16 +50,15 @@ function highestCount(numberArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distance1 = cat1 - mouse;
-  let distance2 = cat2 - mouse;
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse);
   let answer;
   if (distance1 === distance2) {
-    answer = "os gatos trombam e o rato foge";
-  }
-  else if (distance1 < distance2) {
-    answer = "cat1";
-  } else{
-    answer = "cat2";
+    answer = 'os gatos trombam e o rato foge';
+  } else if (distance1 < distance2) {
+    answer = 'cat1';
+  } else {
+    answer = 'cat2';
   }
   return answer;
 }
