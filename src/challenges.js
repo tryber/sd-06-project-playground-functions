@@ -26,8 +26,12 @@ function splitSentence(palavra) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayDeNomes) {
   // seu código aqui
+  let ultimoEprimeiro = [];
+  let primeiroItem = arrayDeNomes[0];
+  let ultimoItem = arrayDeNomes[arreyDeNomes.length-1];
+  return ultimoEprimeiro;
 }
 
 // Desafio 5
