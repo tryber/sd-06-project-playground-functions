@@ -29,8 +29,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let maior = numeros[0];
+  let cont = 0;
+  for(index in numeros){
+    if(numeros[index] > maior){
+      maior = numeros[index];
+    }
+  }
+  for(index in numeros){
+    if(maior === numeros[index]){
+      cont += 1;
+    }
+  }
+  return cont;
 }
 
 // Desafio 7
@@ -81,7 +93,7 @@ console.log('Exercício 4: ' + concatName(['Vagner','Pereira','de','Sousa']));
 
 console.log('Exercício 5: ' + footballPoints(8,4));
 
-console.log('Exercício 6: ' );
+console.log('Exercício 6: ' + highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 console.log('Exercício 7: ' );
 
