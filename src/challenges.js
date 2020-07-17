@@ -1,17 +1,26 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui ok
+function compareTrue(param1, param2) {
+  if (param1 && param2){
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log("exercicio 1: " + compareTrue(false,true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base,height) {
+  var calculoArea= (base*height)/2;
+  return calculoArea
 }
+console.log("exercicio 2: " + calcArea(10,20));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(str){
+  var res = str.split(" ");
+  return res
+  }
+  console.log("exercicio 3: " + splitSentence("Eu sou Tryber"));
 
 // Desafio 4
 function concatName() {
@@ -65,6 +74,10 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+
+
+
+
 
 
 module.exports = {
