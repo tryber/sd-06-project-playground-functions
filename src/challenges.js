@@ -145,16 +145,14 @@ function generatePhoneNumber(array) {
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] < 0 || array[i] > 9 || vezesRepetidas > 3) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      return numeroTelefone;
-  } 
+    } 
   }
-
-
-// Repeticao +3x
-// Dado o array, para cada numero do array verificar se ele se repete
-// Caso ele repita repeticao +1;
-function repeticaoNumero(array) {
+  return numeroTelefone;
+}
+  // Repeticao +3x
+  // Dado o array, para cada numero do array verificar se ele se repete
+  // Caso ele repita repeticao +1;
+  function repeticaoNumero(array) {
   let numeroRepetido = array[0];
   let contador = 0;
   for (let i in array) {
@@ -171,7 +169,9 @@ function repeticaoNumero(array) {
     }
   }
   return contador;
-}
+  }
+
+
 
 
 // Desafio 12
