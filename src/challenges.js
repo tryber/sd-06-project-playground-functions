@@ -65,16 +65,17 @@ function fizzBuzz(numbersArray) {
   let results = [];
   for (let i = 0; i < numbersArray.length; i++){
     if (numbersArray[i] % 3 === 0) {
-      return results.push["fizz"];
+      results.push["fizz"];
     } else if (numbersArray[i] % 5 === 0) {
-      return results.push["buzz"];
+      results.push["buzz"];
     } else if (numbersArray[i] % 3 === 0 && numbersArray[i] % 5 === 0) {
-      return results.push["fizzBuzz"];
+      results.push["fizzBuzz"];
     } else {
-      return results.push["bug!"];
+      results.push["bug!"];
     }
+    return results;
   }
-  return results;
+ 
 }
 
 // Desafio 9
@@ -94,10 +95,9 @@ if (wordString[i] === "a"){
   charEncode = "5";
 }
 wordEncoded += charEncode;
-}
 return wordEncoded;
 }
-
+}
 function decode(wordString) {
   let wordDecoded;
   for ( let i = 0; i < wordString.length; i++){
