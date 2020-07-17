@@ -25,10 +25,8 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let pointsOfWins = wins * 3;
-  return console.log(pointsOfWins + ties);
+  return pointsOfWins + ties;
 }
-
-footballPoints(14, 8)
 
 // Desafio 6
 function highestCount() {
