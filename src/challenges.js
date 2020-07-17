@@ -13,7 +13,7 @@ function calcArea(base, altura) {
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(" ")
+  return frase.split(" ") //necessário refazer!!
 }
 
 // Desafio 4
@@ -145,8 +145,33 @@ function decode(numeroParaFrase) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias, aluno) {
+  if( tecnologias.length == 0) {
+    return "Vazio!"
+  } else {
+
+    let aprenderTecnologias = []
+    //ordenar as tecnologias (alfabeticamente)
+    for (let indice = 0; indice < tecnologias.length; indice += 1) {
+      for (let comparador = 0; comparador < indice; comparador += 1) {
+        if (tecnologias[indice] < tecnologias[comparador]) {
+          let alocaDado = tecnologias[indice];
+
+          tecnologias[indice] = tecnologias[comparador];
+          tecnologias[comparador] = alocaDado;
+        }
+      } console.log(tecnologias)
+    }
+    //cria um objeto para cada tecnologia e seu aluno
+    for( techs in tecnologias) {
+      criarObjeto = {
+        tech: tecnologias[techs],
+        name: aluno,
+      }
+      aprenderTecnologias.push(criarObjeto)
+    }
+    return aprenderTecnologias
+  }
 }
 
 // Desafio 11
