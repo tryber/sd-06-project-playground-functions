@@ -12,6 +12,7 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+
 function splitSentence(string) {
   let word = "";
   let splitedPhrase = [];
@@ -20,12 +21,14 @@ function splitSentence(string) {
       word += (string[i]);
     }
     else if (string[i] === " ") {
-      splitedPhrase.push(word);
+      splitedPhrase += word;
       word = "";
     }
   }
-  splitedPhrase.push(word);
+  splitedPhrase += word;
+  console.log(splitedPhrase);
 }
+splitSentence("Go, Trybe");
 
 
 
