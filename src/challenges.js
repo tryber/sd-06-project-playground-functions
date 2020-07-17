@@ -18,7 +18,7 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(teste) {
   let primeira = teste[0];
   let ultima = teste[teste.length -1];
   let arrayResponse = ''+ultima.concat(', ').concat(primeira);
