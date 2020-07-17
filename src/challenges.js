@@ -21,22 +21,12 @@ function calcArea(base, altura) {
 // console.log(calcArea(5, 10));
 
 // Desafio 3
-let testaString = "Go Trybe"
 function splitSentence(testaString) {
-    let palavra = "";
-    for (index in testaString){
-      if (testaString[index] != " "){
-        palavra += testaString[index];
-      }
-      else if (testaString[index] == " "){
-        testaString.push(palavra);
-        palavra = "";
-      }
-    }
-    testaString.push(palavra);
-    return testaString;
+  let verificaString = testaString.split(' ');
+  return (verificaString);
 }
-console.log(splitSentence(testaString));
+let resultSplit = splitSentence('Go Trybe');
+console.log(resultSplit);
 
 
 // Desafio 4
@@ -117,9 +107,20 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+let lineA;
+let lineB;
+let lineC;
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)){
+    return true;
+  }else if(lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)){
+    return true;
+  }else if(lineC < Math.abs(lineA + lineB) && lineC > Math.abs(lineA - lineB)){
+    return true;
+  }
+  return false;
 }
+//console.log(triangleCheck(0,0,0));
 
 // Desafio 13
 function hydrate() {
