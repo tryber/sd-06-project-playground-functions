@@ -21,9 +21,11 @@ function calcArea(base, height) {
 console.log(calcArea(a, b));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let espaco = frase.split(" ");
+  return espaco; 
 }
+console.log(splitSentence("Keila Sales"));
 
 // Desafio 4
 function concatName() {
