@@ -69,15 +69,15 @@ function highestCount(inteiros) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let dCat1 = mouse - cat1;
-  let dCat2 = mouse - cat2;
+  let dCat1 = Math.abs(mouse - cat1);
+  let dCat2 = Math.abs(mouse - cat2);
   let result;
-  if (cat1 > cat2) {
-    result = cat2;
-  } else if (cat1 < cat2){
-    result = cat1;
+  if (dCat1 > dCat2) {
+    result = 'cat2';
+  } else if (dCat1 < dCat2){
+    result = 'cat1';
   } else {
-    result = "os gatos trombam e o rato foge";
+    result = 'os gatos trombam e o rato foge';
   }
   return result;
 }
@@ -106,15 +106,15 @@ function encode(palavras) {
   let verifica = palavras.split('');
   let trocado = [];
   for (let i in palavras) {
-    if (verifica[i] == a) {
+    if (verifica[i] == 'a') {
       verifica[i] = 1;
-    } else if (verifica[i] == e) {
+    } else if (verifica[i] == 'e') {
       verifica[i] = 2;
-    } else if (verifica[i] == i) {
+    } else if (verifica[i] == 'i') {
       verifica[i] = 3;
-    } else if (verifica[i] == o) {
+    } else if (verifica[i] == 'o') {
       verifica[i] = 4;
-    } else if ( verifica[i] == u) {
+    } else if ( verifica[i] == 'u') {
       verifica[i] = 5;
     } else {
       verifica[i] = verifica[i];
@@ -128,16 +128,16 @@ function decode(palavras) {
   let verifica = palavras.split('');
   let trocado = [];
   for (let i in palavras) {
-    if (verifica[i] == 1) {
-      verifica[i] = a;
-    } else if (verifica[i] == 2) {
-      verifica[i] = e;
-    } else if (verifica[i] == 3) {
-      verifica[i] = i;
-    } else if (verifica[i] == 4) {
-      verifica[i] = o;
-    } else if ( verifica[i] == 5) {
-      verifica[i] = u;
+    if (verifica[i] == '1') {
+      verifica[i] = 'a';
+    } else if (verifica[i] == '2') {
+      verifica[i] = 'e';
+    } else if (verifica[i] == '3') {
+      verifica[i] = 'i';
+    } else if (verifica[i] == '4') {
+      verifica[i] = 'o';
+    } else if ( verifica[i] == '5') {
+      verifica[i] = 'u';
     } else {
       verifica[i] = verifica[i];
     }
