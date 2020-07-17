@@ -4,6 +4,7 @@ function compareTrue(a, b) {
     return (true);
   }
   return (false);
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -12,13 +13,13 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  return(sentence.split(' '));
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(words) {
+  return(words[0] + ', ' + words[words.length])
 }
 
 // Desafio 5
