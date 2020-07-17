@@ -123,7 +123,7 @@ function techList(arr, name) {
     for (let i = 0; i < arr.length; i += 1) {
       answer.push({
         tech: arr[i],
-        nome: name,
+        name,
       })
     }
     return answer
@@ -139,13 +139,15 @@ function generatePhoneNumber(arr) {
     return erro_tamanho
   }
 
+
   let counter = {};
   for (let i = 0; i < 11; i += 1) {
     if (arr[i] < 0 || arr[i] > 9) {
       return erro_nums
     }
 
-    (Object.keys(counter).includes(arr[i])) ? counter[arr[i]] += 1 : counter[arr[i]] = 1;
+    //atencao! O keys retorna um array com as keys em string, enquanto o includes checa === com os numeros! Para isso precisamos checar como string
+    (Object.keys(counter).includes(`${arr[i]}`)) ? counter[arr[i]] += 1 : counter[arr[i]] = 1;
 
     if (counter[arr[i]] >= 3) {
       return erro_nums
@@ -174,7 +176,7 @@ function hydrate(str) {
   for (let i of numbers) {
     sum += +i
   }
-  return `${sum} copos de água`
+  return (sum > 1) ? (`${sum} copos de água`) : (`${sum} copo de água`)
 }
 
 module.exports = {
