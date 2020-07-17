@@ -82,16 +82,42 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
-  // receber um array, passar por todos os numeros do array (for i = 0; i < array.length; i += 1) { }
-  // 
+  // receber um array, passar por todos os numeros do array verificando se é divisivel
+  // for (let i = 0; i < array.length; i += 1)
+  // Dependendo do resuktado trocar o numero pro string
+  // Retornar o novo array
+//   let arrayFizzBuzz = [];
+//   for (index in array) {
+//     if (index % 3 === 0) {
+//       arrayFizzBuzz += 'fizz';
+//     } else if (index % 5 === 0) {
+//       arrayFizzBuzz += 'buzz';
+//     } else if (index % 3 === 0 && index % 5 === 0) {
+//       arrayFizzBuzz += 'fizzBuzz';
+//     } else {
+//       arrayFizzBuzz += 'bug!';
+//     }
+//   }
+//   return arrayFizzBuzz;
+// }
+
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
+// function divisor() {
+//   if (x % 3 === 0) {
+    
+//   }
 }
 
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  //
+  // Transformar num array
+  // for cada i verificar se é vogal
+  // Se for vogal trocar a vogal pelo numero
+  // Transformar array em string
 }
 function decode() {
   // seu código aqui
@@ -100,30 +126,26 @@ function decode() {
 // Desafio 10
 function techList(array, name) {
   // seu código aqui
-  // Para cada item da lista deve retornar em um unico objeto a tecnologia e o nome
+  // Para cada item da lista deve retornar em um unico objeto um array com a tecnologia e o nome
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  // var contador = 0;
-  // for(let i = 0; i < array.length; i += 1) {
-  //   if (array[i] < 0 || array[i] > 9 || ) { } else {}
-  // }
-  // var item of array) {
-  //    if (item > 0) contador ++;
-  // } else { console.log('não é possível gerar um número de telefone com esses valores'); }
+  let numeroTelefone = '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array [4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+  if (array.length > 11) {
+    return 'Array com tamanho incorreto';
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] < 0 || array[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      return numeroTelefone;
+    }
+  }
 
-  // if (array.length > 11) {
-  //   return 'Array com tamanho incorreto'
-  // } else if () {
-
-  // } else {
-  //   return '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array [4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10] + array[11]; 
-  // }
 }
 
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
