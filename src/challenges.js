@@ -96,29 +96,78 @@ function fizzBuzz(array_1) {
 // Desafio 9
 function encode(word_2) {
   let aux="";
+  let cont=0;
+  let pala="";
+  
   for(let i=0;i<word_2.length;i+=1){
-    aux+=word_2[i];
-    if(word_2[i]=="a" ||word_2[i]=="A"){
-      aux+=1;
+    cont=0;
+    if(word_2[i]==="a"){
+      pala=1;
+      cont=1;
     }
-    if(word_2[i]=="e" ||word_2[i]=="E"){
-      aux+=2;
+    if(word_2[i]==="e"){
+      pala=2;
+      cont=1;
     }
-    if(word_2[i]=="i" ||word_2[i]=="I"){
-      aux+=3;
+    if(word_2[i]==="i"){
+      pala=3;
+      cont=1;
     }
-    if(word_2[i]=="o" ||word_2[i]=="O"){
-      aux+=4;
+    if(word_2[i]==="o"){
+      pala=4;
+      cont=1;
     }
-    if(word_2[i]=="u" ||word_2[i]=="U"){
-      aux+=5;
+    if(word_2[i]==="u"){
+      pala=5;
+      cont=1;
     }
-    
+    if(cont===1){
+      aux+=pala;
+    }
+    else{
+      aux+=word_2[i];
+    }
   }
   return aux;
 }
+
+
 function decode() {
-  // seu código aqui
+  let aux="";
+  let cont=0;
+  let pala="";
+  
+  for(let i=0;i<word_2.length;i+=1){
+    cont=0;
+    if(word_2[i]==1){
+      pala="a";
+      cont=1;
+    }
+    if(word_2[i]==2){
+      pala="e";
+      cont=1;
+    }
+    if(word_2[i]==3){
+      pala="i";
+      cont=1;
+    }
+    if(word_2[i]==4){
+      pala="o";
+      cont=1;
+    }
+    if(word_2[i]==5){
+      pala="u";
+      cont=1;
+    }
+    if(cont===1){
+      aux+=pala;
+    }
+    else{
+      aux+=word_2[i];
+    }
+  }
+  return aux;
+
 }
 
 // Desafio 10
