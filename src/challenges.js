@@ -73,15 +73,15 @@ function fizzBuzz(array) {
     } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
       fbzz.push("buzz");
     } else {
-      fbzz.push("!bug");
+      fbzz.push("bug!");
     }
   }
   return fbzz;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  
 }
 function decode() {
   // seu código aqui
