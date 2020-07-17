@@ -41,9 +41,8 @@ function concatName(array) {
   let arrayStrings = [];
   arrayStrings.push(array[array.length - 1]);
   arrayStrings.push(array[0]);
-  return '${arrayStrings[0]}, ${arrayStrings[1]}';
+  return arrayStrings[0] + ', ' + arrayStrings[1];
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(win, ties) {
@@ -60,22 +59,19 @@ function footballPoints(win, ties) {
 // Desafio 6
 function highestCount(numbers) {
   // seu código aqui
-  if (Array.isArray(numbers) === true) {
-    let highNum = numbers[0];
-    let numberCount = 0;
-    for (let n of numbers) {
-      if (n > highNum) {
-        highNum = n;
-      }
+  let highNum = numbers[0];
+  let numberCount = 0;
+  for (let n of numbers) {
+    if (n > highNum) {
+    highNum = n;
     }
-    for (let n of numbers) {
-      if (n === highNum) {
-        numberCount += 1;
-      }
-    }
-    return numberCount;
   }
-  return 'erro: parâmetro deve ser um array';
+  for (let n of numbers) {
+    if (n === highNum) {
+    numberCount += 1;
+    }
+  }
+  return numberCount;
 }
 
 // Desafio 7
@@ -95,8 +91,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  for (i in array) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      array[i] = 'fizzBuzz';
+    } else if (array[i] % 3 === 0) {
+      array[i] = 'fizz';
+    } else if (array[i] % 5 === 0) {
+      array[i] = 'buzz';
+    } else {
+      array[i] = 'bug!';
+    }
+  }
+  return array;
 }
 
 // Desafio 9
