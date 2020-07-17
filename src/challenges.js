@@ -2,19 +2,19 @@
 function compareTrue(booleano1, booleano2) {
   // seu código aqui
   let booleanoResultado = false;
-  if(booleano1 && booleano2){
+  if (booleano1 && booleano2){
     booleanoResultado = true;
   }
   return booleanoResultado;
 }
-//let valor1 = false;
-//let valor2 = false;
-//console.log(compareTrue(valor1, valor2));
+// let valor1 = false;
+// let valor2 = false;
+// console.log(compareTrue(valor1, valor2));
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return (base*height)/2;
+  return (base * height) / 2;
 }
 let valor1 = 10;
 let valor2 = 50;
