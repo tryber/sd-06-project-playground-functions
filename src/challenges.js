@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(firstBoolean, secondBoolean) {
-  if (firstBoolean && secondBoolean) {
-    return true;
-  } else {
-    return false;
-  }
+  return firstBoolean && secondBoolean;
 }
 
 // Desafio 2
@@ -29,13 +25,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  mouse = 0;
+  if (cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  } else if (cat1 < cat2) {
+    return 'cat1';
+  } else {
+    return 'cat2';
+  }
 }
 
 // Desafio 8
