@@ -172,9 +172,25 @@ console.log(decode(valor2)); */
 
 
 // Desafio 10
-function techList() {
+function techList(arrayTecnologias, name) {
   // seu código aqui
+  if (arrayTecnologias === undefined){
+    return "Vazio!";
+  }else{
+    let saidaTec = [];
+    for (let indiceTec in arrayTecnologias){
+      saidaTec.push({
+        tech: arrayTecnologias[indiceTec],
+        nome: name,
+      });
+    }
+    return saidaTec;
+  }
 }
+let valor1 = ["python", "datacience", "ruby"];
+let valor2 = "Clayton Miguel";
+console.log(techList(valor1, valor2));
+
 
 // Desafio 11
 function generatePhoneNumber() {
