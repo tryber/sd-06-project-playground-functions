@@ -18,7 +18,7 @@ return a.split(" ");
 
 // Desafio 4
 function concatName(b) {
-let i = b.lenght-1
+let i = b.length-1
 let piriri = b[i]
 piriri = piriri + ", " + b[0];
 return piriri 
