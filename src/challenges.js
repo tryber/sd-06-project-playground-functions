@@ -122,8 +122,41 @@ function techList(tech,name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(cellnumber) {
+  let resultado = 0;
+  let count = 0;
+  let repetido = cellnumber[0];
+
+  for (let k in cellnumber){
+    for (let j in cellnumber){
+      if (repetido === cellnumber[j] && count < 3){
+        count += 1;
+      } else if (count >= 3) {
+        break
+      }
+    }
+    if (count >= 3){
+      break
+    } else {
+    repetido = cellnumber[k];
+    count = 0;
+  }
+  } 
+
+
+  if (cellnumber.length !== 11){
+    resultado = "Array com tamanho incorreto.";
+  } else {
+    for (i in cellnumber){
+      if (cellnumber[i] > 9 || cellnumber[i] < 0 || count === 3){
+        resultado = "não é possível gerar um número de telefone com esses valores";
+        break
+      } else {
+        resultado = "(" + cellnumber[0] + cellnumber[1] + ") " + cellnumber[2] + cellnumber[3] + cellnumber[4] + cellnumber[5] + cellnumber[6] + "-" + cellnumber[7] + cellnumber[8] + cellnumber[9] + cellnumber[10];
+      }
+    }
+  }
+  return resultado;
 }
 
 // Desafio 12
