@@ -1,7 +1,5 @@
  // Desafio 1
  
- console.log (compareTrue());
-
  function compareTrue() {
   
   let a = false;
