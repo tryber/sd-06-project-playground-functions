@@ -1,17 +1,27 @@
 // Desafio 1
 function compareTrue(valor1,valor2) {
   // seu código aqui
-}
-ls
-// Desafio 2
-function calcArea() {
-  // seu código aqui
+  if(valor1 != valor2){
+    console.log(false)
+}else{console.log(true)}
 }
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+compareTrue (93663639,93663639)
+
+
+// Desafio 2
+function calcArea(base, height) {
+  let areaTriangulo  = (base*height)/2
+  console.log(areaTriangulo)
 }
+calcArea=(2,3)
+// Desafio 3
+// seu código aqui
+function splitSentence(string) {
+  
+  return string.split(" ");
+}
+console.log(splitSentence=("todos amigos"))
 
 // Desafio 4
 function concatName() {
