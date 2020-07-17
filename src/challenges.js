@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
-  fffffff
+  return Boolean(10 > 9)
 }
 
 // Desafio 2
