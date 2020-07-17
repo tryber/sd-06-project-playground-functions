@@ -21,15 +21,20 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+  let stringArray = string.split(" ");
+  let last = stringArray[0];
+  let first = stringArray[stringArray.length - 1];
+  fraseFinal =  first + ", " + last;
+  return fraseFinal;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winPontos = wins * 3;
+  let total = winPontos + ties;
+  return total;
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
