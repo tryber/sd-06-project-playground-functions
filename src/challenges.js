@@ -82,16 +82,42 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(words) {
+  words = words.split('');
   let letters = {
-    a: "1",
-    e: "2",
-    i: "3",
-    o: "4",
-    u: "5",
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
   };
+  for (let k = 0; k < words.length; k += 1) {
+    for (key in letters) {
+      if (key === words[k]) {
+        words[k] = letters[words[k]]
+      }
+    } 
+  }
+  words = words.join('');
+  return words;
 }
-function decode() {
-  // seu código aqui
+function decode(words) {
+  words = words.split('');
+  let letters = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  for (let k = 0; k < words.length; k += 1) {
+    for (key in letters) {
+      if (letters[key] === words[k]) {
+        words[k] = key
+      }
+    } 
+  }
+  words = words.join('');
+  return words;
 }
 
 // Desafio 10
