@@ -1,3 +1,4 @@
+// Projeto 02 Jederson Macedo
 // Desafio 1
 function compareTrue() {
   // seu código aqui
