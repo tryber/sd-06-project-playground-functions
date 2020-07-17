@@ -20,7 +20,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(entrada) {
-  return [entrada[entrada.length - 1], entrada[0]];
+  let array = [entrada[entrada.length - 1], entrada[0]]
+  return array;
 }
 
 // Desafio 5
@@ -36,10 +37,8 @@ function highestCount(array) {
   let maiorNumero = 0;
   let freq = 0;
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > array[i - 1]) {
-      if (array[i] > maiorNumero) {
-        maiorNumero = array[i];
-      }
+    if (array[i] > array[i - 1] && array[i] > maiorNumero) {
+      maiorNumero = array[i];
     }
   }
   for (let j = 0; j < array.length; j += 1) {
