@@ -15,10 +15,12 @@ let height = 4;
 function calcArea(base, height) {
   return (base*height)/2;
 }
-
+let string = "go Trybe";
+let separador = " "
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string, separador) {
+  let retorno = string.split(separador);
+  return retorno;
 }
 
 // Desafio 4
