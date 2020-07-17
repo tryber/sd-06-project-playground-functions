@@ -150,8 +150,23 @@ function techList(techList, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  
+function generatePhoneNumber(possibleNumber) {
+  if (possibleNumber.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } 
+    
+  let phoneNumber = `(${possibleNumber[0]}${possibleNumber[1]}) `;
+
+  for (let i = 2; i < possibleNumber.length; i++) {
+    if (possibleNumber[i] === 7) {
+      phoneNumber += `${possibleNumber[i]}-`;
+    } else {
+      phoneNumber += possibleNumber[i];
+    }
+    
+  }
+
+  return phoneNumber;
 }
 
 // Desafio 12
