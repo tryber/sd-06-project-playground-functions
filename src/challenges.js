@@ -143,10 +143,13 @@ function techList(array, nome) {
     result.push(aux);
   }
   result.sort(ordenarPorNome);
+  if (result.length == 0) {
+    return "Vazio!";
+  }
   return result;
 }
 
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+console.log(techList([], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
