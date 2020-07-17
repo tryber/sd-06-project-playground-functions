@@ -22,6 +22,7 @@ function splitSentence(str) {
   for (let i = 0; i < str.lenght; i++) {
     if (str[i] == " " && str[0] == " ") {
       sentence[word] = getWord(i-1);
+      word++;
     }
   }
 
