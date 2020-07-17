@@ -58,9 +58,9 @@ function highestCount(arrayNumeros) {
 // Desafio 7
 function catAndMouse(mouse ,cat1 ,cat2) {
   if (mouse - cat1 > mouse - cat2) {
-    return cat2;
+    return "cat2";
   } 
-  return cat1;
+  return "cat1";
 }
 
 // Desafio 8
@@ -108,7 +108,7 @@ function decode(stringNumeros) {
 
 // Desafio 10
 function techList(nomesDeTecnologias , name) {
-  if (nomesOrdenados == null) {
+  if (nomesDeTecnologias == null) {
     return 'Vazio!'
   }
   let nomesOrdenados =  nomesDeTecnologias.sort();
@@ -160,15 +160,16 @@ function generatePhoneNumber(numeroTelefone) {
   numeroTelefone.splice(0,0,'(')
   numeroTelefone.splice(3,0,')')
   numeroTelefone.splice(4,0,' ')
-  numeroTelefone.splice(9,0,'-')
+  numeroTelefone.splice(10,0,'-')
   
   let numeroFormatado = '';
   for (let x in numeroTelefone){
     numeroFormatado += numeroTelefone[x]
   }
   return numeroFormatado;
+  
 }
-//  generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+// generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
