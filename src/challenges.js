@@ -146,8 +146,9 @@ function generatePhoneNumber(array) {
     if (array[i] < 0 || array[i] > 9 || vezesRepetidas > 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
+  } else {
+    return numeroTelefone;
   }
-  return numeroTelefone;
 }
 
 // Repeticao +3x
