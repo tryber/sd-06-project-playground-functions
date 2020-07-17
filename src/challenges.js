@@ -5,13 +5,13 @@ function compareTrue(valorUm, ValorDois) {
   }
   return false;
 }
-//console.log(compareTrue(true, true)); - - teste
+// console.log(compareTrue(true, true)); - - teste
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-console.log(calcArea(5, 4)); - - teste
+// console.log(calcArea(5, 4)); - - teste
 // Desafio 3
 function splitSentence() {
   // seu código aqui
