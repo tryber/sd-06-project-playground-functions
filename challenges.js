@@ -1,8 +1,6 @@
 // Desafio 1
-let t1 = true 
-let t2 = false
-function compareTrue(t1,t2) { 
-    if (t1===true && t2===true){
+function compareTrue(a,b) { 
+    if (a===true && a===true){
         resultado = true;
     } else {resultado = false}
     return resultado
@@ -12,7 +10,8 @@ function compareTrue(t1,t2) {
   } 
   
   // Desafio 2
-  function calcArea() {
+  function calcArea(b,h) {
+      return b*h/2
     // seu código aqui
   }
   
