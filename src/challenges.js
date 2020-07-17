@@ -117,10 +117,22 @@ function decode() {
 }
 
 // Desafio 10
-function techList(array, name) {
+function techList(tech, name) {
   // seu código aqui
-  // Para cada item da lista deve retornar em um unico objeto um array com a tecnologia e o nome
+  // Array vazio
+  // Para cada item da lista adicionar no novo array com 'tech:' e 'nome:'
+  let resultado = [];
+  if (tech.length === 0) {
+    return 'Vazio!'
+  } else {
+    tech.sort();
+    for (i in tech) {
+      resultado.push({'tech': tech[i], 'name': name});
+    }
+    return resultado;
+  }
 }
+
 
 // Desafio 11
 function generatePhoneNumber(array) {
@@ -131,7 +143,7 @@ function generatePhoneNumber(array) {
     return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0 || array[i] > 9 || vezesRepetidas >= 3) {
+    if (array[i] < 0 || array[i] > 9 || vezesRepetidas > 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
