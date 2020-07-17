@@ -24,21 +24,30 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let string;
+  let string = [];
   for (let i = array.length - 1; i >= 0; i -= array.length - 1) {
-    string.push (array[i])
+    string.push(array[i])
   }
   return string
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let pontos = wins - ties;
+  return pontos
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numeros) {
   // seu código aqui
+  let maiorNumero = 0;
+  for (n = 0; n<numeros.length; n += 1) {
+    if (maiorNumero<numeros[n]{
+      maiorNumero = numeros[n] 
+    }    
+  }
+  for (n = 0)
 }
 
 // Desafio 7
