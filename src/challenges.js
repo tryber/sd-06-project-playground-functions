@@ -21,7 +21,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(arrayNames) {
-  return `${arrayNames[arrayNames.length - 1]} , ${arrayNames[0]}`;
+  return `${arrayNames[arrayNames.length - 1]}, ${arrayNames[0]}`;
 }
 //console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
