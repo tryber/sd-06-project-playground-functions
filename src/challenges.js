@@ -23,7 +23,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
+  array = array[array.length-1] + ", " + array[0];
+  return array;
 }
 
 // Desafio 5
