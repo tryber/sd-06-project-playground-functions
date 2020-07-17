@@ -181,7 +181,7 @@ function techList(arrayTecnologias, name) {
     for (let indiceTec in arrayTecnologias){
       saidaTec.push({
         tech: arrayTecnologias[indiceTec],
-        nome: name,
+        nome: name
       });
     }
     return saidaTec;
