@@ -16,14 +16,28 @@ function calcArea(base, height) {
   // seu código aqui
   return (base * height) / 2;
 }
-let valor1 = 10;
-let valor2 = 50;
-console.log(calcArea(valor1, valor2));
+// let valor1 = 10;
+// let valor2 = 50;
+// console.log(calcArea(valor1, valor2));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let palavrasDivididas = [];
+  let palavra = "";
+  for (let n = 0; n < string.length; n += 1){
+    if (string[n] !== " "){
+      palavra += string[n];
+    }else{
+      palavrasDivididas.push(palavra);
+      palavra = "";
+    }    
+  }
+  return palavrasDivididas;  
 }
+ let valor1 = "Clayton é zika";
+// let valor2 = 50;
+ console.log(valor1.length);
 
 // Desafio 4
 function concatName() {
