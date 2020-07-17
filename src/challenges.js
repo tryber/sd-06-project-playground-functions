@@ -17,17 +17,29 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let string = `${array[array.length -1]}, ${array[0]}`;
-  return string  
+  return string;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let maiorNumero = numbers[0]
+  let contador = 0
+  for(let i= 1; i < numbers.length; i++) {
+    if(numbers[i] > maiorNumero){
+      maiorNumero = numbers[i]
+    }
+  }
+  for(n in numbers){
+    if(numbers[n] === maiorNumero) {
+      contador++
+    }
+  }
+  return contador
 }
 
 // Desafio 7
