@@ -18,11 +18,11 @@ function splitSentence(param) {
   let palavras = [];
   let limiteDaUltimaPalavra = -1;
 
-  for (letra = 0; letra < param.length; letra += 1) {
+  for (let letra = 0; letra < param.length; letra += 1) {
     let palavra = '';
 
     if (param[letra] === ' ' || letra === param.length - 1) {
-      for (letraPalavra = limiteDaUltimaPalavra + 1; letraPalavra <= letra; letraPalavra += 1) {
+      for (let letraPalavra = limiteDaUltimaPalavra + 1; letraPalavra <= letra; letraPalavra += 1) {
         if (param[letraPalavra] !== ' ') {
           palavra += param[letraPalavra];
         }
@@ -37,7 +37,7 @@ function splitSentence(param) {
 
 // Desafio 4
 function concatName(param) {
-  let resultado = `${param[param.length -1]}, ${param[0]}`;
+  let resultado = `${param[param.length - 1]}, ${param[0]}`;
   return resultado;
 }
 
@@ -48,8 +48,25 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(param) {
+  let maiorValor = 0;
+  let quantasVezes = 0;
+
+  for (let cont1 = 0; cont1 < param.length; cont1 += 1) {
+    for (let cont2 = 0; cont2 < param.length; cont2 += 1) {
+      if (cont1 !== cont2 && param[cont1] > maiorValor && param[cont1] > param[cont2]) {
+        maiorValor = param[cont1];
+      }
+    }
+  }
+
+  for (let contRepete = 0; contRepete < param.length; contRepete += 1) {
+    if (maiorValor === param[contRepete]) {
+      quantasVezes += 1;
+    }
+  }
+
+  return quantasVezes;
 }
 
 // Desafio 7
