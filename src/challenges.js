@@ -4,24 +4,30 @@ function compareTrue() {
 }
 
 // Desafio 2
-  function calcArea(base, height) {
-    result = (base * height) / 2;
+function calcArea(base, height) {
+  result = (base * height) / 2;
 
-      return result;  
-  };
+return result;
+}
 
 // Desafio 3
-  function splitSentence(word) {
-    text = word.split(' ',3)
+function splitSentence(word) {
+  text = word.split(' ',3)
 
-    return text;   
-  };
+return text;
+}
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let concatenado = '';
+  for(let i = 0; i < array.length; i += 1) {
+    concatenado = array[array.length-1] +", "+ array[0];
+  }
+return concatenado;
 }
+
+
 
 // Desafio 5
 function footballPoints() {
