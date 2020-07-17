@@ -1,6 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  
+function compareTrue(BOOLEAN1, BOOLEAN2) {
+  if (BOOLEAN1 && BOOLEAN2) {
+    return true;
+  } else {
+    return false;
+  }
+
 }
 
 // Desafio 2
