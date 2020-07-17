@@ -1,6 +1,10 @@
 // Desafio 1
-function compareTrue() {
-  // seu código
+function compareTrue(termo1, termo2) {
+  if (termo1 === termo2){
+    return "true";
+  } else {
+    return "false";
+  }
 }
 
 // Desafio 2
