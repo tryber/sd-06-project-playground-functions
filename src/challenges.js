@@ -31,8 +31,7 @@ function concatName(arrayDeNomes) {
   let qtdNomes = arrayDeNomes.length;
   let primeiroItem = arrayDeNomes[0];
   let ultimoItem = arrayDeNomes[qtdNomes - 1];
-  // return ultimoItem + ", " + primeiroItem;
-  return console.log(ultimoItem + ", " + primeiroItem);
+  return ultimoItem + ", " + primeiroItem;
 }
 
 // Desafio 5
