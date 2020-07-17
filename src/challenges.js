@@ -12,7 +12,7 @@ function calcArea(base, height) {
   // seu código aqui
   return (base * height)/2;
 }
-
+console.log(calcArea(15,28))
 
 // Desafio 3
 
@@ -20,7 +20,7 @@ function splitSentence(string) {
   // seu código aqui
   return string.split(' ')
 }
-
+console.log(splitSentence('go Trybe'))
 
 // Desafio 4
 function concatName(array) {
@@ -28,7 +28,7 @@ function concatName(array) {
   let last = array.length-1;
   return  array[last]+', '+array[0];
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -78,7 +78,7 @@ function fizzBuzz(array) {
         novo.push("fizzbuzz");
       } else if(array[i]%5 === 0) {
         novo.push("buzz");
-      } else if(array[i]%3 === 0) {
+      } else if(array[i]%3 === 0 && array[i]%5 === 1) {
         novo.push("fizz");
       } else {
         novo.push("bug!");
