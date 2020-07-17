@@ -27,12 +27,16 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let arrayResposta=[]
+  let lastOne
+  let first
   for (let i=array.length-1; i>=0;i--){
-    if(i==array.length-1 || i==0){
-    arrayResposta.push(array[i])
+    if(i==array.length-1){
+    lastOne= array[i]
     }
-  }return arrayResposta
+    else if(i==0){
+    first=array[i]
+    }
+  }return lastOne+","+first
   
 }
 
