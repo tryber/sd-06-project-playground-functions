@@ -90,8 +90,9 @@ function fizzBuzz(array) {
       answer.push('buzz');
     } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       answer.push('fizzBuzz');
+    } else {
+      answer.push('bug!');
     }
-    answer.push('bug!');
   }
   return answer;
 }
