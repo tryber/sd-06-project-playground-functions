@@ -29,20 +29,13 @@ function splitSentence(lucas) {
 }
 
 // Desafio 4
-function concatName(meuNome) {
+function concatName() {
   // seu código aqui
-let meuNome = ['Lucas', 'Souza', 'de', 'Miranda'];
-let meuNomeConcat = meuNome[meuNome.length -1] + ', ' + meuNome[0]
-return meuNomeconcat;
-
-
 }
 
-
 // Desafio 5
-function footballPoints(wins, ties) {
+function footballPoints() {
   // seu código aqui
-return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
