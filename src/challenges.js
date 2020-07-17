@@ -35,8 +35,22 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArray) {
+  lastItemIndex = stringArray.length - 1;
+  firstItemIndex = 0;
+  returnedString = "";
+  
+  for (let index = lastItemIndex; index < 0; index -= 1){
+    if (index === lastItemIndex){
+      returnedString = stringArray[index] + ", "
+    }
+    if else (index === firstItemIndex){
+      returnedString += stringArray[index]
+    }
+  }
+
+  return stringArray;
+ 
 }
 
 // Desafio 5
