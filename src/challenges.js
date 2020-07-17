@@ -70,7 +70,7 @@ function highestCount(myArray) {
   for (let i = 0; i < myArray.length; i += 1) {
     let contAtual = 1;
     for (let x = 0; x < myArray.length; x += 1) {
-      if ((i != x) && (myArray[i] === myArray[x])) {
+      if ((i !== x) && (myArray[i] === myArray[x])) {
         contAtual += 1;
       }
     }
@@ -88,15 +88,15 @@ function highestCount(myArray) {
 // let c2 = 8;
 // let mo = 6;
 function catAndMouse(mouse, cat1, cat2) {
+  let result = 'os gatos trombam e o rato foge';
   let distanciaCat1 = Math.abs(cat1 - mouse);
   let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
   } else if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return result;
 }
 // console.log(catAndMouse(mo, c1, c2));
 
@@ -104,16 +104,16 @@ function catAndMouse(mouse, cat1, cat2) {
 // let arr = [2, 15, 7, 9, 45];
 function fizzBuzz(myArray) {
   let arrayFizzBuzz = [];
-  for (i = 0; i < myArray.length; i +=1) {
-    let result = "";
-    if ((myArray[i] % 3 == 0) && (myArray[i] % 5 == 0)){
-      result = "fizzBuzz";
+  for (let i = 0; i < myArray.length; i += 1) {
+    let result = '';
+    if ((myArray[i] % 3 === 0) && (myArray[i] % 5 === 0)) {
+      result = 'fizzBuzz';
     } else if (myArray[i] % 3 == 0) {
-      result = "fizz";
+      result = 'fizz';
     } else if (myArray[i] % 5 == 0) {
-      result = "buzz";
+      result = 'buzz';
     } else {
-      result = "bug!";
+      result = 'bug!';
     }
     arrayFizzBuzz.push(result);
   }
