@@ -19,10 +19,11 @@ function splitSentence(string) {
   let split = string.split(" ");
   return split;
 }
-console.log (splitSentence("Alo galera de cowboy Alo galera de pião quem gosta de rodeio bate forte com a mão"))
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let lastFirst = array[array.length - 1] + ", " + array[0];
+  return lastFirst
 }
 
 // Desafio 5
