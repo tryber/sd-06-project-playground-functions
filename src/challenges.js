@@ -52,21 +52,48 @@ function highestCount(numeros) {
   }
   return contador;
 }
-
+// seu código aqui
+  //if (mouse + cat1 > mouse + cat2){
+  //  return 'cat2';
+  //}else if (mouse + cat2 > mouse + cat1){
+  //  return 'cat1';
+  //}else if (mouse - cat2 == mouse - cat1){
+  //  return 'os gatos trombam e o rato foge';
+  //}
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
-  if (mouse - cat1 > mouse - cat2){
-    return 'cat1';
-  }else if (mouse - cat2 > mouse - cat1){
+  let contadorCat1 = 0;
+  let contadorCat2 = 0;
+  if (mouse > cat1){
+    for (let i = cat1; i <= mouse; i += 1){
+      contadorCat1 += 1;
+    }
+  }else {
+    for (let e = mouse; e <= cat1; e += 1){
+      contadorCat1 += 1;
+    }
+  }
+  if (mouse > cat2){
+    for (let i = cat2; i <= mouse; i += 1){
+      contadorCat2 += 1;
+    }
+  }else {
+    for (let e = mouse; e <= cat2; e += 1){
+      contadorCat2 += 1;
+    }
+  }
+  if (contadorCat1 > contadorCat2){
     return 'cat2';
-  }else if (mouse - cat2 == mouse - cat1){
+  }else if (contadorCat2 > contadorCat1){
+    return 'cat1';
+  }else{
     return 'os gatos trombam e o rato foge';
   }
 }
 
 
 
+let numeros = [2, 15, 7, 9, 45];
 // Desafio 8
 function fizzBuzz(numeros) {
   // seu código aqui
@@ -74,11 +101,20 @@ function fizzBuzz(numeros) {
   for (let i in numeros){
     if (numeros[i] % 3 == 0 && numeros[i] % 5 == 0){
       numDivisibles[i] = 'fizzBuzz'; 
-    } else if (numeros[i] % 3 == 0){
+    }else if (numeros[i] % 3 == 0){
       numDivisibles[i] = 'fizz';
+    }else if (numeros[i] % 5 == 0) {
+      numDivisibles[i] = 'buzz';
+    }else {
+      numDivisibles[i] = 'bug!';
     }
   }
+  return numDivisibles;
 }
+console.log(fizzBuzz(numeros));
+
+
+
 
 // Desafio 9
 function encode() {
