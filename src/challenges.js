@@ -12,7 +12,7 @@ return base * height/2;
 
 // Desafio 3
 function splitSentence() {
-return splitSentence.split(" ", 2);
+return splitSentence.split(" ")
 }
 
 // Desafio 4
