@@ -22,18 +22,24 @@ function splitSentence() {
 // Desafio 4
 function concatName(array) {
   for (const key in array) {
-    return array[0] +", "+ array[array.length];
+    return array[array.length] +", "+ array[0];
   }
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > hNumber){
+      hNumber = array[index]
+    }
+    
+  }
+  
 }
 
 // Desafio 7
