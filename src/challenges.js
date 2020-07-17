@@ -38,14 +38,19 @@ function splitSentence(string) {
   }
   return palavrasDivididas;  
 }
- let valor1 = "Clayton é zika";
-// let valor2 = 50;
- console.log(splitSentence(valor1));
+/* let valor1 = "Clayton é zika";
+let valor2 = 50;
+console.log(splitSentence(valor1)); */
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  /* return array[0] + ", " + array[array.length-1]; */
+  return array[array.length-1] + ", " + array[0];
 }
+let valor1 = ["Clayton é zika", "Clayton top", "Clayton bonitão", "Finalmente deu certo"];
+/* let valor2 = 50; */
+console.log(concatName(valor1));
 
 // Desafio 5
 function footballPoints() {
