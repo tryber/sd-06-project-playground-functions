@@ -24,10 +24,10 @@ function calcArea(base, height) {
 
 
 // --------------- Desafio 3
-// let frase = 'go Trybe';
-// let fraseSeparada = [];
+let frase = 'go Trybe';
 function splitSentence(myText) {
   let word = '';
+  let fraseSeparada = [];
   for (let i = 0; i < myText.length; i += 1) {
     if (myText[i] !== ' ') {
       word += myText[i];
@@ -40,7 +40,7 @@ function splitSentence(myText) {
   fraseSeparada.push(word);  
   return fraseSeparada;
 }
-// console.log(splitSentence(frase));
+console.log(splitSentence(frase));
 
 
 // ---------------- Desafio 4
