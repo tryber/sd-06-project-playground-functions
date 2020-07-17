@@ -132,16 +132,20 @@ function decode(numbers) {
 
 // Desafio 10
 function techList(arrayTechnology,name) {
-  let technology = arrayTechnology.split('');
-
-
-
-  return 
+  let technologyList = arrayTechnology.sort();
+    for (let index = 0; index < technologyList.length; index += 1) {
+      let object = {
+      tech: technologyList[index],
+      nome: name,
+      };
+    }
+  return object;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella"));
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  
 }
 
 // Desafio 12
