@@ -11,9 +11,7 @@ return base * height/2;
 }
 
 // Desafio 3
-a = "go trybe";
-b = "vamo que vamo";
-function splitSentence(a, b) {
+function splitSentence(a) {
 return splitSentence.split(" ")
 }
 
