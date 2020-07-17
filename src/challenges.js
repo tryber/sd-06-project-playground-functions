@@ -42,10 +42,10 @@ function concatName(stringArray) {
   
   for (let index = lastItemIndex; index < 0; index -= 1){
     if (index === lastItemIndex){
-      returnedString = stringArray[index] + ", "
+      returnedString = stringArray[index] + ", ";
     }
     if else (index === firstItemIndex){
-      returnedString += stringArray[index]
+      returnedString += stringArray[index];
     }
   }
 
