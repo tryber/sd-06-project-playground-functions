@@ -1,13 +1,10 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(a,b) {
   // seu código aqui
-  let res = false;
   if(a === true && b === true) {
-    res = true;
-  } else {
-    res = false;
-  }
-  return res;
+    return true;
+  } 
+    return false;
 }
 
 // Desafio 2
@@ -34,10 +31,13 @@ function concatName(array) {
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+  let vit = 3 * wins;
+  let emp = ties;
+  return vit + emp;
 }
-
+console.log(footballPoints(5,3))
 // Desafio 6
 function highestCount() {
   // seu código aqui
