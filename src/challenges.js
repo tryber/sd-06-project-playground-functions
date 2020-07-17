@@ -189,6 +189,7 @@ function decode(string) {
 function techList(array, name) {
     if (array.length < 1) {
         console.log("Vazio!");
+        return "Vazio!";
     } else {
         //sorting
         let sortedArray = array.sort();
