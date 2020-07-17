@@ -161,13 +161,17 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   let numbers = string.match(/\d+/g).map(Number);
-  console.log(numbers)
   let soma = numbers[0]
   for(let i = 1; i < numbers.length; i++){
     soma += numbers[i]
   }
-  return `${soma} copos de água`
+  if(soma === 1){
+    return '1 copo de água'
+  } else {
+    return `${soma} copos de água`
+  }
 }
+
 
 module.exports = {
   calcArea,
