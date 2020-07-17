@@ -52,29 +52,9 @@ console.log(footballPoints(3, 2))
 
 
 // Desafio 6
-let n = 0;
-let atual = 0;
-let numeroRepetido = 0;
-let abencoado = 0;
+function highestCount() {
 
-function highestCount(array){
-    for (let i in array){
-    
-        for(let j in array){
-            if(array[i]===array[j]){
-                 n++;
-            }
-            //  if(array[i]>array[n]){
-            //         n++;
-            //  }
-        }
-   
-    }
-
-    return n;
 }
-
-console.log(highestCount([2, 2, 10, 3, 5, 3, 7, 3, 3]));
 
 
 // Desafio 7
@@ -95,23 +75,9 @@ console.log(catAndMouse(2, 3, 3))
 
 
 // Desafio 8
-let result
-let arrayNumeros = [8, 5]
-//function fizzBuzz(arrayNumeros) {
-  for (let i = 0; i <= arrayNumeros; i++) {
-    if (i % 3 === 0 && i % 5 ===0) {
-      arrayNumeros[i] = "fizzBuzz";
-    } else if ( i % 5 === 0) {
-      arrayNumeros[i] = "buzz";
-    } else if (i % 3 === 0) {
-      arrayNumeros[i] = "fizz";
-    } else {
-      arrayNumeros[i] = "bug";
-    }
-  //}
-  //return result
+function fizzBuzz() {
+
 }
-console.log(arrayNumeros[i]);
 
 
 // Desafio 9
