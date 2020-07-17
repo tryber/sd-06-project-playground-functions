@@ -62,17 +62,19 @@ if (distCat1 < distCat2){
 
 // Desafio 8
 function fizzBuzz(numbersArray) {
+  let results = [];
   for (let i = 0; i < numbersArray.length; i++){
     if (numbersArray[i] % 3 === 0) {
-      return "fizz";
+      return results.push["fizz"];
     } else if (numbersArray[i] % 5 === 0) {
-      return "buzz";
+      return results.push["buzz"];
     } else if (numbersArray[i] % 3 === 0 && numbersArray[i] % 5 === 0) {
-      return "fizzBuzz";
+      return results.push["fizzBuzz"];
     } else {
-      return "bug!"
+      return results.push["bug!"];
     }
   }
+  return results;
 }
 
 // Desafio 9
