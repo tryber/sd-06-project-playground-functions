@@ -57,9 +57,9 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (mouse - cat1 > mouse - cat2){
-    return 'cat2';
-  }else if (mouse - cat2 > mouse - cat1){
     return 'cat1';
+  }else if (mouse - cat2 > mouse - cat1){
+    return 'cat2';
   }else if (mouse - cat2 == mouse - cat1){
     return 'os gatos trombam e o rato foge';
   }
@@ -67,12 +67,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 
-
-
-
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros) {
   // seu código aqui
+  let numDivisibles = [];
+  for (let i in numeros){
+    if (numeros[i] % 3 == 0 && numeros[i] % 5 == 0){
+      numDivisibles[i] = 'fizzBuzz'; 
+    } else if (numeros[i] % 3 == 0){
+      numDivisibles[i] = 'fizz';
+    }
+  }
 }
 
 // Desafio 9
