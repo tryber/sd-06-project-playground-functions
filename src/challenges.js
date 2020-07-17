@@ -30,17 +30,15 @@ let array = ["asda", "qweqweq", "zxczxc", "poipo"]
 console.log(concatName(array))
 
 // Desafio 5
-function footballPoints(final) {
-    let campeonato = 0;
-    if (final === "wins") {
-        campeonato = campeonato + 3
-        return campeonato;
-    } else if (final === "ties") {
-        campeonato = campeonato + 1
-        return campeonato;
-    }
+function footballPoints(wins, ties) {
+    // definir variavel que vai receber o numero de pontos
+    let campeonato = 0
+        //definir pontuação
+    campeonato = (3 * wins) + ties
+        //retornar pontos
+    return campeonato
 }
-console.log(footballPoints("wins"))
+console.log(footballPoints(1, 2))
 
 // Desafio 6
 function highestCount() {
