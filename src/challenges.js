@@ -118,12 +118,26 @@ function fizzBuzz(numberArray) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
+function encode(stringToEncode) {
   // seu código aqui
-  let charactersExchange = {a : 1, e : 2, i : 3, o : 4, u : 5,}
+  let charactersExchange = {a : 1, e : 2, i : 3, o : 4, u : 5,};
+  let encodedString = "";
+  for (index in stringToEncode) {
+    for (indexObj in charactersExchange) {
+      console.log(indexObj + " and " + stringToEncode[index])
 
-
+      if (stringToEncode[index] == indexObj) {
+        encodedString += charactersExchange[indexObj]
+      } else if (encodedString[index] != stringToEncode[index]) {
+        encodedString += stringToEncode[index]
+      }
+    } 
+  }
+  return encodedString
 }
+
+console.log(encode("hi there!"))
+
 function decode() {
   // seu código aqui
 }
