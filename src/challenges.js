@@ -34,8 +34,7 @@ function highestCount(arr) {
     if (highestNumber < arr[index]) {
       highestNumber = arr[index];
       count = 1;
-    }
-    else if (highestNumber === arr[index]) {
+    } else if (highestNumber === arr[index]) {
       count += 1;
     }
   }
@@ -43,8 +42,18 @@ function highestCount(arr) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1m = (cat1 - mouse) < 0 ? (mouse - cat1) : (cat1 - mouse);
+  let dist2m = (cat2 - mouse) < 0 ? (mouse - cat2) : (cat2 - mouse);
+
+  if (dist1m > dist2m) {
+    return 'cat1';
+  }
+  if (dist1m < dist2m) {
+    return 'cat2';
+  }
+
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
