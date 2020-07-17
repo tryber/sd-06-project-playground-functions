@@ -41,17 +41,19 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
+  let arrayResultado = [];
   for (let i = 0; i < array.length; i++) {
-    if ((i % 3 == 0) && (i % 5 == 0)) {
-    console.log("fizzBuzz");
-    } else if (i % 3 == 0) {
-    console.log("fizz");
-    } else if (i % 5 == 0) {
-    console.log("buzz");
+    if ((array[i] % 3 == 0) && (array[i] % 5 == 0)) {
+    arrayResultado.push("fizzBuzz");
+    } else if (array[i] % 3 == 0) {
+    arrayResultado.push("fizz");
+    } else if (array[i] % 5 == 0) {
+    arrayResultado.push("buzz");
     } else {
-    console.log("bug!");   
+    arrayResultado.push("bug!");   
     }
   }
+  return(arrayResultado);
 }
 
 // Desafio 9
