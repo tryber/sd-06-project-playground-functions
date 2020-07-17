@@ -20,11 +20,18 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
+
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  // [a, b, c, d, e] -> 'e, a'
+  //retorna array[array.length - 1] + ', ' array[0]
+  let primeiraParalvra = array[array.length - 1];
+  let stringConcat = primeiraParalvra + ', ' + array[0];
+
+  return stringConcat;
 }
 
 // Desafio 5
