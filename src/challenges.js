@@ -108,7 +108,7 @@ function decode(stringNumeros) {
 
 // Desafio 10
 function techList(nomesDeTecnologias , name) {
-  if (nomesDeTecnologias == null) {
+  if (nomesDeTecnologias.length === 0) {
     return 'Vazio!'
   }
   let nomesOrdenados =  nomesDeTecnologias.sort();
@@ -122,9 +122,9 @@ function techList(nomesDeTecnologias , name) {
   }
   return listaObjetos;
 }
-//  let a = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-//  let b = "Lucas";
-//  console.log(techList(a,b));
+  //let a = [];
+  //let b = "Lucas";
+  //console.log(techList(a,b));
 
 // Desafio 11
 function generatePhoneNumber(numeroTelefone) {
@@ -169,7 +169,7 @@ function generatePhoneNumber(numeroTelefone) {
   return numeroFormatado;
   
 }
-// generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+ generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
