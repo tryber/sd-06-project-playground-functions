@@ -49,22 +49,38 @@ function concatName(array) {
 }
 /* let valor1 = ["Clayton é zika", "Clayton top", "Clayton bonitão", "Finalmente deu certo"];
 let valor2 = 50;
-console.log(concatName(valor1));
- */
+console.log(concatName(valor1)); */
+
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
   return wins*3 + ties;
 }
-let valor1 = 60;
+/* let valor1 = 60;
 let valor2 = 50;
-console.log(footballPoints(valor1, valor2));
+console.log(footballPoints(valor1, valor2)); */
 
 
 // Desafio 6
-function highestCount() {
+function highestCount(array2) {
   // seu código aqui
+  let quantidadeDoMaior = 0;
+  for (let n1 in array2){
+    let quantoMaior = 0;
+    for (let n2 in array2){
+        if( array2[n2] <= array2[n1]){
+            quantoMaior += 1;                
+        }
+    }
+    if(quantoMaior === array2.length){
+      quantidadeDoMaior += 1;        
+    }
+  }
+  return quantidadeDoMaior;
 }
+let valor1 = [9, 1, 2, 3, 9, 5, 7, 9, 10, 10];
+/* let valor2 = 50; */
+console.log(highestCount(valor1));
 
 // Desafio 7
 function catAndMouse() {
