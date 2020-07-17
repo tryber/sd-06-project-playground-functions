@@ -23,18 +23,28 @@ function splitSentence(frase) {
 function concatName(meuArray) {
   let primeiraPalavra = meuArray[0];
   let ultimaPalavra = meuArray[meuArray.length - 1];
-  let resposta = (ultimaPalavra + ', ' + primeiraPalavra);
+  let resposta = '';
+  resposta += (ultimaPalavra + ', ' + primeiraPalavra);
   return resposta;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aquiclear
+function footballPoints(wins, lies) {
+  let vitorias = wins * 3;
+  let empates = lies * 1
+  return vitorias + empates;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(meuArray) {
+  var maior = Math.max.apply(null, meuArray);
+  var contMaior = 0;
+  for (var i = 0; i < meuArray.length; i += 1) {
+    if ( meuArray[i] === maior) {
+      contMaior += 1
+    }
+  }
+  return contMaior;
 }
 
 // Desafio 7
