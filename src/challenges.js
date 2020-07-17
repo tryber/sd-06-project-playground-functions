@@ -42,7 +42,7 @@ function splitSentence(string) {
 // console.log(splitSentence(string));
 
 // Desafio 4
-const strings = ['we\'re the best', 'Course', 'JavaScript', 'HTML', 'CSS', 'Trybe'];
+const strings = ['we are the best', 'Course', 'JavaScript', 'HTML', 'CSS', 'Trybe'];
 
 function concatName() {
   return `${strings[strings.length - 1]}, ${strings[0]}`;
@@ -51,9 +51,14 @@ function concatName() {
 // console.log(concatName(strings));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+const wins = 5;
+const ties = 8;
+
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
+
+// console.log(footballPoints(wins, ties));
 
 // Desafio 6
 function highestCount() {
