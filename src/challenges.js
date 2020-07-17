@@ -7,8 +7,8 @@ function compareTrue( bool1 , bool2 ) {
     return false;
   }
 }
-
-// Desafio 2
+console.log(calcArea(10,2.30));
+;// Desafio 2
 function calcArea( base , height ) {
   // seu código aqui
   return base*height/2;
