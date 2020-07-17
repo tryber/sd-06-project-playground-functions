@@ -19,10 +19,11 @@ function calcArea(b,h) {
 
 // Desafio 3
 function splitSentence() {
-  let splitText = "Go Trybe"
+  /*let splitText = "Go Trybe"
   let arrayText = splitText.split(" ")
-  return arrayText[0] + "," + arrayText[1]
+  return arrayText[0] + "," + arrayText[1]*/
   // seu código aqui
+  splitSentence('go Trybe')).toEqual(['go', ',', 'Trybe']
 }
 
 // Desafio 4
