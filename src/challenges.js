@@ -11,8 +11,8 @@ Retorne false se um ou ambos os parâmetros forem falsos.
 Faça a função utilizando o operador &&.
 */
 // seu código aqui
-let value1 = "true"
-let value2 = "true"
+// let value1 = 'true'
+// let value2 = 'true'
 function compareTrue(value1, value2) {
   if (value1 && value2){
     return true
@@ -20,24 +20,21 @@ function compareTrue(value1, value2) {
     return false
   }
 }
-console.log(compareTrue(value1, value2))
+//console.log(compareTrue(value1, value2))
 
 // Desafio 2
-/* 2 - Área do triângulo
-Escreva uma função com o nome calcArea que receba um valor de base 
+/* 2 - Área do triângulo Escreva uma função com o nome calcArea que receba um valor de base
 (chamado base) e outro de altura (chamado height) de um triângulo e 
 retorne o cálculo da sua área.
-
-Lembre-se que a área de um triângulo é calculada através da 
-seguinte fórmula: (base * altura) / 2.
+Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
 */
-let base = 50
-let height = 30
+//let base = 50
+//let height = 30
 function calcArea (base,height) {
 // seu código aqui
   return ((base * height)/2);
 }
-console.log (calcArea(base,height));
+//console.log (calcArea(base,height));
 
 // Desafio 3
 function splitSentence() {
