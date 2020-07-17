@@ -18,7 +18,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(itens) {
-  return [itens[itens.length - 1],itens[0]]
+  return itens[itens.length - 1] + "," + itens[0]
 }
 
 // Desafio 5
@@ -75,8 +75,10 @@ function fizzBuzz(valoresFizzBuzz) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(suaFraseParaNumero) {
+  for(let indice = 0; indice < suaFraseParaNumero.length; indice += 1){
+
+  }
 }
 function decode() {
   // seu código aqui
