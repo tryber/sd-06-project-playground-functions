@@ -96,7 +96,7 @@ function encode(minhaString) {
   let resposta = minhaString.replace('a', '1').replace('e', '2').replace('i', '3').replace('o','4').replace('u', '5');
   return resposta;
 }
-function decode() {
+function decode(minhaString) {
   let resposta = minhaString.replace('1', 'a').replace('2', 'e').replace('3', 'i').replace('4', 'o').replace('5', 'u');
   return resposta;
 }
