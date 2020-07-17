@@ -13,10 +13,23 @@ function calcArea(base, height) {
 }
 // console.log(calcArea(5, 4)); - - teste
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let palavras = [];
+  let uniaoPalavra = "";
+  for (let contador = 0; contador < frase.length; contador += 1) {
+    if (frase[contador] != " ") {
+      uniaoPalavra += frase[contador]
+    }
+    else {
+      palavras.push(uniaoPalavra);
+      uniaoPalavra = "";
+    } if (contador === frase.length - 1) {
+      palavras.push(uniaoPalavra);
+      uniaoPalavra = "";
+    }
+  } return palavras;
 }
-
+// console.log(splitSentence("ola mundo")); - - teste exercicio 3
 // Desafio 4
 function concatName() {
   // seu código aqui
