@@ -1,6 +1,12 @@
 // Desafio 1
+let a = true,
+    b = true;
 function compareTrue() {
-  // seu código aqui
+  if (a === true && b === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -65,6 +71,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+
 
 module.exports = {
   calcArea,
