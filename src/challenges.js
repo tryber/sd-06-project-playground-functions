@@ -192,7 +192,12 @@ function hydrate(stringBebida) {
   for (let x in stringNumeros){
     numeroBebidas += stringNumeros[x];
   }
-  return numeroBebidas + ' copos de água';
+  if (numeroBebidas == 1){
+    return numeroBebidas + ' copo de água';
+  } else {
+    return numeroBebidas + ' copos de água';
+  }
+  
 }
 
 module.exports = {
