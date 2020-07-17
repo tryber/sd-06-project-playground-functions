@@ -87,12 +87,12 @@ function fizzBuzz(numeros) {
   // seu código aqui
   let retorno = [];
   for (let i in numeros) {
-    if (numeros[i] % 3 == 0) {
-      retorno.push('fizz')
-    } else if (numeros[i] % 5 == 0) {
-      retorno.push('buzz')
-    } else if (numeros[i] % 3 == 0 && numeros[i] % 5 == 0) {
+    if (numeros[i] % 3 == 0 && numeros[i] % 5 == 0) {
       retorno.push('fizzBuzz')
+    } else if (numeros[i] % 3 == 0 && numeros[i] % 5 !== 0) {
+      retorno.push('fizz')
+    } else if (numeros[i] % 3 !== 0 && numeros[i] % 5 == 0) {
+      retorno.push('buzz')
     } else {
       retorno.push('bug!')
     }
