@@ -136,30 +136,31 @@ function encode(frase) {
 }
 
 
-function decode(frase) {
+function decode(fraseDecode) {
   // seu código aqui
-  arrayFrase = frase.split('');
-  for (i in arrayFrase){
-    switch (arrayFrase[i]){
+  arrayFraseDecode = fraseDecode.split('');
+  for (i in arrayFraseDecode){
+    switch (arrayFraseDecode[i]){
       case '1':
-        arrayFrase[i] = 'a';
+        arrayFraseDecode[i] = 'a';
         break;
       case '2':
-        arrayFrase[i] = 'e';
+        arrayFraseDecode[i] = 'e';
         break;
       case '3':
-        arrayFrase[i] = 'i';
+        arrayFraseDecode[i] = 'i';
         break;
       case '4':
-        arrayFrase[i] = 'o';
+        arrayFraseDecode[i] = 'o';
         break;
       case '5':
-        arrayFrase[i] = 'u';
+        arrayFraseDecode[i] = 'u';
     }
   }
-  arrayFrase = arrayFrase.join('');
-  return arrayFrase;
+  arrayFraseDecode = arrayFraseDecode.join('');
+  return arrayFraseDecode;
 }
+
 
 
 
