@@ -1,13 +1,17 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+  if( value1 == true && value2 == true){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 // Desafio 2
 function calcArea(base, height) {
   let areaTriang;
   areaTriang = (base * height)/2;
-  return areaTriang;
+ return areaTriang;
 }
 
 // Desafio 3
@@ -17,11 +21,12 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(name) {
-  let name2 = [];
-  for(let index =name.length -1 ; index >= 0 ; index -= 1){
-    name2 += name[index];
+ let name2 = [];
+  for(let index = name.length -1 ; index >= 0 ; index -= 1){
+   name2 += name[index];
   }
-  return name2;
+  rseturn name2;
+}
 
 // Desafio 5
 function footballPoints() {
