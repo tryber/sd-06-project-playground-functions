@@ -93,7 +93,6 @@ function encode(word) {
   return result
 
 }
-
 console.log(encode("hi there!"))
 
 
@@ -118,7 +117,6 @@ function decode(word) {
   return result
 
 }
-
 console.log(decode("h3 th2r2!"))
 
 // Desafio 10
