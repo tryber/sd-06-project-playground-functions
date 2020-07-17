@@ -40,7 +40,7 @@ function concatName(stringArray) {
   let firstItemIndex = 0;
   let returnedString = "";
   
-  for (let index = lastItemIndex; index < 0; index -= 1){
+  for (let index = lastItemIndex; index > 0; index -= 1){
     if (index == lastItemIndex){
       returnedString = stringArray[index] + ", ";
     }
