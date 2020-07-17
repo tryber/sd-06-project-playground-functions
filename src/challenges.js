@@ -94,13 +94,55 @@ function fizzBuzz(valoresFizzBuzz) {
 
 // Desafio 9
 function encode(fraseParaNumero) {
-  for(let indice = 0; indice < fraseParaNumero.length; indice += 1){
-
+  arrayFraseNum = fraseParaNumero.split("")
+  for(let indice = 0; indice < arrayFraseNum.length; indice += 1){
+    switch (arrayFraseNum[indice]) {
+      case "a":
+        arrayFraseNum[indice] = 1;
+        break;
+      case "e":
+        arrayFraseNum[indice] = 2;
+        break;
+      case "i":
+        arrayFraseNum[indice] = 3;
+        break;
+      case "o":
+        arrayFraseNum[indice] = 4;
+        break;
+      case "u":
+        arrayFraseNum[indice] = 5;
+        break;
+    }
   }
+  let stringNumeros = arrayFraseNum.join('')
+  return stringNumeros
 }
-function decode() {
-  // seu código aqui
+
+function decode(numeroParaFrase) {
+  arrayNumFrase = numeroParaFrase.split("")
+  for(let indice = 0; indice < arrayNumFrase.length; indice += 1){
+    switch (arrayNumFrase[indice]) {
+      case "1":
+        arrayNumFrase[indice] = "a";
+        break;
+      case "2":
+        arrayNumFrase[indice] = "e";
+        break;
+      case "3":
+        arrayNumFrase[indice] = "i";
+        break;
+      case "4":
+        arrayNumFrase[indice] = "o";
+        break;
+      case "5":
+        arrayNumFrase[indice] = "u";
+        break;
+    }
+  }
+  let stringFrase = arrayNumFrase.join('')
+  return stringFrase
 }
+
 
 // Desafio 10
 function techList() {
