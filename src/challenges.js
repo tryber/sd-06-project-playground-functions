@@ -33,9 +33,20 @@ return (wins * 3) + (ties * 1)
 console.log(footballPoints(3, 4))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numero) {
+  var maiorNumero = -10000;
+  var repetidor = 1;
+  for ( var c = 0; c < numero.length; c += 1){
+    if (numero[c] > maiorNumero){
+      maiorNumero = numero[c]
+    } else if (numero[c] == maiorNumero){
+      repetidor += 1;
+    }
+  }
+  return repetidor
 }
+var numeros = [1, 5, 7, 7, 7, 5, 6, 7, 6, 3, 5, 7];
+console.log(highestCount(numeros));
 
 // Desafio 7
 function catAndMouse() {
