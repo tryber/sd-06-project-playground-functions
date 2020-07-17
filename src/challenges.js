@@ -1,28 +1,38 @@
 // Desafio 1
+//JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
+//Considerando isso, crie uma função chamada compareTrue que, ao receber dois booleanos:
+//Retorne true se ambos os valores são verdadeiros;
+//Retorne false se um ou ambos os parâmetros forem falsos.
+//Faça a função utilizando o operador &&.
+
 function compareTrue(value1, value2) {
-  // seu código aqui
-  let result = false
-  if (value1 === true && value2 === true) {
-    result = true;
-  } else if (value1 === false && value2 === false) {
-    result = false;
-  }
-  return result;
+  return value1 && value2;
 }
 
-console.log(compareTrue (true, true));
+console.log(compareTrue (false, false));
 
+//Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
 
+//Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
+console.log(calcArea (5, 4));
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+//Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
+
+//Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
+
+function splitSentence(word) {
+  return  word.split(" ");
 }
+
+console.log(splitSentence("Hello World"));
+
 
 // Desafio 4
 function concatName() {
