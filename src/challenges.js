@@ -21,10 +21,10 @@ function splitSentence(string) {
   let stringArray = [];
 
   for (index in string){
-    if (string[index] !== " "){
+    if (string[index] != " "){
       word += string[index];
     }
-    else if (string[index] === " "){
+    else if (string[index] == " "){
       stringArray.push(word);
       word = "";
     }
