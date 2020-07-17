@@ -86,30 +86,23 @@ function fizzBuzz(array) {
   // seu código aqui
   // receber um array, passar por todos os numeros do array verificando se é divisivel
   // for (let i = 0; i < array.length; i += 1)
-  // Dependendo do resuktado trocar o numero pro string
+  // Dependendo do resuktado adicionar no novo array
   // Retornar o novo array
-//   let arrayFizzBuzz = [];
-//   for (index in array) {
-//     if (index % 3 === 0) {
-//       arrayFizzBuzz += 'fizz';
-//     } else if (index % 5 === 0) {
-//       arrayFizzBuzz += 'buzz';
-//     } else if (index % 3 === 0 && index % 5 === 0) {
-//       arrayFizzBuzz += 'fizzBuzz';
-//     } else {
-//       arrayFizzBuzz += 'bug!';
-//     }
-//   }
-//   return arrayFizzBuzz;
-// }
-
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
-// function divisor() {
-//   if (x % 3 === 0) {
-    
-//   }
+  let arrayFizzBuzz = [];
+  for (index in array) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      arrayFizzBuzz.push('fizzBuzz');
+    } else if (array[index] % 3 === 0) {
+      arrayFizzBuzz.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      arrayFizzBuzz.push('buzz');
+    } else {
+      arrayFizzBuzz.push('bug!');
+    }
+  }
+  return arrayFizzBuzz;
 }
+
 
 // Desafio 9
 function encode(string) {
