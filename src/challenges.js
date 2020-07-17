@@ -43,7 +43,7 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let distancia1;
   let distancia2;
   if(cat1 >= mouse){
@@ -97,11 +97,11 @@ function encode(string) {
     if(char in vogais) {
       array.push(vogais[char]);
     } else {
-      array.push([char])
+      array.push([char]);
     }
   }
-  let final = array.join('')
-  return final
+  let final = array.join('');
+  return final;
 }
 function decode(string) {
   const numeros = {
@@ -117,16 +117,25 @@ function decode(string) {
     if(char in numeros) {
       array.push(numeros[char]);
     } else {
-      array.push([char])
+      array.push([char]);
     }
   }
-  let final = array.join('')
-  return final
+  let final = array.join('');
+  return final;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let ordenado = array.sort();
+  let final = [];
+  for(i in ordenado){
+    final.push({"tech" : ordenado[i], "name" : name})
+  }
+  if(array = []){
+    return "Vazio!"
+  } else {
+    return final
+  }
 }
 
 // Desafio 11
