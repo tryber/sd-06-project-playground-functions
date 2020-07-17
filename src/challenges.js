@@ -118,7 +118,9 @@ function encode(palavras) {
     } else {
       verifica[i] = verifica[i];
     }
-    palavra = verifica;
+    for (let i in verifica) {
+      palavra.push(verifica[i]);
+    }
   }
   return palavra;
 }
