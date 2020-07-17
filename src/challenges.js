@@ -187,9 +187,9 @@ function techList(arrayTecnologias, name) {
     return saidaTec;
   }
 }
-let valor1 = ["python", "datacience", "ruby"];
+/* let valor1 = ["python", "datacience", "ruby"];
 let valor2 = "Clayton Miguel";
-console.log(techList(valor1, valor2));
+console.log(techList(valor1, valor2)); */
 
 
 // Desafio 11
