@@ -42,9 +42,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
     // seu código aqui
+    //saber qual é o maior
+    let maiorNumero = array[0];
+    let vezes = 1;
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] > maiorNumero) {
+            maiorNumero = array[i]
+            vezes = 1;
+        } else if (array[i] == maiorNumero) {
+            vezes += 1;
+        }
+    }
+    console.log("O número maior é " + maiorNumero + ", que se repete " + vezes + " vezes.");
 }
+highestCount([9, 9, 2, 1, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse() {
