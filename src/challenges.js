@@ -28,7 +28,8 @@ function concatName( a = ['Lucas', 'Anderson', 'Maria', 'Paulo'] ) {
 
 // Desafio 5
 function footballPoints( wins = 3, ties = 1) {
-  return (wins * 3) + (ties * 1)
+  points = wins * 3 +  ties * 1
+  return points
 }
 
 // Desafio 6
