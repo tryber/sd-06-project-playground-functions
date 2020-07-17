@@ -24,16 +24,11 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(arrayString) {
   // seu código aqui
-  let newString = '';
+  let first = arrayString[arrayString.length - 1];
+  let last = arrayString[0];
   let comma = ', ';
-  for (let index = arrayString.length - 1; index >= 0; index -= 1) {
-    if (index === 0) {
-      newString += arrayString[index];
-    } else {
-      newString += arrayString[index] + comma;
-    }
-  }
-  return newString;
+  let word = first + comma + last;
+  return word;
 }
 
 // Desafio 5
@@ -63,9 +58,9 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
   if ((mouse - cat1) > (mouse - cat2)) {
-    return cat1;
+    return 'cat1';
   }
-  return cat2;
+  return 'cat2';
 }
 
 // Desafio 8
