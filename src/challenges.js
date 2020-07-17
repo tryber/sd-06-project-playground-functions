@@ -1,7 +1,14 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(num1, num2) {
   // seu código aqui
+  
+  if (typeof (num1) && typeof (num2) === 'number') {
+    return true
+  } else {
+    return false
+  }
 }
+compareTrue(1, 2);
 
 // Desafio 2
 function calcArea() {
