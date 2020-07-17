@@ -1,78 +1,77 @@
 // Desafio 1
-let valor1, valor2;
+let valor1
+let valor2;
 function compareTrue(valor1, valor2) {
-  if( valor1 && valor2 === true){
+  if ( valor1 && valor2 === true){
     return true;
-  }else{
+  } else {
     return false;
   }
 }
-//console.log(compareTrue(valor1,valor2));
+// console.log(compareTrue(valor1,valor2));
 
 
 // Desafio 2
 let base;
 let altura;
-function calcArea(base,altura) {
-  let area = (base*altura)/2;
+function calcArea(base, altura) {
+  let area = (base * altura) / 2;
   return area
 }
-//console.log(calcArea(5, 10));
+// console.log(calcArea(5, 10));
 
 // Desafio 3
 function splitSentence(testaString) {
   //testaString = "Go Trybe"
-
 }
-
-
 
 // Desafio 4
-//let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName() {
-  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length -1]) + "," + arrayNomes[0];
+  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + "," + arrayNomes[0];
 }
-//console.log(concatName());
+// console.log(concatName());
 
 // Desafio 5
 function footballPoints(ties, wins) {
   let pontuacao = (ties * 1) + (wins * 3);
   return pontuacao;
 }
-//console.log(footballPoints(2,3));
+// console.log(footballPoints(2,3));
 
 
 // Desafio 6
 
 function highestCount() {
-  //seu código aqui
+  // seu código aqui
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(mouse - cat1);
   let distanciaCat2 = Math.abs(mouse - cat2);
-  if (distanciaCat1 > distanciaCat2){
+  if (distanciaCat1 > distanciaCat2) {
     return "cat2";
-  }else if (distanciaCat1 < distanciaCat2){
+  } else if (distanciaCat1 < distanciaCat2) {
     return "cat1";
-  }else{
+  } else {
     return "os gatos trombam e o rato foge";
   }
 }
 
 // Desafio 8
+let arrayNumeros=[];
 function fizzBuzz(arrayNumeros) {
   let newArrayNumeros=[];
-  for (let indice in arrayNumeros){
-    if ( arrayNumeros[i] % 3 === 0 && arrayNumeros[i] % 5 === 0){
-      newArrayNumeros[i] = "fizzBuzz";
-    }else if( arrayNumeros[i] % 3 === 0){
-      newArrayNumeros[i] = "fizz";
-    }else if ( arrayNumeros[i] % 5 === 0){
-      newArrayNumeros[i] = "buzz";
-    }else{
-      newArrayNumeros[i] = "bug!";
+  for (let indice in arrayNumeros){ 
+    if ( arrayNumeros[indice] % 3 === 0 && arrayNumeros[indice] % 5 === 0) {
+      newArrayNumeros[indice] = "fizzBuzz";
+    } else if( arrayNumeros[indice] % 3 === 0) {
+      newArrayNumeros[indice] = "fizz";
+    } else if ( arrayNumeros[i] % 5 === 0) {
+      newArrayNumeros[indice] = "buzz";
+    } else {
+      newArrayNumeros[indice] = "bug!";
     }
   }
   return newArrayNumeros;
