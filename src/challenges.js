@@ -25,8 +25,12 @@ function splitSentence(string) {
 function concatName(array) {
   // seu código aqui
   let string = '';
-  for (let i = array.length - 1; i >= 0; i -= array.length - 1) {
-    string.push(array[i])
+  for (let i = array.length - 1; i >= array.length - 1; i -= 1) {
+    string += array[i];
+  }
+  string += ", "
+  for (let n = 0; n<=0; n += 1) {
+    string += array[n];
   }
   return string
 }
