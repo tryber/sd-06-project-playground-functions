@@ -18,14 +18,15 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName(array1) {
-  let concatenated = array1.join(', ');
-  return concatenated;
+function concatName(list) {
+  let string = list[list.length - 1]+", "+list[0];
+  return string
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  totalScore = (wins *3) + ties;
+  return totalScore;
 }
 
 // Desafio 6
