@@ -23,9 +23,12 @@ function splitSentence(str){
   console.log("exercicio 3: " + splitSentence("Eu sou Tryber"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName (nomescompleto) {
+  let nomes = nomescompleto[nomescompleto.length-1] +', '+ nomescompleto[0]
+  return nomes
 }
+  console.log("Exercicio 4: " + concatName(['veruska','lucas','lara']));
+   
 
 // Desafio 5
 function footballPoints() {
