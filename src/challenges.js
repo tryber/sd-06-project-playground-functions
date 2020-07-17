@@ -83,7 +83,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let string2 = ' ';
+  let string2 = '';
   for (let indice in string) {
     if (string[indice] === 'a') {
       string2 += '1';
@@ -101,24 +101,25 @@ function encode(string) {
   }
   return string2;
 }
-function decode(string) {
-  let string2 = ' ';
-  for (let indice in string) {
-    if (string[indice] === '1') {
-      string2 += 'a';
-    } else if (string[indice] === '2') {
-      string2 += 'e';
-    } else if (string[indice] === '3') {
-      string2 += 'i';
-    } else if (string[indice] === '4') {
-      string2 += 'o';
-    } else if (string[indice] === '5') {
-      string2 += 'u';
+
+function decode(codestring) {
+  let newString = '';
+  for (let i in codestring) {
+    if (codestring[i] === '1') {
+      newString += 'a';
+    } else if (codestring[i] === '2') {
+      newString += 'e';
+    } else if (codestring[i] === '3') {
+      newString += 'i';
+    } else if (codestring[i] === '4') {
+      newString += 'o';
+    } else if (codestring[i] === '5') {
+      newString += 'u';
     } else {
-      string2 += string[indice];
+      newString += codestring[i];
     }
   }
-  return string2;
+  return newString;
 }
 
 // Desafio 10
@@ -149,10 +150,19 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < (lineB + lineC) && lineA > Math.abs((lineB - lineC))) {
+    return true;
+  }
+  if (lineB < (lineA + lineC) && lineB > Math.abs((lineA - lineC))) {
+    return true;
+  }
+  if (lineC < (lineB + lineA) && lineC > Math.abs((lineB - lineA))) {
+    return true;
+  }
+  return false;
 }
-
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
