@@ -9,8 +9,9 @@ function compareTrue(v1, v2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base * height) / 2
 }
 
 // Desafio 3
@@ -54,11 +55,19 @@ function highestCount(array) {
   return times;
 }
 
-
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+
+  if ((cat1 - mouse) === (cat2 - mouse)) {
+    return "os gatos trombam e o rato foge"
+  } else if ((cat1 - mouse) < (cat2 - mouse)) {
+    return "cat1"
+  } else ((cat1 - mouse) > (cat2 - mouse)); {
+    return "cat2"
+  }
 }
+//incompleto!!!
 
 // Desafio 8
 function fizzBuzz(array) {
