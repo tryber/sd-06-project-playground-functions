@@ -56,7 +56,7 @@ function fizzBuzz(n) {
   // seu código aqui
   for(let i = 1 ; i <= numero ; i++)
   
-  if(i % 3==0){s
+  if(i % 3==0){
     numero = "fizz"
   } else if (i % 5==0) {
     numero = "buzz"
@@ -64,9 +64,8 @@ function fizzBuzz(n) {
     numero = "fizzbuzz"
   } else {
     numero = i
-
-  return numero
   }
+  return numero
 }
 // Desafio 9
 function encode() {
