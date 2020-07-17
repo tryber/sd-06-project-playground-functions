@@ -41,19 +41,16 @@ function highestCount(arrTeste) {
   let nTeste = 0;
   let contador = 0;
   let contRepetido = 0;
-  let nMaisRepetido;
 
   for (let i in arrTeste) {
       nTeste = arrTeste[i]
       for (let indice in arrTeste) {
           if (nTeste == arrTeste[indice]) {
-              contador += 1;
-              
+              contador += 1;  
           }
       }
       if (contador > contRepetido) {
           contRepetido = contador;
-          nMaisRepetido = arrTeste[i];
       }
       contador = 0;
   }
@@ -61,8 +58,19 @@ function highestCount(arrTeste) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaC1 = mouse - cat1;
+  let distanciaC2 = mouse - cat2;
+  let msg;
+
+  if (distanciaC1 > distanciaC2) {
+    msg = "cat2";
+  } else if (distanciaC2 > distanciaC1) {
+    msg = "cat1";
+  } else {
+    msg = "os gatos trombam e o rato foge";
+  }
+  return msg;
 }
 
 // Desafio 8
