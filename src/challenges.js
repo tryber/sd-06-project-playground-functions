@@ -169,7 +169,6 @@ function condicional(array) {
   }
     if (count > 3) {
       check = true;
-      break;
     } else {
       count = 0;
     }
