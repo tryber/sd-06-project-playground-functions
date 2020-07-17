@@ -59,10 +59,11 @@ console.log(splitSentence(uhum))
 // Desafio 4
 function concatName(arrayStrings) {
 
-  let arrayStringsInv = []
+  let arrayStringsInv = ""
 
-  arrayStringsInv[0] = arrayStrings[arrayStrings.length - 1]
-  arrayStringsInv[1] = arrayStrings[0]
+  arrayStringsInv = arrayStringsInv + arrayStrings[arrayStrings.length - 1]
+  arrayStringsInv = arrayStringsInv + ", "
+  arrayStringsInv = arrayStringsInv + arrayStrings[0]
 
   return arrayStringsInv
 
@@ -79,7 +80,7 @@ function footballPoints(wins, ties) {
   points += ties * 1
 
   return points
-  
+
 }
 
 // Desafio 6
