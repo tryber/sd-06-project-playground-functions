@@ -52,21 +52,24 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  for(let i = 0; i < numbers.length; i++) {
-      if(numbers[i] % 3 === 0 & numbers[i] % 5 === 0) {
-          console.log("fizzbuzz")
-      } else if (numbers[i] % 3 === 0) {
-          console.log ("fizz")
-      } else if (numbers[i] % 5 === 0) {
-          console.log("buzz")
-      } else {
-          console.log("bug")
-      }
+  let result = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 3 === 0 & numbers[i] % 5 === 0) {
+      result.push("fizzBuzz!");
+    } else if (numbers[i] % 3 === 0) {
+      result.push("fizz");
+    } else if (numbers[i] % 5 === 0) {
+      result.push("buzz");
+    } else
+      result.push("bug!");
+
   }
+  return result
+
 }
 
 
-fizzBuzz([2, 15, 7, 9, 45])
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
