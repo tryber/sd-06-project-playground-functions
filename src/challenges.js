@@ -19,8 +19,10 @@ function splitSentence(nomeString) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(ultimoItemEPrimeiroItem) {
+  let ultimoItem = ultimoItemEPrimeiroItem.length - 1;
+  let primeiroItem = ultimoItemEPrimeiroItem.concat[0];
+  return ultimoItem[0] + " " + primeiroItem;
 }
 
 // Desafio 5
