@@ -52,7 +52,7 @@ function highestCount(arrayOfNumbers) {
     }
   }
 
-  for (let i = 0; i < arrayOfNumbers.length; i+= 1) {
+  for (let i = 0; i < arrayOfNumbers.length; i += 1) {
     if (arrayOfNumbers[i] === highestNumber) {
       highestNumberCount += 1;
     }
@@ -85,7 +85,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   } else if (closerToMouse(cat1, mouse) < closerToMouse(cat2, mouse)) {
     return 'cat1';
-  } 
+  }
 
   return 'cat2';
 }
@@ -156,16 +156,21 @@ function decode(string) {
 
 // Desafio 10
 function techList(arrayOfTechs, name) {
-  let person = {};
+  let arrayOfObjects = [];
 
-  for(let tech in arrayOfTechs) {
+  for (let tech in arrayOfTechs) {
+    let person = {};
+
     person.tech = arrayOfTechs[tech];
+    person.name = name;
+
+    arrayOfObjects.push(person);
   }
 
-  person.name = name;
-
-  return person;
+  return arrayOfObjects;
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
