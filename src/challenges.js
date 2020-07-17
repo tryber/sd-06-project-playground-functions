@@ -104,7 +104,7 @@ function fizzBuzz(numeros) {
 function encode(palavras) {
   // seu código aqui
   let verifica = palavras.split('');
-  let trocado = [];
+  let letraTrocada = [];
   for (let i in palavras) {
     if (verifica[i] == 'a') {
       verifica[i] = 1;
@@ -121,12 +121,12 @@ function encode(palavras) {
     }
     trocado = verifica.split(" ");
   }
-  return trocado;
+  return letraTrocada;
 }
 function decode(palavras) {
   // seu código aqui
   let verifica = palavras.split('');
-  let trocado = [];
+  let numeroTrocado = [];
   for (let i in palavras) {
     if (verifica[i] == '1') {
       verifica[i] = 'a';
@@ -143,7 +143,7 @@ function decode(palavras) {
     }
     trocado = verifica.split(" ");
   }
-  return trocado;
+  return numeroTrocado;
 }
 
 // Desafio 10
