@@ -22,13 +22,14 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  let newString = arrayOfStrings[arrayOfStrings.length - 1] + ", " + arrayOfStrings[0];
+  let newString = `${arrayOfStrings[arrayOfStrings.length - 1]}, ${arrayOfStrings[0]}`;
   return newString;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   totalOfPoints = wins * 3 + ties;
+  return totalOfPoints;
 }
 
 // Desafio 6
