@@ -101,23 +101,23 @@ console.log(highestCount(numbers))
 
 function catAndMouse(param1,param2,param3) {
 
-  let dist1=gat1-rat;
-  let dist2=gat2-rat;
+  let dist1=Math.abs(gat1-rat);
+  let dist2=Math.abs(gat2-rat);
 
-  if (Math.abs(dist1>dist2)){
+  if (dist1>dist2){
     return "gato1 posicao:" + gat1
   }
-  else if(Math.abs(dist1<dist2)){
+  else if(dist1<dist2){
     return "gato2 posicao:" + gat2
   }
-  else if (Math.abs(dist1=dist2)){
+  else {
     return "os gatos trombam e o rato foge"
   }
 }
 
 let rat=10;
 let gat1=3;
-let gat2=2;
+let gat2=3;
 console.log(catAndMouse(rat,gat1,gat2))
 
 
