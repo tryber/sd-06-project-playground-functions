@@ -1,6 +1,8 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(boolean1, boolean2) {
+  if ((boolean1) && (boolean2)){
+    return true;
+  }
 }
 
 // Desafio 2
@@ -34,20 +36,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz([]) {
-  for (let index = 0; index < [].length; index += 1){
-    if (([][index] % 3 == 0) && ([][index] % 5 == 0)){
+function fizzBuzz() {
+/*  for (let index = 0; index < args.length; index += 1){
+    if ((args[index] % 3 == 0) && (args[index] % 5 == 0)){
       return console.log("fizzBuzz");
-    } else if(([][index] % 3 != 0) && ([][index] % 5 != 0)){
+    } else if((args[index] % 3 != 0) && (args[index] % 5 != 0)){
       return console.log("bug!");
-    } else if ([][index] % 3 == 0){
+    } else if (args[index] % 3 == 0){
       return console.log("fizz");
-    } else if ([][index] % 5 == 0){
+    } else if (args[index] % 5 == 0){
       return console.log("buzz");
     } 
   }
 }
-
+*/
 // Desafio 9
 function encode() {
   // seu código aqui
