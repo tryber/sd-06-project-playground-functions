@@ -36,7 +36,7 @@ function concatName(array) {
     else if(i==0){
     first=array[i]
     }
-  }return lastOne+","+first
+  }return lastOne+", "+first
   
 }
 
