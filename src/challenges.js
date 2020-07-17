@@ -34,12 +34,21 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
+  let hNumber = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > hNumber){
-      hNumber = array[index]
+    hNumber = array[index]
     } 
   }
+  let aux = 0;
+  for (const key in array) {
+    if (hNumber === array[key]) {
+    aux += 1 
+    }
+  }
+  return aux;
 }
+
 
 // Desafio 7
 function catAndMouse() {
