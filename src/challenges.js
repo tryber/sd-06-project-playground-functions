@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  result = Boolean;
+  let result = Boolean;
   if (value1 === true && value2 === true) {
     result = true;
   } else {
@@ -21,8 +21,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayOfStrings) {
+  let newString = arrayOfStrings[arrayOfStrings.length - 1] + ", " + arrayOfStrings[0];
+  return newString;
 }
 
 // Desafio 5
