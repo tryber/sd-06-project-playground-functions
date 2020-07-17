@@ -122,12 +122,15 @@ function decode(string) {
 
 // Desafio 10
 function techList(tech, name) {
-  tech.sort();
-  let obj = [];
-  for (i in tech) {
-    obj.push({"name": name, "tech": tech[i]});
+  if (obj.length > 0) {
+    tech.sort();
+    let obj = [];
+    for (i in tech) {
+      obj.push({"name": name, "tech": tech[i]});
+    }
+    return obj;
   }
-  return obj;
+  return "Vazio!"
 }
 
 // Desafio 11
