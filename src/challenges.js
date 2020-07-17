@@ -82,35 +82,48 @@ function encode(message) {
   let letters = message.split("");
   let encodedMessage = "";
   for (let i in letters) {
-    if (letters[i] === "a") {
-      letters [i] = "1";
-    } else if (letters[i] === "e") {
-      letters [i] = "2";
-    } else if (letters[i] === "i") {
-      letters [i] = "3";
-    } else if (letters[i] === "o") {
-      letters [i] = "4";
-    } else if (letters[i] === "u") {
-      letters [i] = "5";
+    switch (letters[i]) {
+      case "a":
+        letters [i] = "1";
+        break;
+      case "e":
+        letters [i] = "2";
+        break;
+      case "i":
+        letters [i] = "3";
+        break;
+      case "o":
+        letters [i] = "4";
+        break;
+      case "u":
+        letters [i] = "5";
+        break;
     }
-  encodedMessage += letters[i];
+    encodedMessage += letters[i];
   }
   return encodedMessage;
 }
+
 function decode(m2ss1g2) {
   let l2tt2rs = m2ss1g2.split("");
   let decodedMessage = "";
   for (let i in l2tt2rs) {
-    if (l2tt2rs[i] === "1") {
-      l2tt2rs [i] = "a";
-    } else if (l2tt2rs[i] === "2") {
-      l2tt2rs [i] = "e";
-    } else if (l2tt2rs[i] === "3") {
-      l2tt2rs [i] = "i";
-    } else if (l2tt2rs[i] === "4") {
-      l2tt2rs [i] = "o";
-    } else if (l2tt2rs[i] === "5") {
-      l2tt2rs [i] = "u";
+    switch (l2tt2rs[i]) {
+      case "1":
+        l2tt2rs [i] = "a";
+        break;
+      case "2":
+        l2tt2rs [i] = "e";
+        break;
+      case "3":
+        l2tt2rs [i] = "i";
+        break;
+      case "4":
+        l2tt2rs [i] = "o";
+        break;
+      case "5":
+        l2tt2rs [i] = "u";
+        break;
     }
   decodedMessage += l2tt2rs[i];
   }
