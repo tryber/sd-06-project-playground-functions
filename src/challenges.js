@@ -1,11 +1,10 @@
 // Desafio 1 - testando um commit
 
 function compareTrue( a, b) {
-  if ((a === true) &&  (b === true)) {
-     return  true;
-  } else {
+  if (!(a === true) && !(b === true)) {
      return  false;
   }
+     return  true;
 }
 let a = false;
 let b = true;
@@ -16,22 +15,18 @@ console.log(resultado);
 // Área do triângulo
 
 function calcArea(base, altura) {
-   return ((base * altura) / 2);
+  return ((base * altura) / 2);
 }
- area = calcArea(15, 4);
- console.log(area);
+let area = calcArea(15, 4);
+console.log(area);
 
-// Desafio 3
-/* Dividindo a frase
-Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe']. */
-
-function splitSentence() {
-   let verifica = nome.split(" ");
-   return (verifica);
+// Desafio 3 - Go Trybe
+function splitSentence(nome) {
+  let verifica = nome.split(' ');
+  return (verifica);
 }
- let nome = "Go Trybe";
- let resultSplit = splitSentence(nome);
- console.log(resultSplit);
+let resultSplit = splitSentence('Go Trybe');
+console.log(resultSplit);
 
 // Desafio 4
 function concatName() {
