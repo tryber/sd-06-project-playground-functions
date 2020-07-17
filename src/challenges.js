@@ -20,12 +20,12 @@ console.log(calcArea(3, 4))
 
 // Desafio 3
 function splitSentence(string) {
-  let palavraSeparada = string.split(" ");
+  let palavraSeparada = string.split(' ');
   return palavraSeparada
   // seu código aqui
 }
 
-console.log(splitSentence("go Trybe"))
+console.log(splitSentence('go Trybe'))
 
 // Desafio 4
 function concatName() {
