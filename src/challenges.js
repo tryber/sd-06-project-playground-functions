@@ -28,22 +28,35 @@ function highestCount(array) {
   let maior = array[0];
   let count = 0;
 
-  for (i=0; i<array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
 
-    if (array[i] === maior)
-      count++;
+    if (array[i] === maior) {
+      count += 1;
     }
 
-    if(array[i] > maior) {
-      count = 0;
+    if (array[i] > maior) {
+      maior = array[i]
+      count = 1;
+    }    
   }
 
   return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  distancia1 = cat1 - mouse;
+  distancia2 = cat2 - mouse;;
+
+  if (distancia1 > distancia2) {
+    return "cat2"
+  }
+  else if (distancia2 > distancia1) {
+    return "cat1"
+  }
+  
+  return "os gatos trombam e o rato foge" 
+}
 }
 
 // Desafio 8
