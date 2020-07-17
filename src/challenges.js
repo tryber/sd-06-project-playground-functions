@@ -20,19 +20,31 @@ function concatName(strings) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + (ties * 1);
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount(array) {
+  resultado = 0;
   for (let i = 0; i < array.length; i += 1) {
-
+    if (array[i] === array[i + 1]) {
+      resultado += 1;
+    }
   }
+  return resultado;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = cat1 - mouse;
+  let distanciaCat2 = cat2 - mouse;
+  if (distanciaCat1 < distanciaCat2) {
+    return cat1;
+  } else if (distanciaCat2 < distanciaCat1) {
+    return cat2;
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
