@@ -9,27 +9,38 @@ function compareTrue(a, b) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return(base * height / 2);
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(sentence) {
-  return(sentence.split(' '));
+  return (sentence.split(' '));
 }
 
 // Desafio 4
 function concatName(words) {
-  return(words[0] + ', ' + words[words.length])
+  return (words[0] + ', ' + words[words.length])
 }
 
 // Desafio 5
 function footballPoints(wins, tries) {
-  return(wins * 3 + tries)
+  return ((wins * 3) + tries)
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(nbrs) {
+  let max = nbrs[0];
+  let count = 0;
+  for (let index = 0; index < nbrs.length; index += 1) {
+    if (nbrs[index] > max) {
+      max = nbrs[index];
+      count = 1;
+    }
+    else if (nbrs[index] == max) {
+      count += 1;
+    }
+  }
+  return (count)
 }
 
 // Desafio 7
