@@ -11,10 +11,8 @@ function compareTrue(boo1, boo2) {
       teste = false;
       return teste;
     }
-  }
-  else {
-    return 'erro: parâmetros devem ser true ou false.';
-  }
+  } 
+  return 'erro: parâmetros devem ser true ou false.';
 }
 
 // Desafio 2
@@ -25,9 +23,7 @@ function calcArea(base, alt) {
     areaDoTriangulo = (base * alt) / 2;
     return areaDoTriangulo;
   }
-  else {
-    return 'erro: insira dois números positivos.';
-  }
+  return 'erro: insira dois números positivos.';
 }
 
 // Desafio 3
@@ -35,12 +31,10 @@ function splitSentence(string) {
   // seu código aqui
   let sentenceArray = [];
   if (typeof string === 'string') {
-    sentenceArray = string.split(" ");
+    sentenceArray = string.split(' ');
     return sentenceArray;
   }
-  else {
-    return 'erro: parâmetro deve ser um texto.';
-  }
+  return 'erro: parâmetro deve ser um texto.';
 }
 
 // Desafio 4
@@ -58,12 +52,10 @@ function footballPoints(win, ties) {
   let points = 0;
   if (Number.isInteger(win) && Number.isInteger(ties) && win >= 0 && ties >= 0) {
     points += (win * 3);
-    points += (ties); 
-    return points; 
+    points += (ties);
+    return points;
   }
-  else {
-    return 'only positive integers allowed.';
-  }
+  return 'only positive integers allowed.';
 }
 
 // Desafio 6
