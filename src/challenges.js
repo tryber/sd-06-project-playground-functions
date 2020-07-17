@@ -28,8 +28,8 @@ function concatName(array) {
   for (let i = array.length - 1; i >= array.length - 1; i -= 1) {
     string += array[i];
   }
-  string += ", "
-  for (let n = 0; n<=0; n += 1) {
+  string += ', ';
+  for (let n = 0; n <= 0; n += 1) {
     string += array[n];
   }
   return string
@@ -53,7 +53,7 @@ function highestCount(numeros) {
       maiorNumero = numeros[n]
     }
   }
-  for (let n = 0; n < numeros.length; n+=1) {
+  for (let n = 0; n < numeros.length; n += 1) {
     if (maiorNumero === numeros[n]) {
       contagem += 1;
     }
@@ -62,8 +62,18 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(positionMouse, positionCat1, positionCat2) {
   // seu código aqui
+  let distanciaMouseCat1 = positionMouse - positionCat1;
+  let distanciaMouseCat2 = positionMouse - positionCat2
+  let mensagem = ''
+  if (distanciaMouseCat1 < distanciaMouseCat2) {
+    mensagem = 'cat1';
+  } else if (distanciaMouseCat2 < distanciaMouseCat1) {
+    mensagem = 'cat2';
+  } else {
+    mensagem = "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
