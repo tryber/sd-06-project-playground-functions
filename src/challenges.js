@@ -1,33 +1,33 @@
 // Desafio 1
 function compareTrue(a = 1, b = 1) {
   if (a && b == 1){
-    b = true
+    return true
   }
   else 
-    b = false
+    return false
 }
 
 // Desafio 2
 function calcArea(base = 10, height = 8) {
-  b = (base * height) / 2
+  return (base * height) / 2
 }
 
 // Desafio 3
 function splitSentence(a = 'go Trybe') {
   a = a.split(' ');
-  b = a
+  return a
 }
 
 // Desafio 4
 function concatName( a = ['Lucas', 'Anderson', 'Maria', 'Paulo'] ) {
   last = a [a.length -1] 
-  b = (last + ', ' + a[0])
+  return (last + ', ' + a[0])
 }
 
 // Desafio 5
 function footballPoints( wins = 3, ties = 1) {
   points = wins * 3 +  ties * 1
-  b = points
+  return points
 }
 
 // Desafio 6
@@ -41,26 +41,26 @@ function highestCount(a = [9, 1, 2, 3, 9, 5, 7]) {
   }
   for (x in a){
     if ( a[x] == i){
-      contHigher ++
+      contHigher ++;
     }
   }
-  b = contHigher
+  return contHigher;
 }
 
 // Desafio 7
 function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
-  cat1 = Math.abs(cat1 - mouse)
-  cat2 = Math.abs(cat2 - mouse)
+  cat1 = Math.abs(cat1 - mouse);
+  cat2 = Math.abs(cat2 - mouse);
 
   if ( cat1 == cat2 ){
-    b = 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
   else
     if ( cat1 < cat2){
-      b = 'cat1'
+      return 'cat1';
     }
     else
-      b = 'cat2'
+      return 'cat2';
 }
 
 // Desafio 8
