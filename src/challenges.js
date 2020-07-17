@@ -133,8 +133,15 @@ function decode(encodedString) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techlist, name) {
+  const objectList = [];
+
+  for (let i = 0; i < techlist.length; i += 1) {
+    const tech = techlist[i];
+    objectList.push({tech, name});
+  }
+
+  return objectList;
 }
 
 // Desafio 11
