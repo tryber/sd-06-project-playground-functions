@@ -9,9 +9,11 @@ function compareTrue(q1x, q1y) {
   }
 }
 
+let base = 2;
+let height = 4;
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base*height)/2;
 }
 
 // Desafio 3
