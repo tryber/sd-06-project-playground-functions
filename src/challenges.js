@@ -1,7 +1,11 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
-  return Boolean(10 > 9)
+    idade=18
+    salario=1000
+    if(idade>=18 && salario>=500){
+      return
+    }
 }
 
 // Desafio 2
