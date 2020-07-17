@@ -85,7 +85,6 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
 return b
 }
 
-
 // Desafio 9
 function encode() {
 }
