@@ -41,7 +41,7 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if ((i % 3 == 0) && (i % 5 == 0)) {
     console.log("fizzBuzz");
     } else if (i % 3 == 0) {
@@ -52,7 +52,6 @@ function fizzBuzz(array) {
     console.log("bug!");   
     }
   }
-  console.log(fizzBuzz(array));
 }
 
 // Desafio 9
