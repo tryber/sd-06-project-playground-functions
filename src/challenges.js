@@ -22,7 +22,7 @@ function splitSentence(frase) {
 // console.log(splitSentence('go trybe'));
 
 // Desafio 4
-let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+let array = ['foguete', 'não', 'tem', 'ré'];
 function concatName() {
   let first = array[0];
   let last = array[array.length -1];
@@ -39,8 +39,8 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(2, 3));
 
 // Desafio 6
-let numbers = [9, 1, 9, 3, 9, 5, 7];
-// console.log(highestCount(numbers));
+let numbers = [0, 4, 4, 4, 9, 2, 1];
+console.log(highestCount(numbers));
 
 function highestCount() {
   let maiorNum = 0;
@@ -54,9 +54,8 @@ function highestCount() {
   }
   for (let i = 0; i < numbers.length; i += 1) {
     if (maiorNum === numbers[i]) {
-      result = result + 1;
+      result += 1;
     }
-   
   }
   return result;
 }
@@ -74,7 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return 'cat2';
 }
-// console.log(catAndMouse(4, 4, 2));
+console.log(catAndMouse(4, 1, 2));
 
 // Desafio 8
 function fizzBuzz() {
