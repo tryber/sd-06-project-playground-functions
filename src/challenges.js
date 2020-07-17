@@ -1,19 +1,20 @@
 // Desafio 1
-function compareTrue(num1, num2) {
-  // seu código aqui
-  
-  if (typeof (num1) && typeof (num2) === 'number') {
+function compareTrue(bol1, bol2) {
+   if (bol1 && bol2 === true) {
     return true
   } else {
     return false
   }
 }
-compareTrue(1, 2);
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+let resultado = 0;
+function calcArea(base, height) {
+  resultado = (base * height)/2
+  return resultado
 }
+calcArea(4,5)
+console.log(resultado)
 
 // Desafio 3
 function splitSentence() {
