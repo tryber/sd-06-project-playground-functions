@@ -19,13 +19,13 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(nomeCompleto) {
-  let nome = nomeCompleto[0] + ' ' + nomeCompleto[nomeCompleto.length-1];
+  let nome = nomeCompleto[0] + ', ' + nomeCompleto[nomeCompleto.length-1];
   return nome;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins*3)+ties;
 }
 
 // Desafio 6
@@ -79,7 +79,7 @@ console.log('Exercício 3: ' + splitSentence('go Trybe'));
 
 console.log('Exercício 4: ' + concatName(['Vagner','Pereira','de','Sousa']));
 
-console.log('Exercício 5: ' );
+console.log('Exercício 5: ' + footballPoints(8,4));
 
 console.log('Exercício 6: ' );
 
