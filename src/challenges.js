@@ -48,12 +48,12 @@ function highestCount(arrayNumero) {
   let maior = 0;
   let cont = 0;
 
-  for (index in arrayNumero) {    
+  for (index in arrayNumero) {
     if (arrayNumero[index] > maior) {
       maior = arrayNumero[index];
     }
   }
-  
+
   for (index in arrayNumero) {
     if (arrayNumero[index] === maior) {
       cont += 1;
@@ -62,11 +62,15 @@ function highestCount(arrayNumero) {
   return cont;
 }
 
-console.log(highestCount([9, 2, 7, 6, 9]));
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((cat1 - mouse) < (cat2 - mouse)) {
+    return 'cat1';
+  } else if ((cat1 - mouse) > (cat2 - mouse)) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
