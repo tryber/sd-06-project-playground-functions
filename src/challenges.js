@@ -1,5 +1,11 @@
 // Desafio 1 o
-function compareTrue() {
+function compareTrue(a, b) {
+  if(a === true && b === true){
+    return(true)
+  }
+  else {
+    return(false)
+  }
   // seu código aqui
 }
 
