@@ -63,7 +63,7 @@ function triangleCheck() {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+  //seu código aqui
 }
 
 
