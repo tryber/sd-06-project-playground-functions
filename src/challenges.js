@@ -2,15 +2,16 @@
 function compareTrue(valorUm, ValorDois) {
   if (valorUm === true && ValorDois === true) {
     return true;
-  } else {
-    return false;
   }
-} //console.log(compareTrue(true,true)); - -teste
-// Desafio 2
-function calcArea() {
-  // seu código aqui
+  return false;
 }
-
+//console.log(compareTrue(true, true)); - - teste
+// Desafio 2
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
+}
+console.log(calcArea(5, 4)); - - teste
 // Desafio 3
 function splitSentence() {
   // seu código aqui
