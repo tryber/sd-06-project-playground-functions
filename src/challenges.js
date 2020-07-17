@@ -82,11 +82,11 @@ function catAndMouse(mouse, cat1, cat2) {
     if (catpos1 < catpos2) {
         // cat1 mais perto do rato
         console.log("Cat1 pegou o rato!");
-        return "Cat1";
+        return "cat1";
     } else if (catpos2 < catpos1) {
         // cat2 mais perto
         console.log("Cat2 pegou o rato!");
-        return "Cat2";
+        return "cat2";
     } else {
         // mesma distância
         console.log("os gatos trombam e o rato foge");
@@ -98,23 +98,25 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
     // seu código aqui
+    let resposta = [];
     for (let i = 0; i < array.length; i++) {
         if (array[i] % 3 === 0) {
             //é divisível ṕor 3
             if (array[i] % 5 === 0) {
                 //é divisível pelos dois
-                console.log("fizzBuzz");
+                resposta[i] = "fizzBuzz";
             } else {
-                console.log("fizz");
+                resposta[i] = "fizz";
             }
         } else if (array[i] % 5 === 0) {
             //é divisível por 5
-            console.log("buzz");
+            resposta[i] = "buzz";
         } else {
             // não é divisível por nenhum deles
-            console.log("bug!");
+            resposta[i] = "bug!";
         }
     }
+    return resposta;
 }
 //fizzBuzz([2, 15, 7, 9, 45]);
 
@@ -185,19 +187,23 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
-    //sorting
-    let sortedArray = array.sort();
+    if (array.length < 1) {
+        console.log("Vazio!");
+    } else {
+        //sorting
+        let sortedArray = array.sort();
 
-    // seu código aqui
-    let objects = [];
-    for (let i = 0; i < sortedArray.length; i++) {
-        objects[i] = {
-            tech: sortedArray[i],
-            nome: name,
+        // seu código aqui
+        let objects = [];
+        for (let i = 0; i < sortedArray.length; i++) {
+            objects[i] = {
+                tech: sortedArray[i],
+                name: name,
+            }
         }
+        console.log(objects);
+        return objects;
     }
-    console.log(objects);
-    return objects;
 }
 //techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Ricardo");
 
