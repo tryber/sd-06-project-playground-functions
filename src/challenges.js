@@ -132,7 +132,7 @@ function encode(word_2) {
 }
 
 
-function decode() {
+function decode(word_2) {
   let aux="";
   let cont=0;
   let pala="";
