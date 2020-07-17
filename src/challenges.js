@@ -40,12 +40,28 @@ function splitSentence(string) {
   }
   return array;
 }
-console.log(splitSentence("trybe be aleluia"));
+console.log(splitSentence("go trybe"));
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let string = "";
+  let ending = "";
+  let begin = "";
+  for(let i in array){
+    if(i==0){
+      ending = array[i];
+    }else if(i==array.length-1){
+      begin = array[i];
+    }
+  }
+  string = begin;
+  string += ", "+ending;
+  return string;
+
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
