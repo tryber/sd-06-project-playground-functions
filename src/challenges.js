@@ -24,7 +24,7 @@ function calcArea(base, height) {
 
 
 // --------------- Desafio 3
-let frase = 'go Trybe';
+// let frase = 'go Trybe';
 function splitSentence(myText) {
   let word = '';
   let fraseSeparada = [];
@@ -40,33 +40,33 @@ function splitSentence(myText) {
   fraseSeparada.push(word);
   return fraseSeparada;
 }
-console.log(splitSentence(frase));
+// console.log(splitSentence(frase));
 
 
 // ---------------- Desafio 4
-let name = ['Ricardo', 'Alexandre', 'de', 'Souza', 'Ribeiro']
+// let name = ['Ricardo', 'Alexandre', 'de', 'Souza', 'Ribeiro']
 function concatName(myName) {
   let nameConcat = myName[myName.length - 1] + ', ' + myName[0]
   return nameConcat
 }
-console.log(concatName(name));
+// console.log(concatName(name));
 
 
 // --------------- Desafio 5
-let win = 10;
-let tie = 7;
+// let win = 10;
+// let tie = 7;
 function footballPoints(wins, ties) {
   let points = 0;
   points = (wins * 3) + (ties * 1);
   return points;
 }
-console.log("Total de pontos: " + footballPoints(win, tie));
+// console.log("Total de pontos: " + footballPoints(win, tie));
 
 
 // --------------- Desafio 6
-let arr = [9, 1, 2, 3, 9, 5, 7, 3, 1, 3];
+// let arr = [9, 1, 2, 3, 9, 5, 7, 3, 1, 3];
 function highestCount(myArray) {
-  let contMaior = 0;
+  let contMaior = 1;
   for (let i = 0; i < myArray.length; i += 1) {
     let contAtual = 1;
     for (let x = 0; x < myArray.length; x += 1){
@@ -80,12 +80,25 @@ function highestCount(myArray) {
   }
   return contMaior;
 }
-console.log("Maior quantidade de vezes: " + highestCount(arr));
+// console.log("Maior quantidade de vezes: " + highestCount(arr));
+
 
 // ---------- Desafio 7
-function catAndMouse() {
-
+// let c1 = 4;
+// let c2 = 8;
+// let mo = 6;
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
+  if (distanciaCat1 > distanciaCat2) {
+    return cat2;
+  } else if (distanciaCat1 < distanciaCat2) {
+    return cat1;
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
+// console.log(catAndMouse(mo, c1, c2));
 
 // Desafio 8
 function fizzBuzz() {
