@@ -1,9 +1,14 @@
 // Desafio 1
-function compareTrue(value1, value2, value3) {
-
+function compareTrue(value1, value2) {
+    if (value1 == value2 && value1 === value2) {
+        console.log(value1 === value2)
+    } else {
+        console.log(value1 === value2)
+    }
 }
+compareTrue(2, 2)
 
-// Desafio 2
+/*// Desafio 2
 function calcArea() {
     // seu código aqui
 }
@@ -83,4 +88,4 @@ module.exports = {
     hydrate,
     splitSentence,
     triangleCheck,
-}
+}*/
