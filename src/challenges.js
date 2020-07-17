@@ -97,20 +97,46 @@ function fizzBuzz(numbers) {
   }
   return newArray;
 }
-let numbers = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(numbers)); 
+
+console.log(fizzBuzz([2, 15, 7, 9, 45])); 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+ let newString = string;
+  for (let index = 0; index < newString.length; index += 1) {
+    if (newString[index] == "a") {
+      newString[index] == 1;
+    }
+    if (newString[index] == "b") {
+      newString[index] == 2;
+    }
+    if (newString[index] == "c") {
+      newString[index] == 3;
+    }
+    if (newString[index] == "d") {
+      newString[index] == 4;
+    }
+    if (newString[index] == "e") {
+      newString[index] == 5;
+    }
+  }
+ 
+  return newString;
 }
-function decode() {
-  // seu código aqui
+let string = "hi there"
+console.log(encode(string));
+
+function decode(numbers) {
+
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTechnology,name) {
+  let technology = arrayTechnology.split('');
+
+
+
+  return 
 }
 
 // Desafio 11
