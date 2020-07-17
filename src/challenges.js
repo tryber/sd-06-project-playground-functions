@@ -13,9 +13,18 @@ function compareTrue(boo1, boo2) {
 console.log(compareTrue(true, false));
 
 // Desafio 2
-function calcArea() {
+let areaDoTriangulo = 0;
+function calcArea(base, alt) {
   // seu código aqui
+  if (typeof base === 'number' && typeof alt === 'number' && base > 0 && alt > 0) {
+    areaDoTriangulo = (base * alt) / 2;
+  }
+  else {
+    console.log('erro: insira dois números positivos.');
+  }
+  return areaDoTriangulo;
 }
+console.log(calcArea(12,8));
 
 // Desafio 3
 function splitSentence() {
