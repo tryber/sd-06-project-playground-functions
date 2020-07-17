@@ -87,14 +87,59 @@ function fizzBuzz(arrayNumeros) {
   return arrayNumeros;
 }
 
-console.log(fizzBuzz([3, 5, 15, 21, 25, 32]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let palavra ='';
+  for (let index in frase) {
+    switch (frase[index]) {
+      case 'a':
+        palavra += 1;
+        break;
+      case 'e':
+        palavra += 2;
+        break;
+      case 'i':
+        palavra += 3;
+        break;
+      case 'o':
+        palavra += 4;
+        break;
+      case 'u':
+        palavra += 5;
+        break;
+      default:
+        palavra += frase[index];
+        break;
+    }
+  }
+  return palavra;
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let palavra ='';
+  for (let index in frase) {
+    switch (frase[index]) {
+      case '1':
+        palavra += 'a';
+        break;
+      case '2':
+        palavra += 'e';
+        break;
+      case '3':
+        palavra += 'i';
+        break;
+      case '4':
+        palavra += 'o';
+        break;
+      case '5':
+        palavra += 'u';
+        break;
+      default:
+        palavra += frase[index];
+        break;
+    }
+  }
+  return palavra;
 }
 
 // Desafio 10
