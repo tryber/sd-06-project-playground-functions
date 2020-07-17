@@ -131,13 +131,14 @@ function techList(array, name) {
   for(i in ordenado){
     final.push({"tech" : ordenado[i], "name" : name})
   }
-  if(array === []){
+  if(array.length === 0){
     return "Vazio!"
   } else {
     return final
   }
 }
 
+console.log(a.length)
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
