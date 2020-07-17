@@ -86,9 +86,57 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(inputString) {
+  let changes = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let inputArr = [];
+  let encodeString = "";
+
+  for (let index in inputString) {
+    inputArr.push(inputString[index]);
+  }
+
+  for (let index in inputArr) {
+    switch (inputArr[index]) {
+      case "a": {
+        inputArr[index] = changes.a;
+        break;
+      }
+
+      case "e": {
+        inputArr[index] = changes.e;
+        break;
+      }
+
+      case "i": {
+        inputArr[index] = changes.i;
+        break;
+      }
+
+      case "o": {
+        inputArr[index] = changes.o;
+        break;
+      }
+
+      case "u": {
+        inputArr[index] = changes.u;
+        break;
+      }
+    }
+  }
+  
+  for (let index in inputArr) {
+    encodeString += inputArr[index];
+  }
+
+  return encodeString;
 }
+
 function decode() {
   // seu código aqui
 }
