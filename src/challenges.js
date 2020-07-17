@@ -54,21 +54,29 @@ function highestCount(array) {
 */
   return cont;
 }
-// let sum = [9, 1, 2, 3, 9, 5, 7];
+// let sum = [0, 4, 4, 4, 9, 2, 1];
 // console.log(highestCount(sum));
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 < cat2) {
+  let position1 = cat1 - mouse,
+      position2 = cat2 - mouse;
+  if (position1 < 0) {
+    position1 = -(position1);
+  } 
+  if (position2 < 0) {
+    position2 = -(position2);
+  }
+  if (position1 < position2) {
     return 'cat1';
-  } else if (cat1 > cat2) {
+  } else if (position2 < position1) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse(1, 0, 2));
-
+// console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(array) {
