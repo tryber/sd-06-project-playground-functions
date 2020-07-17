@@ -62,16 +62,20 @@ function fizzBuzz(array) {
     } else {
       if (n % 3 === 0 && array % 5 === 0) {
         results.push('FizzBuzz');
+        if (array % 3 != 0 && array % 5 != 0){
+          results.push('bug!');
       } else if (array % 5 === 0) {
         results.push('Buzz');
       } else if (array % 3 === 0) {
         results.push('Fizz');
-        else if (array % 3 != 0 && array % 5 != 0){
+         if (array % 3 != 0 && array % 5 != 0){
           results.push('bug!');
       } else {
         results.push(''+ array);
       }
+    }
 }
+    }
 
 // Desafio 9
 function encode() {
@@ -117,4 +121,5 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
+}
 }
