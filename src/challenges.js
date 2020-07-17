@@ -29,8 +29,12 @@ function splitSentence(lucas) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(meuNome) {
   // seu código aqui
+let meuNome = ['Lucas', 'Souza', 'de', 'Miranda'];
+let meuNomeConcat = meuNome[meuNome.length -1] + ', ' + meuNome[0]
+return meuNomeconcat;
+
 }
 
 // Desafio 5
@@ -40,8 +44,10 @@ return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
+
+
 }
 
 // Desafio 7
@@ -50,8 +56,9 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+
 }
 
 // Desafio 9
