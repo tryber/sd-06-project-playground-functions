@@ -124,12 +124,52 @@ let valor3 = 2;
 console.log(fizzBuzz(valor1)); */
 
 // Desafio 9
-function encode() {
+function encode(stringParametro) {
   // seu código aqui
+  let palavraNumerica = "";
+  for (let chave in stringParametro){
+    if (stringParametro[chave] === "a"){
+      palavraNumerica += 1;      
+    }else if (stringParametro[chave] === "e"){
+      palavraNumerica += 2;
+    }else if (stringParametro[chave] === "i"){
+      palavraNumerica += 3; 
+    }else if (stringParametro[chave] === "o"){
+      palavraNumerica += 4;
+    }else if (stringParametro[chave] === "u"){
+      palavraNumerica += 5;
+    }else{
+    palavraNumerica += stringParametro[chave];
+    }
+  }
+  return palavraNumerica;
 }
-function decode() {
+function decode(stringParametro2) {
   // seu código aqui
+  let palavraAntiNumerica = "";
+  for (let chave2 in stringParametro2){
+    if (stringParametro2[chave2] === "1"){
+      palavraAntiNumerica += "a";      
+    }else if (stringParametro2[chave2] === "2"){
+      palavraAntiNumerica += "e";
+    }else if (stringParametro2[chave2] === "3"){
+      palavraAntiNumerica += "i"; 
+    }else if (stringParametro2[chave2] === "4"){
+      palavraAntiNumerica += "o";
+    }else if (stringParametro2[chave2] === "5"){
+      palavraAntiNumerica += "u";
+    }else{
+      palavraAntiNumerica += stringParametro2[chave2];
+    }
+  }
+  return palavraAntiNumerica;
 }
+let valor1 = "hi there!";
+let valor2 = "h3 th2r2!";
+/* let valor3 = 2; */
+console.log(encode(valor1));
+console.log(decode(valor2));
+
 
 // Desafio 10
 function techList() {
