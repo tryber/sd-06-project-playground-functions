@@ -14,12 +14,15 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(stringOriginal) {
-  let stringArrays = [];
-  for (let i = 0; i <= stringOriginal.length; i++){
-    if (stringOriginal !== " ")
-  }
-}
-
+//   let stringArrays = [];
+//   let contagemArray = 0;
+//   let palavra = "";
+//   for (let i = 0; i <= stringOriginal.length; i++){
+//     if (stringOriginal.charAt(i) !== " ") {
+//       palavra += charAt(i);
+//     }
+//   }
+// }
 // Desafio 4
 function concatName() {
   // seu código aqui
