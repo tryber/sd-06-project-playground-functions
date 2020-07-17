@@ -197,8 +197,27 @@ function techList(array,name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let number = "";
+
+  if (array.length != 11) { return "Array com tamanho incorreto." }
+  
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > 9 || array[i] < 0) { return "não é possível gerar um número de telefone com esses valores" }
+
+    let counter = 0;
+    for (let j = 0; j < array.length; j++) {
+      if (array[j] == array[i]) {
+        counter += 1;
+      }
+
+      if ( counter >= 3) { return "não é possível gerar um número de telefone com esses valores" }
+    }
+  }
+
+  number = `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+
+  return number;
 }
 
 // Desafio 12
