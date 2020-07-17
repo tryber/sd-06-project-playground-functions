@@ -56,8 +56,8 @@ function highestCount(array) {
         }
     }
     console.log("O número maior é " + maiorNumero + ", que se repete " + vezes + " vezes.");
+    return vezes;
 }
-highestCount([9, 9, 2, 1, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse() {
