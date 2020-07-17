@@ -60,8 +60,20 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
     // seu código aqui
+    cat1pos = cat1 - mouse;
+    cat2pos = cat2 - mouse;
+
+    if (cat1pos < cat2pos) {
+        console.log("O cat1 está mais perto do rato");
+        return cat1;
+    } else if (cat2pos < cat1pos) {
+        console.log("O cat2 está mais perto do rato");
+        return cat2;
+    } else {
+        console.log("Os gatos trombam e o rato foge.");
+    }
 }
 
 // Desafio 8
