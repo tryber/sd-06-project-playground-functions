@@ -3,7 +3,7 @@ function compareTrue(string1, string2) {
   if (string1 === 1 && string2 === 2) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
