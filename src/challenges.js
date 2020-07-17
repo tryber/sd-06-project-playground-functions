@@ -17,7 +17,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(str) {
   let nome = "";
-  arrayNome = [];
+  let arrayNome = [];
   for (index = 0; index < str.length; index += 1) {
     if (str[index] !== " ") {
       nome += str[index];
@@ -26,7 +26,7 @@ function splitSentence(str) {
     nome = "";
   }
   }
-  arr.push(nome);
+  arrayNome.push(nome);
   return arrayNome;
 }
 
