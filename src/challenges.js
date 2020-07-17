@@ -1,6 +1,6 @@
 // Projeto - Ricardo Ribeiro
 
-// Desafio 1
+//------------- Desafio 1
 let var1 = false;
 let var2 = true;
 function compareTrue(myVar1, myVar2) {
@@ -12,12 +12,18 @@ function compareTrue(myVar1, myVar2) {
 }
 console.log(compareTrue(var1, var2));
 
-// Desafio 2
-function calcArea() {
-  // seu código aqui
-}
 
-// Desafio 3
+//-------------- Desafio 2
+let bas = 12;
+let hei = 8;
+function calcArea(base, height) {
+  let area = base * height / 2;
+  return area
+}
+console.log(calcArea(bas, hei));
+
+
+//--------------- Desafio 3
 function splitSentence() {
   // seu código aqui
 }
