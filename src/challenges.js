@@ -27,8 +27,7 @@ function concatName(name1) {
   let name2 = name1[n] +", "+ name1[0];
   return name2;
 }
-let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(array))
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -87,11 +86,30 @@ return array2;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let newPhrase1 = "";
+  let newPhrase2 = "";
+  let newPhrase3 = "";
+  let newPhrase4 = "";
+  let newPhrase5 = "";
+  
+  newPhrase1= phrase.replace("a", "1");
+  newPhrase2 = newPhrase1.replace("e", "2");
+  newPhrase3 = newPhrase2.replace("i", "3");
+  newPhrase4 = newPhrase3.replace("o", "4");
+  newPhrase5 = newPhrase4.replace("u", "5");
+  return newPhrase5;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let newPhrase5 = "";
+  
+  newPhrase1= phrase.replace("1", "a");
+  newPhrase2 = newPhrase1.replace("2", "e");
+  newPhrase3 = newPhrase2.replace("3", "i");
+  newPhrase4 = newPhrase3.replace("4", "o");
+  newPhrase5 = newPhrase4.replace("5", "u");
+  return newPhrase5;
 }
 
 // Desafio 10
