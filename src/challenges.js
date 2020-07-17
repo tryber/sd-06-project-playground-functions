@@ -30,7 +30,7 @@ let array = ["asda", "qweqweq", "zxczxc", "poipo"]
 console.log(concatName(array))
 
 // Desafio 5
-function footballPoints(wins, ties) {
+function footballPoints(final) {
     let campeonato = 0;
     if (final === "wins") {
         campeonato = campeonato + 3
@@ -39,8 +39,6 @@ function footballPoints(wins, ties) {
         campeonato = campeonato + 1
         return campeonato;
     }
-
-
 }
 console.log(footballPoints("wins"))
 
