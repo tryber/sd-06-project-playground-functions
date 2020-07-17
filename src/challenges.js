@@ -65,13 +65,13 @@ function fizzBuzz(numbersArray) {
   let results = [];
   for (let i = 0; i < numbersArray.length; i++) {
     if (numbersArray[i] % 3 === 0) {
-      results.push["fizz"];
+      results.push['fizz'];
     } else if (numbersArray[i] % 5 === 0) {
-      results.push["buzz"];
+      results.push['buzz'];
     } else if (numbersArray[i] % 3 === 0 && numbersArray[i] % 5 === 0) {
-      results.push["fizzBuzz"];
+      results.push['fizzBuzz'];
     } else {
-      results.push["bug!"];
+      results.push['bug!'];
     }
   }
   return results;
@@ -98,7 +98,7 @@ function encode(wordString) {
   return wordEncoded;
 }
 function decode(wordString) {
-  let wordDecoded;
+  let wordDecoded = "";
   for (let i = 0; i < wordString.length; i++) {
     let charDecode = wordString[i];
     if (wordString[i] === "1") {
