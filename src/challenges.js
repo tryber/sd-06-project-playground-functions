@@ -1,10 +1,7 @@
 // Desafio 1
 function compareTrue(termo1, termo2) {
-  if (termo1 === termo2){
-    return "true";
-  } else {
-    return "false";
-  }
+  compareTerm = ((termo1 === 'true') && (termo2 === 'true')) ? 'true' : 'false';
+  return compareTerm;
 }
 
 // Desafio 2
