@@ -1,9 +1,14 @@
 //Iniciando Projeto :)
 
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(valor1, valor2) {
+  if(valor1 === valor2){
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log(compareTrue(10,10));
 
 // Desafio 2
 function calcArea() {
