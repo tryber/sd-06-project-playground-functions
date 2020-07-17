@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue(c1, c2) {
-let re = false
 if (c1 === true && c2 === true){
 re = true;
 } 
