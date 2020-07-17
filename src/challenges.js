@@ -25,9 +25,9 @@ function splitSentence(frase) {
 let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName() {
   let first = array[0];
-  let last = array[ array.length -1 ];
+  let last = array[array.length -1];
 
-  return ( last + ', ' + first );
+  return (last + ', ' + first);
 }
 // console.log(concatName(array));
 
@@ -45,8 +45,6 @@ let numbers = [9, 1, 2, 3, 9, 5, 7];
 function highestCount() {
   let maiorNum = 0;
   let result = 0;
-  
-
   for (let i = 0; i < numbers.length; i += 1) {
     if (maiorNum < numbers[i]) {
       maiorNum = numbers[i];
@@ -64,13 +62,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let gato1 = (mouse - cat1);
   let gato2 = (mouse - cat2);
 
-  if (gato1 < gato2){
-    return "cat1";
+  if (gato1 < gato2) {
+    return 'cat1';
   } else if (cat1 === mouse && cat2 === mouse){
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 
-  return "cat2";
+  return 'cat2';
 }
 // console.log(catAndMouse(4, 4, 2));
 
