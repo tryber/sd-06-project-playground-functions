@@ -16,7 +16,7 @@ function calcArea(base, height) {
 function splitSentence(input) {
   let wordsArray = [];
   let newWord = '';
-  
+
   for (let i = 0; i <= input.length; i += 1) {
     if (input[i] === ' ' || i === input.length) {
       wordsArray.push(newWord);
@@ -29,11 +29,11 @@ function splitSentence(input) {
   return wordsArray;
 }
 
-console.log(splitSentence("go trybe"));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayInput) {
+  let newString = arrayInput[arrayInput.length - 1] + ", " + arrayInput[0];
+
+  return newString;
 }
 
 // Desafio 5
