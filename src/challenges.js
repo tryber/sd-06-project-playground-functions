@@ -5,18 +5,17 @@ function compareTrue(boo1, boo2) {
   if (typeof boo1 === 'boolean' && typeof boo2 === 'boolean') {
     if (boo1 === true && boo2 === true) {
       teste = true;
-      return teste;
+      console.log(teste);
     }
     else {
       teste = false;
-      return teste;
+      console.log(teste);
     }
   }
   else {
-    return 'erro: parâmetros devem ser true ou false.';
+    console.log('erro: parâmetros devem ser true ou false.');
   }
 }
-console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, alt) {
@@ -24,13 +23,12 @@ function calcArea(base, alt) {
   let areaDoTriangulo = 0;
   if (typeof base === 'number' && typeof alt === 'number' && base > 0 && alt > 0) {
     areaDoTriangulo = (base * alt) / 2;
-    return areaDoTriangulo;
+    console.log(areaDoTriangulo);
   }
   else {
-    return 'erro: insira dois números positivos.';
+    console.log('erro: insira dois números positivos.');
   }
 }
-console.log(calcArea(12,8));
 
 // Desafio 3
 function splitSentence(string) {
@@ -41,10 +39,9 @@ function splitSentence(string) {
     return sentenceArray;
   }
   else {
-    return 'erro: parâmetro deve ser um texto.';
+    console.log('erro: parâmetro deve ser um texto.');
   }
 }
-console.log(splitSentence('go Trybe !'));
 
 // Desafio 4
 function concatName(array) {
@@ -52,9 +49,12 @@ function concatName(array) {
   let arrayStrings = [];
   arrayStrings.push(array[array.length - 1]);
   arrayStrings.push(array[0]);
-  return arrayStrings;
+  // for (let names in result) {
+  //   return names;
+  // }
+  console.log(arrayStrings);
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints(win, ties) {
@@ -63,13 +63,12 @@ function footballPoints(win, ties) {
   if (Number.isInteger(win) && Number.isInteger(ties) && win >= 0 && ties >= 0) {
     points += (win * 3);
     points += (ties); 
-    return points; 
+    console.log(points); 
   }
   else {
-    return 'only positive integers allowed.';
+    console.log('only positive integers allowed.');
   }
 }
-console.log(footballPoints(1,2));
 
 // Desafio 6
 function highestCount() {
