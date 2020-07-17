@@ -29,13 +29,7 @@ function splitSentence(palavra) {
 function concatName(arrayDeNomes) {
   // seu código aqui
   let primeiroItem = arrayDeNomes[0];
-  let ultimoItem = 0;
-  for (let i in arrayDeNomes) {
-    if (arrayDeNomes.length - 1) {
-      let i = arreyDeNomes.length - 1;
-      ultimoItem = arrayDeNomes[i];
-    }
-  }
+  let ultimoItem = arrayDeNomes[arrayDeNomes.length - 1
   return ultimoItem + ", " + primeiroItem;
 }
 
