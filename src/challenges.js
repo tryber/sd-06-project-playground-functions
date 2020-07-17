@@ -109,13 +109,15 @@ let code = {
 
 function encode(string) {
   let answer = [];
-  
+
   for (let i = 0; i < string.length; i += 1) {
-    for (key in code) {
+    for (let key in code) {
       if (string[i] === key) {
         answer.push(code[key]);
+        break;
       } else {
         answer.push(string[i]);
+        break;
       }
     }
   }
@@ -126,11 +128,13 @@ function decode(string) {
   let answer = [];
   
   for (let i = 0; i < string.length; i += 1) {
-    for (key in code) {
+    for (let key in code) {
       if (string[i] === code[key]) {
         answer.push(key);
+        break;
       } else {
         answer.push(string[i]);
+        break;
       }
     }
   }
