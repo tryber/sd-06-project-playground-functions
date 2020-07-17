@@ -73,20 +73,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  
+  let array2 = [];
   for(let index = 0 ; index <= array.length-1; index += 1){
     if((array[index] % 3 == 0) && (array[index] % 5 == 0)){
-      return "fizzBuzz";
+      array2[index]= "fizzBuzz";
     }else if((array[index] % 3 == 0) && (array[index] % 5 != 0)){
-      return "fizz";
+      array2[index]=  "fizz";
     }else if((array[index] % 3 != 0) && (array[index] % 5 == 0)){
-      return "buzz";
+      array2[index]= "buzz";
     }else{
-      return "bug";
+      array2[index]=  "bug!";
     }
   }
+return array2;
 }
-
 
 // Desafio 9
 function encode() {
