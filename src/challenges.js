@@ -51,14 +51,29 @@ function catAndMouse(mouse, cat1, cat2) {
     return cat1;
   } else if (mC2 > mC1) {
     return cat2;
-  } else {
-    return 'os gatos trombam e o rato foge'
   }
+  return 'os gatos trombam e o rato foge'
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(n) {
+  let result = [];
+  for (let index = 0; index < n.length; index += 1){
+    let fiveDivisionResult = n[index] % 5;
+    let threeDivisionResult = n[index] % 3;
+    
+    if (threeDivisionResult === 0 && fiveDivisionResult === 0) {
+      result.push('FizzBuzz');
+    } else if (threeDivisionResult === 0) {
+      result.push('Fizz');
+    } else if (fiveDivisionResult === 0) {
+      result.push('Buzz');
+    } else {
+      result.push('Bug');
+    }
+  }
+  return result;
+}
 }
 
 // Desafio 9
