@@ -1,10 +1,10 @@
 // Desafio 1 - testando um commit
 
 function compareTrue( a, b) {
-  if (!(a === true) && !(b === true)) {
-     return  false;
+  if ((a === true) && (b === true)) {
+     return true;
   }
-     return  true;
+     return false;
 }
 let a = false;
 let b = true;
