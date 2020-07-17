@@ -10,7 +10,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  return phrase.split(" ");
+  return phrase.split(' ');
 }
 
 // Desafio 4
@@ -24,8 +24,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = array[0];
+  let count = 0;
+
+  for (i=0; i<array.length; i++) {
+
+    if (array[i] === maior)
+      count++;
+    }
+
+    if(array[i] > maior) {
+      count = 0;
+  }
+
+  return count;
 }
 
 // Desafio 7
