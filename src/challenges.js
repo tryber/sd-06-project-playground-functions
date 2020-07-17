@@ -1,26 +1,14 @@
 // Desafio 1
-const firstBoolean = true;
-const secondBoolean = false;
-
 function compareTrue(firstBoolean, secondBoolean) {
   return firstBoolean && secondBoolean;
 }
 
-// console.log(compareTrue(firstBoolean, secondBoolean));
-
 // Desafio 2
-const base = 2;
-const height = 7;
-
 function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-// console.log(calcArea(base, height));
-
 // Desafio 3
-const string = 'go Trybe melhor curso';
-
 function splitSentence(string) {
   let splitSentence = [];
   let splitWord = '';
@@ -39,30 +27,17 @@ function splitSentence(string) {
   return splitSentence;
 }
 
-// console.log(splitSentence(string));
-
 // Desafio 4
-const strings = ['we are the best', 'Course', 'JavaScript', 'HTML', 'CSS', 'Trybe'];
-
 function concatName() {
   return `${strings[strings.length - 1]}, ${strings[0]}`;
 }
 
-// console.log(concatName(strings));
-
 // Desafio 5
-const wins = 5;
-const ties = 8;
-
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
-// console.log(footballPoints(wins, ties));
-
 // Desafio 6
-const numbers = [9, 1, 2, 3, 9, 5, 7, 9, 9, 9];
-
 function highestCount(numbers) {
   let max = Number.MIN_VALUE;
   let occurrences = 0;
@@ -82,13 +57,7 @@ function highestCount(numbers) {
   return occurrences;
 }
 
-// console.log(highestCount(numbers));
-
 // Desafio 7
-const cat1 = 3;
-const cat2 = 1;
-const mouse = 6;
-
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
@@ -99,11 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat2';
 }
 
-// console.log(catAndMouse(mouse, cat1, cat2));
-
 // Desafio 8
-let fizzBuzzNumbers = [2, 15, 7, 9, 45];
-
 function fizzBuzz(fizzBuzzNumbers) {
   const fizzBuzzArray = [];
 
@@ -121,8 +86,6 @@ function fizzBuzz(fizzBuzzNumbers) {
 
   return fizzBuzzArray;
 }
-
-// console.log(fizzBuzz(fizzBuzzNumbers));
 
 // Desafio 9
 function encode(decodedString) {
