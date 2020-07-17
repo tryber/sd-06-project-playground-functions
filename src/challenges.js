@@ -1,17 +1,15 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-    if (value1 == value2 && value1 === value2) {
-        console.log(value1 === value2)
-    } else {
-        console.log(value1 === value2)
-    }
+    return value1 && value2;
 }
 
 
 // Desafio 2
-function calcArea() {
-    // seu código aqui
+function calcArea(base, altura) {
+    let result = ((base * altura) / 2);
+    return result;
 }
+
 
 // Desafio 3
 function splitSentence() {
