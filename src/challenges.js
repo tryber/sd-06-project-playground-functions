@@ -84,17 +84,20 @@ Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar
 
 function fizzBuzz(arrayNew) {
   
-  let new=0;
+  let newFizz = 0;
 
   for (i = 0; i<arrayNew.length; i++){
     if ((arrayNew[i]%3==0) && (arrayNew[i]%5!==0)){
-      new[i] = 'fizz';
+      newFizz[i] = 'fizz';
     }else if ((arrayNew[i]%5==0) && (arrayNew[i]%3!==0)){
-      new[i] = 'buzz';
+      newFizz[i] = 'buzz';
     }else if ((arrayNew[i]%3==0) && (arrayNew[i]%5==0)){
-      new[i] = 'fizzBuzz';
+      newFizz[i] = 'fizzBuzz';
+    }else {
+      newFizz[i] = 'bug'
+    }
   }
-
+return newFizz;
 }
 
 // Desafio 9
