@@ -79,6 +79,9 @@ function highestCount(array) {
         if(array[i]>array[n]){
             n = i;
             numero = array[i];
+        }else if (array[i]===array[n]){
+          n = i;
+          numero = array[i];
         }
     }
     n = 0;
@@ -90,7 +93,7 @@ function highestCount(array) {
     return n;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0,0,0]));
 
 // Desafio 7
 function catAndMouse() {
