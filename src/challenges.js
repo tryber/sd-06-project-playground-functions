@@ -126,12 +126,27 @@ function decode(str) {
 //console.log(decode("h3 th2r2!"));
 
 // Desafio 10
+function ordenarPorNome(a, b){
+  if(a.tech >= b.tech){
+    return 1;
+  }else {
+    return (-1);
+  }
+}
+
 function techList(array, nome) {
   let result = [];
   for (let i = 0 ; i < array.length ; i += 1) {
-
+    let aux = {};
+    aux.tech = array[i];
+    aux.nome = nome;
+    result.push(aux);
   }
+  result.sort(ordenarPorNome);
+  return result;
 }
+
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
