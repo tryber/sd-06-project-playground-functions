@@ -1,6 +1,16 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui t
+
+let booleano01 = 10;
+let booleano02 = 10;
+
+function compareTrue(booleano01, booleano02) {
+  if (booleano01&&booleano02 === 10) 
+    return true
+  
+  else {
+
+  }
+  return false
 }
 
 // Desafio 2
