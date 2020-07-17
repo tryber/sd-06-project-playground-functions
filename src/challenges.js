@@ -1,20 +1,19 @@
-//Iniciando Projeto :)
 
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if(valor1 === valor2 && valor2 === valor1){
+  
+  if (valor1 && valor2){
     return true;
-  } else {
-    return false;
-  }
+  } 
+  return false;
 }
-console.log(compareTrue(10,6));
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height)/ 2;
 }
-console.log(calcArea(10,20));
+console.log(calcArea(10, 20));
 
 // Desafio 3
 function splitSentence() {
