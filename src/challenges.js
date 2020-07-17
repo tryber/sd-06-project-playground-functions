@@ -1,21 +1,36 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(valor1 , valor2){
+  let resultado_boleano;
+  if(valor1 && valor2){
+    resultado_boleano = true;
+  }
+  else{
+    resultado_boleano = false;
+  }
+  return resultado_boleano;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth) {
+  let calculo_area;
+  calculo_area = (base * heigth) / 2;
+  return calculo_area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let resultado_split;
+  resultado_split = frase.split(' ');
+  return resultado_split;  
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arraystrings) {
+  let resultado_strings;
+  let primeiro = arraystrings[0];
+  let ultimo = arraystrings[arraystrings.length-1].concat(", ");
+  resultado_strings = ultimo.concat(primeiro);
+  return resultado_strings;
 }
 
 // Desafio 5
