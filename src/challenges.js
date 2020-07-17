@@ -1,3 +1,4 @@
+// Ore no Starto da!!
 // Desafio 1
 function compareTrue() {
   // seu código aqui
