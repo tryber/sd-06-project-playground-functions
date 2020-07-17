@@ -38,10 +38,12 @@ function concatName(lista) {
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));teste questão 4
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+ let totalPontos=0;
+ totalPontos=(wins*3)+(ties*1);
+ return totalPontos;
 }
-
+// console.log(footballPoints(1,10));
 // Desafio 6
 function highestCount() {
   // seu código aqui
