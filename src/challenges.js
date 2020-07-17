@@ -24,7 +24,7 @@ function concatName(words) {
 
 // Desafio 5
 function footballPoints(wins, tries) {
-  return ((wins * 3) + tries)
+  return wins * 3 + tries
 }
 
 // Desafio 6
@@ -36,7 +36,7 @@ function highestCount(nbrs) {
       max = nbrs[index];
       count = 1;
     }
-    else if (nbrs[index] == max) {
+    else if (nbrs[index] === max) {
       count += 1;
     }
   }
