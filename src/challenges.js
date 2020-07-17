@@ -58,9 +58,9 @@ function highestCount(arrayNumeros) {
 // Desafio 7
 function catAndMouse(mouse ,cat1 ,cat2) {
   if (mouse - cat1 > mouse - cat2) {
-    return "cat2";
+    return "cat1";
   } 
-  return "cat1";
+  return "cat2";
 }
 
 // Desafio 8
@@ -116,15 +116,15 @@ function techList(nomesDeTecnologias , name) {
   for (let x in nomesOrdenados){
     let objeto = {
     tech : nomesOrdenados[x],
-    nome : name
+    name : name
     };
     listaObjetos[x] = objeto;
   }
   return listaObjetos;
 }
-  //let a = [];
-  //let b = "Lucas";
-  //console.log(techList(a,b));
+ // let a = ["abc" , "def" , "ghi"];
+ // let b = "Lucas";
+ // console.log(techList(a,b));
 
 // Desafio 11
 function generatePhoneNumber(numeroTelefone) {
