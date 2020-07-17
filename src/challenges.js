@@ -70,9 +70,9 @@ console.log(footballPoints(gamesWon,gamesTied))
 
 function highestCount(numbers) {
 
-  let maxQtd=0;
+  let maxNum=0;
   let objeto={};
-  let numeroRepetido;
+  let repeticoes;
 
   for (let i in numbers){
 
@@ -81,16 +81,16 @@ function highestCount(numbers) {
     if (objeto[n]){
       objeto[n]+=1
 
-      if (objeto[n]>maxQtd){
-        maxQtd=objeto[n];
-        numeroRepetido=i;
+      if (n>=maxNum){
+        maxNum=n;
+        repeticoes=objeto[n];
       }
     }
     else {
       objeto[n]=1
     }
   }
-  return maxQtd;
+  return repeticoes;
 }
 let numbers=[9, 1, 2, 3, 9, 5, 7];
 console.log(highestCount(numbers))
@@ -154,6 +154,7 @@ console.log(fizzBuzz(numbers2))
 
 
 
+
 // Desafio 9 // Codifique e Decodifique
 
 function encode(frase) {
@@ -171,6 +172,7 @@ let codificada;
 let decodificada;
 console.log(encode(frase))
 console.log(decode(decodificada))
+
 
 
 
