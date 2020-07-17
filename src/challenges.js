@@ -90,6 +90,7 @@ function fizzBuzz(array) {
       return 'fizzBuzz';
     }
     return 'bug!';
+  }
 }
 
 // Desafio 9
