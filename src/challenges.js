@@ -2,37 +2,40 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  area = (base * height) / 2;
+  let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
 function splitSentence(word) {
   let array = [];
-  let phrase = "";
-  for (i = 0; i < word.length; i += 1) {
-    if (word[i] !== " ") {
+  let phrase = '';
+  for (let i = 0; i < word.length; i += 1) {
+    if (word[i] !== ' ') {
       phrase += word[i];
-    } 
-    if (word[i] === " " || i === word.length - 1) {
+    }
+    if (word[i] === ' ' || i === word.length - 1) {
       array.push(phrase);
-      phrase = "";
+      phrase = '';
     }
   }
   return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let last = array[array.length - 1];
+  let first = array[0];
+  let lastFirst = [last, first];
+  return lastFirst;
 }
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
