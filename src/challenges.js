@@ -15,26 +15,26 @@ function calcArea(base, height) {
   let area = (base*height)/2;
   return area;
 }
-//console.log(calcArea(4,8));
+calcArea(4,8);
 
 // Desafio 3
 function splitSentence(string) {
   let arrayString = string.split(' ');
   return arrayString;
 }
-//string = "be trybe";
-//console.log(splitSentence(string));
+
+splitSentence("be trybe");
 
 // Desafio 4
 function concatName(arrayString) {
-  let concatenate = arraySring.toString();
+  let concatenate = arrayString.toString();
   for (let index in arrayString) {
     concatenate = arrayString[index] + " , " + arrayString[0];
   }
   return concatenate;
 }
-//arraySring = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName(arraySring));
+
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -44,24 +44,23 @@ function footballPoints(wins,ties) {
   let totalPoints = pointWins + pointTies;
   return totalPoints;
 }
-console.log(footballPoints(1,4));
+footballPoints(1,4);
 
 // Desafio 6
 function highestCount(numbers) {
-  let repetitionCount = 0;
+  //let repetitionCount = 0;
   let highestNumber = 0;
 
   for (let index in numbers) {
-    let auxiliarNumber = numbers[index];
-        if (auxiliarNumber < numbers[index]) {
+        if (numbers[index] > highestNumber) {
           highestNumber = numbers[index];
-          repetitionCount += 1;
+          //repetitionCount += 1;
         }
       }
-  return repetitionCount
+  return highestNumber;
 }
-let numbers = [9, 1, 2, 3, 9, 5, 7];
-console.log(highestCount(numbers));
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
