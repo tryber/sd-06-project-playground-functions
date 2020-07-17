@@ -46,8 +46,8 @@ function splitSentence(myText) {
 // ---------------- Desafio 4
 // let name = ['Ricardo', 'Alexandre', 'de', 'Souza', 'Ribeiro']
 function concatName(myName) {
-  let nameConcat = myName[myName.length - 1] + ', ' + myName[0]
-  return nameConcat
+  let nameConcat = myName[myName.length - 1] + ', ' + myName[0];
+  return nameConcat;
 }
 // console.log(concatName(name));
 
@@ -101,19 +101,17 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(mo, c1, c2));
 
 // ---------- Desafio 8
-// let arr = [2, 15, 7, 9, 45];
+// let arr = [2, 15, 7, 9, 45, 30, 60, 11];
 function fizzBuzz(myArray) {
   let arrayFizzBuzz = [];
   for (let i = 0; i < myArray.length; i += 1) {
-    let result = '';
+    let result = 'bug!';
     if ((myArray[i] % 3 === 0) && (myArray[i] % 5 === 0)) {
       result = 'fizzBuzz';
-    } else if (myArray[i] % 3 == 0) {
+    } else if (myArray[i] % 3 === 0) {
       result = 'fizz';
-    } else if (myArray[i] % 5 == 0) {
+    } else if (myArray[i] % 5 === 0) {
       result = 'buzz';
-    } else {
-      result = 'bug!';
     }
     arrayFizzBuzz.push(result);
   }
@@ -123,14 +121,52 @@ function fizzBuzz(myArray) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let text = 'hi there';
+function encode(myText) {
+  let result = '';
+  for (let i = 0; i < myText.length; i += 1) {
+    if (myText[i] === 'a') {
+      result += '1';
+    } else if (myText[i] === 'e') {
+      result += '2';
+    } else if (myText[i] === 'i') {
+      result += '3';
+    } else if (myText[i] === 'o') {
+      result += '4';
+    } else if (myText[i] === 'u') {
+      result += '5';
+    } else {
+      result += myText[i];
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
-}
+console.log(encode(text));
 
-// Desafio 10
+let text2 = 'hi there';
+function decode(myText) {
+  let result = '';
+  for (let i = 0; i < myText.length; i += 1) {
+    if (myText[i] === '1') {
+      result += 'a';
+    } else if (myText[i] === '2') {
+      result += 'e';
+    } else if (myText[i] === '3') {
+      result += 'i';
+    } else if (myText[i] === '4') {
+      result += 'o';
+    } else if (myText[i] === '5') {
+      result += 'u';
+    } else {
+      result += myText[i];
+    }
+  }
+  return result;
+}
+console.log(decode(text2));
+
+
+// ---------- Desafio 10
 function techList() {
   // seu código aqui
 }
