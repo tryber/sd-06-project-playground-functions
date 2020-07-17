@@ -107,12 +107,38 @@ function highestCount(arr) {
 
 let d6 = [1,2,3,7,2,7,2,9,6,9,9]
 
-console.log(highestCount(d6))
+//console.log(highestCount(d6))
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
+  let dCat1 = 0
+  let dCat2 = 0
+  //let tie = "os gatos trombam e o rato foge"
+
+  if (cat1 < mouse) {
+    dCat1 = mouse - cat1
+  } else {
+    dCat1 = cat1 - mouse
+  }
+
+  if (cat2 < mouse) {
+    dCat2 = mouse - cat2
+  } else {
+    dCat2 = cat2 - mouse
+  }
+
+  if (dCat1 > dCat2) {
+    return "cat2"
+  } else if (dCat1 < dCat2) {
+    return "cat1"
+  } else if (dCat1 == dCat2) {
+    return "os gatos trombam e o rato foge"
+  }
+
 }
+
+console.log(catAndMouse(4, 6, 1))
 
 // Desafio 8
 function fizzBuzz() {
