@@ -65,6 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (mouse > cat2){
     for (let c = cat2; c < mouse; c += 1) {
       distancia2 += 1;
+
     }
   } else if (cat2 > mouse){
     for (let c = mouse; mouse < cat2; mouse += 1){
