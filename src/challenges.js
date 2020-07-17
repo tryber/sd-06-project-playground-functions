@@ -28,7 +28,6 @@ function concatName(ultimoItemEPrimeiroItem) {
 function footballPoints(wins, ties) {
   let wins = wins * 3;
   return wins + ties;
-  }
 }
 
 // Desafio 6
