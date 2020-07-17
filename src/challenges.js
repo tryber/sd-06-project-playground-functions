@@ -55,18 +55,21 @@ function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = Math.abs(mouse - cat1);
   let distancia2 = Math.abs(mouse - cat2);
   if (distancia1 < distancia2) {
-    return console.log('cat1');
+    return 'cat1';
   } else if (distancia1 > distancia2) {
-    return console.log('cat2');
+    return 'cat2';
   } else {
-    return console.log('Os gatos trombam e o rato foge');
+    return 'Os gatos trombam e o rato foge';
   }
 }
+
 
 
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
+  // receber um array, passar por todos os numeros do array (for i = 0; i < array.length; i += 1) { }
+  // 
 }
 
 // Desafio 9
