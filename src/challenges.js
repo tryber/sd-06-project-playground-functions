@@ -8,22 +8,22 @@ function compareTrue(number1,number2) {
   }
   return oddNumbers;
 }
-console.log(compareTrue(2,3));
+compareTrue(2,3);
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base*height)/2;
   return area;
 }
-console.log(calcArea(4,8));
+//console.log(calcArea(4,8));
 
 // Desafio 3
 function splitSentence(string) {
   let arrayString = string.split(' ');
   return arrayString;
 }
-string = "be trybe";
-console.log(splitSentence(string));
+//string = "be trybe";
+//console.log(splitSentence(string));
 
 // Desafio 4
 function concatName(arrayString) {
@@ -33,7 +33,7 @@ function concatName(arrayString) {
   }
   return concatenate;
 }
-arraySring = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+//arraySring = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(arraySring));
 
 // Desafio 5
