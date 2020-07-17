@@ -11,9 +11,13 @@ else {
 }
 
 // Desafio 2
-function calcArea() {
+var base = 12;
+var height = 4
+function calcArea(base, height) {
   // seu código aqui
+  return (base * height)/2;
 }
+console.log(calcArea(base, height));
 
 // Desafio 3
 function splitSentence() {
