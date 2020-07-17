@@ -186,7 +186,7 @@ function hydrate(bebidas) {
   for (i in numbers){
     soma += Number(numbers[i]);
   }
-  return soma + " copos de água"
+  return soma + " copo de água"
 }
 
 
