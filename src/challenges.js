@@ -18,27 +18,31 @@ function splitSentence(string) {
   return string.split(" ");  
 } console.log(splitSentence("Hello World"));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+
+//let array = ["Ana", "Jean", "Pedro", "Maria", "Joao"];
+
+function concatName(recebeArray) {
+  return recebeArray[recebeArray.length -1] + ", " + recebeArray[0];
+} 
+console.log(concatName(nomes = ["Ana", "Jean", "Pedro", "Maria", "Joao"]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 5
 function footballPoints() {
