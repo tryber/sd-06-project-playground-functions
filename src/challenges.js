@@ -150,7 +150,7 @@ function generatePhoneNumber(numeroTelefone) {
       }
     contador=0;
   }
-  // estabelecendo as condições de return
+  // estabelecendo as condições de return 
   for (let x in numeroTelefone){
     if (numeroTelefone[x] < 0 || numeroTelefone[x] > 9 || repetiu === true ) {
       return 'não é possível gerar um número de telefone com esses valores';
