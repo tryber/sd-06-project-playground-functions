@@ -11,12 +11,12 @@ return base * height/2;
 }
 
 // Desafio 3
-function splitSentence(a, b) {
 a = "go trybe";
 b = "vamo que vamo";
+function splitSentence(a, b) {
 return splitSentence.split(" ")
 }
-console.log(splitSentence)
+
 
 // Desafio 4
 function concatName() {
