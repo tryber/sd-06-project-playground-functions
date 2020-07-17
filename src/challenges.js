@@ -39,7 +39,7 @@ function concatName(listaNomes) {
   let ultimoNome = listaNomes.slice().pop();
   let primeiroNome = listaNomes.slice().shift();
 
-  return `${ultimoNome}, ${primeiroNome}`;  
+  return `${ultimoNome}, ${primeiroNome}`;
 }
 
 // Desafio 5
