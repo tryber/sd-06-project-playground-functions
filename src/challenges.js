@@ -7,10 +7,10 @@ function compareTrue(string1, string2) {
 }
 // Desafio 2
 function calcArea(base, altura) {
-  let area = (base * altura) / 2
-  console.log(area);
+  let area = (base * altura) / 2;
+  return area;
 }
-calcArea(10, 5);
+
 // Desafio 3
 function splitSentence() {
   // seu código aqui
