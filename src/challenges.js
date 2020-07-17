@@ -8,10 +8,10 @@ function compareTrue(val1, val2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let calc = (base * height)/2;ß
+  return calc;
 }
-
 // Desafio 3
 function splitSentence() {
   // seu código aqui
