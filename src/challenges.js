@@ -27,7 +27,6 @@ function concatName(string) {
   fraseFinal =  first + ", " + last;
   return fraseFinal;
 }
-console.log(concatName(["Luiz", "Phellipe", "Carneiro"]))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -54,8 +53,30 @@ function highestCount(num) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = 0;
+  let distCat2 = 0;
+  if(mouse < cat1){
+    distCat1 = cat1 - mouse;
+  }
+  else if(mouse < cat2){
+    distCat2 = cat2 - mouse;
+  }
+  else if(mouse > cat1){
+    distCat1 = mouse - cat1;
+  }
+  else if (mouse > cat2){
+    distCat2 = mouse - cat2;
+  }
 
+  if(distCat1 < distCat2){
+    return cat1;
+  }else if(distCat1 > distCat2){
+    return cat2;
+  }else{
+    return "os gatos trombam e o rato foge";
+  }
 }
+
 
 // Desafio 8
 function fizzBuzz(arr) {
