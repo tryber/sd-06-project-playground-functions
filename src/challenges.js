@@ -5,15 +5,15 @@ function compareTrue(boo1, boo2) {
   if (typeof boo1 === 'boolean' && typeof boo2 === 'boolean') {
     if (boo1 === true && boo2 === true) {
       teste = true;
-      console.log(teste);
+      return teste;
     }
     else {
       teste = false;
-      console.log(teste);
+      return teste;
     }
   }
   else {
-    console.log('erro: parâmetros devem ser true ou false.');
+    return 'erro: parâmetros devem ser true ou false.';
   }
 }
 
@@ -23,10 +23,10 @@ function calcArea(base, alt) {
   let areaDoTriangulo = 0;
   if (typeof base === 'number' && typeof alt === 'number' && base > 0 && alt > 0) {
     areaDoTriangulo = (base * alt) / 2;
-    console.log(areaDoTriangulo);
+    return areaDoTriangulo;
   }
   else {
-    console.log('erro: insira dois números positivos.');
+    return 'erro: insira dois números positivos.';
   }
 }
 
@@ -39,7 +39,7 @@ function splitSentence(string) {
     return sentenceArray;
   }
   else {
-    console.log('erro: parâmetro deve ser um texto.');
+    return 'erro: parâmetro deve ser um texto.';
   }
 }
 
@@ -49,12 +49,8 @@ function concatName(array) {
   let arrayStrings = [];
   arrayStrings.push(array[array.length - 1]);
   arrayStrings.push(array[0]);
-  // for (let names in result) {
-  //   return names;
-  // }
-  console.log(arrayStrings);
+  return arrayStrings;
 }
-// concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints(win, ties) {
@@ -63,10 +59,10 @@ function footballPoints(win, ties) {
   if (Number.isInteger(win) && Number.isInteger(ties) && win >= 0 && ties >= 0) {
     points += (win * 3);
     points += (ties); 
-    console.log(points); 
+    return points; 
   }
   else {
-    console.log('only positive integers allowed.');
+    return 'only positive integers allowed.';
   }
 }
 
