@@ -1,6 +1,6 @@
 // Desafio 1
-let a=true;
-let b=false
+let a = true;
+let b = false
 
 function compareTrue(a,b) { 
   if (a===true && b===true){
@@ -19,6 +19,9 @@ function calcArea(b,h) {
 
 // Desafio 3
 function splitSentence() {
+  let splitText = "Go Trybe"
+  let arrayText = splitText.split(" ")
+  return arrayText[0] + "," + arrayText[1]
   // seu código aqui
 }
 
