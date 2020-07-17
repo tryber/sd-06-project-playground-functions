@@ -64,7 +64,7 @@ function fizzBuzz(arrayNumber) {
         arrayString.push("fizzBuzz");
     } else if ((arrayNumber[i] % 3 === 0) && (arrayNumber[i] % 5 !== 0)){
       arrayString.push("fizz");
-    } else if (arrayNumber[i] % 3 !== 0) && (arrayNumber[i] % 5 === 0){
+    } else if ((arrayNumber[i] % 3 !== 0) && (arrayNumber[i] % 5 === 0)){
       arrayString.push("buzz");
     } else {
       arrayString.push("bug!");
