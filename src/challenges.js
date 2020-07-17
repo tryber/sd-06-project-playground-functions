@@ -1,15 +1,15 @@
 // Desafio 1
-//Verificar colorExternal sendo "blue" e colorInternal sendo "black"
-//Return boolean
+// Verificar se value1 e value2 são true
+// Return boolean
 function compareTrue(value1, value2) {
-  if(value1 === true && value2 === true) {
-  return true
+  if (value1 === true && value2 === true) {
+    return true;
   } else {
-    return false
+      return false;
   }
 }
 
-console.log(compareTrue(true,true))
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea() {
