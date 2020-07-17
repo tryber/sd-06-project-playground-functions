@@ -20,10 +20,10 @@ function splitSentence(string) {
 
 
 // Desafio 4
-function concatName(array) { 
+function concatName(array) {
   let ultimo = array[array.length - 1];
-  let primeiro = array[0]; 
-  let ultimoPrimeiro = ultimo + ", " + primeiro;
+  let primeiro = array[0];
+  let ultimoPrimeiro = `${ultimo}, ${primeiro}`;
   return ultimoPrimeiro;
 }
 
