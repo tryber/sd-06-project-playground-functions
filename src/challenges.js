@@ -15,8 +15,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string) {
+function splitSentence(stringRecebida) {
   // seu código aqui
+  resultado = stringRecebida.split(" ");
+  return resultado
 
 }
 
@@ -54,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8
+// Desafio 8 - OK
 function fizzBuzz(numbers) {
   // seu código aqui
   let retorno = [];
@@ -119,4 +121,4 @@ module.exports = {
   triangleCheck,
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(splitSentence("go Trybe"))
