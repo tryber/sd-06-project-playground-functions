@@ -25,7 +25,7 @@ function splitSentence(str) {
 function concatName(arr) {
   let primeiro = arr[0];
   let ultimo = arr[arr.length - 1];
-  let str = primeiro + ', ' + ultimo;
+  let str = ultimo + ', ' + primeiro;
   return str;
 }
 
@@ -35,7 +35,7 @@ function footballPoints(wins, ties) {
   let points = winsPoints + ties;
   return points;
 }
-
+let arrTeste = [9, 1, 2, 3, 9, 5, 7, 9 , 9];
 // Desafio 6
 function highestCount(arrTeste) {
   let nTeste = 0;
@@ -56,13 +56,16 @@ function highestCount(arrTeste) {
   }
   return contRepetido;
 }
-
+console.log(highestCount(arrTeste));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaC1 = mouse - cat1;
   let distanciaC2 = mouse - cat2;
   let msg;
+  
+  if (mouse) {
 
+  }
   if (distanciaC1 > distanciaC2) {
     msg = "cat2";
   } else if (distanciaC2 > distanciaC1) {
@@ -72,10 +75,10 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return msg;
 }
-
+//console.log(catAndMouse(0, 3, 2));
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  
 }
 
 // Desafio 9
