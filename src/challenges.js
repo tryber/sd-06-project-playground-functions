@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(logico1, logico2) {
-  let retorno = false;
+  let resposta = false;
   if (logico1 && logico2) {
-    returno = true;
+    resposta = true;
   }
   return retorno;
 }
@@ -13,14 +13,14 @@ function calcArea(base, heigth) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(frase) {
   let resultado = [];
   resultado.push(frase.split(" "));
   return resultado;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(meuArray) {
   let primeiraPalavra = meuArray[0];
   let ultimaPalavra = meuArray[meuArray.length - 1];
   return ultimaPalavra + ", " + primeiraPalavra;
