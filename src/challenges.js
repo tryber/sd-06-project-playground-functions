@@ -36,9 +36,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringArray) {
-  lastItemIndex = stringArray.length - 1;
-  firstItemIndex = 0;
-  returnedString = "";
+  let lastItemIndex = stringArray.length - 1;
+  let firstItemIndex = 0;
+  let returnedString = "";
   
   for (let index = lastItemIndex; index < 0; index -= 1){
     if (index === lastItemIndex){
@@ -52,6 +52,7 @@ function concatName(stringArray) {
   return stringArray;
  
 }
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
