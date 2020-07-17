@@ -22,17 +22,18 @@ function splitSentence(string) {
   let word = "";
   let splitedPhrase = [];
   for (i in string){
-    if (i !== " ") {
+    if (string[i] !== " ") {
       word += (string[i]);
     }
-    else {
-      splitedPhrase.push(word)
-      console.log(splitedPhrase);
+    else if (string[i] === " ") {
+      splitedPhrase.push(word);
+      word = "";
     }
   }
-  return splitedPhrase;
+  splitedPhrase.push(word);
+  // console.log (splitedPhrase);
 }
-splitSentence("ola tudo bem");
+// splitSentence("ola tudo bem");
 
 
 // Desafio 4
