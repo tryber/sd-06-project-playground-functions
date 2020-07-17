@@ -11,6 +11,7 @@ else {
 }
 
 // Desafio 2
+
 var base = 12;
 var height = 4
 function calcArea(base, height) {
@@ -20,8 +21,11 @@ function calcArea(base, height) {
 console.log(calcArea(base, height));
 
 // Desafio 3
-function splitSentence() {
+let lucas = "Lucas Miranda"
+function splitSentence(lucas) {
   // seu código aqui
+  lucas = lucas.split(" ");
+  return lucas;
 }
 
 // Desafio 4
