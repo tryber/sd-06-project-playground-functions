@@ -66,18 +66,33 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let chaseStatus;
+  let pos1;
+  let pos2;
 
-  if (mouse - cat1 > mouse - cat2) {
-    chaseStatus = "cat1"
-  } else if (mouse - cat1 < mouse - cat2) {
-    chaseStatus = "cat2"
-  } else {
-    chaseStatus = "os gatos trombam e o rato foge"
+  if (mouse > cat1 && mouse > cat2) {
+    pos1 = mouse - cat1;
+    pos2 = mouse - cat2;
+  } else if (mouse < cat1 && mouse < cat2) {
+    pos1 = cat1 - mouse;
+    pos2 = cat2 - mouse;
+  } else if (mouse > cat2 && mouse < cat1 ) {
+    pos2 = mouse - cat2;
+    pos1 = cat1 - mouse;
+  } else if (mouse < cat2 && mouse > cat1) {
+    pos2 = cat2 - mouse;
+    pos1 = mouse - cat1;
   }
-  return(chaseStatus)
+  if (pos1 == pos2) {
+    chaseStatus = "os gatos trombam e rato foge"
+  } else if (pos1 > pos2) {
+    chaseStatus = "cat1"
+  } else {
+    chaseStatus = "cat2"
+  }
+  return chaseStatus
 } 
 
-console.log(catAndMouse(5, 2, 3))
+console.log(catAndMouse(1, 0, 2))
 
 // Desafio 8
 function fizzBuzz(numberArray) {
@@ -103,6 +118,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
 function encode() {
   // seu código aqui
+
 }
 function decode() {
   // seu código aqui
