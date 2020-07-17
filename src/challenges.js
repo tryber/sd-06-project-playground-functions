@@ -1,5 +1,6 @@
 // Desafio 1
 console.log('*** 1 ***');
+
 const firstBoolean = true;
 const secondBoolean = false;
 
@@ -22,9 +23,29 @@ function calcArea(base, height) {
 console.log(calcArea(base, height));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+console.log('*** 3 ***');
+
+const string = 'go Trybe melhor curso';
+
+function splitSentence(string) {
+  let splitSentence = [];
+  let splitWord = '';
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === ' ') {
+      splitSentence.push(splitWord);
+      splitWord = '';
+    } else {
+      splitWord += string[i];
+    }
+  }
+
+  splitSentence.push(splitWord);
+
+  return splitSentence;
 }
+
+console.log(splitSentence(string));
 
 // Desafio 4
 function concatName() {
