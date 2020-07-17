@@ -15,8 +15,15 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName(arrayStrings) {
-  return console.log(arrayStrings[arrayStrings.length-1] + ", " + arrayStrings[0]);
+function concatName(arrayString) {
+  let newString = '';
+  let comma = ', ';
+
+  newString += arrayString[0];
+  newString += comma;
+  newString += arrayString[arrayString.length -1]
+  
+  return newString;
 }
 
 // Desafio 5
