@@ -58,9 +58,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1=0;
   let dist2=0;
   dist1=cat1-mouse;
-  Math.abs(dist1);
+  dist1=Math.abs(dist1);
   dist2=cat2-mouse;
-  Math.abs(dist2);
+  dist2=Math.abs(dist2);
   if(dist1>dist2){
     return "cat2";
   }
@@ -94,8 +94,28 @@ function fizzBuzz(array_1) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word_2) {
+  let aux="";
+  for(let i=0;i<word_2.length;i+=1){
+    aux+=word_2[i];
+    if(word_2[i]=="a" ||word_2[i]=="A"){
+      aux+=1;
+    }
+    if(word_2[i]=="e" ||word_2[i]=="E"){
+      aux+=2;
+    }
+    if(word_2[i]=="i" ||word_2[i]=="I"){
+      aux+=3;
+    }
+    if(word_2[i]=="o" ||word_2[i]=="O"){
+      aux+=4;
+    }
+    if(word_2[i]=="u" ||word_2[i]=="U"){
+      aux+=5;
+    }
+    
+  }
+  return aux;
 }
 function decode() {
   // seu código aqui
