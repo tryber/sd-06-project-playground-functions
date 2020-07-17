@@ -9,7 +9,6 @@ function compareTrue(a, b) {
   }
 }
 
-
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
@@ -18,9 +17,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
-
+  return string.split(' ');
 }
 
 // Desafio 4
@@ -61,6 +60,7 @@ function highestCount(array) {
   }
   return repeticao;
 }
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
