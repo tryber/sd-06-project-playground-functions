@@ -21,7 +21,9 @@ function splitSentence(a = 'go Trybe') {
 }
 
 // Desafio 4
-function concatName() {
+function concatName( a = ['Lucas', 'Anderson', 'Maria', 'Paulo'] ) {
+  last = a [a.length -1] 
+  return (last + ', ' + a[0])
 }
 
 // Desafio 5
