@@ -47,7 +47,7 @@ function highestCount(meuArray) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   let distanciaGato1 = 0;
   let distanciaGato2 = 0;
   let resposta = "";
