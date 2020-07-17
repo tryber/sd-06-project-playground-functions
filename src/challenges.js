@@ -15,15 +15,15 @@ function calcArea(base, heigth) {
 
 // Desafio 3
 function splitSentence(nomeString) {
-  return nomeString.split(" ");
+  return nomeString.split(' ');
 }
 
 // Desafio 4
 function concatName(ultimoItemEPrimeiroItem) {
   let ultimoItem = ultimoItemEPrimeiroItem.length - 1;
   let primeiroItem = ultimoItemEPrimeiroItem.concat[0];
-  return ultiultimoItemEPrimeiroItem[primeiroItem] + " " + prultimoItemEPrimeiroItem[ultimoItem];
-}
+  return ultimoItemEPrimeiroItem[primeiroItem] + ' ' + ultimoItemEPrimeiroItem[ultimoItem];
+} 
 
 // Desafio 5
 function footballPoints() {
