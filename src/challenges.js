@@ -37,14 +37,14 @@ function highestCount(a) {
   let cont = 0;
 
   a.forEach(e => {
-      if (e > maior) {
-        maior = e;  
-      }
+   if(e > maior) {
+        maior = e;
+    }
   });
   a.forEach(e => {
-   if ( e === maior) {
-     cont+= 1;  
-   }
+   if( e === maior ) {
+     cont += 1;
+    }
   });
   return cont;
 }
@@ -53,13 +53,14 @@ function highestCount(a) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = mouse - cat1;
   let dist2 = mouse - cat2;
+  
   if (dist1 > dist2) {
       return 'cat2';
-  } else if (dist1 < dist2){
-      return 'cat1';
-  } else {
-      return 'os gatos trombam e o rato foge';
+  } else if(dist1 < dist2){
+    return 'cat1';
   }
+  return 'os gatos trombam e o rato foge';
+  
 }
 
 // Desafio 8
