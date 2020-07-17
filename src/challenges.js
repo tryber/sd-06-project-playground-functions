@@ -111,10 +111,25 @@ function encode(string) {
   // for cada i verificar se é vogal
   // Se for vogal trocar a vogal pelo numero
   // Transformar array em string
+  string = string.replace(/a/g, "1");
+  string = string.replace(/e/g, "2");
+  string = string.replace(/i/g, "3");
+  string = string.replace(/o/g, "4");
+  string = string.replace(/u/g, "5");
+
+  return string;
 }
-function decode() {
+function decode(string2) {
   // seu código aqui
+  string2 = string2.replace(/1/g, 'a');
+  string2 = string2.replace(/2/g, 'e');
+  string2 = string2.replace(/3/g, 'i');
+  string2 = string2.replace(/4/g, 'o');
+  string2 = string2.replace(/5/g, 'u');
+
+  return string2;
 }
+
 
 // Desafio 10
 function techList(tech, name) {
@@ -153,25 +168,19 @@ function generatePhoneNumber(array) {
   // Dado o array, para cada numero do array verificar se ele se repete
   // Caso ele repita repeticao +1;
   function repeticaoNumero(array) {
-  let numeroRepetido = array[0];
+  
   let contador = 0;
   for (let i in array) {
     for (let j in array) {
-      if (numeroRepetido === array[j]) {
+      if (array[i] === array[j]) {
         contador += 1;
       }
-    }
-    if (contador > 3) {
-      break;
-    } else {
-      numeroRepetido = array[i];
-      contador = 0;
     }
   }
   return contador;
   }
 
-
+  console.log(repeticaoNumero([1, 2, 2, 4, 5, 5, 0, 8, 9, 0, 1]));
 
 
 // Desafio 12
