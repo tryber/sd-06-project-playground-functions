@@ -8,6 +8,7 @@ function calcArea() {
   // seu código aqui
 }
 
+
 // Desafio 3
 function splitSentence() {
   // seu código aqui
