@@ -26,18 +26,21 @@ function splitSentence(string) {
   let palavrasDivididas = [];
   let palavra = "";
   for (let n = 0; n < string.length; n += 1){
-    if (string[n] !== " "){
+    if (string[n] !== " " && n + 1 < string.length){
       palavra += string[n];
+    }else if (n + 1 === string.length){
+      palavra += string[n];
+      palavrasDivididas.push(palavra);
     }else{
       palavrasDivididas.push(palavra);
       palavra = "";
-    }    
+    }   
   }
   return palavrasDivididas;  
 }
  let valor1 = "Clayton é zika";
 // let valor2 = 50;
- console.log(valor1.length);
+ console.log(splitSentence(valor1));
 
 // Desafio 4
 function concatName() {
