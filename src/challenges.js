@@ -14,15 +14,15 @@ function calcArea(base, height) {
 // Desafio 3
 
 function splitSentence(string) {
-  let word = "";
+  let word = '';
   let splitedPhrase = [];
   for (i in string){
-    if (string[i] !== " ") {
+    if (string[i] !== ' ') {
       word += (string[i]);
     }
-    else if (string[i] === " ") {
+    else if (string[i] === ' ') {
       splitedPhrase.push(word);
-      word = "";
+      word = ' ';
     }
   }
   splitedPhrase.push(word);
