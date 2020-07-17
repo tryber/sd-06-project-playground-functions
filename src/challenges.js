@@ -44,7 +44,7 @@ function concatName(stringArray) {
     if (index == lastItemIndex){
       returnedString = stringArray[index] + ", ";
     }
-    if else (index == firstItemIndex){
+    else if (index == firstItemIndex){
       returnedString += stringArray[index];
     }
   }
