@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if(distanciaCat1 == distanciaCat2) {
     resultado = "os gatos trombam e o rato foge"
-  } else if (distanciaCat1 > distanciaCat2) { // 3 < 2
+  } else if (distanciaCat1 < distanciaCat2) { // 3 < 2
     resultado = "cat1"
   } else {
     resultado = "cat2";
