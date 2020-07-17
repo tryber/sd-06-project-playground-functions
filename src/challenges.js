@@ -1,10 +1,12 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 && valor2 === true){
-    return true;
+  let teste;
+  if (valor1 && valor2 === true) {
+    teste = true;
   } else {
-    return false;
+    teste = false;
   }
+  return teste;
 }
 
 // Desafio 2
@@ -15,15 +17,15 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  let arr = str.split(" ");
+  let arr = str.split(' ');
   return arr;
 }
 
 // Desafio 4
 function concatName(arr) {
   let primeiro = arr[0];
-  let ultimo = arr[arr.length-1];
-  let str = primeiro + ", "+ ultimo;
+  let ultimo = arr[arr.length - 1];
+  let str = primeiro + ', ' + ultimo;
   return str;
 }
 
@@ -35,8 +37,27 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrTeste) {
+  let nTeste = 0;
+  let contador = 0;
+  let contRepetido = 0;
+  let nMaisRepetido;
+
+  for (let i in arrTeste) {
+      nTeste = arrTeste[i]
+      for (let indice in arrTeste) {
+          if (nTeste == arrTeste[indice]) {
+              contador += 1;
+              
+          }
+      }
+      if (contador > contRepetido) {
+          contRepetido = contador;
+          nMaisRepetido = arrTeste[i];
+      }
+      contador = 0;
+  }
+  return contRepetido;
 }
 
 // Desafio 7
