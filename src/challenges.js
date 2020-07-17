@@ -136,6 +136,7 @@ function decode(string) {
 function techList(array, name) {
   
   let listaObjetos = [];
+  array.sort();
 
   for(let pos = 0; pos < array.length; pos += 1) {
     let objeto = {};
@@ -154,7 +155,7 @@ return listaObjetos;
 }
 
 
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
 
 // Desafio 11
 function generatePhoneNumber() {
