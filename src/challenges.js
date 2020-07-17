@@ -1,6 +1,6 @@
+// Desafio 1
 let q1x = true;
 let q1y = true;
-// Desafio 1
 function compareTrue(q1x, q1y) {
   if (q1x && q1y === true) {
     return true;
@@ -8,17 +8,20 @@ function compareTrue(q1x, q1y) {
     return false;
   }
 }
+
+// Desafio 2
 let base = 2;
 let height = 4;
-// Desafio 2
 function calcArea(base, height) {
   return (base*height)/2;
 }
+
 // Desafio 3
 function splitSentence(string) {
   let frase = string.split(" ");
   return frase;
 }
+
 // Desafio 4
 function concatName(array) {
   let plv = array[array.length - 1] + ", " + array[0];
@@ -30,8 +33,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let maiorNumb = 0;
+  let repeticao = 0;
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] > maiorNumb) {
+        maiorNumb = numbers[index];
+    } 
+  }
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] === maiorNumb) {
+        repeticao += 1;
+    }
+  }
+  return repeticao;
 }
 
 // Desafio 7
