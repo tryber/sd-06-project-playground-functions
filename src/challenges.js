@@ -41,7 +41,7 @@ function concatName(array) {
   let arrayStrings = [];
   arrayStrings.push(array[array.length - 1]);
   arrayStrings.push(array[0]);
-  return arrayStrings.toString();
+  return arrayStrings[0] + ', ' + arrayStrings[1];
 }
 
 // Desafio 5
@@ -165,8 +165,16 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  let lista = [];
+  tech.sort();
+  if (Array.isArray(tech) && tech.length != 0) {
+    for (let i in tech) {
+      lista.push({'tech': tech[i], name: name});
+    }
+  }
+  return lista;
 }
 
 // Desafio 11
