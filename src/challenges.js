@@ -6,20 +6,20 @@ function compareTrue(valor1, valor2) {
   }
   return false;
 }
-console.log(compareTrue(true, true));
+// console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log(calcArea(10, 20));
+// console.log(calcArea(10, 20));
 
 // Desafio 3
 
 function splitSentence(frase) {
   return frase.split(' ');
 }
-console.log(splitSentence('go trybe'));
+// console.log(splitSentence('go trybe'));
 
 // Desafio 4
 let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
@@ -29,18 +29,18 @@ function concatName() {
 
   return ( last + ', ' + first );
 }
-console.log(concatName(array));
+// console.log(concatName(array));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
-console.log(footballPoints(2, 3));
+// console.log(footballPoints(2, 3));
 
 // Desafio 6
 let numbers = [9, 1, 2, 3, 9, 5, 7];
-console.log(highestCount(numbers));
+// console.log(highestCount(numbers));
 
 function highestCount() {
   let maiorNum = 0;
@@ -72,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return "cat2";
 }
-console.log(catAndMouse(4, 4, 2));
+// console.log(catAndMouse(4, 4, 2));
 
 // Desafio 8
 function fizzBuzz() {
