@@ -49,7 +49,7 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
+  if(Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
     return "cat1";
   }
   else if(Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
@@ -82,9 +82,27 @@ function fizzBuzz(numbers) {
 //console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let convert = {
+    "a": '1',
+    "e": '2',
+    "i": '3',
+    "o": '4',
+    "u": '5',
+  }
+  
+  for(let j = 0 ; j < str.length ; j += 1){
+    for (let key in convert){
+      if (key == str[j]) {
+        str[j] = convert[str[j]];
+      }
+    }
+  }
+  return str;
 }
+
+console.log(encode("hi there!"));
+
 function decode() {
   // seu código aqui
 }
