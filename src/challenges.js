@@ -13,15 +13,34 @@ function compareTrue(a, b) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let area = base * height;
+  let area = (base * height)/2;
   return area;
 
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let array = [];
+  let save = "";
+  for(let cont=0;cont<string.length;cont++){
+    if(string[cont]===" " || cont==string.length-1){
+      if(cont==string.length-1){
+        save += string[cont];
+        array.push(save);
+        save = "";
+      }else {
+        array.push(save);
+        save = "";
+      }
+    }
+    else{
+      save += string[cont];
+    }
+  }
+  return array;
 }
+console.log(splitSentence("trybe be aleluia"));
 
 // Desafio 4
 function concatName() {
