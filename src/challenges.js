@@ -50,9 +50,19 @@ var numeros = [1, 5, 7, 7, 7, 5, 6, 7, 6, 3, 5, 7];
 console.log(highestCount(numeros));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  var distancia1 = mouse - cat1
+  var distancia2 = mouse - cat2
+
+  if (distancia1 < distancia2){
+    return 'cat1'
+  } else if (distancia2 < distancia1) {
+    return 'cat2'
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 }
+console.log(catAndMouse( 4, -7, -1))
 
 // Desafio 8
 function fizzBuzz() {
