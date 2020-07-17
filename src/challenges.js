@@ -15,26 +15,28 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   let palavras = [];
-  let uniaoPalavra = "";
+  let uniaoPalavra = '';
   for (let contador = 0; contador < frase.length; contador += 1) {
-    if (frase[contador] != " ") {
+    if (frase[contador] !== ' ') {
       uniaoPalavra += frase[contador]
     }
     else {
       palavras.push(uniaoPalavra);
-      uniaoPalavra = "";
+      uniaoPalavra = '';
     } if (contador === frase.length - 1) {
       palavras.push(uniaoPalavra);
-      uniaoPalavra = "";
+      uniaoPalavra = '';
     }
   } return palavras;
 }
 // console.log(splitSentence("ola mundo")); - - teste exercicio 3
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+  let guardaNomes = '';
+  guardaNomes += lista[lista.length - 1] + ', ' + lista[0];
+  return guardaNomes;
 }
-
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));teste questão 4
 // Desafio 5
 function footballPoints() {
   // seu código aqui
