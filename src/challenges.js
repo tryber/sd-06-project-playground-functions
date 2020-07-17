@@ -15,17 +15,33 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  return [arr[arr.length - 1], arr[0]];
+  return arr[arr.length - 1], arr[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return 3 * wins + ties;
+  return (3 * wins) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arr) {
+  let countNumber = 0;
+  let countRepeated = 0;
+
+  for (let index in arr) {
+    let number = arr[index];
+    for (let compareIndex in arr) {
+      if (number === arr[compareIndex]) {
+        countNumber += 1;
+      }
+    }
+    if (countNumber > countRepeated) {
+      countRepeated = countNumber;
+    }
+    countNumber = 0;
+  }
+
+  return countRepeated;
 }
 
 // Desafio 7
