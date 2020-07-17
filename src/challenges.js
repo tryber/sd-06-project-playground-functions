@@ -1,6 +1,5 @@
 // Desafio 1
 function compareTrue(boolOne,boolTwo) {
-  // seu código aqui
   if (boolOne===true && boolTwo===true){
     return true;
   } else {
@@ -11,24 +10,26 @@ function compareTrue(boolOne,boolTwo) {
 
 // Desafio 2
 function calcArea(base , height) {
-  // seu código aqui
   return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(palavras) {
-  let novoArray = [];
-    for (let x in palavras){
-      novoArray =+ palavras.split() 
-    }
-    return novoArray;
-  // seu código aqui
+  let novoArray = palavras.split(" ");
+  return novoArray;
 }
+//console.log(splitSentence("teste trybe escola"));
 
 // Desafio 4
-function concatName() {
+function concatName(arrayPalavras) {
+  let palavras = "";
+    palavras += arrayPalavras[arrayPalavras.length-1];
+    palavras += ", "
+    palavras += arrayPalavras[0];
+    return palavras;
   // seu código aqui
 }
+//console.log(concatName(['teste','trybe','escola']));
 
 // Desafio 5
 function footballPoints() {
