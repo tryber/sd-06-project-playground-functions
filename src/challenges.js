@@ -2,19 +2,18 @@
 function compareTrue(value1, value2) {
     return value1 && value2;
 }
-
-
 // Desafio 2
 function calcArea(base, altura) {
     let result = ((base * altura) / 2);
     return result;
 }
-
-
 // Desafio 3
-function splitSentence() {
-    // seu código aqui
+function splitSentence(sentence) {
+    let result = sentence.split('');
+    return result;
 }
+console.log(splitSentence("world"))
+
 
 // Desafio 4
 function concatName() {
