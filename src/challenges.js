@@ -17,9 +17,17 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let novoNome = "";
+  for(let chave in nomes){
+      if(chave == 0 || chave == nomes.length-1){
+        novoNome += " "+nomes[(nomes.length-1)-chave];
+      }
+  }
+  return novoNome;
 }
+nomes = ['joao', 'grillo', 'xico', 'padeiro', 'vicentao'];
+console.log(concatName(nomes));
 
 // Desafio 5
 function footballPoints() {
