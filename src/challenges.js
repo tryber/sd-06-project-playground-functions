@@ -103,7 +103,7 @@ function fizzBuzz(numeros) {
 // Desafio 9
 function encode(palavras) {
   // seu código aqui
-  let result =[];
+  let result = [];
   let verifica = palavras.split('');
   for (let i in palavras) {
     if (verifica[i] == 'a') {
@@ -126,6 +126,7 @@ function encode(palavras) {
 
 function decode(palavras) {
   // seu código aqui
+  let result = [];
   let verifica = palavras.split('');
   for (let i in palavras) {
     if (verifica[i] == '1') {
@@ -141,9 +142,9 @@ function decode(palavras) {
     } else {
       verifica[i] = verifica[i];
     }
-    palavra = verifica;
+    result += verifica[i];
   }
-  return palavra;
+  return result;
 }
 
 // Desafio 10
