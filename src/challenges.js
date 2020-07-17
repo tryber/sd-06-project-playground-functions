@@ -48,7 +48,6 @@ function highestCount(numeros) {
       maiorNumero = numeros[n] 
     }    
   }
-  for (n = 0)
 }
 
 // Desafio 7
