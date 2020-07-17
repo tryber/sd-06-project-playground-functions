@@ -48,19 +48,19 @@ footballPoints(1,4);
 
 // Desafio 6
 function highestCount(numbers) {
-  //let repetitionCount = 0;
+  let repetitionCount = 0;
   let highestNumber = 0;
 
   for (let index in numbers) {
         if (numbers[index] > highestNumber) {
-          highestNumber = numbers[index];
-          //repetitionCount += 1;
+          highestNumber = numbers[index];      
         }
-      }
-  return highestNumber;
+    repetitionCount++;
+  }
+  return repetitionCount;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+highestCount([9, 1, 9, 9, 3, 9, 5, 7]);
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -97,7 +97,7 @@ function fizzBuzz(numbers) {
   return newArray;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45])); 
+fizzBuzz([2, 15, 7, 9, 45]); 
 
 // Desafio 9
 function encode(string) {
@@ -122,8 +122,7 @@ function encode(string) {
  
   return newString;
 }
-let string = "hi there"
-console.log(encode(string));
+encode(string);
 
 function decode(numbers) {
 
@@ -140,7 +139,7 @@ function techList(arrayTechnology,name) {
     }
   return object;
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella"));
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella");
 
 // Desafio 11
 function generatePhoneNumber() {
