@@ -27,9 +27,18 @@ function calcArea(base, alt) {
 console.log(calcArea(12,8));
 
 // Desafio 3
-function splitSentence() {
+let sentenceArray = [];
+function splitSentence(string) {
   // seu código aqui
+  if (typeof string === 'string') {
+    sentenceArray = string.split(" ");
+  }
+  else {
+    console.log('erro: parâmetro deve ser um texto.');
+  }
+  return sentenceArray;
 }
+console.log(splitSentence('go Trybe !'));
 
 // Desafio 4
 function concatName() {
