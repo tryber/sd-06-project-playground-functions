@@ -37,8 +37,9 @@ function splitSentence(param) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(param) {
+  resultado = param[param.length -1] + ', ' + param[0];
+  return resultado;
 }
 
 // Desafio 5
