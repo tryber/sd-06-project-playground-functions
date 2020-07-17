@@ -101,11 +101,11 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode(palavra) {
+function encode(palavras) {
   // seu código aqui
-  let verifica = palavra.split('');
+  let verifica = palavras.split('');
   let trocado = [];
-  for (let i in palavra) {
+  for (let i in palavras) {
     if (verifica[i] == a) {
       verifica[i] = 1;
     } else if (verifica[i] == e) {
@@ -123,11 +123,11 @@ function encode(palavra) {
   }
   return trocado;
 }
-function decode(palavra) {
+function decode(palavras) {
   // seu código aqui
-  let verifica = palavra.split('');
+  let verifica = palavras.split('');
   let trocado = [];
-  for (let i in palavra) {
+  for (let i in palavras) {
     if (verifica[i] == 1) {
       verifica[i] = a;
     } else if (verifica[i] == 2) {
