@@ -2,6 +2,8 @@
 function compareTrue(firstBoolean, secondBoolean) {
   if (firstBoolean && secondBoolean) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -12,12 +14,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  return phrase.split(" ");
+  return phrase.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
