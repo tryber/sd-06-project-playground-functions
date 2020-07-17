@@ -22,21 +22,36 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(array) {
-  let newArray = array[array.length - 1] + ', ' + array[0];
+  let newArray = array[array.length - 1].concat(', ', array[0]);
 
   return newArray;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = 3 * wins + ties;
+  let points = (3 * wins) + ties;
 
   return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maior = 0;
+  let counter = 0;
+
+  for (let x = 0; x < array.length; x += 1) {
+    if (array[x] > maior) {
+      maior = array[x];
+    }
+  }
+
+  for (let x = 0; x < array.length; x += 1) {
+    if (array[x] === maior) {
+      counter += 1;
+    }
+  }
+
+  return counter;
 }
 
 // Desafio 7
