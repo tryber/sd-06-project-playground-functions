@@ -2,7 +2,7 @@
  
  function compareTrue() {
   
-  let a = false;
+  let a = true;
   let b = true;
 
   if ( a && b) {
