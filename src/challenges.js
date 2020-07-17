@@ -52,11 +52,11 @@ if (distCat2 < 0) {
   distCat2 = distCat2 * (-1);
 }
 if (distCat1 < distCat2){
-  return console.log("cat1");
+  return "cat1";
 } else if (distCat1 > distCat2){
-    return console.log("cat2");
+    return "cat2";
 } else {
-      return console.log("os gatos trombam e o rato foge");
+      return "os gatos trombam e o rato foge";
 }
 }
 
