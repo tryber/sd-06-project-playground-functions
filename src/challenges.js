@@ -29,12 +29,12 @@ function concatName(nomes) {
 
 
 
-
-
-
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let puntosWins = wins * 3;
+  let puntosTotales = ties + puntosWins;
+  return puntosTotales;
 }
 
 // Desafio 6
