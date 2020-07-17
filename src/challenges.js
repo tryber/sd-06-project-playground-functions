@@ -13,9 +13,13 @@ console.log(compareTrue(true, true));
 
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, heigth){
+  let resultado = (base * heigth) / 2;
+  return resultado;
 }
+
+console.log(calcArea(5, 10));
+
 
 // Desafio 3
 function splitSentence() {
