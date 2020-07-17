@@ -19,20 +19,32 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(list) {
-  let string = list[list.length - 1]+", "+list[0];
+  let string = list[list.length - 1] + ', ' + list[0];
   return string
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  totalScore = (wins *3) + ties;
+  totalScore = 0;
+  totalScore = (wins * 3) + ties;
   return totalScore;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numbers) {
+  let highestNumber = 0;
+  let value1 = 0;
+  for (let i=0; i<numbers.length;i++) {
+    if (numbers[i] > highestNumber) {
+        highestNumber = numbers[i];
+    }
+  }
+  for (let i=0; i<numbers.length;i++) {
+    let value1 = 0;
+    if (highestNumber === numbers[i]) {
+      value1 += 1;
+    }
+  } return value1
 
 // Desafio 7
 function catAndMouse() {
