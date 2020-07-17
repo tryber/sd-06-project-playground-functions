@@ -85,13 +85,19 @@ function fizzBuzz(array) {
             //é divisível ṕor 3
             if (array[i] % 5 === 0) {
                 //é divisível pelos dois
-                console.log(fizzBuzz);
+                console.log("fizzBuzz");
+                return "fizzBuzz";
+            } else {
+                console.log("fizz");
+                return "fizz";
             }
         } else if (array[i] % 5 === 0) {
             //é divisível por 5
             console.log("buzz");
+            return "buzz";
         } else {
             console.log("bug!");
+            return "bug!";
         }
     }
 }
