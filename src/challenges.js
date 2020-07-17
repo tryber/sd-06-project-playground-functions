@@ -22,13 +22,15 @@ return arrayString;
 }
 
 // Desafio 4
-function concatName(name) {
- let name2 = [];
-  for(let index = name.length -1 ; index >= 0 ; index -= 1){
-   name2 += name[index];
+function concatName(name1) {
+  let name2 = "";
+  for(let index = name1.length -1 ; index >= 0 ; index -= 1){
+   name2 += name1[index];
+   name2 += ", ";
   }
   return name2;
 }
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -58,21 +60,29 @@ let bigger=0;
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
+  let difPosition1 = Math.abs(mouse - cat1);
+  let difPosition2 = Math.abs(mouse - cat2);
+  if(difPosition1 < difPosition2){
+    return "cat1";
+  }else if(difPosition2 < difPosition1){
+    return"cat2";
+  }else{
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
   
-  for(let index =0 ; index <= array.length-1; index += 1){
-    if(array[index] % 3 == 0 && array[index] % 5 == 0){
-      console.log("fizzBuzz") ;
-    }else if(array[index] % 3 == 0 && array[index] % 5 != 0){
-      console.log("fizz");
-    }else if(array[index] % 3 != 0 && array[index] % 5 == 0){
-     console.log("buzz");
+  for(let index = 0 ; index <= array.length-1; index += 1){
+    if((array[index] % 3 == 0) && (array[index] % 5 == 0)){
+      return "fizzBuzz";
+    }else if((array[index] % 3 == 0) && (array[index] % 5 != 0)){
+      return "fizz";
+    }else if((array[index] % 3 != 0) && (array[index] % 5 == 0)){
+      return "buzz";
     }else{
-      console.log("bug");
+      return "bug";
     }
   }
 }
