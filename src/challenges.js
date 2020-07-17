@@ -108,6 +108,9 @@ function decode(stringNumeros) {
 
 // Desafio 10
 function techList(nomesDeTecnologias , name) {
+  if (nomesOrdenados == null) {
+    return 'Vazio!'
+  }
   let nomesOrdenados =  nomesDeTecnologias.sort();
   let listaObjetos = [];
   for (let x in nomesOrdenados){
@@ -124,10 +127,48 @@ function techList(nomesDeTecnologias , name) {
 //  console.log(techList(a,b));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numeroTelefone) {
+  //  verificar o tamanho do array
+  
+  if (numeroTelefone.length != 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  //  verificar se o número repetiu mais que três vezes
+    let contador = 0;
+    let repetiu = false;
+    let listaAuxiliar = numeroTelefone;
+    for (let i = 0; i < numeroTelefone.length ; i += 1) {
+      for (let j = 0; j < numeroTelefone.length ; j += 1){
+        if (listaAuxiliar[i] === numeroTelefone[j]){
+            contador += 1
+            if (contador === 3) {
+              repetiu = true;
+            }
+        }
+      }
+    contador=0;
+  }
+  // estabelecendo as condições de return
+  for (let x in numeroTelefone){
+    if (numeroTelefone[x] < 0 || numeroTelefone[x] > 9 || repetiu === true ) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  // Lógica de programação
+  //  generatePhoneNumber deverá retornar (12) 34567-8901.
+  // months.splice(1, 0, 'Feb'); inserts at index 1
+  numeroTelefone.splice(0,0,'(')
+  numeroTelefone.splice(3,0,')')
+  numeroTelefone.splice(4,0,' ')
+  numeroTelefone.splice(9,0,'-')
+  
+  let numeroFormatado = '';
+  for (let x in numeroTelefone){
+    numeroFormatado += numeroTelefone[x]
+  }
+  return numeroFormatado;
 }
-
+//  generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
