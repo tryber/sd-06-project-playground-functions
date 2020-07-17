@@ -2,24 +2,25 @@
 function compareTrue(value1, value2) {
     return value1 && value2;
 }
-// Desafio 2
+console.log(compareTrue(2, 2))
+    // Desafio 2
 function calcArea(base, altura) {
     let result = ((base * altura) / 2);
     return result;
 }
-// Desafio 3
+console.log(calcArea(3, 2))
+    // Desafio 3
 function splitSentence(sentence) {
     divisao = sentence.split(' ');
     return divisao;
-
 }
 console.log(splitSentence("hello world"))
-
-
-// Desafio 4
-function concatName() {
-    // seu código aqui
+    // Desafio 4
+function concatName(nomesConcatenados) {
+    return [nomesConcatenados[nomesConcatenados.length - 1], nomesConcatenados[0]]
 }
+let array = ["asda", "qweqweq", "zxczxc", "poipo"]
+console.log(concatName(array))
 
 // Desafio 5
 function footballPoints() {
