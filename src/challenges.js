@@ -58,15 +58,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numbers) {
   // seu código aqui
   let retorno = [];
-  for (let posicaoAtual = 0; posicaoAtual <= numbers.lenght; posicaoAtual =+ 1) {
-    if (numbers[posicaoAtual] % 3 === 0 && numbers[posicaoAtual] % 5 === 0) {
-      retorno.push = ("fizzBuzz");
-    } else if (numbers[posicaoAtual] % 3 === 0 && numbers[posicaoAtual] % 5 ==! 0) {
-      retorno.push = ("fizz");
-    } else if (numbers[posicaoAtual] % 3 ==! 0 && numbers[posicaoAtual] % 5 === 0) {
-      retorno.push = ("buzz");
+  for (let posicaoAtual = 0; posicaoAtual < numbers.length; posicaoAtual++) {
+    if ((numbers[posicaoAtual] % 3 === 0) && (numbers[posicaoAtual] % 5 === 0)) {
+      retorno.push("fizzBuzz");
+    } else if ((numbers[posicaoAtual] % 3 === 0) && (numbers[posicaoAtual] % 5 !== 0)) {
+      retorno.push("fizz");
+    } else if ((numbers[posicaoAtual] % 3 !== 0) && (numbers[posicaoAtual] % 5 === 0)) {
+      retorno.push("buzz");
     } else {
-      retorno.push = ("bug!");
+      retorno.push("bug!");
     }
   }
   return retorno;
@@ -119,3 +119,4 @@ module.exports = {
   triangleCheck,
 }
 
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
