@@ -28,7 +28,7 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(strings) {
   return `${strings[strings.length - 1]}, ${strings[0]}`;
 }
 
@@ -140,7 +140,7 @@ function techList(techList, name) {
   
   const objectList = [];
   techList.sort();
-  
+
   for (let i = 0; i < techList.length; i += 1) {
     const tech = techList[i];
     objectList.push({tech, name});
