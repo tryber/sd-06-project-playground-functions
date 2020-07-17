@@ -84,19 +84,19 @@ function encode(message) {
   for (let i in letters) {
     switch (letters[i]) {
       case "a":
-        letters [i] = "1";
+        letters[i] = "1";
         break;
       case "e":
-        letters [i] = "2";
+        letters[i] = "2";
         break;
       case "i":
-        letters [i] = "3";
+        letters[i] = "3";
         break;
       case "o":
-        letters [i] = "4";
+        letters[i] = "4";
         break;
       case "u":
-        letters [i] = "5";
+        letters[i] = "5";
         break;
     }
     encodedMessage += letters[i];
@@ -110,22 +110,22 @@ function decode(m2ss1g2) {
   for (let i in l2tt2rs) {
     switch (l2tt2rs[i]) {
       case "1":
-        l2tt2rs [i] = "a";
+        l2tt2rs[i] = "a";
         break;
       case "2":
-        l2tt2rs [i] = "e";
+        l2tt2rs[i] = "e";
         break;
       case "3":
-        l2tt2rs [i] = "i";
+        l2tt2rs[i] = "i";
         break;
       case "4":
-        l2tt2rs [i] = "o";
+        l2tt2rs[i] = "o";
         break;
       case "5":
-        l2tt2rs [i] = "u";
+        l2tt2rs[i] = "u";
         break;
     }
-  decodedMessage += l2tt2rs[i];
+    decodedMessage += l2tt2rs[i];
   }
   return decodedMessage;
 }
