@@ -51,7 +51,7 @@ function highestCount(highNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let winner = '';
 
-  if ((mouse - cat1) === (mouse - cat2) {
+  if ((mouse - cat1) === (mouse - cat2)) {
     winner = 'os gatos trombam e o rato foge';
   } else if (mouse - cat1 < mouse - cat2) {
     winner = 'cat2';
