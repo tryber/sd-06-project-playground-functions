@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2'
   }
 }
-console.log(catAndMouse(4,3,2))
+console.log(catAndMouse(4,4,4))
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
@@ -86,7 +86,7 @@ function fizzBuzz(array) {
     }
     return novo;
   }
-console.log(fizzBuzz([2,15,7,9,45]))
+console.log(fizzBuzz([7,9]))
 // Desafio 9
 function encode() {
   // seu código aqui
