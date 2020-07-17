@@ -31,6 +31,7 @@ function concatName(arrayDeNomes) {
   let ultimoEprimeiro = [];
   let primeiroItem = arrayDeNomes[0];
   let ultimoItem = arrayDeNomes[arreyDeNomes.length-1];
+  ultimoEprimeiro = [ultimoItem, primeiroItem];
   return ultimoEprimeiro;
 }
 
