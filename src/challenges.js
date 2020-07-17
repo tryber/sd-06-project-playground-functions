@@ -14,13 +14,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(frase) {
-  let frase = "go Trybe";
-  let pala1 = frase.length;
-  let pala2 = frase[frase.length-1];
+function splitSentence() {
 
-  //return( frase[0], frase[1]);
-}console.log(frase);
+}
 
 // Desafio 4
 function concatName() {
