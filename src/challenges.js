@@ -12,9 +12,13 @@ function compareTrue(booleano1, booleano2) {
 //console.log(compareTrue(valor1, valor2));
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base*height)/2;
 }
+let valor1 = 10;
+let valor2 = 50;
+console.log(calcArea(valor1, valor2));
 
 // Desafio 3
 function splitSentence() {
