@@ -15,7 +15,9 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  return arr[arr.length - 1], arr[0];
+  let arrFirst = arr[0];
+  let arrLast = arr[arr.length - 1];
+  return arrLast.concat(', ', arrFirst);
 }
 
 // Desafio 5
@@ -43,6 +45,7 @@ function highestCount(arr) {
 
   return countRepeated;
 }
+
 
 // Desafio 7
 function catAndMouse() {
