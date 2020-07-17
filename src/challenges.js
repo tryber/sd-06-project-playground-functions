@@ -86,7 +86,7 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode(inputString) {
+function encode(inputStringToEncode) {
   let changes = {
     a: 1,
     e: 2,
@@ -94,52 +94,101 @@ function encode(inputString) {
     o: 4,
     u: 5,
   };
-  let inputArr = [];
+  let inputArrToEncode = [];
   let encodeString = "";
 
-  for (let index in inputString) {
-    inputArr.push(inputString[index]);
+  for (let index in inputStringToEncode) { // transforma inputStringToEncode em um array
+    inputArrToEncode.push(inputStringToEncode[index]);
   }
-
-  for (let index in inputArr) {
-    switch (inputArr[index]) {
+  
+  for (let index in inputArrToEncode) { // troca o que é vogal por número
+    switch (inputArrToEncode[index]) {
       case "a": {
-        inputArr[index] = changes.a;
+        inputArrToEncode[index] = changes.a;
         break;
       }
 
       case "e": {
-        inputArr[index] = changes.e;
+        inputArrToEncode[index] = changes.e;
         break;
       }
 
       case "i": {
-        inputArr[index] = changes.i;
+        inputArrToEncode[index] = changes.i;
         break;
       }
 
       case "o": {
-        inputArr[index] = changes.o;
+        inputArrToEncode[index] = changes.o;
         break;
       }
 
       case "u": {
-        inputArr[index] = changes.u;
+        inputArrToEncode[index] = changes.u;
         break;
       }
     }
   }
   
-  for (let index in inputArr) {
-    encodeString += inputArr[index];
+  for (let index in inputArrToEncode) { // transforma o array em string
+    encodeString += inputArrToEncode[index];
   }
 
   return encodeString;
 }
 
-function decode() {
-  // seu código aqui
+function decode(inputStringToDecode) {
+  let changes = {
+    n1: "a",
+    n2: "e",
+    n3: "i",
+    n4: "o",
+    n5: "u",
+  };
+  let inputArrToDecode = [];
+  let decodeString = "";
+
+  for (let index in inputStringToDecode) { // transforma inputStringToDecode em um array
+    inputArrToDecode.push(inputStringToDecode[index]);
+  }
+  
+  for (let index in inputArrToDecode) { // troca o que é número por vogal
+    switch (inputArrToDecode[index]) {
+      case "1": {
+        inputArrToDecode[index] = changes.n1;
+        break;
+      }
+
+      case "2": {
+        inputArrToDecode[index] = changes.n2;
+        break;
+      }
+
+      case "3": {
+        inputArrToDecode[index] = changes.n3;
+        break;
+      }
+
+      case "4": {
+        inputArrToDecode[index] = changes.n4;
+        break;
+      }
+
+      case "5": {
+        inputArrToDecode[index] = changes.n5;
+        break;
+      }
+    }
+  }
+  
+  for (let index in inputArrToDecode) { // transforma o array em string
+    decodeString += inputArrToDecode[index];
+  }
+
+  return decodeString;
 }
+
+console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList() {
