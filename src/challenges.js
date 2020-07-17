@@ -131,7 +131,7 @@ function techList(array, name) {
   for(i in ordenado){
     final.push({"tech" : ordenado[i], "name" : name})
   }
-  if(array = []){
+  if(array === []){
     return "Vazio!"
   } else {
     return final
