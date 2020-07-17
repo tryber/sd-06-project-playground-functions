@@ -113,7 +113,7 @@ function encode(string) {
   let stringArray = string.split('');
   let encodedString = [];
   for (let i in stringArray) {
-    switch(stringArray[i]) {
+    switch (stringArray[i]) {
       case 'a':
         encodedString.push('1');
         break;
@@ -141,7 +141,7 @@ function decode(string) {
   let stringArray = string.split('');
   let encodedString = [];
   for (let i in stringArray) {
-    switch(stringArray[i]) {
+    switch (stringArray[i]) {
       case '1':
         encodedString.push('a');
         break;
@@ -169,17 +169,80 @@ function techList(tech, name) {
   // seu código aqui
   let lista = [];
   tech.sort();
-  if (Array.isArray(tech) && tech.length != 0) {
+  if (Array.isArray(tech) && tech.length !== 0) {
     for (let i in tech) {
-      lista.push({'tech': tech[i], name: name});
+      lista.push({ tech: tech[i], name: name });
     }
+    return lista;
   }
-  return lista;
+  return 'Vazio!';
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(number) {
   // seu código aqui
+  if (number.length === 11) {
+    let maxNumberCount = 0;
+    for (let i in number) {
+      let numberTest = number[i];
+      let numberCount = 0;
+      for (let testIndex in number) {
+        if (numberTest === number[testIndex + 1]) {
+          numberCount += 1;
+        }
+      }
+      if (numberCount > maxNumberCount) {
+        maxNumberCount = numberCount;
+      }
+    }
+    if (maxNumberCount < 3) {
+      let newNumber = [];
+      for (let i in number) {
+        if (number[i] >= 0 && number[i] <= 9) {
+          switch (i) {
+            case '0':
+              newNumber.push('(', number[i]);
+              break;
+            case '1':
+              newNumber.push(number[i], ')');
+              break;
+            case '2':
+              newNumber.push(number[i]);
+              break;
+            case '3':
+              newNumber.push(number[i]);
+              break;
+            case '4':
+              newNumber.push(number[i]);
+              break;
+            case '5':
+              newNumber.push(number[i]);
+              break;
+            case '6':
+              newNumber.push(number[i], '-');
+              break;
+            case '7':
+              newNumber.push(number[i]);
+              break;
+            case '8':
+              newNumber.push(number[i]);
+              break;
+            case '9':
+              newNumber.push(number[i]);
+              break;
+            case '10':
+              newNumber.push(number[i]);
+          }
+        } else {
+            return 'não é possível gerar um número de telefone com esses valores';
+          }
+      }
+      return newNumber;
+    }
+  
+  } else {
+    return 'Array com tamanho incorreto.';
+  }
 }
 
 // Desafio 12
