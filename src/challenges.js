@@ -65,24 +65,24 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 
 // Desafio 8
 function fizzBuzz(a = [2, 15, 7, 9, 45]) {
-  let b = []
+  let b = [];
   for ( x in a){
-    let i = a[x]
+    let i = a[x];
     
     
     if(i % 3 == 0 && i % 5 == 0){
-      b.push('fizzBuzz')
+      b.push('fizzBuzz');
     }
     else if (i % 3 == 0){
-      b.push('fizz')
+      b.push('fizz');
     }
     else if (i % 5 == 0){
-      b.push('buzz')
+      b.push('buzz');
     }
     else
-      b.push('bug!')
+      b.push('bug!');
   }
-return b
+return b;
 }
 
 // Desafio 9
