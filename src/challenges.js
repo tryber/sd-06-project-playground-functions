@@ -6,33 +6,33 @@ function compareTrue(value1, value2) {
     return false;
   }
 }
-//console.log(compareTrue(true, true));
+// console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height)/2;
   return area;
 }
-//console.log(calcArea(10, 5));
+// console.log(calcArea(10, 5));
 
 // Desafio 3
 function splitSentence(string) {
   return string.split(' ');
 }
-//console.log(splitSentence('go Trybe'));
+// console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(lista) {
   return lista[lista.length - 1] + ', ' + lista[0];
 }
-//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (wins * 3) + (ties);
   return points;
 }
-//console.log(footballPoints(3, 1));
+// console.log(footballPoints(3, 1));
 
 // Desafio 6
 function highestCount(list) {
@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-//console.log(catAndMouse(1, 2, 3));
+// console.log(catAndMouse(1, 2, 3));
 
 // Desafio 8
 function fizzBuzz(list) {
@@ -87,12 +87,43 @@ function fizzBuzz(list) {
 // console.log(fizzBuzz(numbers));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString = string;
+  for (i in string) {
+    if (string[i] === 'a') {
+      newString = newString.replace('a', '1');
+    } else if (string[i] === 'e') {
+      newString = newString.replace('e', '2');
+    } else if (string[i] === 'i') {
+      newString = newString.replace('i', '3');
+    } else if (string[i] === 'o') {
+      newString = newString.replace('o', '4');
+    }  else if (string[i] === 'u') {
+      newString = newString.replace('u', '5');
+    }
+  }
+  return newString;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('hi there!'));
+
+function decode(string) {
+  let newString = string;
+  for (i in string) {
+    if (string[i] === '1') {
+      newString = newString.replace('1', 'a');
+    } else if (string[i] === '2') {
+      newString = newString.replace('2', 'e');
+    } else if (string[i] === '3') {
+      newString = newString.replace('3', 'i');
+    } else if (string[i] === '4') {
+      newString = newString.replace('4', 'o');
+    }  else if (string[i] === '5') {
+      newString = newString.replace('5', 'u');
+    }
+  }
+  return newString;
 }
+// console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
