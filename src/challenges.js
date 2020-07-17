@@ -4,7 +4,7 @@ function compareTrue(logico1, logico2) {
   if (logico1 && logico2) {
     resposta = true;
   }
-  return retorno;
+  return resposta;
 }
 
 // Desafio 2
@@ -23,7 +23,8 @@ function splitSentence(frase) {
 function concatName(meuArray) {
   let primeiraPalavra = meuArray[0];
   let ultimaPalavra = meuArray[meuArray.length - 1];
-  return ultimaPalavra + ", " + primeiraPalavra;
+  let resposta = ultimaPalavra + ", " + primeiraPalavra;
+  return resposta;
 }
 
 // Desafio 5
