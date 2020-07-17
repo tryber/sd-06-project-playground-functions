@@ -3,8 +3,6 @@ function compareTrue(param1, param2) {
   // seu código aqui
   if (param1 && param2) {
     return true;
-  } else {
-    return false;
   }
 }
 
@@ -17,16 +15,15 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  let acumulador = "";
+  let acumulador = '';
   let novaLista = [];
-  
   for (let indice in frase) {
     let elemento = frase[indice]
-    if (elemento !== " ") {
+    if (elemento !== ' ') {
       acumulador += elemento;
     } else {
       novaLista.push(acumulador);
-      acumulador = "";
+      acumulador = '';
     }
   }
   novaLista.push(acumulador)
@@ -64,7 +61,7 @@ function highestCount(arrayNumeros) {
 
   for (let i in arrayNumeros) {
     if (arrayNumeros[i] === maiorValor) {
-      ocorrencias +=1;
+      ocorrencias += 1;
     }
   }
   return ocorrencias;
@@ -82,10 +79,10 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distMouseCat1 === distMouseCat2) {
     return 'os gatos trombam e o rato foge';
   }
-
   if (distMouseCat1 < distMouseCat2) {
     return 'cat1';
-  } else {
+  }
+  if (distMouseCat2 < distMouseCat1) {
     return 'cat2';
   }
 }
@@ -96,7 +93,6 @@ function fizzBuzz(arrayNumeros) {
   let novaArray = [];
   for (let i in arrayNumeros) {
     let numero = arrayNumeros[i];
-  
     if (numero % 3 === 0 && numero % 5 === 0) {
       novaArray.push('fizzBuzz');
     } else if (numero % 3 === 0) {
@@ -104,13 +100,51 @@ function fizzBuzz(arrayNumeros) {
     } else if (numero % 5 === 0) {
       novaArray.push('buzz');
     } else {
-      novaArray.push('bug!');;
+      novaArray.push('bug!');
     }
   }
   return novaArray;
 }
 
 // Desafio 9
+function codec(letter) {
+  switch (letter) {
+    case 'a':
+      return 1;
+      break;
+    case 'e':
+      return 2;
+      break;
+    case 'i':
+      return 3;
+      break;
+    case 'o':
+      return 4;
+      break;
+    case 'u':
+      return 5;
+      break;
+    case '1':
+      return "a";
+      break;
+    case '2':
+      return "e";
+      break;
+    case '3':
+      return "i";
+      break;
+    case '4':
+      return "o";
+      break;
+    case '5':
+      return "u";
+      break;
+    default:
+      return letter;
+      break;
+  }
+}
+
 function encode(frase) {
   // seu código aqui
   let novaFrase = [];
@@ -119,7 +153,7 @@ function encode(frase) {
     let conversao = codec(letra);
     novaFrase.push(conversao);
   }
-  return novaFrase.join("");
+  return novaFrase.join('');
 }
 
 function decode(frase) {
@@ -130,49 +164,11 @@ function decode(frase) {
     let conversao = codec(letra);
     novaFrase.push(conversao);
   }
-  return novaFrase.join("");
-}
-
-function codec(letter) {
-  switch (letter) {
-    case "a":
-      return 1;    
-      break;
-    case "e":
-      return 2;
-      break;
-    case "i":
-      return 3;
-      break;
-    case "o":
-      return 4;
-      break;
-    case "u":
-      return 5;
-      break;
-    case "1":
-      return "a";
-      break;
-    case "2":
-      return "e";
-      break;
-    case "3":
-      return "i";
-      break;
-    case "4":
-      return "o";
-      break;
-    case "5":
-      return "u";
-      break;
-    default:
-      return letter;
-      break;
-  }
+  return novaFrase.join('');
 }
 
 // Desafio 10
-function techList() {
+function techList(tecnologias) {
   // seu código aqui
 }
 
