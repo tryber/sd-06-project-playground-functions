@@ -1,14 +1,14 @@
 // Desafio 1
 let res;
-function compareTrue(bool, bool1) {
+function compareTrue(num, num1) {
   // seu código aqui
-  if(bool === 'true' && bool1 === 'true'){
+  if(num < 10 && num1 > 10){
     return 'true'
   } else {
     return 'false'
   }
 }
-console.log(compareTrue('true','false'))
+console.log(compareTrue( 9,8))
 
 // Desafio 2
 function calcArea() {
