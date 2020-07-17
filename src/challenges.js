@@ -1,13 +1,14 @@
 // Desafio 1
-function compareTrue(num, num1) {
+function compareTrue() {
   // seu código aqui
-  if ( num && num1 === num){
-    return 'true'
+  let res = false;
+  if(a === true && b === true) {
+    res = true;
   } else {
-    return 'false'
+    res = false;
   }
+  return res;
 }
-console.log(compareTrue( 12,12))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -17,9 +18,12 @@ function calcArea(base, height) {
 console.log(calcArea(15,28))
 
 // Desafio 3
-function splitSentence() {
+
+function splitSentence(string) {
   // seu código aqui
+  return string.split(' ')
 }
+console.log(splitSentence('go Trybe'))
 
 // Desafio 4
 function concatName() {
