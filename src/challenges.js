@@ -2,9 +2,8 @@
 function compareTrue(bol1, bol2) {
   if (bol1 && bol2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -62,22 +61,34 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs (cat2 - mouse);
 
   if (distanceCat1 < distanceCat2) {
-    return cat1;
+    return "cat1";
   } else if (distanceCat2 < distanceCat1) {
-    return cat2
+    return "cat2";
   } else {
     console.log ("Os gatos trombam e o rato foge");
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  // Percorrer o array e criar as condições para posição do array
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 !== 0) {
+      numbers[i] = "fizz";
+    } else if (numbers[i] % 5 === 0 && numbers[i] % 3 !== 0) {
+      numbers[i] = "buzz"
+    } else if (numbers[i] % 3 === 0 || numbers[i] % 5 === 0) {
+      numbers[i] = "fizzBuzz"
+    } else {
+      numbers[i] = "bug!";
+    }
+  }
+  return numbers;
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  // Verificar 
 }
 function decode() {
   // seu código aqui
