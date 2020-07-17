@@ -62,20 +62,38 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
     // seu código aqui
-    cat1pos = cat1 - mouse;
-    cat2pos = cat2 - mouse;
+    let catpos1;
+    let catpos2;
 
-    if (cat1pos < cat2pos) {
-        console.log("O cat1 está mais perto do rato");
-        return "cat1";
-    } else if (cat2pos < cat1pos) {
-        console.log("O cat2 está mais perto do rato");
-        return "cat2";
+    // posição cat1
+    if (cat1 > mouse) {
+        catpos1 = cat1 - mouse;
     } else {
-        console.log("Os gatos trombam e o rato foge.");
+        catpos1 = mouse - cat1;
+    }
+
+    // posição cat2
+    if (cat2 > mouse) {
+        catpos2 = cat2 - mouse;
+    } else {
+        catpos2 = mouse - cat2;
+    }
+
+    if (catpos1 < catpos2) {
+        // cat1 mais perto
+        console.log("Cat1 pegou o rato!");
+        return "Cat1";
+    } else if (catpos2 < catpos1) {
+        // cat2 mais perto
+        console.log("Cat2 pegou o rato!");
+        return "Cat2";
+    } else {
+        // mesma distância
+        console.log("os gatos trombam e o rato foge");
         return "os gatos trombam e o rato foge";
     }
 }
+//catAndMouse(1, -4, -2);
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -98,7 +116,7 @@ function fizzBuzz(array) {
         }
     }
 }
-fizzBuzz([2, 15, 7, 9, 45]);
+//fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode(string) {
