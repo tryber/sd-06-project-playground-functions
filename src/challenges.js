@@ -159,12 +159,25 @@ function decode(param) {
 
   return decodada;
 }
-let x = 'hello';
-console.log(encode(x));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(lista, name) {
+  let objetosLista = [];
+  
+  if (lista !== []) {
+    lista = lista.sort();
+
+    for (let x = 0; x < lista.length; x += 1){
+      let novoObjeto = {tech: lista[x],
+        name: name,
+      };
+      objetosLista.push(novoObjeto);
+    }
+  } else {
+    objetosLista = 'Vazio!';
+  }
+
+  return objetosLista;
 }
 
 // Desafio 11
