@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 - OK
 function compareTrue(boolean1, boolean2) {
   // seu código aqui (iniciando)
   if (boolean1 === true && boolean2 === true) {
@@ -8,7 +8,7 @@ function compareTrue(boolean1, boolean2) {
   }
 }
 
-// Desafio 2
+// Desafio 2 - OK
 function calcArea(base, height) {
   // seu código aqui
   return ((base * height) / 2);
@@ -17,10 +17,10 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
- 
+
 }
 
-// Desafio 4
+// Desafio 4 - OK
 function concatName(string) {
   // seu código aqui
   primeiroItem = string[0];
@@ -28,26 +28,50 @@ function concatName(string) {
   return (ultimoitem + ", " + primeiroItem);
 }
 
-// Desafio 5
+// Desafio 5 - OK
 function footballPoints(wins, ties) {
   // seu código aqui
   return ((wins * 3) + ties);
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
 }
 
-// Desafio 7
-function catAndMouse() {
+// Desafio 7 - OK
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+
+  if (distanceCat1 === distanceCat2) {
+    return ("os gatos trombam e o rato foge");
+  } else if (distanceCat1 > distanceCat2) {
+    return ("cat1");
+  } else {
+    return ("cat2");
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let retorno = [];
+  for (let posicaoAtual = 0; posicaoAtual <= numbers.lenght; posicaoAtual =+ 1) {
+    if (numbers[posicaoAtual] % 3 === 0 && numbers[posicaoAtual] % 5 === 0) {
+      retorno.push = ("fizzBuzz");
+    } else if (numbers[posicaoAtual] % 3 === 0 && numbers[posicaoAtual] % 5 ==! 0) {
+      retorno.push = ("fizz");
+    } else if (numbers[posicaoAtual] % 3 ==! 0 && numbers[posicaoAtual] % 5 === 0) {
+      retorno.push = ("buzz");
+    } else {
+      retorno.push = ("bug!");
+    }
+  }
+  return retorno;
 }
+
 
 // Desafio 9
 function encode() {
@@ -94,4 +118,6 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+
 
