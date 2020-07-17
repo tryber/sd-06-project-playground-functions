@@ -29,9 +29,17 @@ console.log(splitSentence("Eu sou Júlia"))
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let result 
+  let primeiro = array[array.length -1]
+  let segundo = array[0]
+
+  result = primeiro + ", " + segundo
+  return result
+
 }
+
+console.log(concatName(['Júlia', 'Pôrto', 'Trybe', 'Course']))
 
 
 // Desafio 5
