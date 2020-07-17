@@ -22,48 +22,57 @@ function splitSentence(frase) {
 console.log(splitSentence('go trybe'));
 
 // Desafio 4
-function concatName() {
-    let first = array[0];
-    let last = array[array.length -1];
-
-    return (last + ", " + first);
-}
-
 let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-console.log(concatName.apply(null, array));
+function concatName() {
+  let first = array[0];
+  let last = array[ array.length -1 ];
+
+  return ( last + ', ' + first );
+}
+console.log(concatName(array));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  //quantos pontos no total?
   return (wins * 3) + ties;
 }
 
 console.log(footballPoints(2, 3));
 
 // Desafio 6
+let numbers = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(numbers));
+
 function highestCount() {
   let maiorNum = 0;
   let result = 0;
+  
 
-  for (let i = 0; i < numbers.length; i++){
-    if (maiorNum < numbers[i]){
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (maiorNum < numbers[i]) {
       maiorNum = numbers[i];
     }
 
-    if(maiorNum === numbers[i]) {
+    if (maiorNum === numbers[i]) {
       result += 1;
     }
   }
   return result;
 }
 
-let numbers = [9, 1, 2, 3, 9, 5, 7];
-console.log(highestCount.apply(numbers));
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let gato1 = (mouse - cat1);
+  let gato2 = (mouse - cat2);
+
+  if (gato1 < gato2){
+    return "cat1";
+  } else if (cat1 === mouse && cat2 === mouse){
+    return "os gatos trombam e o rato foge";
+  }
+
+  return "cat2";
 }
+console.log(catAndMouse(4, 4, 2));
 
 // Desafio 8
 function fizzBuzz() {
