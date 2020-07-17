@@ -65,12 +65,12 @@ function fizzBuzz(array) {
       resultado.push('buzz');
     } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       resultado.push('fizzBuzz');
+    } else {
+      resultado.push('bug!');
     }
-    resultado.push('bug!');
   }
   return resultado;
 }
-
 
 // Desafio 9
 function encode() {
