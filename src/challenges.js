@@ -42,7 +42,6 @@ function highestCount(array) {
 
   let globalCounter = 0;
   let compare;
-  let mostOccurring;
 
   for (let i = 0; i < array.length; i++) {
     let counter = 0;
@@ -56,7 +55,6 @@ function highestCount(array) {
 
       if (counter > globalCounter) {
         globalCounter = counter;
-        mostOccurring = array[j];
       }
     }
   }
@@ -65,8 +63,16 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+
+  let distCat1 = Math.abs(mouse - cat1)
+  let distCat2 = Math.abs(mouse - cat2)
+
+  if (distCat1 < distCat2) { return "cat1" }
+
+  if (distCat1 > distCat2) { return "cat2" }
+
+  return "os gatos trombam e o rato foge"
 }
 
 // Desafio 8
