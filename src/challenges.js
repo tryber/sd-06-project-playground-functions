@@ -80,19 +80,19 @@ function highestCount(numbers) {
 
     if (objeto[n]){
       objeto[n]+=1
-
-      if (n>=maxNum){
-        maxNum=n;
-        repeticoes=objeto[n];
-      }
     }
     else {
       objeto[n]=1
     }
+
+    if (n>=maxNum){
+      maxNum=n;
+      repeticoes=objeto[n];
+    }
   }
   return repeticoes;
 }
-let numbers=[9, 1, 2, 3, 9, 5, 7];
+let numbers=[0,4,4,4,9,2,1];
 console.log(highestCount(numbers))
 
 
@@ -104,10 +104,10 @@ function catAndMouse(param1,param2,param3) {
   let dist1=Math.abs(gat1-rat);
   let dist2=Math.abs(gat2-rat);
 
-  if (dist1>dist2){
+  if (dist1<dist2){
     return "gato1 posicao:" + gat1
   }
-  else if(dist1<dist2){
+  else if(dist1>dist2){
     return "gato2 posicao:" + gat2
   }
   else {
@@ -115,9 +115,9 @@ function catAndMouse(param1,param2,param3) {
   }
 }
 
-let rat=10;
+let rat=0;
 let gat1=3;
-let gat2=3;
+let gat2=2;
 console.log(catAndMouse(rat,gat1,gat2))
 
 
