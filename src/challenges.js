@@ -78,14 +78,25 @@ function highestCount(array2) {
   }
   return quantidadeDoMaior;
 }
-let valor1 = [9, 1, 2, 3, 9, 5, 7, 9, 10, 10];
-/* let valor2 = 50; */
-console.log(highestCount(valor1));
+/* let valor1 = [9, 1, 2, 3, 9, 5, 7, 9, 10, 10];
+let valor2 = 50;
+console.log(highestCount(valor1)); */
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)){
+    return "os gatos trombam e o rato foge";
+  }else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
+    return "cat1";
+  }else {
+    return "cat2";
+  }
 }
+let valor1 = 28;
+let valor2 = 50;
+let valor3 = 2;
+console.log(catAndMouse(valor1, valor2, valor3));
 
 // Desafio 8
 function fizzBuzz() {
