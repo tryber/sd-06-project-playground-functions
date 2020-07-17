@@ -80,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distMouseCat2 = Math.abs(mousePos - cat2Pos);
 
   if (distMouseCat1 === distMouseCat2) {
-    return 'Os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
 
   if (distMouseCat1 < distMouseCat2) {
