@@ -34,8 +34,18 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz([]) {
+  for (let index = 0; index < [].length; index += 1){
+    if (([][index] % 3 == 0) && ([][index] % 5 == 0)){
+      return console.log("fizzBuzz");
+    } else if(([][index] % 3 != 0) && ([][index] % 5 != 0)){
+      return console.log("bug!");
+    } else if ([][index] % 3 == 0){
+      return console.log("fizz");
+    } else if ([][index] % 5 == 0){
+      return console.log("buzz");
+    } 
+  }
 }
 
 // Desafio 9
