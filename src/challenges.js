@@ -32,7 +32,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(highNumbers) {
   let highNumber = 0;
     let countHighNumber = 0;
 
