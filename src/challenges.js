@@ -7,6 +7,7 @@ function compareTrue(a, b) {
   }else{
     result = false;
   }
+  return result;
 }
 
 // Desafio 2
