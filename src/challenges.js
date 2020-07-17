@@ -19,11 +19,11 @@ function splitSentence(nomeString) {
 }
 
 // Desafio 4
-function concatName(ultimoItemEPrimeiroItem) {
+function concatName([ultimoItemEPrimeiroItem]) {
   let ultimoItem = ultimoItemEPrimeiroItem.length - 1;
   let primeiroItem = ultimoItemEPrimeiroItem.concat[0];
-  return ultimoItemEPrimeiroItem[primeiroItem] + ' ' + ultimoItemEPrimeiroItem[ultimoItem];
-} 
+  return ultimoItemEPrimeiroItem[primeiroItem] + ultimoItemEPrimeiroItem[ultimoItem];
+}
 
 // Desafio 5
 function footballPoints() {
