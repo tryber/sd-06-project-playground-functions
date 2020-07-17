@@ -37,7 +37,7 @@ function highestCount(array) {
     if (array[i] > maior) {
       maior = array[i]
       count = 1;
-    }    
+    }
   }
 
   return count;
@@ -54,9 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (distancia2 > distancia1) {
     return "cat1"
   }
-  
   return "os gatos trombam e o rato foge" 
-}
 }
 
 // Desafio 8
