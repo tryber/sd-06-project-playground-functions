@@ -65,7 +65,7 @@ function highestCount(inteiros) {
       iNumero = i;
     }
   }
-  return inteiros[iNumeros];
+  return inteiros[iNumero];
 }
 
 // Desafio 7
