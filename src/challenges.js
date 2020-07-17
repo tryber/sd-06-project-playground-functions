@@ -22,7 +22,7 @@ function splitSentence(string) {
   
   return string.split(" ");
 }
-console.log(splitSentence("todos amigos"))
+
 
 // Desafio 4
 function concatName(array) {
@@ -35,20 +35,20 @@ function concatName(array) {
   }return arrayResposta
   
 }
-console.log(concatName(["Lucas","João","Pedro"]))
+
 // Desafio 5
 function footballPoints(win,ties) {
   // seu código aqui
   let somaPontuacao =(win*3)+ties
   return somaPontuacao
-}console.log(footballPoints(3,1))
+}
 
 // Desafio 6
 function highestCount() {
   // seu código aqui
  
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
@@ -60,7 +60,7 @@ else if(
 }else{return "os gatos trombam e o rato foge"}
 }
 
-console.log(catAndMouse(2,1,3))
+
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
@@ -78,7 +78,7 @@ for(let i=0;i<array.length;i++){
   else { arrayResposta.push("bug")}
 }return arrayResposta
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45],))
+
 
 // Desafio 9
 function encode() {
