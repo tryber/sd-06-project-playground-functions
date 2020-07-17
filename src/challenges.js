@@ -16,10 +16,10 @@ function calcArea(base, height) {
 function splitSentence(string) {
   let word = '';
   let splitedPhrase = [];
-  for (i in string){
+  for (let i in string) {
     if (string[i] !== ' ') {
       word += (string[i]);
-    }
+  }
     else if (string[i] === ' ') {
       splitedPhrase.push(word);
       word = ' ';
