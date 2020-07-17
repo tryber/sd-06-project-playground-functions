@@ -72,12 +72,54 @@ function fizzBuzz(numbers) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  let result = "";
+  for (let i = 0; i < word.length; i++) {
+      if (word[i] === "a") {
+          result += 1;
+      } else if (word[i] === "e") {
+          result += 2;
+      } else if (word[i] === "i") {
+          result += 3;
+      } else if (word[i] === "o") {
+          result += 4;
+      } else if (word[i] === "u") {
+          result += 5;
+      }
+      else
+          result += word[i]
+
+  }
+  return result
+
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode("hi there!"))
+
+
+function decode(word) {
+  let result = "";
+  for (let i = 0; i < word.length; i++) {
+      if (word[i] == 1) {
+          result += "a";
+      } else if (word[i] == 2) {
+          result += "e";
+      } else if (word[i] == 3) {
+          result += "i";
+      } else if (word[i] == 4) {
+          result += "o";
+      } else if (word[i] == 5) {
+          result += "u";
+      }
+      else
+          result += word[i]
+
+  }
+  return result
+
 }
+
+console.log(decode("h3 th2r2!"))
 
 // Desafio 10
 function techList() {
