@@ -1,33 +1,33 @@
 // Desafio 1
 function compareTrue(a = 1, b = 1) {
   if (a && b == 1){
-    return true
+    b = true
   }
   else 
-    return false
+    b = false
 }
 
 // Desafio 2
 function calcArea(base = 10, height = 8) {
-  return (base * height) / 2
+  b = (base * height) / 2
 }
 
 // Desafio 3
 function splitSentence(a = 'go Trybe') {
   a = a.split(' ');
-  return a
+  b = a
 }
 
 // Desafio 4
 function concatName( a = ['Lucas', 'Anderson', 'Maria', 'Paulo'] ) {
   last = a [a.length -1] 
-  return (last + ', ' + a[0])
+  b = (last + ', ' + a[0])
 }
 
 // Desafio 5
 function footballPoints( wins = 3, ties = 1) {
   points = wins * 3 +  ties * 1
-  return points
+  b = points
 }
 
 // Desafio 6
@@ -44,7 +44,7 @@ function highestCount(a = [9, 1, 2, 3, 9, 5, 7]) {
       contHigher ++
     }
   }
-  return contHigher
+  b = contHigher
 }
 
 // Desafio 7
@@ -53,35 +53,38 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
   cat2 = Math.abs(cat2 - mouse)
 
   if ( cat1 == cat2 ){
-    return 'os gatos trombam e o rato foge'
+    b = 'os gatos trombam e o rato foge'
   }
   else
     if ( cat1 < cat2){
-      return 'cat1'
+      b = 'cat1'
     }
     else
-      return 'cat2'
+      b = 'cat2'
 }
 
 // Desafio 8
 function fizzBuzz(a = [2, 15, 7, 9, 45]) {
-  
+  let b = []
   for ( x in a){
     let i = a[x]
     
+    
     if(i % 3 == 0 && i % 5 == 0){
-      return 'fizzBuzz'
+      b.push('fizzBuzz')
     }
     else if (i % 3 == 0){
-      return 'fizz'
+      b.push('fizz')
     }
     else if (i % 5 == 0){
-      return 'buzz'
+      b.push('buzz')
     }
     else
-      return 'bug!'
+      b.push('bug!')
   }
+return b
 }
+
 
 // Desafio 9
 function encode() {
