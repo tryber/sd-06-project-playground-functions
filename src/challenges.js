@@ -118,6 +118,8 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
 function encode() {
   // seu código aqui
+  let charactersExchange = {a : 1, e : 2, i : 3, o : 4, u : 5,}
+
 
 }
 function decode() {
