@@ -20,20 +20,39 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let ultimoItem = array[array.length -1];
+  let ultimoItem = array[array.length - 1];
   let primeiroItem = array[0];
   let resultado = [ultimoItem, primeiroItem];
   return resultado;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = 3;
+  let tiesPoints = 1;
+  let points = wins * winPoints + ties * tiePoints;
+  return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  let = repeat = 1;
+  for (let i = 1; i < arrayNumbers.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (arrayNumbers[i] < arrayNumbers[j]) {
+        let position = arrayNumbers[i];
+    
+        arrayNumbers[i] = arrayNumbers[j];
+        arrayNumbers[j] = position;
+      }
+    } 
+  }
+  for (let l = arrayNumbers[arrayNumbers.length - 2]; l >= 0; l -= 1) {
+    if (arrayNumbers[l] === arrayNumbers[arrayNumbers.length -1]) {
+      repeat += 1;
+  }
+}
+return repeat;
 }
 
 // Desafio 7
