@@ -73,15 +73,32 @@ function catAndMouse(mouse,cat1,cat2) {
   else if (distanceCat2 < distanceCat1) {
     return console.log("cat2");
   } else {
-    return console.log("Os gatos trombam e o rato foge");
+    return console.log("Os gatos trombam e o rato foge.");
   }
 }
 catAndMouse(8,4,4);
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let newArray = [];
+  for (let index in numbers) {
+    if (numbers[index]%3 === 0) {
+      newArray.push("fizz");
+    }
+    else if (numbers[index]%5 === 0) {
+      newArray.push("buzz");
+    }
+    else if (numbers[index]%3 === 0 || numbers[index]%5 === 0) {
+      newArray.push("fizzBuzz");
+    }
+    else {
+      newArray.push("bug!");
+    }
+  }
+  return newArray;
 }
+let numbers = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(numbers)); 
 
 // Desafio 9
 function encode() {
