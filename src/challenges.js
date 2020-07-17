@@ -19,21 +19,21 @@ function calcArea(base, height) {
 // Desafio 3
 
 function splitSentence(string) {
-  let splitPhrase = "";
+  let word = "";
   let splitedPhrase = [];
   for (i in string){
-    // console.log (i);
     if (i !== " ") {
-      splitPhrase += (string[i]);
+      word += (string[i]);
     }
     else {
-      splitedPhrase.push(splitPhrase)
-      splitPhrase = "";
+      splitedPhrase.push(word)
+      console.log(splitedPhrase);
     }
   }
   return splitedPhrase;
 }
 splitSentence("ola tudo bem");
+
 
 // Desafio 4
 function concatName() {
