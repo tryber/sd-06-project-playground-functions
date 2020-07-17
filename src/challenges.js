@@ -21,16 +21,12 @@ function splitSentence(string) {
       word += (string[i]);
     }
     else if (string[i] === " ") {
-      splitedPhrase += word;
+      splitedPhrase.push(word);
       word = "";
     }
   }
-  splitedPhrase += word;
-  console.log(splitedPhrase);
+  splitedPhrase.push(word);
 }
-splitSentence("Go, Trybe");
-
-
 
 // Desafio 4
 function concatName() {
