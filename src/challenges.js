@@ -1,7 +1,14 @@
 // Desafio 1
-function compareTrue(teste, teste2) {
-  // seu código aqui
+function compareTrue(number1,number2) {
+  let oddNumbers = 0;
+  if (number1%2 != 0 && number2%2 != 0) {
+    oddNumbers = true;
+  } else {
+    oddNumbers = false;
+  }
+  return oddNumbers;
 }
+console.log(compareTrue(2,3));
 
 // Desafio 2
 function calcArea() {
