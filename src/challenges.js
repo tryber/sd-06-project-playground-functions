@@ -13,23 +13,27 @@ function calcArea(base, height) {
   return calc;
 } console.log(calcArea(10, 10));
  
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(string) {
+  return string.split(" ");  
+} console.log(splitSentence("Hello World"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 4
 function concatName() {
