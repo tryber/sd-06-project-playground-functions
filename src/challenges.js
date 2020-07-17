@@ -38,7 +38,8 @@ function highestCount(numero) {
   var repetidor = 1;
   for ( var c = 0; c < numero.length; c += 1){
     if (numero[c] > maiorNumero){
-      maiorNumero = numero[c]
+      maiorNumero = numero[c];
+      repetidor = 1;
     } else if (numero[c] == maiorNumero){
       repetidor += 1;
     }
