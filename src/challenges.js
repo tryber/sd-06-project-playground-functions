@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if(dist1===dist2){
     return "os gatos trombam e o rato foge";
   }
-  else{
+  if(dist1<dist2){
     return "cat1";
   }
 
