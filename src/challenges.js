@@ -16,7 +16,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  let result = sentence.split(" ");
+  let result = sentence.split(' ');
   return result;
 }
 
@@ -40,11 +40,11 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   // Descobrir o maior e criar um contador para ele
-  let bigger = numbers [0];
+  let bigger = numbers[0];
   let count = 0;
   for (let i = 1; i < numbers.length; i++) {
     if (numbers[i] > bigger) {
-      bigger = numbers [i];
+      bigger = numbers[i];
     }
   }
   for (let i = 0; i < numbers.length; i++) {
@@ -56,8 +56,18 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs (cat2 - mouse);
+
+  if (distanceCat1 < distanceCat2) {
+    return cat1;
+  } else if (distanceCat2 < distanceCat1) {
+    return cat2
+  } else {
+    console.log ("Os gatos trombam e o rato foge");
+  }
 }
 
 // Desafio 8
