@@ -42,11 +42,13 @@ function splitSentence(string) {
 // console.log(splitSentence(string));
 
 // Desafio 4
-console.log('*** 3 ***');
+const strings = ['we\'re the best', 'Course', 'JavaScript', 'HTML', 'CSS', 'Trybe'];
 
 function concatName() {
-  // seu código aqui
+  return `${strings[strings.length - 1]}, ${strings[0]}`;
 }
+
+// console.log(concatName(strings));
 
 // Desafio 5
 function footballPoints() {
