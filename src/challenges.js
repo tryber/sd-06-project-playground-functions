@@ -19,24 +19,32 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return (`${array[array.length-1]}, ${array[0]}.`);
+  return (`${array[array.length - 1]}, ${array[0]}`);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3 + ties);
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 === cat2) {
+    return "os gatos trombam e o rato foge";
+  }
+  else if (mouse - cat1 < mouse - cat2 ) {
+    return cat1;
+  }
+  else {
+    return cat2;
+  }
 }
-
+//console.log(catAndMouse(5,4,6));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
