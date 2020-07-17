@@ -1,5 +1,6 @@
 // Desafio 1
 function compareTrue(BOOLEAN1, BOOLEAN2) {
+
   if (BOOLEAN1 && BOOLEAN2) {
     return true;
   } else {
@@ -17,31 +18,51 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(str) {
 
-  let word = 0;
+  let word = "";
   let sentence = [];
-  for (let i = 0; i < str.lenght; i++) {
-    if (str[i] == " " && str[0] == " ") {
-      sentence[word] = getWord(i-1);
-      word++;
-    }
-  }
+  let wordIndex = 0;
 
-  return sentence;
-
-  function getWord(i) {
-    let word;
-    for (j = i; j = 0; j--) {
-      if (str[j] == " ") {
-        return word;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == " ") {
+      for (let j = i - 1; j >= 0; j--) {
+        if (str[j] == " ") {
+          break
+        } else {
+          word = str[j] + word
+        }
       }
-      word.unshift(str[i])
+      sentence[wordIndex] = word
+      word = ""
+      wordIndex++
+    }
+    if (i == str.length - 1) {
+      for (let j = i; j >= 0; j--) {
+        if (str[j] == " ") {
+          break
+        } else {
+          word = str[j] + word
+        }
+      }
+      sentence[wordIndex] = word
+      word = ""
     }
   }
+
+  return sentence
+
 }
 
+let str1 = "O abacaxi é amarelo";
+
+console.log(splitSentence(str1));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayStrings) {
+
+  let arrayStringsInv = [];
+
+  
+
 }
 
 // Desafio 5
