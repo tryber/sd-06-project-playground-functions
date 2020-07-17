@@ -24,8 +24,11 @@ function splitSentence(stringOriginal) {
 //   }
 }
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+    let firstName = names(0);
+  let lastName = names(names.length - 1);
+  let nameComplete = firstName + ", " + lastName;
+  return nameComplete;
 }
 
 // Desafio 5
