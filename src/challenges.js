@@ -18,11 +18,11 @@ function splitSentence(phrase) {
 
   // for (index in phrase) {
   //   if (phrase[index] === " ") {
-  //     sentenceArr.push(phrase.slice(splitPoints,index));
+  //     sentenceArr.[index](phrase.slice(splitPoints,index));
   //     splitPoints = index;
   //   }
   //   if (index === phrase.length - 1) {
-  //     sentenceArr.push(phrase.slice(splitPoints,index));
+  //     sentenceArr.[index](phrase.slice(splitPoints,index));
   //   }
   // }
   // return (sentenceArr);
@@ -66,8 +66,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let fizzBuzzArr = arrayNumbers;
+
+  for (let index in arrayNumbers) {
+    if (arrayNumbers[index] % 3 === 0) {
+      if (arrayNumbers[index] % 5 === 0) {
+        fizzBuzzArr[index] = "fizzBuzz";
+      } else {
+        fizzBuzzArr[index] = "fizz";
+      }
+    } else if (arrayNumbers % 5 === 0) {
+      fizzBuzzArr[index] = "buzz";
+    } else {
+      fizzBuzzArr[index] = "bug!";
+    }
+  }
+  return fizzBuzzArr;
 }
 
 // Desafio 9
