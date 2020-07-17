@@ -110,7 +110,6 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-frase = "This is an encoding test";
 function encode(frase) {
   // seu código aqui
   arrayFrase = frase.split('');
@@ -137,10 +136,32 @@ function encode(frase) {
 }
 
 
-
-function decode() {
+function decode(frase) {
   // seu código aqui
+  arrayFrase = frase.split('');
+  for (i in arrayFrase){
+    switch (arrayFrase[i]){
+      case '1':
+        arrayFrase[i] = 'a';
+        break;
+      case '2':
+        arrayFrase[i] = 'e';
+        break;
+      case '3':
+        arrayFrase[i] = 'i';
+        break;
+      case '4':
+        arrayFrase[i] = 'o';
+        break;
+      case '5':
+        arrayFrase[i] = 'u';
+    }
+  }
+  arrayFrase = arrayFrase.join('');
+  return arrayFrase;
 }
+
+
 
 // Desafio 10
 function techList() {
