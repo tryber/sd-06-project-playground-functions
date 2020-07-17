@@ -18,14 +18,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  return string.split(" ");
-
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let string = [];
+  let string = "";
   for (let i = array.length - 1; i >= 0; i -= array.length - 1) {
     string.push(array[i])
   }
@@ -35,19 +34,27 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let pontos = wins - ties;
-  return pontos
+  vitorias = wins*3;
+  let pontos = vitorias - ties;
+  return pontos;
 }
 
 // Desafio 6
 function highestCount(numeros) {
   // seu código aqui
   let maiorNumero = 0;
-  for (n = 0; n<numeros.length; n += 1) {
-    if (maiorNumero<numeros[n]) {
-      maiorNumero = numeros[n] 
-    }    
+  let contagem = 0;
+  for (let n = 0; n < numeros.length; n += 1) {
+    if (maiorNumero < numeros[n]) {
+      maiorNumero = numeros[n]
+    }
   }
+  for (n = 0; n<numeros.length; n+=1) {
+    if (maiorNumero === numeros[n]) {
+      contagem += 1;
+    }
+  }
+  return contagem;
 }
 
 // Desafio 7
