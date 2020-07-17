@@ -19,15 +19,16 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(teste) {
-  let primeira = teste[0];
-  let ultima = teste[teste.length -1];
-  let arrayResponse = ''+ultima.concat(', ').concat(primeira);
+  let primeira = teste [0];
+  let ultima = teste [teste.length -1];
+  let arrayResponse = '';
+  arrayResponse = ultima.concat(', ').concat(primeira);
   return arrayResponse;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
 
 // Desafio 6
