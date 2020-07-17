@@ -47,7 +47,6 @@ function highestCount(numbers) {
   }
   return count;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -89,18 +88,23 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(param1) {
-  let vogais = ["a", "e", "i", "o", "u"];
-  let resultado = "";
-  for (i in vogais){
-    if (vogais[i] === "a"){
-      resultado = param1.replace("a", "1");
-    }
-  }
-  console.log(resultado);
+  param1 = param1.replace(/a/g, "1");
+  param1 = param1.replace(/e/g, "2");
+  param1 = param1.replace(/i/g, "3");
+  param1 = param1.replace(/o/g, "4");
+  param1 = param1.replace(/u/g, "5");
+
+  console.log(param1);
 }
 
 function decode(param2) {
-  // seu código aqui
+  param2 = param2.replace(/1/g, "a");
+  param2 = param2.replace(/2/g, "e");
+  param2 = param2.replace(/3/g, "i");
+  param2 = param2.replace(/4/g, "o");
+  param2 = param2.replace(/5/g, "u");
+
+  console.log(param2);
 }
 
 // Desafio 10
