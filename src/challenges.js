@@ -44,18 +44,22 @@ console.log(splitSentence(valor1)); */
 
 // Desafio 4
 function concatName(array) {
-  // seu código aqui
-  /* return array[0] + ", " + array[array.length-1]; */
+  // seu código aqui  
   return array[array.length-1] + ", " + array[0];
 }
-let valor1 = ["Clayton é zika", "Clayton top", "Clayton bonitão", "Finalmente deu certo"];
-/* let valor2 = 50; */
+/* let valor1 = ["Clayton é zika", "Clayton top", "Clayton bonitão", "Finalmente deu certo"];
+let valor2 = 50;
 console.log(concatName(valor1));
-
+ */
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return wins*3 + ties;
 }
+let valor1 = 60;
+let valor2 = 50;
+console.log(footballPoints(valor1, valor2));
+
 
 // Desafio 6
 function highestCount() {
