@@ -20,13 +20,8 @@ function splitSentence(parametroString) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
-
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+function concatName(array) {
+  console.log(array[array.lenght - 1]+","+array[0])
 }
 
 // Desafio 6
