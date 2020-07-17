@@ -1,46 +1,51 @@
 //Desafio 1
-function compareTrue(param1, param2) {
-  if (param1 == true && param2 == true) {
-  return true;
-} else {
-  return false;
+function compareTrue( param1 , param2 ) {
+    // seu código aqui
+    if (param1 === true && param2 === true) {
+      return true;
+     } else {
+      return false;
+    }
   }
-}
-
 // Desafio 2
-function calcArea(base, height) {
+function calcArea( base , height ) {
   // seu código aqui
-  let area = (base * height) / 2;
+  let areaDoTri = (base * height) / 2;
   return areaDoTri
 }
-
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
   return string.split(" ");
 }
-
 // Desafio 4
-function concatName(array) {
-    let string = [];
-    for (let i = array.length - 1; i >= 0; i -= array.length - 1) {
-      string.push(array[i]);
+function concatName( StringArray ) {
+  // seu código aqui
+    return StringArray[StringArray.length-1] + ", " + StringArray[0];
     }
-    return string
-}
-
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let pontos = wins - ties;
+  let pontos = 3*wins + 1*ties;
   return pontos
 }
-
 // Desafio 6
-function highestCount() {
-  
+function highestCount(ArrayDeNum) {
+  // seu código aqui
+  var maior = 0;
+  for (let i = 0; i < ArrayDeNum.length; i = i + 1) {
+    if (ArrayDeNum[i] > maior) {
+      maior = ArrayDeNum[i];
+    }
+  }
+  var contador = 0;
+  for (let i = 0; i < ArrayDeNum.length; i = i + 1) {
+    if (ArrayDeNum[i] == maior) {
+      contador = contador + 1;
+    }
+  }
+  return contador; 
 }
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
@@ -50,9 +55,8 @@ function catAndMouse() {
 function fizzBuzz(n) {
   // seu código aqui
   for(let i = 1 ; i <= numero ; i++)
-  let numero = "";
   
-  if(i % 3==0){
+  if(i % 3==0){s
     numero = "fizz"
   } else if (i % 5==0) {
     numero = "buzz"
@@ -64,7 +68,6 @@ function fizzBuzz(n) {
   return numero
   }
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
@@ -72,22 +75,18 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-
 // Desafio 10
 function techList() {
   // seu código aqui
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
 }
-
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  // seu código aquicd  
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
