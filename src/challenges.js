@@ -79,7 +79,7 @@ for(let i=0;i<array.length;i++){
   else if (array[i]%5==0 && array[i]%3!=0){
     arrayResposta.push("buzz")
   }
-  else { arrayResposta.push("bug")}
+  else { arrayResposta.push("bug!")}
 }return arrayResposta
 }
 
