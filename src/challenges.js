@@ -34,8 +34,12 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(listaNomes) {
   // seu código aqui
+  let ultimoNome = listaNomes.slice().pop();
+  let primeiroNome = listaNomes.slice().shift();
+
+  return `${ultimoNome}, ${primeiroNome}`;  
 }
 
 // Desafio 5
