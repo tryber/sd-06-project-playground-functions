@@ -14,6 +14,7 @@ function calcArea(base = 10, height = 8) {
 
 // Desafio 3
 function splitSentence(a = 'go Trybe') {
+  a = a.split(' ');
   for ( x in a ){
     return a[x]
   }
