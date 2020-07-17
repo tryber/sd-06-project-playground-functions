@@ -21,14 +21,16 @@ function splitSentence(exemplo) {
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length -1] + ', ' + array[1]
+  return array[array.length -1] + ', ' + array[0]
 }
 var comidas = ['farinha', 'arroz', 'feijao', 'beterraba', 'oleo'];
 console.log(concatName(comidas))
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+return (wins * 3) + (ties * 1)
 }
+console.log(footballPoints(3, 4))
 
 // Desafio 6
 function highestCount() {
