@@ -48,21 +48,22 @@ function highestCount(a = [9, 1, 2, 3, 9, 5, 7]) {
 }
 
 // Desafio 7
-function catAndMouse(mouse = 10, cat1 = 20, cat2 = 15) {
-  cat1Mouse = (cat1 - mouse);
+function catAndMouse(mouse = 10, cat1 = 13, cat2 = 12) {
+  cat1Mouse = cat1 - mouse;
   cat2Mouse = cat2 - mouse;
   
-  if ( cat1Mouse == cat2Mouse){
-    return 'os gatos trombam e o rato foge'
+  if (cat1Mouse - cat2Mouse == 0){
+    console.log('os gatos trombam e o rato foge')
   }
   else
-    if ( cat1Mouse < cat2Mouse){
-      return 'cat1'
+    if (cat1Mouse < cat2Mouse){
+      console.log('cat1')
     }
     else
-      return 'cat2'
+      console.log('cat2')
 }
 
+catAndMouse();
 
 // Desafio 8
 function fizzBuzz() {
