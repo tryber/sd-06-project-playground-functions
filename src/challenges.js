@@ -181,7 +181,8 @@ function techList(array, name) {
             nome: name,
         }
     }
-    console.log(objects.sort());
+    console.log(objects);
+    return objects;
 }
 techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Ricardo");
 
