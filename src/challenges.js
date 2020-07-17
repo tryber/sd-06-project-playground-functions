@@ -13,14 +13,9 @@ function calcArea(base, height) {
   return area;
 }
 
-// Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
-// Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
-
 // Desafio 3
 function splitSentence(string) {
-  string = "go Trybe";
-  let array = string.split(' ', 2);
-  return array;
+  return string.split(' ');
 }
 
 // Desafio 4
