@@ -71,7 +71,7 @@ function catAndMouse(positionMouse, positionCat1, positionCat2) {
     mensagem = 'cat1';
   } else if (distanciaMouseCat2 < distanciaMouseCat1) {
     mensagem = 'cat2';
-  } else {
+  } else if (distanciaMouseCat1 === distanciaMouseCat2) {
     mensagem = 'os gatos trombam e o rato foge';
   }
   return mensagem
