@@ -156,9 +156,6 @@ function generatePhoneNumber(numeroTelefone) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  // Lógica de programação
-  //  generatePhoneNumber deverá retornar (12) 34567-8901.
-  // months.splice(1, 0, 'Feb'); inserts at index 1
   numeroTelefone.splice(0,0,'(')
   numeroTelefone.splice(3,0,')')
   numeroTelefone.splice(4,0,' ')
