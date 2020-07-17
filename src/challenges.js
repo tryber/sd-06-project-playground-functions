@@ -19,9 +19,9 @@ function concatName(arrayString) {
   let newString = '';
   let comma = ', ';
 
-  newString += arrayString[0];
+  newString += arrayString[arrayString.length - 1];
   newString += comma;
-  newString += arrayString[arrayString.length -1]
+  newString += arrayString[0]
   
   return newString;
 }
