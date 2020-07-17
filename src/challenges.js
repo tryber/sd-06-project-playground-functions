@@ -78,7 +78,7 @@ function fizzBuzz(array) {
         novo.push("fizzbuzz");
       } else if(array[i]%5 === 0) {
         novo.push("buzz");
-      } else if(array[i]%3 === 0 && array[i]%5 === 1) {
+      } else if(array[i]%3 === 0 && array[i]%5 != 0) {
         novo.push("fizz");
       } else {
         novo.push("bug!");
@@ -86,7 +86,7 @@ function fizzBuzz(array) {
     }
     return novo;
   }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 // Desafio 9
 function encode() {
   // seu código aqui
