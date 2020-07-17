@@ -26,9 +26,10 @@ function splitSentence(frase) {
       acumulador += elemento;
     } else {
       novaLista.push(acumulador);
+      acumulador = "";
     }
-
   }
+  novaLista.push(acumulador)
   return novaLista;
 }
 
