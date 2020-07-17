@@ -1,7 +1,6 @@
 // Desafio 1
 function compareTrue(termo1, termo2) {
-  compareTerm = ((termo1 === 'true') && (termo2 === 'true')) ? 'true' : 'false';
-  return compareTerm;
+  return termo1 === termo2
 }
 
 // Desafio 2
@@ -10,8 +9,9 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  splitText = text.split(' ');
+  return splitText;
 }
 
 // Desafio 4
