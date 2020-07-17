@@ -24,7 +24,7 @@ function splitSentence(word) {
 // Desafio 4
 function concatName(d) {
   let word_1="";
-  word_1=d[0]+", "+d[d.length-1];
+  word_1=d[d.length-1]+", "+d[0];
   return word_1;
 }
 
@@ -63,6 +63,9 @@ function catAndMouse(mouse, cat1, cat2) {
   Math.abs(dist2);
   if(dist1>dist2){
     return "cat2";
+  }
+  if(dist1===dist2){
+    return "os gatos trombam e o rato foge";
   }
   else{
     return "cat1";
