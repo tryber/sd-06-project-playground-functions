@@ -60,31 +60,31 @@ function highestCount(array) {
 
 function catAndMouse(mouse, cat1, cat2) {
   
-let distancia1 = mouse - cat1;
-let distancia2 = mouse - cat2;
+ let distancia1 = cat1 - mouse;
+ let distancia2 = cat2 - mouse;
 
-if (distancia1 === distancia2){
-  return 'os gatos trombam e o rato foge';
-}else if (distancia1 < distancia2){
-  return 'cat1';
-}else {
+ if (distancia1<0){
+   distancia1 = -(distancia1);}
+ if (distancia2<0){
+   distancia1 = -(distancia1);
+ };
+
+if (distancia1 < distancia2) {
+  return 'cat1'; 
+}else if (distancia1> distancia2){
   return 'cat2';
+}else {
+   return 'os gatos trombam e o rato foge';
 }
 }
+
 
 
 // Desafio 8 
-/*Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
-
-Para cada número da Array que seja divisível por 3, apresente uma string "fizz";
-Para cada número da Array que seja divisível por 5, apresente uma string "buzz";
-Caso o número seja divisível por 3 ou 5, retorne a string "fizzBuzz";
-Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
-Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].*/
 
 function fizzBuzz(arrayNew) {
   
-  let newFizz = 0;
+  let newFizz = [];
 
   for (i = 0; i<arrayNew.length; i++){
     if ((arrayNew[i]%3==0) && (arrayNew[i]%5!==0)){
@@ -94,11 +94,12 @@ function fizzBuzz(arrayNew) {
     }else if ((arrayNew[i]%3==0) && (arrayNew[i]%5==0)){
       newFizz[i] = 'fizzBuzz';
     }else {
-      newFizz[i] = 'bug'
+      newFizz[i] = 'bug!';
     }
   }
 return newFizz;
 }
+
 
 // Desafio 9
 function encode() {
