@@ -6,8 +6,9 @@ function compareTrue(a, b) {
     return false;
   }
 }
+
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   return (base * height)/2;
 }
 
