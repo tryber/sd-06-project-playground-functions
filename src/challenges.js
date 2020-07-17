@@ -1,10 +1,8 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if (boolean1 && boolean2 === 'true') {
+  if (boolean1 && boolean2 === true) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 }
 
 // Desafio 2
