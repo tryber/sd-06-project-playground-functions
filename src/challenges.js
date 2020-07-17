@@ -51,8 +51,12 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
-  if (distanceCat1 < distanceCat2){
-    return 
+  if(distanceCat1 < distanceCat2){
+    return cat1;
+  }else if(distanceCat2 < distanceCat1){
+    return cat2;
+  }else{
+    return resposta = "os gatos trombam e a presa foge";
   }
 }
 
