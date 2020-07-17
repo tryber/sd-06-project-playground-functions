@@ -30,9 +30,9 @@ function highestCount(arr) {
   let countNumber = 0;
   let countRepeated = 0;
 
-  for (let index in arr) {
+  for (let index = 0; index < arr.length; index += 1) {
     let number = arr[index];
-    for (let compareIndex in arr) {
+    for (let compareIndex = 0; compareIndex < arr.length; compareIndex += 1) {
       if (number === arr[compareIndex]) {
         countNumber += 1;
       }
