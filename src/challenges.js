@@ -75,6 +75,8 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (mouse < cat1 && mouse < cat2) {
     pos1 = cat1 - mouse;
     pos2 = cat2 - mouse;
+    console.log("Pos1 : " + pos1)
+    console.log("Pos2 : " + pos2)
   } else if (mouse > cat2 && mouse < cat1 ) {
     pos2 = mouse - cat2;
     pos1 = cat1 - mouse;
@@ -85,14 +87,14 @@ function catAndMouse(mouse, cat1, cat2) {
   if (pos1 === pos2) {
     chaseStatus = "os gatos trombam e rato foge"
   } else if (pos1 > pos2) {
-    chaseStatus = "cat1"
-  } else {
     chaseStatus = "cat2"
+  } else {
+    chaseStatus = "cat1"
   }
   return chaseStatus
 } 
 
-console.log(catAndMouse(1, 0, 2))
+console.log(catAndMouse(0, 3, 2))
 
 // Desafio 8
 function fizzBuzz(numberArray) {
