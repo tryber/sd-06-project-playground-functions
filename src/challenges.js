@@ -134,18 +134,54 @@ function techList(list, name) {
   let sortedList = list.sort();
   for (i in sortedList) {
     nameTech[i] = {
-      'tech': sortedList[i],
       'name': name,
+      'tech': sortedList[i],
     }
   }
   return nameTech;
 }
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Vinicius'));
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(n) {
+  if (n.length !== 11) {
+    return "Array com tamanho incorreto.";
+  } else if (checkNumbers(n)) {
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  let foneNumber = '(' + n[0] + n[1] + ') ' + n[2] + n[3] + n[4] + n[5] + n[6] + '-' + n[7] + n[8] + n[9] + n[10];
+  return foneNumber;
+  
 }
+
+function checkNumbers(numbers) {
+  if (timesCount(numbers)) {
+    return true;
+  }
+  for (i in numbers) {
+    if (numbers[i] > 9 || numbers[i] < 0) {
+      return true;
+    }
+  }
+}
+
+function timesCount(list) {
+  let howManyTimes = {};  
+  for (i in list) {
+    if (list[i] in howManyTimes) {
+      howManyTimes[list[i]] += 1;
+    } else {
+      howManyTimes[list[i]] = 1;
+    }
+  }
+  for (let j in howManyTimes) {
+    if (howManyTimes[j] >= 3) {
+      return true;
+    }
+  }  
+}
+
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
