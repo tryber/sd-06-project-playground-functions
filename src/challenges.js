@@ -89,19 +89,39 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
     return "cat1";
-  }else {
+  }else{
     return "cat2";
   }
 }
-let valor1 = 28;
+/* let valor1 = 28;
 let valor2 = 50;
 let valor3 = 2;
-console.log(catAndMouse(valor1, valor2, valor3));
+console.log(catAndMouse(valor1, valor2, valor3)); */
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array3) {
   // seu código aqui
+  let arraysaida = [];
+  for (let indice in array3){
+    let saida = "";
+    if (array3[indice] % 3 === 0 && array3[indice] % 5 === 0){
+      saida = "fizzBuzz";      
+    }else if (array3[indice] % 3 === 0){
+      saida = "fizz";      
+    }else if (array3[indice] % 5 === 0){
+      saida = "Buzz";      
+    }else{
+      saida = "bug!";      
+    }
+    arraysaida.push(saida);
+    /* array3.splice(indice[,1[,saida]]) */
+  }
+  return arraysaida;
 }
+/* let valor1 = [2, 15, 7, 9, 45];
+let valor2 = 50;
+let valor3 = 2;
+console.log(fizzBuzz(valor1)); */
 
 // Desafio 9
 function encode() {
