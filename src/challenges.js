@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(num, num1) {
   // seu código aqui
-  if(num < 10 && num1 > 10){
+  if ( num && num1 === num){
     return 'true'
   } else {
     return 'false'
