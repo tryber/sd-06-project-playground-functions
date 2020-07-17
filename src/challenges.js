@@ -21,25 +21,47 @@ function splitSentence(string){
 // Desafio 4
 function concatName(arrayOfStrings){
 
-  const firstName = arrayOfStrings[0]
-  const lastName = arrayOfStrings[arrayOfStrings.length-1] 
+  const firstName = arrayOfStrings[0];
+  const lastName = arrayOfStrings[arrayOfStrings.length-1];
 
-  let result = lastName + ", " + firstName
+  let result = lastName + ", " + firstName;
 
-  return result
+  return result;
 }
 
 // Desafio 5
 function footballPoints(wins,ties){
 
-  let points = (wins * 3) + ties
+  let points = (wins * 3) + ties;
 
-  return points
+  return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+
+  let globalCounter = 0;
+  let compare;
+  let mostOccurring;
+
+  for (let i = 0; i < array.length; i++) {
+    let counter = 0;
+
+    compare = array[i];
+
+    for (let j = 0; j < array.length; j++) {
+      if (compare === array[j]) {
+        counter += 1;
+      }
+
+      if (counter > globalCounter) {
+        globalCounter = counter;
+        mostOccurring = array[j];
+      }
+    }
+  }
+
+  return globalCounter;
 }
 
 // Desafio 7
