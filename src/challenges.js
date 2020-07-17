@@ -26,7 +26,7 @@ function concatName(array) {
   // seu código aqui
   let string;
   for (let i = array.length - 1; i >= 0; i -= array.length - 1) {
-    string += array[i]
+    string.push (array[i])
   }
   return string
 }
