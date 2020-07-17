@@ -22,9 +22,16 @@ function calcArea(base, altura) {
  console.log(area);
 
 // Desafio 3
+/* Dividindo a frase
+Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe']. */
+
 function splitSentence() {
-  // seu código aqui
+   let verifica = nome.split(" ");
+   return (verifica);
 }
+ let nome = "Go Trybe";
+ let resultSplit = splitSentence(nome);
+ console.log(resultSplit);
 
 // Desafio 4
 function concatName() {
