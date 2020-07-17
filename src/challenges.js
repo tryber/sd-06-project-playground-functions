@@ -33,7 +33,7 @@ function highestCount(numbers) {
   let index = 0;
   let count = 0;
   for (i in numbers){
-    if (numbers[index] < numbers [i]){
+    if (numbers[index] <= numbers [i]){
       highNumber = numbers[i];
       index = i;
     }
@@ -45,7 +45,7 @@ function highestCount(numbers) {
   }
   return count;
 }
-console.log(highestCount([2, 10, 20, 10, 20, 1, 20]));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (mouse > cat1) {
@@ -86,13 +86,52 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let string2 = "";
+  
+  for (indice in string) {
+    
+    if (string[indice] === 'a') {
+      string2 += '1';
+    } else if(string[indice] === 'e') {
+      string2 += '2';
+    } else if(string[indice] === 'i') {
+      string2 += '3';
+    } else if(string[indice] === 'o') {
+      string2 += '4';
+    } else if(string[indice] === 'u') {
+      string2 += '5';
+    } else {
+      string2 += string[indice];
+    }
+  }
+  return string2;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let string2 = "";
+  
+  for (indice in string) {
+    
+    if (string[indice] === '1') {
+      string2 += 'a';
+    } else if(string[indice] === '2') {
+      string2 += 'e';
+    } else if(string[indice] === '3') {
+      string2 += 'i';
+    } else if(string[indice] === '4') {
+      string2 += 'o';
+    } else if(string[indice] === '5') {
+      string2 += 'u';
+    } else {
+      string2 += string[indice];
+    }
+  }
+  return string2;
 }
-
+// let code = encode('hi there!');
+// console.log(code);
+// let descode = decode(code);
+// console.log(descode);
 // Desafio 10
 function techList() {
   // seu código aqui
