@@ -99,7 +99,7 @@ console.log(highestCount(numbers))
 
 // Desafio 7 // Caça ao rato
 
-function catAndMouse(param1,param2,param3) {
+function catAndMouse(rat,gat1,gat2) {
 
   let dist1=Math.abs(gat1-rat);
   let dist2=Math.abs(gat2-rat);
@@ -115,8 +115,8 @@ function catAndMouse(param1,param2,param3) {
   }
 }
 
-let rat=0;
-let gat1=3;
+let rat=1;
+let gat1=0;
 let gat2=2;
 console.log(catAndMouse(rat,gat1,gat2))
 
@@ -183,6 +183,10 @@ function techList(nomesTec, nome) {
   let saida=[];
   let obj={};
 
+  if (nomesTec.length==0){
+    return "Vazio!"
+  }
+  
   for (let i in nomesTec){
     obj={
       tech:nomesTec[i],
