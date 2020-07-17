@@ -2,19 +2,19 @@
 function compareTrue(a, b) {
   // seu código aqui
   if (a === true && b === true) {
-    return true
+    return true;
   }
-  return false
+  return false;
 }
 //console.log(compareTrue(true, true))
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // seu código aqui
-  let area = (base * height)/2
+  let area = (base * height) / 2;
   return area;
 }
- //console.log(calcArea(10,50)); 
+//console.log(calcArea(10,50)); 
 
 // Desafio 3
 function splitSentence() {
