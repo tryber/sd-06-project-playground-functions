@@ -34,13 +34,13 @@ function splitSentence(str) {
 function concatName(trocaNome) {
   let primeiroNome = trocaNome[trocaNome.length - 1];
   let ultimoNome = trocaNome[0];
-  let stringFinal = primeiroNome + ", " + ultimoNome;
-  return stringFinal;  
+  let stringFinal = `${primeiroNome}, ${ultimoNome}`;
+  return stringFinal;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
