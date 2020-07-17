@@ -19,7 +19,8 @@ function splitSentence() {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  novaArray = [array[array.length - 1], array[0]];
+  return novaArray;
 }
 
 // Desafio 5
