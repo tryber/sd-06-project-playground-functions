@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(logico1, logico2) {
+  let retorno = false;
   if (logico1 && logico2) {
-    return true;
-  } else {
-    return false;
+    returno = true;
   }
+  return retorno;
 }
 
 // Desafio 2
@@ -14,17 +14,21 @@ function calcArea(base, heigth) {
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let resultado = [];
+  resultado.push(frase.split(" "));
+  return resultado;
 }
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let primeiraPalavra = meuArray[0];
+  let ultimaPalavra = meuArray[meuArray.length - 1];
+  return ultimaPalavra + ", " + primeiraPalavra;
 }
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+  // seu código aquiclear
 }
 
 // Desafio 6
