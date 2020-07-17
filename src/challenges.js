@@ -122,7 +122,7 @@ function decode(string) {
 
 // Desafio 10
 function techList(tech, name) {
-  if (obj.length > 0) {
+  if (tech.length > 0) {
     tech.sort();
     let obj = [];
     for (i in tech) {
@@ -130,8 +130,10 @@ function techList(tech, name) {
     }
     return obj;
   }
-  return "Vazio!"
+  return "Vazio!";
 }
+
+console.log (techList([], "alexandre"));
 
 // Desafio 11
 function generatePhoneNumber() {
