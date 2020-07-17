@@ -1,5 +1,6 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(first,second) {
+  first && second ? true : false;
   // seu código aqui
 }
 
