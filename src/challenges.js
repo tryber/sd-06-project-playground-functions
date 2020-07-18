@@ -147,10 +147,8 @@ function techList(technologies,name) {
         'tech':technologies[index2],
         'name':name
       }
-    } console.log(newObject);
-} else {
-    return 'Vazio!';
-}
+    } return newObject;
+} return 'Vazio!';
 }
 
 // Desafio 11
