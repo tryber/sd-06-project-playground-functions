@@ -197,18 +197,9 @@ function triangleCheck() {
 }
 
 // Desafio 13
-let bebidas = "1 cachaça, 5 cervejas e 1 copo de vinho";
-function hydrate(bebidas) {
-  // seu código aqui
-  let suma = 0;
-  bebidas = bebidas.replace(/\D/g, "");
-  bebidas = bebidas.split(:);
-  for (let i in bebidas) {
-    suma += bebidas[i];
-  }
-  return suma + ' copos de água';
+function hydrate() {
+
 }
-console.log(hydrate(bebidas));
 
 module.exports = {
   calcArea,
