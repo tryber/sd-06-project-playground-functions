@@ -88,15 +88,24 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(word) {
-  // Verificar 
-  for (let i = 0; i <= word.length; i++) {
-    if (word[i] === 'a') {
-      console.log ("teste");
+  // 
+  let palavra = word.split("");
+  for (let i = 1; i <= word.length; i++) {
+    if (palavra[i] === 'a') {
+      palavra[i] = '1';
+    } else if (palavra[i] === 'e') {
+      palavra[i] = '2';
+    } else if (palavra[i] === 'i') {
+      palavra[i] = '3';
+    } else if (palavra[i] === 'o') {
+      palavra[i] = '4';
+    } else if (palavra[i] === 'u') {
+      palavra[i] = '5';
     }
-  }
+ }
+ return palavra;
 }
 
-encode('abc');
 function decode() {
   // seu código aqui
 }
