@@ -126,18 +126,22 @@ function decode(word) {
 // Desafio 10
 function techList(list, name) {
   let orderedArray = list.sort();
-  let outPut = {};
-  console.log (orderedArray);
+  let outPut = [];
   for (let i = 0; i < orderedArray.length; i++) {
-    if (orderedArray !== {}) {
-      outPut.tech = orderedArray[i];
-      outPut.name = name;
-      return outPut;
-    } else {
-      return "Vazio";
-    }
+    outPut.push(orderedArray[i], name);
   }
+  return outPut;
+  // for (let i = 0; i < orderedArray.length; i++) {
+  //   if (orderedArray !== {}) {
+  //     outPut.tech = orderedArray[i];
+  //     outPut.name = name;
+  //     return outPut;
+  //   } else {
+  //     return "Vazio!";
+  //   }
+  // }
 }
+console.log (techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -145,15 +149,27 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  //
+  if (lineA < (lineB + lineC) && lineA > (Math.abs(lineB - lineC))) {
+    return true;
+  } else if (lineB < (lineA + lineC) && lineB > (Math.abs(lineA - lineC))) {
+    return true;
+  } else if (lineC < (lineA + lineB) && lineC > (Math.abs(lineA - lineB))) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(pedido) {
   // seu código aqui
-}
+  let int = pedido.replace(/\D/g, "");
+  console.log (int);
 
+}
+hydrate("1 agua e 1 coca");
 
 module.exports = {
   calcArea,
