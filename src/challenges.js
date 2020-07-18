@@ -92,18 +92,22 @@ function encode(decodedString) {
   let encoded = '';
 
   for (let i = 0; i < decodedString.length; i += 1) {
-    if (decodedString[i] === 'a') {
-      encoded += '1';
-    } else if (decodedString[i] === 'e') {
-      encoded += '2';
-    } else if (decodedString[i] === 'i') {
-      encoded += '3';
-    } else if (decodedString[i] === 'o') {
-      encoded += '4';
-    } else if (decodedString[i] === 'u') {
-      encoded += '5';
-    } else {
-      encoded += decodedString[i];
+    switch (decodedString[i]) {
+      case 'a':
+        encoded += '1';
+        break;
+      case 'e':
+        encoded += '2';
+        break;
+      case 'i':
+        encoded += '3';
+        break;
+      case 'o':
+        encoded += '4';
+        break;
+      case 'u':
+        encoded += '5';
+        break;
     }
   }
 
