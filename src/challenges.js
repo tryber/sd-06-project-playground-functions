@@ -174,12 +174,15 @@ function techList(arrayOfTechs, name) {
   return arrayOfObjects;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
 }
+
+//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+//(12) 34567-8901
 
 // Desafio 12
 function triangleCheck() {
