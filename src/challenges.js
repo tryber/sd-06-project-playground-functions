@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(var1, var2) {
-  if(var1 === true && var2 === true)  {
+  if (var1 === true && var2 === true) {
     return true;
   }
-  
-    return false;
+  return false;
 }
 
 // Desafio 2
@@ -21,9 +20,10 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(d) {
-  let word_1= '';
-  word_1 = d[d.length-1]+', '+d[0];
-  return word_1;
+  let ultimo = d[d.length - 1];
+  let primeiro = d[0];
+  let ultmoPrimeiro = `${ultimo}, ${primeiro}`;
+  return ultmoPrimeiro;
 }
 
 // Desafio 5
@@ -39,11 +39,11 @@ function highestCount(array) {
   let maior = array[0];
   let cont = 0;
   
-  for(let i = 0; i<array.length; i += 1) {
-    if(array[i] === maior)  {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] === maior) {
       cont += 1;
     }
-    if(array[i] > maior)  {
+    if (array[i] > maior) {
       maior = array[i];
       cont = 1;
     }
@@ -59,13 +59,13 @@ function catAndMouse(mouse, cat1, cat2) {
   dist1 = Math.abs(dist1);
   dist2 = cat2-mouse;
   dist2 = Math.abs(dist2);
-  if(dist1>dist2)  {
+  if (dist1 > dist2) {
     return 'cat2';
   }
-  if( dist1 === dist2 )  {
+  if ( dist1 === dist2 ) {
     return 'os gatos trombam e o rato foge';
   }
-  if(dist1 < dist2)  {
+  if (dist1 < dist2) {
     return 'cat1';
   }
 }
@@ -73,97 +73,68 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array_1) {
   let array_2 = [];
-  for(let i = 0; i<array_1.length; i += 1) {
-    if(array_1[i] % 3 === 0)  {
-      array_2[i] += 'fizz';
+  for (let i = 0; i < array_1.length; i += 1) {
+    if (array_1[i] % 3 === 0 && array_1[i] % 5 !== 0) {
+      array_2[i] = 'fizz';
     }
-    if(array_1[i] % 5 === 0)  {
-      array_2[i]+='buzz';
+    if (array_1[i] % 5 === 0 && array_1[i] % 3 !== 0) {
+      array_2[i] = 'buzz';
     }
-    if(array_1[i] % 5 === 0 && array_1[i] % 3 === 0)  {
-      array_2[i] += 'fizzbuzz';
+    if (array_1[i] % 5 === 0 && array_1[i] % 3 === 0) {
+      array_2[i] = 'fizzbuzz';
     }
-    else  {
-      array_2[i] += 'bug';
+    else {
+      array_2[i] = 'bug';
     }
   }
+  return array_2;
 }
 
 // Desafio 9
 function encode(word_2) {
-  let aux = '';
-  let cont = 0;
-  let pala = '';
+  const vogais = {
+    a : 1,
+    e : 2,
+    i : 3,
+    o : 4,
+    u : 5,
+  };
+  let vet_1 = [];
   
-  for(let i = 0; i<word_2.length; i += 1) {
-    cont =0;
-    if(word_2[i] === 'a')  {
-      pala = 1;
-      cont = 1;
-    }
-    if(word_2[i] === 'e')  {
-      pala = 2;
-      cont = 1;
-    }
-    if(word_2[i] === 'i')  {
-      pala = 3;
-      cont = 1;
-    }
-    if(word_2[i] === 'o')  {
-      pala = 4;
-      cont = 1;
-    }
-    if(word_2[i] === 'u')  {
-      pala = 5;
-      cont = 1;
-    }
-    if(cont === 1)  {
-      aux += pala;
+  for (let i = 0; i < word_2.length; i += 1) {
+    let char =word_2.charAt(i);
+    if (char in vogais){
+      vet_1.push(vogais[char]);
     }
     else {
-      aux += word_2[i];
+      vet_1.push([char]);
     }
   }
-  return aux;
+  let retorno = vet_1.join('');
+  return retorno;
 }
 
-function decode(word_2) {
-  let aux = '';
-  let cont = 0;
-  let pala = '';
-  for(let i = 0; i<word_2.length; i += 1) {
-    cont = 0;
-    if(word_2[i] === 1)  {
-      pala = 'a';
-      cont = 1;
-    }
-    if(word_2[i] === 2)  {
-      pala = 'e';
-      cont = 1;
-    }
-    if(word_2[i] === 3)  {
-      pala = 'i';
-      cont = 1;
-    }
-    if(word_2[i] === 4)  {
-      pala = 'o';
-      cont = 1;
-    }
-    if(word_2[i] === 5)  {
-      pala = 'u';
-      cont = 1;
-    }
-    if(cont === 1)
-    {
-     //
-      aux += pala;
+function decode(word_3) {
+  const numbers = {
+    1 : 'a',
+    2 : 'e',
+    3 : 'i',
+    4 : 'o',
+    5 : 'u',
+  };
+  let vet_1 = [];
+  
+  for (let i = 0; i < word_3.length; i += 1) {
+    let char = word_3.charAt(i);
+    if(char in numbers){
+      vet_1.push(numbers[char]);
     }
     else {
-     
-      aux += word_2[i];
+      vet_1.push([char]);
     }
   }
-  return aux;
+  let retorno = vet_1.join('');
+  return retorno;
 }
 
 // Desafio 10
