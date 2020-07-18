@@ -225,7 +225,7 @@ function techList(arr, name) {
 
   let newArr = []
 
-  if (arr == undefined || arr.length == 0 || arr[0] == 0)
+  if (arr == undefined || arr.length == 0 || arr[0] == 0 || arr == newArr)
     return "Vazio!" 
 
   for (let i in arr) {
@@ -238,6 +238,8 @@ function techList(arr, name) {
   return newArr
 
 }
+
+console.log(techList([], d9))
 
 // Desafio 11
 function generatePhoneNumber(arr) {
