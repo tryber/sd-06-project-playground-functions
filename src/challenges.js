@@ -29,7 +29,7 @@ console.log(resultSplit);
 
 // Desafio 4 - Concatenação de strings
 
-function concatName(){
+function concatName(arrayNomes)){
  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + ', ' + arrayNomes[0];
 }
 let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
