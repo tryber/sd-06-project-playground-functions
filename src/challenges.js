@@ -173,7 +173,7 @@ function generatePhoneNumber(array) {
   let string = "";
   let n = 0; //numero de numeros na array
   let m1 = 0; //marcar se tem repetido
-  let m2 = array[0]; //recebe o repetido
+  //let m2 = array[0]; //recebe o repetido
   let t = false;
   //anda pela array
   for (let i in array){
@@ -217,7 +217,7 @@ function generatePhoneNumber(array) {
   return string;
 }
 
-console.log(generatePhoneNumber([1, 2, 2, 1, 5, 4, 3, 3, 9, 0, 7]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
