@@ -118,7 +118,6 @@ function encode(string) {
   }
   return coded;
 }
-console.log(encode("How are you today?"));
 
 function decode(string) {
   let stringArray = [];
@@ -143,8 +142,6 @@ function decode(string) {
   }
   return decoded;
 }
-console.log(decode("H4w 1r2 y45 t4d1y?"));
-
 
 // Desafio 10
 function techList() {
