@@ -83,55 +83,45 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
+function encDec(char) {
+  switch (char) {
+    case 'a':
+      return '1';
+    case 'e':
+      return '2';
+    case 'i':
+      return '3';
+    case 'o':
+      return '4';
+    case 'u':
+      return '5';
+    case '1':
+      return 'a';
+    case '2':
+      return 'e';
+    case '3':
+      return 'i';
+    case '4':
+      return 'o';
+    case '5':
+      return 'u';
+    default:
+      return char;
+  }
+}
 function encode(sentence) {
   // seu código aqui
-  let newSentence = sentence;
+  let newSentence = '';
   for (let index = 0; index < sentence.length; index += 1) {
-    switch (sentence[index]) {
-      case 'a':
-        newSentence = newSentence.replace('a', '1');
-        break;
-      case 'e':
-        newSentence = newSentence.replace('e', '2');
-        break;
-      case 'i':
-        newSentence = newSentence.replace('i', '3');
-        break;
-      case 'o':
-        newSentence = newSentence.replace('o', '4');
-        break;
-      case 'u':
-        newSentence = newSentence.replace('u', '5');
-        break;
-      default:
-        break;
-    }
+    newSentence += encDec(sentence[index]);
   }
   return newSentence;
 }
 function decode(frase) {
-  // seu código aqui
-  let newFrase = frase;
+  // seu código aqui denovo
+  let newFrase = '';
   for (let index = 0; index < frase.length; index += 1) {
-    switch (frase[index]) {
-      case '1':
-        newFrase = newFrase.replace('1', 'a');
-        break;
-      case '2':
-        newFrase = newFrase.replace('2', 'e');
-        break;
-      case '3':
-        newFrase = newFrase.replace('3', '3');
-        break;
-      case '4':
-        newFrase = newFrase.replace('4', 'o');
-        break;
-      case '5':
-        newFrase = newFrase.replace('5', 'u');
-        break;
-      default:
-        break;
-    }
+    newFrase += encDec(frase[index]);
   }
   return newFrase;
 }
