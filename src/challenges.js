@@ -208,8 +208,34 @@ function decode(inputStringToDecode) {
 }
 
 // Desafio 10
-function techList(techArray, name) {
-  // seu código aqui
+function techList(techArray, nameStudent) {
+  if (techArray.length === 0) {
+    return "Vazio!";
+  }
+  
+  let sortedTechArray = techArray;
+
+  for (let i in sortedTechArray) { // ordena os nomes das tecnologias
+  
+    for (let j = 0; j < sortedTechArray.length - 1; j += 1) {
+      if (sortedTechArray[j] > sortedTechArray[j + 1]) {
+        let auxSort = sortedTechArray[j];
+        sortedTechArray[j] = sortedTechArray[j + 1];
+        sortedTechArray[j + 1] = auxSort;
+      }
+    }
+  }
+
+  let listOfObjects = sortedTechArray;
+
+  for (index in sortedTechArray) { // cria lista de objetos conforme o enunciado
+    listOfObjects[index] = {
+      tech: sortedTechArray[index],
+      name: nameStudent,
+    };
+  }
+
+  return listOfObjects;
 }
 
 // Desafio 11
