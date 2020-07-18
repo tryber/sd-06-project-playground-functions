@@ -60,12 +60,26 @@ function highestCount(lista) {
 }
 // let list = [0, 4, 4, 4, 9, 2, 1];
 // console.log(highestCount(list)); teste 06
-//
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function trataNeg(valor) {
+  if (valor < 0) {
+    valor = valor * -1;
+  } return valor
 }
-
+function catAndMouse(cat1, cat2, mouse) {
+  let distanciaCat1 = mouse - cat1;
+  distanciaCat1 = trataNeg(distanciaCat1);
+  let distanciaCat2 = mouse - cat2;
+  distanciaCat2 = trataNeg(distanciaCat2);
+  if (distanciaCat1 < distanciaCat2) {
+    return ("cat1");
+  } else if (distanciaCat1 > distanciaCat2) {
+    return ("cat2");
+  } else {
+    return ("os gatos trombam e o rato foge");
+  }
+}
+// console.log(catAndMouse(5, 3, 3));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
