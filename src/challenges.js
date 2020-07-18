@@ -171,10 +171,10 @@ function generatePhoneNumber(numeros) {
   // seu código aqui
   let telefone;
   let contador;
-  let verifica = numeros;
+  let verifica = numeros
   for (let i in numeros) {
     if (verifica[i] === numeros[i]) {
-      contador ++
+        contador ++;
     }
   }
   for (let i in numeros) {
