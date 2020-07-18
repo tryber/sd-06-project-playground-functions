@@ -52,10 +52,6 @@ function splitSentence(str) {
 
 }
 
-let uhum = "The quick brown fox jumps over the lazy dog"
-
-console.log(splitSentence(uhum))
-
 // Desafio 4
 function concatName(arrayStrings) {
 
@@ -68,8 +64,6 @@ function concatName(arrayStrings) {
   return arrayStringsInv
 
 }
-
-console.log(concatName(uhum))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -105,10 +99,6 @@ function highestCount(arr) {
 
 }
 
-let d6 = [1,2,3,7,2,7,2,9,6,9,9]
-
-//console.log(highestCount(d6))
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   
@@ -138,8 +128,6 @@ function catAndMouse(mouse, cat1, cat2) {
 
 }
 
-console.log(catAndMouse(4, 6, 1))
-
 // Desafio 8
 function fizzBuzz(arr) {
   
@@ -160,10 +148,6 @@ function fizzBuzz(arr) {
   return fizz
 
 }
-
-let d8 = [2, 15, 7, 9, 45]
-
-console.log(fizzBuzz(d8))
 
 // Desafio 9
 function encode(str) {
@@ -217,9 +201,6 @@ function decode(str) {
 
 }
 
-let d9 = "aeioua1234523"
-console.log(decode(d9))
-
 // Desafio 10
 function techList(arr, name) {
 
@@ -243,11 +224,41 @@ function techList(arr, name) {
 
 // Desafio 11
 function generatePhoneNumber(arr) {
+
+  let str = "("
   
   if (arr.length != 11)
     return "Array com tamanho incorreto."
 
+  for (let i = 0; i < 10; i++) {
+    let k = 0
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] == i)
+        k++
+      if (arr[j] <= -1)
+        return "não é possível gerar um número de telefone com esses valores"
+    }
+    if (k >= 3)
+      return "não é possível gerar um número de telefone com esses valores"
+  }
 
+  for (let i = 0; i < 2; i++) {
+    str = str + arr[i]
+  }
+
+  str = str + ") "
+
+  for (let i = 2; i < 7; i++) {
+    str = str + arr[i]
+  }
+
+  str = str + "-"
+
+  for (let i = 7; i < 11; i++) {
+    str = str + arr[i]
+  }
+
+  return str
 
 }
 
