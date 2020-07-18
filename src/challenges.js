@@ -120,14 +120,14 @@ function encode(word) {
   }
   return vogal;
 }
-console.log(encode('How are you today?'));
+
 function decode(numero) {
   // seu código aqui
   let word = [''];
   let array = [... numero];
   for(let i in array) {
     if(array[i] === '1'){
-      word[i] += 'a';
+      word += 'a';
     } else if(array[i] === '2'){
       word += 'e';
     } else if(array[i] === '3'){
