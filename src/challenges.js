@@ -1,9 +1,10 @@
 // Desafio 1
 function compareTrue(val1, val2) {
   // seu código aqui
-  if (val1 === true && val2 === true){
+  if (val1 === true && val2 === true) {
     return true;
-  }else{
+  } 
+  else {
     return false;
   }
 }
@@ -17,14 +18,15 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  array = frase.split(' ');
+   let array = frase.split(' ');
   return array;
 }
 
 // Desafio 4
 function concatName(nomes) {
   // seu código aqui
-  return nomes[nomes.length - 1] + ', ' +  nomes[0];
+  let nomesConcat = nomes[nomes.length - 1] + ', ' +  nomes[0];
+  return nomesConcat;
 }
 
 // Desafio 5
@@ -40,13 +42,13 @@ function highestCount(numeros) {
   // seu código aqui
   let numMaior = 0;
   let contador = 0;
-  for (let i = 0; i < numeros.length; i += 1){
-    if (numeros[i] > numMaior){
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] > numMaior) {
       numMaior = numeros[i];
     }
   }
-  for (let e = 0; e < numeros.length; e += 1){
-    if (numeros[e] === numMaior){
+  for (let e = 0; e < numeros.length; e += 1) {
+    if (numeros[e] === numMaior) {
       contador += 1;
     }
   }
@@ -57,29 +59,33 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   let contadorCat1 = 0;
   let contadorCat2 = 0;
-  if (mouse > cat1){
-    for (let i = cat1; i <= mouse; i += 1){
-      contadorCat1 += 1;
-    }
-  }else {
-    for (let e = mouse; e <= cat1; e += 1){
+  if (mouse > cat1) {
+    for (let i = cat1; i <= mouse; i += 1) {
       contadorCat1 += 1;
     }
   }
-  if (mouse > cat2){
-    for (let i = cat2; i <= mouse; i += 1){
-      contadorCat2 += 1;
+  else {
+    for (let e = mouse; e <= cat1; e += 1) {
+      contadorCat1 += 1;
     }
-  }else {
-    for (let e = mouse; e <= cat2; e += 1){
+  }
+  if (mouse > cat2) {
+    for (let i = cat2; i <= mouse; i += 1) {
       contadorCat2 += 1;
     }
   }
-  if (contadorCat1 > contadorCat2){
+  else {
+    for (let e = mouse; e <= cat2; e += 1) {
+      contadorCat2 += 1;
+    }
+  }
+  if (contadorCat1 > contadorCat2) {
     return 'cat2';
-  }else if (contadorCat2 > contadorCat1){
+  }
+  else if (contadorCat2 > contadorCat1) {
     return 'cat1';
-  }else{
+  }
+  else {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -88,14 +94,17 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   // seu código aqui
   let numDivisibles = [];
-  for (let i in numeros){
-    if (numeros[i] % 3 == 0 && numeros[i] % 5 == 0){
-      numDivisibles[i] = 'fizzBuzz'; 
-    }else if (numeros[i] % 3 == 0){
+  for (let i in numeros) {
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+      numDivisibles[i] = 'fizzBuzz';
+    }
+    else if (numeros[i] % 3 === 0) {
       numDivisibles[i] = 'fizz';
-    }else if (numeros[i] % 5 == 0) {
+    }
+    else if (numeros[i] % 5 === 0) {
       numDivisibles[i] = 'buzz';
-    }else {
+    }
+    else {
       numDivisibles[i] = 'bug!';
     }
   }
@@ -105,9 +114,9 @@ function fizzBuzz(numeros) {
 // Desafio 9
 function encode(frase) {
   // seu código aqui
-  arrayFrase = frase.split('');
-  for (i in arrayFrase){
-    switch (arrayFrase[i]){
+  let arrayFrase = frase.split('');
+  for (let i in arrayFrase) {
+    switch (arrayFrase[i]) {
       case 'a':
         arrayFrase[i] = '1';
         break;
@@ -122,6 +131,7 @@ function encode(frase) {
         break;
       case 'u':
         arrayFrase[i] = '5';
+      default:
     }
   }
   arrayFrase = arrayFrase.join('');
@@ -131,9 +141,9 @@ function encode(frase) {
 
 function decode(fraseDecode) {
   // seu código aqui
-  arrayFraseDecode = fraseDecode.split('');
-  for (i in arrayFraseDecode){
-    switch (arrayFraseDecode[i]){
+  let arrayFraseDecode = fraseDecode.split('');
+  for (let i in arrayFraseDecode) {
+    switch (arrayFraseDecode[i]) {
       case '1':
         arrayFraseDecode[i] = 'a';
         break;
@@ -148,6 +158,7 @@ function decode(fraseDecode) {
         break;
       case '5':
         arrayFraseDecode[i] = 'u';
+      default:
     }
   }
   arrayFraseDecode = arrayFraseDecode.join('');
@@ -160,27 +171,25 @@ function techList(arrayTecnologia, name) {
   let arrayOrdenado = arrayTecnologia.sort();
   let objeto = {};
   // seu código aqui
-  if (arrayTecnologia.length === 0){
+  if (arrayTecnologia.length === 0) {
     return 'Vazio!';
-  }else{  
-    for (i in arrayOrdenado){
+  }
+  else {
+    for (let i in arrayOrdenado) {
       objeto = {
         tech: arrayOrdenado[i],
-        name: name,
+        nome: name,
       }
       arrayTotal[i] = objeto;
     }
     return arrayTotal;
-  }    
+  }
 }
-
-
-
-
 
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
+  replace(/\D/g, "")
 }
 
 // Desafio 12
