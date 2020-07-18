@@ -2,7 +2,7 @@
 let valor1
 let valor2;
 function compareTrue(valor1, valor2) {
-  if ( valor1 && valor2 === true){
+  if (valor1 && valor2 === true){
     return true;
   } else {
     return false;
@@ -35,29 +35,27 @@ function concatName(arrayNomes) {
   let arrayPrimeiroUltimo = `${arrayNomes[arrayNomes.length - 1]}, ${arrayNomes[0]}`;
   return arrayPrimeiroUltimo;
 }
-//console.log(concatName());
 
 // Desafio 5
 function footballPoints(ties, wins) {
-  let pontuacao = ties + (wins * 3);
+  let pontuacao = (wins * 3) + (ties * 1);
   return pontuacao;
 }
-//console.log(footballPoints(2 , 3));
-
-
+pontuação = footballPoints(3,2);
+console.log(pontuação);
 // Desafio 6
 
 function highestCount(lista) {
   let maior = lista[0];
-  for( let indice of lista ){
-    if( indice > maior ){
+  for (let indice of lista){
+    if (indice > maior){
       maior = indice;
     }
   }
   let contador = 0;
-  for( let indice of lista ){
-    if( indice === maior ){
-      contador = contador + 1;
+  for (let indice of lista){
+    if (indice === maior){
+      contador += 1;
     }
   }
   return contador;
@@ -70,27 +68,27 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = Math.abs(mouse - cat1);
   let distanciaCat2 = Math.abs(mouse - cat2);
   if (distanciaCat1 > distanciaCat2) {
-    return "cat2";
+    return 'cat2';
   } else if (distanciaCat1 < distanciaCat2) {
-    return "cat1";
+    return 'cat1';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-let arrayNumeros=[2,3,5,15];
+let arrayNumeros=[2, 3, 5, 15];
 function fizzBuzz(arrayNumeros) {
   let newArrayNumeros=[];
-  for (let indice in arrayNumeros){ 
-    if ( arrayNumeros[indice] % 3 === 0 && arrayNumeros[indice] % 5 === 0) {
-      newArrayNumeros[indice] = "fizzBuzz";
-    } else if( arrayNumeros[indice] % 3 === 0) {
-      newArrayNumeros[indice] = "fizz";
-    } else if ( arrayNumeros[indice] % 5 === 0) {
-      newArrayNumeros[indice] = "buzz";
+  for ( let indice in arrayNumeros ){ 
+    if (arrayNumeros[indice] % 3 === 0 && arrayNumeros[indice] % 5 === 0) {
+      newArrayNumeros[indice] = 'fizzBuzz';
+    } else if(arrayNumeros[indice] % 3 === 0) {
+      newArrayNumeros[indice] = 'fizz';
+    } else if (arrayNumeros[indice] % 5 === 0) {
+      newArrayNumeros[indice] = 'buzz';
     } else {
-      newArrayNumeros[indice] = "bug!";
+      newArrayNumeros[indice] = 'bug!';
     }
   }
   return newArrayNumeros;
@@ -118,10 +116,6 @@ function generatePhoneNumber(arrayTelefone) {
   //tamanho minimo arrayTelefone = 0
   //regra => não pode se repetir um mesmo indice por mais de 3 vezes ou é aceitos até duas repetições
   }
-  
-
-//console.log(generatePhoneNumber(arrayTelefone));
-
 // Desafio 12
 let lineA;
 let lineB;
