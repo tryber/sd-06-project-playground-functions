@@ -11,7 +11,7 @@ function calcArea(base, height) {
   return (base*height)/2
 }
 
-// Desafio 3
+// Desafio 3 ## DONE!!! ##
 function splitSentence(phrase) {
   let sentenceArr = [];
   let phraseSplited = "";
@@ -41,9 +41,26 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrNumbers) {
+  let countNumber = 0;
+  let highest = arrNumbers[0];
+
+  for (let index in arrNumbers) { // identifica o maior número do array
+    if (highest < arrNumbers[index]) {
+      highest = arrNumbers[index];
+    }
+  }
+
+  for (let index in arrNumbers) { // contagem do maior número
+    if (arrNumbers[index] === highest) {
+      countNumber += 1;
+    }
+  }
+
+  return countNumber;
 }
+
+console.log(highestCount([9, 19, 29, 39]));
 
 // Desafio 7 ## DONE!!! ##
 function catAndMouse(mouse, cat1, cat2) {
