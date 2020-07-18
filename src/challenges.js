@@ -20,8 +20,8 @@ function splitSentence(a = 'go Trybe') {
 
 // Desafio 4
 function concatName(a = ['foguete', 'nao', 'tem', 'ré']) {
-  last = a[a.length-1]
-  console.log(last, a[0])
+  last = a[a.length-1];
+  return last + ', ' + a[0];
 }
 
 // Desafio 5
