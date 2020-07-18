@@ -32,18 +32,17 @@ console.log(resultSplit);
 // Desafio 4
 function concatName(arrayNomes) {
   arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-  //return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + ", " + arrayNomes[0];
-  let arrayPrimeiroUltimo = (arrayNomes.slice(-1)) + ", " + (arrayNomes[0]);
+  let arrayPrimeiroUltimo = `${arrayNomes[arrayNomes.length - 1]}, ${arrayNomes[0]}`;
   return arrayPrimeiroUltimo;
 }
-console.log(concatName());
+//console.log(concatName());
 
 // Desafio 5
 function footballPoints(ties, wins) {
-  let pontuacao = (ties + (wins * 3));
+  let pontuacao = ties + (wins * 3);
   return pontuacao;
 }
-console.log(footballPoints(2 , 3));
+//console.log(footballPoints(2 , 3));
 
 
 // Desafio 6
@@ -101,10 +100,24 @@ function fizzBuzz(arrayNumeros) {
 // Desafio 9
 
 function encode() {
-  let arrayVogais = ['a','e','i','o','u'];
-  for(let i=1; i <= arrayVogais.length; i++){
-    console.log(i);
+  let entrada = '';
+  
+  for(let word = 0; i < entrada.length; word += 1){
+    if (entrada[word] === 'a'){
+      entrada += '1';
+    }else if (entrada[word] === 'e'){
+      entrada += '2';
+    }else if (entrada[word] === 'i'){
+      entrada += '3';
+    }else if (entrada[word] === 'o'){
+      entrada += '4';
+    }else if (entrada[word] === 'u'){
+      entrada += '5';
+    }else{
+      entrada +=__[word]; 
+    }
   }
+  return entrada;
   
 }
 console.log(encode());
@@ -153,9 +166,23 @@ function triangleCheck(lineA, lineB, lineC) {
 //console.log(triangleCheck(0,0,0));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(entrada) {
+  let bebidas = entrada.replace(/\D/g, "");
+  let bebidaSoma = 0;
+  let retorno = '';
+
+  for (let i = 0; i < bebidas.length; i += 1 ){
+    bebidaSoma += parseInt(bebidas[i]);
+  }
+
+  if (bebidaSoma === 1){
+    retorno = `${bebidaSoma} copo de água`;
+  }else{
+    resposta =`${bebidaSoma} copo de água`;
+  }
+  return retorno;
 }
+//console.log(hydrate(5));
 
 
 module.exports = {
