@@ -157,7 +157,7 @@ function techList(array, nome) {
     return 'Vazio!';
   }
   for (let i = 0; i < array.length; i += 1) {
-    answer.push({ name: nome, tech: array[i],  });
+    answer.push({ name: nome, tech: array[i], });
   }
   return answer;
 }
@@ -174,28 +174,32 @@ function condicional(array) {
       }
       if (array[i] < 0 || array[i] > 9) {
         check = true;
-        break;
       }
     }
-  }
-  if (count > 3) {
-    check = true;
-  } else {
-    count = 0;
+    if (count > 3) {
+      check = true;
+    } else {
+      count = 0;
+    }
   }
   return check;
 }
 
 function generatePhoneNumber(array) {
-  let phoneNumber = [];
+  let phoneNumber = "";
 
-  if (array.length > 11) {
-    return 'Array com tamanho incorreto.';
-  } else if (condicional(array) === true) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-    phoneNumber = array.splice(0, 0, '(');
-    phoneNumber = phoneNumber.splice(3, 0, ')');
+    if (array.length > 11) {
+      return 'Array com tamanho incorreto.';
+    } else if (condicional(array) === true) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+    for (let i = 0; i < array.length; i += 1) {
+      phoneNumber += array[i];
+    }
+
+  let newPhoneNumber = '(' + phoneNumber.substring(0, 2) + ') ' + phoneNumber.substring(2, 7) + '-' + phoneNumber.substr(7, 11);
+
+  return newPhoneNumber;
 }
 
 // Desafio 12
