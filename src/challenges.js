@@ -193,19 +193,17 @@ function generatePhoneNumber(phoneArray) {
   }
 
   function repeatThreeOrMore(arrayOfNumbers) {
-    let counter = 1;
+    let counter = 0;
 
     for (let i = 0; i < arrayOfNumbers.length; i += 1) {
-      for (let j = 1; j < arrayOfNumbers.length; j += 1) {
+      for (let j = 0; j < arrayOfNumbers.length; j += 1) {
         if (arrayOfNumbers[i] === arrayOfNumbers[j]) {
           counter += 1;
-
-          if (counter >= 3) {
-            return true;
-          }
         }
+      }
 
-        counter = 1;
+      if (counter >= 3) {
+        return true;
       }
     }
 
@@ -235,7 +233,7 @@ function generatePhoneNumber(phoneArray) {
   return '(' + ddd + ') ' + firstFive + '-' + lastFive;
 }
 
-console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 //(12) 34567-8901
 
 // Desafio 12
