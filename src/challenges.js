@@ -1,31 +1,29 @@
 // Desafio 1
-function compareTrue( bool1 , bool2 ) {
+function compareTrue(bool1, bool2) {
   // seu código aqui
-  if ( (bool1 && bool2) === true ) {
+  if ((bool1 && bool2) === true) {
     return true;
-  } else {
-    return false;
   }
 }
 
 // Desafio 2
-function calcArea( base , height ) {
+function calcArea(base, height) {
   // seu código aqui
-  return base * height/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence( str ) {
+function splitSentence(str) {
   // seu código aqui
-  var txt = "";
-  var strArray = [];
-  var counter = 0;
+  let txt = '';
+  let strArray = [];
+  let counter = 0;
   for (let i = 0; i < str.length; i = i + 1) {
-    if ( str[i] != " " ) {
+    if (str[i] !== ' ' ) {
       txt = txt + str[i];
-    } else if ( str[i] == " " && txt != ""){ 
+    } else if (str[i] === ' ' && txt !== ''){ 
       strArray[counter] = txt;
-      txt = "";
+      txt = '';
       counter = counter + 1;
     }
   }
@@ -33,30 +31,30 @@ function splitSentence( str ) {
 }
 
 // Desafio 4
-function concatName( strArray ) {
+function concatName(strArray) {
   // seu código aqui
-  return strArray[strArray.length-1] + ", " + strArray[0];
+  return strArray[strArray.length-1] + ', ' + strArray[0];
 }
 
 // Desafio 5
-function footballPoints(wins , ties) {
+function footballPoints(wins, ties) {
   // seu código aqui
-  return 3*wins + 1*ties;
+  return (3*wins) + (1*ties);
 }
 
 // Desafio 6
-function highestCount( numArray ) {
+function highestCount(numArray) {
   // seu código aqui
-  var greater = 0;
+  let greater = 0;
   for (let i = 0; i < numArray.length; i = i + 1) {
     if (numArray[i] > greater) {
       greater = numArray[i];
     }
   }
 
-  var counter = 0;
+  let counter = 0;
   for (let i = 0; i < numArray.length; i = i + 1) {
-    if (numArray[i] == greater) {
+    if (numArray[i] === greater) {
       counter = counter + 1;
     }
   }
@@ -64,11 +62,11 @@ function highestCount( numArray ) {
 }
 
 // Desafio 7
-function catAndMouse( mouse , cat1 , cat2 ) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if ( ((cat1-mouse)**2)**0.5 < ((cat2-mouse)**2)**0.5 ) {
+  if (((cat1 - mouse) ** 2) ** 0.5 < ((cat2 - mouse) ** 2) ** 0.5 ) {
     return 'cat1';
-  } else if ( ((cat1-mouse)**2)**0.5 > ((cat2-mouse)**2)**0.5 ) {
+  } else if (((cat1 - mouse) ** 2) ** 0.5 > ((cat2 - mouse) ** 2) ** 0.5 ) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
@@ -80,13 +78,13 @@ function fizzBuzz(numArray) {
   // seu código aqui
   let strArray = [];
   for (let i = 0; i < numArray.length; i = i + 1) {
-    if (numArray[i]%5 == 0 && numArray[i]%3 == 0) {
+    if (numArray[i] % 5 === 0 && numArray[i] % 3 === 0) {
       strArray[i] = 'fizzBuzz';
-    } else if (numArray[i]%3 == 0) {
+    } else if (numArray[i] % 3 === 0) {
       strArray[i] = 'fizz';
-    } else if (numArray[i]%5 == 0) {
+    } else if (numArray[i] % 5 === 0) {
       strArray[i] = 'buzz';
-    } else if (numArray[i]%5 != 0 && numArray[i]%3 != 0) {
+    } else if (numArray[i] % 5 !== 0 && numArray[i] % 3 !== 0) {
       strArray[i] = 'bug!';
     }
   }
@@ -96,8 +94,8 @@ function fizzBuzz(numArray) {
 // Desafio 9
 function encode(strEntry) {
   // seu código aqui
-  let str = "";
-  for ( let i = 0; i < strEntry.length; i = i + 1) {
+  let str = '';
+  for (let i = 0; i < strEntry.length; i = i + 1) {
     switch (strEntry[i]) {
       case 'a':
         str += '1';
@@ -120,10 +118,10 @@ function encode(strEntry) {
   }
   return str;
 }
-function decode( strEntry ) {
+function decode(strEntry) {
   // seu código aqui
-  let str = "";
-  for ( let i = 0; i < strEntry.length; i = i + 1) {
+  let str = '';
+  for (let i = 0; i < strEntry.length; i = i + 1) {
     switch (strEntry[i]) {
       case '1':
         str += 'a';
@@ -148,8 +146,17 @@ function decode( strEntry ) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  let str = [];
+  tech = tech.sort();
+  for (let i = 0; i < tech.length; i = i + 1) {
+    str[i] = {
+      tech: tech[i],
+      nome: name,
+    };
+  }
+  return str;
 }
 
 // Desafio 11
