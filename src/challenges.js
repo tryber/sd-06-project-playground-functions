@@ -42,7 +42,7 @@ function highestCount(numeros) {
       quantidade += 1;
     }
   }
-return quantidade;
+  return quantidade;
 }
 
 // Desafio 7
