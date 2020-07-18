@@ -141,17 +141,17 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList(tech, name) {
-  if (tech.length === 0) {
+function techList(techList, name) {
+  if (techList.length === 0) {
     return 'Vazio!';
   }
-  let tecnologias = [];
-  tech.sort();
-  for (let i = 0; i < tech.length; i += 1) {
-    const t = tech[i];
-    tecnologias.push({ t, name });
+  const objectList = [];
+  techList.sort();
+  for (let i = 0; i < techList.length; i += 1) {
+    const tech = techList[i];
+    objectList.push({ tech, name });
   }
-  return tecnologias;
+  return objectList;
 }
 
 // Desafio 11
@@ -189,7 +189,7 @@ console.log('Exercício 9: ' + encode('hi there!'));
 
 console.log('Exercício 9: ' + decode('h3 th2r2!'));
 
-console.log('Exercício 10: ' + techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Vagner"));
+console.log('Exercício 10: ' + techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 console.log('Exercício 11: ' );
 
