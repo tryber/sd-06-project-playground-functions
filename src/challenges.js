@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat1";
   } else if (distanceCat2 < distanceCat1) {
     return "cat2";
-  } else {
+  } else if (distanceCat1 === distanceCat2) {
     console.log ("Os gatos trombam e o rato foge");
   }
 }
@@ -88,7 +88,6 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(word) {
-  // 
   let palavra = word.split("");
   for (let i = 1; i <= word.length; i++) {
     if (palavra[i] === 'a') {
@@ -103,11 +102,25 @@ function encode(word) {
       palavra[i] = '5';
     }
  }
- return palavra;
+ return palavra.join('');
 }
 
-function decode() {
-  // seu código aqui
+function decode(word) {
+  let palavra = word.split("");
+  for (let i = 1; i <= word.length; i++) {
+    if (palavra[i] === '1') {
+      palavra[i] = 'a';
+    } else if (palavra[i] === '2') {
+      palavra[i] = 'e';
+    } else if (palavra[i] === '3') {
+      palavra[i] = 'i';
+    } else if (palavra[i] === '4') {
+      palavra[i] = 'o';
+    } else if (palavra[i] === '5') {
+      palavra[i] = 'u';
+    }
+  }
+  return palavra.join('');
 }
 
 // Desafio 10
