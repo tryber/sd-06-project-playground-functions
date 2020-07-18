@@ -30,10 +30,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  for (let index = 0; index < array.length; index += 1){
-    return newArray = array[array.length - 1] + ', ' + array[0];
-  }
-  console.log(newArray);
+  let newArray = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    return newArray = (array[array.length - 1] + ', ' + array[0]);
+    }
 }
 
 // Desafio 5
