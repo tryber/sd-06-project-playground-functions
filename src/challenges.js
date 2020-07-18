@@ -89,7 +89,7 @@ function fizzBuzz(arrayNumeros) {
 
 // Desafio 9
 function encode(frase) {
-  let palavra ='';
+  let palavra = '';
   for (let index in frase) {
     switch (frase[index]) {
       case 'a':
@@ -116,7 +116,7 @@ function encode(frase) {
 }
 
 function decode(frase) {
-  let palavra ='';
+  let palavra = '';
   for (let index in frase) {
     switch (frase[index]) {
       case '1':
@@ -143,8 +143,13 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tec, nome) {
+  let temp = tec.sort();
+  let tecnologias = [];
+  for (let index in temp) {
+    tecnologias[index] = {tech: tec[index], name: nome};
+  }
+  return tecnologias;
 }
 
 // Desafio 11
