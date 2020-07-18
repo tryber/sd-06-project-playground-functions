@@ -34,17 +34,32 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(10, 5));
 
 // Desafio 6
-function highestCount(receiveArray) {
-  for (let i = 0; i < receiveArray.length; i += 1) {
-    
-  }
+function highestCount(arr) {
+  let numeroMaisAlto = retornaMaiorNumeroDoArray(arr);
+  let numeroContagemMaisAlto = retornaMaiorNumeroDaContagem(numeroMaisAlto, arr);
+  return numeroContagemMaisAlto;
 }
 
+function retornaMaiorNumeroDaContagem(numeroMaisAlto, array) {
+  let count = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (numeroMaisAlto == array[index]) {
+    count += 1;
+    }
+  }
+  return count;  
+}
 
-
-
-
-
+function retornaMaiorNumeroDoArray(array) {
+  let numeroMaisAlto = array[0];
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > numeroMaisAlto) {
+      numeroMaisAlto = array[index];
+    }
+  }
+  return numeroMaisAlto;
+}
+console.log(highestCount(numeros = [9, 1, 2, 3, 9, 5, 7]));
 
 
 
