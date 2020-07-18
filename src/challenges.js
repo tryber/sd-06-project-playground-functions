@@ -13,7 +13,7 @@ function splitSentence(string) {
   let splitSentence = [];
   let splitWord = '';
 
-  for (let i = 0; i < string.length; i++) {
+  for (let i = 0; i < string.length; i += 1) {
     if (string[i] === ' ') {
       splitSentence.push(splitWord);
       splitWord = '';
@@ -48,7 +48,7 @@ function highestCount(numbers) {
     }
   }
 
-  for (let i = 0; i < numbers.length; i++) {
+  for (let i = 0; i < numbers.length; i += 1) {
     if (max === numbers[i]) {
       occurrences += 1;
     }
@@ -72,7 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(fizzBuzzNumbers) {
   const fizzBuzzArray = [];
 
-  for (let i = 0; i < fizzBuzzNumbers.length; i++) {
+  for (let i = 0; i < fizzBuzzNumbers.length; i += 1) {
     if (fizzBuzzNumbers[i] % 3 === 0 && fizzBuzzNumbers[i] % 5 === 0) {
       fizzBuzzArray.push('fizzBuzz');
     } else if (fizzBuzzNumbers[i] % 5 === 0 && fizzBuzzNumbers[i] % 3 !== 0) {
@@ -91,7 +91,7 @@ function fizzBuzz(fizzBuzzNumbers) {
 function encode(decodedString) {
   let encoded = '';
 
-  for (let i = 0; i < decodedString.length; i++) {
+  for (let i = 0; i < decodedString.length; i += 1) {
     if (decodedString[i] === 'a') {
       encoded += '1';
     } else if (decodedString[i] === 'e') {
@@ -113,7 +113,7 @@ function encode(decodedString) {
 function decode(encodedString) {
   let decoded = '';
 
-  for (let i = 0; i < encodedString.length; i++) {
+  for (let i = 0; i < encodedString.length; i += 1) {
     if (encodedString[i] === '1') {
       decoded += 'a';
     } else if (encodedString[i] === '2') {
@@ -156,7 +156,7 @@ function generatePhoneNumber(possibleNumber) {
   } else {
     let invalidInput = false;
 
-    for (let i = 0; i < possibleNumber.length; i++) {
+    for (let i = 0; i < possibleNumber.length; i += 1) {
       if (possibleNumber[i] < 0 || possibleNumber[i] > 9) {
         invalidInput = true;
         break;
@@ -176,7 +176,7 @@ function generatePhoneNumber(possibleNumber) {
 
   let phoneNumber = `(${possibleNumber[0]}${possibleNumber[1]}) `;
 
-  for (let i = 2; i < possibleNumber.length; i++) {
+  for (let i = 2; i < possibleNumber.length; i += 1) {
     if (i === 6) {
       phoneNumber += `${possibleNumber[i]}-`;
     } else {
@@ -190,7 +190,9 @@ function generatePhoneNumber(possibleNumber) {
 function mostOccurrences(verifiedNumber, numbers) {
   let counter = 0;
 
-  numbers.forEach((value) => (value === verifiedNumber && counter++));
+  numbers.forEach((value) => {
+    if (value === verifiedNumber) counter += 1;
+  })
 
   return counter;
 }
