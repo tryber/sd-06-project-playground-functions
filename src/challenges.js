@@ -46,9 +46,23 @@ function footballPoints(ties, wins) {
 
 // Desafio 6
 
-function highestCount() {
-  // seu código aqui
+function highestCount(lista) {
+  let maior = lista[0];
+  for(let indice of lista){
+    if(indice > maior){
+      maior = indice;
+    }
+  }
+  let contador = 0;
+  for(let indice of lista){
+    if(indice === maior){
+      contador = contador + 1;
+    }
+  }
+  return contador;
 }
+let numbers = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(numbers));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -102,9 +116,23 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+let arrayTelefone=[1,2,3,4,5,6,7,8,9,10,11];
+function generatePhoneNumber(arrayTelefone) {
+  //exceptions
+  if (arrayTelefone.length !==11){
+    return "Array com tamanho incorreto"
+  }
+  for (let i = 0; i < arrayTelefone.length; i++){
+    if (arrayTelefone[i] < 0 || arrayTelefone[i] > 9)
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  //tamanho maximo array arrayTelefone.length
+  //tamanho minimo arrayTelefone = 0
+  //regra => não pode se repetir um mesmo indice por mais de 3 vezes ou é aceitos até duas repetições
+  }
+  
+
+console.log(generatePhoneNumber(arrayTelefone));
 
 // Desafio 12
 let lineA;
