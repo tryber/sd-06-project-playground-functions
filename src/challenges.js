@@ -204,7 +204,10 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  if (lineA > Math.abs(lineB - lineC) && lineA > lineB + lineC || lineB > Math.abs(lineA - lineC) && lineB > lineA + lineC || lineC > Math.abs(lineB - lineA) && lineC > lineB + lineA) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
