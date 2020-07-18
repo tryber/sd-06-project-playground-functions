@@ -191,7 +191,8 @@ function generatePhoneNumber(possibleNumber) {
   }
 
   for (let i = 0; i < possibleNumber.length; i += 1) {
-    if (isNumberInRange(possibleNumber[i]) || mostOccurrences(possibleNumber[i], possibleNumber) >= 3) {
+    if (isNumberInRange(possibleNumber[i]) 
+          || mostOccurrences(possibleNumber[i], possibleNumber) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
