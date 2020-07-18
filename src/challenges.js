@@ -163,17 +163,23 @@ function decode(a = 'h3 th2r2!') {
 // Desafio 10
 function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lucas' ) {
   i = [];
-  for ( x in t ){
-    var obj = new Object();
-    obj.tech = t[x];
-    obj.name = name;
-    i.push(obj);
+  valid = t.length
+  if ( valid < 0){
+    for ( x in t ){
+      var obj = new Object();
+      obj.tech = t[x];
+      obj.name = name;
+      i.push(obj);
+    }
+
+    let sortedTechs = [...i].sort((first, second) => first.tech > second.tech);
+
+    return sortedTechs;
   }
-
-  let sortedTechs = [...i].sort((first, second) => first.tech > second.tech);
-
-return sortedTechs;
+  else 
+    return 'Vazio!'
 }
+
 // Desafio 11
 function generatePhoneNumber() {
 }
