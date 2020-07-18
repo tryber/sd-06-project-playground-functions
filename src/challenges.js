@@ -58,14 +58,14 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distanceCat1 = Math.abs(mouse - cat1);
-  let distanceCat2 = Math.abs (mouse - cat2);
+  let distanceCat2 = Math.abs(mouse - cat2);
 
   if (distanceCat1 < distanceCat2) {
     return "cat1";
   } else if (distanceCat2 < distanceCat1) {
     return "cat2";
   } else if (distanceCat1 === distanceCat2) {
-    console.log ("os gatos trombam e o rato foge");
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -136,7 +136,6 @@ function techList(list, name) {
     } else {
       return "Vazio";
     }
-    
   }
 }
 
