@@ -64,11 +64,10 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     result = "cat2";
   } 
-  else if (mouse - cat2 == mouse - cat1) {
+  else if (Math.abs(mouse - cat2) == Math.abs(mouse - cat1)) {
     result = "os gatos trombam e o rato foge";
   }
   return result;
-  console.log(result);
   
 }
 console.log(catAndMouse(-10, -7, -7))
