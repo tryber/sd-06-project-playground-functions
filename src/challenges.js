@@ -84,7 +84,7 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(string1) {
-  newArrayEncode = [];
+  let newArrayEncode = [];
   for (let cont = 0; cont < string1.length; cont ++) {
     switch(string1[cont]) {
       case 'a':
