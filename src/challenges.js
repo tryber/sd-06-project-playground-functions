@@ -93,58 +93,51 @@ console.log(fizzBuzz(numbers));
 
 
 // Desafio 9
-/*
-Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
-a -> 1
-e -> 2
-i -> 3
-o -> 4
-u -> 5
-Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
-A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
-*/
 function encode(string) {
-  let word = '';
+  let wordEnc = '';
+  wordEnc = string.split('');
   for (let i = 0; i < string.length; i += 1) {
       if (string[i] === 'a') {
-        word[i] = '1';
+        wordEnc[i] = '1';
       } else if (string[i] === 'e') {
-        word[i] = '2';
+        wordEnc[i] = '2';
       } else if (string[i] === 'i') {
-        word[i] = '3';
+        wordEnc[i] = '3';
       } else if (string[i] === 'o') {
-        word[i] = '4';
+        wordEnc[i] = '4';
       } else if (string[i] === 'u') {
-        word[i] = '5';
+        wordEnc[i] = '5';
       } else {
-        word += string[i];
+        wordEnc[i] = string[i];
       }
   }
-  return word;
+  return wordEnc.join('');
 }
-// let phrase = 'hi there!';
-// console.log(encode(phrase));
+// let phraseDec = 'hi there!';
+// console.log(encode(phraseDec));
 
 function decode(string) {
+  let wordDec = '';
+  wordDec = string.split('');
   for (let i = 0; i < string.length; i += 1) {
     if (string[i] === '1') {
-      word[i] = 'a';
+      wordDec[i] = 'a';
     } else if (string[i] === '2') {
-      word[i] = 'e';
+      wordDec[i] = 'e';
     } else if (string[i] === '3') {
-      word[i] = 'i';
+      wordDec[i] = 'i';
     } else if (string[i] === '4') {
-      word[i] = 'o';
+      wordDec[i] = 'o';
     } else if (string[i] === '5') {
-      word[i] = 'u';
+      wordDec[i] = 'u';
     } else {
-      word += string[i];
+      wordDec[i] = string[i];
     }
   }
-  return word;
+  return wordDec.join('');
 }
-// let phrase = 'h3 th2r2!';
-// console.log(decode(phrase));
+// let phraseEnc = 'h3 th2r2!';
+// console.log(decode(phraseEnc));
 
 
 // Desafio 10
