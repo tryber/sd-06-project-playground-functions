@@ -30,10 +30,11 @@ console.log(resultSplit);
 
 
 // Desafio 4
-function concatName() {
-  let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+function concatName(arrayNomes) {
+  arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
   //return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + ", " + arrayNomes[0];
-  return arrayPrimeiroUltimo = (arrayNomes.slice(-1)) + ", " + (arrayNomes[0]);
+  let arrayPrimeiroUltimo = (arrayNomes.slice(-1)) + ", " + (arrayNomes[0]);
+  return arrayPrimeiroUltimo;
 }
 console.log(concatName());
 
@@ -42,21 +43,21 @@ function footballPoints(ties, wins) {
   let pontuacao = (ties + (wins * 3));
   return pontuacao;
 }
-console.log(footballPoints(2,3));
+console.log(footballPoints(2 , 3));
 
 
 // Desafio 6
 
 function highestCount(lista) {
   let maior = lista[0];
-  for(let indice of lista){
-    if(indice > maior){
+  for( let indice of lista ){
+    if( indice > maior ){
       maior = indice;
     }
   }
   let contador = 0;
-  for(let indice of lista){
-    if(indice === maior){
+  for( let indice of lista ){
+    if( indice === maior ){
       contador = contador + 1;
     }
   }
