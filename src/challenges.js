@@ -32,16 +32,17 @@ console.log(resultSplit);
 // Desafio 4
 function concatName() {
   let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + ", " + arrayNomes[0];
+  //return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + ", " + arrayNomes[0];
+  return arrayPrimeiroUltimo = (arrayNomes.slice(-1)) + ", " + (arrayNomes[0]);
 }
 console.log(concatName());
 
 // Desafio 5
 function footballPoints(ties, wins) {
-  let pontuacao = ((ties * 1) + (wins * 3));
+  let pontuacao = (ties + (wins * 3));
   return pontuacao;
 }
-// console.log(footballPoints(2,3));
+console.log(footballPoints(2,3));
 
 
 // Desafio 6
