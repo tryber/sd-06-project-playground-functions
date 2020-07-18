@@ -144,12 +144,16 @@ function decode(frase) {
 
 // Desafio 10
 function techList(tec, nome) {
-  let temp = tec.sort();
-  let tecnologias = [];
-  for (let index in temp) {
-    tecnologias[index] = {tech: tec[index], name: nome};
+  if (tec.length === 0) {
+    return 'vazio';
+  } else {
+    let temp = tec.sort();
+    let tecnologias = [];
+    for (let index in temp) {
+      tecnologias[index] = { tech: tec[index], name: nome };
+    }
+    return tecnologias;
   }
-  return tecnologias;
 }
 
 // Desafio 11
