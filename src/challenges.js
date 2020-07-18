@@ -144,17 +144,19 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(technologies, people) {
+function techList(technologies, user) {
   let learning = [];
   if (technologies.length === 0) {
     return 'Vazio!'
   }
-  for (technos in technologies) {
-    learning.push({tech: technologies[technos], name: people});
+  techs = technologies.sort(); 
+  for (technos in techs) {
+    learning.push({tech: techs[technos], name: user});
   }
   return learning;
 }
-console.log(techList([], "Lucas"));
+
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
