@@ -176,7 +176,7 @@ function condicional(array) {
         check = true;
       }
     }
-    if (count > 3) {
+    if (count >= 3) {
       check = true;
     } else {
       count = 0;
@@ -188,7 +188,7 @@ function condicional(array) {
 function generatePhoneNumber(array) {
   let phoneNumber = "";
 
-    if (array.length > 11) {
+    if (array.length !== 11) {
       return 'Array com tamanho incorreto.';
     } else if (condicional(array) === true) {
       return 'não é possível gerar um número de telefone com esses valores';
