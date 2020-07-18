@@ -1,7 +1,8 @@
 // Desafio 2
 function calcArea(base,height) {
     var area = (base * height)/2
-    console.log(area)
+    return area
   }
-  calcArea(145,486)
   
+
+  console.log(calcArea(100,10))
