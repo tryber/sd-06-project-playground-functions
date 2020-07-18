@@ -145,7 +145,7 @@ function techList(tech, name) {
   let techSort = tech.sort();
   let tecnologias = [];
   for(index in techSort){
-    tecnologias.push(techSort[index].t = techSort[index], techSort[index].n = "Vagner");
+    tecnologias.push(techSort[index] = {tech: techSort[index], name :"Vagner",});
   }
   return tecnologias;
 }
