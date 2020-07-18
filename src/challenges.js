@@ -122,20 +122,20 @@ function encode(string) {
 function decode(string) {
   // seu código aqui
   let decoded = '';
-  for (n = 0; n < string.length; n += 1) {
-  if (string[n] === '1') {
-    decoded += 'a';
-  }else if (string[n] === '2') {
-    decoded += 'e';
-  } else if (string [n] === '3') {
-    decoded += 'i';
-  } else if (string[n] === '4') {
-    decoded += 'o';
-  } else if (string[n] === '5') {
-    decoded += 'u';
-  } else {
-    decoded += string[n];
-  }
+  for (let n = 0; n < string.length; n += 1) {
+    if (string[n] === '1') {
+      decoded += 'a';
+    } else if (string[n] === '2') {
+      decoded += 'e';
+    } else if (string[n] === '3') {
+      decoded += 'i';
+    } else if (string[n] === '4') {
+      decoded += 'o';
+    } else if (string[n] === '5') {
+      decoded += 'u';
+    } else {
+      decoded += string[n];
+    }
   }
   return decoded
 }
