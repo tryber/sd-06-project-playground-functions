@@ -140,12 +140,19 @@ function techList() {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)){
+    return true;
+  }else if(lineB < (lineC + lineA) && lineB > Math.abs(lineA - lineC)){
+    return true;
+  }else if(lineC < (lineB + lineA) && lineC > Math.abs(lineA - lineB)){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
