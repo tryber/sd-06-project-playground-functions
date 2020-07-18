@@ -87,25 +87,24 @@ function catAndMouse(mouse, cat1, cat2) {
   catAndMouse(45,30,30);
   console.log(position);
 
-// Desafio 8
-/*FizzBuzz
-Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
-Para cada número da Array que seja divisível por 3, apresente uma string "fizz";
-Para cada número da Array que seja divisível por 5, apresente uma string "buzz";
-Caso o número seja divisível por 3 ou 5, retorne a string "fizzBuzz";
-Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
-Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz" */
-
-function fizzBuzz(arrayFizBuz) {
-  let resultadoFizBuz;
-for (let indFuBu in arrayFizBuz){
- }
-
-return(resultadoFizBuz);
-}
-arrayFizBuz = [2, 15, 7, 9, 45];
-resultadoFizBuz = fizzBuzz(arrayFizBuz);
-console.log(resultadoFizBuz);
+// Desafio 8 - FizzBuzz
+let arrayNumeros=[2, 3, 5, 15];
+  function fizzBuzz(arrayNumeros) {
+    let newArrayNumeros=[];
+    for ( let indice in arrayNumeros ){
+      if (arrayNumeros[indice] % 3 === 0 && arrayNumeros[indice] % 5 === 0) {
+        newArrayNumeros[indice] = 'fizzBuzz';
+      } else if(arrayNumeros[indice] % 3 === 0) {
+        newArrayNumeros[indice] = 'fizz';
+      } else if (arrayNumeros[indice] % 5 === 0) {
+        newArrayNumeros[indice] = 'buzz';
+      } else {
+        newArrayNumeros[indice] = 'bug!';
+      }
+    }
+    return newArrayNumeros;
+  }
+    console.log(fizzBuzz(arrayNumeros));
 
 // Desafio 9
 /* Codifique e Decodifique
