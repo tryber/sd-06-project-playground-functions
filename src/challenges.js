@@ -32,8 +32,15 @@ return (wins * vitoria) + (ties * empate);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(n) {
+let maior = Math.max.apply(null, n);
+let contador = 0
+for (let index = 0; index < n.length; index++) {
+  let element = n[index];
+  if(element === maior){
+  contador++  
+  } 
+}return contador
 }
 
 // Desafio 7
