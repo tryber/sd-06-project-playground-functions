@@ -19,7 +19,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(words) {
-  return `${words[0]}, ${words[(words.length - 1)]}`;
+  return (words[0] + ', ' + words[words.length - 1]);
 }
 
 // Desafio 5
@@ -48,9 +48,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let mC1 = Math.abs(mouse - cat1);
 
   if (mC1 > mC2) {
-    return cat1;
-  } else if (mC2 > mC1) {
     return cat2;
+  } else if (mC2 > mC1) {
+    return cat1;
   }
   return 'os gatos trombam e o rato foge'
 }
@@ -58,30 +58,25 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   let result = [];
-  function oneOrAnother (fiveModulo, threeModulo){
-    if (threeModulo === 0) {
-      result.push('fizz');
-    } else if (fiveModulo === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-  }
   function checkNumber(n) {
     let fiveDivisionResult = n % 5;
     let threeDivisionResult = n % 3;
     if (threeDivisionResult === 0 && fiveDivisionResult === 0) {
       result.push('fizzBuzz');
+    } else if (threeModulo === 0) {
+      result.push('fizz');
+    } else if (fiveModulo === 0) {
+      result.push('buzz');
     } else {
-      oneOrAnother(fiveDivisionResult, threeDivisionResult);
+      result.push('bug!');
     }
   }
   arr.forEach(checkNumber);
   return result;
-  }
 }
 
 // Desafio 9
-function encode(s) {
+function encode(toEncode) {
   let encoded = [];
   for (let index = 0; index < toEncode.length; index += 1) {
     switch(toEncode[index]) {
