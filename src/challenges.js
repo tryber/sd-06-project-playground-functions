@@ -133,7 +133,7 @@ function decode(encodedString) {
 }
 
 // Desafio 10
-function techList(techList, name) {
+function techList(technologyList, name) {
   if (technologyList.length === 0) {
     return 'Vazio!';
   }
