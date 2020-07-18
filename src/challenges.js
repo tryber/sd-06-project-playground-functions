@@ -208,7 +208,7 @@ function generatePhoneNumber(arrayTelefone) {
       }else if (numero === "0"){
         escrevendoNumero += "(" + arrayTelefone[numero];
       }else if (numero === "1"){
-        escrevendoNumero += arrayTelefone[numero] + ") ";
+        escrevendoNumero += arrayTelefone[numero] + ")";
       }else if (numero === "6"){
         escrevendoNumero += arrayTelefone[numero] + "-";
       }else{
@@ -241,10 +241,10 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }  
 }
-let valor1 = 5;
+/* let valor1 = 5;
 let valor2 = 20;
 let valor3 = 1;
-console.log(triangleCheck(valor1, valor2, valor3));
+console.log(triangleCheck(valor1, valor2, valor3)); */
 
 // Desafio 13
 function hydrate() {
