@@ -61,7 +61,7 @@ function highestCount(lista) {
 // Desafio 7
 function trataNeg(valor) {
   if (valor < 0) {
-    valor = valor * (-1);
+    valor = (-1 * valor);
   } return valor
 }
 function catAndMouse(mouse, cat1, cat2) {
@@ -85,13 +85,13 @@ function fizzBuzz(numeros) {
     } else if (numeros[indice] % 3 !== 0 && numeros[indice] % 5 !== 0) {
       respostas.push('bug!');
     } else if (numeros[indice] % 3 === 0) {
-      respostas.push('fizz!');
+      respostas.push('fizz');
     } else if (numeros[indice] % 5 === 0) {
-      respostas.push('buzz!');
+      respostas.push('buzz');
     }
   } return respostas
 }
-// let n = [2, 15, 7, 9, 45]; console.log(fizzBuzz(n));
+// let n = [7,9]; console.log(fizzBuzz(n));
 // Desafio 9
 function encode() {
   // seu código aqui
