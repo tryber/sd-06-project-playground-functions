@@ -153,8 +153,8 @@ function techList(techList, name) {
 function generatePhoneNumber(possibleNumber) {
   if (possibleNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } 
-  
+  }
+
   let invalidInput = false;
 
   for (let i = 0; i < possibleNumber.length; i += 1) {
@@ -204,8 +204,8 @@ function triangleCheck(lineA, lineB, lineC) {
     return true;
   } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
     return true;
-  } 
-  
+  }
+
   return false;
 }
 
