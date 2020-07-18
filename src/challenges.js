@@ -162,9 +162,29 @@ function encode(messageToBeCoded) {
 encode("hi there!");
 
 
-function decode() {
-  // seu código aqui
+function decode(messageToBeDecoded) {
+  returnedString = "";
+  let codingLetters = ["a", "e", "i", "o", "u"]; 
+  let codingNumbers = [1, 2, 3, 4, 5];
+  let codedCharacter = ""
+
+  for (index in messageToBeDecoded){
+    for (internIndex in codingNumbers){
+      if (messageToBeDecoded[index] != codingNumbers[internIndex]){
+        codedCharacter = messageToBeDecoded[index];
+      } else if (messageToBeDecoded[index] == codingNumbers[internIndex]){
+        codedCharacter = codingLetters[internIndex];
+        break
+      }
+    }
+    returnedString += codedCharacter;
+    codedCharacter = "";
+  }
+
+  return returnedString;
 }
+
+decode("33 th2re!");
 
 // Desafio 10
 function techList() {
