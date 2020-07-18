@@ -161,7 +161,18 @@ function decode(a = 'h3 th2r2!') {
 }
 
 // Desafio 10
-function techList() {
+function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Anderson' ) {
+  i = [];
+  for ( x in t ){
+    var obj = new Object();
+    obj.tech = t[x];
+    obj.name = name;
+    i.push(obj);
+  }
+
+  let sortedTechs = [...i].sort((first, second) => first.tech > second.tech)
+
+  return sortedTechs;
 }
 
 // Desafio 11
