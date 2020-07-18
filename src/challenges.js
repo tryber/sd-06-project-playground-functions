@@ -138,13 +138,13 @@ function encode(vowels) {
         newVowels[i]= newVowels[i];
      }
 }
-  return newVowels.join('') ;
+  return newVowels.join('');
 }
 
 
 function decode(noVowels) {
   
-  let newVowelsNo = ''
+  let newVowelsNo = '';
   newVowelsNo = noVowels.split('');
     
   for (let i = 0; i < newVowelsNo.length; i+= 1){
@@ -162,7 +162,7 @@ function decode(noVowels) {
       newVowelsNo[i]= newVowelsNo[i];
    }
 }
-return newVowelsNo.join('') ;
+return newVowelsNo.join('');
 }
 
 
