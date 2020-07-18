@@ -159,12 +159,15 @@ function generatePhoneNumber(possibleNumber) {
     for (let i = 0; i < possibleNumber.length; i++) {
       if (possibleNumber[i] < 0 || possibleNumber[i] > 9) {
         invalidInput = true;
+        break;
+      }
+
+      if (mostOccurrences(possibleNumber[i], possibleNumber) >= 3) {
+        invalidInput = true;
+        break;
       }
     }
 
-    if (mostOccurrences(possibleNumber) >= 3) {
-      invalidInput = true;
-    }
 
     if (invalidInput) {
       return 'não é possível gerar um número de telefone com esses valores';
@@ -174,7 +177,7 @@ function generatePhoneNumber(possibleNumber) {
   let phoneNumber = `(${possibleNumber[0]}${possibleNumber[1]}) `;
 
   for (let i = 2; i < possibleNumber.length; i++) {
-    if (possibleNumber[i] === 7) {
+    if (i === 6) {
       phoneNumber += `${possibleNumber[i]}-`;
     } else {
       phoneNumber += possibleNumber[i];
@@ -185,32 +188,13 @@ function generatePhoneNumber(possibleNumber) {
   return phoneNumber;
 }
 
-function mostOccurrences(numbers) {
-  let repeatedNumber = 0;
-  let occurrences = 0;
-  let highestOccNumber = 0;
+function mostOccurrences(verifiedNumber, numbers) {
+  let counter = 0;
+  
+  numbers.forEach((value) => (value === verifiedNumber && counter++));
 
-  for (let i in numbers) {
-    let verifiedNumber = numbers[i];
-
-    for (let j in numbers) {
-      if (verifiedNumber === numbers[j]) {
-        occurrences += 1;
-      }
-    }
-
-    if (occurrences > repeatedNumber) {
-      repeatedNumber = occurrences;
-      highestOccNumber = numbers[i];
-    }
-
-    occurrences = 0;
-  }
-
-  return highestOccNumber;
+  return counter;
 }
-
-// console.log(mostOccurrences([2, 3, 2, 5, 8, 2, 3, 3, 3])); //2
 
 // Desafio 12
 function triangleCheck() {
