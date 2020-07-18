@@ -30,7 +30,7 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let winsPoints = 3;
   let tiesPoints = 1;
-  let points = wins * winsPoints + ties * tiesPoints;
+  let points = (wins * winsPoints) + (ties * tiesPoints);
   return points;
 }
 
@@ -48,10 +48,10 @@ function highestCount(arrayNumbers) {
   }
   for (let l = arrayNumbers[arrayNumbers.length - 2]; l >= 0; l -= 1) {
     if (arrayNumbers[l] === arrayNumbers[arrayNumbers.length - 1]) {
-    repeat += 1;
+      repeat += 1;
     }
   }
-return repeat;
+  return repeat;
 }
 
 // Desafio 7
