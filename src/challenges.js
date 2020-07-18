@@ -170,8 +170,6 @@ function techList(nomesTech, nome) {
 function generatePhoneNumber(numeros) {
   // seu código aqui
   let telefone;
-  let contador;
-  let verifica = numeros
   telefone = '(' + numeros[0] + numeros[1] + ')' + " ";
   if (numeros.length == 11) {
     for ( let i = 2; i < numeros.length; i++) {
