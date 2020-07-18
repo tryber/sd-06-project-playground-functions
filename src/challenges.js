@@ -186,7 +186,7 @@ function techList(tecnologias, name) {
   for (let i in tecnologias) {
     let objeto = {
       tech: tecnologias[i],
-      nome: name,
+      name: name,
     };
     novaLista.push(objeto);
   }
@@ -231,7 +231,7 @@ function generatePhoneNumber(numeros) {
   // Verifica se tamanho do array é diferente de 11
   let tamanhoValido = verificaTamanhoArray(numeros);
   if (!tamanhoValido) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
 
   // Verifica número menor que 0 ou maior que 9
