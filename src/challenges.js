@@ -155,8 +155,6 @@ function techList(tech, name) {
 let tech = ['CSS', 'Javascript', 'HTML']
 let name = 'Tiago'
 
-
-
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
@@ -169,7 +167,6 @@ function generatePhoneNumber(numbers) {
   }
 
 }
-
 
 // Desafio 12
 function triangleCheck() {
