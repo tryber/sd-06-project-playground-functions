@@ -76,7 +76,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(meuArray) {
   let resposta = [];
-  for (let i = 0; i < meuArray.length; i++) {
+  for (let i = 0; i < meuArray.length; i += 1) {
     if ((meuArray[i] % 3 === 0) && (meuArray[i] % 5 !== 0)) {
       resposta.push('fizz');
     } else if ((meuArray[i] % 3 !== 0) && (meuArray[i] % 5 === 0)) {
@@ -116,8 +116,13 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(minhaString) {
+  let resposta = 0;
+  let numeros = minhaString.replace(/\D/g, "");
+  for (let i = 0; i < numeros.length; i += 1) {
+    resposta += parseInt(numeros[i]);
+  }
+  return resposta;
 }
 
 
