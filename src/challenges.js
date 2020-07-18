@@ -155,6 +155,7 @@ function generatePhoneNumber(arrayNumber) {
   numeroRepeticoes = checarRepeticao(arrayNumber);
   if (arrayNumber.length !== 11) {
     numeroTelefone = 'Array com tamanho incorreto.';
+    break;
   }
   for (let i = 0; i < arrayNumber.length; i += 1) {
     if (arrayNumber[i] < 0 || arrayNumber[i] > 9 || numeroRepeticoes === true) {
@@ -182,10 +183,6 @@ function checarRepeticao(arrayNumber) {
   }
   return limiteVezesRepetidas;
 }
-
-  // Repeticao +3x
-  // Dado o arrayNumber, para cada numero do arrayNumber verificar se ele se repete
-  // Caso ele repita repeticao +1;
 
 
 // Desafio 12
