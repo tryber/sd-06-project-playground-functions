@@ -34,10 +34,10 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-let position = 0,
-    cont = 0;
 
 function highestCount(array) {
+  let position = 0,
+      cont = 0;
   for (let i = 0; i < array.length; i += 1) {
     if (array[position] < array[i]) {
       position = i;
@@ -51,16 +51,6 @@ function highestCount(array) {
   }
   return cont;
 }
-
-/*
-  for (let newArray in array) {
-    if (array[position] <= array[newArray]) {
-      position = newArray;
-      cont += 1;
-    }
-  }
-*/
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
