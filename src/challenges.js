@@ -100,25 +100,7 @@ function fizzBuzz(arrayNumeros) {
 // Desafio 9
 
 function encode() {
-  let entrada = '';
-  
-  for(let word = 0; i < entrada.length; word += 1){
-    if (entrada[word] === 'a'){
-      entrada += '1';
-    }else if (entrada[word] === 'e'){
-      entrada += '2';
-    }else if (entrada[word] === 'i'){
-      entrada += '3';
-    }else if (entrada[word] === 'o'){
-      entrada += '4';
-    }else if (entrada[word] === 'u'){
-      entrada += '5';
-    }else{
-      entrada +=__[word]; 
-    }
-  }
-  return entrada;
-  
+  //seu codigo aqui
 }
 console.log(encode());
 function decode() {
@@ -131,23 +113,14 @@ function techList() {
 }
 
 // Desafio 11
-let arrayTelefone=[1,2,3,4,5,6,7,8,9,10,11];
 function generatePhoneNumber(arrayTelefone) {
-  //exceptions
-  if (arrayTelefone.length !==11){
-    return "Array com tamanho incorreto"
-  }
-  for (let i = 0; i < arrayTelefone.length; i++){
-    if (arrayTelefone[i] < 0 || arrayTelefone[i] > 9)
-    return "não é possível gerar um número de telefone com esses valores";
-  }
   //tamanho maximo array arrayTelefone.length
   //tamanho minimo arrayTelefone = 0
   //regra => não pode se repetir um mesmo indice por mais de 3 vezes ou é aceitos até duas repetições
   }
   
 
-console.log(generatePhoneNumber(arrayTelefone));
+//console.log(generatePhoneNumber(arrayTelefone));
 
 // Desafio 12
 let lineA;
@@ -166,23 +139,10 @@ function triangleCheck(lineA, lineB, lineC) {
 //console.log(triangleCheck(0,0,0));
 
 // Desafio 13
-function hydrate(entrada) {
-  let bebidas = entrada.replace(/\D/g, "");
-  let bebidaSoma = 0;
-  let retorno = '';
-
-  for (let i = 0; i < bebidas.length; i += 1 ){
-    bebidaSoma += parseInt(bebidas[i]);
-  }
-
-  if (bebidaSoma === 1){
-    retorno = `${bebidaSoma} copo de água`;
-  }else{
-    resposta =`${bebidaSoma} copo de água`;
-  }
-  return retorno;
+function hydrate() {
+  //ser codigo
 }
-//console.log(hydrate(5));
+
 
 
 module.exports = {
