@@ -56,11 +56,11 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(n) {
+function fizzBuzz(arr) {
   let result = [];
-  for (let index = 0; index < n.length; index += 1) {
-    let fiveDivisionResult = n[index] % 5;
-    let threeDivisionResult = n[index] % 3;
+  function checkNumber(n) {//for (let index = 0; index < n.length; index += 1) {
+    let fiveDivisionResult = n % 5;
+    let threeDivisionResult = n % 3;
     if (threeDivisionResult === 0 && fiveDivisionResult === 0) {
       result.push('fizzBuzz');
     } else if (threeDivisionResult === 0) {
@@ -71,6 +71,7 @@ function fizzBuzz(n) {
       result.push('bug!');
     }
   }
+  arr.forEach(checkNumber)
   return result;
 }
 
