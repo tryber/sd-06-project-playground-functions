@@ -218,14 +218,33 @@ function generatePhoneNumber(arrayTelefone) {
     return escrevendoNumero;        
   }
 }
-let valor1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-/* let valor2 = "Clayton Miguel"; */
-console.log(generatePhoneNumber(valor1));
+/* let valor1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+let valor2 = "Clayton Miguel";
+console.log(generatePhoneNumber(valor1)); */
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let triangleArray = [lineA, lineB, lineC];
+  let triangleArray2 = [lineA, lineB, lineC];
+  let pontosDeTriangulo = 0;
+  for (let number in triangleArray){
+    triangleArray2.splice(number,1);
+    if (triangleArray[number] < triangleArray2[0] + triangleArray2[1] && triangleArray[number] > Math.abs(triangleArray2[0] - triangleArray2[1])){
+      pontosDeTriangulo += 1;      
+    }
+    triangleArray2.splice(number,0,triangleArray[number]);
+  }
+  if (pontosDeTriangulo === 3){
+    return true;
+  }else{
+    return false;
+  }  
 }
+let valor1 = 5;
+let valor2 = 20;
+let valor3 = 1;
+console.log(triangleCheck(valor1, valor2, valor3));
 
 // Desafio 13
 function hydrate() {
