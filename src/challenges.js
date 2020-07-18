@@ -83,15 +83,15 @@ console.log("Exercicio 7: " + catAndMouse(10,11,20))
 // Desafio 8
 function fizzBuzz(numbers){
   let resultado=[];
-  for(i in numbers) {
+  for(i in numbers){
     if(numbers[i] % 3 === 0 && numbers[i] % 5 !== 0){
-      resultado.push("Fizz");
+      resultado.push("fizz");
     }else if(numbers[i] % 5 === 0 && numbers[i] % 3 !== 0){
-      resultado.push("Buzz");
+      resultado.push("buzz");
     }else if(numbers[i] % 3 === 0 && numbers[i] % 5 === 0){
-      resultado.push("FizzBuzz");
+      resultado.push("fizzbuzz");
     }else{
-     resultado.push("Bug!");
+     resultado.push("bug!");
     }
   }
   return resultado;
