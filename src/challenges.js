@@ -59,6 +59,9 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
     if (cat1 < cat2) {
       return 'cat1';
     }
+    else {
+      return 'cat2';
+    }
   }
 }
 
