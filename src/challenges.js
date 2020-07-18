@@ -121,8 +121,26 @@ function techList(lista, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(meusNumeros) {
+  let resposta;
+  // verificar se o numero é diferente de 11
+  if (meusNumeros.length !== 11) {
+    resposta = "Array com tamanho incorreto."
+  } else { // se o array tiver exatamente 11 numeros
+    for (let numero in meusNumeros) { //Passando numero por numero
+      let contador = 0;
+      for (let duplicado in meusNumeros) { //Comparar cada numero para ver se tem repitido
+        if (numero === duplicado) { // se tiver repetido
+          contador += 1;
+        }
+        if (contador > 2) {
+          resposta = "não é possível gerar um número de telefone com esses valores";
+        }
+      }
+    }
+    resposta = "(" + meusNumeros[0] + meusNumeros[1] + ") " + meusNumeros[2] + meusNumeros[3] + meusNumeros[4] + meusNumeros[5] + meusNumeros[6] + "-" + meusNumeros[7] + meusNumeros[8] + meusNumeros[9] + meusNumeros[10];
+  }
+  return resposta;
 }
 
 // Desafio 12
@@ -134,7 +152,7 @@ function triangleCheck() {
 function hydrate(minhaString) {
   let soma = 0;
   let resposta = '';
-  let numeros = minhaString.replace(/\D/g, "");
+  let numeros = minhaString.replace(/\D/g, '');
   for (let i = 0; i < numeros.length; i += 1) {
     soma += parseInt(numeros[i], 10);
   }
