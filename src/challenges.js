@@ -159,27 +159,24 @@ function decode(string) {
 console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList(array, string) {
+function techList(array, name) {
   // seu código aqui
-  if (tech == '') {
+  if (array == '') {
     return 'Vazio!';
   } else {
     let string = [];
-    tech = tech.sort();
-    for (let i = 0; i < tech.length; i += 1) {
+    array = array.sort();
+    for (let i = 0; i < array.length; i += 1) {
       string[i] = {
-        tech: tech[i],
+        tech: array[i],
         name: name,
       };
     }
     return string;
   }
 }
-  
-}
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-"Lucas"));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber(array) {
