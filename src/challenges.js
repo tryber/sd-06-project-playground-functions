@@ -1,20 +1,48 @@
 // Desafio 1
-function compareTrue(parametro1) {
+function compareTrue(param1, param2) {
     // seu código aqui
+
+    if (param1 == true && param2 == true) {
+
+        return (true);
+    } else {
+        return (false);
+    }
 }
+
+console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea(parametro2) {
+function calcArea(base, height) {
     // seu código aqui
+    let result = 1
+    result = (base * height) / 2
+
+    return (result)
+
+
 }
+console.log(calcArea(10, 20))
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
     // seu código aqui
+
+
+    return string.split('');
+
+
+
 }
+console.log(splitSentence("go trybe"));
 
 // Desafio 4
-function concatName() {
+function concatName(arrays) {
+
+    let string = []
+        //for ()
+
+
     // seu código aqui
 }
 
