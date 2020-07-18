@@ -159,7 +159,6 @@ function techList(tec, nome) {
 // Desafio 11
 function generatePhoneNumber(number) {
   let phoneNumber = '';
-  let repetido = 1;
   if (number.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else {
@@ -168,14 +167,15 @@ function generatePhoneNumber(number) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
-    for (let i = 0; i < (number.length - 1); i += 1) {      
-      for (j = 1; j < number.length; j += 1) {
+    for (let i = 0; i < number.length; i += 1) {
+      let repetido = 1;
+      for (j = 0; j < number.length; j += 1) {
         if (number[i] === number[j]) {
           repetido += 1;
         }
       }
-      if (repetido >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
+      if (repetido > 3) {
+        return 'não é possível gerar um número de telefone com esses valores repetidos';
       } else {
         repetido = 1;
       }
