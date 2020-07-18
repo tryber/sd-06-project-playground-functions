@@ -30,7 +30,6 @@ function splitSentence(stringDesafio3) {
   let arrayDesafio3 = stringDesafio3.split(' ');
   return arrayDesafio3.reverse();
 }
-console.log(splitSentence('funciona'));
 
 
 // Desafio 4
