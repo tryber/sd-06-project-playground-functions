@@ -197,7 +197,7 @@ function generatePhoneNumber(numeros) {
   }
  for (let i in numeros) {
    if (numeros[i] < 0 || numeros[i] > 9){
-     return 'não é possível gerar um número de telefone  com esses valores';
+     return 'não é possível gerar um número de telefone com esses valores';
      process.exit();
     }
     for (let e in numeros) {
@@ -247,7 +247,7 @@ function generatePhoneNumber(numeros) {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  // seu código aqu
 }
 
 // Desafio 13
