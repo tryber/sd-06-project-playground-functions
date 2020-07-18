@@ -1,7 +1,8 @@
 /* começa mais um desafio */
 
 // Desafio 1
-/* 1 - Usando o operador && JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
+/* 1 - Usando o operador && JavaScript possui um operador lógico &&, o qual recebe dois valores e 
+retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
 Considerando isso, crie uma função chamada compareTrue que, ao receber dois booleanos:
 Retorne true se ambos os valores são verdadeiros;
 Retorne false se um ou ambos os parâmetros forem falsos.
@@ -20,8 +21,9 @@ function compareTrue(value1, value2) {
 // console.log(compareTrue(value1, value2))
 
 // Desafio 2
-/* 2 - Área do triângulo Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
-   Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
+/* 2 - Área do triângulo Escreva uma função com o nome calcArea que receba um valor de base 
+(chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
+Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
 */
 // let base = 50
 // let height = 30
@@ -31,19 +33,27 @@ function calcArea(base, height) {
 }
 // console.log (calcArea(base,height));
 /* 3 - Dividindo a frase
-  Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
+  Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array 
+  de strings separadas por cada espaço na string original.
 
   Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
 */
 // Desafio 3
 // let frase = 'lilica linda';
 function splitSentence(frase) {
-  return frase.split(" ",);
+  return frase.split('', ) ;
 
   // seu código aqui
 }
 // console.log(splitSentence(frase));
 // Desafio 4
+/* 4 - Concatenação de strings
+  Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma 
+  string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
+
+  Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 
+  'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
+*/
 function concatName() {
   // seu código aqui
 }
