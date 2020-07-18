@@ -117,7 +117,7 @@ function encode(string) {
         answer += code[key];
         check = true;
         break;
-      } 
+      }
     }
     if (check === false) {
       answer += string[i];
@@ -137,7 +137,7 @@ function decode(string) {
         answer += key;
         check = true;
         break;
-      } 
+      }
     }
     if (check === false) {
       answer += string[i];
@@ -150,14 +150,13 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   let answer = [];
-    
+
   if (array.length === 0) {
-      return 'Vazio!';
-  } else {
-      for (let i = 0; i < array.length; i += 1) {
-          answer.push({ tech: array[i], nome: name, });
-        }
-  }  
+    return 'Vazio!';
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    answer.push({ nome: name, tech: array[i],  });
+  }
   return answer;
 }
 
@@ -177,11 +176,11 @@ function condicional(array) {
       }
     }
   }
-    if (count > 3) {
-      check = true;
-    } else {
-      count = 0;
-    }
+  if (count > 3) {
+    check = true;
+  } else {
+    count = 0;
+  }
   return check;
 }
 
