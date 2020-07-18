@@ -48,9 +48,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let mC1 = Math.abs(mouse - cat1);
 
   if (mC1 > mC2) {
-    return cat2;
+    return 'cat2';
   } else if (mC2 > mC1) {
-    return cat1;
+    return 'cat1';
   }
   return 'os gatos trombam e o rato foge'
 }
@@ -59,9 +59,9 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arr) {
   let result = [];
   function checkNumber(n) {
-    let fiveDivisionResult = n % 5;
-    let threeDivisionResult = n % 3;
-    if (threeDivisionResult === 0 && fiveDivisionResult === 0) {
+    let fiveModulo = n % 5;
+    let threeModulo = n % 3;
+    if (threeModulo === 0 && fiveModulo === 0) {
       result.push('fizzBuzz');
     } else if (threeModulo === 0) {
       result.push('fizz');
@@ -102,11 +102,11 @@ function encode(toEncode) {
   return encoded;
 }
 function decode(s) {
-  s = (s.replace(/a/gi, '1'));
-  s = (s.replace(/e/gi, '2'));
-  s = (s.replace(/i/gi, '3'));
-  s = (s.replace(/o/gi, '4'));
-  s = (s.replace(/u/gi, '5'));
+  s = (s.replace(/1/gi, 'a'));
+  s = (s.replace(/2/gi, 'e'));
+  s = (s.replace(/3/gi, 'i'));
+  s = (s.replace(/4/gi, 'o'));
+  s = (s.replace(/5/gi, 'u'));
   return s;
 }
 
