@@ -150,6 +150,16 @@ function techList(techList, name) {
 }
 
 // Desafio 11
+function mostOccurrences(verifiedNumber, numbers) {
+  let counter = 0;
+
+  numbers.forEach((value) => {
+    if (value === verifiedNumber) counter += 1;
+  })
+
+  return counter;
+}
+
 function generatePhoneNumber(possibleNumber) {
   if (possibleNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -184,16 +194,6 @@ function generatePhoneNumber(possibleNumber) {
   }
 
   return phoneNumber;
-}
-
-function mostOccurrences(verifiedNumber, numbers) {
-  let counter = 0;
-
-  numbers.forEach((value) => {
-    if (value === verifiedNumber) counter += 1;
-  })
-
-  return counter;
 }
 
 // Desafio 12
