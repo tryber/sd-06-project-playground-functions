@@ -44,20 +44,46 @@ console.log(footballPoints(3,4));
 // Desafio 6
 function highestCount(numerosSortidos) {
   let aux = numerosSortidos[0];
+  let numRepetido = 0;
   for(posicao in numerosSortidos){
     if(aux < numerosSortidos[posicao]){
       aux = numerosSortidos[posicao];
     }
   }
-  return aux;
+  for(posicao in numerosSortidos){
+    if(aux == numerosSortidos[posicao]){
+      numRepetido += 1;
+    }
+  }
+  return numRepetido;
 }
-numerosSortidos = [4,1,2,6,5,9,8,9,4,1,9];
+numerosSortidos = [4,1,2,6,5,9,8,9,9,9,9];
 console.log(highestCount(numerosSortidos));
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+   ataqueCat1 = mouse - cat1;
+   ataqueCat2 = mouse - cat2;
+  if(ataqueCat1 < 0 ){
+    ataqueCat1 = valorPositivo(ataqueCat1);
+  }
+  if(ataqueCat2 < 0){
+    ataqueCat2 = valorPositivo(ataqueCat2);
+  }
+  if(ataqueCat1<ataqueCat2){
+    return cat1;
+  }else if(ataqueCat1==ataqueCat2){
+    return "os gatos trombam e o rato foge";
+  }else{
+    return cat2;
+  }
+
 }
 
+function valorPositivo(negativo){
+  positivo = negativo + (negativo*-2);
+  return positivo;
+}
+console.log(catAndMouse(5,2,2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
