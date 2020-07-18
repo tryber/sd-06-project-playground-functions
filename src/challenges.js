@@ -145,7 +145,7 @@ function decode(frase) {
 // Desafio 10
 function techList(tec, nome) {
   if (tec.length === 0) {
-    return 'vazio';
+    return 'Vazio!';
   } else {
     let temp = tec.sort();
     let tecnologias = [];
