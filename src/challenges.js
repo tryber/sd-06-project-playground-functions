@@ -147,6 +147,9 @@ function techList(tech, name) {
   for(index in techSort){
     tecnologias.push(techSort[index] = {tech: techSort[index], name :"Vagner",});
   }
+  if(tecnologias.length === 0){
+    return 'Vazio!';
+  }
   return tecnologias;
 }
 
