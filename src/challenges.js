@@ -68,13 +68,13 @@ function catAndMouse(mouse, cat1, cat2) {
   if (resultCat1 === resultCat2) {
     result = "Os gatos trombam e o rato foge";
   } else if (resultCat1 > resultCat2) {
-    result = cat2;
+    result = "cat2";
   } else {
-    result = cat1;
+    result = "cat1";
   }
   return result;
 }
-console.log(catAndMouse(1, 0, 2))
+console.log(catAndMouse(10, 4, 22))
 
 
 
