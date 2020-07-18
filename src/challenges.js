@@ -24,7 +24,7 @@ function splitSentence(string) {
   let result = string.split(' ')
   return result
 }
-console.log(splitSentence("Eu sou Júlia"))
+console.log(splitSentence('Eu sou Júlia'))
 
 
 // Desafio 4
@@ -33,7 +33,7 @@ function concatName(array) {
   let primeiro = array[array.length - 1]
   let segundo = array[0]
 
-  result = primeiro + ", " + segundo
+  result = primeiro + ', ' + segundo;
   return result
 }
 console.log(concatName(['Júlia', 'Pôrto', 'Trybe', 'Course']))
@@ -52,36 +52,36 @@ function highestCount(arrayNumeros) {
   let n = 0;
   let vezesQueRepete = 0;
   for (let i in arrayNumeros) {
-    if ( arrayNumeros[i] > n) {
+    if (arrayNumeros[i] > n) {
       n = arrayNumeros[i];
     }
   }
   for (let i in arrayNumeros) {
-    if ( arrayNumeros[i] == n ) {
+    if (arrayNumeros[i] === n) {
       vezesQueRepete += 1
     }
   }
   return vezesQueRepete
 }
-console.log(highestCount([1, 5, 5, 7, 8, 9, 9, 9]))
+console.log(highestCount([1, 5, 5, 7, 8, 9, 9, 18, 18, 18, 18]))
 
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let resultCat1 = Math.abs (cat1 - mouse);
-  let resultCat2 = Math.abs (cat2 - mouse);
+  let resultCat1 = Math.abs(cat1 - mouse);
+  let resultCat2 = Math.abs(cat2 - mouse);
   let result;
 
   if (resultCat1 === resultCat2) {
-    result = "Os gatos trombam e o rato foge";
+    result = 'Os gatos trombam e o rato foge';
   } else if (resultCat1 > resultCat2) {
-    result = "cat2";
+    result = 'cat2';
   } else {
-    result = "cat1";
+    result = 'cat1';
   }
   return result;
 }
-console.log(catAndMouse(1, 4, 22))
+console.log(catAndMouse(25, 8, 8))
 
 
 // Desafio 8
@@ -89,18 +89,18 @@ function fizzBuzz(array) {
   let result = [];
   for (let i in array) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      resposta.push("fizzBuzz");
+      result.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
-      result.push("fizz");
+      result.push('fizz');
     } else if (array[i] % 5 === 0) {
-      result.push("buzz");
+      result.push('buzz');
     } else {
-      result.push("bug!");
-      }
+      result.push('bug!');
+    }
   }
   return result;
 }
-console.log(fizzBuzz([10, 15, 3, 5, 8]))
+console.log(fizzBuzz([10, 15, 3, 5, 8, 16]))
 
 
 // Desafio 9
@@ -136,6 +136,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+
 
 
 module.exports = {
