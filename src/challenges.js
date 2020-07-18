@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(v1, v2) {
   // seu código aqui
-  if (v1 == true && v2 == true) {
+  if (v1 === true && v2 === true) {
     return true
   } else {
     return false
@@ -17,13 +17,13 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  return frase.split (" ");
+  return frase.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let ultimoPrimeiro = "";
+  let ultimoPrimeiro = '';
   ultimoPrimeiro += array[array.length - 1] + ', ' + array[0]
   return ultimoPrimeiro;
 }
@@ -59,11 +59,11 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge'
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return "cat1"
+    return 'cat1'
   } else (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)); {
-    return "cat2"
+    return 'cat2'
   }
 }
 
@@ -71,15 +71,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let arrayResultado = [];
-  for (let i = 0; i < array.length; i++) {
-    if ((array[i] % 3 == 0) && (array[i] % 5 == 0)) {
+  for(let i=0;i < array.length;i+=1){
+    if((array[i]%3===0) && (array[i]%5===0)){
     arrayResultado.push('fizzBuzz');
-    } else if (array[i] % 3 == 0) {
+    }else if(array[i]%3===0){
     arrayResultado.push('fizz');
-    } else if (array[i] % 5 == 0) {
+    }else if(array[i]%5===0){
     arrayResultado.push('buzz');
-    } else {
-    arrayResultado.push('bug!');   
+    }else{
+    arrayResultado.push('bug!');
     }
   }
   return arrayResultado;
@@ -88,25 +88,25 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let encodeArray = string.split("")
+  let encodeArray = string.split('')
 
   for (let index in encodeArray) {
-    switch(encodeArray[index]) {
-      case 'a': 
-      encodeArray[index] = 1
-      break;
-      case 'e' : 
-      encodeArray[index] = 2
-      break;
-      case 'i' : 
-      encodeArray[index] = 3
-      break ;
-      case 'o' : 
-      encodeArray[index] = 4
-      break;
-      case 'u' : 
-      encodeArray[index] = 5
-      break;
+    switch (encodeArray[index]){
+      case'a':
+        encodeArray[index] = 1
+        break;
+      case'e':
+        encodeArray[index] = 2
+        break;
+      case'i':
+        encodeArray[index] = 3
+        break ;
+      case'o': 
+        encodeArray[index] = 4
+        break;
+      case'u':
+        encodeArray[index] = 5
+        break;
     }
   }
   let encoded = encodeArray.join("");
@@ -115,52 +115,62 @@ function encode(string) {
 
 function decode(encoded) {
   // seu código aqui
-  let decodeArray = encoded.split("")
+  let decodeArray = encoded.split('')
 
   for (let index in decodeArray) {
-    switch(decodeArray[index]) {
-      case '1': 
-      decodeArray[index] ='a'
-      break;
-      case '2': 
-      decodeArray[index] = 'e'
-      break;
-      case '3': 
-      decodeArray[index] = 'i'
-      break ;
-      case '4': 
-      decodeArray[index] = 'o'
-      break;
-      case '5': 
-      decodeArray[index] = 'u'
-      break;
+    switch (decodeArray[index]) {
+      case'1':
+        decodeArray[index] ='a'
+        break;
+      case'2':
+        decodeArray[index] = 'e'
+        break;
+      case'3':
+        decodeArray[index] = 'i'
+        break;
+      case'4':
+        decodeArray[index] = 'o'
+        break;
+      case'5':
+        decodeArray[index] = 'u'
+        break;
     }
   }
-  let decoded = decodeArray.join("");
+  let decoded = decodeArray.join('');
   return decoded;
 }
 
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
-  tech.sort()
+  let listaOrdenada = tech.sort()
   let listaDeObjetos = []
-  for (i=0; i<tech.length; i++) {
-    return {
-      tech:tech[i],
-      name:name
-    }
+  for (let i=0; i<tech.length; i+=1) {
+    listaDeObjetos.push {
+      tech: tech [i],
+      name: name, }
   }
+  return listaDeObjetos
 }
-let tech = ["CSS", "Java", "Phyton"]
-let name = "Tiago"
-console.log(techList(tech, name))
+let tech = ['CSS', 'Java', 'Phyton']
+let name = 'Tiago'
+
 
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   // seu código aqui
+  if (numbers.length != 11) {
+    return "Array com tamanho incorreto." }
+  
+  for (let i of numbers) {
+    if (i < 0 || i > 10) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
+
 }
+
 
 // Desafio 12
 function triangleCheck() {
