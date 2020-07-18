@@ -73,7 +73,7 @@ function fizzBuzz(array3) {
 
   for (let i = 0; i < array3.length; i++) {
 
-    if (array3[i] % 3 === 0 && array3[i] % 5 == 0) {
+    if (array3[i] % 3 === 0 && array3[i] % 5 === 0) {
       phrase.push("fizzBuzz")
     }
     else if (array3[i] % 3 === 0) {
@@ -92,19 +92,20 @@ function fizzBuzz(array3) {
 
 // Desafio 9
 function encode(phrase) {
-  return replaceChar(phrase, true);
+  return replaceString(phrase, true);
 }
 
 function decode(phrase) {
-  return replaceChar(phrase, false);
+  return replaceString(phrase, false);
 }
 
 function replaceString(string, swap) {
-  const vowels = {"a": 1, "e": 2, "i": 3, "o": 4, "u": 5 };
+  const vowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  let index = 0;
 
   for (const [key, value] of Object.entries(vowels)) {
 
-    swap ? index = char.indexOf(key) : index = char.indexOf(value);
+    swap ? index = string.indexOf(key) : index = string.indexOf(value);
 
     if (index !== -1) {
       swap ? string = string.split(key).join(value) :
