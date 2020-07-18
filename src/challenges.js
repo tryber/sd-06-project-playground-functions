@@ -194,7 +194,64 @@ function techList(tecnologias, name) {
 }
 
 // Desafio 11
+function verificaTamanhoArray(lista) {
+  let tamanhoValido = lista.length == 11;
+  return tamanhoValido; 
+}
+
+function verificaNumerosInvalidos(lista) {
+  let valorInvalido = false;
+  for (let i in lista) {
+    let elemento = lista[i];
+    if (elemento < 0 || elemento > 9) {
+      valorInvalido = true;
+    }
+  }
+  return valorInvalido;
+}
+
+function verificaExcessoOcorrencias(lista) {
+  let maxOcorrencias = 3;
+  for (let indice in lista) {
+    let ocorrencias = 0;
+    for (let indiceAux in lista) {
+      if (lista[indice] === lista[indiceAux]) {
+        ocorrencias += 1;
+        if (ocorrencias === maxOcorrencias) {
+          return true
+        }
+      }
+    }
+  }
+  return false;
+}
+
 function generatePhoneNumber(numeros) {
+  // seu código aqui
+  // Verifica se tamanho do array é diferente de 11
+  let tamanhoValido = verificaTamanhoArray(numeros);
+  if (!tamanhoValido) {
+    return 'Array com tamanho incorreto';
+  }
+
+  // Verifica número menor que 0 ou maior que 9
+  let valorInvalido = verificaNumerosInvalidos(numeros);
+  if (valorInvalido) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  // Verifica a ocorrência de 3 números iguais
+  let excessoRepeticoes = verificaExcessoOcorrencias(numeros);
+  if (excessoRepeticoes) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  // Criação do número
+  let ddd = numeros.slice(0, 2).join('');
+  let prefixo = numeros.slice(2, 7).join('');
+  let sufixo = numeros.slice(7).join('');
+  let numeroPronto = `(${ddd}) ${prefixo}-${sufixo}`;
+  return numeroPronto;
 }
 
 // Desafio 12
