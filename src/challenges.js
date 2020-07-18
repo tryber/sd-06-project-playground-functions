@@ -109,14 +109,14 @@ function techList(tech, name) {
   let technology = new Object();
 
   if (tech.length !== 0) {
-    tech.sort().forEach(element => 
-      technology[element] = name);
-  }
-  else {
+
+    tech.sort().forEach(element => technology[element] = name);
+
+  } else {
     return "Vazio!";
   }
 
-  return technology; 
+  return technology;
   
 }
 
