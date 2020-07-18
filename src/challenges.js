@@ -45,15 +45,17 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat2 = 0;
   distCat1 = cat1 - mouse;
   distCat2 = cat2 - mouse;
-  if (distCat1 < distCat2 && distCat1 >= mouse) {
+  if (distCat1 < distCat2 || distCat1 < 0 /*mouse*/) {
     return 'cat1'
   } else if 
-    (distCat2 < distCat1 && distCat2 >= mouse) {
+    (distCat2 < distCat1 && distCat2 < 0/*mouse*/) {
     return 'cat2'
     }
     return "os gatos trombam e o rato foge"
-  }
-  console.log(catAndMouse(1, 0, 5))
+}
+  console.log(catAndMouse(10, 4, 22))
+
+
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
