@@ -70,10 +70,10 @@ console.log(highestCount([1, 5, 5, 7, 8, 9, 9, 18, 18, 18, 18]))
 function catAndMouse(mouse, cat1, cat2) {
   let resultCat1 = Math.abs(cat1 - mouse);
   let resultCat2 = Math.abs(cat2 - mouse);
-  let result;
+  let result = '';
 
   if (resultCat1 === resultCat2) {
-    result = 'Os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   } else if (resultCat1 > resultCat2) {
     result = 'cat2';
   } else {
