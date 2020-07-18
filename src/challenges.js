@@ -186,6 +186,26 @@ function generatePhoneNumber(param) {
   let resultado = '(';
 
   if (param.length === 11) {
+    for (let comp1 = 0; comp1 < param.length; comp1 += 1) {
+      let contador = 0;
+
+      if (param[comp1] < 0 || param[comp1] > 9) {
+        resultado = 'não é possível gerar um número de telefone com esses valores';
+      }
+      for (let comp2 = 0; comp2 < param.length; comp2 += 1) {
+        if (param[comp1] === param[comp2]) {
+          contador += 1;
+        }
+        if (contador >= 3) {
+          resultado = 'não é possível gerar um número de telefone com esses valores';
+        }
+      }
+    }
+  } else {
+    resultado = 'Array com tamanho incorreto.';
+  }
+
+  if (resultado === '(') {
     for (let x = 0; x <= 1; x += 1) {
       resultado += param[x];
     }
@@ -201,10 +221,8 @@ function generatePhoneNumber(param) {
     for (let x = 7; x <= 10; x += 1) {
       resultado += param[x];
     }
-  } else {
-    resultado = 'Array com tamanho incorreto.';
-  }
-  
+  } 
+
   return resultado;
 }
 
