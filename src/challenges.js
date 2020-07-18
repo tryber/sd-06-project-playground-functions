@@ -44,7 +44,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let counterMax = 0;
   let bigger = 0;
   let counter = 0;
   for (let i = 0; i < array.length; i += 1) {
@@ -65,10 +64,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance1 = cat1 - mouse;
   let distance2 = cat2 - mouse;
   if (distance1 < 0) {
-    distance1 = distance1 * - 1;
+    distance1 *= -1;
   }
   if (distance2 < 0) {
-    distance2 = distance2 * - 1;
+    distance2 *= -1;
   }
   if (distance1 === distance2) {
     return 'os gatos trombam e o rato foge'
@@ -96,11 +95,52 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let stringArray = [];
+  let coded = '';
+  for (let i = 0; i < string.length; i += 1) {
+    stringArray.push(string[i]);
+  }
+  for (let i = 0; i < stringArray.length; i += 1) {
+    if (stringArray[i] == 'a') {
+      coded += '1';
+    } else if (stringArray[i] === 'e') {
+      coded += '2';
+    } else if (stringArray[i] === 'i') {
+      coded += '3';
+    } else if (stringArray[i] === 'o') {
+      coded += '4';
+    } else if (stringArray[i] === 'u') {
+      coded += '5';
+    } else {
+      coded += stringArray[i];
+    }
+  }
+  return coded;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let stringArray = [];
+  let decoded = '';
+  for (let i = 0; i < string.length; i += 1) {
+    stringArray.push(string[i]);
+  }
+  for (let i = 0; i < stringArray.length; i += 1) {
+    if (stringArray[i] === '1') {
+      decoded += 'a';
+    } else if (stringArray[i] === '2') {
+      decoded += 'e';
+    } else if (stringArray[i] === '3') {
+      decoded += 'i';
+    } else if (stringArray[i] === '4') {
+      decoded += 'o';
+    } else if (stringArray[i] === '5') {
+      decoded += 'e';
+    } else {
+      decoded += stringArray[i];
+    }
+  }
+  return decoded;
 }
 
 // Desafio 10
