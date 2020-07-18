@@ -19,7 +19,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(words) {
-  return (words[0] + ', ' + words[words.length - 1]);
+  return `${arr[0]}, ${arr[(arr.length - 1)]}`;
 }
 
 // Desafio 5
@@ -79,24 +79,24 @@ function fizzBuzz(arr) {
 function encode(toEncode) {
   let encoded = [];
   for (let index = 0; index < toEncode.length; index += 1) {
-    switch(toEncode[index]) {
+    switch (toEncode[index]) {
       case 'a':
-        encoded = encoded + '1';
+        encoded += '1';
         break;
       case 'e':
-        encoded = encoded + '2';
+        encoded += '2';
         break;
       case 'i':
-        encoded = encoded + '3';
+        encoded += '3';
         break;
       case 'o':
-        encoded = encoded + '4';
+        encoded += '4';
         break;
       case 'u':
-        encoded = encoded + '5';
+        encoded += '5';
         break;
-      case toEncode[index]:
-        encoded = encoded + toEncode[index];
+      default:
+        encoded += toEncode[index];
     }
   }
   return encoded;
