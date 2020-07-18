@@ -124,14 +124,18 @@ function decode(str) {
   return lettersDecode.join('');
 }
 
-let str = 'hi there!';
-str = encode(str);
-console.log(str);
-str = decode(str);
-console.log(str);
+// let str = 'hi there!';
+// str = encode(str);
+// console.log(str);
+// str = decode(str);
+// console.log(str);
 
 // Desafio 10
 function techList(arr, name) {
+  if (arr.length === 0) {
+    return 'Vazio!';
+  }
+
   let techArr = [];
 
   arr = arr.sort();
@@ -142,11 +146,38 @@ function techList(arr, name) {
   return techArr;
 }
 
-// techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function checkIfRepeatedThreeTimes(arr) {
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i += 1) {
+    let number = arr[i];
+    for (let j = 0; j < arr.length; j += 1) {
+      if (number === arr[j]) {
+        count += 1;
+      }
+      if (count >= 3) {
+        return false;
+      }
+    }
+    count = 0;
+  }
+  return true;
+}
+
+function checkIfLessThanZeroOrGreaterThanNine(arr) {
+  return arr.every(element => element >= 0 && element <= 9);
+}
+
+function generatePhoneNumber(arr) {
+  if (arr.length !== 11) {
+    return 'Array com tamanho incorreto';
+  }
+
+  if (!checkIfRepeatedThreeTimes(arr) || !checkIfLessThanZeroOrGreaterThanNine(arr)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return `(${arr.slice(0, 2).join('')}) ${arr.slice(2, 7).join('')}-${arr.slice(7, 11).join('')}`;
 }
 
 // Desafio 12
