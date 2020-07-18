@@ -197,8 +197,16 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-
+function hydrate(bebidas) {
+  let suma = 0;
+  let bebidasNumeros = 0;
+  bebidas = bebidas.replace(/\D/g, "");
+  bebidas = bebidas.split('');
+  for (let i in bebidas) {
+    bebidasNumeros = parseInt(bebidas[i]);
+    suma += bebidasNumeros;
+  }
+  return suma + ' copos de água';
 }
 
 module.exports = {
