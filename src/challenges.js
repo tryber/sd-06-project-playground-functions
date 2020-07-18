@@ -195,38 +195,6 @@ function techList(tecnologias, name) {
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
-  // seu código aqui
-  // Verifica se tamanho do array é diferente de 11
-  if (numeros.length !== 11) {
-    return 'Array com tamanho incorreto';
-  }
-
-  // Verifica número menor que 0 ou maior que 9
-  for (let i in numeros) {
-    if (numeros[i] < 0 || numeros[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
-
-  // Verifica a ocorrência de 3 números iguais
-  let ocorrenciasIguais = 0;
-  for (let i in numeros) {
-    for (let iAux in numeros) {
-      if (numeros[i] === numeros[iAux]) {
-        ocorrenciasIguais += 1;
-      }
-    }
-  }
-  if (ocorrenciasIguais >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-
-  // Criação do número
-  let ddd = numeros.slice(0, 2);
-  let prefixo = numeros.slice(2, 7);
-  let sufixo = numeros.slice(7);
-  let numeroPronto = `(${ddd}) ${prefixo}-${sufixo}`;
-  return numeroPronto;
 }
 
 // Desafio 12
