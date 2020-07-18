@@ -54,8 +54,8 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(n) {
   // seu código aqui
-  for(let i = 1 ; i <= numero ; i++)
-  
+  for(let i = 1 ; i <= n ; i++){
+  let numero = "";
   if(i % 3==0){
     numero = "fizz"
   } else if (i % 5==0) {
@@ -66,6 +66,7 @@ function fizzBuzz(n) {
     numero = i
   }
   return numero
+  }
 }
 // Desafio 9
 function encode() {
