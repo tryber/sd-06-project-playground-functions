@@ -65,9 +65,21 @@ function concatName(newArray) {
 // console.log(concatName(testArray));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+
+// Escreva uma função com o nome footballPoints que receba o número de
+// vitórias (esse parâmetro deverá se chamar wins) e o número de empates
+// (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos
+// que o time marcou em um campeonato.
+
+// Para tanto, considere que cada vitória vale 3 pontos e
+// cada empate vale 1 ponto.
+
+function footballPoints(wins, ties) {
+  return totalOfPoints = (wins * 3) + ties;
 }
+
+console.log(footballPoints(10, 5));
+
 
 // Desafio 6
 function highestCount() {
@@ -88,21 +100,21 @@ function highestCount() {
 // Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1
 // esteja a 3 unidades, sua função deverá retornar cat2.
 
-//Caso os gatos estejam na mesma distância do rato, a função deverá retornar
+// Caso os gatos estejam na mesma distância do rato, a função deverá retornar
 // a string "os gatos trombam e o rato foge".
 
 function catAndMouse(mouse, cat1, cat2) {
-let distanceMouseCatOne = Math.abs(mouse - cat1);
-let distanceMouseCatTwo = Math.abs(mouse - cat2);
-let result = '';
-if (distanceMouseCatOne < distanceMouseCatTwo) {
-  result = 'cat1';
-} else if (distanceMouseCatOne > distanceMouseCatTwo) {
-  result = 'cat2';
-} else {
-  result = 'os gatos trombam e o rato foge'
-}
-return result;
+  let distanceMouseCatOne = Math.abs(mouse - cat1);
+  let distanceMouseCatTwo = Math.abs(mouse - cat2);
+  let result = '';
+  if (distanceMouseCatOne < distanceMouseCatTwo) {
+    result = 'cat1';
+  } else if (distanceMouseCatOne > distanceMouseCatTwo) {
+    result = 'cat2';
+  } else {
+    result = 'os gatos trombam e o rato foge'
+  }
+  return result;
 }
 
 console.log(catAndMouse(0, 3, 2));
@@ -142,7 +154,7 @@ function fizzBuzz(myArray) {
       newArray[index] = 'bug!';
     }
   }
-return newArray;
+  return newArray;
 }
 
 let testArray = [2, 15, 7, 9, 45];
