@@ -175,6 +175,8 @@ function techList(techArray, name) {
   let techObject = {}
   for (iten in techArray.sort()) {
     techList.push({tech : techArray[iten], name : name})
+  } if (techArray.length < 1) {
+    techList = "Vazio!"
   }
   return techList
 }
