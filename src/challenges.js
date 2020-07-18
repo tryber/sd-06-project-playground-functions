@@ -19,13 +19,14 @@ function splitSentence(string) {
   for (let i in string) {
     if (string[i] !== ' ') {
       word += (string[i]);
-  }
+    }
     else if (string[i] === ' ') {
       splitedPhrase.push(word);
       word = ' ';
     }
   }
   splitedPhrase.push(word);
+  return splitSentence;
 }
 
 // Desafio 4
