@@ -169,18 +169,33 @@ function generatePhoneNumber(array) {
     if ((array[pos] < 0) || (array[pos] > 9)) {
       return "não é possível gerar um número de telefone com esses valores";
     }
+
   }
 
-  let resultado = '';
-  return resultado;
+ let resultado = '(' + array[0] + array[1] + ')' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+ return resultado;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  // a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
+  // e maior que o valor absoluto da diferença entre essas medidas
+
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
+    return true;
+  } else if ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC))) {
+    return true;
+  } else if ((lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineB))) {
+    return true;
+  } else {
+    return false;
+  }
+
 }
+
+// console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
