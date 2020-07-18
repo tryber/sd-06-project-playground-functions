@@ -30,21 +30,8 @@ console.log(resultSplit);
 
 // Desafio 4
 function concatName(arrayConcatenar) {
-     for (let indice in arrayConcatenar){
-      conta = index.length;
-      if (indice = 0) {
-        arrayprimeiro = arrayConcatenar;
-      }else if (indice = conta) {
-        arraysegundo = arrayConcatenar;
-      }
-      let resultado = arra
-    }
-    return (retorno);
-  }
-let arrayConcatenar = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-let stringConcatenada = concatName(arrayConcatenar);
-console.log(stringConcatenada);
 
+}
 
 // Desafio 5
 function footballPoints(ties, wins) {
@@ -89,8 +76,22 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+let lineA;
+let lineB;
+let lineC;
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)){
+    return true;
+  }else if(lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)){
+    return true;
+  }else if(lineC < Math.abs(lineA + lineB) && lineC > Math.abs(lineA - lineB)){
+    return true;
+  }
+  return false;
 }
+
+}
+ desafio = triangleCheck(1,2,2);
 
 // Desafio 13
 function hydrate() {
