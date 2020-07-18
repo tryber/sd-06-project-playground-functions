@@ -178,7 +178,7 @@ function techList(arrayTecnologia, name) {
     for (let i in arrayOrdenado) {
       objeto = {
         tech: arrayOrdenado[i],
-        nome: name,
+        name: name,
       }
       arrayTotal[i] = objeto;
     }
