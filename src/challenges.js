@@ -156,7 +156,19 @@ function decode(string) {
 
 // Desafio 10
 function techList(arrayOfTechs, name) {
+  let sortedTechsArray = arrayOfTechs;
   let arrayOfObjects = [];
+
+  for (let rightIndex = 1; rightIndex < sortedTechsArray.length; rightIndex += 1) {
+    for (let leftIndex = 0; leftIndex < rightIndex; leftIndex += 1) {
+      if (sortedTechsArray[leftIndex] > sortedTechsArray[rightIndex]) {
+        let aux = sortedTechsArray[leftIndex];
+
+        sortedTechsArray[leftIndex] = sortedTechsArray[rightIndex];
+        sortedTechsArray[rightIndex] = aux;
+      }
+    }
+  }
 
   for (let tech in arrayOfTechs) {
     let person = {};
