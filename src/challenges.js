@@ -38,12 +38,7 @@ function concatName(){
 }
 
 
-// Desafio 5
-/* Pontos no futebol
-Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties)
-e retorne a quantidade de pontos que o time marcou em um campeonato.
-Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto. */
-
+// Desafio 5 - Pontos no futebol
 function footballPoints(wins, ties) {
   let pontuacao = (wins * 3) + (ties * 1);
   return pontuacao;
@@ -57,8 +52,9 @@ Escreva uma função chamada highestCount que, ao receber uma array de números,
 Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9
 (maior número do array) se repete. */
 
-function highestCount() {
+function highestCount(highNumbers) {
 
+return numcontMaior;
 }
 
 
@@ -71,9 +67,21 @@ e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que esta
 Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar cat2.
 Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge". */
 
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+   let positioncat1 = Math.abs(cat1 - mouse);
+   let positioncat2 = Math.abs(cat2 - mouse);
+   let positon;
+   if (positioncat1 > positioncat2) {
+      position = "cat2";
+   } else if (positioncat1 < positioncat2) {
+     position = "cat1";
+   } else {
+    position = " os gatos trombaram e o rato foge ";
+   }
+   return position;
+  }
+  catAndMouse(45,30,30);
+  console.log(position);
 
 // Desafio 8
 /*FizzBuzz
