@@ -153,13 +153,13 @@ function techList(nomesTech, nome) {
   let listaTech;
   let techCrescente = nomesTech.sort();
   let result = [];
-  for (let i in techCrescente) {
+  for (let i = 0; i < techCrescente.length; i++) {
     result += {
-      tech: 'techCrescente[i]',
-      name: 'nome'
-    }
+      tech: techCrescente[i], name: nome
+    } + ', ';
   }
-  return result;
+  listaTech = result;
+  return listaTech;
 }
 
 // Desafio 11
