@@ -1,4 +1,4 @@
-// Desafio 1
+// Desafio 1 ## DONE!!! ##
 function compareTrue(boolean1, boolean2) {
   if (boolean1 === true && boolean2 === true) {
     return true;
@@ -6,7 +6,7 @@ function compareTrue(boolean1, boolean2) {
   return false;
 }
 
-// Desafio 2
+// Desafio 2 ## DONE!!! ##
 function calcArea(base, height) {
   return (base*height)/2
 }
@@ -28,12 +28,12 @@ function splitSentence(phrase) {
   // return (sentenceArr);
 }
 
-// Desafio 4
+// Desafio 4 ## DONE!!! ##
 function concatName(arrayStrings) {
   return arrayStrings[arrayStrings.length-1] + ", " +arrayStrings[0];
 }
 
-// Desafio 5
+// Desafio 5 ## DONE!!! ##
 function footballPoints(wins, ties) {
   return 3*wins + ties;
 }
@@ -43,7 +43,7 @@ function highestCount() {
   // seu código aqui
 }
 
-// Desafio 7
+// Desafio 7 ## DONE!!! ##
 function catAndMouse(mouse, cat1, cat2) {
   let d1 = mouse - cat1;
   let d2 = mouse - cat2;
@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8
+// Desafio 8 
 function fizzBuzz(arrayNumbers) {
   let fizzBuzzArr = arrayNumbers;
 
@@ -85,7 +85,7 @@ function fizzBuzz(arrayNumbers) {
   return fizzBuzzArr;
 }
 
-// Desafio 9
+// Desafio 9 ## DONE!!! ##
 function encode(inputStringToEncode) {
   let changes = {
     a: 1,
@@ -188,10 +188,8 @@ function decode(inputStringToDecode) {
   return decodeString;
 }
 
-console.log(decode("h3 th2r2!"));
-
 // Desafio 10
-function techList() {
+function techList(techArray, name) {
   // seu código aqui
 }
 
