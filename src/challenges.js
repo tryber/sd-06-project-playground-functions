@@ -60,7 +60,7 @@ function highestCount(lista) {
 }
 // let list = [0, 4, 4, 4, 9, 2, 1];
 // console.log(highestCount(list)); teste 06
-
+//
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
