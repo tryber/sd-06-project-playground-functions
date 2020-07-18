@@ -168,7 +168,8 @@ function techList(lista, name) {
     lista = lista.sort();
 
     for (let x = 0; x < lista.length; x += 1) {
-      let novoObjeto = {tech: lista[x],
+      let novoObjeto = {
+        tech: lista[x],
         name: name,
       };
       objetosLista.push(novoObjeto);
@@ -181,8 +182,30 @@ function techList(lista, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(param) {
+  let resultado = '(';
+
+  if (param.length === 11) {
+    for (let x = 0; x <= 1; x += 1) {
+      resultado += param[x];
+    }
+
+    resultado += ') ';
+    
+    for (let x = 2; x <= 6; x += 1) {
+      resultado += param[x];
+    }
+
+    resultado += '-';
+
+    for (let x = 7; x <= 10; x += 1) {
+      resultado += param[x];
+    }
+  } else {
+    resultado = 'Array com tamanho incorreto.';
+  }
+  
+  return resultado;
 }
 
 // Desafio 12
