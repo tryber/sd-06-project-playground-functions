@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if ((a === true) && (b === true)){
+  if ((a === true) && (b === true) || (a === false) && (b === false)){
     return true;
   } else {
     return false;
@@ -75,8 +75,21 @@ function fizzBuzz(arrayNumber) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  
+  for(let i = 0; i < string.length-1; i++){
+    if (string[i] === "a"){
+      string[i] = "1";
+    } else if(string[i] === "e"){
+      string[i] = "2"
+    } else if(string[i] === "i"){
+      string[i] = "3"
+    } else if(string[i] === "o"){
+      string[i] = "4"
+    } else if(string[i] === "u"){
+      string[i] = "5"
+    }
+  }
 }
 function decode() {
   // seu código aqui
