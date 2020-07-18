@@ -81,11 +81,62 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodedString = '';
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case 'a':
+        encodedString += '1';
+        break;
+      case 'e':
+        encodedString += '2';
+        break;
+      case 'i':
+        encodedString += '3';
+        break;
+      case 'o':
+        encodedString += '4';
+        break;
+      case 'u':
+        encodedString += '5';
+        break;
+      default:
+        encodedString += string[i];
+    }
+  }
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+
+function iHateCodeClimate(encodedString) {
+  let decodedWord = '';
+  switch (encodedString) {
+    case '1':
+      decodedWord = 'a';
+      break;
+    case '2':
+      decodedWord = 'e';
+      break;
+    case '3':
+      decodedWord = 'i';
+      break;
+    case '4':
+      decodedWord = 'o';
+      break;
+    case '5':
+      decodedWord = 'u';
+      break;
+    default:
+      decodedWord = encodedString;
+  }
+  return decodedWord;
+}
+
+function decode(string) {
+  let newString = '';
+  for (let i = 0; i < string.length; i += 1) {
+    newString += iHateCodeClimate(string[i]);
+  }
+  return newString;
 }
 
 // Desafio 10
