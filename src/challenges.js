@@ -28,11 +28,11 @@ function splitSentence(string) {
 console.log(splitSentence('go Trybe'))
 
 // Desafio 4
-let arr = ['Lucas','Cassiano','Ferraz','Paolillo']
-function concatName(arr) {
-  let ultimo =  arr[arr.length - 1];
-  let primeiro = arr[0];
-  let ultimoeprimeiro = ultimo +', '+ primeiro;
+let arr = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+function concatName(arrei) {
+  let ultimo = arrei[arrei.length - 1];
+  let primeiro = arrei[0];
+  let ultimoeprimeiro = ultimo + ', ' + primeiro;
   return ultimoeprimeiro
   // seu código aqui
 }
@@ -41,27 +41,27 @@ console.log(concatName(arr))
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = wins*3 + ties ;
+  let pontos = (wins * 3) + ties; 
   return pontos
   // seu código aqui
 }
 
-console.log(footballPoints(3,1))
+console.log(footballPoints(3, 1))
 
 // Desafio 6
 function highestCount(arr2) {
   let highestNumber = arr2[0];
 
-  for(let index=0; index < arr2.length; index +=1) {
-      if (arr2[index]> highestNumber) {
-          highestNumber = arr2 [index];
+  for (let index = 0; index < arr2.length; index += 1) {
+      if (arr2[index] > highestNumber) {
+      highestNumber = arr2[index];
       }
   }
 
   let count = 0;
-  for(let index = 0; index < arr2.length; index +=1){
-      if (highestNumber == arr2[index]) {
-          count += 1;
+  for (let index = 0; index < arr2.length; index += 1) {
+  if (highestNumber === arr2[index]) {
+      count += 1;
       }
   }
 
@@ -74,9 +74,20 @@ console.log(highestCount(array));
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let referencia = Math.abs(mouse) + Math.abs(cat1) + Math.abs(cat2);
+  let distcat1 = Math.abs((mouse + referencia) - (cat1 + referencia));
+  let distcat2 = Math.abs((mouse + referencia) - (cat2 + referencia));
+  if (distcat1 < distcat2) {
+  console.log('cat1');
+} else if (distcat1 > distcat2) {
+  console.log('cat2');
+} else { 
+  console.log('os gatos trombam e o rato foge');
 }
+}
+catAndMouse(0, 7, 10)
+
 
 // Desafio 8
 function fizzBuzz() {
