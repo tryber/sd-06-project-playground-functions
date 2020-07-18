@@ -97,7 +97,7 @@ function encode(minhaString) {
 }
 function decode(minhaString) {
   let decodificar = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' }
-  return minhaString.replace(/[aeiou]/g, m => codificar[m]);
+  return minhaString.replace(/[12345]/g, m => decodificar[m]);
 }
 
 // Desafio 10
