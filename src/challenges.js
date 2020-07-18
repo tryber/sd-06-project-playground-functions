@@ -26,7 +26,7 @@ function splitSentence(string) {
     }
   }
   splitedPhrase.push(word);
-  return splitSentence;
+  return splitedPhrase;
 }
 
 // Desafio 4
