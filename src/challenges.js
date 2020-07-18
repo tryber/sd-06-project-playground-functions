@@ -25,15 +25,15 @@ function concatName(list) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  totalScore = 0;
+  let totalScore;
   totalScore = (wins * 3) + ties;
   return totalScore;
 }
 
 // Desafio 6
 function highestCount(numbers) {
-  let highestNumber = 0;
-  let value1 = 0;
+  let highestNumber;
+  let value1;
   for (let i=0; i<numbers.length;i++) {
     if (numbers[i] > highestNumber) {
         highestNumber = numbers[i];
@@ -48,12 +48,13 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let cat1Position, cat2Position;
   let cat1Position = cat1 - mouse;
   let cat2Position = cat2 - mouse;
-  if (cat1 < 0) {
+  if (cat1Position < 0) {
     cat1Position *= (-1);
   }
-  if (cat2 < 0){
+  if (cat2Position < 0){
     cat2Position *=(-1);
   }
   if (cat2Position === cat1Position){
@@ -64,6 +65,13 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+// Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+
+// Para cada número da Array que seja divisível por 3, apresente uma string "fizz";
+// Para cada número da Array que seja divisível por 5, apresente uma string "buzz";
+// Caso o número seja divisível por 3 ou 5, retorne a string "fizzBuzz";
+// Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+// Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
 function fizzBuzz() {
   // seu código aqui
 }
