@@ -19,8 +19,7 @@ function splitSentence(frase) {
   for (let contador = 0; contador < frase.length; contador += 1) {
     if (frase[contador] !== ' ') {
       uniaoPalavra += frase[contador]
-    }
-    else {
+    } else {
       palavras.push(uniaoPalavra);
       uniaoPalavra = '';
     } if (contador === frase.length - 1) {
@@ -52,8 +51,7 @@ function highestCount(lista) {
     if (valorMaiorAtual < lista[indice + 1]) {
       valorMaiorAtual = lista[indice + 1];
       qtdNumIguaisAtual = 1;
-    }
-    else if (valorMaiorAtual === lista[indice + 1]) {
+    } else if (valorMaiorAtual === lista[indice + 1]) {
       qtdNumIguaisAtual += 1;
     }
   } return (qtdNumIguaisAtual)
@@ -66,20 +64,18 @@ function trataNeg(valor) {
     valor = valor * -1;
   } return valor
 }
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1;
   distanciaCat1 = trataNeg(distanciaCat1);
   let distanciaCat2 = mouse - cat2;
   distanciaCat2 = trataNeg(distanciaCat2);
   if (distanciaCat1 < distanciaCat2) {
-    return ("cat1");
+    return ('cat1');
   } else if (distanciaCat1 > distanciaCat2) {
-    return ("cat2");
-  } else {
-    return ("os gatos trombam e o rato foge");
-  }
+    return ('cat2');
+  } return ('os gatos trombam e o rato foge');
 }
-// console.log(catAndMouse(5, 3, 3));
+// console.log(catAndMouse(1, 1, 2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
