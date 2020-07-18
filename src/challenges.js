@@ -258,10 +258,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(param) {
+  let numeros = param.replace(/\D/g, "");
+  let somaDeBebidas = 0;
+  let resposta = '';
 
+  for (let x = 0; x < numeros.length; x += 1) {
+    somaDeBebidas += parseInt(numeros[x]);
+  }
+
+  if (somaDeBebidas === 1) {
+    resposta = `${somaDeBebidas} copo de água`;
+  } else {
+    resposta = `${somaDeBebidas} copos de água`;
+  }
+
+  return resposta;
+}
 
 module.exports = {
   calcArea,
