@@ -65,7 +65,7 @@ function highestCount(arrayNumeros) {
     }
   }
   return ocorrencias;
-} 
+}
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -179,7 +179,7 @@ function techList(tecnologias, name) {
     };
     novaLista.push(objeto);
   }
-  return novaLista[];
+  return novaLista;
 }
 
 // Desafio 11
