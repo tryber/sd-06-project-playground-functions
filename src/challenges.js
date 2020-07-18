@@ -186,14 +186,26 @@ function triangleCheck(lineA, lineB, lineC) {
   }else {
     return true;
   }
-  // seu código aqui
 }
-console.log(triangleCheck(10, 14, 8));
+//console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+
+  let total = 0;
+  for (let i = 0 ; i < string.length ; i += 1){
+    if(string[i] > 0 && string[i] <= 9){
+      total += parseInt(string[i]);
+    }
+  }
+  if (total <= 1){
+    return `${total} copo de água`;
+  }
+  else {
+    return `${total} copos de água`;
+  }
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 module.exports = {
