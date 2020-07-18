@@ -77,6 +77,7 @@ function fizzBuzz(arr) {
   }
   arr.forEach(checkNumber);
   return result;
+  }
 }
 
 // Desafio 9
@@ -106,7 +107,12 @@ function encode(s) {
   return encoded;
 }
 function decode(s) {
-  
+  s = (s.replace(/a/gi, '1'));
+  s = (s.replace(/e/gi, '2'));
+  s = (s.replace(/i/gi, '3'));
+  s = (s.replace(/o/gi, '4'));
+  s = (s.replace(/u/gi, '5'));
+  return s;
 }
 
 // Desafio 10
