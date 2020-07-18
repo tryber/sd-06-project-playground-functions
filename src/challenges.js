@@ -74,7 +74,7 @@ function highestCount(numbersArray) {
   // definir maior numero
   for (index in numbersArray){
     for (internIndex in numbersArray){
-      if (numbersArray[index] > numbersArray[internIndex]){
+      if (numbersArray[index] > numbersArray[internIndex] && numbersArray[index] > majorNumber){
         majorNumber = numbersArray[index]
       }
     }
@@ -90,10 +90,15 @@ function highestCount(numbersArray) {
   return count;
 }
 
+console.log(highestCount([4, 11, 11, 11, 11, 4, 9, 9, 3, 2]));
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = 0;
+  let distanceCat2 = 0;
+
+  
 }
 
 // Desafio 8
