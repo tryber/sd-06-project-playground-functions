@@ -237,6 +237,8 @@ function generatePhoneNumber(arr) {
         k++
       if (arr[j] <= -1)
         return "não é possível gerar um número de telefone com esses valores"
+      if (arr[j] > 9)
+        return "não é possível gerar um número de telefone com esses valores"
     }
     if (k >= 3)
       return "não é possível gerar um número de telefone com esses valores"
