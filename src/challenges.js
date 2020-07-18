@@ -60,8 +60,8 @@ function highestCount(values) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  distanceCat1 = cat1 - mouse;
-  distanceCat2 = cat2 - mouse;
+  let distanceCat1 = cat1 - mouse;
+  let distanceCat2 = cat2 - mouse;
 
   if (distanceCat1 < 0) {
     distanceCat1 *= -1;
@@ -101,16 +101,55 @@ function fizzBuzz(values) {
 }
 
 // Desafio 9
-function encode() {
+function encode(frase) {
   // seu código aqui
+  let fraseArray = frase.split("");
+  for (let i in fraseArray) {
+    switch (fraseArray[i]) {
+      case "a": fraseArray[i] = 1;
+        break;
+      case "e": fraseArray[i] = 2;
+        break;
+      case "i": fraseArray[i] = 3;
+        break;
+      case "o": fraseArray[i] = 4;
+        break;
+      case "u": fraseArray[i] = 5;
+        break;
+    }
+  }
+
+  let fraseEncode = fraseArray.join("");
+  return fraseEncode;
 }
-function decode() {
+
+function decode(frase) {
   // seu código aqui
+  let fraseArray = frase.split("");
+  for (let i in fraseArray) {
+    switch (fraseArray[i]) {
+      case "1": fraseArray[i] = "a";
+        break;
+      case "2": fraseArray[i] = "e";
+        break;
+      case "3": fraseArray[i] = "i";
+        break;
+      case "4": fraseArray[i] = "o";
+        break;
+      case "5": fraseArray[i] = "u";
+        break;
+    }
+  }
+
+  let fraseDecode = fraseArray.join("");
+  return fraseDecode;
 }
 
 // Desafio 10
 function techList() {
   // seu código aqui
+
+
 }
 
 // Desafio 11
@@ -145,3 +184,25 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+
+
+
+
+
+let palavra = "teste";
+let arrey = palavra.split("");
+
+
+for (let i in arrey) {
+  switch (arrey[i]) {
+    case "a":
+      arrey[i] = 1;
+      break;
+    case "e":
+      arrey[i] = 3;
+      break;
+  }
+}
+
+console.log(arrey);
