@@ -87,12 +87,29 @@ function fizzBuzz(array) {
   }
   return array2;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let aux = str.split("");
+  let aux2 = []; 
+  for (const key in aux) {
+    if (aux[key] === 'a') {
+      aux2 = aux2 + '1';
+    }else if(aux[key] === 'e'){
+      aux2 += '2';
+    }else if (aux[key] === 'i'){
+      aux2 = aux2 + '3';
+    }else if (aux[key] === 'o'){
+      aux2 += '4';
+    }else if (aux[key] === 'u'){
+      aux2 += '5'
+    }else{
+      aux2 += aux[key];
+    }
+  }
+  return aux2;
 }
+console.log(encode('hi there'));
 function decode() {
   // seu código aqui
 }
