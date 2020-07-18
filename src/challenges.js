@@ -70,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
   
 }
-console.log(catAndMouse(-10, -7, -7))
+console.log(catAndMouse(10, -2, -7))
 
 
 
