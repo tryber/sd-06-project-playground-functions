@@ -160,9 +160,26 @@ return abencoado
        console.log(decode("Am4 1z5l"))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let objeto = {};
+if (array.length > 0) {
+array.sort()
+  let objeto = []
+
+  for (let i = 0; i < array.length; i++) {
+    objeto[i] = {
+      tech: array[i],
+      name: name
+    };
+  
+  }
+} else {
+  console.log("Vazio!")
 }
+return objeto
+}
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Bruna"))
+
 
 // Desafio 11
 function generatePhoneNumber() {
