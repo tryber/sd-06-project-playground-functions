@@ -24,24 +24,13 @@ console.log(calcArea(10, 5));
 
 
 // Desafio 3
-// Função receberá uma string e retornará uma array de strings separadas por cada espaço na string original
-function splitSentence(phraseDesafio3, resultDesafio3, arrayDesafio3) {
-  arrayDesafio3 = ("a");
-  resultDesafio3 = phraseDesafio3.split(' ',);
-  if (resultDesafio3.length == 3) {
-    arrayDesafio3 = [resultDesafio3[2] + ', ' + resultDesafio3[1] + ', ' + resultDesafio3[0]];
-}   else if (resultDesafio3.length == 2) {
-    arrayDesafio3 = [resultDesafio3[1] + ', ' + resultDesafio3[0]];
-}     else {
-      arrayDesafio3 = [resultDesafio3[0]];
+// Função receberá uma string e retornará uma array de strings separadas por
+// cada espaço na string original
+function splitSentence(stringDesafio3) {
+  let arrayDesafio3 = stringDesafio3.split(' ');
+  return arrayDesafio3.reverse();
 }
-  // phraseDesafio3 = ('Dia lindo');
-  // separator = (' ');
-  return arrayDesafio3;
-}
-
-// console.log('<---- Desafio 3 ---->');
-console.log(splitSentence('vamo'));
+console.log(splitSentence('funciona'));
 
 
 // Desafio 4
@@ -113,4 +102,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
