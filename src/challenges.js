@@ -225,7 +225,7 @@ function techList(arr, name) {
 
   let newArr = []
 
-  if (arr == undefined || arr.length == 0)
+  if (arr == undefined || arr.length == 0 || arr[0] == 0)
     return "Vazio!" 
 
   for (let i in arr) {
@@ -240,8 +240,13 @@ function techList(arr, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arr) {
+  
+  if (arr.length != 11)
+    return "Array com tamanho incorreto."
+
+
+
 }
 
 // Desafio 12
