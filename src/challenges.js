@@ -180,8 +180,6 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
-  // e maior que o valor absoluto da diferença entre essas medidas
 
   if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
     return true;
@@ -195,12 +193,19 @@ function triangleCheck(lineA, lineB, lineC) {
 
 }
 
-// console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let coposAgua = 0;
+  let coposBebida = string.match(/\d+/g).map(Number);
+
+  for (let pos = 0; pos < coposBebida.length; pos += 1) {
+    coposAgua += coposBebida[pos];
+  }
+
+  return coposAgua;
 }
+
+// console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 
 module.exports = {
