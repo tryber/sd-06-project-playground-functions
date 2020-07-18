@@ -186,14 +186,56 @@ function techList(arrayOfTechs, name) {
   return arrayOfObjects;
 }
 
-//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneArray) {
+  if (phoneArray.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  function repeatThreeOrMore(arrayOfNumbers) {
+    let counter = 1;
+
+    for (let i = 0; i < arrayOfNumbers.length; i += 1) {
+      for (let j = 1; j < arrayOfNumbers.length; j += 1) {
+        if (arrayOfNumbers[i] === arrayOfNumbers[j]) {
+          counter += 1;
+
+          if (counter >= 3) {
+            return true;
+          }
+        }
+      }
+
+    counter = 1;
+    }
+
+    return false;
+  }
+
+  for (let number in phoneArray) {
+    if (phoneArray[number] < 0 || phoneArray[number] > 9 || repeatThreeOrMore(phoneArray)) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+
+  let ddd = '';
+  let firstFive = '';
+  let lastFive = '';
+
+  for (let i = 0; i < phoneArray.length; i += 1) {
+    if (i < 2) {
+      ddd += phoneArray[i];
+    } else if (i < 7) {
+      firstFive += phoneArray[i];
+    } else {
+      lastFive += phoneArray[i];
+    }
+  }
+
+  return '(' + ddd + ') ' + firstFive + '-' + lastFive;
 }
 
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 //(12) 34567-8901
 
 // Desafio 12
