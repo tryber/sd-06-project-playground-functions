@@ -168,8 +168,18 @@ function decode(frase) {
 }
 
 // Desafio 10
-function techList(tecnologias) {
+function techList(tecnologias, name) {
   // seu código aqui
+  tecnologias.sort();
+  let novaLista = [];
+  for (let i in tecnologias) {
+    let objeto = {
+      tech: tecnologias[i],
+      nome: name,
+    };
+    novaLista.push(objeto);
+  }
+  return novaLista[];
 }
 
 // Desafio 11
