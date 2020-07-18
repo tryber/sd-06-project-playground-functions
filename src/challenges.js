@@ -26,12 +26,13 @@ function splitSentence(astring) {
 // Desafio 4
 function concatName(f04par01 = []) 
 {
-    return f04par01[f04par01.length-1] + f04par01[0];
+  return f04par01[f04par01.length-1] + f04par01[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) 
+{
+  return (wins * 3) + ties
 }
 
 // Desafio 6
