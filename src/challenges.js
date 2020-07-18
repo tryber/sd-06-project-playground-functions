@@ -204,7 +204,7 @@ function generatePhoneNumber(numeros) {
     numero = 0
     number = numeros[iNumero];
   }
-  if (number !== 0) {
+  if (numero >= 3) {
     telefone = 'não é possível gerar um número de telefone com esses valores';
   }
   return telefone;
