@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
   resultCat1 = resultCat1 * (-1);
   }
   if (resultCat2 < 0){
-  resultCat1 = resultCat1 * (-1);
+  resultCat2 = resultCat2 * (-1);
   }
 
   if (resultCat1 === resultCat2) {
