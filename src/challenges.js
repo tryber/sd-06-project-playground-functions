@@ -41,7 +41,7 @@ console.log(concatName(arr))
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (wins * 3) + ties; 
+  let pontos = (wins*3) + ties; 
   return pontos
   // seu código aqui
 }
@@ -62,7 +62,7 @@ function highestCount(arr2) {
   for (let index = 0; index < arr2.length; index += 1) {
   if (highestNumber === arr2[index]) {
       count += 1;
-      }
+    }
   }
 
   return count;
@@ -75,18 +75,15 @@ console.log(highestCount(array));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let referencia = Math.abs(mouse) + Math.abs(cat1) + Math.abs(cat2);
-  let distcat1 = Math.abs((mouse + referencia) - (cat1 + referencia));
-  let distcat2 = Math.abs((mouse + referencia) - (cat2 + referencia));
-  if (distcat1 < distcat2) {
-  console.log('cat1');
-} else if (distcat1 > distcat2) {
-  console.log('cat2');
+  if (Math.abs(cat1-mouse) < Math.abs(cat2-mouse)) {
+  return'cat1';
+} else if (Math.abs(cat1-mouse) > Math.abs(cat2-mouse)) {
+  return'cat2';
 } else { 
-  console.log('os gatos trombam e o rato foge');
+    return'os gatos trombam e o rato foge'
 }
 }
-catAndMouse(0, 7, 10)
+console.log(catAndMouse(0, 20, 50))
 
 
 // Desafio 8
