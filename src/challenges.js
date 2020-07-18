@@ -30,33 +30,33 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let winsPoints = 3;
   let tiesPoints = 1;
-  let points = wins * winPoints + ties * tiePoints;
+  let points = wins * winsPoints + ties * tiesPoints;
   return points;
 }
 
 // Desafio 6
 function highestCount(arrayNumbers) {
   let repeat = 1;
-  for (let i = 1; i < arrayNumbers.length; i++) {
-    for (let j = 0; j < i; j++) {
+  for (let i = 1; i < arrayNumbers.length; i += 1) {
+    for (let j = 0; j < i; j += 1) {
       if (arrayNumbers[i] < arrayNumbers[j]) {
-        let position = arrayNumbers[i];    
+        let position = arrayNumbers[i];
         arrayNumbers[i] = arrayNumbers[j];
         arrayNumbers[j] = position;
       }
-    } 
-}
-  for (let l = arrayNumbers[arrayNumbers.length - 2]; l >= 0; l -= 1) {
-    if (arrayNumbers[l] === arrayNumbers[arrayNumbers.length -1]) {
-      repeat += 1;
+    }
   }
-}
+  for (let l = arrayNumbers[arrayNumbers.length - 2]; l >= 0; l -= 1) {
+    if (arrayNumbers[l] === arrayNumbers[arrayNumbers.length - 1]) {
+    repeat += 1;
+    }
+  }
 return repeat;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
 }
 
 // Desafio 8
