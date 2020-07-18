@@ -186,14 +186,11 @@ function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lu
       return 0;
     })
 
-    console.log(i)
+    return i;
     }
     else 
-      return 'Vazio!';
-  
-  
+      return 'Vazio!'; 
 }
-techList();
 
 // Desafio 11
 function generatePhoneNumber() {
