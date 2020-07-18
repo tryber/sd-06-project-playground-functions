@@ -1,8 +1,5 @@
-// Desafio 2
-function calcArea(base,height) {
-    var area = (base * height)/2
-    return area
+// Desafio 3
+function splitSentence(frase) {
+    var strSplit = frase.split(" ")
+    return strSplit
   }
-  
-
-  console.log(calcArea(100,10))
