@@ -175,7 +175,7 @@ function generatePhoneNumber(number) {
         }
       }
       if (repetido > 3) {
-        return 'não é possível gerar um número de telefone com esses valores repetidos';
+        return 'não é possível gerar um número de telefone com esses valores';
       } else {
         repetido = 1;
       }
