@@ -32,7 +32,7 @@ let arr = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 function concatName(arrei) {
   let ultimo = arrei[arrei.length - 1];
   let primeiro = arrei[0];
-  let ultimoeprimeiro = ultimo + ', ' + primeiro;
+  let ultimoeprimeiro = `${ultimo}, ${primeiro}`;
   return ultimoeprimeiro
   // seu código aqui
 }
@@ -41,8 +41,8 @@ console.log(concatName(arr))
 
 // Desafio 5
 function footballPoints(wins, ties) {
-let pontos = (wins *3) + ties;
-return pontos
+  let pontos = (wins * 3) + ties;
+  return pontos
 }
 
 console.log(footballPoints(3, 1))
@@ -53,15 +53,15 @@ function highestCount(arr2) {
 
   for (let index = 0; index < arr2.length; index += 1) {
     if (arr2[index] > highestNumber) {
-    highestNumber = arr2[index];
+      highestNumber = arr2[index];
     }
   }
 
   let count = 0;
   for (let index = 0; index < arr2.length; index += 1) {
     if (highestNumber === arr2[index]) {
-    count += 1;
-  }
+      count += 1;
+    }
   }
 
   return count;
@@ -75,10 +75,10 @@ console.log(highestCount(array));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-  return 'cat1';
- } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-  return 'cat2';
- } return 'os gatos trombam e o rato foge'
+    return 'cat1';
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+   return 'cat2';
+  } return 'os gatos trombam e o rato foge'
 }
 console.log(catAndMouse(0, 20, 20))
 
@@ -89,76 +89,79 @@ function fizzBuzz(arrei) {
   for (let index = 0; index < arrei.length; index += 1) {
     if (arrei[index] % 3 === 0 && arrei[index] % 5 === 0) {
       novoarrei.push('fizzBuzz');
-    }
-    else if (arrei[index] % 3 === 0) {
+    } else if (arrei[index] % 3 === 0) {
       novoarrei.push('fizz');
-    }
-    else if (arrei[index] % 5 === 0) {
+    } else if (arrei[index] % 5 === 0) {
       novoarrei.push('buzz');
     } else {
       novoarrei.push('bug!');
     }
   }
-   return(novoarrei);
+  return (novoarrei);
 }
 let arr3 = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(arr3));
 
 // Desafio 9
 function encode(arrei) {
-  let novoarrei = [];
+  let novoarreiencode = [];
   for (let index = 0; index < arrei.length; index += 1) {
     if (arrei[index] === 'a') {
-      novoarrei[index]= '1';
-    }
-    else if (arrei[index] === 'e') {
-      novoarrei[index]= '2';
-    }
-    else if (arrei[index] === 'i') {
-      novoarrei[index]= '3';
-    }else if (arrei[index] === 'o') {
-      novoarrei[index]= '4';
-    }
-    else if (arrei[index] === 'u') {
-      novoarrei[index]= '5';
+      novoarreiencode[index] = '1';
+    } else if (arrei[index] === 'e') {
+      novoarreiencode[index] = '2';
+    } else if (arrei[index] === 'i') {
+      novoarreiencode[index] = '3';
+    } else if (arrei[index] === 'o') {
+      novoarreiencode[index] = '4';
+    } else if (arrei[index] === 'u') {
+      novoarreiencode[index] = '5';
     } else {
-      novoarrei[index] = arrei[index];
+      novoarreiencode[index] = arrei[index];
     }
-  } 
- return (novoarrei.join(''));
+   } 
+   return (novoarreiencode.join(''));
 }
 
 console.log(encode('hi there!'))
 
 function decode(arrei) {
-  let novoarrei = [];
+  let novoarreidecode = [];
   for (let index = 0; index < arrei.length; index += 1) {
     if (arrei[index] === '1') {
-      novoarrei[index]= 'a';
-    }
-    else if (arrei[index] === '2') {
-      novoarrei[index]= 'e';
-    }
-    else if (arrei[index] === '3') {
-      novoarrei[index]= 'i';
-    }else if (arrei[index] === '4') {
-      novoarrei[index]= 'o';
-    }
-    else if (arrei[index] === '5') {
-      novoarrei[index]= 'u';
+      novoarreidecode[index] = 'a';
+    } else if (arrei[index] === '2') {
+      novoarreidecode[index] = 'e';
+    } else if (arrei[index] === '3') {
+      novoarreidecode[index] = 'i';
+    } else if (arrei[index] === '4') {
+      novoarreidecode[index] = 'o';
+    } else if (arrei[index] === '5') {
+      novoarreidecode[index] = 'u';
     } else {
-      novoarrei[index] = arrei[index];
+      novoarreidecode[index] = arrei[index];
     }
-  } 
- return (novoarrei.join(''));
+  }
+   return (novoarreidecode.join(''));
 }
 
 console.log(decode('h3 th2r2!'))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, nome) {
+  for (let index = 0; index < tech.length; index += 1) {
+      let objeto = {
+      tech: tech[index],
+      name: nome,
+    }
+    console.log(objeto)
+  }
 }
+
+let tecnologia = ["React", "Jest", "HTML","CSS", "JavaScript"];
+let aloizio = 'Aloizio'
+
+techList(tecnologia, aloizio)
 
 // Desafio 11
 function generatePhoneNumber() {
