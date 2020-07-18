@@ -28,7 +28,7 @@ console.log(calcArea(10, 5));
 // cada espaço na string original
 function splitSentence(stringDesafio3) {
   let arrayDesafio3 = stringDesafio3.split(' ');
-  return arrayDesafio3.reverse();
+  return arrayDesafio3();
 }
 
 
