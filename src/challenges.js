@@ -178,7 +178,7 @@ function generatePhoneNumber(numeros) {
     }
   }
   for (let i in numeros) {
-    if (verifica[i] < 0) {
+    if (numeros[i] < 0) {
       telefone = 'não é possível gerar um número de telefone com esses valores';
     } else if (numeros[i] > 9) {
       telefone = 'não é possível gerar um número de telefone com esses valores';
