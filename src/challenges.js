@@ -203,7 +203,7 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   if (lineA > Math.abs(lineB - lineC) && lineA > lineB + lineC || lineB > Math.abs(lineA - lineC) && lineB > lineA + lineC || lineC > Math.abs(lineB - lineA) && lineC > lineB + lineA) {
     return false;
   }
