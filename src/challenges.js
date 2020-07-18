@@ -120,18 +120,24 @@ function decode(encodedString) {
   let decoded = '';
 
   for (let i = 0; i < encodedString.length; i += 1) {
-    if (encodedString[i] === '1') {
-      decoded += 'a';
-    } else if (encodedString[i] === '2') {
-      decoded += 'e';
-    } else if (encodedString[i] === '3') {
-      decoded += 'i';
-    } else if (encodedString[i] === '4') {
-      decoded += 'o';
-    } else if (encodedString[i] === '5') {
-      decoded += 'u';
-    } else {
-      decoded += encodedString[i];
+    switch (encodedString[i]) {
+      case '1':
+        decoded += 'a';
+        break;
+      case '2':
+        decoded += 'e';
+        break;
+      case '3':
+        decoded += 'i';
+        break;
+      case '4':
+        decoded += 'o';
+        break;
+      case '5':
+        decoded += 'u';
+        break;
+      default:
+        decoded += encodedString[i];
     }
   }
 
