@@ -57,7 +57,7 @@ function highestCount(numerosSortidos) {
   }
   return numRepetido;
 }
-numerosSortidos = [4,1,2,6,5,9,8,9,9,9,9];
+numerosSortidos = [9, 1, 2, 3, 9, 5, 7];
 console.log(highestCount(numerosSortidos));
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -70,11 +70,11 @@ function catAndMouse(mouse,cat1,cat2) {
     ataqueCat2 = valorPositivo(ataqueCat2);
   }
   if(ataqueCat1<ataqueCat2){
-    return cat1;
+    return "cat1";
   }else if(ataqueCat1==ataqueCat2){
     return "os gatos trombam e o rato foge";
   }else{
-    return cat2;
+    return "cat2";
   }
 
 }
@@ -83,7 +83,7 @@ function valorPositivo(negativo){
   positivo = negativo + (negativo*-2);
   return positivo;
 }
-console.log(catAndMouse(5,2,2));
+console.log(catAndMouse(1,0,2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
