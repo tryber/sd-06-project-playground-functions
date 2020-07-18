@@ -215,7 +215,9 @@ function hydrate(order) {
   const glassesOfAlcoholicDrinks = order.match(/\d+/g);
 
   for (const glasses in glassesOfAlcoholicDrinks) {
-    glassesOfWater += parseInt(glassesOfAlcoholicDrinks[glasses], 10);
+    if ({}.hasOwnProperty.call(glassesOfAlcoholicDrinks, glasses)) {
+      glassesOfWater += parseInt(glassesOfAlcoholicDrinks[glasses], 10);
+    }
   }
 
   return glassesOfWater <= 1 ? `${glassesOfWater} copo de água` : `${glassesOfWater} copos de água`;
