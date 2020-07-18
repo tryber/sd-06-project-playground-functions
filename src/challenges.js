@@ -29,11 +29,11 @@ function splitSentence(phraseDesafio3, separator, resultDesafio3) {
   resultDesafio3 = phraseDesafio3.split(' ',);
   // phraseDesafio3 = ('Dia lindo');
   // separator = (' ');
-  return [resultDesafio3 [1]]+', '+[resultDesafio3 [0]];
+  return [resultDesafio3[1] + ', ' + resultDesafio3[0]];
 }
 
 // console.log('<---- Desafio 3 ---->');
-console.log(splitSentence('Dia lindo'));
+console.log(splitSentence('go Trybe'));
 
 
 // Desafio 4
