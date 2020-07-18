@@ -161,7 +161,7 @@ function techList(techs, name) {
       let finalList = {};
 
       finalList.tech = techs[i];
-      finalList.nome = name;
+      finalList.name = name;
 
       list.push(finalList)
   }
@@ -177,8 +177,8 @@ return list
 
 }
 
-console.log(techList(['React', 'Javascript', 'Python', 'Go'], 'Felipe'));
-console.log(techList([], 'Felipe'));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+console.log(techList([], "Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
