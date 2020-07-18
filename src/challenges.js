@@ -153,25 +153,24 @@ function techList(techList, name) {
 function generatePhoneNumber(possibleNumber) {
   if (possibleNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else {
-    let invalidInput = false;
+  } 
+  
+  let invalidInput = false;
 
-    for (let i = 0; i < possibleNumber.length; i += 1) {
-      if (possibleNumber[i] < 0 || possibleNumber[i] > 9) {
-        invalidInput = true;
-        break;
-      }
-
-      if (mostOccurrences(possibleNumber[i], possibleNumber) >= 3) {
-        invalidInput = true;
-        break;
-      }
+  for (let i = 0; i < possibleNumber.length; i += 1) {
+    if (possibleNumber[i] < 0 || possibleNumber[i] > 9) {
+      invalidInput = true;
+      break;
     }
 
-
-    if (invalidInput) {
-      return 'não é possível gerar um número de telefone com esses valores';
+    if (mostOccurrences(possibleNumber[i], possibleNumber) >= 3) {
+      invalidInput = true;
+      break;
     }
+  }
+
+  if (invalidInput) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
 
   let phoneNumber = `(${possibleNumber[0]}${possibleNumber[1]}) `;
@@ -205,9 +204,9 @@ function triangleCheck(lineA, lineB, lineC) {
     return true;
   } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
     return true;
-  } else {
-    return false;
-  }
+  } 
+  
+  return false;
 }
 
 // Desafio 13
