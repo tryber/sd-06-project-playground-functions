@@ -38,16 +38,33 @@ function concatName(lista) {
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));teste questão 4
 // Desafio 5
-function footballPoints(wins,ties) {
- let totalPontos=0;
- totalPontos=(wins*3)+(ties*1);
- return totalPontos;
+function footballPoints(wins, ties) {
+  let totalPontos = 0;
+  totalPontos = (wins * 3) + (ties * 1);
+  return totalPontos;
 }
 // console.log(footballPoints(1,10));
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(lista) {
+
+  let valorMaiorAtual = lista[0];
+  let qtdNumIguaisAtual = 1;
+  let qtdNumIguaisTotal = 0;
+  let numMaisRepetido = 0;
+
+
+  for (let indice = 0; indice < lista.length; indice += 1) {
+    if (valorMaiorAtual < lista[indice + 1]) {
+        valorMaiorAtual=lista[indice + 1];
+        qtdNumIguaisAtual = 1;}
+      else if (valorMaiorAtual === lista[indice + 1]) {
+        qtdNumIguaisAtual += 1;
+      
+    }
+  } return ('O maior numero se repete '  + qtdNumIguaisAtual + " vezes")
 }
+
+// console.log(highestCount([ 1, 2, 3, 9, 5, 9])); teste 06
 
 // Desafio 7
 function catAndMouse() {
