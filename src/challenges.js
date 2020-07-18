@@ -160,25 +160,24 @@ return abencoado
        console.log(decode("Am4 1z5l"))
 
 // Desafio 10
-function techList(array, name) {
-  let objeto = {};
-if (array.length > 0) {
-array.sort()
+function techList(array, nome) {
   let objeto = []
-
+if (array.length > 0) {
+ array.sort();
+ 
   for (let i = 0; i < array.length; i++) {
     objeto[i] = {
       tech: array[i],
-      name: name
-    };
+      name: nome
+    }
   
   }
 } else {
-objeto = "Vazio!"
+  objeto = "Vazio!"
 }
 return objeto
 }
-console.log(techList([], "Bruna"))
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Bruna"))
 
 
 // Desafio 11
