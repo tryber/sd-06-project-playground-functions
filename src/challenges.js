@@ -196,7 +196,7 @@ function generatePhoneNumber(numeros) {
    process.exit();
   }
  for (let i in numeros) {
-   if (numeros[i] < 0 || numeros[i] > 9) {
+   if (numeros[i] < 0 || numeros[i] > 9){
      return 'não é possível gerar um número de telefone  com esses valores';
      process.exit();
     }
@@ -212,29 +212,34 @@ function generatePhoneNumber(numeros) {
     contador = 0;
   }
   for (let i = 0; i < 15; i += 1) {
-    switch (i) {
-      case 0:
-        phoneNUmber[0] = '(';
-        break;
-      case 1:
-        phoneNUmber[1] = numeros[0];
-        break;
-      case 2:
-        phoneNUmber[2] = numeros[1];
-        break;
-      case 3:
-        phoneNUmber[3] = ')';
-        break;
-      case 4:
-        phoneNUmber[4] = ' ';
-        break;
-      case 10:
-        phoneNUmber[10] = '-';
-        break;
-      default:
-        phoneNUmber[i] = numeros[i - 4];
-        break;
+    if (i < 11) {
+      switch (i) {
+        case 0:
+          phoneNUmber[0] = '(';
+          break;
+        case 1:
+          phoneNUmber[1] = numeros[0];
+          break;
+        case 2:
+          phoneNUmber[2] = numeros[1];
+          break;
+        case 3:
+          phoneNUmber[3] = ')';
+          break;
+        case 4:
+          phoneNUmber[4] = ' ';
+          break;
+        case 10:
+          phoneNUmber[10] = '-';
+          break;
+        default:
+          phoneNUmber[i] = numeros[i - 3];
+          break;
+      }
     }
+    else {
+      phoneNUmber[i] = numeros[i - 4];
+    }  
   }
   phoneNUmber = phoneNUmber.join('');
   return phoneNUmber;
