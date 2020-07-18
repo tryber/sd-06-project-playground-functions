@@ -74,27 +74,39 @@ function fizzBuzz(arr) {
     } else {
       oneOrAnother(fiveDivisionResult, threeDivisionResult);
     }
-  }  
+  }
   arr.forEach(checkNumber);
   return result;
 }
 
 // Desafio 9
 function encode(s) {
-  s = (s.replace(/a/gi, '1'));
-  s = (s.replace(/e/gi, '2'));
-  s = (s.replace(/i/gi, '3'));
-  s = (s.replace(/o/gi, '4'));
-  s = (s.replace(/u/gi, '5'));
-  return s;
+  let encoded = [];
+  for (let index = 0; index < toEncode.length; index += 1) {
+    switch(toEncode[index]) {
+      case 'a':
+        encoded = encoded + '1';
+        break;
+      case 'e':
+        encoded = encoded + '2';
+        break;
+      case 'i':
+        encoded = encoded + '3';
+        break;
+      case 'o':
+        encoded = encoded + '4';
+        break;
+      case 'u':
+        encoded = encoded + '5';
+        break;
+      case toEncode[index]:
+        encoded = encoded + toEncode[index];
+    }
+  }
+  return encoded;
 }
 function decode(s) {
-  s = (s.replace(/1/gi, 'a'));
-  s = (s.replace(/2/gi, 'e'));
-  s = (s.replace(/3/gi, 'i'));
-  s = (s.replace(/4/gi, 'o'));
-  s = (s.replace(/5/gi, 'u'));
-  return s;
+  
 }
 
 // Desafio 10
