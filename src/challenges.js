@@ -59,8 +59,21 @@ return f06repeticoes
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse = 0, cat1 = 0, cat2 = 0) 
+{
+    f07dist01 = Math.abs(mouse - cat1);
+    f07dist02 = Math.abs(mouse - cat2);
+    f07rapido = "cat1";
+    if (f07dist02 < f07dist01)
+        {
+          f07rapido = "cat2";
+        }
+    if (f07dist02 == f07dist01)
+        {
+          f07rapido = "os gatos trombam e o rato foge";
+        }
+
+return f07rapido;
 }
 
 // Desafio 8
