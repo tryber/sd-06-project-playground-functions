@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanceCat2 < distanceCat1) {
     return "cat2";
   } else if (distanceCat1 === distanceCat2) {
-    console.log ("Os gatos trombam e o rato foge");
+    console.log ("os gatos trombam e o rato foge");
   }
 }
 
@@ -124,8 +124,20 @@ function decode(word) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(list, name) {
+  let orderedArray = list.sort();
+  let outPut = {};
+  console.log (orderedArray);
+  for (let i = 0; i < orderedArray.length; i++) {
+    if (orderedArray !== {}) {
+      outPut.tech = orderedArray[i];
+      outPut.name = name;
+      return outPut;
+    } else {
+      return "Vazio";
+    }
+    
+  }
 }
 
 // Desafio 11
