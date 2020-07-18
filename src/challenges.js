@@ -149,19 +149,22 @@ console.log(decode('h3 th2r2!'))
 
 // Desafio 10
 function techList(tec, nome) {
-  for (let index = 0; index < tec.length; index += 1) {
-      let objeto = {
-      tech: tec[index],
-      name: nome,
-    }
-    console.log(objeto)
-  }
+  if (tec.length > 0){
+    let arrei = [];
+    for (let index = 0; index < tec.length; index += 1) {
+        let objeto = {
+        tech: tec[index],
+        name: nome,
+      }
+      arrei.push(objeto)
+    } return arrei
+  } return 'Vazio!'
 }
 
 let tecnologia = ["React", "Jest", "HTML","CSS", "JavaScript"];
 let lucas = 'Lucas'
 
-techList(tecnologia, lucas)
+console.log(techList(tecnologia, lucas))
 
 // Desafio 11
 function generatePhoneNumber() {
