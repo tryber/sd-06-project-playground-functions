@@ -221,9 +221,17 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
+console.log(hydrate("10 cachaça, 5 cervejas e 1 copo de vinho"));
 // Desafio 13
-function hydrate() {
+function hydrate(str) {
   // seu código aqui
+  let nCopos = 0;
+  for (let i = 0; i < str.length; i = i +1){
+    if ( parseInt(str[i]) > 0) {
+      nCopos += parseInt(str[i]);
+    }
+  }
+  return nCopos + ' copos de água';
 }
 
 
