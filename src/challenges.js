@@ -1,9 +1,11 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   // seu código aqui
+  let res = false;
   if ((bool1 && bool2) === true) {
-    return true;
+    res = true;
   }
+  return res;
 }
 
 // Desafio 2
@@ -19,12 +21,14 @@ function splitSentence(str) {
   let strArray = [];
   let counter = 0;
   for (let i = 0; i < str.length; i = i + 1) {
-    if (str[i] !== ' ' ) {
-      txt = txt + str[i];
-    } else if (str[i] === ' ' && txt !== ''){ 
+    if (str[i] != ' ' ) {
+      txt += str[i];
       strArray[counter] = txt;
-      txt = '';
-      counter = counter + 1;
+    } else {
+        if (txt != '') {
+        counter = counter + 1;
+        txt = '';
+        }
     }
   }
   return strArray;
@@ -148,15 +152,19 @@ function decode(strEntry) {
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
-  let str = [];
-  tech = tech.sort();
-  for (let i = 0; i < tech.length; i = i + 1) {
-    str[i] = {
-      tech: tech[i],
-      nome: name,
-    };
+  if (tech == []) {
+    return 'Vazio!';
+  } else {
+    let str = [];
+    tech = tech.sort();
+    for (let i = 0; i < tech.length; i = i + 1) {
+      str[i] = {
+        tech: tech[i],
+        nome: name,
+      };
+    }
+    return str;
   }
-  return str;
 }
 
 // Desafio 11
