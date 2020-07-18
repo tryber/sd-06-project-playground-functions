@@ -76,7 +76,7 @@ function fizzBuzz(arrayNumbers) {
       } else {
         fizzBuzzArr[index] = "fizz";
       }
-    } else if (arrayNumbers % 5 === 0) {
+    } else if (arrayNumbers[index] % 5 === 0) {
       fizzBuzzArr[index] = "buzz";
     } else {
       fizzBuzzArr[index] = "bug!";
@@ -84,6 +84,8 @@ function fizzBuzz(arrayNumbers) {
   }
   return fizzBuzzArr;
 }
+
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9 ## DONE!!! ##
 function encode(inputStringToEncode) {
