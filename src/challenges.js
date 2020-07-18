@@ -104,19 +104,20 @@ function replaceString(string, swap) {
 }
 
 // Desafio 10
-function techList(tech, name) {
+function techList(array, string) {
 
   let technology = [];
 
-  if (tech.length !== 0) {
-    tech.sort().forEach(item => {
-      technology.push({[item]: name})
+  if (array.length !== 0) {
+    array.sort().forEach(item => {
+      technology.push({tech: item, name: string})
     });
-  }
+
+  } 
   else {
     return "Vazio!";
   }
-
+ 
   return technology;
 
 }
