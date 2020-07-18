@@ -8,7 +8,7 @@ function compareTrue(value1, value2) {
   return false;
 }
 
-// console.log("<---- Desafio 1 ---->")
+// console.log('<---- Desafio 1 ---->')
 console.log(compareTrue(true, true));
 
 
@@ -19,22 +19,21 @@ function calcArea(base, height) {
   return area;
 }
 
-// console.log("<---- Desafio 2 ---->");
+// console.log('<---- Desafio 2 ---->');
 console.log(calcArea(10, 5));
 
 
 // Desafio 3
 // Função receberá uma string e retornará uma array de strings separadas por cada espaço na string original
 function splitSentence(phraseDesafio3, separator, resultDesafio3) {
-  resultDesafio3 = phraseDesafio3.split(" ",3);
-  // phraseDesafio3 = ("Dia lindo");
+  resultDesafio3 = phraseDesafio3.split(' ',);
+  // phraseDesafio3 = ('Dia lindo');
   // separator = (' ');
-  return resultDesafio3[1]+" "+resultDesafio3[0];
+  return [resultDesafio3 [1]]+', '+[resultDesafio3 [0]];
 }
 
-// console.log("<---- Desafio 3 ---->");
-console.log(splitSentence("Dia lindo"));
-
+// console.log('<---- Desafio 3 ---->');
+console.log(splitSentence('Dia lindo'));
 
 
 // Desafio 4
