@@ -14,14 +14,21 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(stringOriginal) {
-  //   let stringArrays = [];
-  //   let contagemArray = 0;
-  //   let palavra = "";
-  //   for (let i = 0; i <= stringOriginal.length; i++){
-  //     if (stringOriginal.charAt(i) !== " ") {
-  //       palavra += charAt(i);
-  //     }
-  //   }
+  let stringArrays = [];
+  let palavra = "";
+  for (let i = 0; i < stringOriginal.length; i++) {
+    if (stringOriginal.charAt(i) === " ") {
+      stringArrays.push(palavra);
+      palavra = "";
+    } else if (i === (stringOriginal.length - 1)) {
+      palavra += stringOriginal.charAt(i);
+      stringArrays.push(palavra);
+      break;
+    } else {
+      palavra += stringOriginal.charAt(i);
+    }
+  }
+  return stringArrays;
 }
 // Desafio 4
 function concatName(names) {
@@ -32,8 +39,8 @@ function concatName(names) {
 }
 
 // Desafio 5
-function footballPoints(wins,ties){
-  let points = wins*3 + ties;
+function footballPoints(wins, ties) {
+  let points = wins * 3 + ties;
   return points;
 }
 
@@ -47,7 +54,7 @@ function highestCount(numbers) {
     }
   }
   for (i = 0; i < numbers.length; i++) {
-    if (numbers[i] === highest){
+    if (numbers[i] === highest) {
       counter += 1;
     }
   }
