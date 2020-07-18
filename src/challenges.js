@@ -10,21 +10,21 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let splitSentence = [];
+  let fractionedSentence = [];
   let splitWord = '';
 
   for (let i = 0; i < string.length; i += 1) {
     if (string[i] === ' ') {
-      splitSentence.push(splitWord);
+      fractionedSentence.push(splitWord);
       splitWord = '';
     } else {
       splitWord += string[i];
     }
   }
 
-  splitSentence.push(splitWord);
+  fractionedSentence.push(splitWord);
 
-  return splitSentence;
+  return fractionedSentence;
 }
 
 // Desafio 4
@@ -134,15 +134,15 @@ function decode(encodedString) {
 
 // Desafio 10
 function techList(techList, name) {
-  if (techList.length === 0) {
+  if (technologyList.length === 0) {
     return 'Vazio!';
   }
 
   const objectList = [];
-  techList.sort();
+  technologyList.sort();
 
-  for (let i = 0; i < techList.length; i += 1) {
-    const tech = techList[i];
+  for (let i = 0; i < technologyList.length; i += 1) {
+    const tech = technologyList[i];
     objectList.push({ tech, name });
   }
 
