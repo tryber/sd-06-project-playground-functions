@@ -20,15 +20,15 @@ function splitSentence(str) {
   let txt = '';
   let strArray = [];
   let counter = 0;
-  for (let i = 0; i < str.length; i = i + 1) {
-    if (str[i] != ' ' ) {
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] != ' ') {
       txt += str[i];
       strArray[counter] = txt;
     } else {
-        if (txt != '') {
-        counter = counter + 1;
-        txt = '';
-        }
+      if (txt != '') {
+          counter += 1;
+          txt = '';
+      }
     }
   }
   return strArray;
@@ -50,16 +50,16 @@ function footballPoints(wins, ties) {
 function highestCount(numArray) {
   // seu código aqui
   let greater = 0;
-  for (let i = 0; i < numArray.length; i = i + 1) {
+  for (let i = 0; i < numArray.length; i += 1) {
     if (numArray[i] > greater) {
       greater = numArray[i];
     }
   }
 
   let counter = 0;
-  for (let i = 0; i < numArray.length; i = i + 1) {
+  for (let i = 0; i < numArray.length; i += 1) {
     if (numArray[i] === greater) {
-      counter = counter + 1;
+      counter += 1;
     }
   }
   return counter;
@@ -68,9 +68,9 @@ function highestCount(numArray) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (((cat1 - mouse) ** 2) ** 0.5 < ((cat2 - mouse) ** 2) ** 0.5 ) {
+  if (((cat1 - mouse) ** 2) ** 0.5 < ((cat2 - mouse) ** 2) ** 0.5) {
     return 'cat1';
-  } else if (((cat1 - mouse) ** 2) ** 0.5 > ((cat2 - mouse) ** 2) ** 0.5 ) {
+  } else if (((cat1 - mouse) ** 2) ** 0.5 > ((cat2 - mouse) ** 2) ** 0.5) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
@@ -81,7 +81,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numArray) {
   // seu código aqui
   let strArray = [];
-  for (let i = 0; i < numArray.length; i = i + 1) {
+  for (let i = 0; i < numArray.length; i += 1) {
     if (numArray[i] % 5 === 0 && numArray[i] % 3 === 0) {
       strArray[i] = 'fizzBuzz';
     } else if (numArray[i] % 3 === 0) {
@@ -99,7 +99,7 @@ function fizzBuzz(numArray) {
 function encode(strEntry) {
   // seu código aqui
   let str = '';
-  for (let i = 0; i < strEntry.length; i = i + 1) {
+  for (let i = 0; i < strEntry.length; i += 1) {
     switch (strEntry[i]) {
       case 'a':
         str += '1';
@@ -125,7 +125,7 @@ function encode(strEntry) {
 function decode(strEntry) {
   // seu código aqui
   let str = '';
-  for (let i = 0; i < strEntry.length; i = i + 1) {
+  for (let i = 0; i < strEntry.length; i += 1) {
     switch (strEntry[i]) {
       case '1':
         str += 'a';
@@ -157,7 +157,7 @@ function techList(tech, name) {
   } else {
     let str = [];
     tech = tech.sort();
-    for (let i = 0; i < tech.length; i = i + 1) {
+    for (let i = 0; i < tech.length; i += 1) {
       str[i] = {
         tech: tech[i],
         name: name,
@@ -184,7 +184,7 @@ function generatePhoneNumber(numbersArray) {
       let ii = 0;
       while(ii < numbersArray.length) {
         if (numbersArray[ii] - numbersArray[i] == 0) {
-          hits = hits + 1;
+          hits += 1;
           if (hits > 2) {
             return 'não é possível gerar um número de telefone com esses valores';
             break;
@@ -193,7 +193,7 @@ function generatePhoneNumber(numbersArray) {
       ii++;
       }
     if (i == 0){
-      phone += '(' + numbersArray[i];  
+      phone += '(' + numbersArray[i];
     } else if (i == 1) {
       phone += numbersArray[i] + ') ';
     } else if (i == 6) {
@@ -213,7 +213,6 @@ function triangleCheck(lineA, lineB, lineC) {
   let condA = ((lineA < (lineB + lineC)) && (lineA > ((lineB - lineC) ** 2) ** 0.5)) ? true : false;
   let condB = ((lineB < (lineA + lineC)) && (lineB > ((lineA - lineC) ** 2) ** 0.5)) ? true : false;
   let condC = ((lineC < (lineB + lineA)) && (lineC > ((lineB - lineA) ** 2) ** 0.5)) ? true : false;
-  
   if (condA == true && condB == true && condC == true){
     return true;
   } else {
@@ -225,7 +224,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(str) {
   // seu código aqui
   let nCopos = 0;
-  for (let i = 0; i < str.length; i = i +1){
+  for (let i = 0; i < str.length; i += 1){
     if ( parseInt(str[i]) > 0) {
       nCopos += parseInt(str[i]);
     }
