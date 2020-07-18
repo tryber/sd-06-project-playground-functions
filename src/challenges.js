@@ -212,9 +212,14 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
-}
+  let array = string.match(/\d+/g);
+  let soma = 0;
 
+  for (let i = 0; i < array.length; i += 1) {
+    soma += parseInt(array[i]);
+  }
+  return soma + ' copos de água'
+}
 
 module.exports = {
   calcArea,
