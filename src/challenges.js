@@ -46,25 +46,20 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(1,10));
 // Desafio 6
 function highestCount(lista) {
-
   let valorMaiorAtual = lista[0];
   let qtdNumIguaisAtual = 1;
-  let qtdNumIguaisTotal = 0;
-  let numMaisRepetido = 0;
-
-
   for (let indice = 0; indice < lista.length; indice += 1) {
     if (valorMaiorAtual < lista[indice + 1]) {
-        valorMaiorAtual=lista[indice + 1];
-        qtdNumIguaisAtual = 1;}
-      else if (valorMaiorAtual === lista[indice + 1]) {
-        qtdNumIguaisAtual += 1;
-      
+      valorMaiorAtual = lista[indice + 1];
+      qtdNumIguaisAtual = 1;
     }
-  } return ('O maior numero se repete '  + qtdNumIguaisAtual + " vezes")
+    else if (valorMaiorAtual === lista[indice + 1]) {
+      qtdNumIguaisAtual += 1;
+    }
+  } return (qtdNumIguaisAtual)
 }
-
-// console.log(highestCount([ 1, 2, 3, 9, 5, 9])); teste 06
+// let list = [0, 4, 4, 4, 9, 2, 1];
+// console.log(highestCount(list)); teste 06
 
 // Desafio 7
 function catAndMouse() {
