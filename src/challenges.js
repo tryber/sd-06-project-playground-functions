@@ -1,10 +1,11 @@
 // Desafio 1
 
-// JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
-// Considerando isso, crie uma função chamada compareTrue que, ao receber dois booleanos:
-// Retorne true se ambos os valores são verdadeiros;
-// Retorne false se um ou ambos os parâmetros forem falsos.
-// Faça a função utilizando o operador &&.
+/* JavaScript possui um operador lógico &&, o qual recebe dois valores e retorna true se ambos os valores são verdadeiros, 
+e retorna false se algum dos valores não o for.
+Considerando isso, crie uma função chamada compareTrue que, ao receber dois booleanos:
+Retorne true se ambos os valores são verdadeiros;
+Retorne false se um ou ambos os parâmetros forem falsos.
+Faça a função utilizando o operador &&.*/
 
 function compareTrue(value1, value2) {
   return value1 && value2;
@@ -14,9 +15,10 @@ console.log(compareTrue(false, false));
 
 // Desafio 2
 
-// Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo e retorne o cálculo da sua área.
+/* Escreva uma função com o nome calcArea que receba um valor de base (chamado base) e outro de altura (chamado height) de um triângulo 
+e retorne o cálculo da sua área.
 
-// Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
+// Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.*/
 
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -26,9 +28,9 @@ console.log(calcArea(5, 4));
 
 // Desafio 3
 
-// Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
+/* Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
 
-// Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
+// Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].*/
 
 function splitSentence(word) {
   return word.split(' ');
@@ -38,12 +40,13 @@ console.log(splitSentence('Hello World'));
 
 // Desafio 4
 
-/*Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
+/* Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato
+'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
 
 Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.*/
 
 function concatName(newArray) {
-  return newArray[0] + ', '+ newArray[newArray.length -1];
+  return newArray[newArray.length - 1] + ', '+ newArray[0];
 }
 
 let testArray = ['Pedrina', 'Maria', 'Julieta', 'Catarina', 'Marieta'];
@@ -60,9 +63,30 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+/* Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás de um rato chamado mouse. Imagine que cada um dos três animais está em uma posição representada por um número.
+
+Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto).
+
+Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar cat2.
+
+Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge".*/
+
+function catAndMouse(mouse, cat1, cat2) {
+let distanceMouseCatOne = Math.abs(mouse - cat1);
+let distanceMouseCatTwo = Math.abs(mouse - cat2);
+let result = '';
+if (distanceMouseCatOne > distanceMouseCatTwo) {
+  result = 'cat1';
+} else if (distanceMouseCatOne < distanceMouseCatTwo) {
+  result = 'cat2';
+} else {
+  result = 'os gatos trombam e o rato foge'
 }
+return result;
+}
+
+console.log(catAndMouse(5, 2, 7));
 
 // Desafio 8
 function fizzBuzz() {
@@ -114,5 +138,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-let arr
