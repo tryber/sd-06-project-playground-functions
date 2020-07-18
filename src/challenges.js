@@ -45,8 +45,18 @@ for (let index = 0; index < n.length; index++) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dcat1 = cat1 - mouse;
+  let dcat1;
+  if (cat1 < mouse) {
+    dcat1 = mouse - cat1;    
+  } else{
+    dcat1 = cat - mouse;
+  }
   let dcat2 = cat2 - mouse;
+  if (cat2 < mouse) {
+    dcat2 = mouse - cat2;    
+  } else{
+    dcat2 = cat - mouse;
+  }
   if (dcat1 < dcat2){
     return "cat1";
   } else if (dcat1 > dcat2){
