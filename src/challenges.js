@@ -49,13 +49,13 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1 < mouse) {
     dcat1 = mouse - cat1;    
   } else{
-    dcat1 = cat - mouse;
+    dcat1 = cat1 - mouse;
   }
   let dcat2 = cat2 - mouse;
   if (cat2 < mouse) {
     dcat2 = mouse - cat2;    
   } else{
-    dcat2 = cat - mouse;
+    dcat2 = cat2 - mouse;
   }
   if (dcat1 < dcat2){
     return "cat1";
