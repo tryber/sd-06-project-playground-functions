@@ -64,23 +64,24 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(n) {
   // seu código aqui
   for(let i = 1 ; i <= n ; i++) {
+    let numero = ""
   
   if(i % 3==0){
-    n = "fizz"
+    numero = "fizz"
   } else if (i % 5==0) {
-    n = "buzz"
+    numero = "buzz"
   } else if (i % 3==0 && i % 3==0) {
-    n = "fizzbuzz"
+    numero = "fizzbuzz"
   } else {
-    n = i
+    numero = "bug!"
   }
-  return n
+  return nnumero
   }
 }
 // Desafio 9
 function encode() {
   // seu código aqui
-}
+   
 function decode() {
   // seu código aqui
 }
