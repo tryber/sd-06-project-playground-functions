@@ -69,7 +69,7 @@ if(i % 3 === 0){
   numero = "fizz"
 } else if (i % 5 === 0) {
   numero = "buzz"
-} else if (i % 3 === 0 || i % 3 === 0) {
+} else if (i % 3 === 0 || i % 5 === 0) {
   numero = "fizzbuzz"
 } else {
   numero = "bug!"
