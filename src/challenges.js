@@ -186,6 +186,7 @@ function fizzBuzz(myArray) {
 
 function encode(lettersString) {
   let myStringArray = lettersString.split('');
+  let index;
 
   for (index in myStringArray) {
     switch (myStringArray[index]) {
@@ -218,6 +219,7 @@ function encode(lettersString) {
 
 function decode(numbersString) {
   let myStringArray = numbersString.split('');
+  let index;
 
   for (index in myStringArray) {
     switch (myStringArray[index]) {
