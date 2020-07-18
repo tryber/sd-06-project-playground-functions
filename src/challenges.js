@@ -152,7 +152,7 @@ function techList(nomesTech, nome) {
   // seu código aqui
   let listaTech;
   let techCrescente = nomesTech.sort();
-  let result = [];
+  let result = " ";
   for (let i = 0; i < techCrescente.length; i++) {
     result += {
       tech: "techCrescente[i]", name: "nome"
