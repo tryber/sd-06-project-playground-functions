@@ -111,14 +111,17 @@ function decode(s) {
 }
 
 // Desafio 10
-function techList(tec, name) {
-  result = [];
+function techList(tec, namePassed) {
+  let result = [];
   let index = 0;
-  function organize(tec) {
-    result[index] = {tech: tec, name: name};
+  function organize() {
+    result[index] = { 
+      tech: tec, 
+      name: namePassed 
+    };
     index += 1;
   }
-  tech.forEach(organize(tec))
+  tec.forEach(organize())
   return result;
 }
 
