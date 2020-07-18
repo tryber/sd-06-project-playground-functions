@@ -29,7 +29,7 @@ function splitSentence(string) {
     // seu código aqui
 
 
-    return string.split('');
+    return string.split("");
 
 
 
@@ -37,78 +37,110 @@ function splitSentence(string) {
 console.log(splitSentence("go trybe"));
 
 // Desafio 4
-function concatName(arrays) {
+function concatName(array) {
 
-    let string = []
-        //for ()
+    let stringConcatenada = "";
+    stringConcatenada = array[array.length - 1] + " " + array[0];
 
 
-    // seu código aqui
+
+    return stringConcatenada;
 }
+console.log(concatName(["elisa", "de freitas", "libanio", "amor", "paixao"]));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
     // seu código aqui
+
+    let result = (wins * 3) + (ties);
+
+
+    return "O seu time fez " + result + " pontos ";
 }
+console.log(footballPoints(3, 4))
 
 // Desafio 6
-function highestCount() {
-    // seu código aqui
-}
 
-// Desafio 7
-function catAndMouse() {
-    // seu código aqui
-}
+let arrayDeNumeros = [32, 45, 28, 10, 15, 45];
+var maior = 1000;
 
-// Desafio 8
-function fizzBuzz() {
-    // seu código aqui
-}
+function highestCount(arrayDeNumeros) {
+    let maiorNumero = retornaMaiorNumeroDoArray;
+    let maiorNumeroContador = retornaVezesNumeroNoarray
 
-// Desafio 9
-function encode() {
-    // seu código aqui
-}
-
-function decode() {
-    // seu código aqui
-}
-
-// Desafio 10
-function techList() {
-    // seu código aqui
-}
-
-// Desafio 11
-function generatePhoneNumber() {
-    // seu código aqui
-}
-
-// Desafio 12
-function triangleCheck() {
-    // seu código aqui
-}
-
-// Desafio 13
-function hydrate() {
-    // seu código aqui
+    return maiorNumeroContador
 }
 
 
-module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    generatePhoneNumber,
-    techList,
-    highestCount,
-    hydrate,
-    splitSentence,
-    triangleCheck,
-}
+function returnHighestNumberCount(maiorNumero, arrayDeNumeros) {
+
+    for (let index = 0; index < arrayDeNumeros.length; index = index + 1) {
+
+
+        if (arrayDeNumeros[index] < maior) {
+
+            maior = arrayDeNumeros[index];
+
+
+
+        }
+
+
+
+
+        // Desafio 7
+        function catAndMouse() {
+            // seu código aqui
+        }
+
+        // Desafio 8
+        function fizzBuzz() {
+            // seu código aqui
+        }
+
+        // Desafio 9
+        function encode() {
+            // seu código aqui
+        }
+
+        function decode() {
+            // seu código aqui
+        }
+
+        // Desafio 10
+        function techList() {
+            // seu código aqui
+        }
+
+        // Desafio 11
+        function generatePhoneNumber() {
+            // seu código aqui
+        }
+
+        // Desafio 12
+        function triangleCheck() {
+            // seu código aqui
+        }
+
+        // Desafio 13
+        function hydrate() {
+            // seu código aqui
+        }
+
+
+        module.exports = {
+            calcArea,
+            catAndMouse,
+            compareTrue,
+            concatName,
+            decode,
+            encode,
+            fizzBuzz,
+            footballPoints,
+            generatePhoneNumber,
+            techList,
+            highestCount,
+            hydrate,
+            splitSentence,
+            triangleCheck,
+        }
