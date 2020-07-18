@@ -27,11 +27,8 @@ function splitSentence(nome) {
 let resultSplit = splitSentence('Go Trybe');
 console.log(resultSplit);
 
-// Desafio 4
-/* Concatenação de strings
-Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
-Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
- */
+// Desafio 4 - Concatenação de strings
+
 function concatName(){
  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + "," + arrayNomes[0];
 }
@@ -53,10 +50,23 @@ Escreva uma função chamada highestCount que, ao receber uma array de números,
 Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9
 (maior número do array) se repete. */
 
-function highestCount(highNumbers) {
-
-return numcontMaior;
+function highestCount(lista) {
+let maior = lista[0];
+for (let indice of lista){
+  if (indice > maior){
+     maior = indice;
+    }
+  }
+let contador = 0;
+  for (let indice of lista){
+    if (indice === maior){
+      contador += 1;
+    }
+  }
+  return contador;
 }
+let numbers = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(numbers));
 
 
 // Desafio 7 -  Caça ao rato
@@ -89,11 +99,8 @@ Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar
 function fizzBuzz(arrayFizBuz) {
   let resultadoFizBuz;
 for (let indFuBu in arrayFizBuz){
-  if(((arrayFizBuz % 3) === 0) && ((arrayFizBuz % 5) === 0)){
-    arrayFizBuz = 'fizzBuzz';
-    console.log(arrayFizBuz);
-  }
-}
+ }
+
 return(resultadoFizBuz);
 }
 arrayFizBuz = [2, 15, 7, 9, 45];
