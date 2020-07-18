@@ -29,9 +29,11 @@ console.log(concatName(["izelda","jose","maria"]));
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  var resultado = (wins * 3) + ( wins * 1);
+  return resultado;
 }
+console.log(footballPoints(3,2));
 
 // Desafio 6
 function highestCount() {
