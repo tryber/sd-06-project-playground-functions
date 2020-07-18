@@ -56,16 +56,22 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let retorno;
-  if ( (cat1 - mouse) < (cat2 - mouse) ){
-      retorno = "cat1";
-    } else if ( (cat1 - mouse) === (cat2 - mouse) ) {
-            retorno = "Gatos trombam e o rato foge";
-          } else {
-                retorno = 'cat2';
+  let pos1 = mouse - cat1;
+  let pos2 = mouse - cat2;
+      if ( pos1 < 0 ) {
+          pos1 = pos1 *(-1);
+        }
+      if ( pos2 < 0 ) {
+          pos2 = pos2 *(-1);
+        }
+  if (pos1 === pos2) {
+      return "os gatos trombam e o rato foge";
+   } else if (pos2 < pos1) {
+        return "cat2";
+      } else ( pos1 < pos2); {
+            return "cat1";
           }
-          return retorno;
-}
+   }
 
 // Desafio 8
 function fizzBuzz() {
