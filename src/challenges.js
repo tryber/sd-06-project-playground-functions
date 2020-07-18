@@ -121,7 +121,7 @@ A segunda função deverá se chamar decode e faz o contrário de encode - ou se
 function encode(vowels) {
     
     let newVowels = '';
-    newVowel = vowels.split('');
+    newVowels = vowels.split('');
     
     for (let i = 0; i < newVowels.length; i+= 1){
      if (newVowels[i]==='a'){
