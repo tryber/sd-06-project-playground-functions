@@ -14,9 +14,11 @@ return resultado;
 console.log(calcArea(10, 20));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  resultado = string.split(" ");
+return resultado;
 }
+console.log("passei na tribe")
 
 // Desafio 4
 function concatName() {
