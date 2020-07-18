@@ -28,7 +28,7 @@ function highestCount(array2) {
   let maior = array2[0];
   let count = 0;
 
-  for (let i=0; i<array2.length; i++) {
+  for (let i = 0; i < array2.length; i++) {
 
     if (array2[i] === maior) {
       count += 1;
@@ -71,9 +71,9 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array3) {
   let phrase = []
 
-  for (let i=0; i<array3.length; i++) {
+  for (let i = 0; i < array3.length; i++) {
 
-    if (array3[i] % 3 === 0 && array3[i] % 5 == 0 ) {
+    if (array3[i] % 3 === 0 && array3[i] % 5 == 0) {
       phrase.push("fizzBuzz")
     }
     else if (array3[i] % 3 === 0) {
@@ -91,28 +91,24 @@ function fizzBuzz(array3) {
 }
 
 // Desafio 9
-function encode(string) {
-  vowels = {"a": 1, "e": 2, "i": 3, "o": 4, "u": 5};
-
-  for (vowel in vowels) {
-    index = string.indexOf(vowel);
-
-    if (index !== -1) {
-      string = string.split(vowel).join(vowels[vowel]);
-    }
-
-  }
-
-  return string;
+function encode(phrase) {
+  return replaceChar(phrase, true);
 }
-function decode(string) {
-  numbers = {1: "a", 2: "e", 3: "i", 4: "o", 5: "u"};
 
-  for (number in numbers) {
-    index = string.indexOf(number);
+function decode(phrase) {
+  return replaceChar(phrase, false);
+}
+
+function replaceString(string, swap) {
+  const vowels = {"a": 1, "e": 2, "i": 3, "o": 4, "u": 5 };
+
+  for (const [key, value] of Object.entries(vowels)) {
+
+    swap ? index = char.indexOf(key) : index = char.indexOf(value);
 
     if (index !== -1) {
-      string = string.split(number).join(numbers[number]);
+      swap ? string = string.split(key).join(value) :
+      string = string.split(value).join(key);
     }
 
   }
