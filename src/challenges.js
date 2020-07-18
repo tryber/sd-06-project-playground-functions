@@ -36,7 +36,7 @@ function footballPoints(wins, ties) {
   return ((wins * 3) + ties);
 }
 
-// Desafio 6 - Em andamento
+// Desafio 6 - OK
 function highestCount(numbers) {
   // seu código aqui
   let maiorNumero = 0;
@@ -54,8 +54,6 @@ function highestCount(numbers) {
   }
   return contador;
 }
-
-
 
 // Desafio 7 - OK
 function catAndMouse(mouse, cat1, cat2) {
@@ -90,13 +88,48 @@ function fizzBuzz(numbers) {
   return retorno;
 }
 
-
 // Desafio 9
-function encode() {
+function encode(word) {
   // seu código aqui
+  let newWord = [];
+  for(i = 0; i < word.length; i += 1){
+    if(word[i] === "a"){
+        newWord.push("1");
+    } else if(word[i] === "e") {
+        newWord.push("2");   
+    } else if(word[i] === "i") {
+        newWord.push("3"); 
+    } else if(word[i] === "o") {
+        newWord.push("4");      
+    } else if(word[i] === "u") {
+        newWord.push("5");      
+    } else {
+        newWord.push(word[i]);
+    }
+  
+  }
+  return newWord.join("");
 }
-function decode() {
+
+function decode(word) {
   // seu código aqui
+  let newWord = [];
+  for(i = 0; i < word.length; i += 1){
+    if(word[i] === "1"){
+        newWord.push("a");
+    } else if(word[i] === "2") {
+        newWord.push("e");   
+    } else if(word[i] === "3") {
+        newWord.push("i"); 
+    } else if(word[i] === "4") {
+        newWord.push("o");      
+    } else if(word[i] === "5") {
+        newWord.push("u");      
+    } else {
+        newWord.push(word[i]);
+    }
+  }
+  return newWord.join("");
 }
 
 // Desafio 10
