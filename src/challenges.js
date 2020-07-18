@@ -151,6 +151,8 @@ function decode(string) {
 function techList(array, name) {
   let answer = [];
 
+  array = array.sort();
+
   if (array.length === 0) {
     return 'Vazio!';
   }
@@ -191,11 +193,9 @@ function generatePhoneNumber(array) {
     return 'Array com tamanho incorreto.';
   } else if (condicional(array) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else {
+  }
     phoneNumber = array.splice(0, 0, '(');
     phoneNumber = phoneNumber.splice(3, 0, ')');
-
-  }
 }
 
 // Desafio 12
