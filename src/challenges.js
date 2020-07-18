@@ -172,10 +172,8 @@ function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lu
 
   let sortedTechs = [...i].sort((first, second) => first.tech > second.tech);
 
-console.log(sortedTechs);
+return sortedTechs;
 }
-techList();
-
 // Desafio 11
 function generatePhoneNumber() {
 }
