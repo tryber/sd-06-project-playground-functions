@@ -28,8 +28,11 @@ console.log(calcArea(10, 5));
 // cada espaço na string original
 function splitSentence(stringDesafio3) {
   let arrayDesafio3 = stringDesafio3.split(' ');
-  return arrayDesafio3();
+  return arrayDesafio3;
 }
+
+// console.log('<---- Desafio 3 ---->');
+console.log(splitSentence('Me dê papai'));
 
 
 // Desafio 4
