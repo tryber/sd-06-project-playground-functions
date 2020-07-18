@@ -167,7 +167,6 @@ function decode(a = 'h3 th2r2!', decoded = []) {
 function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lucas') {
   i = [];
   valid = t.length
-  console.log(s)
   if (valid > 0) {
     for (x in t) {
       let obj = new Object();
