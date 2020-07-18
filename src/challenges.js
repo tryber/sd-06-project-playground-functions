@@ -92,11 +92,11 @@ function fizzBuzz(meuArray) {
 
 // Desafio 9
 function encode(minhaString) {
-  let codificar = { a: '1', e: '2', i: '3', o: '4', u: '5' }
+  let codificar = { 'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5' }
   return minhaString.replace(/[aeiou]/g, m => codificar[m])
 }
 function decode(minhaString) {
-  let decodificar = { '1': a, '2': e, '3': i, '4': o, '5': u }
+  let decodificar = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' }
   return minhaString.replace(/[12345]/g, m => decodificar[m]);
 }
 
