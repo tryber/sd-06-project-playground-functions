@@ -72,7 +72,7 @@ for (let i in teste) {
   return cont;
 }
 
-console.log(highestCount([0, 0, 0]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 
 // Desafio 7
@@ -95,9 +95,26 @@ console.log(catAndMouse(1, 4, 22))
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let resposta = [];
+  for (let i in array) {
+      if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+         resposta.push("fizzBuzz");
+      }
+      else if (array[i] % 3 === 0) {
+          resposta.push("fizz");
+      }
+      else if (array[i] % 5 === 0) {
+          resposta.push("buzz");
+      }
+      else {
+          resposta.push("bug!");
+      }
+  }
+  return resposta;
 }
+console.log(fizzBuzz([15, 5, 3, 8]))
+
 
 // Desafio 9
 function encode() {
