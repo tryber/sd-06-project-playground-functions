@@ -57,22 +57,47 @@ function catAndMouse(mouse, cat1, cat2) {
     let catDist2 = cat2 + mouse;
 
     if (catDist1 > catDist2) {
-      return 'cat2'
-    } 
-    return 'cat1'
+        return 'cat2'
+    } else if (catDist1 < catDist2) {
+        return 'cat1'
+    }
+    return 'os gatos trombam e o rato foge';
+
   } else if (mouse > cat1 && mouse > cat2 && cat1 !== cat2){
     let catDist1 = mouse - cat1;
     let catDist2 = mouse - cat2;
 
     if (catDist1 > catDist2) {
-      return 'cat2'
-    } 
-    return 'cat1'
-  }
-  if (cat1 === cat2) {
+        return 'cat2'
+    }else if (catDist1 < catDist2) {
+        return 'cat1'
+    }
     return 'os gatos trombam e o rato foge';
   }
-  
+
+  if (mouse < cat1 && mouse < cat2 && cat1 !== cat2) {
+    let catDist1 = mouse - cat1;
+    let catDist2 = cat2 - mouse;
+
+    if (catDist1 > catDist2) {
+      return 'cat2'
+    }else if (catDist1 < catDist2) {
+      return 'cat1'
+    }
+      return 'os gatos trombam e o rato foge';
+
+  } else if (mouse > cat1 && mouse > cat2 && cat1 !== cat2){
+    let catDist1 = cat1 - mouse;
+    let catDist2 = mouse - cat2;
+
+    if (catDist1 > catDist2) {
+      return 'cat2'
+    }else if (catDist1 < catDist2) {
+      return 'cat1'
+    }
+    return 'os gatos trombam e o rato foge';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
