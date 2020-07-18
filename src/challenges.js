@@ -112,12 +112,15 @@ function decode(s) {
 
 // Desafio 10
 function techList(tec, namePassed) {
+  if (tec.length === 0) {
+    return Error('Vazio!');
+  }
   let result = [];
   let index = 0;
   function organize() {
-    result[index] = { 
-      tech: tec, 
-      name: namePassed 
+    result[index] = {
+      tech: tec,
+      name: namePassed,
     };
     index += 1;
   }
