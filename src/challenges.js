@@ -164,7 +164,7 @@ function decode(a = 'h3 th2r2!') {
 function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lucas' ) {
   i = [];
   valid = t.length
-  if ( valid < 0){
+  if ( valid > 0){
     for ( x in t ){
       var obj = new Object();
       obj.tech = t[x];
@@ -177,7 +177,7 @@ function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lu
     return sortedTechs;
   }
   else 
-    return 'Vazio!'
+    return 'Vazio!';
 }
 
 // Desafio 11
