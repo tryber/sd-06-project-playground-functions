@@ -72,6 +72,7 @@ for (let i in teste) {
   return cont;
 }
 
+console.log(highestCount([0, 0, 0]));
 
 
 // Desafio 7
