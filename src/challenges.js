@@ -108,6 +108,8 @@ function encode(decodedString) {
       case 'u':
         encoded += '5';
         break;
+      default:
+        break;
     }
   }
 
