@@ -163,11 +163,11 @@ function decode(param) {
 // Desafio 10
 function techList(lista, name) {
   let objetosLista = [];
-  
-  if (lista !== []) {
+
+  if (lista.length !== objetosLista.length) {
     lista = lista.sort();
 
-    for (let x = 0; x < lista.length; x += 1){
+    for (let x = 0; x < lista.length; x += 1) {
       let novoObjeto = {tech: lista[x],
         name: name,
       };
