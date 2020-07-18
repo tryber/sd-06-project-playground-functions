@@ -58,43 +58,43 @@ console.log(highestCount(array = [9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   
-  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    let = result = "Cat1";
-  } 
-  else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
-    result = "cat2";
-  } 
-  else if (Math.abs(mouse - cat2) == Math.abs(mouse - cat1)) {
-    result = "os gatos trombam e o rato foge";
-  }
-  return result;
+//  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+//    let = result = "Cat1";
+//  } 
+//  else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+//    result = "cat2";
+//  } 
+//  else if (Math.abs(mouse - cat2) == Math.abs(mouse - cat1)) {
+//    result = "os gatos trombam e o rato foge";
+//  }
+//  return result;
   
 }
-console.log(catAndMouse(10, -2, -7))
+//console.log(catAndMouse(10, -2, -7))
 
 // Desafio 8
 function fizzBuzz(numbers) {
   
-  let array = [];
+//  let array = [];
 
-    for (let i = 0; i < numbers.length; i += 1) {
-
-        if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
-            array.push("fizzbuzz");
-        } 
-        else if (numbers[i] % 3 === 0) {
-            array.push("fizz");
-        }
-        else if (numbers[i] % 5 === 0) {
-            array.push("buzz");
-        }
-        else {
-            array.push("bug!");
-        }
-    } 
-    return array;
+//    for (let i = 0; i < numbers.length; i += 1) {
+//
+//        if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+//            array.push("fizzbuzz");
+//        } 
+//        else if (numbers[i] % 3 === 0) {
+//            array.push("fizz");
+//        }
+//        else if (numbers[i] % 5 === 0) {
+//            array.push("buzz");
+//        }
+//        else {
+//            array.push("bug!");
+//        }
+//    } 
+//    return array;
 }
-console.log(fizzBuzz(arr = [2, 15, 7, 9, 45]));
+//console.log(fizzBuzz(arr = [2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
