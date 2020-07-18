@@ -163,7 +163,7 @@ function generatePhoneNumber(number) {
   }
   for(let i = 0; i < number.length; i += 1){
     if(i === 2){
-      numberFormat += ')' + number[i];
+      numberFormat += ') ' + number[i];
     }else
     if(i === 7){
       numberFormat += '-' + number[i];
