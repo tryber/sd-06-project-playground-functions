@@ -216,18 +216,18 @@ for(let cont=0;cont<2;cont++){
   string += array[cont];
 }
 string += ") "
-for(let cont=2;cont<6;cont++){
+for(let cont=2;cont<7;cont++){
   string += array[cont];
 }
 string += "-";
-for(let cont=6;cont<11;cont++){
+for(let cont=7;cont<11;cont++){
   string += array[cont];
 }
 }
 return string;
 }
 
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
