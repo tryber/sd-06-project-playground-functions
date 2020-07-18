@@ -15,15 +15,18 @@ console.log(calcArea(10, 20));
 
 // Desafio 3
 function splitSentence(string) {
-  resultado = string.split(" ");
+  let resultado = string.split(" ");
 return resultado;
 }
-console.log("passei na tribe")
+console.log(splitSentence( "vamos comer um sanduba"))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayDeStrings) {
+  var resultado = arrayDeStrings[arrayDeStrings.length -1]+ ", " + arrayDeStrings[0];
+  return resultado;
 }
+console.log(concatName(["izelda","jose","maria"]));
+
 
 // Desafio 5
 function footballPoints() {
