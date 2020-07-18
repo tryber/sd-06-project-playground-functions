@@ -167,18 +167,25 @@ console.log(fizzBuzz(d8))
 
 // Desafio 9
 function encode(str) {
+
+  let newStr
   
   for (let i = 0; i < str.length; i++) {
     if (str[i] == "a") {
-      str[i] = "1"
+      newStr = str.replace(/a/g, "1")
+      str = newStr
     } else if (str[i] == "e") {
-      str[i] = "2"
+      newStr = str.replace(/e/g, "2")
+      str = newStr
     } else if (str[i] == "i") {
-      str[i] = "3"
+      newStr = str.replace(/i/g, "3")
+      str = newStr
     } else if (str[i] == "o") {
-      str[i] = "4"
+      newStr = str.replace(/o/g, "4")
+      str = newStr
     } else if (str[i] == "u") {
-      str[i] = "5"
+      newStr = str.replace(/u/g, "5")
+      str = newStr
     }
   }
 
@@ -189,21 +196,29 @@ function decode(str) {
   
   for (let i = 0; i < str.length; i++) {
     if (str[i] == "1") {
-      str[i] = "a"
+      newStr = str.replace(/1/g, "a")
+      str = newStr
     } else if (str[i] == "2") {
-      str[i] = "e"
+      newStr = str.replace(/2/g, "e")
+      str = newStr
     } else if (str[i] == "3") {
-      str[i] = "i"
+      newStr = str.replace(/3/g, "i")
+      str = newStr
     } else if (str[i] == "4") {
-      str[i] = "o"
+      newStr = str.replace(/4/g, "o")
+      str = newStr
     } else if (str[i] == "5") {
-      str[i] = "u"
+      newStr = str.replace(/5/g, "u")
+      str = newStr
     }
   }
 
   return str
 
 }
+
+let d9 = "aeioua1234523"
+console.log(decode(d9))
 
 // Desafio 10
 function techList() {
