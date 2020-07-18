@@ -172,20 +172,6 @@ function generatePhoneNumber(numeros) {
   let telefone;
   let contador;
   let verifica = numeros
-  for (let i in numeros) {
-    if (verifica[i] === numeros[i]) {
-        contador ++;
-    }
-  }
-  for (let i in numeros) {
-    if (numeros[i] < 0) {
-      telefone = 'não é possível gerar um número de telefone com esses valores';
-    } else if (numeros[i] > 9) {
-      telefone = 'não é possível gerar um número de telefone com esses valores';
-    } else if (contador >= 3) {
-      telefone = 'não é possível gerar um número de telefone com esses valores';
-    }
-  }
   telefone = '(' + numeros[0] + numeros[1] + ')' + " ";
   if (numeros.length == 11) {
     for ( let i = 2; i < numeros.length; i++) {
