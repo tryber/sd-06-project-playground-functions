@@ -62,9 +62,9 @@ function fizzBuzz(arrayNumber) {
   for (i = 0; i < arrayNumber.length; i++){
     if ((arrayNumber[i] % 3 === 0) && (arrayNumber[i] % 5 === 0)) {
         arrayString.push("fizzBuzz");
-    } else if ((arrayNumber[i] % 3 === 0) && (arrayNumber[i] % 5 !== 0)){
+    } else if ((arrayNumber[i] % 3 === 0)){
       arrayString.push("fizz");
-    } else if ((arrayNumber[i] % 3 !== 0) && (arrayNumber[i] % 5 === 0)){
+    } else if ((arrayNumber[i] % 5 === 0)){
       arrayString.push("buzz");
     } else {
       arrayString.push("bug!");
