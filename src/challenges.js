@@ -29,8 +29,8 @@ console.log(resultSplit);
 
 // Desafio 4 - Concatenação de strings
 
-function concatName(arrayNomes)){
- return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + ', ' + arrayNomes[0];
+function concatName(arrayNomes){
+return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + ', ' + arrayNomes[0];
 }
 let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 concatenarNomes = concatName(arrayNomes);
@@ -54,7 +54,7 @@ function highestCount(lista) {
 let maior = lista[0];
 for (let indice of lista){
   if (indice > maior){
-     maior = indice;
+    maior = indice;
     }
   }
 let contador = 0;
@@ -72,17 +72,17 @@ console.log(highestCount(numbers));
 // Desafio 7 -  Caça ao rato
 
 function catAndMouse(mouse, cat1, cat2) {
-   let positioncat1 = Math.abs(cat1 - mouse);
-   let positioncat2 = Math.abs(cat2 - mouse);
-   let positon;
-   if (positioncat1 > positioncat2) {
-      position = "cat2";
-   } else if (positioncat1 < positioncat2) {
-     position = "cat1";
-   } else {
-    position = "os gatos trombam e o rato foge";
-   }
-   return position;
+  let positioncat1 = Math.abs(cat1 - mouse);
+  let positioncat2 = Math.abs(cat2 - mouse);
+  let positon;
+  if (positioncat1 > positioncat2) {
+    position = 'cat2';
+  } else if (positioncat1 < positioncat2) {
+    position = 'cat1';
+  } else {
+  position = 'os gatos trombam e o rato foge';
+  }
+  return position;
   }
   catAndMouse(45,30,30);
   console.log(position);
