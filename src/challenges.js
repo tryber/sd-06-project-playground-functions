@@ -211,7 +211,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   let array = string.match(/\d+/g);
   let soma = 0;
 
