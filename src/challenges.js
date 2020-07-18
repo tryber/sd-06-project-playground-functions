@@ -14,8 +14,8 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName(array) {
-  return `${array[array.length - 1]}, ${array[0]}`;
+function concatName(array1) {
+  return `${array1[array1.length - 1]}, ${array1[0]}`;
 }
 
 // Desafio 5
@@ -24,17 +24,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  let maior = array[0];
+function highestCount(array2) {
+  let maior = array2[0];
   let count = 0;
 
-  for (let i=0; i<array.length; i++) {
+  for (let i=0; i<array2.length; i++) {
 
-    if (array[i] === maior) {
+    if (array2[i] === maior) {
       count += 1;
     }
 
-    if (array[i] > maior) {
+    if (array2[i] > maior) {
       maior = array[i]
       count = 1;
     }
@@ -48,6 +48,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance1 = cat1 - mouse;
   let distance2 = cat2 - mouse;
 
+  function convertNegativeNumbers(a) {
+    if (a < 0) {
+      a *= -1
+    }
+    return a;
+  }
+
   distance1 = convertNegativeNumbers(distance1);
   distance2 = convertNegativeNumbers(distance2);
 
@@ -60,16 +67,27 @@ function catAndMouse(mouse, cat1, cat2) {
   return "os gatos trombam e o rato foge"
 }
 
-function convertNegativeNumbers(a) {
-  if (a < 0) {
-    a *= -1
-  }
-  return a;
-}
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array3) {
+  let phrase = []
+
+  for (let i=0; i<array3.length; i++) {
+
+    if (array3[i] % 3 == 0 && array3[i] % 5 == 0 ) {
+      phrase.push("fizzBuzz")
+    }
+    else if (array3[i] % 3 == 0) {
+      phrase.push("fizz")
+    }
+    else if (array3[i] % 5 == 0) {
+      phrase.push("buzz")
+    }
+    else {
+      phrase.push("bug!")
+    }
+  }
+
+  return phrase;
 }
 
 // Desafio 9
