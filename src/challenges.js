@@ -231,7 +231,7 @@ function hydrate(str) {
     }
   }
 
-  if (parseIntt(nCopos) > 1) {
+  if (parseInt(nCopos) > 1) {
     return nCopos + ' copos de água';
   } else {
     return nCopos + ' copo de água';
