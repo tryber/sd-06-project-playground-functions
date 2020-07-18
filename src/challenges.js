@@ -25,8 +25,10 @@ return piriri
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+let vitoria = 3
+let empate = 1
+return (wins * vitoria) + (ties * empate);
 }
 
 // Desafio 6
