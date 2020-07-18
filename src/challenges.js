@@ -105,7 +105,7 @@ function encode(word) {
   let array = [... word];
   for(let i in array) {
     if(array[i] === 'a'){
-      vogal[i] += 1;
+      vogal += 1;
     } else if(array[i] === 'e'){
       vogal += 2;
     } else if(array[i] === 'i'){
@@ -120,7 +120,7 @@ function encode(word) {
   }
   return vogal;
 }
-
+console.log(encode('How are you today?'));
 function decode(numero) {
   // seu código aqui
   let word = [''];
