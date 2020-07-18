@@ -90,9 +90,9 @@ function fizzBuzz(values) {
   for (let i = 0; i < values.length; i++) {
     if ((values[i] % 3 == 0) && (values[i] % 5 == 0)) {
       answer.push("fizzBuzz");
-    } else if (i % 3 == 0) {
+    } else if (values[i] % 3 == 0) {
       answer.push("fizz");
-    } else if (i % 5 == 0) {
+    } else if (values[i] % 5 == 0) {
       answer.push("buzz");
     } else {
       answer.push("bug!");
@@ -100,9 +100,6 @@ function fizzBuzz(values) {
   }
   return answer;
 }
-
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 
 // Desafio 9
 function encode() {
