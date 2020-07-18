@@ -105,28 +105,21 @@ function encode(str) {
   return lettersStr.join('');
 }
 
+function compareNumbers(arr, num, letter) {
+  if (arr === num) {
+    return letter;
+  }
+  return arr;
+}
+
 function decode(str) {
   let lettersDecode = str.split('');
   for (let index = 0; index < lettersDecode.length; index += 1) {
-    switch (lettersDecode[index]) {
-      case ('1'):
-        lettersDecode[index] = 'a';
-        break;
-      case ('2'):
-        lettersDecode[index] = 'e';
-        break;
-      case ('3'):
-        lettersDecode[index] = 'i';
-        break;
-      case ('4'):
-        lettersDecode[index] = 'o';
-        break;
-      case ('5'):
-        lettersDecode[index] = 'u';
-        break;
-      default:
-        break;
-    }
+    lettersDecode[index] = compareNumbers(lettersDecode[index], '1', 'a');
+    lettersDecode[index] = compareNumbers(lettersDecode[index], '2', 'e');
+    lettersDecode[index] = compareNumbers(lettersDecode[index], '3', 'i');
+    lettersDecode[index] = compareNumbers(lettersDecode[index], '4', 'o');
+    lettersDecode[index] = compareNumbers(lettersDecode[index], '5', 'u');
   }
   return lettersDecode.join('');
 }
@@ -138,9 +131,18 @@ str = decode(str);
 console.log(str);
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arr, name) {
+  let techArr = [];
+
+  arr = arr.sort();
+
+  for (let i = 0; i < arr.length; i += 1) {
+    techArr.push({ tech: arr[i], name });
+  }
+  return techArr;
 }
+
+// techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
 
 // Desafio 11
 function generatePhoneNumber() {
