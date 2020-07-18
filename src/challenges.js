@@ -191,13 +191,24 @@ function triangleCheck(a, b, c) {
     return false;
   }
 }
-console.log(triangleCheck(10, 14, 8));
+// console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  //seu código aqui
+function hydrate(string) {
+  let numbers = string.replace(/\D/g, "");
+  let soma = 0;
+  let msg = '';
+  for (i in numbers) {
+    soma += parseInt(numbers[i])
+  }
+  if (soma === 1) {
+    msg = '1 copo de água';
+  } else if (soma > 1) {
+    msg = soma + ' copos de água';
+  }
+  return msg;
 }
-
+console.log(hydrate('1 iauseh 7 saehsaiuh e 2 uashsuha'));
 
 module.exports = {
   calcArea,
