@@ -235,15 +235,25 @@ function generatePhoneNumber(phoneArray) {
   return '(' + ddd + ') ' + firstFive + '-' + lastFive;
 }
 
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-//(12) 34567-8901
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
+  function compareLines(l1, l2, l3) {
+    if (l1 < (l2 + l3) && l1 > Math.abs(l2 - l3)) {
+      return true;
+    }
+  }
+
+  if (compareLines(lineA, lineB, lineC) && compareLines(lineB, lineA, lineC) && compareLines(lineC, lineA, lineB)) {
+    return true;
+  }
+
+  return false;
 }
 
-// Desafio 13
+//console.log(triangleCheck(10, 14, 8));
+
+// Desafio
 function hydrate() {
   // seu código aqui
 }
