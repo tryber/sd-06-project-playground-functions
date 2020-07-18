@@ -148,7 +148,7 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList(array, name) {
+function techList(array, nome) {
   let answer = [];
 
   array = array.sort();
@@ -157,7 +157,7 @@ function techList(array, name) {
     return 'Vazio!';
   }
   for (let i = 0; i < array.length; i += 1) {
-    answer.push({ nome: name, tech: array[i],  });
+    answer.push({ name: nome, tech: array[i],  });
   }
   return answer;
 }
