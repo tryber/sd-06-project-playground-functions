@@ -196,15 +196,15 @@ function encode(lettersString) {
         break;
       case 'i':
         myStringArray[index] = 3;
-      break;
+        break;
       case 'o':
         myStringArray[index] = 4;
-      break; 
+        break;
       case 'u':
         myStringArray[index] = 5;
-      break;  
+        break;
       default:
-      break;
+        break;
     }
   }
   let newString = myStringArray.join('');
@@ -220,23 +220,23 @@ function decode(numbersString) {
 
   for (index in myStringArray) {
     switch (myStringArray[index]) {
-      case "1":
+      case '1':
         myStringArray[index] = 'a';
         break;
-      case "2":
+      case '2':
         myStringArray[index] = 'e';
         break;
-      case "3":
+      case '3':
         myStringArray[index] = 'i';
       break;
-      case "4":
+      case '4':
         myStringArray[index] = 'o';
-      break; 
-      case "5":
-        mmyStringArray[index] = 'u';
-      break;  
+        break;
+      case '5':
+        myStringArray[index] = 'u';
+        break;
       default:
-      break;
+        break;
     }
   }
   let newString = myStringArray.join('');
@@ -284,14 +284,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-
-//Para separar uma String por caracteres podes usar '' como separador.
-
-let string = 'oi';
-let array = string.split(''); // ["o", "i"]
-console.log(array);
-
-
-let ar = ['Rudi', 'Morie', 'Halo', 'Miki'];
-console.log(ar.join('')); // Rudi, Morie, Halo, Miki
