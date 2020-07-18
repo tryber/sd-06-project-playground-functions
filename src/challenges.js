@@ -62,20 +62,20 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(n) {
 // seu código aqui
-for(let i = 1 ; i <= n ; i++) {
-  let numero = "";
-
-if(i % 3 === 0){
-  numero = "fizz"
-} else if (i % 5 === 0) {
-  numero = "buzz"
-} else if (i % 3 === 0 || i % 5 === 0) {
-  numero = "fizzbuzz"
-} else {
-  numero = "bug!"
-}
-return numero
-}
+let fizzBuzz = [];
+n.forEach(element => {
+  if (element % 3==0 && element % 5==0) {
+    fizzBuzz.push("fizzBuzz");
+  } else if (element % 3==0){
+    fizzBuzz.push("fizz");
+  } else if (element % 5==0){
+    fizzBuzz.push("buzz");
+  }
+    else{
+      fizzBuzz.push("bug!")
+    }
+}); 
+return fizzBuzz;
 }
 // Desafio 9
 function encode() {
