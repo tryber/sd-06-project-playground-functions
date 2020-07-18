@@ -17,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  array = array[array.length-1] + ", " + array[0];
+  array = array[array.length-1] + ', ' + array[0];
   return array;
 }
 
@@ -55,11 +55,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(mouse - cat1);
   let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 < distanceCat2) {
-    return "cat1";
+    return 'cat1';
   } else if (distanceCat1 > distanceCat2) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -68,16 +68,16 @@ function fizzBuzz(array) {
   let phrase = []
   for (let i = 0; i < array.length; i +=1) {
     if (array[i] % 3 === 0 && array[i] % 5 ==0) {
-      phrase.push("fizzBuzz");
+      phrase.push('fizzBuzz');
     }
     else if (array[i] % 3 ===0) {
-      phrase.push("fizz");
+      phrase.push('fizz');
     }
     else if (array[i] % 5 ===0) {
-      phrase.push("buzz");
+      phrase.push('buzz');
     }
     else {
-      phrase.push("bug!");
+      phrase.push('bug!');
     }
   }
   return phrase;
@@ -87,15 +87,15 @@ function fizzBuzz(array) {
 function encode(string) {
   let phrase=string.split('');
   for (let i = 0; i < phrase.length; i +=1) {
-    if (phrase[i] === "a") {
+    if (phrase[i] === 'a') {
       phrase[i] = 1;
-    } else if (phrase[i] === "e") {
+    } else if (phrase[i] === 'e') {
       phrase[i] = 2;
-    } else if (phrase[i] === "i") {
+    } else if (phrase[i] === 'i') {
       phrase[i] = 3;
-    } else if (phrase[i] ==="o") {
+    } else if (phrase[i] === 'o') {
       phrase[i] = 4;
-    } else if (phrase[i] === "u") {
+    } else if (phrase[i] === 'u') {
       phrase[i] = 5
     }
   }
@@ -108,15 +108,15 @@ function decode(string) {
   let phrase2 = string.split('');
   for (let i = 0; i < phrase2.length; i +=1) {
     if (phrase2[i] === 1) {
-      phrase2[i] = "a";
+      phrase2[i] = 'a';
     } else if (phrase2[i] === 2) {
-      phrase2[i] = "e";
+      phrase2[i] = 'e';
     } else if (phrase2[i] === 3) {
-      phrase2[i] = "i";
+      phrase2[i] = 'i';
     } else if (phrase2[i] === 4) {
-      phrase2[i] = "o";
+      phrase2[i] = 'o';
     } else if (phrase2[i] === 5) {
-      phrase2[i] = "u";
+      phrase2[i] = 'u';
     }
   }
   phrase2 = phrase2.join('');
