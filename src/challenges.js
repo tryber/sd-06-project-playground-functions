@@ -86,9 +86,78 @@ return b;
 }
 
 // Desafio 9
-function encode() {
+function encode( a = 'hi there, this is your new house') {
+  l = a.length;
+  r = 0;
+  toCode = [];
+  coded = [];
+  for( x in a){
+    j = a[x]
+    toCode += j;
+  }
+  for(x in toCode){
+    i = toCode[x];
+    if ( i == 'a'){
+      i = '1'
+      coded += i
+    }
+    else if( i == 'e'){
+      i = '2'
+      coded += i
+    }
+    else if( i == 'i'){
+      i = '3'
+      coded += i
+    }
+    else if( i == 'o'){
+      i = '4'
+      coded += i
+    }
+    else if( i == 'u'){
+      i = '5'
+      coded += i
+    }
+    else
+      coded += i
+  }
+  return coded
 }
-function decode() {
+
+function decode(a = 'h3 th2r2!') {
+  l = a.length;
+  r = 0;
+  toDecode = [];
+  decoded = [];
+  for( x in a){
+    j = a[x]
+    toDecode += j;
+  }
+  for(x in toDecode){
+    i = toDecode[x];
+    if ( i == '1'){
+      i = 'a'
+      decoded += i
+    }
+    else if( i == '2'){
+      i = 'e'
+      decoded += i
+    }
+    else if( i == '3'){
+      i = 'i'
+      decoded += i
+    }
+    else if( i == '4'){
+      i = 'o'
+      decoded += i
+    }
+    else if( i == '5'){
+      i = 'u'
+      decoded += i
+    }
+    else
+      decoded += i
+  }
+  return decoded
 }
 
 // Desafio 10
