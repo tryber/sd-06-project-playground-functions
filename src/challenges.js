@@ -82,7 +82,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(meuArray) {
   let resposta = [];
-  for (i in meuArray) {
+  for (let i in meuArray) {
     if ((meuArray[i] % 3 === 0) && (meuArray[i] % 5 !== 0)) {
       resposta.push('fizz');
     } else if ((meuArray[i] % 3 !== 0) && (meuArray[i] % 5 === 0)) {
@@ -112,10 +112,10 @@ function techList(lista, nome) {
   if (lista.length > 0) {
     lista.sort();
     for (let i in lista) {
-      resposta.push({ "tech": lista[i], "name": nome });
+      resposta.push({ 'tech': lista[i], 'name': nome });
     }
   } else {
-    resposta = "Vazio!";
+    resposta = 'Vazio!';
   }
   return resposta;
 }
