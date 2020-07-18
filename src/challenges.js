@@ -25,6 +25,12 @@ function concatName(meuArray) {
   let resposta = '';
   resposta += (ultimaPalavra + ', ' + primeiraPalavra);
   return resposta;
+
+//  function concatName(names) {
+//    let resultadoNome = "";
+//    resultadoNome = names[names.length - 1] + ", " + names[0];
+//    return resultadoNome
+//  }
 }
 
 // Desafio 5
@@ -76,7 +82,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(meuArray) {
   let resposta = [];
-  for (let i = 0; i < meuArray.length; i += 1) {
+  for (i in meuArray) {
     if ((meuArray[i] % 3 === 0) && (meuArray[i] % 5 !== 0)) {
       resposta.push('fizz');
     } else if ((meuArray[i] % 3 !== 0) && (meuArray[i] % 5 === 0)) {
@@ -101,8 +107,17 @@ function decode(minhaString) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(lista, nome) {
+  let resposta = [];
+  if (lista.length > 0) {
+    lista.sort();
+    for (let i in lista) {
+      resposta.push({ "tech": lista[i], "name": nome });
+    }
+  } else {
+    resposta = "Vazio!";
+  }
+  return resposta;
 }
 
 // Desafio 11
