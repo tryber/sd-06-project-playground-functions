@@ -86,16 +86,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(values) {
   // seu código aqui
   let answer = [];
-
   for (let i = 0; i < values.length; i++) {
     if ((values[i] % 3 == 0) && (values[i] % 5 == 0)) {
-      answer.push("fizzBuzz");
+      answer.push('fizzBuzz');
     } else if (values[i] % 3 == 0) {
-      answer.push("fizz");
+      answer.push('fizz');
     } else if (values[i] % 5 == 0) {
-      answer.push("buzz");
+      answer.push('buzz');
     } else {
-      answer.push("bug!");
+      answer.push('bug!');
     }
   }
   return answer;
