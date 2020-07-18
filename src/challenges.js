@@ -18,6 +18,38 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
+function concatName(teste) {
+  let primeira = teste[0];
+  let ultima = teste[(teste.length -1)];
+  let arrayResponse = '';
+  arrayResponse = ultima.concat(', ').concat(primeira);
+  return arrayResponse;
+}
+
+// Desafio 5
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
+}
+
+// Desafio 6
+function highestCount(a) {
+  let maior = 0;
+  let cont = 0;
+
+  a.forEach(e => {
+   if(e > maior) {
+        maior = e;
+    }
+  });
+  a.forEach(e => {
+   if( e === maior ) {
+     cont += 1;
+    }
+  });
+  return cont;
+}
+
+// Desafio 7
 function catAndMouse(mouse, cat1, cat2) {   
     
   if (mouse < cat1 && mouse < cat2  ) {
