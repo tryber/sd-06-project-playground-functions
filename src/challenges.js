@@ -109,10 +109,29 @@ function encode(str) {
   }
   return aux2;
 }
-console.log(encode('hi there'));
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let aux = str.split("");
+  let aux2 = []; 
+  for (const key in aux) {
+    if (aux[key] === '1') {
+      aux2 = aux2 + 'a';
+    }else if(aux[key] === '2'){
+      aux2 += 'e';
+    }else if (aux[key] === '3'){
+      aux2 = aux2 + 'i';
+    }else if (aux[key] === '4'){
+      aux2 += 'o';
+    }else if (aux[key] === '5'){
+      aux2 += 'u'
+    }else{
+      aux2 += aux[key];
+    }
+  }
+  return aux2;
+  
 }
+console.log(decode("h3 th2r2"))
 
 // Desafio 10
 function techList() {
