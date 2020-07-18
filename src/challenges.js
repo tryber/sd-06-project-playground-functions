@@ -38,7 +38,7 @@ function concatName() {
 
 // Desafio 5
 function footballPoints(ties, wins) {
-  let pontuacao = (ties * 1) + (wins * 3);
+  let pontuacao = ((ties * 1) + (wins * 3));
   return pontuacao;
 }
 // console.log(footballPoints(2,3));
