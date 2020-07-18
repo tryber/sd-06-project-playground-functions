@@ -144,6 +144,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(myArray) {
   let newArray = [];
+  let index;
 
   for (index in myArray) {
     if (myArray[index] % 3 === 0 && myArray[index] % 5 === 0) {
@@ -228,7 +229,7 @@ function decode(numbersString) {
         break;
       case '3':
         myStringArray[index] = 'i';
-      break;
+        break;
       case '4':
         myStringArray[index] = 'o';
         break;
