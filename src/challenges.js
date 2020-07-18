@@ -120,7 +120,7 @@ function encode(word) {
   }
   return vogal;
 }
-
+console.log(encode('how are you today?'))
 function decode(numero) {
   // seu código aqui
   let word = [''];
@@ -142,12 +142,11 @@ function decode(numero) {
   }
   return word;
 };
-
+console.log(decode('H4w 1r2 y45 t4d1y?'))
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
 }
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
