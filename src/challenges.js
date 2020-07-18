@@ -170,54 +170,53 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  let string = "";
-  let n = 0; //numero de numeros na array
-  let m1 = 0; //marcar se tem repetido
-  //let m2 = array[0]; //recebe o repetido
-  let t = false;
-  //anda pela array
-  for (let i in array){
-    m1=0;
-  //necessario para fazer comparacao do i com j
-    for(let j in array){
-  //faz as comparacoes p/ caso encontre repetido, tem exclusoes p comparar com ele msm e p/ numeros anteriores
-      if(array[i]===array[j]){
-        //if(m2!=array[i]){
-         // m2 = array[i];
-          m1++;
-        //}else {
-         // m1++;
-        //}
-      } 
-    }
-  if(array[i]<0 || array[i]>9 || m1>=3){
-    string = "não é possível gerar um número de telefone com esses valores";
-    t = true;
-  }
+let n = 0;
+let string = "";
+let marcador = 0;
+let marcador2 = 0;
+let m1 = 0;
+for (let i in array){
     n++;
-  }
-  if (t==true){
-    string = "não é possível gerar um número de telefone com esses valores";
-  }else if(n!=11){
+}
+if (n!=11){
     string = "Array com tamanho incorreto.";
-  }else {
+    marcador = 1;
+}else if(marcador === 1){
+    string = "Array com tamanho incorreto.";
+}else {
+    for (let k in array){
+        m1=0;
+        for(let j in array){
+          if(array[k]===array[j]){
+              m1++;
+          } 
+        }
+      if(array[k]<0 || array[k]>9 || m1>=3){
+        string = "não é possível gerar um número de telefone com esses valores";
+        marcador2 = 1;
+      }
+      }
+}
+if (marcador==1 || marcador2==1){
+
+}else {
     string ="(";
-    for(let cont=0;cont<2;cont++){
-      string += array[cont];
-    }
-    string += ") "
-    for(let cont=2;cont<6;cont++){
-      string += array[cont];
-    }
-    string += "-";
-    for(let cont=6;cont<11;cont++){
-      string += array[cont];
-    }
-  }
-  return string;
+for(let cont=0;cont<2;cont++){
+  string += array[cont];
+}
+string += ") "
+for(let cont=2;cont<6;cont++){
+  string += array[cont];
+}
+string += "-";
+for(let cont=6;cont<11;cont++){
+  string += array[cont];
+}
+}
+return string;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1,1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
