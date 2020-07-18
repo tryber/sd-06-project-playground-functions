@@ -2,8 +2,7 @@
 function compareTrue(a = 1, b = 1) {
   if (a && b == 1) {
     return true;
-  }
-  else {
+  } else {
     return false;
   }
 }
@@ -70,7 +69,7 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
   let b = [];
   for (x in a) {
     let i = a[x];
-    
+
     if (i % 3 == 0 && i % 5 == 0) {
       b.push('fizzBuzz');
     }
@@ -92,7 +91,7 @@ function encode(a = 'hi there, this is your new house', coded = []) {
   l = a.length;
   r = 0;
   toCode = [];
-  
+
   for (x in a) {
     j = a[x]
     toCode += j;
