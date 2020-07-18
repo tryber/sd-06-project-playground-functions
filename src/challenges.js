@@ -38,11 +38,11 @@ function highestCount(numeros) {
     if (numeros[i] > maiorMumero) {
       maiorMumero = numeros[i];
       quantidade = 1;
-    } else if (numero[i] === maiorMumero){
-      quantidade + 1;
+    } else if (numeros[i] === maiorMumero) {
+      quantidade += 1;
     }
-  return quantidade;
   }
+return quantidade;
 }
 
 // Desafio 7
