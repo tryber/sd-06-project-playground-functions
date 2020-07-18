@@ -217,7 +217,7 @@ function generatePhoneNumber(array) {
   return string;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1,1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -246,7 +246,12 @@ function hydrate(string) {
       for(let i in m){
         r += parseInt(m[i]);
       }
-  n = r + " copos de água";
+      if(r>1){
+        n = r + " copos de água";
+      }else{
+        n = r + " copo de água";
+      }
+  
   return n;
 }
 console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
