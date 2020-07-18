@@ -208,8 +208,17 @@ function generatePhoneNumber(numbersArray) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let condA = ((lineA < (lineB + lineC)) && (lineA > ((lineB - lineC) ** 2) ** 0.5)) ? true : false;
+  let condB = ((lineB < (lineA + lineC)) && (lineB > ((lineA - lineC) ** 2) ** 0.5)) ? true : false;
+  let condC = ((lineC < (lineB + lineA)) && (lineC > ((lineB - lineA) ** 2) ** 0.5)) ? true : false;
+  
+  if (condA == true && condB == true && condC == true){
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
