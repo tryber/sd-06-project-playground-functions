@@ -155,8 +155,8 @@ function techList(nomesTech, nome) {
   let result = [];
   for (let i in techCrescente) {
     result += {
-      tech: techCrescente[i],
-      name: nome
+      tech: 'techCrescente[i]',
+      name: 'nome'
     }
   }
   return result;
