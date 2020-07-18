@@ -106,18 +106,19 @@ function replaceString(string, swap) {
 // Desafio 10
 function techList(tech, name) {
 
-  let technology = new Object();
+  let technology = [];
 
   if (tech.length !== 0) {
-
-    tech.sort().forEach(element => technology[element] = name);
-
-  } else {
+    tech.sort().forEach(item => {
+      technology.push({[item]: name})
+    });
+  }
+  else {
     return "Vazio!";
   }
 
   return technology;
-  
+
 }
 
 // Desafio 11
@@ -129,7 +130,7 @@ function generatePhoneNumber() {
 function triangleCheck(sideA, sideB, sideC) {
 
   let sumABC = [sideA + sideB, sideA + sideC, sideB + sideC];
-  
+
   if (sideA < sumABC[2] && sideB < sumABC[1] && sideC < sumABC[0]) {
     return true;
   }
