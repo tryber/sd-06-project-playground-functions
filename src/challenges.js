@@ -12,7 +12,6 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-
 function splitSentence(string) {
   let word = '';
   let splitedPhrase = [];
@@ -22,7 +21,7 @@ function splitSentence(string) {
     }
     else if (string[i] === ' ') {
       splitedPhrase.push(word);
-      word = ' ';
+      word = '';
     }
   }
   splitedPhrase.push(word);
