@@ -54,17 +54,19 @@ function catAndMouse() {//cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numeros) {
-  for (var i = 1; i <= numeros; i += 1) {
+  let resposta  = '';
+  for (let i = 0; i <= numeros; i += 1) {
     if (i % 3 === 0) {
-      console.log('fizz');
+      resposta = 'fizz' += 1;
     } else if (i % 5 === 0) {
-      console.log('buzz');
+      resposta = 'buzz' += 1;
     } else if (i % 3 === 0 && i % 5 === 0) {
-      console.log('fizzBuzz');
-    } else if (i % 5 !== 0 && i % 3 !== 0) {
-      console.log('bug');
+      resposta = 'fizzBuzz' += 1;
+    } else {
+      resposta = 'bug!' += 1;
     }
   }
+  return resposta;
 }
 
 // Desafio 9
