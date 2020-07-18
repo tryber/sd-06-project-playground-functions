@@ -189,7 +189,7 @@ console.log('Exercício 9: ' + encode('hi there!'));
 
 console.log('Exercício 9: ' + decode('h3 th2r2!'));
 
-console.log('Exercício 10: ' + techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+console.log('Exercício 10: ' + techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Vagner"));
 
 console.log('Exercício 11: ' );
 
