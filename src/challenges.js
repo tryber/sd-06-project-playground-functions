@@ -150,40 +150,42 @@ function techList(tech, name) {
 
 
 // Desafio 11
-function generatePhoneNumber(array) {
+function generatePhoneNumber(arrayNumber) {
   // seu código aqui
-  let vezesRepetidas = repeticaoNumero(array);
-  let numeroTelefone = 0;
-  if (array.length !== 11) {
+  numeroRepeticoes = checarRepeticao(arrayNumber);
+  if (arrayNumber.length !== 11) {
     numeroTelefone = 'Array com tamanho incorreto.';
   }
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0 || array[i] > 9 || vezesRepetidas === true) {
+  for (let i = 0; i < arrayNumber.length; i += 1) {
+    if (arrayNumber[i] < 0 || arrayNumber[i] > 9 || numeroRepeticoes === true) {
       numeroTelefone = 'não é possível gerar um número de telefone com esses valores';
     } else {
-      numeroTelefone = '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array [4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
+      numeroTelefone = '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber [4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10];
     }
   }
   return numeroTelefone;
 }
-  // Repeticao +3x
-  // Dado o array, para cada numero do array verificar se ele se repete
-  // Caso ele repita repeticao +1;
-function repeticaoNumero(array) {
+
+function checarRepeticao(arrayNumber) {
+  let limiteVezesRepetidas = false;
   let contador = 0;
-  let numeroRepetido = false;
-  for (let i = 0; i < array.length; i += 1) {
-    for (let j = 0; j < array.length; i += 1) {
-      if (array[i] === array[j]) {
-        contador = contador + 1;
-      } if (contador >= 3) {
-        numeroRepetido = true;
-      } 
+  for (index in arrayNumber) {
+    for (let j = 0; j < arrayNumber.length; j += 1) {
+      if (arrayNumber[index] = arrayNumber[j]) {
+        contador += 1;
+        if (contador === 3) {
+          limiteVezesRepetidas = true;
+        }
+      }
     }
     contador = 0;
   }
-  return numeroRepetido;
+  return limiteVezesRepetidas;
 }
+
+  // Repeticao +3x
+  // Dado o arrayNumber, para cada numero do arrayNumber verificar se ele se repete
+  // Caso ele repita repeticao +1;
 
 
 // Desafio 12
