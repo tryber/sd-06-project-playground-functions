@@ -11,19 +11,19 @@ function compareTrue(value1, value2) {
 function calcArea(base, height) {
   let calc = (base * height) / 2;
   return calc;
-} 
+}
 console.log(calcArea(10, 10));
- 
+
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");  
-} 
+  return string.split(" ");
+}
 console.log(splitSentence("Hello World"));
 
 // Desafio 4
 function concatName(recebeArray) {
   return recebeArray[recebeArray.length -1] + ", " + recebeArray[0];
-} 
+}
 console.log(concatName(nomes = ["Ana", "Jean", "Pedro", "Maria", "Joao"]));
 
 // Desafio 5
@@ -35,21 +35,21 @@ console.log(footballPoints(10, 5));
 
 // Desafio 6
 function highestCount(numeros) {
-  
+
   let numeroMaisAlto = numeros[0];
   let count = 0;
-      
+
   for (let i = 0; i < numeros.length; i += 1) {
           if (numeros[i] > numeroMaisAlto) {
               numeroMaisAlto = numeros[i];
           }
-      } 
+      }
 
   for (let index = 0; index < numeros.length; index += 1) {
       if (numeroMaisAlto == numeros[index]) {
           count += 1;
       }
-  } 
+  }
   return count;
 }
 
@@ -58,7 +58,7 @@ console.log(highestCount(array = [9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    let = result = "Cat1";
+    let result = "Cat1";
   } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     result = "cat2";
   } else if (Math.abs(mouse - cat2) == Math.abs(mouse - cat1)) {
@@ -68,15 +68,15 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(10, -2, -7))
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  
+function fizzBuzz() {
+
 //  let array = [];
 
 //    for (let i = 0; i < numbers.length; i += 1) {
 //
 //        if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
 //            array.push("fizzbuzz");
-//        } 
+//        }
 //        else if (numbers[i] % 3 === 0) {
 //            array.push("fizz");
 //        }
@@ -86,7 +86,7 @@ function fizzBuzz(numbers) {
 //        else {
 //            array.push("bug!");
 //        }
-//    } 
+//    }
 //    return array;
 }
 //console.log(fizzBuzz(arr = [2, 15, 7, 9, 45]));
