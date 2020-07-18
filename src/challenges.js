@@ -67,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(vetNumbers) {
   let array2 = [];
-  for (let i = 0; i < vetNumbers.length; i += 1) {
+  for (let i in vetNumbers) {
     if (vetNumbers[i] % 3 === 0 && vetNumbers[i] % 5 != 0) {
       array2[i] = 'fizz';
     }
@@ -132,19 +132,18 @@ function decode(word3) {
 // Desafio 10
 function techList() {
   // seu código aqui
-  function techList(array1, name) {
+  
     let sort = array1.sort();
     let final = [];
-    for(i in sort){
+    for (i in sort) {
       final.push({"tech" : sort[i], "name" : name});
     }
-    if(array1.length === 0){
+    if (array1.length === 0) {
       return "Vazio!";
     } else {
       return final;
-    }
-  }
-}
+    } 
+ }
 
 // Desafio 11
 function generatePhoneNumber() {
