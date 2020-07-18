@@ -150,13 +150,16 @@ function decode(palavras) {
 // Desafio 10
 function techList(nomesTech, nome) {
   // seu código aqui
-  listaTech = [];
+  let listaTech;
   let techCrescente = nomesTech.sort();
-  result = {};
+  let result = {};
   for (let i in techCrescente) {
     listaTech.push(techCrescente[i], nome);
   }
-  result = listaTech 
+  for (let i in listaTech) {
+    result.push(listaTech[i], nome);
+  }
+
   return result;
 }
 
