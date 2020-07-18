@@ -3,7 +3,7 @@ function compareTrue(val1, val2) {
   // seu código aqui
   if (val1 === true && val2 === true) {
     return true;
-  } 
+  }
   else {
     return false;
   }
@@ -25,7 +25,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(nomes) {
   // seu código aqui
-  let nomesConcat = nomes[nomes.length - 1] + ', ' +  nomes[0];
+  let nomesConcat = nomes[nomes.length - 1] + ', ' + nomes[0];
   return nomesConcat;
 }
 
@@ -132,12 +132,12 @@ function encode(frase) {
       case 'u':
         arrayFrase[i] = '5';
       default:
+      break;
     }
   }
   arrayFrase = arrayFrase.join('');
   return arrayFrase;
 }
-
 
 function decode(fraseDecode) {
   // seu código aqui
@@ -189,7 +189,6 @@ function techList(arrayTecnologia, name) {
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
-  replace(/\D/g, "")
 }
 
 // Desafio 12
@@ -198,10 +197,18 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
+let bebidas = "1 cachaça, 5 cervejas e 1 copo de vinho";
+function hydrate(bebidas) {
   // seu código aqui
+  let suma = 0;
+  bebidas = bebidas.replace(/\D/g, "");
+  bebidas = bebidas.split(:);
+  for (let i in bebidas) {
+    suma += bebidas[i];
+  }
+  return suma + ' copos de água';
 }
-
+console.log(hydrate(bebidas));
 
 module.exports = {
   calcArea,
