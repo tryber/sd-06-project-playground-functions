@@ -22,6 +22,7 @@ function splitSentence(a = 'go Trybe') {
 function concatName(a = ['foguete', 'nao', 'tem', 'ré']) {
   last = a[a.length - 1] + ', ' + a[0];
   return last;
+}
 
 // Desafio 5
 function footballPoints(wins = 3, ties = 1) {
@@ -200,7 +201,6 @@ function triangleCheck() {
 // Desafio 13
 function hydrate() {
 }
-//
 
 module.exports = {
   calcArea,
