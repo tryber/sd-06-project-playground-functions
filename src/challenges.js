@@ -5,13 +5,33 @@ function compareTrue(first,second) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
+  return base*height/2
   // seu código aqui
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let palavrasSeparadas = [];
+  let palavra = [];
+  for(i in frase){
+    console.log(frase[i]);
+    //separar as letras
+    //juntar as letras , sem adicionar os espaços
+
+    if(frase[i] !== ' '){
+      //se o elemento não for espaço vazio adiciona o elemento para a array palavra
+      palavra.push(frase[i]);
+    }
+    else{
+      //se o elemento for espaço vazio adiciona o array palavra para palavrasSeparadas
+      palavra.forEach((number) => {
+      console.log(palavra.splice( 0, palavra.length))}
+      )
+    }
+    console.log(`palavra ${palavra} e ${palavrasSeparadas}`);
+  }
+  return console.log(palavrasSeparadas);  // seu código aqui
 }
 
 // Desafio 4
@@ -84,3 +104,5 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+splitSentence('paulo é bom');
