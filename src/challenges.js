@@ -30,16 +30,12 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let newArray = 0;
   for (let index = 0; index < array.length; index += 1) {
     return newArray = (array[array.length - 1] + ', ' + array[0]);
     }
 }
 
 // Desafio 5
-let wins = 5;
-let ties = 2;
-
 function footballPoints(wins, ties) {
   return totalPoints = ((wins*3) + (ties * 1));
 }
