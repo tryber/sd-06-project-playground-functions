@@ -148,10 +148,10 @@ function decode(arrei) {
 console.log(decode('h3 th2r2!'))
 
 // Desafio 10
-function techList(tech, nome) {
-  for (let index = 0; index < tech.length; index += 1) {
+function techList(tec, nome) {
+  for (let index = 0; index < tec.length; index += 1) {
       let objeto = {
-      tech: tech[index],
+      tech: tec[index],
       name: nome,
     }
     console.log(objeto)
@@ -159,9 +159,9 @@ function techList(tech, nome) {
 }
 
 let tecnologia = ["React", "Jest", "HTML","CSS", "JavaScript"];
-let aloizio = 'Aloizio'
+let lucas = 'Lucas'
 
-techList(tecnologia, aloizio)
+techList(tecnologia, lucas)
 
 // Desafio 11
 function generatePhoneNumber() {
