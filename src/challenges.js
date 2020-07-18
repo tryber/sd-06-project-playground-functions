@@ -67,7 +67,6 @@ function fizzBuzz(arrayNumbers) {
   // seu código aqui
   let fb = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    const element = arrayNumbers[index];
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
       fb.push('fizzBuzz');
     } else if (arrayNumbers[index] % 3 === 0) {
