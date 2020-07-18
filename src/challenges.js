@@ -2,8 +2,9 @@
 function compareTrue(param1, param2) {
   if (param1 && param2) {
     return true;
+  } else {
+    return false;
   }
-  return false;
 }
 
 // Desafio 2
@@ -46,11 +47,23 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if(mouse - cat1 < mouse - cat2){
-    return cat1;
+  let dist1 = 0;
+  let dist2 = 0;
+  if(mouse < cat1){
+    dist1 = cat1 - mouse;
+  }else{
+    dist1 = mouse - cat1;
+  }
+  if(mouse < cat2){
+    dist2 = cat2 - mouse;
+  }else{
+    dist2 = mouse - cat2;
+  }
+  if(dist1 < dist2){
+    return "cat1";
   }else
-  if(mouse - cat1 > mouse - cat2){
-    return cat2;
+  if(dist2 < dist1){
+    return "cat2";
   }else{
     return "os gatos trombam e o rato foge";
   }
@@ -159,7 +172,7 @@ console.log('Exercício 5: ' + footballPoints(8,4));
 
 console.log('Exercício 6: ' + highestCount([9, 1, 2, 3, 9, 5, 7]));
 
-console.log('Exercício 7: ' + catAndMouse(10, 8, 7));
+console.log('Exercício 7: ' + catAndMouse(10, 12, 8));
 
 console.log('Exercício 8: ' + fizzBuzz([2, 15, 7, 9, 45]));
 
