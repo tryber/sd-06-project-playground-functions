@@ -75,10 +75,12 @@ function concatName(newArray) {
 // cada empate vale 1 ponto.
 
 function footballPoints(wins, ties) {
-  return totalOfPoints = (wins * 3) + ties;
+  let totalOfPoints = (wins * 3) + ties;
+  return totalOfPoints;
 }
 
-console.log(footballPoints(10, 5));
+// TESTE
+// console.log(footballPoints(12, 4));
 
 
 // Desafio 6
@@ -106,18 +108,18 @@ function highestCount() {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceMouseCatOne = Math.abs(mouse - cat1);
   let distanceMouseCatTwo = Math.abs(mouse - cat2);
-  let result = '';
+  let result = 'os gatos trombam e o rato foge';
+
   if (distanceMouseCatOne < distanceMouseCatTwo) {
     result = 'cat1';
   } else if (distanceMouseCatOne > distanceMouseCatTwo) {
     result = 'cat2';
-  } else {
-    result = 'os gatos trombam e o rato foge'
   }
   return result;
 }
 
-console.log(catAndMouse(0, 3, 2));
+// TESTE
+// console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 
@@ -157,17 +159,93 @@ function fizzBuzz(myArray) {
   return newArray;
 }
 
-let testArray = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(testArray));
+// TESTE
+// let testArray = [2, 15, 7, 9, 45];
+// console.log(fizzBuzz(testArray));
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+// Codifique e Decodifique
+// Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro,
+// deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+
+// a -> 1
+// e -> 2
+// i -> 3
+// o -> 4
+// u -> 5
+
+// Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
+
+// A segunda função deverá se chamar decode e faz o contrário de encode - ou seja,
+// recebe uma string contendo números no lugar de letras minúsculas e retornará
+// uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode
+// seja "h3 th2r2!", o retorno deverá ser "hi there!").
+
+function encode(lettersString) {
+  let myStringArray = lettersString.split('');
+
+  for (index in myStringArray) {
+    switch (myStringArray[index]) {
+      case 'a':
+        myStringArray[index] = 1;
+        break;
+      case 'e':
+        myStringArray[index] = 2;
+        break;
+      case 'i':
+        myStringArray[index] = 3;
+      break;
+      case 'o':
+        myStringArray[index] = 4;
+      break; 
+      case 'u':
+        myStringArray[index] = 5;
+      break;  
+      default:
+      break;
+    }
+  }
+  let newString = myStringArray.join('');
+  return newString
 }
-function decode() {
-  // seu código aqui
+
+// TESTE
+// let stringTest = 'hi there!';
+// console.log(encode(stringTest));
+
+function decode(numbersString) {
+  let myStringArray = numbersString.split('');
+
+  for (index in myStringArray) {
+    switch (myStringArray[index]) {
+      case "1":
+        myStringArray[index] = 'a';
+        break;
+      case "2":
+        myStringArray[index] = 'e';
+        break;
+      case "3":
+        myStringArray[index] = 'i';
+      break;
+      case "4":
+        myStringArray[index] = 'o';
+      break; 
+      case "5":
+        mmyStringArray[index] = 'u';
+      break;  
+      default:
+      break;
+    }
+  }
+  let newString = myStringArray.join('');
+  return newString
 }
+
+// TESTE
+// let stringTest = 'h3 th2r2!';
+// console.log(decode(stringTest));
 
 // Desafio 10
 function techList() {
@@ -206,3 +284,14 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+
+//Para separar uma String por caracteres podes usar '' como separador.
+
+let string = 'oi';
+let array = string.split(''); // ["o", "i"]
+console.log(array);
+
+
+let ar = ['Rudi', 'Morie', 'Halo', 'Miki'];
+console.log(ar.join('')); // Rudi, Morie, Halo, Miki
