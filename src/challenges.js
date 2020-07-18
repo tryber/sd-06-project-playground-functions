@@ -19,9 +19,8 @@ function splitSentence(a = 'go Trybe') {
 
 // Desafio 4
 function concatName(a = ['foguete', 'nao', 'tem', 'ré']) {
-  last = a[a.length-1];
-  return last + ', ' + a[0];
-}
+  last = a[a.length - 1] + ', ' + a[0];
+  return last;
 
 // Desafio 5
 function footballPoints(wins = 3, ties = 1) {
@@ -38,8 +37,8 @@ function highestCount(a = [9, 1, 2, 3, 9, 5, 7]) {
       i = a[x];
     }
   }
-  for (x in a){
-    if ( a[x] == i) {
+  for (x in a) {
+    if (a[x] == i) {
       contHigher++;
     }
   }
@@ -53,12 +52,10 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 
   if (cat1 == cat2) {
     return 'os gatos trombam e o rato foge';
-  }
-  else {
+  } else {
     if (cat1 < cat2) {
       return 'cat1';
-    }
-    else {
+    } else {
       return 'cat2';
     }
   }
