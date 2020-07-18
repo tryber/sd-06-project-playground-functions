@@ -44,23 +44,14 @@ function highestCount(array2) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let distance1 = cat1 - mouse;
-  let distance2 = cat2 - mouse;
+function catAndMouse(mouse, cat1, cat2) {  
 
-  function convertNegativeNumbers(a) {
-    if (a < 0) {
-      a *= -1
-    }
-    return a;
-  }
+  let distance = [Math.abs(cat1 - mouse), Math.abs(cat2 - mouse)];
 
-  distance1 = convertNegativeNumbers(distance1);
-  distance2 = convertNegativeNumbers(distance2);
-
-  if (distance1 > distance2) {
+  if (distance[0] > distance[1]) {
     return "cat2"
-  } else if (distance2 > distance1) {
+  } 
+  else if (distance[1] > distance[0]) {
     return "cat1"
   }
 
@@ -71,19 +62,19 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array3) {
   let phrase = []
 
-  for (let i = 0; i < array3.length; i++) {
+  for (let i=0; i<array3.length; i++) {
 
     if (array3[i] % 3 === 0 && array3[i] % 5 === 0) {
-      phrase.push("fizzBuzz")
+      phrase.push("fizzBuzz");
     }
     else if (array3[i] % 3 === 0) {
-      phrase.push("fizz")
+      phrase.push("fizz");
     }
     else if (array3[i] % 5 === 0) {
-      phrase.push("buzz")
+      phrase.push("buzz");
     }
     else {
-      phrase.push("bug!")
+      phrase.push("bug!");
     }
   }
 
@@ -101,16 +92,11 @@ function decode(phrase) {
 
 function replaceString(string, swap) {
   const vowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-  let index = 0;
 
   for (const [key, value] of Object.entries(vowels)) {
 
-    swap ? index = string.indexOf(key) : index = string.indexOf(value);
-
-    if (index !== -1) {
-      swap ? string = string.split(key).join(value) :
-      string = string.split(value).join(key);
-    }
+    swap ? string = string.split(key).join(value) :
+    string = string.split(value).join(key);
 
   }
 
@@ -118,8 +104,20 @@ function replaceString(string, swap) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+
+  let technology = new Object();
+
+  if (tech.length !== 0) {
+    tech.sort().forEach(element => 
+      technology[element] = name);
+  }
+  else {
+    return "Vazio!";
+  }
+
+  return technology; 
+  
 }
 
 // Desafio 11
@@ -128,8 +126,16 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(sideA, sideB, sideC) {
+
+  let sumABC = [sideA + sideB, sideA + sideC, sideB + sideC];
+  
+  if (sideA < sumABC[2] && sideB < sumABC[1] && sideC < sumABC[0]) {
+    return true;
+  }
+
+  return false;
+
 }
 
 // Desafio 13
