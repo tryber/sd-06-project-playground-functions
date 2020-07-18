@@ -92,11 +92,11 @@ function fizzBuzz(meuArray) {
 
 // Desafio 9
 function encode(minhaString) {
-  let codificar = { 'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5' }
+  let codificar = { a: 1, e: 2, i: 3, o: 4, u: 5 }
   return minhaString.replace(/[aeiou]/g, m => codificar[m])
 }
 function decode(minhaString) {
-  let decodificar = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' }
+  let decodificar = { 1: a, 2: e, 3: i, 4: o, 5: u }
   return minhaString.replace(/[12345]/g, m => decodificar[m]);
 }
 
@@ -117,10 +117,16 @@ function triangleCheck() {
 
 // Desafio 13
 function hydrate(minhaString) {
-  let resposta = 0;
+  let soma = 0;
+  let resposta = '';
   let numeros = minhaString.replace(/\D/g, "");
   for (let i = 0; i < numeros.length; i += 1) {
-    resposta += parseInt(numeros[i]);
+    soma += parseInt(numeros[i], 10);
+  }
+  if (soma > 1) {
+    resposta = soma + ' copos de água';
+  } else {
+    resposta = soma + ' copo de água';
   }
   return resposta;
 }
