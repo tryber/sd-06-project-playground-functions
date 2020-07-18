@@ -85,9 +85,23 @@ function valorPositivo(negativo){
 }
 console.log(catAndMouse(1,0,2));
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbersChoose) {
+  transforma = [];
+  for( index in numbersChoose){
+    if(numbersChoose[index] %3 == 0 && numbersChoose[index] %5 == 0){
+      transforma[index] = "fizzBuzz";
+    }else if(numbersChoose[index] %5 == 0 && numbersChoose[index] %3 != 0){
+      transforma[index] = "buzz";
+    }else if(numbersChoose[index] %3 == 0 && numbersChoose[index] %5 != 0){
+      transforma[index] = "fizz";
+    }else{
+      transforma[index] = "bug!"; 
+    }
+  }
+  return transforma;
 }
+arrayNumbers = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(arrayNumbers));
 
 // Desafio 9
 function encode() {
