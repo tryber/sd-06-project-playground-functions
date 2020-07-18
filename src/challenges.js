@@ -146,14 +146,15 @@ function techList(tech, name) {
   let listaOrdenada = tech.sort()
   let listaDeObjetos = []
   for (let i=0; i<tech.length; i+=1) {
-  //   listaDeObjetos.push {
-  //     tech: tech [i],
-  //     name: name,
-  // }
+    listaDeObjetos += listaOrdenada [ {
+    tech: tech [i],
+    name: name,
+    }]
+  }
   return listaDeObjetos
 }
-let tech = ['CSS', 'Javascript', 'HTML']
-let name = 'Tiago'
+
+console.log(techList(['CSS', 'Tiago']))
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
