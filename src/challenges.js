@@ -66,20 +66,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let fizzBuz = [];
   for (i in array) {
     if (array[i] % 3 === 0) {
       if (array[i] % 5 === 0) {
-        array[i] = "fizzbuzz";
+        fizzBuz.push("fizzbuzz");
       } else {
-      array[i] = "fizz";
+      fizzBuz.push("fizz");
       }
     } else if (array[i] % 5 === 0) {
-      array[i] = "buzz";
+      fizzBuz.push("buzz");
     } else {
-      array[i] = "bug!";
+      fizzBuz.push("bug!");
     }
   }
-  return array
+  return fizzBuz;
 }
 
 // Desafio 9
