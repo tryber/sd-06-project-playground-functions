@@ -54,16 +54,16 @@ function catAndMouse() {//cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numeros) {
-  let resposta  = '';
-  for (let i = 0; i <= numeros; i += 1) {
+  let resposta = '';
+  for (let i = 0; i <= numeros.length; i += 1) {
     if (i % 3 === 0) {
-      resposta = 'fizz';
+      resposta = 'fizz' += 1;
     } else if (i % 5 === 0) {
-      resposta = 'buzz';
+      resposta = 'buzz' += 1;
     } else if (i % 3 === 0 && i % 5 === 0) {
-      resposta = 'fizzBuzz';
+      resposta = 'fizzBuzz' += 1;
     } else {
-      resposta = 'bug!';
+      resposta = 'bug!' += 1;
     }
   }
   return resposta;
