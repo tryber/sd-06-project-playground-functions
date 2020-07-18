@@ -41,9 +41,8 @@ console.log(concatName(arr))
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (wins*3) + ties; 
-  return pontos
-  // seu código aqui
+let pontos = (wins *3) + ties;
+return pontos
 }
 
 console.log(footballPoints(3, 1))
@@ -53,16 +52,16 @@ function highestCount(arr2) {
   let highestNumber = arr2[0];
 
   for (let index = 0; index < arr2.length; index += 1) {
-      if (arr2[index] > highestNumber) {
-      highestNumber = arr2[index];
-      }
+    if (arr2[index] > highestNumber) {
+    highestNumber = arr2[index];
+    }
   }
 
   let count = 0;
   for (let index = 0; index < arr2.length; index += 1) {
-  if (highestNumber === arr2[index]) {
-      count += 1;
-    }
+    if (highestNumber === arr2[index]) {
+    count += 1;
+  }
   }
 
   return count;
@@ -75,15 +74,13 @@ console.log(highestCount(array));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(cat1-mouse) < Math.abs(cat2-mouse)) {
-  return'cat1';
-} else if (Math.abs(cat1-mouse) > Math.abs(cat2-mouse)) {
-  return'cat2';
-} else { 
-    return'os gatos trombam e o rato foge'
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+  return 'cat1';
+ } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+  return 'cat2';
+ } return 'os gatos trombam e o rato foge'
 }
-}
-console.log(catAndMouse(0, 20, 10))
+console.log(catAndMouse(0, 20, 20))
 
 
 // Desafio 8
@@ -100,19 +97,63 @@ function fizzBuzz(arrei) {
       novoarrei.push('buzz');
     } else {
       novoarrei.push('bug!');
-    }} 
- return(novoarrei);
+    }
+  }
+   return(novoarrei);
 }
-arr3 = [2, 15, 7, 9, 45];
+let arr3 = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(arr3));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(arrei) {
+  let novoarrei = [];
+  for (let index = 0; index < arrei.length; index += 1) {
+    if (arrei[index] === 'a') {
+      novoarrei[index]= '1';
+    }
+    else if (arrei[index] === 'e') {
+      novoarrei[index]= '2';
+    }
+    else if (arrei[index] === 'i') {
+      novoarrei[index]= '3';
+    }else if (arrei[index] === 'o') {
+      novoarrei[index]= '4';
+    }
+    else if (arrei[index] === 'u') {
+      novoarrei[index]= '5';
+    } else {
+      novoarrei[index] = arrei[index];
+    }
+  } 
+ return (novoarrei.join(''));
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode('hi there!'))
+
+function decode(arrei) {
+  let novoarrei = [];
+  for (let index = 0; index < arrei.length; index += 1) {
+    if (arrei[index] === '1') {
+      novoarrei[index]= 'a';
+    }
+    else if (arrei[index] === '2') {
+      novoarrei[index]= 'e';
+    }
+    else if (arrei[index] === '3') {
+      novoarrei[index]= 'i';
+    }else if (arrei[index] === '4') {
+      novoarrei[index]= 'o';
+    }
+    else if (arrei[index] === '5') {
+      novoarrei[index]= 'u';
+    } else {
+      novoarrei[index] = arrei[index];
+    }
+  } 
+ return (novoarrei.join(''));
 }
+
+console.log(decode('h3 th2r2!'))
 
 // Desafio 10
 function techList() {
