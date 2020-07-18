@@ -174,11 +174,11 @@ array.sort()
   
   }
 } else {
-  console.log("Vazio!")
+objeto = "Vazio!"
 }
 return objeto
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Bruna"))
+console.log(techList([], "Bruna"))
 
 
 // Desafio 11
