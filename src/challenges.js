@@ -167,6 +167,10 @@ function techList(arrayOfTechs, name) {
     arrayOfObjects.push(person);
   }
 
+  if (arrayOfObjects.length === 0) {
+    return 'Vazio!';
+  }
+
   return arrayOfObjects;
 }
 
