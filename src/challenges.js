@@ -88,60 +88,55 @@ function fizzBuzz(fizzBuzzNumbers) {
 }
 
 // Desafio 9
-function encode(decodedString) {
-  let encoded = '';
+function encodeDecodeCore(string) {
+  let processedString = '';
 
-  for (let i = 0; i < decodedString.length; i += 1) {
-    switch (decodedString[i]) {
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
       case 'a':
-        encoded += '1';
+        processedString += '1';
         break;
       case 'e':
-        encoded += '2';
+        processedString += '2';
         break;
       case 'i':
-        encoded += '3';
+        processedString += '3';
         break;
       case 'o':
-        encoded += '4';
+        processedString += '4';
         break;
       case 'u':
-        encoded += '5';
+        processedString += '5';
+        break;
+      case '1':
+        processedString += 'a';
+        break;
+      case '2':
+        processedString += 'e';
+        break;
+      case '3':
+        processedString += 'i';
+        break;
+      case '4':
+        processedString += 'o';
+        break;
+      case '5':
+        processedString += 'u';
         break;
       default:
-        encoded += decodedString[i];
+        processedString += string[i];
     }
   }
 
-  return encoded;
+  return processedString;
+}
+
+function encode(decodedString) {
+  return encodeDecodeCore(decodedString);
 }
 
 function decode(encodedString) {
-  let decoded = '';
-
-  for (let i = 0; i < encodedString.length; i += 1) {
-    switch (encodedString[i]) {
-      case '1':
-        decoded += 'a';
-        break;
-      case '2':
-        decoded += 'e';
-        break;
-      case '3':
-        decoded += 'i';
-        break;
-      case '4':
-        decoded += 'o';
-        break;
-      case '5':
-        decoded += 'u';
-        break;
-      default:
-        decoded += encodedString[i];
-    }
-  }
-
-  return decoded;
+  return encodeDecodeCore(encodedString);
 }
 
 // Desafio 10
