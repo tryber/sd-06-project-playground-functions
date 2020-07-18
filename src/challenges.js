@@ -47,25 +47,34 @@ function highestCount(ArrayDeNum) {
   return contador; 
 }
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+    let distanciaCat1 = Math.abs(mouse - cat1);
+    let distanciaCat2 = Math.abs(mouse - cat2);
+    if (distanciaCat1 < distanciaCat2){
+      return "cat1";
+     } else if (distanciaCat1 > distanciaCat2) {
+       return "cat2";
+     } else {
+       return "os gatos trombam e o rato foge";
+     }
 }
 
 // Desafio 8
 function fizzBuzz(n) {
   // seu código aqui
-  for(let i = 1 ; i <= n ; i++){
-  let numero = "";
+  for(let i = 1 ; i <= n ; i++) {
+  
   if(i % 3==0){
-    numero = "fizz"
+    n = "fizz"
   } else if (i % 5==0) {
-    numero = "buzz"
+    n = "buzz"
   } else if (i % 3==0 && i % 3==0) {
-    numero = "fizzbuzz"
+    n = "fizzbuzz"
   } else {
-    numero = i
+    n = i
   }
-  return numero
+  return n
   }
 }
 // Desafio 9
