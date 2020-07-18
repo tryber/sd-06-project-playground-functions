@@ -89,13 +89,9 @@ function fizzBuzz(numbers) {
   for (let i = 0; i < numbers.length; i += 1) {
     if (isDivisibleByThree(numbers[i]) && isDivisibleByFive(numbers[i])) {
       fizzBuzzArray.push('fizzBuzz');
-    }
-    
-    if (isDivisibleByFive(numbers[i]) && !isDivisibleByThree(numbers[i])) {
+    } else if (isDivisibleByFive(numbers[i]) && !isDivisibleByThree(numbers[i])) {
       fizzBuzzArray.push('buzz');
-    }
-    
-    if (isDivisibleByThree(numbers[i]) && !isDivisibleByFive(numbers[i])) {
+    } else if (isDivisibleByThree(numbers[i]) && !isDivisibleByFive(numbers[i])) {
       fizzBuzzArray.push('fizz');
     } else {
       fizzBuzzArray.push('bug!');
