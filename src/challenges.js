@@ -101,7 +101,7 @@ function encode(string) {
       case'i':
         encodeArray[index] = 3
         break ;
-      case'o': 
+      case'o':
         encodeArray[index] = 4
         break;
       case'u':
@@ -146,13 +146,13 @@ function techList(tech, name) {
   let listaOrdenada = tech.sort()
   let listaDeObjetos = []
   for (let i=0; i<tech.length; i+=1) {
-    listaDeObjetos.push {
-      tech: tech [i],
-      name: name, }
-  }
+  //   listaDeObjetos.push {
+  //     tech: tech [i],
+  //     name: name,
+  // }
   return listaDeObjetos
 }
-let tech = ['CSS', 'Java', 'Phyton']
+let tech = ['CSS', 'Javascript', 'HTML']
 let name = 'Tiago'
 
 
@@ -162,7 +162,6 @@ function generatePhoneNumber(numbers) {
   // seu código aqui
   if (numbers.length != 11) {
     return "Array com tamanho incorreto." }
-  
   for (let i of numbers) {
     if (i < 0 || i > 10) {
       return "não é possível gerar um número de telefone com esses valores"
