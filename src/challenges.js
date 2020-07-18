@@ -155,8 +155,35 @@ function techList(techList, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(number) {
+  let cont = 0;
+  let numberFormat = '(';
+  if(number.length !== 11){
+    return "Array com tamanho incorreto.";
+  }
+  for(let i = 0; i < number.length; i += 1){
+    if(i === 2){
+      numberFormat += ')' + number[i];
+    }else
+    if(i === 7){
+      numberFormat += '-' + number[i];
+    }else{
+      numberFormat += number[i]
+    }
+    if(number[i] < 0 || number[i] > 9){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    for(let l = 0; l < number.length; l += 1){
+      if(number[i] === number[l]){
+        cont +=1;
+      }
+    }
+    if(cont > 2){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    cont = 0;
+  }
+  return numberFormat;
 }
 
 // Desafio 12
@@ -191,7 +218,7 @@ console.log('Exercício 9: ' + decode('h3 th2r2!'));
 
 console.log('Exercício 10: ' + techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Vagner"));
 
-console.log('Exercício 11: ' );
+console.log('Exercício 11: ' + generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 console.log('Exercício 12: ' );
 
