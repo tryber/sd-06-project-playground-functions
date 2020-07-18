@@ -181,27 +181,19 @@ function mostOccurrences(verifiedNumber, numbers) {
   return counter;
 }
 
+function isNumberInRange(number) {
+  return number < 0 || number > 9;
+}
+
 function generatePhoneNumber(possibleNumber) {
   if (possibleNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
-  let invalidInput = false;
-
   for (let i = 0; i < possibleNumber.length; i += 1) {
-    if (possibleNumber[i] < 0 || possibleNumber[i] > 9) {
-      invalidInput = true;
-      break;
+    if (isNumberInRange(possibleNumber[i]) || mostOccurrences(possibleNumber[i], possibleNumber) >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
-
-    if (mostOccurrences(possibleNumber[i], possibleNumber) >= 3) {
-      invalidInput = true;
-      break;
-    }
-  }
-
-  if (invalidInput) {
-    return 'não é possível gerar um número de telefone com esses valores';
   }
 
   let phoneNumber = `(${possibleNumber[0]}${possibleNumber[1]}) `;
