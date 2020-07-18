@@ -185,6 +185,20 @@ function isNumberInRange(number) {
   return number < 0 || number > 9;
 }
 
+function buildPhoneNumber(possibleNumber) {
+  let phoneNumber = `(${possibleNumber[0]}${possibleNumber[1]}) `;
+
+  for (let i = 2; i < possibleNumber.length; i += 1) {
+    if (i === 6) {
+      phoneNumber += `${possibleNumber[i]}-`;
+    } else {
+      phoneNumber += possibleNumber[i];
+    }
+  }
+
+  return phoneNumber;
+}
+
 function generatePhoneNumber(possibleNumber) {
   if (possibleNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -197,17 +211,7 @@ function generatePhoneNumber(possibleNumber) {
     }
   }
 
-  let phoneNumber = `(${possibleNumber[0]}${possibleNumber[1]}) `;
-
-  for (let i = 2; i < possibleNumber.length; i += 1) {
-    if (i === 6) {
-      phoneNumber += `${possibleNumber[i]}-`;
-    } else {
-      phoneNumber += possibleNumber[i];
-    }
-  }
-
-  return phoneNumber;
+  return buildPhoneNumber(possibleNumber);
 }
 
 // Desafio 12
