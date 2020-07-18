@@ -218,7 +218,7 @@ function hydrate(order) {
     glassesOfWater += parseInt(glassesOfAlcoholicDrinks[glasses]);
   }
 
-  return `${glassesOfWater} copos de água`;
+  return glassesOfWater <= 1 ? `${glassesOfWater} copo de água` : `${glassesOfWater} copos de água`;
 }
 
 module.exports = {
