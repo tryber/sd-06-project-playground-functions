@@ -67,20 +67,17 @@ function fizzBuzz(arrayNumbers) {
   // seu código aqui
   let fb = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    fb.push(fizzb(arrayNumbers[index]));
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+      fb.push('fizzBuzz');
+    } else if (arrayNumbers[index] % 3 === 0) {
+      fb.push('fizz');
+    } else if (arrayNumbers[index] % 5 === 0) {
+      fb.push('buzz');
+    } else {
+      fb.push('bug!');
+    }
   }
   return fb;
-}
-function fizzb(number){
-  if (number % 3 === 0 && number % 5 === 0) {
-    return 'fizzBuzz';
-  } else if (number % 3 === 0) {
-    return 'fizz';
-  } else if (number % 5 === 0) {
-    return 'buzz';
-  } else {
-    return 'bug!';
-  }
 }
 
 // Desafio 9
