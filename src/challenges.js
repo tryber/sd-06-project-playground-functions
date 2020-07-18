@@ -30,11 +30,11 @@ console.log(resultSplit);
 
 
 // Desafio 4
-let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName() {
+  let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
   return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + ", " + arrayNomes[0];
 }
-// console.log(concatName());
+console.log(concatName());
 
 // Desafio 5
 function footballPoints(ties, wins) {
