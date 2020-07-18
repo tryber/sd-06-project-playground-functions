@@ -152,7 +152,7 @@ function decode(strEntry) {
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
-  if (tech == []) {
+  if (tech == '') {
     return 'Vazio!';
   } else {
     let str = [];
