@@ -53,7 +53,7 @@ function highestCount(numbers) {
       occurrences += 1;
     }
   }
-  
+
   return occurrences;
 }
 
@@ -137,13 +137,13 @@ function techList(techList, name) {
   if (techList.length === 0) {
     return 'Vazio!';
   }
-  
+
   const objectList = [];
   techList.sort();
 
   for (let i = 0; i < techList.length; i += 1) {
     const tech = techList[i];
-    objectList.push({tech, name});
+    objectList.push({ tech, name });
   }
 
   return objectList;
@@ -173,7 +173,7 @@ function generatePhoneNumber(possibleNumber) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-    
+
   let phoneNumber = `(${possibleNumber[0]}${possibleNumber[1]}) `;
 
   for (let i = 2; i < possibleNumber.length; i++) {
@@ -182,7 +182,6 @@ function generatePhoneNumber(possibleNumber) {
     } else {
       phoneNumber += possibleNumber[i];
     }
-    
   }
 
   return phoneNumber;
@@ -190,7 +189,7 @@ function generatePhoneNumber(possibleNumber) {
 
 function mostOccurrences(verifiedNumber, numbers) {
   let counter = 0;
-  
+
   numbers.forEach((value) => (value === verifiedNumber && counter++));
 
   return counter;
@@ -199,7 +198,7 @@ function mostOccurrences(verifiedNumber, numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    return true;    
+    return true;
   } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     return true;
   } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
