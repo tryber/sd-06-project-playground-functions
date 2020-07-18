@@ -227,8 +227,34 @@ function generatePhoneNumber(param) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let resultado = false;
+  let diferencaABcomC = 0;
+  let diferencaACcomB = 0;
+  let diferencaBCcomA = 0;
+
+  if (lineA > lineB) {
+    diferencaABcomC = lineA - lineB;
+  } else {
+    diferencaABcomC = lineB - lineA;
+  }
+  if (lineA > lineC) {
+    diferencaACcomB = lineA - lineC;
+  } else {
+    diferencaACcomB = lineC - lineA;
+  }
+  if (lineB > lineC) {
+    diferencaBCcomA = lineB - lineC;
+  } else {
+    diferencaBCcomA = lineC - lineB;
+  }
+
+  if (Math.abs(diferencaABcomC) < lineC || Math.abs(diferencaACcomB) < lineB || Math.abs(diferencaBCcomA) < lineA) {
+    if ((lineA + lineB) > lineC && (lineA + lineC) > lineB && (lineB + lineC) > lineA) {
+      resultado = true;
+    }
+  }
+  return resultado;
 }
 
 // Desafio 13
