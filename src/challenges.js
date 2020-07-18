@@ -44,9 +44,19 @@ for (let index = 0; index < n.length; index++) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2, mouse) {
+  let dcat1 = mouse - cat1;
+  let dcat2 = mouse - cat2;
+  if (dcat1 < dcat2){
+    return "cat1";
+  } else if (dcat1 > dcat2){
+    return "cat2"
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 }
+
+
 
 // Desafio 8
 function fizzBuzz() {
