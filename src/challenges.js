@@ -76,20 +76,24 @@ function fizzBuzz(arrayNumber) {
 
 // Desafio 9
 function encode(string) {
-  
-  for(let i = 0; i < string.length-1; i++){
-    if (string[i] === "a"){
-      string[i] = "1";
-    } else if(string[i] === "e"){
-      string[i] = "2"
-    } else if(string[i] === "i"){
-      string[i] = "3"
-    } else if(string[i] === "o"){
-      string[i] = "4"
-    } else if(string[i] === "u"){
-      string[i] = "5"
-    }
+  let codedString = "";
+  for(let i = 0; i < string.length; i++){
+      if (string[i] == "a"){
+        codedString += "1";
+      } else if(string[i] == "e"){
+        codedString += "2";
+      } else if(string[i] == "i"){
+        codedString += "3";
+      } else if(string[i] == "o"){
+        codedString += "4";
+      } else if(string[i] == "u"){
+        codedString += "5";
+      } else{
+        codedString += string[i];
+      }
   }
+  return codedString;
+  
 }
 function decode() {
   // seu código aqui
