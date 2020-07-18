@@ -11,8 +11,7 @@ let b = true;
 let resultado = compareTrue(a, b);
 console.log(resultado);
 
-// Desafio 2
-// Área do triângulo
+// Desafio 2 -  Área do triângulo
 
 function calcArea(base, altura) {
   return ((base * altura) / 2);
@@ -34,9 +33,11 @@ Escreva uma função com o nome concatName que, ao receber uma array de strings,
 Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
  */
 function concatName(){
-
+ return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + "," + arrayNomes[0];
 }
-
+let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+concatenarNomes = concatName(arrayNomes);
+console.log(concatenarNomes);
 
 // Desafio 5 - Pontos no futebol
 function footballPoints(wins, ties) {
@@ -58,14 +59,7 @@ return numcontMaior;
 }
 
 
-// Desafio 7
-/* Caça ao rato
-Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que ambos estão atrás de um rato chamado mouse. Imagine que cada um dos três
- animais está em uma posição representada por um número.
-Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e os gatos
-e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto).
-Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1 esteja a 3 unidades, sua função deverá retornar cat2.
-Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string "os gatos trombam e o rato foge". */
+// Desafio 7 -  Caça ao rato
 
 function catAndMouse(mouse, cat1, cat2) {
    let positioncat1 = Math.abs(cat1 - mouse);
@@ -92,9 +86,19 @@ Caso o número seja divisível por 3 ou 5, retorne a string "fizzBuzz";
 Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
 Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz" */
 
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayFizBuz) {
+  let resultadoFizBuz;
+for (let indFuBu in arrayFizBuz){
+  if(((arrayFizBuz % 3) === 0) && ((arrayFizBuz % 5) === 0)){
+    arrayFizBuz = 'fizzBuzz';
+    console.log(arrayFizBuz);
+  }
 }
+return(resultadoFizBuz);
+}
+arrayFizBuz = [2, 15, 7, 9, 45];
+resultadoFizBuz = fizzBuzz(arrayFizBuz);
+console.log(resultadoFizBuz);
 
 // Desafio 9
 /* Codifique e Decodifique
@@ -185,10 +189,7 @@ Para obter o valor absoluto de um número em JavaScript, pesquise pela função 
 O retorno da sua função deverá ser um booleano.
 Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true */
 
-function triangleCheck() {
-let lineA;
-let lineB;
-let lineC;
+
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)){
     return true;
@@ -199,9 +200,8 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-
-}
  desafio = triangleCheck(1,2,2);
+console.log(desafio);
 
 // Desafio 13
 /* Bem vindo ao Bar da Trybe!
