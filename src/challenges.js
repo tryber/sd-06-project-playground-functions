@@ -210,10 +210,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(order) {
+  let glassesOfWater = 0;
+  const glassesOfAlcoholicDrinks = order.match(/\d+/g);
 
+  for (const glasses in glassesOfAlcoholicDrinks) {
+    glassesOfWater += parseInt(glassesOfAlcoholicDrinks[glasses]);
+  }
+
+  return glassesOfWater;
+}
 
 module.exports = {
   calcArea,
