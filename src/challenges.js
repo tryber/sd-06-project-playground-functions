@@ -21,7 +21,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(array){
-  primeiroUltimo= array[0] + ', ' + array[array.length-1];
+  primeiroUltimo= array[array.length-1] + ', ' + array[0];
   return primeiroUltimo
 }
 
