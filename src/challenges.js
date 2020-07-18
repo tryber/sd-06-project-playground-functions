@@ -19,7 +19,8 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(words) {
-  return (words[0] + ', ' + words[words.length - 1]);
+  result = words[0] + ', ' + words[words.length - 1];
+  return result;
 }
 
 // Desafio 5
@@ -58,7 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   let result = [];
-  function checkNumber(n) {//for (let index = 0; index < n.length; index += 1) {
+  function checkNumber(n) {
     let fiveDivisionResult = n % 5;
     let threeDivisionResult = n % 3;
     if (threeDivisionResult === 0 && fiveDivisionResult === 0) {
@@ -72,6 +73,7 @@ function fizzBuzz(arr) {
     }
   }
   arr.forEach(checkNumber)
+
   return result;
 }
 
