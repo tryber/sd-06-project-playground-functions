@@ -100,43 +100,49 @@ function fizzBuzz(array) {
 // Desafio 9
 
 let code = {
-  a: 1,
-  e: 2,
-  i: 3,
-  o: 4,
-  u: 5,
+  a: '1',
+  e: '2',
+  i: '3',
+  o: '4',
+  u: '5',
 }
 
 function encode(string) {
-  let answer = [];
+  let answer = '';
+  let check = false;
 
   for (let i = 0; i < string.length; i += 1) {
     for (let key in code) {
       if (string[i] === key) {
-        answer.push(code[key]);
+        answer += code[key];
+        check = true;
         break;
-      } else {
-        answer.push(string[i]);
-        break;
-      }
+      } 
     }
+    if (check === false) {
+      answer += string[i];
+    }
+    check = false;
   }
   return answer;
 }
 
 function decode(string) {
-  let answer = [];
-  
+  let answer = '';
+  let check = false;
+
   for (let i = 0; i < string.length; i += 1) {
     for (let key in code) {
       if (string[i] === code[key]) {
-        answer.push(key);
+        answer += key;
+        check = true;
         break;
-      } else {
-        answer.push(string[i]);
-        break;
-      }
+      } 
     }
+    if (check === false) {
+      answer += string[i];
+    }
+    check = false;
   }
   return answer;
 }
@@ -144,10 +150,14 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   let answer = [];
-
-  for (let i = 0; i < array.length; i += 1) {
-    answer.push({ tech: array[i], nome: name, });
-  }
+    
+  if (array.length === 0) {
+      return 'Vazio!';
+  } else {
+      for (let i = 0; i < array.length; i += 1) {
+          answer.push({ tech: array[i], nome: name, });
+        }
+  }  
   return answer;
 }
 
