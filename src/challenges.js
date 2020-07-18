@@ -152,14 +152,13 @@ function techList(nomesTech, nome) {
   // seu código aqui
   let listaTech;
   let techCrescente = nomesTech.sort();
-  let result = {};
+  let result = [];
   for (let i in techCrescente) {
-    listaTech.push(techCrescente[i], nome);
+    result += {
+      tech: techCrescente[i],
+      name: nome
+    }
   }
-  for (let i in listaTech) {
-    result.push(listaTech[i], nome);
-  }
-
   return result;
 }
 
