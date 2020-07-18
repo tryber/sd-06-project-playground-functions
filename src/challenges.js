@@ -88,19 +88,19 @@ function encode(string1) {
   for (let cont = 0; cont < string1.length; cont ++) {
     switch(string1[cont]) {
       case 'a':
-        newArrayEncode.push("1");
+        newArrayEncode.push('1');
       break;
       case 'e':
-        newArrayEncode.push("2");
+        newArrayEncode.push('2');
       break;
       case 'i':
-        newArrayEncode.push("3");
+        newArrayEncode.push('3');
       break;
       case 'o':
-        newArrayEncode.push("4");      
+        newArrayEncode.push('4');      
         break;
       case 'u':
-        newArrayEncode.push("5");     
+        newArrayEncode.push('5');     
         break;
     default:
         newArrayEncode.push(string1[cont]);
@@ -111,7 +111,30 @@ function encode(string1) {
 }
 
 function decode(string2) {
-  // seu código aqui
+  let newArrayDecode = [];
+  for (let index = 0; index < string2.length; index ++) {
+    switch(string2[index]) {
+      case '1':
+        newArrayDecode.push('a');
+      break;
+      case '2':
+        newArrayDecode.push('e');
+      break;
+      case '3':
+        newArrayDecode.push('i');
+      break;
+      case '4':
+        newArrayDecode.push('o');      
+        break;
+      case '5':
+        newArrayDecode.push('u');     
+        break;
+    default:
+        newArrayDecode.push(string2[index]);
+    }
+  }
+  newArrayDecode = newArrayDecode.join("");
+  return newArrayDecode;
 }
 
 // Desafio 10
