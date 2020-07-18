@@ -288,10 +288,44 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(str) {
 
+  let int = 0
+  let agua = ""
+  
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] == "0") 
+      int += 0
+    if (str[i] == "1") 
+      int += 1
+    if (str[i] == "2") 
+      int += 2
+    if (str[i] == "3") 
+      int += 3
+    if (str[i] == "4") 
+      int += 4
+    if (str[i] == "5") 
+      int += 5
+    if (str[i] == "6") 
+      int += 6
+    if (str[i] == "7") 
+      int += 7
+    if (str[i] == "8") 
+      int += 8
+    if (str[i] == "9") 
+      int += 9
+  }
+
+  agua = agua + int
+
+  if (int == 1) 
+    agua = agua + " copo de água"
+  if (int > 1 || int == 0)
+    agua = agua + " copos de água"
+
+  return agua
+
+}
 
 module.exports = {
   calcArea,
