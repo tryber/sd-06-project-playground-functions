@@ -206,7 +206,12 @@ function hydrate(bebidas) {
     bebidasNumeros = parseInt(bebidas[i]);
     suma += bebidasNumeros;
   }
-  return suma + ' copos de água';
+  if (suma === 1) {
+    return suma + ' copo de água';  
+  }
+  else {
+    return suma + ' copos de água';
+  }
 }
 
 module.exports = {
