@@ -189,12 +189,19 @@ function generatePhoneNumber(phone) {
   }
   return phoneNumber;
 }
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineC) {
+    if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
+      return true;
+    }
+    return false;
+  }
+  return false;
 }
+
+// console.log(triangleCheck(10, 17, 8));
 
 // Desafio 13
 function hydrate() {
