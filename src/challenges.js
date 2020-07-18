@@ -75,15 +75,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(fizzBuzzNumbers) {
+function isDivisibleByThree(number) {
+  return number % 3 === 0;
+}
+
+function isDivisibleByFive(number) {
+  return number % 5 === 0;
+}
+
+function fizzBuzz(numbers) {
   const fizzBuzzArray = [];
 
-  for (let i = 0; i < fizzBuzzNumbers.length; i += 1) {
-    if (fizzBuzzNumbers[i] % 3 === 0 && fizzBuzzNumbers[i] % 5 === 0) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (isDivisibleByThree(numbers[i]) && isDivisibleByFive(numbers[i])) {
       fizzBuzzArray.push('fizzBuzz');
-    } else if (fizzBuzzNumbers[i] % 5 === 0 && fizzBuzzNumbers[i] % 3 !== 0) {
+    } else if (isDivisibleByFive(numbers[i]) && !isDivisibleByThree(numbers[i])) {
       fizzBuzzArray.push('buzz');
-    } else if (fizzBuzzNumbers[i] % 3 === 0 && fizzBuzzNumbers[i] % 5 !== 0) {
+    } else if (isDivisibleByThree(numbers[i]) && !isDivisibleByFive(numbers[i])) {
       fizzBuzzArray.push('fizz');
     } else {
       fizzBuzzArray.push('bug!');
