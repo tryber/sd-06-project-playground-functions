@@ -171,7 +171,7 @@ function checkIfLessThanZeroOrGreaterThanNine(arr) {
 
 function generatePhoneNumber(arr) {
   if (arr.length !== 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
 
   if (!checkIfRepeatedThreeTimes(arr) || !checkIfLessThanZeroOrGreaterThanNine(arr)) {
@@ -181,8 +181,23 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let diffAB = Math.abs(lineA - lineB);
+  let diffAC = Math.abs(lineA - lineC);
+  let diffBC = Math.abs(lineB - lineC);
+  let check = 0;
+
+  if (diffAB < lineA && lineA < lineB + lineC) {
+    check += 1;
+  }
+  if (diffAC < lineB && lineB < lineA + lineC) {
+    check += 1;
+  }
+  if (diffBC < lineC && lineC < lineB + lineA) {
+    check += 1;
+  }
+
+  return check === 3;
 }
 
 // Desafio 13
