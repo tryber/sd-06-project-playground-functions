@@ -48,20 +48,21 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // let cat1Position, cat2Position;
-  // let cat1Position = cat1 - mouse;
-  // let cat2Position = cat2 - mouse;
-  // if (cat1Position < 0) {
-  //   cat1Position *= (-1);
-  // }
-  // if (cat2Position < 0){
-  //   cat2Position *=(-1);
-  // }
-  // if (cat2Position === cat1Position){
-  //   return "os gatos trombam e o rato foge"
-  // } else if (cat2Position < cat1Position) {
-  //   return cat2
-  // } return cat1
+  let cat1Position = cat1 - mouse;
+  let cat2Position = cat2 - mouse;
+  if (cat1Position < 0) {
+    cat1Position *= (-1);
+  }
+  if (cat2Position < 0){
+    cat2Position *=(-1);
+  }
+  if (cat2Position === cat1Position){
+    return "os gatos trombam e o rato foge"
+  } else if (cat2Position < cat1Position) {
+    return 'cat2';
+  } else {
+    return 'cat1';
+  }
 }
 
 // Desafio 8
