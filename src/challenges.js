@@ -102,7 +102,7 @@ function encode(string) {
     stringArray.push(string[i]);
   }
   for (let i = 0; i < stringArray.length; i += 1) {
-    if (stringArray[i] == 'a') {
+    if (stringArray[i] === 'a') {
       coded += '1';
     } else if (stringArray[i] === 'e') {
       coded += '2';
@@ -118,6 +118,7 @@ function encode(string) {
   }
   return coded;
 }
+console.log(encode("How are you today?"));
 
 function decode(string) {
   let stringArray = [];
@@ -135,13 +136,15 @@ function decode(string) {
     } else if (stringArray[i] === '4') {
       decoded += 'o';
     } else if (stringArray[i] === '5') {
-      decoded += 'e';
+      decoded += 'u';
     } else {
       decoded += stringArray[i];
     }
   }
   return decoded;
 }
+console.log(decode("H4w 1r2 y45 t4d1y?"));
+
 
 // Desafio 10
 function techList() {
