@@ -56,7 +56,15 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
+  let retorno;
+  if ( (cat1 - mouse) < (cat2 - mouse) ){
+      retorno = "cat1";
+    } else if ( (cat1 - mouse) === (cat2 - mouse) ) {
+            retorno = "Gatos trombam e o rato foge";
+          } else {
+                retorno = 'cat2';
+          }
+          return retorno;
 }
 
 // Desafio 8
