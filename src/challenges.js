@@ -202,10 +202,16 @@ function hydrate(string) {
     coposAgua += coposBebida[pos];
   }
 
-  return coposAgua;
+  if (coposAgua === 1) {
+    resultado = coposAgua +  ' copo de água'
+  } else {
+    resultado = coposAgua +  ' copos de água'
+  }
+
+  return resultado;
 }
 
-// console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 
 module.exports = {
