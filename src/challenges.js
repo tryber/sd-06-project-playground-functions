@@ -35,7 +35,7 @@ function highestCount(array2) {
     }
 
     if (array2[i] > maior) {
-      maior = array[i]
+      maior = array2[i]
       count = 1;
     }
   }
@@ -63,7 +63,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distance2 > distance1) {
     return "cat1"
   }
-  
+
   return "os gatos trombam e o rato foge"
 }
 
@@ -73,13 +73,13 @@ function fizzBuzz(array3) {
 
   for (let i=0; i<array3.length; i++) {
 
-    if (array3[i] % 3 == 0 && array3[i] % 5 == 0 ) {
+    if (array3[i] % 3 === 0 && array3[i] % 5 == 0 ) {
       phrase.push("fizzBuzz")
     }
-    else if (array3[i] % 3 == 0) {
+    else if (array3[i] % 3 === 0) {
       phrase.push("fizz")
     }
-    else if (array3[i] % 5 == 0) {
+    else if (array3[i] % 5 === 0) {
       phrase.push("buzz")
     }
     else {
@@ -91,11 +91,33 @@ function fizzBuzz(array3) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  vowels = {"a": 1, "e": 2, "i": 3, "o": 4, "u": 5};
+
+  for (vowel in vowels) {
+    index = string.indexOf(vowel);
+
+    if (index !== -1) {
+      string = string.split(vowel).join(vowels[vowel]);
+    }
+
+  }
+
+  return string;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  numbers = {1: "a", 2: "e", 3: "i", 4: "o", 5: "u"};
+
+  for (number in numbers) {
+    index = string.indexOf(number);
+
+    if (index !== -1) {
+      string = string.split(number).join(numbers[number]);
+    }
+
+  }
+
+  return string;
 }
 
 // Desafio 10
