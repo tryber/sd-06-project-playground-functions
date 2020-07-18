@@ -10,7 +10,6 @@ function compareTrue(param1, param2) {
     }
 }
 
-console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -22,7 +21,7 @@ function calcArea(base, height) {
 
 
 }
-console.log(calcArea(10, 20))
+
 
 // Desafio 3
 function splitSentence(string) {
@@ -89,12 +88,73 @@ function returnHighestNumberCount(maiorNumero, arrayDeNumeros) {
 
 
         // Desafio 7
-        function catAndMouse() {
-            // seu código aqui
+        function catAndMouse(mouse, cat1, cat2) {
+
+
+            let distanciaCat1Mouse = cat1 - mouse;
+            let distanciaCat2Mouse = cat2 - mouse;
+
+
+            if (distanciaCat1Mouse < 0) {
+
+                distanciaCat1Mouse = distanciaCat1Mouse * -1;
+            }
+
+
+            if (distanciaCat2Mouse < 0) {
+
+                distanciaCat2Mouse = distanciaCat2Mouse * -1;
+            }
+
+            if (distanciaCat1Mouse > distanciaCat2Mouse) {
+
+
+                console.log("cat2");
+
+            } else if (distanciaCat2Mouse > distanciaCat1Mouse) {
+
+
+                console.log("cat1");
+
+
+            } else {
+
+
+                console.log("os gatos trombam o rato foge");
+            }
+
+
         }
 
+        catAndMouse(5, 2, 6);
+
+
+
+
+
         // Desafio 8
-        function fizzBuzz() {
+        function fizzBuzz(ArrNumeros) {
+            let ArrNumeros = [];
+
+            if (ArrNumeros[] % 3 === 0) {
+
+                console.log("fizz");
+
+            } else if (ArrNumeros[] % 5 === 0) {
+
+
+                console.log("fizzbuzz");
+
+            } else if (ArrNumeros[] % 5 === 0 || ArrNumeros[] === 0) {
+
+
+                console.log()
+            }
+
+
+
+
+
             // seu código aqui
         }
 
