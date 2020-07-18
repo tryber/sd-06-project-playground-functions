@@ -20,8 +20,9 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array){
+  primeiroUltimo= array[0] + ', ' + array[array.length-1];
+  return primeiroUltimo
 }
 
 // Desafio 5
