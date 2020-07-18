@@ -36,7 +36,6 @@ function splitSentence(string) {
   
 }
 
-splitSentence("go trybe")
 
 // Desafio 4
 function concatName(stringArray) {
@@ -90,15 +89,31 @@ function highestCount(numbersArray) {
   return count;
 }
 
-console.log(highestCount([4, 11, 11, 11, 11, 4, 9, 9, 3, 2]));
-
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = 0;
-  let distanceCat2 = 0;
+  let cat1Distance = 0;
+  let cat2Distance = 0;
 
-  
+  if (cat1 - mouse < 0){
+    cat1Distance = -1 * (cat1 - mouse);
+  } else if (cat1 - mouse >= 0){
+    cat1Distance = cat1 - mouse;
+  }
+
+  if (cat2 - mouse < 0){
+    cat2Distance = -1 * (cat2 - mouse);
+  } else if (cat2 - mouse >= 0){
+    cat2Distance = cat2 - mouse;
+  }
+
+  if (cat1Distance < cat2Distance){
+    return cat1;
+  } else if (cat1Distance === cat2Distance){
+    return "os gatos trombam e o rato foge";
+  } else {
+    return cat2;
+  }
 }
 
 // Desafio 8
