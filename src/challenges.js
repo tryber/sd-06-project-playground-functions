@@ -201,10 +201,13 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(str) {
+  let numbers = str.match(/\d+/g).map(Number);
 
+  let sum = numbers.reduce((accumulator, element) => (accumulator + element));
+
+  return sum > 1 ? `${sum} copos de água` : `${sum} copo de água`;
+}
 
 module.exports = {
   calcArea,
