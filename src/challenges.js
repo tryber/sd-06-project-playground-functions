@@ -185,6 +185,7 @@ function repeticaoNumero(array) {
   return numeroRepetido;
 }
 
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
