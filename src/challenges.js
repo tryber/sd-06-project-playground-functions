@@ -86,16 +86,64 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let encodeArray = string.split("")
+
+  for (let index in encodeArray) {
+    switch(encodeArray[index]) {
+      case 'a': 
+      encodeArray[index] = 1
+      break;
+      case 'e' : 
+      encodeArray[index] = 2
+      break;
+      case 'i' : 
+      encodeArray[index] = 3
+      break ;
+      case 'o' : 
+      encodeArray[index] = 4
+      break;
+      case 'u' : 
+      encodeArray[index] = 5
+      break;
+    }
+  }
+  let encoded = encodeArray.join("");
+  return encoded;
 }
-function decode() {
+
+function decode(encoded) {
   // seu código aqui
+  let decodeArray = encoded.split("")
+
+  for (let index in decodeArray) {
+    switch(decodeArray[index]) {
+      case '1': 
+      decodeArray[index] ='a'
+      break;
+      case '2': 
+      decodeArray[index] = 'e'
+      break;
+      case '3': 
+      decodeArray[index] = 'i'
+      break ;
+      case '4': 
+      decodeArray[index] = 'o'
+      break;
+      case '5': 
+      decodeArray[index] = 'u'
+      break;
+    }
+  }
+  let decoded = decodeArray.join("");
+  return decoded;
 }
 
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
+  tech.sort()
   let listaDeObjetos = []
   for (i=0; i<tech.length; i++) {
     return {
@@ -141,5 +189,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-
