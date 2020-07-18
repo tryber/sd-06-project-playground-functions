@@ -88,29 +88,47 @@ return array2;
 // Desafio 9
 function encode(phrase) {
   let newPhrase1 = "";
-  let newPhrase2 = "";
-  let newPhrase3 = "";
-  let newPhrase4 = "";
-  let newPhrase5 = "";
+  for(let index = 0; index <= phrase.length -1 ; index +=1){
+    if(phrase[index] == 'a'){
+      newPhrase1 += "1";
+    }else if(phrase[index] == 'e'){
+      newPhrase1 += "2";
+    }else if(phrase[index] == 'i'){
+      newPhrase1 += "3";
+    }else if(phrase[index] == 'o'){
+      newPhrase1 += "4";
+    }else if(phrase[index] == 'u'){
+      newPhrase1 += "5";
+    }else{
+      newPhrase1 += phrase[index];
+    }
+  }
   
-  newPhrase1= phrase.replace("a", "1");
-  newPhrase2 = newPhrase1.replace("e", "2");
-  newPhrase3 = newPhrase2.replace("i", "3");
-  newPhrase4 = newPhrase3.replace("o", "4");
-  newPhrase5 = newPhrase4.replace("u", "5");
-  return newPhrase5;
+  return newPhrase1;
 }
 
+
 function decode(phrase) {
-  let newPhrase5 = "";
+  let newPhrase1 = "";
+  for(let index = 0; index <= phrase.length -1 ; index +=1){
+    if(phrase[index] == '1'){
+      newPhrase1 += "a";
+    }else if(phrase[index] == '2'){
+      newPhrase1 += "e";
+    }else if(phrase[index] == '3'){
+      newPhrase1 += "i";
+    }else if(phrase[index] == '4'){
+      newPhrase1 += "o";
+    }else if(phrase[index] == '5'){
+      newPhrase1 += "u";
+    }else{
+      newPhrase1 += phrase[index];
+    }
+  }
   
-  newPhrase1= phrase.replace("1", "a");
-  newPhrase2 = newPhrase1.replace("2", "e");
-  newPhrase3 = newPhrase2.replace("3", "i");
-  newPhrase4 = newPhrase3.replace("4", "o");
-  newPhrase5 = newPhrase4.replace("5", "u");
-  return newPhrase5;
+  return newPhrase1;
 }
+
 
 // Desafio 10
 function techList() {
