@@ -171,7 +171,7 @@ function techList(tech, name) {
 function generatePhoneNumber(numbersArray) {
   // seu código aqui
   if (numbersArray.length != 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   } else {
     let phone = '';
     let i = 0;
@@ -195,7 +195,7 @@ function generatePhoneNumber(numbersArray) {
     if (i == 0){
       phone += '(' + numbersArray[i];  
     } else if (i == 1) {
-      phone += numbersArray[i] + ')';
+      phone += numbersArray[i] + ') ';
     } else if (i == 6) {
       phone += numbersArray[i] + '-';
     } else {
@@ -221,7 +221,6 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-console.log(hydrate("10 cachaça, 5 cervejas e 1 copo de vinho"));
 // Desafio 13
 function hydrate(str) {
   // seu código aqui
