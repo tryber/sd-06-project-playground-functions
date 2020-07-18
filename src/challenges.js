@@ -44,11 +44,11 @@ Escreva uma função com o nome footballPoints que receba o número de vitórias
 e retorne a quantidade de pontos que o time marcou em um campeonato.
 Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto. */
 
-function footballPoints(ties, wins) {
-  let pontuacao = (ties * 1) + (wins * 3);
+function footballPoints(wins, ties) {
+  let pontuacao = (wins * 3) + (ties * 1);
   return pontuacao;
 }
-pontuação = footballPoints(2,3);
+pontuação = footballPoints(3,2);
 console.log(pontuação);
 
 // Desafio 6
