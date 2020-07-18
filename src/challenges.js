@@ -149,7 +149,7 @@ function decode(noVowels) {
     
   for (let i = 0; i < newVowelsNo.length; i+= 1){
    if (newVowelsNo[i]==='1'){
-      newVowels[i]= 'a';
+      newVowelsNo[i]= 'a';
    }else if (newVowelsNo[i]==='2'){
       newVowelsNo[i]= 'e';
    }else if (newVowelsNo[i]==='3'){
