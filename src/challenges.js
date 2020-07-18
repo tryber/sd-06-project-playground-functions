@@ -46,13 +46,25 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse() {//cat1, cat2) {
+  //let numeroCat1 = cat1[0];
+  //let numeroCat2 = cat2[0];
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  for (var i = 1; i <= numeros; i += 1) {
+    if (i % 3 === 0) {
+      console.log('fizz');
+    } else if (i % 5 === 0) {
+      console.log('buzz');
+    } else if (i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzBuzz');
+    } else if (i % 5 !== 0 && i % 3 !== 0) {
+      console.log('bug');
+    }
+  }
 }
 
 // Desafio 9
