@@ -36,15 +36,17 @@ console.log(splitSentence('Me dê papai'));
 
 
 // Desafio 4
-// Receber uma array de strings, retorne uma string com o formato  
+// Receber uma array de strings, retorne uma string com o formato
 // 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
 function concatName(stringDesafio4) {
-  let arrayDesafio4 = stringDesafio4.split(' ');
-  return arrayDesafio4[arrayDesafio4.length-1] + ', ' + arrayDesafio4[0];
+  firstDesafio4 = stringDesafio4[0];
+  lastDesafio4 = stringDesafio4[stringDesafio4.length - 1]
+  separatorDesafio4 = [', ']
+  return lastDesafio4.concat(separatorDesafio4, firstDesafio4);
 }
 
 // console.log('<---- Desafio 4 ---->');
-console.log(concatName('Mais um desafio concluído'));
+console.log(concatName(['Mais', 'um', 'desafio', 'concluído']));
 
 
 // Desafio 5
