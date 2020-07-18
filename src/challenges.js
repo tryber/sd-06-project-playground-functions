@@ -170,7 +170,7 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(numbersArray) {
   // seu código aqui
-  if (numbersArray.length > 11) {
+  if (numbersArray.length != 11) {
     return 'Array com tamanho incorreto';
   } else {
     let phone = '';
