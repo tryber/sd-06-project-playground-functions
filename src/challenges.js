@@ -170,7 +170,7 @@ function generatePhoneNumber(phone) {
         count += 1;
       }
     }
-    if (phone[num1] < 0 || phone[num1] > 9 || (count - 1) >= 3) {
+    if (phone[num1] < 0 || phone[num1] > 9 || count >= 3) {
       return "não é possível gerar um número de telefone com esses valores";
     }
     if (num1 < 2) {
