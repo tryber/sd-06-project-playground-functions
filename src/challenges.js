@@ -61,7 +61,7 @@ function highestCount(lista) {
 // Desafio 7
 function trataNeg(valor) {
   if (valor < 0) {
-    valor = valor * -1;
+    valor = valor * (-1);
   } return valor
 }
 function catAndMouse(mouse, cat1, cat2) {
@@ -75,12 +75,23 @@ function catAndMouse(mouse, cat1, cat2) {
     return ('cat2');
   } return ('os gatos trombam e o rato foge');
 }
-// console.log(catAndMouse(1, 1, 2));
+// console.log(catAndMouse(1, 1, 2)); teste 07
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let respostas = [];
+  for (let indice = 0; indice < numeros.length; indice += 1) {
+    if (numeros[indice] % 3 === 0 && numeros[indice] % 5 === 0) {
+      respostas.push('fizzBuzz');
+    } else if (numeros[indice] % 3 !== 0 && numeros[indice] % 5 !== 0) {
+      respostas.push('bug!');
+    } else if (numeros[indice] % 3 === 0) {
+      respostas.push('fizz!');
+    } else if (numeros[indice] % 5 === 0) {
+      respostas.push('buzz!');
+    }
+  } return respostas
 }
-
+// let n = [2, 15, 7, 9, 45]; console.log(fizzBuzz(n));
 // Desafio 9
 function encode() {
   // seu código aqui
