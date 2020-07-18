@@ -77,9 +77,9 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(meuArray) {
   let resposta = [];
   for (let i = 0; i < meuArray.length; i++) {
-    if ((meuArray[i] % 3 === 0) && (meuArray[i] % 5 !== 0)) {
+    if ((meuArray[i] % 3 === 0) && (meuArray[i] % 5 != 0)) {
       resposta.push('fizz');
-    } else if ((meuArray[i] % 3 !== 0) && (meuArray[i] % 5 === 0)) {
+    } else if ((meuArray[i] % 3 != 0) && (meuArray[i] % 5 === 0)) {
       resposta.push('buzz');
     } else if ((meuArray[i] % 3 === 0) && (meuArray[i] % 5 === 0)) {
       resposta.push('fizzbuzz');
@@ -92,12 +92,12 @@ function fizzBuzz(meuArray) {
 
 // Desafio 9
 function encode(minhaString) {
-  let codifica = minhaString.replace('a', '1').replace('e', '2').replace('i', '3').replace('o', '4').replace('u', '5');
-  return codifica;
+  let codificar = { 'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5' }
+  return minhaString.replace(/[aeiou]/g, m => codificar[m])
 }
 function decode(minhaString) {
-  let descodifica = minhaString.replace('1', 'a').replace('2', 'e').replace('3', 'i').replace('4', 'o').replace('5', 'u');
-  return descodifica;
+  let decodificar = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' }
+  return minhaString.replace(/[aeiou]/g, m => codificar[m]);
 }
 
 // Desafio 10
