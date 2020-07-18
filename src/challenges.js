@@ -221,8 +221,19 @@ let d9 = "aeioua1234523"
 console.log(decode(d9))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arr, name) {
+
+  let newArr = []
+
+  for (let i in arr) {
+    newArr.push({
+      tech: arr[i],
+      name: name
+    })
+  }
+
+  return newArr
+
 }
 
 // Desafio 11
