@@ -170,6 +170,9 @@ function decode(frase) {
 // Desafio 10
 function techList(tecnologias, name) {
   // seu código aqui
+  if (!tecnologias) {
+    return 'Vazio!';
+  }
   tecnologias.sort();
   let novaLista = [];
   for (let i in tecnologias) {
