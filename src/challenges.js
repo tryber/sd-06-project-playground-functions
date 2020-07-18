@@ -161,7 +161,7 @@ function decode(a = 'h3 th2r2!') {
 }
 
 // Desafio 10
-function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Anderson' ) {
+function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lucas' ) {
   i = [];
   for ( x in t ){
     var obj = new Object();
