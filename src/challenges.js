@@ -141,8 +141,13 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let techSort = tech.sort();
+  let tecnologias = [];
+  for(index in techSort){
+    tecnologias.push(techSort[index].t = techSort[index], techSort[index].n = "Vagner");
+  }
+  return tecnologias;
 }
 
 // Desafio 11
@@ -180,7 +185,7 @@ console.log('Exercício 9: ' + encode('hi there!'));
 
 console.log('Exercício 9: ' + decode('h3 th2r2!'));
 
-console.log('Exercício 10: ' );
+console.log('Exercício 10: ' + techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Vagner"));
 
 console.log('Exercício 11: ' );
 
