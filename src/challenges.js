@@ -118,11 +118,47 @@ console.log(fizzBuzz([15, 5, 3, 8]))
 
 // Desafio 9
 function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+  function encode(string) {
+    let result = string.split('')
+     for (let i = 0; i < result.length; i += 1) {
+       if (result[i] === "a") {
+         result[i] = "1";
+       } else if (result[i] === "e") {
+         result[i] = "2";
+       } else if (result[i] === "i") {
+         result[i] = "3";
+       } else if (result[i] === "o") {
+         result[i] = "4";
+       } else if (result[i] === "u") {
+         result[i] = "5";
+       }
+      }
+      let abencoado = result.join('');
+
+return abencoado
+  }
+  console.log(encode("Amo azul"))
+
+  function decode(string) {
+         let result = string.split('')
+          for (let i = 0; i < result.length; i += 1) {
+            if (result[i] === "1") {
+              result[i] = "a";
+            } else if (result[i] === "2") {
+              result[i] = "e";
+            } else if (result[i] === "3") {
+              result[i] = "i";
+            } else if (result[i] === "4") {
+              result[i] = "o";
+            } else if (result[i] === "5") {
+              result[i] = "u";
+            }
+           }
+           let abencoado = result.join('');
+   
+   return abencoado
+       }
+       console.log(decode("Am4 1z5l"))
 
 // Desafio 10
 function techList() {
