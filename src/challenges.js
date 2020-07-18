@@ -76,7 +76,7 @@ function catAndMouse(mouse, cat1, cat2) {
    } else if (positioncat1 < positioncat2) {
      position = "cat1";
    } else {
-    position = " os gatos trombaram e o rato foge ";
+    position = "os gatos trombaram e o rato foge";
    }
    return position;
   }
