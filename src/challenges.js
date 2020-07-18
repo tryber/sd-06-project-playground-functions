@@ -180,11 +180,32 @@ function generatePhoneNumber(numeros) {
     }
     for (let i in numeros) {
       if (numeros[i] < 0 || numeros[i] > 9) {
-        telefone = 'não é possível gerar um número de telefone com esses valores.';
+        telefone = 'não é possível gerar um número de telefone com esses valores';
       }
     }
   } else {
     telefone = "Array com tamanho incorreto."
+  }
+  let repetido = 0;
+  let numero = 0;
+  let iNumero = 0;
+  let number = 0;
+  for (let i in numeros) {
+    let verificaNumero = numeros[i];
+    for (let i2 in numeros) {
+      if (verificaNumero === numeros[i2]) {
+        numero++;
+      }
+    }
+    if (numero > repetido) {
+      repetido = numero;
+      iNumero = i;
+    }
+    numero = 0
+    number = numeros[iNumero];
+  }
+  if (number !== 0) {
+    telefone = 'não é possível gerar um número de telefone com esses valores';
   }
   return telefone;
 }
