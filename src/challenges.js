@@ -141,15 +141,15 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList(tech, name) {
-  if (tech.length === 0) {
+function techList(techList, name) {
+  if (techList.length === 0) {
     return 'Vazio!';
   }
-  const tecnologias = [];
-  tech.sort();
-  for (index in tech) {
-    let t = tech[index];
-    tecnologias.push({ t, name });
+  let tecnologias = [];
+  techList.sort();
+  for (index in techList) {
+    let tech = techList[index];
+    tecnologias.push({ tech, name });
   }
   return tecnologias;
 }
