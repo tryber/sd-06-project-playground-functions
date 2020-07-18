@@ -136,12 +136,32 @@ function fizzBuzz(numbersArray) {
   return returnedArray;
 }
 
-fizzBuzz ([2, 15, 7, 9, 45]);
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(messageToBeCoded) {
+  returnedString = "";
+  let codingLetters = ["a", "e", "i", "o", "u"]; 
+  let codingNumbers = [1, 2, 3, 4, 5];
+  let codedCharacter = ""
+
+  for (index in messageToBeCoded){
+    for (internIndex in codingLetters){
+      if (messageToBeCoded[index] !== codingLetters[internIndex]){
+        codedCharacter = messageToBeCoded[index];
+      } else if (messageToBeCoded[index] === codingLetters[internIndex]){
+        codedCharacter = codingNumbers[internIndex];
+        break
+      }
+    }
+    returnedString += codedCharacter;
+    codedCharacter = "";
+  }
+
+  return returnedString;
 }
+
+encode("hi there!");
+
+
 function decode() {
   // seu código aqui
 }
