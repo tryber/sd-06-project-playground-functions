@@ -14,7 +14,7 @@ function calcArea(base, height) {
   return ((base * height) / 2);
 }
 
-// Desafio 3
+// Desafio 3 - OK
 function splitSentence(stringRecebida) {
   // seu código aqui
   resultado = stringRecebida.split(" ");
@@ -36,10 +36,26 @@ function footballPoints(wins, ties) {
   return ((wins * 3) + ties);
 }
 
-// Desafio 6
+// Desafio 6 - Em andamento
 function highestCount(numbers) {
   // seu código aqui
+  let maiorNumero = 0;
+  for (let i = 0; i < numbers.length; i = i + 1) {
+    if (numbers[i] > maiorNumero) {
+      maiorNumero = numbers[i];
+    }
+  }
+
+  let contador = 0;
+  for (let i = 0; i < numbers.length; i = i + 1) {
+    if (numbers[i] === maiorNumero) {
+      contador = contador + 1;
+    }
+  }
+  return contador;
 }
+
+
 
 // Desafio 7 - OK
 function catAndMouse(mouse, cat1, cat2) {
@@ -121,4 +137,3 @@ module.exports = {
   triangleCheck,
 }
 
-console.log(splitSentence("go Trybe"))
