@@ -204,6 +204,8 @@ function generatePhoneNumber(phoneArray) {
 
       if (counter >= 3) {
         return true;
+      } else {
+        counter = 0;
       }
     }
 
@@ -233,7 +235,7 @@ function generatePhoneNumber(phoneArray) {
   return '(' + ddd + ') ' + firstFive + '-' + lastFive;
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 //(12) 34567-8901
 
 // Desafio 12
