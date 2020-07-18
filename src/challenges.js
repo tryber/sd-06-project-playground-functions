@@ -1,9 +1,7 @@
-// Desafio 1 .
+// Desafio 1
 function compareTrue(param1, param2) {
   // seu código aqui
-  if (param1 && param2) {
-    return true;
-  }
+  return param1 && param2;
 }
 
 // Desafio 2
@@ -178,7 +176,7 @@ function decode(frase) {
 // Desafio 10
 function techList(tecnologias, name) {
   // seu código aqui
-  if (!tecnologias) {
+  if (tecnologias.length == 0) {
     return 'Vazio!';
   }
   tecnologias.sort();
