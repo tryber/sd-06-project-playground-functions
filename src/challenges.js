@@ -160,7 +160,7 @@ function techList(tech, name) {
     for (let i = 0; i < tech.length; i = i + 1) {
       str[i] = {
         tech: tech[i],
-        nome: name,
+        name: name,
       };
     }
     return str;
