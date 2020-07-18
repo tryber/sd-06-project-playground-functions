@@ -218,6 +218,10 @@ function hydrate(string) {
   for (let i = 0; i < array.length; i += 1) {
     soma += parseInt(array[i]);
   }
+
+  if (soma === 1) {
+    return soma + ' copo de água'
+  }
   return soma + ' copos de água'
 }
 
