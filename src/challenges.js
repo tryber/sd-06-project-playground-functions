@@ -58,20 +58,20 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if(cat1 === cat2) {
     return "os gatos trombam e o rato foge"
-  } else if (cat1 > cat2) {
+  } else if (cat1 < cat2) {
     return 'cat1'
   } else {
     return 'cat2'
   }
 }
-
+console.log(catAndMouse(1,0,2))// comparar distancia matematica.
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
   let novo = [];
   for(let i = 0; i < array.length; i++){
       if(array[i]%3 === 0 && array[i]%5 === 0){
-        novo.push("fizzbuzz");
+        novo.push("fizzBuzz");
       } else if(array[i]%5 === 0 && array[i]%3 !== 0) {
         novo.push("buzz");
       } else if(array[i]%3 === 0 && array[i]%5 !== 0) {
