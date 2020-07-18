@@ -58,28 +58,14 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (mouse < 0) {
-    mouse * -1
-  }
-
-  if ( cat1 < 0) {
-    cat1 * -1
-  }
-
-  if (cat2 < 0) {
-    cat2 * -1
-  }
-
-  if ((mouse - cat1) === (mouse - cat2 )) {
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return "os gatos trombam e o rato foge"
-  } else if ((mouse - cat1) < (mouse - cat2 )) {
+  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return "cat1"
-  } else ((mouse - cat1) > (mouse - cat2)); {
+  } else (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)); {
     return "cat2"
   }
 }
-
-console.log(catAndMouse(10, -8, 12))
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -108,9 +94,20 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  let listaDeObjetos = []
+  for (i=0; i<tech.length; i++) {
+    return {
+      tech:tech[i],
+      name:name
+    }
+  }
 }
+let tech = ["CSS", "Java", "Phyton"]
+let name = "Tiago"
+console.log(techList(tech, name))
+
 
 // Desafio 11
 function generatePhoneNumber() {
