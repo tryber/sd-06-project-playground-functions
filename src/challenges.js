@@ -168,8 +168,43 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbersArray) {
   // seu código aqui
+  if (numbersArray.length > 11) {
+    return 'Array com tamanho incorreto';
+  } else {
+    let phone = '';
+    let i = 0;
+    while (i < numbersArray.length) {
+      if (numbersArray[i] < 0 || numbersArray[i] > 9){
+        return 'não é possível gerar um número de telefone com esses valores';
+        break;
+      }
+      let hits = 0;
+      let ii = 0;
+      while(ii < numbersArray.length) {
+        if (numbersArray[ii] - numbersArray[i] == 0) {
+          hits = hits + 1;
+          if (hits > 2) {
+            return 'não é possível gerar um número de telefone com esses valores';
+            break;
+          }
+        }
+      ii++;
+      }
+    if (i == 0){
+      phone += '(' + numbersArray[i];  
+    } else if (i == 1) {
+      phone += numbersArray[i] + ')';
+    } else if (i == 6) {
+      phone += numbersArray[i] + '-';
+    } else {
+      phone += numbersArray[i];
+    }
+    i++;
+    }
+    return phone;
+  }
 }
 
 // Desafio 12
