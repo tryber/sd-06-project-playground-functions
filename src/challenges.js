@@ -19,8 +19,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(words) {
-  result = words[0] + ', ' + words[words.length - 1];
-  return result;
+  return `${words[0]}, ${words[(words.length - 1)]}`;
 }
 
 // Desafio 5
@@ -59,30 +58,43 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   let result = [];
+  function oneOrAnother (fiveModulo, threeModulo){
+    if (threeModulo === 0) {
+      result.push('fizz');
+    } else if (fiveModulo === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+  }
   function checkNumber(n) {
     let fiveDivisionResult = n % 5;
     let threeDivisionResult = n % 3;
     if (threeDivisionResult === 0 && fiveDivisionResult === 0) {
       result.push('fizzBuzz');
-    } else if (threeDivisionResult === 0) {
-      result.push('fizz');
-    } else if (fiveDivisionResult === 0) {
-      result.push('buzz');
     } else {
-      result.push('bug!');
+      oneOrAnother(fiveDivisionResult, threeDivisionResult);
     }
-  }
-  arr.forEach(checkNumber)
-
+  }  
+  arr.forEach(checkNumber);
   return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(s) {
+  s = (s.replace(/a/gi, '1'));
+  s = (s.replace(/e/gi, '2'));
+  s = (s.replace(/i/gi, '3'));
+  s = (s.replace(/o/gi, '4'));
+  s = (s.replace(/u/gi, '5'));
+  return s;
 }
-function decode() {
-  // seu código aqui
+function decode(s) {
+  s = (s.replace(/1/gi, 'a'));
+  s = (s.replace(/2/gi, 'e'));
+  s = (s.replace(/3/gi, 'i'));
+  s = (s.replace(/4/gi, 'o'));
+  s = (s.replace(/5/gi, 'u'));
+  return s;
 }
 
 // Desafio 10
