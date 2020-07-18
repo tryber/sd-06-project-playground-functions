@@ -58,24 +58,45 @@ console.log("Exercicio 6: " + highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  let unidade = 2;
-  let posicaoCat1 = unidade * cat1;
-  let posicaoCat2 = unidade * cat2;
-  let posicaoMouse = unidade * mouse;
-  if ((posicaoCat1 - posicaoMouse) > (posicaoCat2 - posicaoMouse)){
-  return cat2
-  }else if ((posicaoCat1 - posicaoMouse) < (posicaoCat2 - posicaoMouse)){
-    return cat1
+  let dist1 = 0;
+  let dist2 = 0;
+  if(mouse > cat1){
+  dist1=mouse-cat1
+  } else{
+ dist1=cat1-mouse
+ }
+ if(mouse>cat2){
+  dist2=mouse-cat2
+  }else {
+ dist2=cat2-mouse
+  }
+  if(dist1>dist2){
+   return "cat2"
+ } else if(dist2>dist1){
+   return "cat1"
   } else {
     return "os gatos trombam e o rato foge"
   }
 }
-console.log("Exercicio 7: " + catAndMouse(1,2,3))
+console.log("Exercicio 7: " + catAndMouse(10,11,20))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers){
+  let resultado= [];
+  for(i in numbers) {
+    if(numbers[i] % 3 === 0 && numbers[i] % 5 !== 0){
+      resultado.push("Fizz");
+    }else if(numbers[i] % 5 === 0 && numbers[i] % 3 !== 0){
+      resultado.push("Buzz");
+    }else if(numbers[i] % 3 === 0 && numbers[i] % 5 === 0){
+      resultado.push("FizzBuzz");
+    }else{
+     resultado.push("Bug!");
+    }
+  }
+  return resultado;
 }
+console.log("Exercicio 8: " + fizzBuzz([2,15,7,9,45]));
 
 // Desafio 9
 function encode() {
