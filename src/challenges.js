@@ -32,7 +32,7 @@ console.log(resultSplit);
 // Desafio 4
 let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName() {
-  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + "," + arrayNomes[0];
+  return arrayPrimeiroUltimo = (arrayNomes[arrayNomes.length - 1]) + ", " + arrayNomes[0];
 }
 // console.log(concatName());
 
