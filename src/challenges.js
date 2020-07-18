@@ -109,7 +109,7 @@ function encode(decodedString) {
         encoded += '5';
         break;
       default:
-        break;
+        encoded += decodedString[i];
     }
   }
 
