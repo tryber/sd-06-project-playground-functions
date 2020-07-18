@@ -156,12 +156,40 @@ function techList(technologies, user) {
   return learning;
 }
 
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phone) {
+  let count = 0;
+  let phoneNumber = '(';
+  if (phone.length !== 11) {
+    return "Array com tamanho incorreto.";
+  }
+  for (num1 in phone) {
+    count = 0;
+    for (num2 in phone) {
+      if (phone[num1] === phone[num2]) {
+        count += 1;
+      }
+    }
+    if (phone[num1] < 0 || phone[num1] > 9 || (count - 1) >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    if (num1 < 2) {
+      phoneNumber += phone[num1];
+    } else if (num1 == 2) {
+      phoneNumber += ") ";
+      phoneNumber += phone[num1];
+    } else if (num1 > 2 && num1 < 7) {
+      phoneNumber += phone[num1];
+    } else if (num1 == 7) {
+      phoneNumber += '-';
+      phoneNumber += phone[num1];
+    } else {
+      phoneNumber += phone[num1];
+    }
+  }
+  return phoneNumber;
 }
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9]));
 
 // Desafio 12
 function triangleCheck() {
