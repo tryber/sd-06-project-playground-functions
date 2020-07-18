@@ -13,19 +13,21 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  // // let splitPoints = 0;
-  // let sentenceArr = [];
+  let sentenceArr = [];
+  let phraseSplited = "";
 
-  // for (index in phrase) {
-  //   if (phrase[index] === " ") {
-  //     sentenceArr.[index](phrase.slice(splitPoints,index));
-  //     splitPoints = index;
-  //   }
-  //   if (index === phrase.length - 1) {
-  //     sentenceArr.[index](phrase.slice(splitPoints,index));
-  //   }
-  // }
-  // return (sentenceArr);
+  for (let index in phrase) {
+    if (phrase[index] === " ") {
+      sentenceArr.push(phraseSplited);
+      phraseSplited = "";
+    } else {
+      phraseSplited += phrase[index];
+    }
+  }
+  if (phraseSplited !== "") {
+    sentenceArr.push(phraseSplited);
+  }
+  return (sentenceArr);
 }
 
 // Desafio 4 ## DONE!!! ##
@@ -65,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8 
+// Desafio 8 ## DONE!!! ##
 function fizzBuzz(arrayNumbers) {
   let fizzBuzzArr = arrayNumbers;
 
@@ -84,8 +86,6 @@ function fizzBuzz(arrayNumbers) {
   }
   return fizzBuzzArr;
 }
-
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9 ## DONE!!! ##
 function encode(inputStringToEncode) {
