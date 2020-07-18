@@ -161,6 +161,20 @@ console.log(decode("h3 th2r2!"));
 // Desafio 10
 function techList(array, string) {
   // seu código aqui
+  if (tech == '') {
+    return 'Vazio!';
+  } else {
+    let string = [];
+    tech = tech.sort();
+    for (let i = 0; i < tech.length; i += 1) {
+      string[i] = {
+        tech: tech[i],
+        name: name,
+      };
+    }
+    return string;
+  }
+}
   
 }
 
@@ -216,7 +230,7 @@ for(let cont=6;cont<11;cont++){
 return string;
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
