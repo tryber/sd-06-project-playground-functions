@@ -142,13 +142,13 @@ function decode(str) {
 
 // Desafio 10
 function techList(tech, name) {
-  if(tech.length === 0){
+  if (tech.length === 0) {
     return 'Vazio!';
   }
-  tech.sort();
   let tecnologias = [];
-  for(index in tech){
-    let t = tech[index];
+  tech.sort();
+  for (let i = 0; i < tech.length; i += 1) {
+    const t = tech[i];
     tecnologias.push({ t, name });
   }
   return tecnologias;
