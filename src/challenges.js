@@ -121,7 +121,7 @@ function fizzBuzz(myArray) {
 
 
 // Desafio 9
-let text = 'hi there';
+// let text = 'hi there';
 function encode(myText) {
   let result = '';
   for (let i = 0; i < myText.length; i += 1) {
@@ -141,9 +141,9 @@ function encode(myText) {
   }
   return result;
 }
-console.log(encode(text));
+// console.log(encode(text));
 
-let text2 = 'hi there';
+// let text2 = 'hi there';
 function decode(myText) {
   let result = '';
   for (let i = 0; i < myText.length; i += 1) {
@@ -163,13 +163,28 @@ function decode(myText) {
   }
   return result;
 }
-console.log(decode(text2));
+// console.log(decode(text2));
 
 
 // ---------- Desafio 10
-function techList() {
-  // seu código aqui
+// let arr = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// let name = "Ricardo";
+function techList(myArray, myName) {
+  let arrayObj = [];
+  if (myArray.length === 0) {
+    arrayObj = 'Vazio!';
+  } else {
+    for (let item in myArray) {
+      let obj = {
+        tech : myArray[item],
+        name : myName,
+      }
+      arrayObj.push(obj);
+    }
+  }
+  return arrayObj;
 }
+// console.log(techList(arr, name));
 
 // Desafio 11
 function generatePhoneNumber() {
