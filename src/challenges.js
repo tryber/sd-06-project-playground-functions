@@ -113,7 +113,7 @@ function decode(s) {
 // Desafio 10
 function techList(tec, namePassed) {
   if (tec.length === 0) {
-    return Error('Vazio!');
+    return 'Vazio!';
   }
   let result = [];
   let index = 0;
@@ -130,7 +130,7 @@ function techList(tec, namePassed) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numbers) {
   let invalidNumbers = false;
   let nines = 0;
   function checkNumbers(number) {
@@ -140,28 +140,27 @@ function generatePhoneNumber() {
       if (nines === 3) {
         invalidNumbers = true;
       }
-    } else if (number < 0){      
+    } else if (number < 0) {
       invalidNumbers = true;
     }
   }
   if (numbers.length !== 11) {
     return 'Arraycom tamanho incorreto';
+  }
+  numbers.forEach(checkNumbers)
+  if (invalidNumbers) {
+    return 'não é possível gerar um número de telefone com esses valores';
   } else {
-    numbers.forEach(checkNumbers)
-    if (invalidNumbers) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      let result = '';
-      result = `${numbers.slice(0, 2)}`;
-      result += ` ${numbers.slice(2, 7)}`;
-      result += `-${numbers.slice(7, 12)}`
-      return result.replace(/,/g, '');
-    }
+    let result = '';
+    result = `${numbers.slice(0, 2)}`;
+    result += ` ${numbers.slice(2, 7)}`;
+    result += `-${numbers.slice(7, 12)}`
+    return result.replace(/,/g, '');
   }
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(a, b, c) {
   sides = [a, b, c];
   sides.sort((x, y) => x - y)
   if (sides[0] + sides[1] > sides[2]) {
