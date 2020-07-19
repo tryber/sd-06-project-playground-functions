@@ -30,7 +30,8 @@ console.log(resultSplit);
 // Desafio 4 - Concatenação de strings
 
 function concatName(arrayNomes) {
-return arrayPrimeiroUltimo = arrayNomes[arrayNomes.length - 1] + ', ' + arrayNomes[0];
+  let arrayPrimeiroUltimo = arrayNomes[arrayNomes.length - 1] + ', ' + arrayNomes[0];
+  return arrayPrimeiroUltimo ;
 }
 let arrayNomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 let concatenarNomes = concatName(arrayNomes);
@@ -41,20 +42,20 @@ function footballPoints(wins, ties) {
   let pontuacao = (wins * 3) + (ties * 1);
   return pontuacao;
 }
-pontuacao = footballPoints(3, 2);
+let pontuacao = footballPoints(3, 2);
 console.log(pontuacao);
 
 // Desafio 6
 function highestCount(lista) {
-let maior = lista[0];
-for (let indice of lista){
+  let maior = lista[0];
+  for (let indice of lista) {
   if (indice > maior){
     maior = indice;
-    }
   }
-let contador = 0;
-  for (let indice of lista){
-    if (indice === maior){
+  }
+  let contador = 0;
+  for (let indice of lista) {
+    if (indice === maior) {
       contador += 1;
     }
   }
@@ -69,27 +70,27 @@ console.log(highestCount(lista));
 function catAndMouse(mouse, cat1, cat2) {
   let positioncat1 = Math.abs(cat1 - mouse);
   let positioncat2 = Math.abs(cat2 - mouse);
-  let positon;
+  let position;
   if (positioncat1 > positioncat2) {
     position = 'cat2';
   } else if (positioncat1 < positioncat2) {
     position = 'cat1';
   } else {
-  position = 'os gatos trombam e o rato foge';
+    position = 'os gatos trombam e o rato foge';
   }
   return position;
   }
-  catAndMouse(45,30,30);
-  console.log(position);
+catAndMouse(45, 30, 30);
+console.log(position);
 
 // Desafio 8 - FizzBuzz
 let arrayNumeros=[2, 3, 5, 15];
 function fizzBuzz(arrayNumeros) {
 let newArrayNumeros = [];
-  for ( let indice in arrayNumeros ){
+  for (let indice in arrayNumeros ) {
     if (arrayNumeros[indice] % 3 === 0 && arrayNumeros[indice] % 5 === 0) {
       newArrayNumeros[indice] = 'fizzBuzz';
-    } else if(arrayNumeros[indice] % 3 === 0) {
+    } else if (arrayNumeros[indice] % 3 === 0) {
       newArrayNumeros[indice] = 'fizz';
     } else if (arrayNumeros[indice] % 5 === 0) {
       newArrayNumeros[indice] = 'buzz';
@@ -103,45 +104,45 @@ console.log(fizzBuzz(arrayNumeros));
 
 // Desafio 9
 function encode(arrayCode) {
-arrayCode2 = arrayCode.split();
+let arrayCode2 = arrayCode.split();
 let newArrayEncode = [];
-for (let indceCode in arrayCode2){
-  if (arrayCode2[indceCode] == 'a'){
-  newArrayEncode[indceCode] = '1';
-  } else if (arrayCode2[indceCode] == 'e') {
-   newArrayEncode[indceCode] = '2';
-  } else if (arrayCode2[indceCode] == 'i') {
-   newArrayEncode[indceCode] = '3';
-  } else if (arrayCode2[indceCode] == 'o') {
-   newArrayEncode[indceCode] = '4';
-  } else if (arrayCode2[indceCode] == 'u'){
-   newArrayEncode[indceCode] = '5';
-  } else {
-   newArrayEncode[indceCode] = arrayCode2[indceCode];
+ for (let indceCode in arrayCode2) {
+   if (arrayCode2[indceCode] === 'a') {
+     newArrayEncode[indceCode] = '1';
+   } else if (arrayCode2[indceCode] === 'e') {
+     newArrayEncode[indceCode] = '2';
+   } else if (arrayCode2[indceCode] ==='i') {
+     newArrayEncode[indceCode] = '3';
+   } else if (arrayCode2[indceCode] ==='o') {
+     newArrayEncode[indceCode] = '4';
+   } else if (arrayCode2[indceCode] ==='u') {
+     newArrayEncode[indceCode] = '5';
+   } else {
+    newArrayEncode[indceCode] = arrayCode2[indceCode];
   }
-}
-return newArrayEncode;
+ }
+ return newArrayEncode;
 }
 
 function decode(retEncode) {
-  arrayCode2 = retEncode;
-  let newArrayEncode = [];
-  for (let indceCode in arrayCode2){
-    if (arrayCode2[indceCode] == '1'){
+ arrayCode2 = retEncode;
+ let newArrayEncode = [];
+ for (let indceCode in arrayCode2 ){
+  if (arrayCode2[indceCode] == '1') {
     newArrayEncode[indceCode] = 'a';
-    } else if (arrayCode2[indceCode] == '2') {
-     newArrayEncode[indceCode] = 'e';
-    } else if (arrayCode2[indceCode] == '3') {
-     newArrayEncode[indceCode] = 'i';
-    } else if (arrayCode2[indceCode] == '4') {
-     newArrayEncode[indceCode] = 'o';
-    } else if (arrayCode2[indceCode] == '5'){
-     newArrayEncode[indceCode] = 'u';
-    } else {
-     newArrayEncode[indceCode] = arrayCode2[indceCode];
-    }
+  } else if (arrayCode2[indceCode] == '2') {
+    newArrayEncode[indceCode] = 'e';
+  } else if (arrayCode2[indceCode] == '3') {
+    newArrayEncode[indceCode] = 'i';
+  } else if (arrayCode2[indceCode] == '4') {
+    newArrayEncode[indceCode] = 'o';
+  } else if (arrayCode2[indceCode] == '5') {
+    newArrayEncode[indceCode] = 'u';
+  } else {
+    newArrayEncode[indceCode] = arrayCode2[indceCode];
   }
-  return (newArrayEncode);
+ }
+return (newArrayEncode);
 }
 
 let arrayCode = 'hi there!'
@@ -162,11 +163,11 @@ function generatePhoneNumber() {
 
 
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)){
+  if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     return true;
-  }else if(lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)){
+  }else if(lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
     return true;
-  }else if(lineC < Math.abs(lineA + lineB) && lineC > Math.abs(lineA - lineB)){
+  }else if(lineC < Math.abs(lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
     return true;
   }
   return false;
