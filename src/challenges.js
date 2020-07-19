@@ -187,7 +187,7 @@ function generatePhoneNumber(phoneNumber) {
     } else if (i == 6) {
       phone += phoneNumber[i] + "-";
     } else {
-      phone += numbersArray[i];
+      phone += phoneNumber[i];
     }
     i++;
     }
