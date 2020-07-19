@@ -140,8 +140,22 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, nameUser) {
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
+
+  techArray.sort();
+  let newTechArray = [];
+
+  for (let i = 0; i < techArray.length; i += 1) {
+    let object = {
+      tech: techArray[i],
+      name: nameUser,
+    };
+    newTechArray.push(object);
+  }
+  return newTechArray;
 }
 
 // Desafio 11
@@ -150,15 +164,21 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(side1, side2, side3) {
+  if (side1 < side2 + side3 && side1 > Math.abs(side2 - side3)) {
+    return true;
+  } else if (side2 < side1 + side3 && side2 > Math.abs(side1 - side3)) {
+    return true;
+  } else if (side3 < side1 + side2 && side3 > Math.abs(side1 - side2)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
 function hydrate() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
