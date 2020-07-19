@@ -84,16 +84,16 @@ function fizzBuzz(numeros) {
 function encode(vogais) {
   let arrayVogais = [];
   for (let i = 0; i < vogais.length; i += 1) {
-    if (vogais[i] = 'a') {
-      arrayVogais[i] += '1';
-    } else if (vogais[i] = 'e') {
-      arrayVogais[i] += '2';
-    } else if (vogais[i] = 'i') {
-      arrayVogais[i] += '3';
-    } else if (vogais[i] = 'o') {
-      arrayVogais[i] += '4';
-    } else if (vogais[i] = 'u') {
-      arrayVogais[i] += '5';
+    if (vogais[i] = a) {
+      arrayVogais[i] += 1;
+    } else if (vogais[i] = e) {
+      arrayVogais[i] += 2;
+    } else if (vogais[i] = i) {
+      arrayVogais[i] += 3;
+    } else if (vogais[i] = o) {
+      arrayVogais[i] += 4;
+    } else if (vogais[i] = u) {
+      arrayVogais[i] += 5;
     }else {
       arrayVogais[i] += arrayVogais[i];
     }
@@ -103,16 +103,16 @@ function encode(vogais) {
 function decode(numeros) {
   let arrayNumeros = [];
   for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] = '1') {
-      arrayNumeros[i] += 'a';
-    } else if (numeros[i] = '2') {
-      arrayNumeros[i] += 'e';
-    } else if (numeros[i] = '3') {
-      arrayNumeros[i] += '1';
-    } else if (numeros[i] = '4') {
-      arrayNumeros[i] += 'o';
-    } else if (numeros[i] = '5') {
-      arrayNumeros[i] += 'u';
+    if (numeros[i] = 1) {
+      arrayNumeros[i] += a;
+    } else if (numeros[i] = 2) {
+      arrayNumeros[i] += e;
+    } else if (numeros[i] = 3) {
+      arrayNumeros[i] += 1;
+    } else if (numeros[i] = 4) {
+      arrayNumeros[i] += o;
+    } else if (numeros[i] = 5) {
+      arrayNumeros[i] += u;
     }else {
       arrayNumeros[i] += arrayNumeros[i];
     }
