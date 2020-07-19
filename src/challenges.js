@@ -169,11 +169,11 @@ function generatePhoneNumber(phoneArray) {
       }
     }
   }
-  if (repeatcounter > 3) {
+  if (repeatcounter >= 3) {
     return "não é possível gerar um número de telefone com esses valores"
   }
   for (let index = 0; index < phoneArray.length; index += 1) {
-    if (phoneArray[index] < 0 || phoneArray[index] > 9) {
+    if (phoneArray[index] < 0 && phoneArray[index] > 9) {
       return "não é possível gerar um número de telefone com esses valores"
     }
   }
