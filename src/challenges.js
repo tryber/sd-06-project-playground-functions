@@ -40,11 +40,11 @@ function highestCount(arrayNumbers) {
   let highestNumber = 0;
   for (let i = 0; i <= arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] > highestNumber) {
-          highestNumber = arrayNumbers[i];
-      }
+      highestNumber = arrayNumbers[i];
+    }
   }
   for (let i = 0; i <= arrayNumbers.length; i += 1) {
-      if (arrayNumbers[i] === highestNumber) {
+    if (arrayNumbers[i] === highestNumber) {
         repeat += 1;
       }
   }
@@ -58,17 +58,17 @@ function catAndMouse(mouse, cat1, cat2) {
   if (pos1 < 0) {
     pos1 = pos1 * (-1);
   }
-      if (pos2 < 0) {
-          pos2 = pos2 * (-1);
-        }
+  if (pos2 < 0) {
+    pos2 = pos2 * (-1);
+  }
   if (pos1 === pos2) {
-      return 'os gatos trombam e o rato foge';
-    } else if (pos2 < pos1) {
-        return 'cat2';
-      } else ( pos1 < pos2); {
-            return 'cat1';
-          }
-    }
+    return 'os gatos trombam e o rato foge';
+  } else if (pos2 < pos1) {
+    return 'cat2';
+  } else (pos1 < pos2); {
+    return 'cat1';
+  }
+}
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
@@ -81,7 +81,7 @@ function fizzBuzz(arrayNumbers) {
           } else if ((arrayNumbers[i] % 5) === 0) {
                 arrayFizzBuzz[i] = 'buzz';
             } else {
-                 arrayFizzBuzz[i] = 'bug!';        
+                  arrayFizzBuzz[i] = 'bug!';
               }
       }
     return arrayFizzBuzz;
