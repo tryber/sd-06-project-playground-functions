@@ -44,13 +44,13 @@ function highestCount(array2) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {  
+function catAndMouse(mouse, cat1, cat2) {
 
   let distance = [Math.abs(cat1 - mouse), Math.abs(cat2 - mouse)];
 
   if (distance[0] > distance[1]) {
     return "cat2"
-  } 
+  }
   else if (distance[1] > distance[0]) {
     return "cat1"
   }
@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array3) {
   let phrase = []
 
-  for (let i=0; i<array3.length; i++) {
+  for (let i = 0; i < array3.length; i++) {
 
     if (array3[i] % 3 === 0 && array3[i] % 5 === 0) {
       phrase.push("fizzBuzz");
@@ -96,7 +96,7 @@ function replaceString(string, swap) {
   for (const [key, value] of Object.entries(vowels)) {
 
     swap ? string = string.split(key).join(value) :
-    string = string.split(value).join(key);
+      string = string.split(value).join(key);
 
   }
 
@@ -106,25 +106,51 @@ function replaceString(string, swap) {
 // Desafio 10
 function techList(array, string) {
 
-  let technology = [];
-
-  if (array.length !== 0) {
-    array.sort().forEach(item => {
-      technology.push({tech: item, name: string})
-    });
-
-  } 
-  else {
+  if (array.length === 0) {
     return "Vazio!";
   }
- 
-  return technology;
 
+  let technology = [];
+
+  array.sort().forEach(item => {
+    technology.push({ tech: item, name: string })
+  });
+
+  return technology;
 }
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  if (number.length !== 11) {
+    return "Array com tamanho incorreto."
+  }
+
+  let count = {};
+  let phoneNumber = "(";
+
+  for (i = 0; i < number.length; i += 1) {
+    count[number[i]] = (count[number[i]] || 0) + 1;
+
+    if (count[number[i]] > 2 || number[i] < 0 || number[i] > 9) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
+
+  function makeNumber(element, index) {
+    if (index === 2) {
+      phoneNumber += ')';
+      phoneNumber += ' ';
+    }
+    else if (index === 7) {
+      phoneNumber += '-';
+    }
+
+    phoneNumber += String(element);
+  }
+
+  number.forEach(makeNumber);
+
+  return phoneNumber;
 }
 
 // Desafio 12
@@ -142,7 +168,13 @@ function triangleCheck(sideA, sideB, sideC) {
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+
+  let number = (string.match(/\d+/g) || []).map(n => parseInt(n));
+  number = number.reduce((a, b) => a + b, 0);
+
+  return number > 1 ? `${number} copos de água` :
+  `${number} copo de água`;
+
 }
 
 
