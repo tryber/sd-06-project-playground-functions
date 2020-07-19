@@ -136,7 +136,6 @@ function generatePhoneNumber(numbers) {
   function checkNumbers(number) {
     if (number === 9) {
       nines += 1;
-      console.log(nines, number);
       if (nines === 3) {
         invalidNumbers = true;
       }
@@ -150,24 +149,22 @@ function generatePhoneNumber(numbers) {
   numbers.forEach(checkNumbers)
   if (invalidNumbers) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    let result = '';
-    result = `${numbers.slice(0, 2)}`;
-    result += ` ${numbers.slice(2, 7)}`;
-    result += `-${numbers.slice(7, 12)}`
-    return result.replace(/,/g, '');
   }
+  let result = '';
+  result = `${numbers.slice(0, 2)}`;
+  result += ` ${numbers.slice(2, 7)}`;
+  result += `-${numbers.slice(7, 12)}`
+  return result.replace(/,/g, '');
 }
 
 // Desafio 12
 function triangleCheck(a, b, c) {
-  sides = [a, b, c];
-  sides.sort((x, y) => x - y)
+  let sides = [a, b, c];
+  sides.sort((x, y) => x - y);
   if (sides[0] + sides[1] > sides[2]) {
     return true;
-  } else {
-    return false;
   }
+  return false;  
 }
 
 // Desafio 13
