@@ -91,20 +91,13 @@ function encDec(phrase) {
       case 'e': newPhrase += '2'; break;
       case 'i': newPhrase += '3'; break;
       case 'o': newPhrase += '4'; break;
-      case 'u':
-        newPhrase += '5'; break;
-      case '1':
-        newPhrase += 'a'; break;
-      case '2':
-        newPhrase += 'e'; break;
-      case '3':
-        newPhrase += 'i'; break;
-      case '4':
-        newPhrase += 'o'; break;
-      case '5':
-        newPhrase += 'u'; break;
-      default:
-        newPhrase += phrase[index];
+      case 'u': newPhrase += '5'; break;
+      case '1': newPhrase += 'a'; break;
+      case '2': newPhrase += 'e'; break;
+      case '3': newPhrase += 'i'; break;
+      case '4': newPhrase += 'o'; break;
+      case '5': newPhrase += 'u'; break;
+      default: newPhrase += phrase[index];
     }
   }
   return newPhrase;
@@ -115,13 +108,25 @@ function encode(sentence) {
   return newSentence;
 }
 function decode(expression) {
-  // seu código aqui denovo
+  // seu código aqui de novo
   return encDec(expression);
 }
 
 // Desafio 10
-function techList() {
+function techList(arrayTech) {
   // seu código aqui
+  if (arrayTech.length === 0) {
+    return 'Vazio!';
+  }
+  arrayTech.sort();
+  let objectTech = [];
+  for (let index = 0; index < arrayTech.length; index++) {
+    objectTech.push({
+        tech: arrayTech[index],
+        name: 'Dilenio', 
+      },);
+  }
+  return objectTech;
 }
 
 // Desafio 11
