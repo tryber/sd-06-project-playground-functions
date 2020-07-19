@@ -57,41 +57,43 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numeros) {
   let result = [];
-  let r = '';
   for (let index in numeros) {
-    if (numeros[index] % 3 === 0) {
-      r += 'fizz';
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 !== 0) {
+      result.push('fizz');
+    } else
+    if (numeros[index] % 3 !== 0 && numeros[index] % 5 === 0) {
+      result.push('buzz');
+    } else
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else {
+      result.push('bug!');
     }
-    if (numeros[index] % 5 === 0) {
-      r += 'buzz';
-    }
-    if (numeros[index] % 5 !== 0 && numeros[index] % 3 !== 0){
-      r += 'bug!';
-    }
-    result.push(r);
-    r = '';
   }
   return result;
 }
+
 // Desafio 9
 function encode(str) {
   let aux = str.split('');
   str = '';
   for (let index in aux) {
-    if (aux[index] === 'a') {
-      aux[index] = '1';
-    } else
-    if (aux[index] === 'e') {
-      aux[index] = '2';
-    } else
-    if (aux[index] === 'i') {
-      aux[index] = '3';
-    } else
-    if (aux[index] === 'o') {
-      aux[index] = '4';
-    } else
-    if (aux[index] === 'u') {
-      aux[index] = '5';
+    switch (aux[index]) {
+      case 'a' :
+        aux[index] = '1';
+        break;
+      case 'e' :
+        aux[index] = '2';
+        break;
+      case 'i' :
+        aux[index] = '3';
+        break;
+      case 'o' :
+        aux[index] = '4';
+        break;
+      case 'u' :
+        aux[index] = '5';
+        break;
     }
     str += aux[index];
   }
