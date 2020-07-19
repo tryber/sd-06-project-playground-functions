@@ -121,14 +121,14 @@ function fizzBuzz(numberD8) {
   let resultDesafio8 = [];
   for (let i = 0; i < numberD8.length; i += 1) {
     if (numberD8[i] % 3 === 0 && numberD8[i] % 5 === 0) {
-    resultDesafio8.push('fizzbuzz');
+      resultDesafio8.push('fizzbuzz');
     } else if (numberD8[i] % 3 === 0) {
       resultDesafio8.push('fizz');
     } else if (numberD8[i] % 5 === 0) {
       resultDesafio8.push('buzz');
     }
-      resultDesafio8.push('bug!');
-    }
+    resultDesafio8.push('bug!');
+  }
   return resultDesafio8;
 }
 
