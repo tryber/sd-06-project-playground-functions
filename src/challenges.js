@@ -19,7 +19,7 @@ function calcArea(base = 0, height = 0)
 
 // Desafio 3
 function splitSentence(astring) {
-  let aarray = [astring.split(' ')];
+  let aarray = astring.split(' ');
   return aarray;
 }
 
