@@ -172,14 +172,16 @@ function decode(numbers) {
 // Desafio 10
 function techList(arrayTechnology,name) {
   let technologyList = arrayTechnology.sort();
-  let techInfo = []
-
+  let techInfo = [];
+  if (technologyList != 0) {
   for (let index in technologyList) {
     let technologyItem = technologyList[index];
     techInfo.push({technologyItem, name});
   }
-
   return techInfo;
+} else {
+  return "vazio"
+}
 }
 
 techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella");
