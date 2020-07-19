@@ -22,7 +22,7 @@ function splitSentence(string) {
 function concatName(array) {
   let ultimoItem = array[array.length - 1];
   let primeiroItem = array[0];
-  let resultado = ultimoItem + ", " + primeiroItem;
+  let resultado = ultimoItem + ', ' + primeiroItem;
   return resultado;
 }
 
@@ -38,26 +38,26 @@ function footballPoints(wins, ties) {
 function highestCount(arrayNumbers) {
   let repeat = 0;
   let highestNumber = 0;
-  for (let i = 0; i <= arrayNumbers.length; i +=1 ) {
-      if (arrayNumbers[i] > highestNumber) {
-          highestNumber = arrayNumbers[i]; 
+  for (let i = 0; i <= arrayNumbers.length; i += 1) {
+    if (arrayNumbers[i] > highestNumber) {
+          highestNumber = arrayNumbers[i];
       }
   }
-  for (let i = 0; i <= arrayNumbers.length; i +=1 ) {
-      if (arrayNumbers[i] == highestNumber) {
-          repeat += 1; 
+  for (let i = 0; i <= arrayNumbers.length; i += 1) {
+      if (arrayNumbers[i] === highestNumber) {
+        repeat += 1;
       }
   }
-    return repeat;
+  return repeat;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let pos1 = mouse - cat1;
   let pos2 = mouse - cat2;
-    if (pos1 < 0) {
-          pos1 = pos1 * (-1);
-      }
+  if (pos1 < 0) {
+    pos1 = pos1 * (-1);
+  }
       if (pos2 < 0) {
           pos2 = pos2 * (-1);
         }
@@ -77,13 +77,13 @@ function fizzBuzz(arrayNumbers) {
       if (((arrayNumbers[i] % 3) === 0) && ((arrayNumbers[i] % 5) === 0)) {
           arrayFizzBuzz[i] = 'fizzBuzz';
       } else if ((arrayNumbers[i] % 3) === 0) {
-            arrayFizzBuzz[i] = 'fizz';    
+            arrayFizzBuzz[i] = 'fizz';
           } else if ((arrayNumbers[i] % 5) === 0) {
-                arrayFizzBuzz[i] = 'buzz';        
+                arrayFizzBuzz[i] = 'buzz';
             } else {
                  arrayFizzBuzz[i] = 'bug!';        
               }
-      } 
+      }
     return arrayFizzBuzz;
   }
 
