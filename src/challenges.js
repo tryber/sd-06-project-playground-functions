@@ -95,7 +95,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let encodedString = "";
-  for (index in string) {
+  for (let index = 0; index < string.length; index += 1) {
     if (string[index] === "a") {
       encodedString += "1";
     }
