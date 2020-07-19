@@ -121,7 +121,7 @@ function fizzBuzz(numberD8) {
   let resultDesafio8 = [];
   for (let i = 0; i < numberD8.length; i += 1) {
     if (numberD8[i] % 3 === 0 && numberD8[i] % 5 === 0) {
-      resultDesafio8.push('fizzbuzz');
+      resultDesafio8.push('fizzBuzz');
     } else if (numberD8[i] % 3 === 0) {
       resultDesafio8.push('fizz');
     } else if (numberD8[i] % 5 === 0) {
@@ -176,7 +176,9 @@ function decode(stringDecode) {
 // Para cada tecnologia no array, crie um objeto
 // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech
 function techList() {
-  // seu código aqui
+  arrayTechList = {
+    tech: 
+  }
 }
 
 // Desafio 11
