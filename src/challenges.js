@@ -193,14 +193,13 @@ function hydrate(drinks) {
   // seu código aqui
   let arrayNumbers = drinks.replace(/[^0-9]/g, '');
   let sum = 0;
-  let text = '';
   for (let index in arrayNumbers) {
     if (sum >= 0) {
       sum += parseInt(arrayNumbers[index], 10);
-      text = (sum === 1 ? ' copo de água' : ' copos de água');
+//      text = (sum === 1 ? ' copo de água' : ' copos de água');
     }
   }
-  return sum + text;
+  return sum + (sum === 1 ? ' copo de água' : ' copos de água');
 }
 
 
