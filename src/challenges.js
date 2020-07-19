@@ -58,7 +58,7 @@ function catAndMouse() {
 // Desafio 8
 function fizzBuzz(numerosArray) {
   // seu código aqui
-  let strArray = [2, 6, 7, 9, 6, 15, 80];
+  let strArray = [];
   for (i=0; i<numerosArray.lenght; i+=1)
     if((numerosArray[i] % 3 === 0) && (numerosArray[i]% 5 === 0)){
       strArray.push = ("fizzBuz")
