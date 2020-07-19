@@ -187,11 +187,10 @@ function hydrate(string) {
   for (let i = 0; i < numberOfDrinks.length; i++) {
       water += parseInt(numberOfDrinks[i]);
   }
-  if (water !== 1) {
-  glassesOfWater = water + " copos de água";
-  }else {
-  glassesOfWater = water + " copo de água";
-  }
+  if (water > 1) 
+  {glassesOfWater = water + " copos de água";}
+  else
+  {glassesOfWater = water + " copo de água"}
   return glassesOfWater;
 }
 
