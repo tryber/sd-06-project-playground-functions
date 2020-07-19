@@ -106,9 +106,13 @@ function techList(tech, name){
   let techSort = tech.sort();
   let lista = [];
   for(i in techSort){
-      lista.push(techSort[i] = {tech: techSort[i]}, {nome: name})
+      lista.push({tech: techSort[i], nome: name})
+      }
+  if(lista.length === 0){
+      return 'Vazio!';
+  }else{
+      return lista
   }
-  return lista
 }
 
 // Desafio 11
