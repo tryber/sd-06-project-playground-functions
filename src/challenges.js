@@ -18,11 +18,11 @@ function calcArea(b,h) {
 }
 
 // Desafio 3
-let b = "go trybe";
-let a = /(:\s|,\s)/;
+let frase = "go trybe";
+let separacao = /(:\s|,\s)/;
 function splitSentence() {
   
-  let strArray = b.split(a);
+  let strArray = frase.split(separacao);
   return strArray;
   console.log(strArray)
 }
