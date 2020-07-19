@@ -107,15 +107,15 @@ function encode(string) {
 function decode(string) {
   let phrase2 = string.split('');
   for (let i = 0; i < phrase2.length; i +=1) {
-    if (phrase2[i] === 1) {
+    if (phrase2[i] === '1') {
       phrase2[i] = 'a';
-    } else if (phrase2[i] === 2) {
+    } else if (phrase2[i] === '2') {
       phrase2[i] = 'e';
-    } else if (phrase2[i] === 3) {
+    } else if (phrase2[i] === '3') {
       phrase2[i] = 'i';
-    } else if (phrase2[i] === 4) {
+    } else if (phrase2[i] === '4') {
       phrase2[i] = 'o';
-    } else if (phrase2[i] === 5) {
+    } else if (phrase2[i] === '5') {
       phrase2[i] = 'u';
     }
   }
