@@ -147,7 +147,7 @@ function techList(array, name) {
     objeto.name = name;
     arrayThree.push(objeto);    
     objeto = {};    
-    } 
+   } 
 return arrayThree;
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Fabi"));
