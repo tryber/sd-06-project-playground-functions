@@ -243,16 +243,34 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > Math.abs(lineB - lineC) && lineA < lineB + lineC) {
-    if(lineB > Math.abs(lineA - lineC) && lineB < lineA + lineC) {
-      if (lineC > Math.abs(lineA - lineB) && lineC < lineA + lineB) {
-        return true;
-      }
-    }
+  if (lineA < Math.abs(lineB - lineC)) {
+    return false;
   }
-  return false;
+  
+  if (lineA > lineB + lineC) {
+    return false;
+  }
+  
+  if(lineB < Math.abs(lineA - lineC)) {
+    return false;
+  }
+  
+  if (lineB > lineA + lineC) {
+    return false;
+  }
+  
+  if (lineC < Math.abs(lineA - lineB)) {
+    return false;
+  }
+  
+  if (lineC > lineA + lineB) {
+    return false;
+  }
+  
+  return true;
 }
 
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
