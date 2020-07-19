@@ -221,6 +221,8 @@ function hydrate(alcoholicDrinks) {
         cupOfDrinks += 9;      
         break;
     }
+  } if (cupOfDrinks === 1){
+    return `${cupOfDrinks} copo de água`;
   } return `${cupOfDrinks} copos de água`;
 }
 
