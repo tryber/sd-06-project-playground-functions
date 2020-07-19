@@ -121,20 +121,20 @@ function fizzBuzz(numberD8) {
   let resultDesafio8 = [];
   for (let i = 0; i < numberD8.length; i += 1) {
     if (numberD8[i] % 3 === 0 && numberD8[i] % 5 === 0) {
-      resultDesafio8.push('fizzbuzz');
+      resultDesafio8.push = 'fizzbuzz';
     } else if (numberD8[i] % 3 === 0) {
-      resultDesafio8.push('fizz');
+      resultDesafio8.push = 'fizz';
     } else if (numberD8[i] % 5 === 0) {
-      resultDesafio8.push('buzz');
+      resultDesafio8.push = 'buzz';
     } else {
-      resultDesafio8.push('bug!');
+      resultDesafio8.push = 'bug!';
     }
   }
   return resultDesafio8;
 }
 
 // console.log('<---- Desafio 8 ---->');
-// console.log(fizzBuzz(2, 15, 7, 9, 45));
+//console.log(fizzBuzz(2, 15, 7, 9, 45));
 
 // Desafio 9
 // Crie duas funções: a primeira deverá se chamar encode e, ao receber uma
