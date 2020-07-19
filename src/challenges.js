@@ -47,18 +47,19 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaGato1 = Math.abs(mouse - cat1);
-  let distanciaGato2 = Math.abs(mouse - cat2);
+  let distanciaGato1 = mouse - cat1;
+  let distanciaGato2 = mouse - cat2;
   let result = null;
-  if (distanciaGato1 < distanciaGato2) {
+  if (distanciaGato1 > distanciaGato2) {
     result = 'gato 1';
-  } else if (distanciaGato1 > distanciaGato2) {
-    result = 'gato 2';
-  } else {
+  } else if (distanciaGato1 === distanciaGato2) {
     result = 'os gatos trombam e o rato foge';
+  } else {
+    result = 'gato 2';
   }
   return result;
 }
+console.log(catAndMouse(3, 6, 7))
 
 // Desafio 8
 function fizzBuzz() {
