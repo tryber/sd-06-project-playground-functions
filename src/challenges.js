@@ -11,15 +11,15 @@ function compareTrue(num1, num2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return(base * height)/2
+  return(base * height) /2;
 
 }
 
 // Desafio 3
 function splitSentence(str) {
   // seu código aqui
-let str = "go Trybe teste";
-let separador = str.split(", ");
+strArray = ["go", "Trybe", "teste"];
+let separador = str.split(" ");
 console.log(separador);
 }
 
@@ -35,8 +35,9 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+
 }
 
 // Desafio 6
