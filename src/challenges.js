@@ -162,7 +162,7 @@ function generatePhoneNumber(numeros) {
   
   let contagem = 0;
   for (let n = 0; n < numeros.length; n += 1) {
-    for (let j = 1; n < numeros.length - 1; n += 1){
+    for (let j = 1; n < numeros.length; n += 1){
       if (numeros[n] === numeros[j]) {
         contagem += 1
       }
