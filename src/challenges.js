@@ -92,7 +92,7 @@ function fizzBuzz(array) {
       fizzBuzzArray.push ("buzz")
     }
     else if ((array[index] % 3 && array[index] % 5) === 0) {
-      fizzBuzzArray.push ("fizzbuzz")
+      fizzBuzzArray.push ("fizzBuzz")
     }
     else {
       fizzBuzzArray.push ("bug!")
