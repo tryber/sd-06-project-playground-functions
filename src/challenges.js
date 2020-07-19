@@ -213,8 +213,18 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
+  let quantidadeBebidas = drinks.match(/\d+/g);
+  let quantidadeCoposDeAgua = 0;
+  for (bebida in quantidadeBebidas) {
+    quantidadeCoposDeAgua += Number(quantidadeBebidas[bebida]);
+  }
+  if (quantidadeCoposDeAgua === 1) {
+    return quantidadeCoposDeAgua + ' copo de água';
+  } else {
+    return quantidadeCoposDeAgua + ' copos de água';
+  }
 }
 
 
