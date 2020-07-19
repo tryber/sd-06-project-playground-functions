@@ -81,7 +81,7 @@ function highestCount(numbersDesafio6) {
     }
   }
   return countNumber;
-}	}
+}
 
 // console.log('<---- Desafio 6 ---->');
 // console.log(highestCount());
@@ -128,8 +128,8 @@ function fizzBuzz(numberD8) {
       resultDesafio8.push('buzz');
     } else {
       resultDesafio8.push('bug!');
+    }
   }
-}
   return resultDesafio8;
 }
 
