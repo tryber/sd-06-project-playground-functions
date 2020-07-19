@@ -144,7 +144,7 @@ function decode(string) {
 }
 // Desafio 10
 function techList(techArray, name) {
-  if (techArray === null) {
+  if (techArray === 0) {
     return "Vazio!";
   }
   let sortedTechArray = techArray.sort();
