@@ -5,33 +5,33 @@ function compareTrue(value1, value2) {
   } else if (value1 === false || value2 === false) {
     return false;
   }
-} console.log(compareTrue(true, true));
+} //console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   let calc = (base * height) / 2;
   return calc;
 }
-console.log(calcArea(2, 10));
+//console.log(calcArea(2, 10));
 
 // Desafio 3
 function splitSentence(string) {
   return string.split(' ');
 }
-console.log(splitSentence('Hello World'));
+//console.log(splitSentence('Hello World'));
 
 // Desafio 4
 function concatName(recebeArray) {
   return recebeArray[recebeArray.length -1] + ', ' + recebeArray[0];
 }
-console.log(concatName(nomes = ["Ana", "Jean", "Pedro", "Maria", "Joao"]));
+//console.log(concatName(nomes = ["Ana", "Jean", "Pedro", "Maria", "Joao"]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalPontos = (wins * 3) + (ties * 1);
   return totalPontos;
 }
-console.log(footballPoints(10, 5));
+//console.log(footballPoints(10, 5));
 
 // Desafio 6
 function highestCount(numeros) {
@@ -52,25 +52,25 @@ function highestCount(numeros) {
   }
   return count;
 }
-
-console.log(highestCount(array = [9, 1, 2, 3, 9, 5, 7, 9]));
+//console.log(highestCount(array = [9, 1, 2, 3, 9, 5, 7, 9]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2){
+  let result = '';
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     result = 'Cat1';
   }
   else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     result = 'cat2';
   }
-  else if (Math.abs(mouse - cat2) === Math.abs(mouse - cat1)) {
+  else {
     result = 'os gatos trombam e o rato foge';
   }
   return result;
 }
-//console.log(catAndMouse(10, 11, 12));
+console.log(catAndMouse(10, 12, 12));
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(){
 //  let array = [];
 
 //    for (let i = 0; i < numbers.length; i += 1) {
