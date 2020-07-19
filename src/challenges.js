@@ -4,9 +4,7 @@ function compareTrue(val1, val2) {
   if (val1 && val2 === true) {
     return true;
   }
-  else {
-    return false;
-  }
+  return false;
 }
 
 // Desafio 2
@@ -18,13 +16,13 @@ function calcArea(base, altura) {
 // Desafio 3
 function splitSentence(frase) {
   // seu código aqui
-  return frase.split(" ");
+  return frase.split(' ');
 }
 
 // Desafio 4
 function concatName(name) {
   // seu código aqui
-  let resultado = "";
+  let resultado = '';
   resultado += name[name.length - 1] + ', ' + name[0];
   return resultado;
 }
@@ -72,13 +70,13 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if (distanceCat1 === distanceCat2) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
   else if (distanceCat1 < distanceCat2) {
-    return "cat1";
+    return 'cat1';
   }
   else {
-    return "cat2";
+    return 'cat2';
   }
 }
 
@@ -86,12 +84,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(values) {
   // seu código aqui
   let answer = [];
-  for (let i = 0; i < values.length; i++) {
-    if ((values[i] % 3 == 0) && (values[i] % 5 == 0)) {
+  for (let i = 0; i < values.length; i += 1) {
+    if ((values[i] % 3 === 0) && (values[i] % 5 === 0)) {
       answer.push('fizzBuzz');
-    } else if (values[i] % 3 == 0) {
+    } else if (values[i] % 3 === 0) {
       answer.push('fizz');
-    } else if (values[i] % 5 == 0) {
+    } else if (values[i] % 5 === 0) {
       answer.push('buzz');
     } else {
       answer.push('bug!');
@@ -103,53 +101,63 @@ function fizzBuzz(values) {
 // Desafio 9
 function encode(frase) {
   // seu código aqui
-  let fraseArray = frase.split("");
+  let fraseArray = frase.split('');
   for (let i in fraseArray) {
     switch (fraseArray[i]) {
-      case "a": fraseArray[i] = 1;
+      case 'a': fraseArray[i] = 1;
         break;
-      case "e": fraseArray[i] = 2;
+      case 'e': fraseArray[i] = 2;
         break;
-      case "i": fraseArray[i] = 3;
+      case 'i': fraseArray[i] = 3;
         break;
-      case "o": fraseArray[i] = 4;
+      case 'o': fraseArray[i] = 4;
         break;
-      case "u": fraseArray[i] = 5;
+      case 'u': fraseArray[i] = 5;
+        break;
+      default:
         break;
     }
   }
-
-  let fraseEncode = fraseArray.join("");
+  let fraseEncode = fraseArray.join('');
   return fraseEncode;
 }
 
 function decode(frase) {
   // seu código aqui
-  let fraseArray = frase.split("");
+  let fraseArray = frase.split('');
   for (let i in fraseArray) {
     switch (fraseArray[i]) {
-      case "1": fraseArray[i] = "a";
+      case '1': fraseArray[i] = 'a';
         break;
-      case "2": fraseArray[i] = "e";
+      case '2': fraseArray[i] = 'e';
         break;
-      case "3": fraseArray[i] = "i";
+      case '3': fraseArray[i] = 'i';
         break;
-      case "4": fraseArray[i] = "o";
+      case '4': fraseArray[i] = 'o';
         break;
-      case "5": fraseArray[i] = "u";
+      case '5': fraseArray[i] = 'u';
+        break;
+      default:
         break;
     }
   }
-
-  let fraseDecode = fraseArray.join("");
+  let fraseDecode = fraseArray.join('');
   return fraseDecode;
 }
 
 // Desafio 10
-function techList() {
+function techList(nameTech, name) {
   // seu código aqui
-
-
+  if (nameTech.length === 0) {
+    return 'Vazio!';
+  }
+  else {
+    let result = [];
+    for (let i in nameTech.sort()) {
+      result.push([{ tech: nameTech[i], name: name }]);
+    }
+    return result;
+  }
 }
 
 // Desafio 11
@@ -184,25 +192,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-
-
-
-
-
-let palavra = "teste";
-let arrey = palavra.split("");
-
-
-for (let i in arrey) {
-  switch (arrey[i]) {
-    case "a":
-      arrey[i] = 1;
-      break;
-    case "e":
-      arrey[i] = 3;
-      break;
-  }
-}
-
-console.log(arrey);
