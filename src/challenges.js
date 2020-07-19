@@ -16,30 +16,31 @@ function splitSentence(frase) {
 }
 // Desafio 4
 function concatName(listaStrings) {
-  let minhaLista = [].concat(listaStrings);
+  let minhaLista = [].concat(minhaLista);
   let ultimo,primeiro;
   if (minhaLista.length > 1){
     ultimo = minhaLista[minhaLista.length-1];
     primeiro = minhaLista[0];
   }
   else{
-    return console.log(listaStrings.length)
+    return console.log(minhaLista.length)
   }
   minhaLista.shift();
   minhaLista.unshift(ultimo);
   minhaLista.pop();
   minhaLista.push(primeiro);
-  return console.log(minhaLista)
+  return minhaLista
 }
 
 function concatName2(listaStrings){
-  let primeiro = listaStrings[0];
-  let ultimo = listaStrings[listaStrings.length-1];
+  minhaLista = [].concat(listaStrings);
+  let primeiro = minhaLista[0];
+  let ultimo = minhaLista[minhaLista.length-1];
 
-  listaStrings[0] = ultimo;
-  listaStrings[listaStrings.length-1] = primeiro;
+  minhaLista[0] = ultimo;
+  minhaLista[minhaLista.length-1] = primeiro;
 
-  return console.log(listaStrings)
+  return minhaLista
 
 }
 
