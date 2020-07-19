@@ -95,96 +95,65 @@ function fizzBuzz(numeros) {
 // Desafio 9
 function encode(subVogais) {
   let vogal = ['a', 'e', 'i', 'o', 'u'];
-  let nova = '';
-  let conta = 0;
   for (let contador = 0; contador < subVogais.length; contador += 1) {
     for (let indice = 0; indice < subVogais.length; indice += 1) {
       if (vogal[contador] === subVogais[indice]) {
         switch (vogal[contador]) {
           case 'a':
-            nova = subVogais.replace('a', '1');
-            subVogais = nova;
-            if (subVogais[subVogais.length] === vogal[contador]) {
-              conta = entrada.length;
-            } break;
+            subVogais = subVogais.replace('a', '1');
+            break;
           case 'e':
-            nova = subVogais.replace('e', '2');
-            subVogais = nova;
-            if (subVogais[subVogais.length - 1] === vogal[contador]) {
-              conta = entrada.length;
-            } break;
+            subVogais = subVogais.replace('e', '2');
+            break;
           case 'i':
-            nova = subVogais.replace('i', '3');
-            subVogais = nova;
-            if (subVogais[subVogais.length] === vogal[contador]) {
-              conta = entrada.length;
-            } break;
+            subVogais = subVogais.replace('i', '3');
+            break;
           case 'o':
-            nova = subVogais.replace('o', '4');
-            subVogais = nova;
-            if (subVogais[subVogais.length - 1] === vogal[contador]) {
-              conta = entrada.length;
-            } break;
+            subVogais = subVogais.replace('o', '4');
+            break;
           case 'u':
-            nova = subVogais.replace('u', '5');
-            subVogais = nova;
-            if (subVogais[subVogais.length] === vogal[contador]) {
-              conta = entrada.length;
-            } break;
+            subVogais = subVogais.replace('u', '5');
+            break;
+          default:
+            console.log('variavel não encontrada')
+            break;
         }
       }
-    } if (conta === subVogais.length) {
-      break;
     }
   } return subVogais;
 }
 // console.log(encode('uoiea'));
+// -- ------------
 function decode(subNum) {
   let numList = ['1', '2', '3', '4', '5'];
-  let novaDec = '';
-  let contaDec = 0;
   for (let contador = 0; contador < subNum.length; contador += 1) {
     for (let indice = 0; indice < subNum.length; indice += 1) {
       if (numList[contador] === subNum[indice]) {
         switch (numList[contador]) {
           case '1':
-            novaDec = subNum.replace('1', 'a');
-            subNum = novaDec;
-            if (subNum[subNum.length] === numList[contador]) {
-              contaDec = entrada.length;
-            } break;
+            subNum = subNum.replace('1', 'a');
+            break;
           case '2':
-            novaDec = subNum.replace('2', 'e');
-            subNum = novaDec;
-            if (subNum[subNum.length - 1] === numList[contador]) {
-              contaDec = entrada.length;
-            } break;
+            subNum = subNum.replace('2', 'e');
+            break;
           case '3':
-            novaDec = subNum.replace('3', 'i');
-            subNum = novaDec;
-            if (subNum[subNum.length] === numList[contador]) {
-              contaDec = entrada.length;
-            } break;
+            subNum = subNum.replace('3', 'i');
+            break;
           case '4':
-            novaDec = subNum.replace('4', 'o');
-            subNum = novaDec;
-            if (subNum[subNum.length - 1] === numList[contador]) {
-              contaDec = entrada.length;
-            } break;
+            subNum = subNum.replace('4', 'o');
+            break;
           case '5':
-            novaDec = subNum.replace('5', 'u');
-            subNum = novaDec;
-            if (subNum[subNum.length] === numList[contador]) {
-              contaDec = entrada.length;
-            } break;
+            subNum = subNum.replace('5', 'u');
+            break;
+          default:
+            console.log('variavel não encontrada')
+            break;
         }
       }
-    } if (contaDec === subNum.length) {
-      break;
     }
   } return subNum;
 }
-// console.log(decode('h3 th2r2!'));
+// console.log(decode('43 v3d1!'));
 // Desafio 10
 function techList() {
   // seu código aqui
