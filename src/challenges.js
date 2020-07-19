@@ -48,7 +48,26 @@ let arr = [2, 1, 2, 3, 9, 9, 9, 5, 7];
 console.log(highestCount(arr));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let gato1 = 0;
+  let distanciagato1 = 0;
+  let distanciagato2 = 0;
+  let esbarrou = 0;
+  if(cat1 > mouse) {
+    distanciagato1 = cat1 - mouse;
+  } else {
+    distanciagato1 = mouse - mouse;
+  }
+  if (cat2 > mouse) {
+    distanciagato2 = cat2 - mouse;
+  } else {
+    distanciagato2 = mouse - cat2;
+  }
+  if (distanciagato1 > distanciagato2) {
+    return "cat 2";
+  } else if (distanciagato2 > distanciagato1) {
+    return "cat 1";
+  } else {
+    return esbarrou;
+  }
 }
 
 // Desafio 8
