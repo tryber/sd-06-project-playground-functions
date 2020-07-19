@@ -80,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let respostas = [];
   for (let indice = 0; indice < numeros.length; indice += 1) {
-    if (numeros[indice] % (3 && 5) === 0) {
+    if ((numeros[indice] % 3 === 0) && (numeros[indice] % 5 === 0)) {
       respostas.push('fizzBuzz');
     } else if (numeros[indice] % 3 !== 0 && numeros[indice] % 5 !== 0) {
       respostas.push('bug!');
@@ -91,7 +91,7 @@ function fizzBuzz(numeros) {
     }
   } return respostas
 }
-// let n = [7, 9, 15]; console.log(fizzBuzz(n));
+// let n = [9,25,15]; console.log(fizzBuzz(n));
 // Desafio 9
 function comparaEsubstituiVog(vogal, subVogais) {
   switch (vogal) {
@@ -162,18 +162,22 @@ function decode(subNum) {
 // console.log(decode('11 22 33 44 55'));
 // Desafio 10
 function techList(listaTec, name) {
-  listaTec.sort();
   let novaLista = [];
   // let tecnologias;
-  for (let indice = 0; indice < listaTec.length; indice += 1) {
-    let tecnologias = {
-      tech: listaTec[indice],
-      name: name,
+  if (listaTec === undefined) {
+    return ('Vazio!');
+  } else {
+    listaTec.sort();
+    for (let indice = 0; indice < listaTec.length; indice += 1) {
+      let tecnologias = {
+        tech: listaTec[indice],
+        nome: name,
+      }
+      novaLista.push(tecnologias);
     }
-    novaLista.push(tecnologias);
   } return novaLista;
 }
-// let listaTeste = ['javascript', 'html'];
+// let listaTeste = ['arvore', 'css', 'java', 'unix']
 // console.log(techList(listaTeste, 'paulo'));
 // Desafio 11
 function generatePhoneNumber() {
