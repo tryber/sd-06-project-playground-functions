@@ -1,1 +1,0 @@
-"React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"
