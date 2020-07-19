@@ -1,4 +1,3 @@
-// Aloizio Borges Santos Coelho
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
@@ -151,21 +150,25 @@ console.log(decode('h3 th2r2!'))
 function techList(tec, nome) {
   if (tec.length > 0){
     let arrei = [];
-    for (let index = 0; index < tec.length; index += 1) {
-        let objeto = {
-        tech: tec[index],
-        name: nome,
-      }
-      arrei.push(objeto)
-    } return arrei
+    for (let indexArrei = 0; indexArrei < tec.length; indexArrei += 1) {
+      arrei.push(tec[indexArrei])
+    }
+    arrei.sort();
+    let ordenado = [];
+    for (let indexOrdenado = 0; indexOrdenado < arrei.length; indexOrdenado += 1) {
+      let objeto = {
+      tech: arrei[indexOrdenado],
+      name: nome,
+    }
+    ordenado.push(objeto);
+  } return ordenado
   } return 'Vazio!'
 }
 
-let tecnologia = ["React", "Jest", "HTML","CSS", "JavaScript"];
+let tecnologia = ['React', 'Jest', 'HTML','CSS', 'JavaScript'];
 let lucas = 'Lucas'
 
 console.log(techList(tecnologia, lucas))
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
