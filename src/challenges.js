@@ -132,7 +132,6 @@ function techList(arrayTech) {
 // Desafio 11
 // console.log(generatePhoneNumber([0, 2, 4, 3, 5, 5, 6, 8, 9, 2, 1]))
 function checkRepeatedNumber(arrayPhone) {
-  let nRepeat;
   for (let index = 0; index < arrayPhone.length; index += 1) {
     let nRepeat = 0;
     for (let index2 = 0; index2 < arrayPhone.length; index2 += 1) {
@@ -144,7 +143,6 @@ function checkRepeatedNumber(arrayPhone) {
       }
     }
   }
-  return nRepeat;
 }
 function generate(arrayPhone) {
   let numberPhone = '(';
