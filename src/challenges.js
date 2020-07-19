@@ -17,14 +17,10 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(listaStrings){
   minhaLista = [].concat(listaStrings);
-  let primeiro = minhaLista[0];
   let ultimo = minhaLista[minhaLista.length-1];
-
-  minhaLista[0] = ultimo;
-  minhaLista[minhaLista.length-1] = primeiro;
-
+  minhaLista.push(ultimo);
+  minhaLista.pop();
   return minhaLista
-
 }
 
 // Desafio 5
