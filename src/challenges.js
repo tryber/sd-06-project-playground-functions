@@ -44,23 +44,36 @@ function footballPoints(wins,ties) {
   let totalPoints = pointWins + pointTies;
   return totalPoints;
 }
+
 footballPoints(1,4);
 
 // Desafio 6
 function highestCount(numbers) {
-  let repetitionCount = 0;
-  let highestNumber = 0;
+  let repetitionCount = 0; //Armazena a quantidade que o maior número se repete.
+  let highestNumber = 0; //Armazena o maior número.
+  let numberCount = 0; //Contabiliza a quantidade de repetição.
 
+  //Loop para percorrer todos os elementos do array e retornar o maior número.
   for (let index in numbers) {
         if (numbers[index] > highestNumber) {
           highestNumber = numbers[index];      
         }
-    repetitionCount++;
+        //Loop para contar quantas vezes o maior número se repete.
+        for (let index2 in numbers) {
+          if (highestNumber === numbers[index2]) {
+            numberCount += 1;
+          }
+        }
+        if (numberCount > repetitionCount) {
+          repetitionCount = numberCount;
+        }
+        numberCount = 0;
   }
   return repetitionCount;
 }
 
-highestCount([9, 1, 9, 9, 3, 9, 5, 7]);
+highestCount([9, 9, 9, 9, 3, 9, 5, 7]);
+
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -75,6 +88,7 @@ function catAndMouse(mouse,cat1,cat2) {
     return console.log("Os gatos trombam e o rato foge.");
   }
 }
+
 catAndMouse(8,4,4);
 
 // Desafio 8
@@ -122,6 +136,7 @@ function encode(string) {
  
   return newString;
 }
+
 encode(string);
 
 function decode(numbers) {
@@ -139,6 +154,7 @@ function techList(arrayTechnology,name) {
     }
   return object;
 }
+
 techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella");
 
 // Desafio 11
