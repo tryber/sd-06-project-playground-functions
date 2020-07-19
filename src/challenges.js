@@ -177,7 +177,7 @@ function techList(listaTec, name) {
     }
   } return novaLista;
 }
-// let listaTeste=0;
+// let dlistaTeste=0;
 // console.log(techList(listaTeste, 'paulo'));
 // Desafio 11
 function generatePhoneNumber() {
