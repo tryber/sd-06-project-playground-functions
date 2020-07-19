@@ -18,9 +18,8 @@ function splitSentence(frase) {
 function concatName(listaStrings){
   let minhaLista = [].concat(listaStrings);
   let ultimo = minhaLista[minhaLista.length-1];
-  minhaLista.unshift(ultimo);
-  minhaLista.pop();
-  return minhaLista.join(',');
+  let primeiro = minhaLista[0];
+  return `${ultimo} , ${primeiro}`;
 }
 
 // Desafio 5
