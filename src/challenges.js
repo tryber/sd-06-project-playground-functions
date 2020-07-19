@@ -243,8 +243,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(bebidas) {
   // seu código aqui
+  let numStr;
+  let qtd;
+  let soma = 0;
+  for (let i = 0; i < bebidas.length; i++) {
+    numStr = bebidas[i].replace(/[^0-9]/g,'');
+    qtd = parseInt(numStr);
+    soma += qtd;
+  }
+  return soma + ' copos de água';
 }
 
 
