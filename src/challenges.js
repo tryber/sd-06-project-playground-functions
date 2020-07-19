@@ -67,9 +67,25 @@ let distCat2 = mouse - cat2;
 console.log(catAndMouse(10,6,6))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(arrayNumber) {
+  let arrayString = [];
+  for (i=0; i<arrayNumber.length; i++) {
+    
+    if ((arrayNumber[i] % 3 === 0)&& (arrayNumber[i] % 5 === 0)) {
+    arrayString.push("fizzBuzz")
+  }  //do if
+  else if ((arrayNumber[i] % 3 === 0)&& (arrayNumber[i] % 5 !== 0)) {
+    arrayString.push("fizz")
+}  // primeiro else if
+else if ((arrayNumber[i] % 3 !== 0)&& (arrayNumber[i] % 5 !== 0)) {
+  arrayString.push("Buzz")
+} // segundo else if
+else {
+  arrayString.push("Bug") 
+} //else
+
+  } // for
+} // function
 
 // Desafio 9
 function encode() {
