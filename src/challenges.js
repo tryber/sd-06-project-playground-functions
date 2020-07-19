@@ -151,19 +151,22 @@ function decode(string) {
 function techList(techs, name) {
   let techSorted = techs.sort();
   let list = [];
+  if(techs == ""){
+    return "Vazio!";
+  }
   for(i=0; i < techs.length; i++){
-    if(techs == ""){
-      return "Vazio!";
-    }
-    list.push(
+  
+      list.push(
       {
         tech: techSorted[i],
         name: name 
       },
     )
+    
   }
   return list;
 }
+console.log(techList(["React"], "Luiz"))
 
 // Desafio 11
 function generatePhoneNumber() {
