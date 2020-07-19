@@ -35,10 +35,10 @@ function footballPoints(a, b) {
 
 // Desafio 6
 function highestCount(array) {
-  maior = count = 0
+  maior = Math.max.apply(null, array);
+  count = 0
   for (i in array) {
-      if (array[i] >= maior){
-          maior = array[i]
+      if (array[i] === maior){
           count += 1
       }
   }
