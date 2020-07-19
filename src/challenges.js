@@ -27,6 +27,11 @@ console.log(separador);
 // Desafio 4
 function concatName() {
   // seu código aqui
+  let string = ["jucielei, Roberto, Juliano"];
+  let f=0;
+  let l=string[string.lenght-1];
+  console.log("primeiro item e: "+f );
+  console.log("ultimo elemento: "+l);
 }
 
 // Desafio 5
