@@ -16,7 +16,7 @@ function splitSentence(frase) {
 }
 // Desafio 4
 function concatName(listaStrings) {
-  let minhaLista = [].concat(minhaLista);
+  let minhaLista = [].concat(listaStrings);
   let ultimo,primeiro;
   if (minhaLista.length > 1){
     ultimo = minhaLista[minhaLista.length-1];
