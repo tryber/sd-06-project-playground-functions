@@ -172,7 +172,7 @@ console.log(decode("h3 th2r2!"))
 function techList(techArray, name) {
   // seu código aqui
   let techList = [];
-  let techObject = {}
+  let techObject = {};
   for (iten in techArray.sort()) {
     techList.push({tech : techArray[iten], name : name})
   } if (techArray.length < 1) {
@@ -184,9 +184,36 @@ function techList(techArray, name) {
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(phoneNumber) {
   // seu código aqui
+  let phoneSintaxe;
+  let repCounter;
+  let phoneError;
+
+  for (number in phoneNumber) {
+    repCounter = 0;
+    for (cont = 0; cont < phoneNumber.length; cont += 1) {
+      // console.log(phoneNumber[number] + " = " + phoneNumber[cont])
+      if (phoneNumber[number] === phoneNumber[cont]) {
+        repCounter += 1;
+        // console.log(repCounter + " rep")
+      } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9 || repCounter >= 3) {
+        phoneError = "não é possível gerar um número de telefone com esses valores";
+      } else if (phoneNumber.length != 11) {
+        phoneError = "Array com tamanho incorreto.";
+      } else {
+        phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + "-" + phoneNumber[6] + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
+      }
+    }
+  }
+  if (phoneError) {
+    return phoneError;
+  } else {
+    return phoneSintaxe;
+  }
 }
+
+console.log(generatePhoneNumber([3, 1, 9, 8, 6, 5, 4, 0, 0, 1, 8]))
 
 // Desafio 12
 function triangleCheck() {
