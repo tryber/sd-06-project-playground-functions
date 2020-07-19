@@ -93,10 +93,10 @@ function fizzBuzz(numeros) {
     }
     resposta.push(element);
   }
-  return console.log(resposta)
+  return resposta
 }
 
-fizzBuzz([2, 15, 7, 9, 45]);
+
 
 function divisivel(numero,indice){
   if(numero % indice === 0){
