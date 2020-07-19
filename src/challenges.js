@@ -146,7 +146,7 @@ function decode(string) {
 function techList(techArray, name) {
   let sortedTechArray = techArray.sort();
   let newTechArray = [];
-  if (techArray === []) {
+  if (newTechArray == 0) {
     return "Vazio!";
   }
   else{
