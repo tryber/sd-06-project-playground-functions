@@ -9,7 +9,7 @@ function compareTrue(value1, value2) {
 }
 
 // console.log('<---- Desafio 1 ---->')
-console.log(compareTrue(true, true));
+// console.log(compareTrue(true, true));
 
 
 // Desafio 2
@@ -20,7 +20,7 @@ function calcArea(base, height) {
 }
 
 // console.log('<---- Desafio 2 ---->');
-console.log(calcArea(10, 5));
+// console.log(calcArea(10, 5));
 
 
 // Desafio 3
@@ -32,7 +32,7 @@ function splitSentence(stringDesafio3) {
 }
 
 // console.log('<---- Desafio 3 ---->');
-console.log(splitSentence('Me dê papai'));
+// console.log(splitSentence('Me dê papai'));
 
 
 // Desafio 4
@@ -46,7 +46,7 @@ function concatName(stringDesafio4) {
 }
 
 // console.log('<---- Desafio 4 ---->');
-console.log(concatName(['Mais', 'um', 'desafio', 'concluído']));
+// console.log(concatName(['Mais', 'um', 'desafio', 'concluído']));
 
 
 // Desafio 5
@@ -62,7 +62,7 @@ function footballPoints(wins, ties) {
 }
 
 // console.log('<---- Desafio 5 ---->');
-console.log(footballPoints(14, 8));
+// console.log(footballPoints(14, 8));
 
 
 // Desafio 6
@@ -84,7 +84,7 @@ function highestCount(numbersDesafio6) {
 }
 
 // console.log('<---- Desafio 6 ---->');
-console.log(highestCount());
+// console.log(highestCount());
 
 
 // Desafio 7
@@ -109,7 +109,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // console.log('<---- Desafio 7 ---->');
-console.log(catAndMouse(1, 3, 2));
+// console.log(catAndMouse(1, 3, 2));
 
 
 // Desafio 8
