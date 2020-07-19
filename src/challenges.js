@@ -34,9 +34,8 @@ function highestCount(numeros) {
   for (let index in numeros) {
     if (numeros[index] > maior) {
       maior = numeros[index];
+      cont = 0;
     }
-  }
-  for (let index in numeros) {
     if (maior === numeros[index]) {
       cont += 1;
     }
@@ -48,20 +47,10 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = 0;
   let dist2 = 0;
-  if (mouse < cat1) {
-    dist1 = cat1 - mouse;
-  } else {
-    dist1 = mouse - cat1;
-  }
-  if (mouse < cat2) {
-    dist2 = cat2 - mouse;
-  } else {
-    dist2 = mouse - cat2;
-  }
-  if (dist1 < dist2) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return 'cat1';
   } else
-  if (dist2 < dist1) {
+  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
@@ -186,9 +175,13 @@ function generatePhoneNumber(number) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if ((Math.abs(lineB - lineC) > lineA || lineA > lineB + lineC)
-  || (Math.abs(lineA - lineC) > lineB || lineB > lineA + lineC)
-  || (Math.abs(lineB - lineA) > lineC || lineC > lineB + lineA)) {
+  if ((Math.abs(lineB - lineC) > lineA || lineA > lineB + lineC)){
+    return false;
+  }else
+  if ((Math.abs(lineA - lineC) > lineB || lineB > lineA + lineC)){
+    return false;
+  }else
+  if((Math.abs(lineB - lineA) > lineC || lineC > lineB + lineA)){
     return false;
   }
   return true;
