@@ -110,7 +110,7 @@ function encode(string) {
     let arrayString = array.join('');
   return arrayString;  
   }
-  console.log(encode("hi thEre!"));
+  console.log(encode("how are you today"));
 
 function decode(stringTwo) {    
     let arrayTwo = stringTwo.split('');
@@ -132,7 +132,7 @@ function decode(stringTwo) {
 let arrayStringTwo = arrayTwo.join('');
 return arrayStringTwo;  
 }
-console.log(decode("h3 th2r2!"));
+console.log(decode("h2ll4"));
 
 
 // Desafio 10
