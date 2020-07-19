@@ -186,34 +186,32 @@ function techList(techArray, name) {
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
   // seu código aqui
-  let phoneSintaxe = false;
   let repCounter;
-  let phoneError = false;
-  let counterError;
+  let phoneError;
+  let phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + " " + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
 
   for (number in phoneNumber) {
     repCounter = 0;
-    for (cont = 0; cont < phoneNumber.length; cont += 1) {
-      // console.log(phoneNumber[number] + " = " + phoneNumber[cont])
-      if (phoneNumber.length != 11) {
-        return phoneError = "Array com tamanho incorreto.";
-      } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9) {
-        return phoneError = "não é possível gerar um número de telefone com esses valores";
-      } else if (phoneNumber[number] === phoneNumber[cont]) {
-        repCounter += 1;
-      } else {
-        phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + " " + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
+    if (phoneNumber.length != 11) {
+      return phoneError = "Array com tamanho incorreto.";
+    } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9) {
+      return phoneError = "não é possível gerar um número de telefone com esses valores";
+    } else {
+      for (cont = 0; cont < phoneNumber.length; cont += 1) {
+        if (phoneNumber[number] === phoneNumber[cont]) {
+          repCounter += 1;
+          console.log(repCounter)
+          if (repCounter === 3) {
+            return phoneError = "não é possível gerar um número de telefone com esses valores";
+          }
+        }
       }
     }
   }
-  if (repCounter === 3) {
-    return counterError = "não é possível gerar um número de telefone com esses valores";
-  } else if (phoneSintaxe != false) {
-    return phoneSintaxe;
-  }
+  return phoneSintaxe
 }
 
-console.log(generatePhoneNumber([0, 2, 2, 4, 1, 2, 7, 8, 1, 9, 4]))
+console.log(generatePhoneNumber([0, 2, 6, 4, 1, 2, 7, 8, 1, 9, 4]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
