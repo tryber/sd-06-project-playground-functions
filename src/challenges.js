@@ -139,8 +139,13 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(entrada) {
+  let qtdBebidas = entrada.split(/\D+/g).map(Number);
+  let qtdAguas = 0;
+  for (i in qtdBebidas) {
+    qtdAguas += qtdBebidas[i];
+  }
+  return `${qtdAguas} copos de água.`
 }
 
 
