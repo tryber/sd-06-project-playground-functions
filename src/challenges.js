@@ -82,48 +82,42 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(vogais) {
-  let vogaisPorNumeros = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  }
-  let arrayNumeros = [];
-  let resultado = 0;
-  for (let i in vogais) {
-    arrayNumeros[i] = vogaisPorNumeros[vogais[i]];
-  }
-  for (let i in arrayNumeros) {
-    if (arrayNumeros[i] < arrayNumeros[i + 1]) {
-      arrayNumeros[i + 1] = arrayNumeros[i + 1] - arrayNumeros[i];
-    } else {
-      resultado += arrayNumeros[i];
+  let arrayVogais = [];
+  for (let i = 0; i < vogais.length; i += 1) {
+    if (vogais[i] = 'a') {
+      arrayVogais[i] += '1';
+    } else if (vogais[i] = 'e') {
+      arrayVogais[i] += '2';
+    } else if (vogais[i] = 'i') {
+      arrayVogais[i] += '3';
+    } else if (vogais[i] = 'o') {
+      arrayVogais[i] += '4';
+    } else if (vogais[i] = 'u') {
+      arrayVogais[i] += '5';
+    }else {
+      arrayVogais[i] += arrayVogais[i];
     }
-  return resultado
   }
+  return arrayVogais;
 }
 function decode(numeros) {
-  let numerosPorVogais = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  };
   let arrayNumeros = [];
-  let resultado = 0;
-  for (let i in numeros) {
-    arrayNumeros[i] = numerosPorVogais[numeros[i]];
-  }
-  for (let i in arrayNumeros) {
-    if (arrayNumeros[i] < arrayNumeros[i + 1]) {
-      arrayNumeros[i + 1] = arrayNumeros[i + 1] - arrayNumeros[i];
-    } else {
-      resultado += arrayNumeros[i];
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] = 'a') {
+      arrayNumeros[i] += '1';
+    } else if (numeros[i] = 'e') {
+      arrayNumeros[i] += '2';
+    } else if (numeros[i] = 'i') {
+      arrayNumeros[i] += '3';
+    } else if (numeros[i] = 'o') {
+      arrayNumeros[i] += '4';
+    } else if (numeros[i] = 'u') {
+      arrayNumeros[i] += '5';
+    }else {
+      arrayNumeros[i] += arrayNumeros[i];
     }
-  return resultado
   }
+  return arrayNumeros;
 }
 
 // Desafio 10
