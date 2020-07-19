@@ -155,7 +155,7 @@ function generatePhoneNumber(arr) {
     // Para isso precisamos checar como string
     // (Object.keys(counter).includes(`${arr[i]}`)) ? counter[arr[i]] += 1 : counter[arr[i]] = 1;
 
-    if (`${arr[i]}` in Object.keys(counter)) {
+    if (`${arr[i]}`in counter) {
       counter[arr[i]] += 1;
     } else {
       counter[arr[i]] = 1;
@@ -175,6 +175,8 @@ function generatePhoneNumber(arr) {
   }
   return tel
 }
+
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
