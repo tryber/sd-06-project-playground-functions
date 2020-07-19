@@ -213,8 +213,18 @@ function generatePhoneNumber(numeros) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let triangulo;
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+      if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
+        triangulo = true;
+      } else {
+        triangulo = false;
+      }
+    }
+  }
 }
 
 // Desafio 13
