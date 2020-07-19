@@ -210,8 +210,9 @@ function hydrate(drinks) {
   }
   if(cont === 1){
     return cont + " copo de água";
+  }else{
+    return cont + " copos de água";
   }
-  return cont + " copos de água";
 }
 
 console.log('Exercício 1: ' + compareTrue(true, true));
@@ -240,7 +241,7 @@ console.log('Exercício 11: ' + generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 
 
 console.log('Exercício 12: ' + triangleCheck(10, 14, 8));
 
-console.log('Exercício 13: ' + hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log('Exercício 13: ' + hydrate("1 cachaça"));
 
 
 
