@@ -134,11 +134,23 @@ return arrayStringTwo;
 }
 console.log(decode("h2ll4"));
 
-
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+    let objeto = {};
+//let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+    let arrayTwo = array.sort();
+    let arrayThree = [];
+    
+    //for (let i in arrayTwo) {
+    for (let index = 0; index < arrayTwo.length; index += 1) {
+    objeto.tech = arrayTwo[index];
+    objeto.name = name;
+    arrayThree.push(objeto);    
+    objeto = {};    
+    } 
+return arrayThree;
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Fabi"));
 
 // Desafio 11
 function generatePhoneNumber() {
