@@ -84,7 +84,7 @@ function highestCount(numbersDesafio6) {
 }
 
 // console.log('<---- Desafio 6 ---->');
-// console.log(highestCount();
+console.log(highestCount());
 
 
 // Desafio 7
@@ -113,9 +113,27 @@ console.log(catAndMouse(1, 3, 2));
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Para cada número da Array que seja divisível por 3, apresente uma string fizz
+// Para cada número da Array que seja divisível por 5, apresente uma string buzz
+// Caso o número seja divisível por 3 ou 5, retorne a string fizzBuzz
+// Caso o número não possa ser dividido por 3 nem por 5, retorne a string bug!
+function fizzBuzz(numberD8) {
+  let resultDesafio8 = [];
+  for (let i = 0; i < numberD8.length; i += 1) {
+    if (numberD8[i] % 3 === 0 && numberD8[i] % 5 === 0) {
+    resultDesafio8.push('fizzbuzz');
+    } else if (numberD8[i] % 3 === 0) {
+      resultDesafio8.push('fizz');
+    } else if (numberD8[i] % 5 === 0) {
+      resultDesafio8.push('buzz');
+    }
+      resultDesafio8.push('bug!');
+    }
+  return resultDesafio8;
 }
+
+// console.log('<---- Desafio 8 ---->');
+console.log(fizzBuzz());
 
 // Desafio 9
 function encode() {
