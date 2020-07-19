@@ -174,10 +174,9 @@ function decode(stringDecode) {
 // Estes objetos devem ser inseridos em uma nova lista em ordem crescente a
 // partir do campo tech no objeto
 // Para cada tecnologia no array, crie um objeto
-function techList(objectListD10) {
-  let objectListD10 = {
-
-  }
+// A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech
+function techList() {
+  // seu código aqui
 }
 
 // Desafio 11
