@@ -27,15 +27,28 @@ function concatName(listaStrings){
 function footballPoints(wins,ties) {
   let pontos = wins*3 + ties;
   return pontos
-
   // seu código aqui
 }
 
 // Desafio 6
 function highestCount(numbers) {
   //percorrer o código e encontrar o maior numero
-  // seu código aqui
+  // percorrer o código e contar quantas vezes ele aparece
+  let maior = -Infinity;
+  let contaMaior = 0
+  for(let i in numbers){
+    if(numbers[i] > maior){
+      maior = numbers[i];
+    }
+  }
+  for(let x in numbers){
+    if(numbers[x] === maior){
+      contaMaior +=1;
+    }
+  }
+  return contaMaior;
 }
+
 
 // Desafio 7
 function catAndMouse() {
