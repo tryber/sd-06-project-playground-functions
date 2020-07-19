@@ -164,7 +164,7 @@ function decode(subNum) {
 function techList(listaTec, name) {
   let novaLista = [];
   // let tecnologias;
-  if (listaTec === 0) {
+  if (listaTec =='') {
     return ('Vazio!');
   } else {
     listaTec.sort();
@@ -177,7 +177,7 @@ function techList(listaTec, name) {
     }
   } return novaLista;
 }
-// let dlistaTeste=0;
+// let listaTeste = [];
 // console.log(techList(listaTeste, 'paulo'));
 // Desafio 11
 function generatePhoneNumber() {
