@@ -155,7 +155,7 @@ function techList(techs, name) {
     list.push(
       {
         tech: techSorted[i],
-        nome: name 
+        name: name 
       },
     )
   }
