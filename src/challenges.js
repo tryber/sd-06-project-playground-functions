@@ -12,31 +12,24 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  let palavrasSeparadas = [];
-  let palavra = [];
-  for(i in frase){
-    console.log(frase[i]);
-    //separar as letras
-    //juntar as letras , sem adicionar os espaços
-
-    if(frase[i] !== ' '){
-      //se o elemento não for espaço vazio adiciona o elemento para a array palavra
-      palavra.push(frase[i]);
-    }
-    else{
-      //se o elemento for espaço vazio adiciona o array palavra para palavrasSeparadas
-      palavra.forEach((number) => {
-      console.log(palavra.splice( 0, palavra.length))}
-      )
-    }
-    console.log(`palavra ${palavra} e ${palavrasSeparadas}`);
-  }
-  return console.log(palavrasSeparadas);  // seu código aqui
+  return console.log(frase.split(' '))
 }
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listaStrings) {
+  let minhaLista = [].concat(listaStrings);
+  let ultimo,primeiro;
+  if (minhaLista.length > 1){
+    ultimo = minhaLista[minhaLista.length-1];
+    primeiro = minhaLista[0];
+  }
+  else{
+    return console.log(listaStrings.length)
+  }
+  minhaLista.shift();
+  minhaLista.unshift(ultimo);
+  minhaLista.pop();
+  minhaLista.push(primeiro);
+  return console.log(minhaLista)
 }
 
 // Desafio 5
@@ -106,3 +99,4 @@ module.exports = {
 }
 
 splitSentence('paulo é bom');
+concatName(['paulo','ronaldo']);
