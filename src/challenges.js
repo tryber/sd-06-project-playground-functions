@@ -118,8 +118,8 @@ function encode(arrei) {
     } else {
       novoarreiencode[index] = arrei[index];
     }
-    }
-    return (novoarreiencode.join(''));
+  }
+  return (novoarreiencode.join(''));
 }
 
 console.log(encode('hi there!'))
@@ -141,7 +141,7 @@ function decode(arrei) {
       novoarreidecode[index] = arrei[index];
     }
   }
-    return (novoarreidecode.join(''));
+  return (novoarreidecode.join(''));
 }
 
 console.log(decode('h3 th2r2!'))
@@ -202,13 +202,13 @@ console.log(generatePhoneNumber(telefone))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA >= (lineB + lineC) || lineA <= Math.abs(lineB - lineC)
-   || lineA <= Math.abs(lineC - lineB)) {
+    || lineA <= Math.abs(lineC - lineB)) {
     return false
   } else if (lineB >= (lineA + lineC) || lineB <= Math.abs(lineA - lineC)
-   || lineB <= Math.abs(lineC - lineA)) {
+    || lineB <= Math.abs(lineC - lineA)) {
     return false
   } else if (lineC >= (lineB + lineA) || lineC <= Math.abs(lineB - lineA)
-   || lineC <= Math.abs(lineA - lineB)) {
+    || lineC <= Math.abs(lineA - lineB)) {
     return false
   } return true
 }
@@ -216,9 +216,27 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  let reg = /\d+/g;
+  let result = frase.match(reg);
+  let soma = [];
+    for (index = 0; index < result.length; index += 1) {
+      soma.push(parseInt(result[index]));
+    }
+    let count = 0;
+    if (soma !== 0) {
+      for (index = 0; index < soma.length; index += 1) {
+        count += soma[index];
+      }
+    } if (count > 9) {
+      return 9 + ' copos de água'
+    } if ( count < 10 && count > 0) {
+      return count + ' copos de água'
+    }
 }
+
+let cervejas = "1 cachaça, 5 cervejas e 1 copo de vinho"
+console.log(hydrate(cervejas))
 
 
 module.exports = {
