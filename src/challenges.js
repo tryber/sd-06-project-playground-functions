@@ -145,7 +145,11 @@ function hydrate(entrada) {
   for (i in qtdBebidas) {
     qtdAguas += qtdBebidas[i];
   }
-  return `${qtdAguas} copos de água.`
+  if (qtdAguas === 1) {
+    return `${qtdAguas} copo de água.`
+  } else {
+    return `${qtdAguas} copos de água.`
+  }
 }
 
 
