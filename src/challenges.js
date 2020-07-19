@@ -16,7 +16,7 @@ function splitSentence(frase) {
 }
 // Desafio 4
 function concatName(listaStrings){
-  minhaLista = [].concat(listaStrings);
+  let minhaLista = [].concat(listaStrings);
   let ultimo = minhaLista[minhaLista.length-1];
   minhaLista.push(ultimo);
   minhaLista.pop();
