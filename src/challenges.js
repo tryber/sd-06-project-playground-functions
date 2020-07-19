@@ -189,32 +189,39 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-  
-// Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
-
-// Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
-
-// String recebida:
-//   "1 cerveja"
-// String retornada:
-//   "1 copo de água"
-// String recebida:
-//   "1 cachaça, 5 cervejas e 1 copo de vinho"
-// String retornada:
-//   "7 copos de água"
-// String recebida:
-//   "1 cachaça, 5 cervejas e 1 copo de vinho"
-// String retornada:
-//   "7 copos de água"
-// Notas
-
-// Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida.
-
-// O número na frente de cada bebida está no intervalo entre 1 e 9.
-
-// Dica: pesquise por algo similar a get all integers inside a string js.
+function hydrate(alcoholicDrinks) {
+  let cupOfDrinks = 0;
+  for (index5 = 0; index5<alcoholicDrinks.length;index5++) {
+    switch(alcoholicDrinks[index5]) {
+      case '1':
+        cupOfDrinks += 1;
+      break;
+      case '2':
+        cupOfDrinks += 2;
+      break;
+      case '3':
+        cupOfDrinks += 3;
+      break;
+      case '4':
+        cupOfDrinks += 4;    
+        break;
+      case '5':
+        cupOfDrinks += 5;   
+        break;
+      case '6':
+        cupOfDrinks += 6;
+        break;
+      case '7':
+        cupOfDrinks += 7;
+      break;
+      case '8':
+        cupOfDrinks += 8;
+      break;
+      case '9':
+        cupOfDrinks += 9;      
+        break;
+    }
+  } return `${cupOfDrinks} copos de água`;
 }
 
 
