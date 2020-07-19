@@ -134,7 +134,7 @@ function fizzBuzz(numberD8) {
 }
 
 // console.log('<---- Desafio 8 ---->');
-console.log(fizzBuzz([9, 25, 30, 2]));
+// console.log(fizzBuzz([9, 25, 30, 2]));
 
 // Desafio 9
 // Crie duas funções: a primeira deverá se chamar encode e, ao receber uma
