@@ -120,7 +120,8 @@ function techList(array, string) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(number) {
+
   if (number.length !== 11) {
     return "Array com tamanho incorreto."
   }
@@ -163,18 +164,16 @@ function triangleCheck(sideA, sideB, sideC) {
   }
 
   return false;
-
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
 
   let number = (string.match(/\d+/g) || []).map(n => parseInt(n));
   number = number.reduce((a, b) => a + b, 0);
 
-  return number > 1 ? `${number} copos de água` :
-  `${number} copo de água`;
-
+  return number === 1 ? `${number} copo de água` :
+  `${number} copos de água`;
 }
 
 
