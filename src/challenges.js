@@ -199,8 +199,16 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let num = drinks.match(/\d/g);
+  let cont = 0;
+  for(index in num){
+    if(num[index] < 1 && num[index] > 9){
+      return 'número inválido!'
+    }
+    cont += parseInt(num[index]); 
+  }
+  return cont + " copos de água";
 }
 
 console.log('Exercício 1: ' + compareTrue(true, true));
@@ -229,7 +237,7 @@ console.log('Exercício 11: ' + generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 
 
 console.log('Exercício 12: ' + triangleCheck(10, 14, 8));
 
-console.log('Exercício 13: ' );
+console.log('Exercício 13: ' + hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 
