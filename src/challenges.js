@@ -57,12 +57,51 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount() {
     // seu código aqui
+
 }
 
 // Desafio 7
-function catAndMouse() {
-    // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+    let distanciaCat1Mouse = cat1 - mouse;
+    let distanciaCat2Mouse = cat2 - mouse;
+
+
+    if (distanciaCat1Mouse < 0) {
+
+        distanciaCat1Mouse = distanciaCat1Mouse * -1;
+    }
+
+
+    if (distanciaCat2Mouse < 0) {
+
+        distanciaCat2Mouse = distanciaCat2Mouse * -1;
+
+    }
+
+    if (distanciaCat1Mouse > distanciaCat2Mouse) {
+
+
+        return cat2;
+
+    } else if (distanciaCat2Mouse > distanciaCat1Mouse) {
+
+
+        return cat1;
+
+
+    } else {
+
+
+        return "os gatos trombam o rato foge";
+    }
+
+
 }
+
+
+
+
 
 // Desafio 8
 function fizzBuzz() {
