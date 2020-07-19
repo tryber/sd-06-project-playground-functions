@@ -8,7 +8,7 @@ function compareTrue(varOne, varTwo) {
   }
 }
 
-console.log(compareTrue(true, false))
+// console.log(compareTrue(true, false))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -16,7 +16,7 @@ function calcArea(base, height) {
   return ((base * height) / 2)
 }
 
-console.log(calcArea(10, 2))
+// console.log(calcArea(10, 2))
 
 // Desafio 3
 function splitSentence(stringToSplit) {
@@ -24,7 +24,7 @@ function splitSentence(stringToSplit) {
   return stringToSplit.split(" ");
 }
 
-console.log(splitSentence("go Trybe"))
+// console.log(splitSentence("go Trybe"))
 
 // Desafio 4
 function concatName(stringArray) {
@@ -32,7 +32,7 @@ function concatName(stringArray) {
   return (stringArray[stringArray.length - 1] + ", " +  stringArray[0])
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -41,7 +41,7 @@ function footballPoints(wins, ties) {
   return sum
 }
 
-console.log(footballPoints(3, 2))
+// console.log(footballPoints(3, 2))
 
 // Desafio 6
 function highestCount(numberArray) {
@@ -60,7 +60,7 @@ function highestCount(numberArray) {
   return (repeatCont)
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -94,7 +94,7 @@ function catAndMouse(mouse, cat1, cat2) {
   return chaseStatus
 } 
 
-console.log(catAndMouse(0, 3, 2))
+// console.log(catAndMouse(0, 3, 2))
 
 // Desafio 8
 function fizzBuzz(numberArray) {
@@ -115,7 +115,7 @@ function fizzBuzz(numberArray) {
   return (newArray)
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+// console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(stringToEncode) {
@@ -140,7 +140,7 @@ function encode(stringToEncode) {
   return encodedString;
 }
 
-console.log(encode("hi there!"))
+// console.log(encode("hi there!"))
 
 function decode(stringToDecode) {
   // seu código aqui
@@ -165,7 +165,7 @@ function decode(stringToDecode) {
   return decodedString;
 }
 
-console.log(decode("h3 th2r2!"))
+// console.log(decode("h3 th2r2!"))
 
 
 // Desafio 10
@@ -181,7 +181,7 @@ function techList(techArray, name) {
   return techList
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
@@ -196,12 +196,11 @@ function generatePhoneNumber(phoneNumber) {
     for (cont = 0; cont < phoneNumber.length; cont += 1) {
       // console.log(phoneNumber[number] + " = " + phoneNumber[cont])
       if (phoneNumber.length != 11) {
-        phoneError = "Array com tamanho incorreto.";
+        return phoneError = "Array com tamanho incorreto.";
+      } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9) {
+        return phoneError = "não é possível gerar um número de telefone com esses valores";
       } else if (phoneNumber[number] === phoneNumber[cont]) {
         repCounter += 1;
-        console.log(repCounter + " rep")
-      } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9) {
-        phoneError = "não é possível gerar um número de telefone com esses valores";
       } else {
         phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + " " + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
       }
@@ -211,12 +210,10 @@ function generatePhoneNumber(phoneNumber) {
     return counterError = "não é possível gerar um número de telefone com esses valores";
   } else if (phoneSintaxe != false) {
     return phoneSintaxe;
-  } else {
-    return phoneError;
   }
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 1, 2, 7, 8, 9, 9, 4, 10]))
+console.log(generatePhoneNumber([0, 2, 2, 4, 1, 2, 7, 8, 1, 9, 4]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
