@@ -60,22 +60,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array3) {
-  let phrase = []
+  let string = []
 
   for (let i = 0; i < array3.length; i++) {
 
-    if (array3[i] % 3 === 0 && array3[i] % 5 === 0) {
-      phrase.push("fizzBuzz");
-    }
-    else if (array3[i] % 3 === 0) {
-      phrase.push("fizz");
-    }
-    else if (array3[i] % 5 === 0) {
-      phrase.push("buzz");
-    }
-    else {
-      phrase.push("bug!");
-    }
+    const fizz = array3[i] % 3 === 0;
+    const buzz = array3[i] % 5 === 0;
+
+    fizz && buzz ? string.push('fizzbuzz') : 
+    fizz ? string.push('fizz') : 
+    buzz ? string.push('buzz') : 
+    string.push('bug!');
   }
 
   return phrase;
@@ -126,8 +121,7 @@ function generatePhoneNumber(number) {
     return "Array com tamanho incorreto."
   }
 
-  let count = {};
-  let phoneNumber = "(";
+  let count = {};  
 
   for (i = 0; i < number.length; i += 1) {
     count[number[i]] = (count[number[i]] || 0) + 1;
@@ -137,21 +131,12 @@ function generatePhoneNumber(number) {
     }
   }
 
-  function makeNumber(element, index) {
-    if (index === 2) {
-      phoneNumber += ')';
-      phoneNumber += ' ';
-    }
-    else if (index === 7) {
-      phoneNumber += '-';
-    }
+  number.splice(0, 0, '(');
+  number.splice(3, 0, ')');
+  number.splice(9, 0, '-');
+  number.splice(4, 0, ' ');
 
-    phoneNumber += String(element);
-  }
-
-  number.forEach(makeNumber);
-
-  return phoneNumber;
+  return number.join("");
 }
 
 // Desafio 12
