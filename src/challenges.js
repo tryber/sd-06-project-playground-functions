@@ -162,8 +162,8 @@ function addCounter(element, counter) {
     counter[element] += 1;
     return true
   }
-
   counter[element] = 1;
+  return false
 }
 
 function buildNumber(tel, array, index) {
@@ -201,7 +201,6 @@ function generatePhoneNumber(arr) {
   let counter = {};
 
   for (let i = 0; i < 11; i += 1) {
-
     addCounter(arr[i], counter)
 
     if (badNumbers(arr, i, counter)) {
