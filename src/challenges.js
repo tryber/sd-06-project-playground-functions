@@ -93,67 +93,74 @@ function fizzBuzz(numeros) {
 }
 // let n = [7,9]; console.log(fizzBuzz(n));
 // Desafio 9
+function comparaEsubstituiVog(vogal, subVogais) {
+  switch (vogal) {
+    case 'a':
+      subVogais = subVogais.replace('a', '1');
+      break;
+    case 'e':
+      subVogais = subVogais.replace('e', '2');
+      break;
+    case 'i':
+      subVogais = subVogais.replace('i', '3');
+      break;
+    case 'o':
+      subVogais = subVogais.replace('o', '4');
+      break;
+    case 'u':
+      subVogais = subVogais.replace('u', '5');
+      break;
+    default:
+      console.log('variavel não encontrada')
+      break;
+  }return subVogais;
+}
 function encode(subVogais) {
   let vogal = ['a', 'e', 'i', 'o', 'u'];
   for (let contador = 0; contador < subVogais.length; contador += 1) {
     for (let indice = 0; indice < subVogais.length; indice += 1) {
       if (vogal[contador] === subVogais[indice]) {
-        switch (vogal[contador]) {
-          case 'a':
-            subVogais = subVogais.replace('a', '1');
-            break;
-          case 'e':
-            subVogais = subVogais.replace('e', '2');
-            break;
-          case 'i':
-            subVogais = subVogais.replace('i', '3');
-            break;
-          case 'o':
-            subVogais = subVogais.replace('o', '4');
-            break;
-          case 'u':
-            subVogais = subVogais.replace('u', '5');
-            break;
-          default:
-            console.log('variavel não encontrada')
-            break;
-        }
+        subVogais = comparaEsubstituiVog(vogal[contador], subVogais);
       }
     }
   } return subVogais;
 }
-// console.log(encode('uoiea'));
+// 
+// console.log(encode('uoieaaaa'));
 // -- ------------
+function comparaEsubstituiNum(num, subNum) {
+  switch (num) {
+    case '1':
+      subNum = subNum.replace('1', 'a');
+      break;
+    case '2':
+      subNum = subNum.replace('2', 'e');
+      break;
+    case '3':
+      subNum = subNum.replace('3', 'i');
+      break;
+    case '4':
+      subNum = subNum.replace('4', 'o');
+      break;
+    case '5':
+      subNum = subNum.replace('5', 'u');
+      break;
+    default:
+      console.log('variavel não encontrada')
+      break;
+  }return subNum
+}
 function decode(subNum) {
   let numList = ['1', '2', '3', '4', '5'];
   for (let contador = 0; contador < subNum.length; contador += 1) {
     for (let indice = 0; indice < subNum.length; indice += 1) {
       if (numList[contador] === subNum[indice]) {
-        switch (numList[contador]) {
-          case '1':
-            subNum = subNum.replace('1', 'a');
-            break;
-          case '2':
-            subNum = subNum.replace('2', 'e');
-            break;
-          case '3':
-            subNum = subNum.replace('3', 'i');
-            break;
-          case '4':
-            subNum = subNum.replace('4', 'o');
-            break;
-          case '5':
-            subNum = subNum.replace('5', 'u');
-            break;
-          default:
-            console.log('variavel não encontrada')
-            break;
-        }
+        subNum = comparaEsubstituiNum(numList[contador], subNum);
       }
     }
   } return subNum;
 }
-// console.log(decode('43 v3d1!'));
+c// onsole.log(decode('11 22 33 44 55'));
 // Desafio 10
 function techList() {
   // seu código aqui
