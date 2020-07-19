@@ -131,16 +131,19 @@ function techList(arrayTech) {
 
 // Desafio 11
 // console.log(generatePhoneNumber([0, 2, 4, 3, 5, 5, 6, 8, 9, 2, 1]))
-function checkRepeatedNumber(arrayPhone) {
-  let nRepeat;
+function verifyNumber(vNumber, arrayPhone) {
+  let nRepeat = 0;
   for (let index = 0; index < arrayPhone.length; index += 1) {
-    nRepeat = 0;
-    for (let index2 = 0; index2 < arrayPhone.length; index2 += 1) {
-      if (arrayPhone[index] === arrayPhone[index2]) {
-        nRepeat += 1;
-      } else if (nRepeat >= 3) {
-        return nRepeat;
-      }
+    if (arrayPhone[index] === vNumber) {
+      nRepeat += 1;
+    }
+    return nRepeat;
+}
+function checkRepeatedNumber(arrayPhone) {
+  for (let index = 0; index < arrayPhone.length; index += 1) {
+    let nRepeat = verifyNumber(arrayPhone[index], arrayPhone);
+    if (nRepeat >= 3) {
+      return nRepeat;
     }
   }
   return nRepeat;
