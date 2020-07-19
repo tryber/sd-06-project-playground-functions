@@ -85,7 +85,7 @@ function fizzBuzz(numeros) {
       break;
 
     case (divisivel(n,3) && divisivel(n,5)):
-      element = 'fizzbuzz';
+      element = 'fizzBuzz';
       break;
     case (!divisivel(n,3) && !divisivel(n,5)):
       element = 'bug!';
@@ -109,9 +109,18 @@ function divisivel(numero,indice){
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  //trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+
+/*a -> 1 \
+e -> 2 \
+i -> 3 \
+o -> 4 \
+u -> 5 */
+   //varrer o array
+
 }
 function decode() {
+  /*A segunda função deverá se chamar `decode` e faz o contrário de `encode` - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de `decode` seja `"h3 th2r2!"`, o retorno deverá ser `"hi there!"`).*/
   // seu código aqui
 }
 
