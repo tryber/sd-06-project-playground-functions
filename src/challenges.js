@@ -58,7 +58,12 @@ function splitSentence(word) {
 
 function concatName(newArray) {
   return newArray[newArray.length - 1] + ', ' + newArray[0];
+// let myString = '${newArray[newArray.length - 1]}, ${newArray[0]}';
+// return myString
 }
+// CODE CLIMATE
+// var str = "Hello, " + name + "!";
+// var str = `Hello, ${name}!`;
 
 // TESTE
 // let testArray = ['Pedrina', 'Maria', 'Julieta', 'Catarina', 'Marieta'];
@@ -99,7 +104,7 @@ function highestCount(numbersArray) {
 
   for (index in numbersArray) {
     if (numbersArray[index] > highestNumber) {
-      highestNumber = numbersArray [index];
+      highestNumber = numbersArray[index];
     }
   }
   for (index in numbersArray) {
@@ -287,8 +292,8 @@ function decode(numbersString) {
 // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos
 // com o formato acima.
 
-function compare(a,b) {
-  if (a.tech < b.tech){
+function compare(a, b) {
+  if (a.tech < b.tech) {
     return -1;
   }
   if (a.tech > b.tech) {
@@ -299,12 +304,12 @@ function compare(a,b) {
 
 function techList(techName, name) {
   let index;
-  let myObject = {};
   let myList = [];
 
   if (techName.length !== 0) {
     for (index in techName) {
-      myList[index] = myObject = { tech: techName[index], name: name, };
+      myObject = { tech: techName[index], name: name };
+      myList[index] = myObject;
     }
     return myList.sort(compare);
   } else {
@@ -317,9 +322,51 @@ function techList(techName, name) {
 // console.log(techList(testArray, 'Zeca'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+
+// Número de telefone
+// Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e
+// retorne um número de telefone, respeitando parênteses, traços e espaços.
+
+// Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1],
+// generatePhoneNumber deverá retornar (12) 34567-8901.
+
+// Se a função receber um array com tamanho diferente de 11, a mesma deve retornar
+// "Array com tamanho incorreto.".
+
+// Caso algum dos números da array seja menor que 0, maior que 9 ou
+// "não é possível gerar um número de telefone com esses valores".
+
+function generatePhoneNumber(phoneNumber) {
+  let numbers = 0;
+  let index;
+  let threeTimesCounter = 0;
+  let returnMessage = 'Array com tamanho incorreto.';
+  let testResult = '';
+
+  if (phoneNumber.length === 11) {
+    for (index in phoneNumber) {
+      numbers = phoneNumber[index];
+      for (let j = 0; j < phoneNumber.length; j += 1) {
+        if (numbers === phoneNumber[j]) {
+          threeTimesCounter += 1;
+        }
+      }
+        if (threeTimesCounter >= 3 || numbers < 0 ||numbers > 9) {
+          testResult = true
+        }
+    threeTimesCounter = 0;
+    }
+  }
+  if (testResult === true) {
+    returnMessage = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    returnMessage = `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
+  }
+  return returnMessage;
 }
+
+let testArray = [1, 5, 9, 9, 7, 7, 4, 6, 4, 5, 8];
+console.log(generatePhoneNumber(testArray));
 
 // Desafio 12
 function triangleCheck() {
