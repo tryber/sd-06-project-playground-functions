@@ -186,34 +186,37 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
   // seu código aqui
-  let phoneSintaxe;
+  let phoneSintaxe = false;
   let repCounter;
-  let phoneError;
+  let phoneError = false;
+  let counterError;
 
   for (number in phoneNumber) {
     repCounter = 0;
     for (cont = 0; cont < phoneNumber.length; cont += 1) {
       // console.log(phoneNumber[number] + " = " + phoneNumber[cont])
-      if (phoneNumber[number] === phoneNumber[cont]) {
-        repCounter += 1;
-        // console.log(repCounter + " rep")
-      } else if (phoneNumber.length != 11) {
+      if (phoneNumber.length != 11) {
         phoneError = "Array com tamanho incorreto.";
-      } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9 || repCounter >= 3) {
+      } else if (phoneNumber[number] === phoneNumber[cont]) {
+        repCounter += 1;
+        console.log(repCounter + " rep")
+      } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9) {
         phoneError = "não é possível gerar um número de telefone com esses valores";
-      }  else {
-        phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
+      } else {
+        phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + " " + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
       }
     }
   }
-  if (phoneError) {
-    return phoneError;
-  } else {
+  if (repCounter === 3) {
+    return counterError = "não é possível gerar um número de telefone com esses valores";
+  } else if (phoneSintaxe != false) {
     return phoneSintaxe;
+  } else {
+    return phoneError;
   }
 }
 
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, 7, 0, 1, 10]))
+console.log(generatePhoneNumber([0, 2, 3, 4, 1, 2, 7, 8, 9, 9, 4, 10]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
