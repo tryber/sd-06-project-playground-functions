@@ -152,36 +152,36 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   // seu código aqui
-  numeroRepeticoes = checarRepeticao(arrayNumber);
-  if (arrayNumber.length !== 11) {
-    numeroTelefone = 'Array com tamanho incorreto.';
-    break;
-  }
-  for (let i = 0; i < arrayNumber.length; i += 1) {
-    if (arrayNumber[i] < 0 || arrayNumber[i] > 9 || numeroRepeticoes === true) {
-      numeroTelefone = 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      numeroTelefone = '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber [4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10];
-    }
-  }
-  return numeroTelefone;
-}
-
-function checarRepeticao(arrayNumber) {
-  let limiteVezesRepetidas = false;
+  let numeroTelefoneCompleto = '';
+  // Se algum dos numeros for >9 e <0 e repetiver 3+ "não é possível gerar um número de telefone com esses valores"
+  // else if tamanho do array !== 11 "Array com tamanho incorreto."
+  // Se for td ok, retorna numeroTelefoneCompleto.
+  //Verificando se repete
+  let arrayVerificar = arrayNumber;
   let contador = 0;
+  let limiteVezesRepetidas = false;
   for (index in arrayNumber) {
-    for (let j = 0; j < arrayNumber.length; j += 1) {
-      if (arrayNumber[index] = arrayNumber[j]) {
-        contador += 1;
-        if (contador === 3) {
-          limiteVezesRepetidas = true;
-        }
+    for (i in arrayVerificar) {
+      if (arrayNumber[index] === arrayVerificar[i]) {
+        contador += 1
+      } else if (contador >= 3) {
+        limiteVezesRepetidas = true;
       }
     }
     contador = 0;
   }
-  return limiteVezesRepetidas;
+  //Verificando numeros e condicao de repeticao
+  for (let j = 0; j < arrayNumber.length; j += 1) {
+    if (arrayNumber[j] < 0 || arrayNumber[j] > 9 || limiteVezesRepetidas === true) {
+      numeroTelefoneCompleto = 'não é possível gerar um número de telefone com esses valores';
+    } else if (arrayNumber.length !== 11) {
+      numeroTelefoneCompleto = 'Array com tamanho incorreto.'
+    } else {
+      numeroTelefoneCompleto = '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber[4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10];
+    }
+  }
+  //Retornando numero
+  return numeroTelefoneCompleto;
 }
 
 
