@@ -106,6 +106,4 @@ module.exports = {
   triangleCheck,
 }
 
-splitSentence('paulo é bom');
-concatName(['paulo','ronaldo']);
-concatName2(['paulo','oracio'])
+
