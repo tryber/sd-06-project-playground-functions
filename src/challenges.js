@@ -132,14 +132,19 @@ function decode(word) {
   return newWord.join("");
 }
 
-// Desafio 10
+// Desafio 10 - OK
 function techList(recArray, name) {
   // seu código aqui
   let listOrdened = recArray.sort();
   let retorno = [];
 
+  if (listOrdened.length === 0) {
+    return "Vazio!";
+  }
+
   for(let index in listOrdened){
-    retorno.push({tech: listOrdened[index],
+    retorno.push(
+      {tech: listOrdened[index],
        name: name
       });
     return retorno;
@@ -179,4 +184,4 @@ module.exports = {
   triangleCheck,
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+
