@@ -1,19 +1,10 @@
-// Desafio 8
-function fizzBuzz(array) {
-    let list = []
-    for (let i in array) {
-        if (array[i] % 5 === 0 && array[i] % 3 === 0){
-           list.push ("fizzBuzz");
-        }
-        else if (array[i] % 5 === 0) {
-            list.push ("buzz");
-        }
-        else if (array[i] % 3 === 0){
-            list.push ("fizz");
-        }else{
-            list.push ("bug!");
-        }
-        }
-    return list
+// Desafio 10
+function techList(tech, name){
+    let techSort = tech.sort();
+    let lista = [];
+    for(i in techSort){
+        lista.push(techSort[i] = {tech: techSort[i]}, {nome: name})
     }
-  
+    return lista
+  }
+  console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
