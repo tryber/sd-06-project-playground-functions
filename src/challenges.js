@@ -16,13 +16,13 @@ console.log(calcArea(2, 10));
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");
+  return string.split(' ');
 }
-console.log(splitSentence("Hello World"));
+console.log(splitSentence('Hello World'));
 
 // Desafio 4
 function concatName(recebeArray) {
-  return recebeArray[recebeArray.length -1] + ", " + recebeArray[0];
+  return recebeArray[recebeArray.length -1] + ', ' + recebeArray[0];
 }
 console.log(concatName(nomes = ["Ana", "Jean", "Pedro", "Maria", "Joao"]));
 
@@ -49,38 +49,35 @@ function highestCount(numeros) {
       if (numeroMaisAlto == numeros[index]) {
           count += 1;
       }
-  } 
+  }
   return count;
 }
 
 console.log(highestCount(array = [9, 1, 2, 3, 9, 5, 7, 9]));
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-
+function catAndMouse(mouse, cat1, cat2){
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    result = "Cat1";
+    result = 'Cat1';
   }
   else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
-    result = "cat2";
+    result = 'cat2';
   }
-  else if (Math.abs(mouse - cat2) == Math.abs(mouse - cat1)) {
-    result = "os gatos trombam e o rato foge";
+  else if (Math.abs(mouse - cat2) === Math.abs(mouse - cat1)) {
+    result = 'os gatos trombam e o rato foge';
   }
   return result;
 }
 //console.log(catAndMouse(10, 11, 12));
-
 // Desafio 8
 function fizzBuzz() {
-  
 //  let array = [];
 
 //    for (let i = 0; i < numbers.length; i += 1) {
 //
 //        if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
 //            array.push("fizzbuzz");
-//        } 
+//        }
 //        else if (numbers[i] % 3 === 0) {
 //            array.push("fizz");
 //        }
@@ -90,12 +87,10 @@ function fizzBuzz() {
 //        else {
 //            array.push("bug!");
 //        }
-//    } 
+//    }
 //    return array;
 }
 //console.log(fizzBuzz(arr = [2, 15, 7, 9, 45]));
-
-
 // Desafio 9
 function encode() {
   // seu código aqui
