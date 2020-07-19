@@ -133,15 +133,34 @@ function fizzBuzz(numberD8) {
 }
 
 // console.log('<---- Desafio 8 ---->');
-console.log(fizzBuzz());
+// console.log(fizzBuzz());
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// Crie duas funções: a primeira deverá se chamar encode e, ao receber uma
+// string como parâmetro, deverá trocar todas as vogais minúsculas por números
+// de acordo com o formato a seguir: a -> 1 e -> 2 i -> 3 o -> 4 u -> 5
+// A segunda função deverá se chamar decode e faz o contrário de encode - ou
+// seja, recebe uma string contendo números no lugar de letras minúsculas e
+// retornará uma string com vogais minúsculas no lugar dos números
+function encode(stringEncode) {
+  let stringEncodeRet = stringEncode.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+
+  return stringEncodeRet;
 }
-function decode() {
-  // seu código aqui
+
+// console.log('<---- Desafio 9-Encode ---->');
+// console.log(encode('testando frase'));
+
+
+function decode(stringDecode) {
+  let stringDecodeRet = stringDecode.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+
+  return stringDecodeRet;
 }
+
+// console.log('<---- Desafio 9-Decode ---->');
+// console.log(decode('t2st1nd4 fr1s2'));
+
 
 // Desafio 10
 function techList() {
