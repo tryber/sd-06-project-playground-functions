@@ -58,7 +58,7 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2){
   let result = '';
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    result = 'Cat1';
+    result = 'cat1';
   }
   else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     result = 'cat2';
@@ -68,7 +68,8 @@ function catAndMouse(mouse, cat1, cat2){
   }
   return result;
 }
-//console.log(catAndMouse(10, 12, 12));
+console.log(catAndMouse(10, 4, 22));
+
 // Desafio 8
 function fizzBuzz(){
 //  let array = [];
