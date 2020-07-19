@@ -88,7 +88,7 @@ function fizzBuzz(numbers) {
   return retorno;
 }
 
-// Desafio 9
+// Desafio 9 - OK
 function encode(word) {
   // seu código aqui
   let newWord = [];
@@ -133,8 +133,17 @@ function decode(word) {
 }
 
 // Desafio 10
-function techList() {
+function techList(recArray, name) {
   // seu código aqui
+  let listOrdened = recArray.sort();
+  let retorno = [];
+
+  for(let index in listOrdened){
+    retorno.push({tech: listOrdened[index],
+       name: name
+      });
+    return retorno;
+  }
 }
 
 // Desafio 11
@@ -170,3 +179,4 @@ module.exports = {
   triangleCheck,
 }
 
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
