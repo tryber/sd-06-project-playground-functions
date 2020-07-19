@@ -8,7 +8,7 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-// Desafio 3
+// Desafio 31
 function splitSentence(phrase) {
   return phrase.split(' ');
 }
@@ -28,7 +28,7 @@ function highestCount(array2) {
   let maior = array2[0];
   let count = 0;
 
-  for (let i = 0; i < array2.length; i++) {
+  for (let i = 0; i < array2.length; i += 1) {
 
     if (array2[i] === maior) {
       count += 1;
@@ -49,31 +49,30 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance = [Math.abs(cat1 - mouse), Math.abs(cat2 - mouse)];
 
   if (distance[0] > distance[1]) {
-    return "cat2"
-  }
-  else if (distance[1] > distance[0]) {
-    return "cat1"
+    return 'cat2'
+
+  } else if (distance[1] > distance[0]) {
+    return 'cat1'
   }
 
-  return "os gatos trombam e o rato foge"
+  return 'os gatos trombam e o rato foge'
 }
 
 // Desafio 8
-function fizzBuzz(array3) {
-  let string = []
+function fizzBuzz(array) {
+  let string = [];
+  const fizz = {
+    1: 'bug!',
+    0: 'fizzbuzz',
+    6: 'fizz',
+    10: 'buzz'
+  };
 
-  for (let i = 0; i < array3.length; i++) {
+  array.forEach(function (element) {
+    string.push(fizz[element ** 4 % 15]);
+  });
 
-    const fizz = array3[i] % 3 === 0;
-    const buzz = array3[i] % 5 === 0;
-
-    fizz && buzz ? string.push('fizzbuzz') : 
-    fizz ? string.push('fizz') : 
-    buzz ? string.push('buzz') : 
-    string.push('bug!');
-  }
-
-  return phrase;
+  return string;
 }
 
 // Desafio 9
@@ -85,13 +84,17 @@ function decode(phrase) {
   return replaceString(phrase, false);
 }
 
-function replaceString(string, swap) {
+function replaceString(string, change) {
   const vowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
   for (const [key, value] of Object.entries(vowels)) {
 
-    swap ? string = string.split(key).join(value) :
+    if (change) {
+      string = string.split(key).join(value);
+
+    } else {
       string = string.split(value).join(key);
+    }
 
   }
 
@@ -102,7 +105,7 @@ function replaceString(string, swap) {
 function techList(array, string) {
 
   if (array.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
 
   let technology = [];
@@ -118,16 +121,16 @@ function techList(array, string) {
 function generatePhoneNumber(number) {
 
   if (number.length !== 11) {
-    return "Array com tamanho incorreto."
+    return 'Array com tamanho incorreto.'
   }
 
-  let count = {};  
+  let count = {};
 
-  for (i = 0; i < number.length; i += 1) {
+  for (let i = 0; i < number.length; i += 1) {
     count[number[i]] = (count[number[i]] || 0) + 1;
 
     if (count[number[i]] > 2 || number[i] < 0 || number[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores"
+      return 'não é possível gerar um número de telefone com esses valores'
     }
   }
 
@@ -136,7 +139,7 @@ function generatePhoneNumber(number) {
   number.splice(9, 0, '-');
   number.splice(4, 0, ' ');
 
-  return number.join("");
+  return number.join('');
 }
 
 // Desafio 12
@@ -158,7 +161,7 @@ function hydrate(string) {
   number = number.reduce((a, b) => a + b, 0);
 
   return number === 1 ? `${number} copo de água` :
-  `${number} copos de água`;
+    `${number} copos de água`;
 }
 
 
