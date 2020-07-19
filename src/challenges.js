@@ -73,8 +73,9 @@ function fizzBuzz(numeros) {
       resposta[i] = 'fizz';
     } else if (numeros[i] % 5 === 0) {
       resposta[i] = 'buzz';
+    } else {
+      resposta[i] = 'bug!';
     }
-    resposta[i] = 'bug!';
   }
   return resposta;
 }
