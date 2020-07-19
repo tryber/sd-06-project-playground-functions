@@ -83,47 +83,54 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encDec(char) {
-  switch (char) {
-    case 'a':
-      return '1';
-    case 'e':
-      return '2';
-    case 'i':
-      return '3';
-    case 'o':
-      return '4';
-    case 'u':
-      return '5';
-    case '1':
-      return 'a';
-    case '2':
-      return 'e';
-    case '3':
-      return 'i';
-    case '4':
-      return 'o';
-    case '5':
-      return 'u';
-    default:
-      return char;
+function encDec(phrase) {
+  let newPhrase = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    switch (phrase[index]) {
+      case 'a':
+        newPhrase += '1';
+        break;
+      case 'e':
+        newPhrase += '2';
+        break;
+      case 'i':
+        newPhrase += '3';
+        break;
+      case 'o':
+        newPhrase += '4';
+        break;
+      case 'u':
+        newPhrase += '5';
+        break;
+      case '1':
+        newPhrase += 'a';
+        break;
+      case '2':
+        newPhrase += 'e';
+        break;
+      case '3':
+        newPhrase += 'i';
+        break;
+      case '4':
+        newPhrase += 'o';
+        break;
+      case '5':
+        newPhrase += 'u';
+        break;
+      default:
+        newPhrase += phrase[index];
+    }
   }
+  return newPhrase;
 }
 function encode(sentence) {
   // seu código aqui
-  let newSentence = '';
-  for (let index = 0; index < sentence.length; index += 1) {
-    newSentence += encDec(sentence[index]);
-  }
+  let newSentence = encDec(sentence);
   return newSentence;
 }
-function decode(frase) {
+function decode(expression) {
   // seu código aqui denovo
-  let newFrase = '';
-  for (let index = 0; index < frase.length; index += 1) {
-    newFrase += encDec(frase[index]);
-  }
-  return newFrase;
+  return encDec(expression);
 }
 
 // Desafio 10
