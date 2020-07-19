@@ -91,7 +91,7 @@ function fizzBuzz(numeros) {
     }
   } return respostas
 }
-let n = [7, 9, 15]; console.log(fizzBuzz(n));
+// let n = [7, 9, 15]; console.log(fizzBuzz(n));
 // Desafio 9
 function comparaEsubstituiVog(vogal, subVogais) {
   switch (vogal) {
@@ -164,14 +164,14 @@ function decode(subNum) {
 function techList(listaTec, name) {
   listaTec.sort();
   let novaLista = [];
-  //let tecnologias;
+  // let tecnologias;
   for (let indice = 0; indice < listaTec.length; indice += 1) {
-   let tecnologias = {
+    let tecnologias = {
       tech: listaTec[indice],
-      name: name
+      name: name,
     }
     novaLista.push(tecnologias);
-    } return novaLista;
+  } return novaLista;
 }
 // let listaTeste = ['javascript', 'html'];
 // console.log(techList(listaTeste, 'paulo'));
