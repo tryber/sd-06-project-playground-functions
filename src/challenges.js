@@ -76,7 +76,7 @@ function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-   return 'cat2';
+    return 'cat2';
   } return 'os gatos trombam e o rato foge'
 }
 console.log(catAndMouse(0, 20, 20))
@@ -118,8 +118,8 @@ function encode(arrei) {
     } else {
       novoarreiencode[index] = arrei[index];
     }
-   } 
-   return (novoarreiencode.join(''));
+    }
+    return (novoarreiencode.join(''));
 }
 
 console.log(encode('hi there!'))
@@ -141,14 +141,14 @@ function decode(arrei) {
       novoarreidecode[index] = arrei[index];
     }
   }
-   return (novoarreidecode.join(''));
+    return (novoarreidecode.join(''));
 }
 
 console.log(decode('h3 th2r2!'))
 
 // Desafio 10
 function techList(tec, nome) {
-  if (tec.length > 0){
+  if (tec.length > 0) {
     let arrei = [];
     for (let indexArrei = 0; indexArrei < tec.length; indexArrei += 1) {
       arrei.push(tec[indexArrei])
@@ -157,27 +157,27 @@ function techList(tec, nome) {
     let ordenado = [];
     for (let indexOrdenado = 0; indexOrdenado < arrei.length; indexOrdenado += 1) {
       let objeto = {
-      tech: arrei[indexOrdenado],
-      name: nome,
-    }
-    ordenado.push(objeto);
-  } return ordenado
+        tech: arrei[indexOrdenado],
+        name: nome,
+      }
+      ordenado.push(objeto);
+    } return ordenado
   } return 'Vazio!'
 }
 
-let tecnologia = ['React', 'Jest', 'HTML','CSS', 'JavaScript'];
+let tecnologia = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
 let lucas = 'Lucas'
 
 console.log(techList(tecnologia, lucas))
 
 // Desafio 11
 function generatePhoneNumber(arrei) {
-  if (arrei.length != 11) {
+  if (arrei.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
   for (let index = 0; index < arrei.length; index += 1) {
     if (arrei[index] < 0 || arrei[index] > 9) {
-      return "não é possível gerar um número de telefone com esses valores"
+      return 'não é possível gerar um número de telefone com esses valores'
     }
   }
   let count = 0;
@@ -189,9 +189,9 @@ function generatePhoneNumber(arrei) {
     }
   }
   if (count === 3 || count > 3) {
-    return "não é possível gerar um número de telefone com esses valores", count
+    return 'não é possível gerar um número de telefone com esses valores'
   }
-  let geradortel = '(' + arrei[0] + arrei[1] + ')' + ' ' + arrei[2] + arrei[3] + arrei[4] + arrei[5] + arrei[6] + '-' + arrei[7] + arrei[8] + arrei[9] + arrei[10];
+  let geradortel = `(${arrei[0]}${arrei[1]}) ${arrei[2]}${arrei[3]}${arrei[4]}${arrei[5]}${arrei[6]}-${arrei[7]}${arrei[8]}${arrei[9]}${arrei[10]}`;
   return geradortel;
 }
 
@@ -201,11 +201,14 @@ console.log(generatePhoneNumber(telefone))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA >= (lineB + lineC) || lineA <= Math.abs(lineB - lineC) || lineA <= Math.abs(lineC - lineB)) {
+  if (lineA >= (lineB + lineC) || lineA <= Math.abs(lineB - lineC)
+   || lineA <= Math.abs(lineC - lineB)) {
     return false
-  } else if (lineB >= (lineA + lineC) || lineB <= Math.abs(lineA - lineC) || lineB <= Math.abs(lineC - lineA)) {
+  } else if (lineB >= (lineA + lineC) || lineB <= Math.abs(lineA - lineC)
+   || lineB <= Math.abs(lineC - lineA)) {
     return false
-  } else if (lineC >= (lineB + lineA) || lineC <= Math.abs(lineB - lineA) || lineC <= Math.abs(lineA - lineB)) {
+  } else if (lineC >= (lineB + lineA) || lineC <= Math.abs(lineB - lineA)
+   || lineC <= Math.abs(lineA - lineB)) {
     return false
   } return true
 }
