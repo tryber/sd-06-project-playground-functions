@@ -49,16 +49,16 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2) {
   let numeroCat1 = mouse - cat1;
   if (numeroCat1 < 0) {
-    numeroCat1 = numeroCat1 * (-1);
+    numeroCat1 *= -1;
   }
   let numeroCat2 = mouse - cat2;
   if (numeroCat2 < 0) {
-    numeroCat2 = numeroCat2 * (-1);
+    numeroCat2 *= -1;
   }
   if (numeroCat1 < numeroCat2) {
-    return 'cat2';
-  } else if (numeroCat1 > numeroCat2) {
     return 'cat1';
+  } else if (numeroCat1 > numeroCat2) {
+    return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
@@ -67,12 +67,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let resposta = [];
   for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] % 3 === 0) {
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
+      resposta[i] = 'fizzBuzz';
+    } else if (numeros[i] % 3 === 0) {
       resposta[i] = 'fizz';
     } else if (numeros[i] % 5 === 0) {
       resposta[i] = 'buzz';
-    } else if (numeros[i] % 3 === 0 && i % 5 === 0) {
-      resposta[i] = 'fizzBuzz';
     } else {
       resposta[i] = 'bug!';
     }
