@@ -130,7 +130,7 @@ function techList(arrayTech) {
 }
 
 // Desafio 11
-// console.log(generatePhoneNumber([0, 2, 4, 3, 5, 5, 6, 8, 9, 2, 1]))
+console.log(generatePhoneNumber([0, 2, 4, 3, 5, 5, 6, 8, 9, 2, 1]))
 function verifyNumber(vNumber, arrayPhone) {
   let nRepeat = 0;
   for (let index = 0; index < arrayPhone.length; index += 1) {
@@ -138,6 +138,7 @@ function verifyNumber(vNumber, arrayPhone) {
       nRepeat += 1;
     }
     return nRepeat;
+  }
 }
 function checkRepeatedNumber(arrayPhone) {
   for (let index = 0; index < arrayPhone.length; index += 1) {
