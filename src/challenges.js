@@ -195,7 +195,9 @@ function hydrate(drinks) {
   let sum = 0;
   let text = ' copos de água';
   for (let index in arrayNumbers) {
-    sum += parseInt(arrayNumbers[index]);
+    if (sum >= 0) {
+      sum += parseInt(arrayNumbers[index]);
+    }
   }
   return sum + text;
 }
