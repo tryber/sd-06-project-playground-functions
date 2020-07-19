@@ -51,7 +51,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanciaCat2 < distanciaCat1) {
     return 'cat2';
   }
-  return 'os gatos trombam e o rato foge'
+  return 'os gatos trombam e o rato foge';
 }
 
 
@@ -59,38 +59,39 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let resultado = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
-      resultado.push('fizz');
-    } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
-      resultado.push('buzz');
-    } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+    if (array[i] % 15 === 0) {
       resultado.push('fizzBuzz');
+    } else if (array[i] % 3 === 0) {
+      resultado.push('fizz');
+    } else if (array[i] % 5 === 0) {
+      resultado.push('buzz');
     } else {
       resultado.push('bug!');
     }
   }
   return resultado;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(sentence) {
-  resultado = '';
+  let resultado = ' ';
   for (let i = 0; i < sentence.length; i += 1) {
     switch (sentence[i]) {
       case 'a':
-        resultado += 1;
+        resultado += '1';
         break;
       case 'e':
-        resultado += 2;
+        resultado += '2';
         break;
       case 'i':
-        resultado += 3;
+        resultado += '3';
         break;
       case 'o':
-        resultado += 4;
+        resultado += '4';
         break;
       case 'u':
-        resultado += 5;
+        resultado += '5';
         break;
       default:
         resultado += sentence[i];
@@ -100,7 +101,7 @@ function encode(sentence) {
 }
 
 function decode(sentence) {
-  resultado = '';
+  let resultado = ' ';
   for (let i = 0; i < sentence.length; i += 1) {
     switch (sentence[i]) {
       case '1':
@@ -124,6 +125,7 @@ function decode(sentence) {
   }
   return resultado;
 }
+
 
 // Desafio 10
 function techList() {
