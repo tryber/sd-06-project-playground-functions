@@ -183,7 +183,38 @@ function generatePhoneNumber(number) {
       }
     }
   }
-  numberResponse = '';
+
+  let numberResponse = '';
+
+  for (let i in number) {
+    switch (i) {
+      case '0': numberResponse += '(' + number[i];
+        break;
+      case '1': numberResponse += number[i] + ')';
+        break;
+      case '2': numberResponse += number[i];
+        break;
+      case '3': numberResponse += number[i];
+        break;
+      case '4': numberResponse += number[i];
+        break;
+      case '5': numberResponse += number[i] + '-';
+        break;
+      case '6': numberResponse += number[i];
+        break;
+      case '7': numberResponse += number[i];
+        break;
+      case '8': numberResponse += number[i];
+        break;
+      case '9': numberResponse += number[i];
+        break;
+      case '10': numberResponse += number[i];
+        break;
+      default:
+        break;
+    }
+  }
+  return numberResponse;
 }
 
 // Desafio 12
