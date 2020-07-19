@@ -104,7 +104,7 @@ function fizzBuzz(bArray) {
       if (bArray[index] %3 === 0) {
         newArray.push('fizz');
       }else if (bArray[index] %5 === 0) {
-        newArray.push('Buzz');
+        newArray.push('buzz');
       }else {
         newArray.push('bug!');  
       }             
