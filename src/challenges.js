@@ -210,12 +210,16 @@ function hydrate(string) {
     water += parseInt(numbers[num]);
   }
   if (water === 1) {
-    return water + " copo de água"
+    let cup = "";
+    cup += water + " copo de água"
+    return cup;
   }
-  return water + " copos de água";
+  let cups = "";
+  cups += water + " copos de água"
+  return cups;
 }
 
-// console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 module.exports = {
