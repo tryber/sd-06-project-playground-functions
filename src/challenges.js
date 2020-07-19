@@ -50,6 +50,10 @@ console.log(concatName(['Mais', 'um', 'desafio', 'concluído']));
 
 
 // Desafio 5
+// Receba o número de vitórias (esse parâmetro deverá se chamar wins) e o
+// número de empates (esse parâmetro deverá se chamar ties) e retorne a
+// quantidade de pontos que o time marcou em um campeonato.
+// considere que cada vitória vale 3 pontos e cada empate vale 1 ponto
 function footballPoints(wins, ties) {
   let scoreWins = wins * 3;
   let scoreTies = ties * 1;
