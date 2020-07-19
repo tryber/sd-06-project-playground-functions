@@ -103,16 +103,16 @@ function encode(vogais) {
 function decode(numeros) {
   let arrayNumeros = [];
   for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] = 'a') {
+    if (numeros[i] = '1') {
+      arrayNumeros[i] += 'a';
+    } else if (numeros[i] = '2') {
+      arrayNumeros[i] += 'e';
+    } else if (numeros[i] = '3') {
       arrayNumeros[i] += '1';
-    } else if (numeros[i] = 'e') {
-      arrayNumeros[i] += '2';
-    } else if (numeros[i] = 'i') {
-      arrayNumeros[i] += '3';
-    } else if (numeros[i] = 'o') {
-      arrayNumeros[i] += '4';
-    } else if (numeros[i] = 'u') {
-      arrayNumeros[i] += '5';
+    } else if (numeros[i] = '4') {
+      arrayNumeros[i] += 'o';
+    } else if (numeros[i] = '5') {
+      arrayNumeros[i] += 'u';
     }else {
       arrayNumeros[i] += arrayNumeros[i];
     }
