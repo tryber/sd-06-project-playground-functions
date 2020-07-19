@@ -198,9 +198,9 @@ function generatePhoneNumber(number) {
         break;
       case '4': numberResponse += number[i];
         break;
-      case '5': numberResponse += number[i] + '-';
+      case '5': numberResponse += number[i];
         break;
-      case '6': numberResponse += number[i];
+      case '6': numberResponse += number[i] + '-';
         break;
       case '7': numberResponse += number[i];
         break;
