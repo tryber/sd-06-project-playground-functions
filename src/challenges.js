@@ -101,9 +101,31 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+
+  let arrayS = string.split("");
+  for(let i = 0; i < arrayS.length; i++){
+    if(arrayS[i] == "a"){
+      arrayS[i] = 1;
+    }
+    else if(arrayS[i] == "e"){
+      arrayS[i] = 2;
+    }
+    else if(arrayS[i] == "i"){
+      arrayS[i] = 3;
+    }
+    else if(arrayS[i] == "o"){
+      arrayS[i] = 4;
+    }
+    else if(arrayS[i] == "u"){
+      arrayS[i] = 5;
+    }
+  }
+  arrayString = arrayS.join("");
+  return arrayString;
 }
+console.log(encode("fala galerinha"))
+
 function decode() {
   // seu código aqui
 }
