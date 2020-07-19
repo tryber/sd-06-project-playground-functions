@@ -131,29 +131,30 @@ function techList(tec, namePassed) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
-  let invalidNumbers = false;
-  let nines = 0;
-  function checkNumbers(number) {
-    if (number === 9) {
-      nines += 1;
-      if (nines === 3) {
-        invalidNumbers = true;
-      }
-    } else if (number < 0) {
-      invalidNumbers = true;
-    }
-  }
-  if (numbers.length !== 11) {
+  let countRepeated = 0;
+  let arraySize = numbers.length;
+  let result = `${numbers.slice(0, 2)} ${numbers.slice(2, 7)}-${numbers.slice(7, 12)}`;
+  if (arraySize !== 11) {
     return 'Array com tamanho incorreto';
   }
-  numbers.forEach(checkNumbers)
-  if (invalidNumbers) {
+  numbers.sort()  
+  let nextIndex = 1;
+  let invalidNumbers = false;
+  for (index = 0; index < arraySize - 1; index += 1) {
+    if (countRepeated > 3 || numbers[index] > 9 || numbers[index] < 0) {
+      invalidNumbers = true;
+      break;
+    }
+    if (numbers[index] === numbers[nextIndex]) {
+      countRepeated += 1;
+    } else {      
+      countRepeated = 0;
+    }
+    nextIndex += 1;
+  }
+  if (invalidNumbers){
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  let result = '';
-  result = `${numbers.slice(0, 2)}`;
-  result += ` ${numbers.slice(2, 7)}`;
-  result += `-${numbers.slice(7, 12)}`
   return result.replace(/,/g, '');
 }
 
