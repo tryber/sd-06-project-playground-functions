@@ -169,10 +169,35 @@ let tecnologia = ['React', 'Jest', 'HTML','CSS', 'JavaScript'];
 let lucas = 'Lucas'
 
 console.log(techList(tecnologia, lucas))
+
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrei) {
+  if (arrei.length < 10) {
+    return 'Array com tamanho incorreto'
+  }
+  for (let index = 0; index < arrei.length; index += 1) {
+    if (arrei[index] < 0 || arrei[index] > 9) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
+  let count = 0;
+  for (let index2 = 0; index2 < arrei.length; index2 += 1) {
+    for (let index3 = index2 + 1; index3 < arrei.length; index3 += 1) {
+      if (arrei[index2] === arrei[index3]) {
+        count += 1;
+      }
+    }
+  }
+  if (count === 3 || count > 3) {
+    return "não é possível gerar um número de telefone com esses valores", count
+  }
+  let geradortel = '(' + arrei[0] + arrei[1] + ')' + ' ' + arrei[2] + arrei[3] + arrei[4] + arrei[5] + arrei[6] + '-' + arrei[7] + arrei[8] + arrei[9] + arrei[10];
+  return geradortel;
 }
+
+let telefone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+
+console.log(generatePhoneNumber(telefone))
 
 // Desafio 12
 function triangleCheck() {
