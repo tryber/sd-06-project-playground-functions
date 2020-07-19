@@ -81,13 +81,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
 
 // Desafio 8
+let array = [2, 15, 7, 9, 45];
 function fizzBuzz(array) {
   let fizzBuzzArray = [];
   for (let index in array) {
-    if (array[index] % 3 === 0) {
+    if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
       fizzBuzzArray.push ("fizz")
     }
-    else if (array[index] % 5 === 0) {
+    else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
       fizzBuzzArray.push ("buzz")
     }
     else if ((array[index] % 3 && array[index] % 5) === 0) {
