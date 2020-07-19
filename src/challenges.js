@@ -37,7 +37,7 @@ function concatName(arrayDeString) {
     // seu código aqui
 
     let stringConcatenada = "";
-    stringConcatenada = arrayDeString[arrayDeString.length - 1] + " " + arrayDeString[0];
+    stringConcatenada = arrayDeString[arrayDeString.length - 1] + ", " + arrayDeString[0];
 
 
 
