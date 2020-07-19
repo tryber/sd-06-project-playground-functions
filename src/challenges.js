@@ -117,6 +117,7 @@ function techList(tec, namePassed) {
   }
   let result = [];
   let index = 0;
+  tec.sort();
   function organize() {
     result[index] = {
       tech: tec,
@@ -130,7 +131,15 @@ function techList(tec, namePassed) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  if (numbers.length !== 11) {
+    return 'Arraycom tamanho incorreto'  
+  } else {
+    let result = '';
+    result = `${numbers.slice(0, 2)}`;
+    result += ` ${numbers.slice(2, 7)}`;
+    result += `-${numbers.slice(7, 12)}`
+    return result.replace(/,/g, '');
+  }
 }
 
 // Desafio 12
