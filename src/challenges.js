@@ -179,7 +179,7 @@ function generatePhoneNumber(numeros) {
     return 'Array com tamanho incorreto.';
   } else if (condicaoMenor0Maior9 === true) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else if (contagem >= 3) {
+  } else if (contagem >= 2) {
     return 'não é possível gerar um número de telefone com esses valores';
   } else {
     telefone += '(';
