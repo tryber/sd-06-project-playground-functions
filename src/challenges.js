@@ -115,29 +115,8 @@ fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode(string) {
- let newString = string;
-  for (let index = 0; index < newString.length; index += 1) {
-    if (newString[index] == "a") {
-      newString[index] == 1;
-    }
-    if (newString[index] == "b") {
-      newString[index] == 2;
-    }
-    if (newString[index] == "c") {
-      newString[index] == 3;
-    }
-    if (newString[index] == "d") {
-      newString[index] == 4;
-    }
-    if (newString[index] == "e") {
-      newString[index] == 5;
-    }
-  }
- 
-  return newString;
+  
 }
-
-encode(string);
 
 function decode(numbers) {
 
