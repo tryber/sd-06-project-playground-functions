@@ -72,16 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
-
-// Para cada número da Array que seja divisível por 3, apresente uma string "fizz";
-// Para cada número da Array que seja divisível por 5, apresente uma string "buzz";
-// Caso o número seja divisível por 3 ou 5, retorne a string "fizzBuzz";
-// Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
-// Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
-
 // Desafio 8
-let array = [2, 15, 7, 9, 45];
 function fizzBuzz(array) {
   let fizzBuzzArray = [];
   for (let index in array) {
@@ -101,11 +92,43 @@ function fizzBuzz(array) {
   return fizzBuzzArray;
 }
 
+// Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+
+// a -> 1
+// e -> 2
+// i -> 3
+// o -> 4
+// u -> 5
+
+// Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
+
+// A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  for (let index in string) {
+    if (string[index] === "a") {
+      string[index] = "1";
+    }
+    else if (string[index] === "e") {
+      string[index] = "2";
+    }
+    else if (string[index] === "i") {
+      string[index] = "3";
+    }
+    else if (string[index] === "o") {
+      string[index] = "4";
+    }
+    else if (string[index] === "u") {
+      string[index] = "5";
+    }
+    else {
+      string[index] = string[index];
+    }
+    return string;
+  }
 }
-function decode() {
+function decode(string) {
   // seu código aqui
 }
 
