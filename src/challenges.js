@@ -105,25 +105,32 @@ function fizzBuzz(array) {
 // A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
 
 // Desafio 9
+let string = "Hello";
 function encode(string) {
   encodedString = '';
   for (let index in string) {
-    if (string[index] == "a") {
-      encodedString += "1";
+    if (string[index] === "a") {
+      string[index] = "1";
+      encodedString += string[index];
     }
-    else if (string[index] == "e") {
-      encodedString += "2";
+    else if (string[index] === "e") {
+      string[index] = "2";
+      encodedString += string[index];
     }
-    else if (string[index] == "i") {
-      encodedString += "3";
+    else if (string[index] === "i") {
+      string[index] = "3";
+      encodedString += string[index];
     }
-    else if (string[index] == "o") {
-      encodedString += "4";
+    else if (string[index] === "o") {
+      string[index] = "4";
+      encodedString += string[index];
     }
-    else if (string[index] == "u") {
-      encodedString += "5";
+    else if (string[index] === "u") {
+      string[index] = "5";
+      encodedString += string[index];
     }
     else {
+      string[index] = string[index];
       encodedString += string[index];
     }
   }
