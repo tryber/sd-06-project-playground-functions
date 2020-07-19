@@ -172,7 +172,7 @@ console.log(techList(tecnologia, lucas))
 
 // Desafio 11
 function generatePhoneNumber(arrei) {
-  if (arrei.length < 10) {
+  if (arrei.length != 11) {
     return 'Array com tamanho incorreto.'
   }
   for (let index = 0; index < arrei.length; index += 1) {
