@@ -23,13 +23,12 @@ console.log(splitSentence("go trybe"));
 
 // Desafio 4
 function concatName(param1) {
-  let resultado = param1.split(" ");
-  let primeiraPosicao = resultado;
-  let ultimaPosicao = resultado[resultado.length - 1];
+  let primeiraPosicao = param1;
+  let ultimaPosicao = param1[param1.length - 1];
   return `${ultimaPosicao}, ${primeiraPosicao[0]}`
   //return ultimaPosicao + " , " + primeiraPosicao[0];
 }
-console.log(concatName("Aluno trybe junho 2020 turma 06"));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
