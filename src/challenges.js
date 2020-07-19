@@ -143,8 +143,17 @@ function decode(string) {
     return decodedString;
 }
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  if (techArray === null) {
+    return "Vazio!";
+  }
+  let sortedTechArray = techArray.sort();
+  let newTechArray = [];
+  for (i = 0; i < sortedTechArray.length; i += 1) {
+    let tech = sortedTechArray[i];
+    newTechArray.push ({tech, name,});
+  }
+  return newTechArray;
 }
 
 // Desafio 11
