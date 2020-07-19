@@ -245,7 +245,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(bebidas) {
   // seu código aqui
-  let numStr;
+  let numStr = [];
   let qtd;
   let soma = 0;
   let result;
