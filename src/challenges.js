@@ -33,11 +33,13 @@ function highestCount(arr) {
 function catAndMouse(mouse, cat1, cat2) {
   let diff1 = Math.abs(mouse - cat1);
   let diff2 = Math.abs(mouse - cat2);
+
   if (diff1 === diff2) {
     return 'os gatos trombam e o rato foge'
-  } else {
-    return (diff1 > diff2) ? 'cat2' : 'cat1'
   }
+
+  return (diff1 > diff2) ? 'cat2' : 'cat1'
+
 }
 
 // Desafio 8
@@ -119,17 +121,17 @@ function decode(str) {
 function techList(arr, name) {
   if (!arr[0]) {
     return 'Vazio!'
-  } else {
-    let answer = [];
-    arr.sort()
-    for (let i = 0; i < arr.length; i += 1) {
-      answer.push({
-        tech: arr[i],
-        name,
-      })
-    }
-    return answer
   }
+
+  let answer = [];
+  arr.sort()
+  for (let i = 0; i < arr.length; i += 1) {
+    answer.push({
+      tech: arr[i],
+      name,
+    })
+  }
+  return answer
 }
 
 // Desafio 11
@@ -151,8 +153,13 @@ function generatePhoneNumber(arr) {
     // atencao! O keys retorna um array com as keys em string,
     // enquanto o includes checa === com os numeros!
     // Para isso precisamos checar como string
+    // (Object.keys(counter).includes(`${arr[i]}`)) ? counter[arr[i]] += 1 : counter[arr[i]] = 1;
 
-    (Object.keys(counter).includes(`${arr[i]}`)) ? counter[arr[i]] += 1 : counter[arr[i]] = 1;
+    if (`${arr[i]}` in Object.keys(counter)) {
+      counter[arr[i]] += 1;
+    } else {
+      counter[arr[i]] = 1;
+    }
 
     if (counter[arr[i]] >= 3) {
       return erroNums
