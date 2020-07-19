@@ -47,9 +47,8 @@ function highestCount(param1) {
     if( param1[index] > maiorNumero ) {
       maiorNumero = param1[index];
     }
-
   }
-  return somaNumero;
+  return maiorNumero;
   }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
