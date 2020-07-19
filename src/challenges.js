@@ -39,24 +39,38 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   return (diff1 > diff2) ? 'cat2' : 'cat1'
-
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
   let answer = [];
   for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] % 3 === 0 && arr[i] % 5 === 0) {
-      answer.push('fizzBuzz');
-    } else if (arr[i] % 3 === 0) {
-      answer.push('fizz');
-    } else if (arr[i] % 5 === 0) {
-      answer.push('buzz');
-    } else {
-      answer.push('bug!')
+    switch(divBy3or5(arr[i])) {
+      case 'both':
+        answer.push('fizzBuzz');
+        break;
+      case 3:
+        answer.push('fizz');
+        break;
+      case 5:
+        answer.push('buzz');
+        break;
+      default:
+        answer.push('bug');
+        break;
     }
   }
   return answer
+}
+
+function divBy3or5(num) {
+  if (num % 3 === 0 & num % 5 === 0) {
+    return 'both'
+  } else if (num % 3 === 0) {
+    return 3
+  } else if (num % 5 === 0) {
+    return 5
+  }
 }
 
 // Desafio 9
@@ -135,14 +149,20 @@ function techList(arr, name) {
 }
 
 // Desafio 11
+
+ /* atencao! O keys retorna um array com as keys em string,
+  enquanto o includes checa === com os numeros!
+  Para isso precisamos checar como string
+  (Object.keys(counter).includes(`${arr[i]}`)) ? counter[arr[i]] += 1 : counter[arr[i]] = 1; */
+
 function generatePhoneNumber(arr) {
   let erroTamanho = 'Array com tamanho incorreto.'
   let erroNums = 'não é possível gerar um número de telefone com esses valores';
   let tel = '('
+
   if (arr.length !== 11) {
     return erroTamanho
   }
-
 
   let counter = {};
   for (let i = 0; i < 11; i += 1) {
@@ -150,33 +170,34 @@ function generatePhoneNumber(arr) {
       return erroNums
     }
 
-    // atencao! O keys retorna um array com as keys em string,
-    // enquanto o includes checa === com os numeros!
-    // Para isso precisamos checar como string
-    // (Object.keys(counter).includes(`${arr[i]}`)) ? counter[arr[i]] += 1 : counter[arr[i]] = 1;
-
-    if (`${arr[i]}`in counter) {
-      counter[arr[i]] += 1;
-    } else {
-      counter[arr[i]] = 1;
-    }
+    createCounter(arr[i], counter)
 
     if (counter[arr[i]] >= 3) {
       return erroNums
     }
 
-    if (i === 1) {
-      tel += `${arr[i]}) `
-    } else if (i === 6) {
-      tel += `${arr[i]}-`
-    } else {
-      tel += String(arr[i])
+    switch (i) {
+      case 1:
+        tel += `${arr[i]}) `;
+        break;
+      case 6:
+        tel += `${arr[i]}-`;
+        break;
+      default:
+        tel += String(arr[i]);
+        break;
     }
   }
   return tel
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+function createCounter(element, counter) {
+  if (`${element}` in counter) {
+    return counter[element] += 1;
+  } else {
+    return counter[element] = 1;
+  }
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
