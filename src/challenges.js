@@ -60,8 +60,8 @@ let contador = 0;
   }
   return contador;
 }
-let numbers = [9, 1, 2, 3, 9, 5, 7];
-console.log(highestCount(numbers));
+let lista = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(lista));
 
 
 // Desafio 7 -  Caça ao rato
@@ -84,34 +84,71 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8 - FizzBuzz
 let arrayNumeros=[2, 3, 5, 15];
-  function fizzBuzz(arrayNumeros) {
-    let newArrayNumeros=[];
-    for ( let indice in arrayNumeros ){
-      if (arrayNumeros[indice] % 3 === 0 && arrayNumeros[indice] % 5 === 0) {
-        newArrayNumeros[indice] = 'fizzBuzz';
-      } else if(arrayNumeros[indice] % 3 === 0) {
-        newArrayNumeros[indice] = 'fizz';
-      } else if (arrayNumeros[indice] % 5 === 0) {
-        newArrayNumeros[indice] = 'buzz';
-      } else {
-        newArrayNumeros[indice] = 'bug!';
-      }
+function fizzBuzz(arrayNumeros) {
+let newArrayNumeros = [];
+  for ( let indice in arrayNumeros ){
+    if (arrayNumeros[indice] % 3 === 0 && arrayNumeros[indice] % 5 === 0) {
+      newArrayNumeros[indice] = 'fizzBuzz';
+    } else if(arrayNumeros[indice] % 3 === 0) {
+      newArrayNumeros[indice] = 'fizz';
+    } else if (arrayNumeros[indice] % 5 === 0) {
+      newArrayNumeros[indice] = 'buzz';
+    } else {
+      newArrayNumeros[indice] = 'bug!';
     }
-    return newArrayNumeros;
   }
-    console.log(fizzBuzz(arrayNumeros));
+  return newArrayNumeros;
+}
+console.log(fizzBuzz(arrayNumeros));
 
 // Desafio 9
-
-
-function encode() {
-  // seu código aqui
+function encode(arrayCode) {
+arrayCode2 = arrayCode.split();
+let newArrayEncode = [];
+for (let indceCode in arrayCode2){
+  if (arrayCode2[indceCode] == 'a'){
+  newArrayEncode[indceCode] = '1';
+  } else if (arrayCode2[indceCode] == 'e') {
+   newArrayEncode[indceCode] = '2';
+  } else if (arrayCode2[indceCode] == 'i') {
+   newArrayEncode[indceCode] = '3';
+  } else if (arrayCode2[indceCode] == 'o') {
+   newArrayEncode[indceCode] = '4';
+  } else if (arrayCode2[indceCode] == 'u'){
+   newArrayEncode[indceCode] = '5';
+  } else {
+   newArrayEncode[indceCode] = arrayCode2[indceCode];
+  }
 }
-function decode() {
-  // seu código aqui
+return newArrayEncode;
 }
 
+function decode(retEncode) {
+  arrayCode2 = retEncode;
+  let newArrayEncode = [];
+  for (let indceCode in arrayCode2){
+    if (arrayCode2[indceCode] == '1'){
+    newArrayEncode[indceCode] = 'a';
+    } else if (arrayCode2[indceCode] == '2') {
+     newArrayEncode[indceCode] = 'e';
+    } else if (arrayCode2[indceCode] == '3') {
+     newArrayEncode[indceCode] = 'i';
+    } else if (arrayCode2[indceCode] == '4') {
+     newArrayEncode[indceCode] = 'o';
+    } else if (arrayCode2[indceCode] == '5'){
+     newArrayEncode[indceCode] = 'u';
+    } else {
+     newArrayEncode[indceCode] = arrayCode2[indceCode];
+    }
+  }
+  return (newArrayEncode);
+}
 
+let arrayCode = 'hi there!'
+retEncode = encode(arrayCode);
+console.log(retEncode);
+retDecode = decode(retEncode);
+console.log(retDecode);
 
 function techList() {
   // seu código aqui
