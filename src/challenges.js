@@ -16,15 +16,20 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(param1) {
   let resultado = param1.split(" ");
-  return(resultado);
+  return resultado;
 }
-//console.log(splitSentence("go trybe eu o mestre"));
+console.log(splitSentence("go trybe"));
 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(param1) {
+  let resultado = param1.split(" ");
+  let primeiraPosicao = resultado;
+  let ultimaPosicao = resultado[resultado.length - 1];
+  return ultimaPosicao + " , " + primeiraPosicao[0];
+  //return `${ultimaPosicao}, ${primeiraPosicao[0]}`
 }
+console.log(concatName("Aluno trybe junho 2020 turma 06"));
 
 // Desafio 5
 function footballPoints() {
