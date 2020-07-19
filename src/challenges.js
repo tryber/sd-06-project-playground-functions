@@ -236,7 +236,7 @@ function generatePhoneNumber(numberArray) {
       if (index == 0){
           generatedNumber += "(" + numberArray[index];
       } else if (index == 1){
-          generatedNumber += numberArray[index] + ")";
+          generatedNumber += numberArray[index] + ") ";
       } else if (index == 6){
           generatedNumber += numberArray[index] + "-";
       } else {
