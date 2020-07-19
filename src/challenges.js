@@ -14,9 +14,9 @@ function calcArea(base, altura) {
 }
 
 // Desafio 3
-function splitSentence(frase) {
+function splitSentence(phrase) {
   // seu código aqui
-  return frase.split(' ');
+  return phrase.split(' ');
 }
 
 // Desafio 4
@@ -98,50 +98,50 @@ function fizzBuzz(values) {
 }
 
 // Desafio 9
-function encode(frase) {
+function encode(phrase) {
   // seu código aqui
-  let fraseArray = frase.split('');
-  for (let i in fraseArray) {
-    switch (fraseArray[i]) {
-      case 'a': fraseArray[i] = 1;
+  let phraseArray = phrase.split('');
+  for (let i in phraseArray) {
+    switch (phraseArray[i]) {
+      case 'a': phraseArray[i] = 1;
         break;
-      case 'e': fraseArray[i] = 2;
+      case 'e': phraseArray[i] = 2;
         break;
-      case 'i': fraseArray[i] = 3;
+      case 'i': phraseArray[i] = 3;
         break;
-      case 'o': fraseArray[i] = 4;
+      case 'o': phraseArray[i] = 4;
         break;
-      case 'u': fraseArray[i] = 5;
+      case 'u': phraseArray[i] = 5;
         break;
       default:
         break;
     }
   }
-  let fraseEncode = fraseArray.join('');
-  return fraseEncode;
+  let phraseEncode = phraseArray.join('');
+  return phraseEncode;
 }
 
-function decode(frase) {
+function decode(phrase) {
   // seu código aqui
-  let fraseArray = frase.split('');
-  for (let i in fraseArray) {
-    switch (fraseArray[i]) {
-      case '1': fraseArray[i] = 'a';
+  let phraseArray = phrase.split('');
+  for (let i in phraseArray) {
+    switch (phraseArray[i]) {
+      case '1': phraseArray[i] = 'a';
         break;
-      case '2': fraseArray[i] = 'e';
+      case '2': phraseArray[i] = 'e';
         break;
-      case '3': fraseArray[i] = 'i';
+      case '3': phraseArray[i] = 'i';
         break;
-      case '4': fraseArray[i] = 'o';
+      case '4': phraseArray[i] = 'o';
         break;
-      case '5': fraseArray[i] = 'u';
+      case '5': phraseArray[i] = 'u';
         break;
       default:
         break;
     }
   }
-  let fraseDecode = fraseArray.join('');
-  return fraseDecode;
+  let phraseDecode = phraseArray.join('');
+  return phraseDecode;
 }
 
 // Desafio 10
@@ -222,15 +222,22 @@ function triangleCheck(sideA, sideB, sideC) {
   // seu código aqui
   return (((sideA < (sideB + sideC)) && ((sideA > Math.abs(sideB - sideC)))) ||
   ((sideB < (sideA + sideC)) && ((sideB > Math.abs(sideA - sideC)))) ||
-  ((sideC < (sideB + sideA)) && ((sideC > Math.abs(sideB - sideA))))) ?  true :  false
+  ((sideC < (sideB + sideA)) && ((sideC > Math.abs(sideB - sideA))))) ? true : false;
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(phrase) {
   // seu código aqui
-
+  let sum = 0;
+  let quantity = '';
+  let alert = '';
+  for (let i of phrase.match(/\d+/g)){
+    sum += parseInt(i);
+  }
+  sum === 1 ? quantity = ' copo' : quantity = ' copos'
+  alert = sum + quantity + ' de água';
+  return alert;
 }
-
 
 module.exports = {
   calcArea,
