@@ -66,7 +66,7 @@ function catAndMouse(posMouse,posCat1,posCat2) {
 }
 
 function distancia(posA,posB){
-  return posA-posB
+  return Math.abs(posA-posB)
 }
 
 // Desafio 8
