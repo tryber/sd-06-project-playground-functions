@@ -80,16 +80,16 @@ function catAndMouse(mouse,cat1,cat2) {
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
   if (distanceCat1 < distanceCat2) {
-    return console.log("cat1");
+    return "cat1";
   } 
   else if (distanceCat2 < distanceCat1) {
-    return console.log("cat2");
+    return "cat2";
   } else {
-    return console.log("Os gatos trombam e o rato foge.");
+    return "Os gatos trombam e o rato foge.";
   }
 }
 
-catAndMouse(8,4,4);
+catAndMouse(8,2,4);
 
 // Desafio 8
 function fizzBuzz(numbers) {
@@ -139,7 +139,7 @@ function encode(string) {
   }
   return newString;
 }
-console.log(encode("hi there isabella"));
+encode("hi there isabella");
 
 function decode(numbers) {
   let decodedString = "";
@@ -166,7 +166,7 @@ function decode(numbers) {
     }
     return decodedString;
   }
-  console.log(decode("h3 th2r2 3s1b2ll1"));
+  decode("h3 th2r2 3s1b2ll1");
 
 
 // Desafio 10
@@ -185,8 +185,11 @@ function techList(arrayTechnology,name) {
 techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella");
 
 // Desafio 11
-function generatePhoneNumber() {
-  
+function generatePhoneNumber(arrayNumber) {
+  let generatedPhone = [];
+  if (arrayNumber.length() >= 11) {
+    return "Array com tamanho incorreto";
+  }
 }
 
 // Desafio 12
