@@ -46,7 +46,7 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {mouse, cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let numeroCat1 = mouse - cat1;
   let numeroCat2 = mouse - cat2;
   if (numeroCat1 < numeroCat2) {
@@ -74,6 +74,7 @@ function fizzBuzz(numeros) {
   }
   return resposta;
 }
+
 // Desafio 9
 function encode() {
   // seu código aqui
