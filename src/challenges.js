@@ -118,33 +118,57 @@ function techList(tec, namePassed) {
   let result = [];
   let index = 0;
   tec.sort();
-  function organize() {
+  function organize(tecnology) {
     result[index] = {
-      tech: tec,
+      tech: tecnology,
       name: namePassed,
     };
     index += 1;
   }
-  tec.forEach(organize())
+  tec.forEach(organize)
   return result;
 }
 
 // Desafio 11
 function generatePhoneNumber() {
+  let invalidNumbers = false;
+  let nines = 0;
+  function checkNumbers(number) {
+    if (number === 9) {
+      nines += 1;
+      console.log(nines, number);
+      if (nines === 3) {
+        invalidNumbers = true;
+      }
+    } else if (number < 0){      
+      invalidNumbers = true;
+    }
+  }
   if (numbers.length !== 11) {
-    return 'Arraycom tamanho incorreto'  
+    return 'Arraycom tamanho incorreto';
   } else {
-    let result = '';
-    result = `${numbers.slice(0, 2)}`;
-    result += ` ${numbers.slice(2, 7)}`;
-    result += `-${numbers.slice(7, 12)}`
-    return result.replace(/,/g, '');
+    numbers.forEach(checkNumbers)
+    if (invalidNumbers) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      let result = '';
+      result = `${numbers.slice(0, 2)}`;
+      result += ` ${numbers.slice(2, 7)}`;
+      result += `-${numbers.slice(7, 12)}`
+      return result.replace(/,/g, '');
+    }
   }
 }
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  sides = [a, b, c];
+  sides.sort((x, y) => x - y)
+  if (sides[0] + sides[1] > sides[2]) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
