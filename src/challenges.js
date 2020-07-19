@@ -144,17 +144,12 @@ function decode(encoded) {
 function techList(tech, name) {
   // seu código aqui
   let listaOrdenada = tech.sort()
-  let listaDeObjetos = []
-  for (let i=0; i<tech.length; i+=1) {
-    listaDeObjetos += listaOrdenada [ {
-    tech: tech [i],
-    name: name,
-    }]
-  }
-  return listaDeObjetos
+  let listaTech = []
+    for (i in listaOrdenada) {
+      listaTech.push ({ tech: listaOrdenada[i], name: name,})
+    }
+  return listaTech
 }
-
-console.log(techList(['CSS', 'Tiago']))
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
