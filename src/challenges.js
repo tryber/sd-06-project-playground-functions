@@ -176,7 +176,7 @@ function mostOccurrences(verifiedNumber, numbers) {
 
   numbers.forEach((value) => {
     if (value === verifiedNumber) counter += 1;
-  })
+  });
 
   return counter;
 }
@@ -256,4 +256,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
