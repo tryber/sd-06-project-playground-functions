@@ -45,8 +45,8 @@ function highestCount(arrayNumbers) {
   }
   for (let i = 0; i <= arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] === highestNumber) {
-        repeat += 1;
-      }
+      repeat += 1;
+    }
   }
   return repeat;
 }
@@ -73,17 +73,17 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let arrayFizzBuzz = arrayNumbers;
-    for (let i = 0; i <= arrayNumbers.length; i += 1){
+    for (let i = 0; i <= arrayNumbers.length; i += 1) {
       if (((arrayNumbers[i] % 3) === 0) && ((arrayNumbers[i] % 5) === 0)) {
           arrayFizzBuzz[i] = 'fizzBuzz';
       } else if ((arrayNumbers[i] % 3) === 0) {
-            arrayFizzBuzz[i] = 'fizz';
-          } else if ((arrayNumbers[i] % 5) === 0) {
-                arrayFizzBuzz[i] = 'buzz';
-            } else {
-                  arrayFizzBuzz[i] = 'bug!';
-              }
+        arrayFizzBuzz[i] = 'fizz';
+      } else if ((arrayNumbers[i] % 5) === 0) {
+        arrayFizzBuzz[i] = 'buzz';
+      } else {
+        arrayFizzBuzz[i] = 'bug!';
       }
+    }
     return arrayFizzBuzz;
   }
 
