@@ -16,12 +16,16 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(str) {
+function splitSentence(strSplit, separador) {
   // seu código aqui
-strArray = ["go", "Trybe", "teste"];
-let separador = str.split(" ");
-console.log(separador);
+let strArray = strSplit.split(separador)
+console.log(strArray.join(', '));
 }
+let minhaString = "faz funcionar essa porcaria de codigo"  
+let space = " "
+
+splitSentence(minhaString, space)
+
 
 
 // Desafio 4
@@ -51,8 +55,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numerosArray) {
   // seu código aqui
+  let strArray = [2, 6, 7, 9, 6, 15, 80];
+  for (i=0; i<numerosArray.lenght; i+=1)
+    if((numerosArray[i] % 3 === 0) && (numerosArray[i]% 5 === 0)){
+      strArray.push = ("fizzBuz")
+    } else if ((numerosArray[i] % 3 === 0) && (numerosArray[i]% 5 !== 0)){
+    strArray.push = ("fizz")
+    } else if ((numerosArray[i] % 3 !== 0) && (numerosArray[i]% 5 === 0)){
+      strArray.push = ("buzz")
+    } else {
+      strArray.push = ("bug!")
+    }
+    return strArray;
 }
 
 // Desafio 9
