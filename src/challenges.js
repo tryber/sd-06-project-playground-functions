@@ -181,12 +181,9 @@ function generatePhoneNumber(arrayNumber) {
     }
   //Caso não retorne nenhuma das outras
   let numeroTelefoneCompleto = '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber[4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10];
-  
+
   return numeroTelefoneCompleto;
   }
-  //Retornando numero
-  return numeroTelefoneCompleto;
-}
 
 
 // Desafio 12
