@@ -50,9 +50,9 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(gato1, gato2, rato) {
+function catAndMouse() {
   let outroGato1 = 0;
-
+}
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
