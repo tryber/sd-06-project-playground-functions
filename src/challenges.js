@@ -79,10 +79,9 @@ function encodeAndDecode(encodeDecode, change) {
   for (const [key, value] of Object.entries(vowels)) {
     if (change) {
       encodeDecode = encodeDecode.split(key).join(value);
-      continue;
+    } else {
+      encodeDecode = encodeDecode.split(value).join(key);
     }
-
-    encodeDecode = encodeDecode.split(value).join(key);
   }
 
   return encodeDecode;
