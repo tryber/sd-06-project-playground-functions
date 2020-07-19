@@ -160,9 +160,31 @@ function encode(palavra) {
     return palavra;
 }
 
-function decode() {
-    // seu código aqui
+function decode(palavra) {
+    for (let index = 0; index < palavra.length; index++) {
+
+        switch (palavra[index]) {
+            case "1":
+                palavra = palavra.replace(palavra[index], "a");
+                break;
+            case "2":
+                palavra = palavra.replace(palavra[index], "e");
+                break;
+            case "3":
+                palavra = palavra.replace(palavra[index], "i");
+                break;
+            case "4":
+                palavra = palavra.replace(palavra[index], "o");
+                break;
+            case "5":
+                palavra = palavra.replace(palavra[index], "u");
+                break;
+        }
+    }
+
+    return palavra;
 }
+
 
 // Desafio 10
 function techList() {
