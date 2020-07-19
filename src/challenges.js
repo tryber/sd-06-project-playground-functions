@@ -146,12 +146,12 @@ function decode(string) {
 function techList(techArray, name) {
   let sortedTechArray = techArray.sort();
   let newTechArray = [];
-  if (newTechArray == 0) {
-    return "Vazio!";
-  }
   for (i = 0; i < sortedTechArray.length; i += 1) {
     let tech = sortedTechArray[i];
     newTechArray.push ({tech, name,});
+  }
+  if (newTechArray == 0) {
+    return "Vazio!";
   }
   return newTechArray;
 }
