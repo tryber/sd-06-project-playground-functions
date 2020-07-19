@@ -66,10 +66,10 @@ function fizzBuzz(array) {
          list.push ("fizzBuzz");
       }
       else if (array[i] % 5 === 0) {
-          list.push ("fizz");
+          list.push ("buzz");
       }
       else if (array[i] % 3 === 0){
-          list.push ("buzz");
+          list.push ("fizz");
       }else{
           list.push ("bug!");
       }

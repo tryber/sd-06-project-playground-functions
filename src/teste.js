@@ -16,4 +16,4 @@ function fizzBuzz(array) {
         }
     return list
     }
-    console.log(fizzBuzz([2, 15, 7, 9, 45]))
+  
