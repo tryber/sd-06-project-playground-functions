@@ -132,7 +132,7 @@ function decode(word) {
   return newWord.join("");
 }
 
-// Desafio 10
+// Desafio 10 - OK
 function techList(recArray, name) {
   // seu código aqui
   if (recArray.length === 0) {
@@ -151,8 +151,48 @@ function techList(recArray, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(phoneNumber) {
   // seu código aqui
+
+  // verificando inconsistência de tamanho total, só aceita === 11
+  if (phoneNumber.length != 11) {
+    return "Array com tamanho incorreto.";
+  } else {
+    // primeira condição aceita, prosegue verificando inconsistência
+    let phone = "";
+    let i = 0;
+    while (i < phoneNumber.length) {
+      if (phoneNumber[i] < 0 || phoneNumber[i] > 9){ // números da array menor que 0, maior que 9
+        return "não é possível gerar um número de telefone com esses valores";
+        break;
+      }
+      // 1a. e 2a. incosistências OK, verificar a 3a. antes de prosseguir
+      let repeticao = 0;
+      let j = 0;     
+      while(j < phoneNumber.length) {
+        if (phoneNumber[j] - phoneNumber[i] == 0) {
+          repeticao += 1;
+          if (repeticao > 2) {
+            return "não é possível gerar um número de telefone com esses valores";
+            break;
+          }
+        }
+      j++;
+      }
+    // Não inconsistênicias começar a gerar o número conforme padrão
+    if (i == 0){
+      phone += "(" + phoneNumber[i];
+    } else if (i == 1) {
+      phone += phoneNumber[i] + ") ";
+    } else if (i == 6) {
+      phone += phoneNumber[i] + "-";
+    } else {
+      phone += numbersArray[i];
+    }
+    i++;
+    }
+    return phone;
+  }
 }
 
 // Desafio 12
