@@ -14,7 +14,7 @@ function compareTrue(f01par01 = true, f01par02 = true) {
 // Desafio 2
 function calcArea(base = 0, height = 0) 
 {
-    return (base + height) / 2;
+    return (base * height) / 2;
 }
 
 // Desafio 3
