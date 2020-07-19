@@ -132,21 +132,20 @@ function decode(word) {
   return newWord.join("");
 }
 
-// Desafio 10 - OK
+// Desafio 10
 function techList(recArray, name) {
   // seu código aqui
-  let listOrdened = recArray.sort();
-  let retorno = [];
-
-  if (listOrdened.length === 0) {
+  if (recArray.length === 0) {
     return "Vazio!";
-  }
-
-  for(let index in listOrdened){
-    retorno.push(
-      {tech: listOrdened[index],
-       name: name
-      });
+  } else {
+    let retorno = [];
+    recArray = recArray.sort();
+    for(let index = 0; index < recArray.length; index += 1) {
+      retorno[index] = {
+        tech: recArray[index],
+        name: name
+        };
+    }
     return retorno;
   }
 }
