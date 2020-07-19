@@ -144,7 +144,7 @@ function generatePhoneNumber(numbers) {
     }
   }
   if (numbers.length !== 11) {
-    return 'Arraycom tamanho incorreto';
+    return 'Array com tamanho incorreto';
   }
   numbers.forEach(checkNumbers)
   if (invalidNumbers) {
@@ -164,7 +164,7 @@ function triangleCheck(a, b, c) {
   if (sides[0] + sides[1] > sides[2]) {
     return true;
   }
-  return false;  
+  return false;
 }
 
 // Desafio 13
