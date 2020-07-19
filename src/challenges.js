@@ -104,10 +104,36 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
-    // seu código aqui
-}
 
+function fizzBuzz(ArrNumeros) {
+    let ArrayDeString = [];
+
+
+    for (let index = 0; index < ArrNumeros.length; index = index + 1) {
+
+        if (ArrNumeros[index] % 3 === 0 && ArrNumeros[index] % 5 !== 0) {
+
+            ArrayDeString.push("fizz");
+
+        } else if (ArrNumeros[index] % 5 === 0 && ArrNumeros[index] % 3 !== 0) {
+
+
+            ArrayDeString.push("buzz");
+
+        } else if (ArrNumeros[index] % 5 === 0 || ArrNumeros[index] % 3 === 0) {
+
+
+            ArrayDeString.push("fizzBuzz");
+
+
+        } else if (ArrNumeros[index] % 3 !== 0 && ArrNumeros[index] % 5 !== 0) {
+
+            ArrayDeString.push("bug!");
+        }
+
+    }
+    return (ArrayDeString)
+}
 // Desafio 9
 function encode() {
     // seu código aqui
