@@ -46,7 +46,8 @@ function splitSentence(myText) {
 // ---------------- Desafio 4
 // let name = ['Ricardo', 'Alexandre', 'de', 'Souza', 'Ribeiro']
 function concatName(myName) {
-  let nameConcat = myName[myName.length - 1] + ', ' + myName[0];
+  let nameConcat = '';
+  nameConcat = myName[myName.length - 1] + ', ' + myName[0];
   return nameConcat;
 }
 // console.log(concatName(name));
@@ -122,6 +123,7 @@ function fizzBuzz(myArray) {
 
 // Desafio 9
 // let text = 'hi there';
+// let text2 = 'h3 th2r2';
 function encode(myText) {
   let result = '';
   for (let i = 0; i < myText.length; i += 1) {
@@ -141,28 +143,27 @@ function encode(myText) {
   }
   return result;
 }
-// console.log(encode(text));
 
-// let text2 = 'hi there';
 function decode(myText) {
-  let result = '';
+  let result2 = '';
   for (let i = 0; i < myText.length; i += 1) {
     if (myText[i] === '1') {
-      result += 'a';
+      result2 += 'a';
     } else if (myText[i] === '2') {
-      result += 'e';
+      result2 += 'e';
     } else if (myText[i] === '3') {
-      result += 'i';
+      result2 += 'i';
     } else if (myText[i] === '4') {
-      result += 'o';
+      result2 += 'o';
     } else if (myText[i] === '5') {
-      result += 'u';
+      result2 += 'u';
     } else {
-      result += myText[i];
+      result2 += myText[i];
     }
   }
-  return result;
+  return result2;
 }
+// console.log(encode(text));
 // console.log(decode(text2));
 
 
@@ -174,10 +175,11 @@ function techList(myArray, myName) {
   if (myArray.length === 0) {
     arrayObj = 'Vazio!';
   } else {
-    for (let item in myArray) {
+    myArray.sort();
+    for (let i = 0; i < myArray.length; i += 1) {
       let obj = {
-        tech : myArray[item],
-        name : myName,
+        tech: myArray[i],
+        name: myName,
       }
       arrayObj.push(obj);
     }
