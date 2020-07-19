@@ -14,8 +14,8 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName(array1) {
-  return `${array1[array1.length - 1]}, ${array1[0]}`;
+function concatName(name) {
+  return `${name[name.length - 1]}, ${name[0]}`;
 }
 
 // Desafio 5
@@ -24,17 +24,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array2) {
-  let maior = array2[0];
+function highestCount(numberArray) {
+  let maior = numberArray[0];
   let count = 0;
 
-  for (let i = 0; i < array2.length; i += 1) {
-    if (array2[i] === maior) {
+  for (let i = 0; i < numberArray.length; i += 1) {
+    if (numberArray[i] === maior) {
       count += 1;
     }
 
-    if (array2[i] > maior) {
-      maior = array2[i];
+    if (numberArray[i] > maior) {
+      maior = numberArray[i];
       count = 1;
     }
   }
@@ -65,73 +65,79 @@ function fizzBuzz(array) {
     10: 'buzz',
   };
 
-  array.forEach(function (element) {
-    string.push(fizz[(element ** 4) % 15]);
+  array.forEach((element) => {
+    let n = (element ** 4) % 15;
+    string.push(fizz[n]);
   });
 
   return string;
 }
 
-function replaceString(string, change) {
+function encodeAndDecode(encodeDecode, change) {
   const vowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
   for (const [key, value] of Object.entries(vowels)) {
     if (change) {
-      string = string.split(key).join(value);
-    } else {
-      string = string.split(value).join(key);
+      encodeDecode = encodeDecode.split(key).join(value);
+      continue;
     }
+
+    encodeDecode = encodeDecode.split(value).join(key);
   }
 
-  return string;
+  return encodeDecode;
 }
 
 // Desafio 9
-function encode(phrase) {
-  return replaceString(phrase, true);
+function encode(phraseToEncode) {
+  return encodeAndDecode(phraseToEncode, true);
 }
 
-function decode(phrase) {
-  return replaceString(phrase, false);
+function decode(phraseToDecode) {
+  return encodeAndDecode(phraseToDecode, false);
 }
 
 // Desafio 10
-function techList(array, string) {
-  if (array.length === 0) {
+function techList(techName, pirataName) {
+  if (techName.length === 0) {
     return 'Vazio!';
   }
 
   let technology = [];
 
-  array.sort().forEach((item) => {
-    technology.push({ tech: item, name: string });
+  techName.sort().forEach((element) => {
+    technology.push({ tech: element, name: pirataName });
   });
 
   return technology;
 }
 
+function insertChars(phoneNumber) {
+  phoneNumber.splice(0, 0, '(');
+  phoneNumber.splice(3, 0, ')');
+  phoneNumber.splice(9, 0, '-');
+  phoneNumber.splice(4, 0, ' ');
+
+  return phoneNumber;
+}
+
 // Desafio 11
-function generatePhoneNumber(number) {
-  if (number.length !== 11) {
+function generatePhoneNumber(phone) {
+  if (phone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
   let count = {};
 
-  for (let i = 0; i < number.length; i += 1) {
-    count[number[i]] = (count[number[i]] || 0) + 1;
+  for (let i = 0; i < phone.length; i += 1) {
+    count[phone[i]] = (count[phone[i]] || 0) + 1;
 
-    if (count[number[i]] > 2 || number[i] < 0 || number[i] > 9) {
+    if (count[phone[i]] > 2 || phone[i] < 0 || phone[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
-  number.splice(0, 0, '(');
-  number.splice(3, 0, ')');
-  number.splice(9, 0, '-');
-  number.splice(4, 0, ' ');
-
-  return number.join('');
+  return insertChars(phone).join('');
 }
 
 // Desafio 12
@@ -146,12 +152,17 @@ function triangleCheck(sideA, sideB, sideC) {
 }
 
 // Desafio 13
-function hydrate(string) {
-  let number = (string.match(/\d+/g) || []).map(n => parseInt(n, 10));
-  number = number.reduce((a, b) => a + b, 0);
+function hydrate(happyHour) {
+  let number = 0;
+
+  for (let i = 0; i < happyHour.length; i += 1) {
+    if (!isNaN(parseInt(happyHour[i], 10))) {
+      number += Number(happyHour[i]);
+    }
+  }
 
   return number === 1 ? `${number} copo de água` :
-  `${number} copos de água`;
+    `${number} copos de água`;
 }
 
 module.exports = {
