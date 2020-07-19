@@ -146,17 +146,15 @@ function techList(tecnologias, name) {
   let tecnologiasOrdenadas = [];
   tecnologiasOrdenadas = tecnologias.sort();
   let resultado = [];
-  for (let i = 0; i < tecnologiasOrdenadas.length; i += 1) {    
-    resultado.push({tech: tecnologiasOrdenadas[i], name: name})
+  for (let i = 0; i < tecnologiasOrdenadas.length; i += 1) {
+    resultado.push({ tech: tecnologiasOrdenadas[i], name: name })
   }
-  if (tecnologias.length === 0){
+  if (tecnologias.length === 0) {
     return 'Vazio!'
   } else {
     return resultado
   }
-  }
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+}
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -164,8 +162,22 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let sumLineALineB = lineA + lineB;
+  let sumLineALineC = lineA + lineC;
+  let sumLineBLineC = lineB + lineC;
+  let subLineALineB =  lineA - lineB;
+  let subLineALineC = lineA - lineC;
+  let subLineBLineC = lineB - lineC;
+  subLineALineB = Math.abs(subLineALineB);
+  subLineALineC = Math.abs(subLineALineC);
+  subLineBLineC = Math.abs(subLineBLineC);
+  let resultado = false;
+  if (lineA < sumLineBLineC && lineB < sumLineALineC && lineC < sumLineALineB && lineA > subLineBLineC && lineB > subLineALineC && lineC > subLineALineB) {
+  resultado = true
+  }
+  return resultado
 }
 
 // Desafio 13
