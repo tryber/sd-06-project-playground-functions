@@ -187,9 +187,16 @@ function generatePhoneNumber(number) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if((Math.abs(lineB - lineC) > lineA || lineA > lineB + lineC) 
+  || (Math.abs(lineA - lineC) > lineB || lineB > lineA + lineC) 
+  || (Math.abs(lineB - lineA) > lineC || lineC > lineB + lineA)){
+      return false;
+    }else{
+      return true;
+    }
 }
+
 
 // Desafio 13
 function hydrate() {
@@ -220,7 +227,7 @@ console.log('Exercício 10: ' + techList(["React", "Jest", "HTML", "CSS", "JavaS
 
 console.log('Exercício 11: ' + generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
-console.log('Exercício 12: ' );
+console.log('Exercício 12: ' + triangleCheck(10, 14, 8));
 
 console.log('Exercício 13: ' );
 
