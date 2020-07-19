@@ -216,15 +216,19 @@ function generatePhoneNumber(number) {
   }
   return numberResponse;
 }
-console.log(generatePhoneNumber([1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1]));
+
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(sideA, sideB, sideC) {
   // seu código aqui
+  return (((sideA < (sideB + sideC)) && ((sideA > Math.abs(sideB - sideC)))) ||
+  ((sideB < (sideA + sideC)) && ((sideB > Math.abs(sideA - sideC)))) ||
+  ((sideC < (sideB + sideA)) && ((sideC > Math.abs(sideB - sideA))))) ?  true :  false
 }
 
 // Desafio 13
 function hydrate() {
   // seu código aqui
+
 }
 
 
