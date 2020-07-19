@@ -26,7 +26,8 @@ function splitSentence(astring) {
 // Desafio 4
 function concatName(f04par01 = []) 
 {
-  return f04par01[f04par01.length-1] + f04par01[0];
+    str = f04par01[f04par01.length-1] +", "+ f04par01[0];
+    return str;
 }
 
 // Desafio 5
