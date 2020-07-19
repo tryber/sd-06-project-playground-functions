@@ -32,6 +32,17 @@ function concatName(listaStrings) {
   return console.log(minhaLista)
 }
 
+function concatName2(listaStrings){
+  let primeiro = listaStrings[0];
+  let ultimo = listaStrings[listaStrings.length-1];
+
+  listaStrings[0] = ultimo;
+  listaStrings[listaStrings.length-1] = primeiro;
+
+  return console.log(listaStrings)
+
+}
+
 // Desafio 5
 function footballPoints() {
   // seu código aqui
@@ -100,3 +111,4 @@ module.exports = {
 
 splitSentence('paulo é bom');
 concatName(['paulo','ronaldo']);
+concatName2(['paulo','oracio'])
