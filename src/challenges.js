@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if ( param1 && param2 ){
+  if (param1 && param2) {
     return true;
   }
   return false;
@@ -9,16 +9,16 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return ( base*height) / 2;
+  return (base*height) / 2;
   // seu código aqui
 }
 
 // Desafio 3
 function splitSentence(param1) {
-  let resultado = param1.split(" ");
+  let resultado = param1.split(' ');
   return resultado;
 }
-console.log(splitSentence("go trybe"));
+console.log(splitSentence('go trybe'));
 
 
 // Desafio 4
@@ -26,7 +26,6 @@ function concatName(param1) {
   let primeiraPosicao = param1;
   let ultimaPosicao = param1[param1.length - 1];
   return `${ultimaPosicao}, ${primeiraPosicao[0]}`
-  //return ultimaPosicao + " , " + primeiraPosicao[0];
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -37,37 +36,35 @@ function footballPoints(wins, ties) {
   let somaPontos = vitoria + empate;
   return somaPontos;
 }
-console.log(footballPoints(1,5));
+console.log(footballPoints(1, 5));
 
 // Desafio 6
 function highestCount(param1) {
   let somaNumero = 0;
   let maiorNumero = 0;
-  for ( let index = 0; index < param1.length; index++ ) {
-    if( param1[index] > maiorNumero ) {
+  for (let index = 0; index < param1.length; index++) {
+    if (param1[index] > maiorNumero) {
       maiorNumero = param1[index];
     }
   }
   return maiorNumero;
   }
+}
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
 
 
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  if (cat1 === cat2 ){
-    return "os gatos trombam e o rato foge";
-  } else if ( cat1 === mouse || cat1 <= mouse){
-    return cat1 + "Gato 01 ganha";
-  } else if ( cat2 === mouse || cat2 <= mouse){
-    return cat2 + "Gato 02 ganha";
-  } else{
-    return "POWWW";
+  if (cat1 === cat2){
+    return 'os gatos trombam e o rato foge';
+  } else if (cat1 === mouse || cat1 <= mouse) {
+    return cat1 + 'Gato 01 ganha';
+  } else if (cat2 === mouse || cat2 <= mouse) {
+    return cat2 + 'Gato 02 ganha';
   }
 }
-console.log(catAndMouse(5,3,2))
+console.log(catAndMouse(5, 3, 2))
 
 
 // Desafio 8
