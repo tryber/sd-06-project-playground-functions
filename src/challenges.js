@@ -180,22 +180,21 @@ function generatePhoneNumber(arrei) {
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
-  let count = 0;
   for (let index2 = 0; index2 < arrei.length; index2 += 1) {
-    for (let index3 = index2 + 1; index3 < arrei.length; index3 += 1) {
+    let count = 0;
+    for (let index3 =0; index3 < arrei.length; index3 += 1) {
       if (arrei[index2] === arrei[index3]) {
         count += 1;
+      } if (count === 3 || count > 3) {
+        return 'não é possível gerar um número de telefone com esses valores'
       }
     }
-  }
-  if (count === 3 || count > 3) {
-    return 'não é possível gerar um número de telefone com esses valores'
   }
   let geradortel = `(${arrei[0]}${arrei[1]}) ${arrei[2]}${arrei[3]}${arrei[4]}${arrei[5]}${arrei[6]}-${arrei[7]}${arrei[8]}${arrei[9]}${arrei[10]}`;
   return geradortel;
 }
 
-let telefone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+let telefone = [5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 8];
 
 console.log(generatePhoneNumber(telefone))
 
