@@ -113,12 +113,14 @@ function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return "Array com tamanho incorreto."
   }
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] < 0 || array[i] > 9 || (array[i] === array[i + 1] && array[i] === array[i + 2])) {
-      return "não é possível gerar um número de telefone com esses valores"
+
+  let sortedArray = [...array].sort();
+  for (let i = 0; i < sortedArray.length; i += 1) {
+    if (sortedArray[i] < 0 || sortedArray[i] > 9 || (sortedArray[i] === sortedArray[i + 1] && sortedArray[i] === sortedArray[i + 2])) {
+      return "não é possível gerar um número de telefone com esses valores";
     }
   }
-  let numeros = `(${array.slice(0,2).join("")}) ${array.slice(2,7).join("")}-${array.slice(7).join("")}`
+  let numeros = `(${array.slice(0,2).join("")}) ${array.slice(2,7).join("")}-${array.slice(7).join("")}`;
   return numeros;
 }
 
