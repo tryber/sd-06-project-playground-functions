@@ -90,12 +90,50 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+    let array = string.split('');
+    
+    for (let index = 0; index < array.length; index += 1) {
+            if ((array[index]) === "a") {             
+                array[index] = "1";
+            } else if ((array[index]) === "e") {             
+                array[index] = "2";
+            } else if ((array[index]) === "i") {             
+                array[index] = "3";
+            } else if ((array[index]) === "o") {             
+                array[index] = "4";
+            } else if ((array[index]) === "u") {             
+                array[index] = "5";
+            }
+        } 
+  
+    let arrayString = array.join('');
+  return arrayString;  
+  }
+  console.log(encode("hi thEre!"));
+
+function decode(stringTwo) {    
+    let arrayTwo = stringTwo.split('');
+    
+    for (let index = 0; index < arrayTwo.length; index += 1) {
+        if ((arrayTwo[index]) === "1") {             
+            arrayTwo[index] = "a";
+        } else if ((arrayTwo[index]) === "2") {             
+            arrayTwo[index] = "e";
+        } else if ((arrayTwo[index]) === "3") {             
+            arrayTwo[index] = "i";
+        } else if ((arrayTwo[index]) === "4") {             
+            arrayTwo[index] = "o";
+        } else if ((arrayTwo[index]) === "5") {             
+            arrayTwo[index] = "u";
+        }
+    } 
+
+let arrayStringTwo = arrayTwo.join('');
+return arrayStringTwo;  
 }
-function decode() {
-  // seu código aqui
-}
+console.log(decode("h3 th2r2!"));
+
 
 // Desafio 10
 function techList() {
