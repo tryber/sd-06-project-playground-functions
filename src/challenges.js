@@ -19,7 +19,7 @@ function concatName(listaStrings){
   let minhaLista = [].concat(listaStrings);
   let ultimo = minhaLista[minhaLista.length-1];
   let primeiro = minhaLista[0];
-  return `${ultimo} , ${primeiro}`;
+  return `${ultimo}, ${primeiro}`;
 }
 
 // Desafio 5
