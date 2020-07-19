@@ -15,24 +15,7 @@ function splitSentence(frase) {
   return frase.split(' ')
 }
 // Desafio 4
-function concatName(listaStrings) {
-  let minhaLista = [].concat(listaStrings);
-  let ultimo,primeiro;
-  if (minhaLista.length > 1){
-    ultimo = minhaLista[minhaLista.length-1];
-    primeiro = minhaLista[0];
-  }
-  else{
-    return minhaLista
-  }
-  minhaLista.shift();
-  minhaLista.unshift(ultimo);
-  minhaLista.pop();
-  minhaLista.push(primeiro);
-  return minhaLista
-}
-
-function concatName2(listaStrings){
+function concatName(listaStrings){
   minhaLista = [].concat(listaStrings);
   let primeiro = minhaLista[0];
   let ultimo = minhaLista[minhaLista.length-1];
@@ -53,7 +36,8 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
+  //percorrer o código e encontrar o maior numero
   // seu código aqui
 }
 
