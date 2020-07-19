@@ -16,24 +16,25 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-let word = "";
-let splitedPhrase = [];
+  let word = "";
+  let stringArray = [];
   for (i in string){
     if (string[i] !== " "){
-      word += (string[i]);
+      word += string[i];
     }
-    else if (string[i] === "" ){
-        splitedPhrase.push(word);
-        word = ""
+    else if (string[i == " "){
+      stringArray.push(word);
+      word = "";
     }
   }
-console.log(splitedPhrase);
+  stringArray.push(word);
+  return stringArray;
 }
-splitSentence("Hi, how are you?");
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  firstLast = array [0] + ", " + array[array.length-1];
+  return firstLast
 }
 
 // Desafio 5
@@ -51,9 +52,19 @@ function highestCount(arr) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+let distCat1 = mouse - cat1;
+let distCat2 = mouse - cat2;
+  if (distCat1 < distCat2){
+    return "cat1";
+  } else if (distCat1 === distCat2) {
+      return "Cats gonna colide";
+  } 
+  else {
+    return "cat2";
+   }
 }
+console.log(catAndMouse(10,6,6))
 
 // Desafio 8
 function fizzBuzz() {
