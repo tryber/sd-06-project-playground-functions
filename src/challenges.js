@@ -249,7 +249,23 @@ function generatePhoneNumber(numberArray) {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  checkOutput = false;
+
+checkOneSide(lineA, lineB, lineC);
+checkOneSide(lineB, lineA, lineC);
+checkOneSide(lineC, lineA, lineB);
+
+return checkOutput;
+
+function checkOneSide(sideToCheck, otherSide1, otherSide2){
+    if (sideToCheck < otherSide1 + otherSide2 && sideToCheck > Math.abs(otherSide1 - otherSide2) && sideToCheck > Math.abs(otherSide2 - otherSide1)){
+        checkOutput = true;
+    } else{
+        checkOutput = false;
+    }
+}
+
+
 }
 
 // Desafio 13
