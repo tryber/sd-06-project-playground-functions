@@ -124,12 +124,30 @@ function encode(string) {
   arrayString = arrayS.join("");
   return arrayString;
 }
-console.log(encode("fala galerinha"))
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let arrayS = string.split("");
+  for(let i = 0; i < arrayS.length; i++){
+
+    if(arrayS[i] == "1"){
+      arrayS[i] = "a";
+    }
+    else if(arrayS[i] == "2"){
+      arrayS[i] = "e";
+    }
+    else if(arrayS[i] == "3"){
+      arrayS[i] = "i";
+    }
+    else if(arrayS[i] == "4"){
+      arrayS[i] = "o";
+    }
+    else if(arrayS[i] == "5"){
+      arrayS[i] = "u";
+    }
+  }
+  arrayString = arrayS.join("");
+  return arrayString;
 }
-
 // Desafio 10
 function techList() {
   // seu código aqui
