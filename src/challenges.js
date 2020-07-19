@@ -159,11 +159,11 @@ function techList(tecnologias, name) {
 // Desafio 11
 function generatePhoneNumber(numeros) {
   // seu código aqui
-  
-  contagemMaior = false;
+
+  let contagemMaior = false;
   for (let n = 0; n < numeros.length; n += 1) {
     let contagem = 0;
-    for (let j = 0; j < numeros.length; j += 1){
+    for (let j = 0; j < numeros.length; j += 1) {
       if (numeros[n] === numeros[j]) {
         contagem += 1
       }
@@ -183,7 +183,7 @@ function generatePhoneNumber(numeros) {
     return 'Array com tamanho incorreto.';
   } else if (condicaoMenor0Maior9 === true || contagemMaior === true) {
     return 'não é possível gerar um número de telefone com esses valores';
-    } else {
+  } else {
     telefone += '(';
     telefone += numeros[0];
     telefone += numeros[1];
@@ -203,15 +203,13 @@ function generatePhoneNumber(numeros) {
   }
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]))
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let sumLineALineB = lineA + lineB;
   let sumLineALineC = lineA + lineC;
   let sumLineBLineC = lineB + lineC;
-  let subLineALineB =  lineA - lineB;
+  let subLineALineB = lineA - lineB;
   let subLineALineC = lineA - lineC;
   let subLineBLineC = lineB - lineC;
   subLineALineB = Math.abs(subLineALineB);
@@ -221,7 +219,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA < sumLineBLineC && lineB < sumLineALineC && lineC < sumLineALineB && lineA > subLineBLineC && lineB > subLineALineC && lineC > subLineALineB) {
   resultado = true
   }
-  return resultado
+    return resultado
 }
 
 // Desafio 13
@@ -229,11 +227,11 @@ function hydrate(string) {
   // seu código aqui
   let numeros = string.replace(/[^\d]+/g,'');
   let soma = 0;
-  for (i = 0; i < numeros.length; i += 1) {
+  for (let i = 0; i < numeros.length; i += 1) {
     soma = parseInt(soma) + parseInt(numeros[i]);
   }
   if (soma === 1) {
-    return (soma +' copo de água')
+    return (soma + ' copo de água')
   } else {
     return (soma + ' copos de água')
   }
