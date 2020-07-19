@@ -66,9 +66,26 @@ console.log(footballPoints(14, 8));
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// Ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete
+function highestCount(numbersDesafio6) {
+  let highestNumber = 0;
+  let countNumber = 0;
+  for (let i = 0; i < numbersDesafio6.length; i += 1) {
+    if (highestNumber < numbersDesafio6[i]) {
+      highestNumber = numbersDesafio6[i];
+    }
+  }
+  for (let i = 0; i < numbersDesafio6.length; i += 1) {
+    if (highestNumber === numbersDesafio6[i]) {
+      countNumber += 1;
+    }
+  }
+  return countNumber;
 }
+
+// console.log('<---- Desafio 6 ---->');
+// console.log(highestCount();
+
 
 // Desafio 7
 function catAndMouse() {
