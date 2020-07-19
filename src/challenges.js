@@ -150,7 +150,8 @@ function hydrate(string) {
   let number = (string.match(/\d+/g) || []).map(n => parseInt(n, 10));
   number = number.reduce((a, b) => a + b, 0);
 
-  return number === 1 ? `${number} copo de água` : `${number} copos de água`;
+  return number === 1 ? `${number} copo de água` :
+  `${number} copos de água`;
 }
 
 module.exports = {
