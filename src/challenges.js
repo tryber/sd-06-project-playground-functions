@@ -190,9 +190,23 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+  let evaluator = 0;
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    evaluator = true;
+  }
+  else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+    evaluator = true;
+  }
+  else if (lineC < (lineA + lineC) && lineC > Math.abs(lineA - lineC)) {
+    evaluator = true;
+  }
+  else {
+    evaluator = false
+  }
+  return evaluator;
 }
+console.log(triangleCheck(10,20,30));
 
 // Desafio 13
 function hydrate() {
