@@ -189,7 +189,17 @@ function techList(myArray, myName) {
 // console.log(techList(arr, name));
 
 // Desafio 11
-let numPhone = [1, 1, 3, 1, 5, 6, 7, 8, 9, 0, 1];
+// let numPhone = [1, 1, 3, 1, 5, 6, 7, 8, 9, 0, 1];
+function verifyNumber(myPhone) {
+  let result = true;
+  let highCont = highestCount(myPhone);
+  for (let i = 0; i < myPhone.length; i += 1) {
+    if (myPhone[i] < 0 || myPhone[i] > 9 || highCont >= 3) {
+      result = false;
+    }
+  }
+  return result;
+}
 function generatePhoneNumber(myPhone) {
   let result = '';
   if (myPhone.length !== 11) {
@@ -198,36 +208,37 @@ function generatePhoneNumber(myPhone) {
     result = 'não é possível gerar um número de telefone com esses valores';
   } else {
     result = '(';
-    for (let i = 0; i < 2; i += 1){
+    for (let i = 0; i < 2; i += 1) {
       result += myPhone[i];
     }
     result += ') ';
-    for (let i = 2; i < 7; i += 1){
+    for (let i = 2; i < 7; i += 1) {
       result += myPhone[i];
     }
     result += '-';
-    for (let i = 7; i < 11; i += 1){
+    for (let i = 7; i < 11; i += 1) {
       result += myPhone[i];
     }
   }
   return result;
 }
-function verifyNumber(myPhone){
-  let result = true;
-  let highCont = highestCount(myPhone);
-  for (i = 0; i < myPhone.length; i += 1) {
-    if (myPhone[i] < 0 || myPhone[i] > 9 || highCont >= 3) {
-      result = false;
-    }
+// console.log(generatePhoneNumber(numPhone));
+
+// Desafio 12
+// let lin1 = 10;
+// let lin2 = 14;
+// let lin3 = 8;
+function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
+  if ( (Math.abs(lineB - lineC) < lineA) && (lineB + lineC > lineA) && 
+       (Math.abs(lineA - lineC) < lineB) && (lineA + lineC > lineB) && 
+       (Math.abs(lineA - lineB) < lineC) && (lineA + lineB > lineC) ) {
+      result = true;
   }
   return result;
 }
-console.log(generatePhoneNumber(numPhone));
+// console.log(triangleCheck(lin1, lin2, lin3));
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
 
 // Desafio 13
 function hydrate() {
