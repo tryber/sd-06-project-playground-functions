@@ -1,22 +1,35 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true){
-    return 'true'
-  } else{
-    return 'false'
+    return true;
+  }
+   else{
+    return false
+  }
 }
-}
+console.log(compareTrue(true,true))
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence("") {
-  // seu código aqui
-return array
+function splitSentence(string) {
+let word = "";
+let splitedPhrase = [];
+  for (i in string){
+    if (string[i] !== " "){
+      word += (string[i]);
+    }
+    else if (string[i] === "" ){
+        splitedPhrase.push(word);
+        word = ""
+    }
+  }
+console.log(splitedPhrase);
 }
+splitSentence("Hi, how are you?");
 
 // Desafio 4
 function concatName() {
