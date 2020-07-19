@@ -160,6 +160,7 @@ Para isso precisamos checar como string
 function addCounter(element, counter) {
   if (`${element}` in counter) {
     counter[element] += 1;
+    return true
   }
 
   counter[element] = 1;
@@ -169,13 +170,13 @@ function buildNumber(tel, array, index) {
   switch (index) {
     case 1:
       tel += `${array[index]}) `;
-      break;
+      return tel
     case 6:
       tel += `${array[index]}-`;
-      break;
+      return tel
     default:
       tel += String(array[index]);
-      break;
+      return tel
   }
 }
 
@@ -184,9 +185,8 @@ function badNumbers(array, index, counter = {}) {
     return true
   } else if ((counter[array[index]] >= 3)) {
     return true
-  } else {
-    return false
   }
+  return false
 }
 
 function generatePhoneNumber(arr) {
@@ -201,9 +201,6 @@ function generatePhoneNumber(arr) {
   let counter = {};
 
   for (let i = 0; i < 11; i += 1) {
-    if (badNumbers(arr, i)) {
-      return erroNums
-    }
 
     addCounter(arr[i], counter)
 
@@ -211,7 +208,7 @@ function generatePhoneNumber(arr) {
       return erroNums
     }
 
-    buildNumber(tel, arr, i);
+    tel = buildNumber(tel, arr, i);
   }
   return tel
 }
