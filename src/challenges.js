@@ -35,12 +35,12 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let result = array[0];
+  let result = 0;
   let count = 0;
   for (let i = 0; i <= array.length; i += 1) {
     if (array[i] > result) {
       result = array[i];
-      count = 1;
+      count = 0;
     }
     if (array[i] === result) {
       count += 1;
@@ -50,8 +50,13 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(gato1, gato2, rato) {
+let  = 0;
+let  = 0;
+let trombada = "os gatos trombam e o rato foge";
+if (gato1 > rato) {
+  = 
+}
 }
 
 // Desafio 8
