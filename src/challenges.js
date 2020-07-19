@@ -154,7 +154,7 @@ function techList(nameTech, name) {
   else {
     let result = [];
     for (let i in nameTech.sort()) {
-      result.push([{ tech: nameTech[i], name: name }]);
+      result.push({tech: nameTech[i], name: name});
     }
     return result;
   }
