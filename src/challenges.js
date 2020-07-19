@@ -179,10 +179,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let numbers = /\d+/g;
+  let numberOfDrinks = string.match(numbers);
+  let water = 0
+  for (let i = 0; i < numberOfDrinks.length; i++) {
+      water += parseInt(numberOfDrinks[i]);
+  }
+  let glassesOfWater = water + " copos de água";
+  return glassesOfWater;
 }
-
 
 module.exports = {
   calcArea,
