@@ -49,7 +49,7 @@ console.log(pontuacao);
 function highestCount(lista) {
   let maior = lista[0];
   for (let indice of lista) {
-  if (indice > maior){
+  if (indice > maior) {
     maior = indice;
   }
   }
@@ -79,7 +79,7 @@ function catAndMouse(mouse, cat1, cat2) {
     position = 'os gatos trombam e o rato foge';
   }
   return position;
-  }
+}
 catAndMouse(45, 30, 30);
 console.log(position);
 
@@ -108,16 +108,16 @@ let arrayCode2 = arrayCode.split();
 let newArrayEncode = [];
  for (let indceCode in arrayCode2) {
    if (arrayCode2[indceCode] === 'a') {
-     newArrayEncode[indceCode] = '1';
+      newArrayEncode[indceCode] = '1';
    } else if (arrayCode2[indceCode] === 'e') {
-     newArrayEncode[indceCode] = '2';
+      newArrayEncode[indceCode] = '2';
    } else if (arrayCode2[indceCode] ==='i') {
-     newArrayEncode[indceCode] = '3';
+      newArrayEncode[indceCode] = '3';
    } else if (arrayCode2[indceCode] ==='o') {
-     newArrayEncode[indceCode] = '4';
+      newArrayEncode[indceCode] = '4';
    } else if (arrayCode2[indceCode] ==='u') {
-     newArrayEncode[indceCode] = '5';
-   } else {
+      newArrayEncode[indceCode] = '5';
+    } else {
     newArrayEncode[indceCode] = arrayCode2[indceCode];
   }
  }
@@ -125,22 +125,22 @@ let newArrayEncode = [];
 }
 
 function decode(retEncode) {
- arrayCode2 = retEncode;
- let newArrayEncode = [];
- for (let indceCode in arrayCode2 ){
-  if (arrayCode2[indceCode] == '1') {
-    newArrayEncode[indceCode] = 'a';
-  } else if (arrayCode2[indceCode] == '2') {
-    newArrayEncode[indceCode] = 'e';
-  } else if (arrayCode2[indceCode] == '3') {
-    newArrayEncode[indceCode] = 'i';
-  } else if (arrayCode2[indceCode] == '4') {
-    newArrayEncode[indceCode] = 'o';
-  } else if (arrayCode2[indceCode] == '5') {
-    newArrayEncode[indceCode] = 'u';
-  } else {
-    newArrayEncode[indceCode] = arrayCode2[indceCode];
-  }
+  arrayCode2 = retEncode;
+  let newArrayEncode = [];
+  for (let indceCode in arrayCode2 ) {
+   if (arrayCode2[indceCode] == '1') {
+      newArrayEncode[indceCode] = 'a';
+    } else if (arrayCode2[indceCode] == '2') {
+      newArrayEncode[indceCode] = 'e';
+    } else if (arrayCode2[indceCode] == '3') {
+      newArrayEncode[indceCode] = 'i';
+    } else if (arrayCode2[indceCode] == '4') {
+      newArrayEncode[indceCode] = 'o';
+    } else if (arrayCode2[indceCode] == '5') {
+      newArrayEncode[indceCode] = 'u';
+     } else {
+      newArrayEncode[indceCode] = arrayCode2[indceCode];
+   }
  }
 return (newArrayEncode);
 }
