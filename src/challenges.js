@@ -149,13 +149,11 @@ function techList(techArray, name) {
   if (newTechArray == 0) {
     return "Vazio!";
   }
-  else{
   for (i = 0; i < sortedTechArray.length; i += 1) {
     let tech = sortedTechArray[i];
     newTechArray.push ({tech, name,});
   }
   return newTechArray;
-  }
 }
 
 // Desafio 11
