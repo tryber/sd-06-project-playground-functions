@@ -47,8 +47,8 @@ function highestCount(array) {
 let arr = [2, 1, 2, 3, 9, 9, 9, 5, 7];
 console.log(highestCount(arr));
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let gato1 = 0;
 }
 
 // Desafio 8
