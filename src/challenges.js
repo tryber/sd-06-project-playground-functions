@@ -181,10 +181,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let numeros = string.replace(/[^\d]+/g,'');
+  let soma = 0;
+  for (i = 0; i < numeros.length; i += 1) {
+    soma = parseInt(soma) + parseInt(numeros[i]);
+  }
+  if (soma === 1) {
+    return (soma +' copo de água')
+  } else {
+    return (soma + ' copos de água')
+  }
 }
-
 
 module.exports = {
   calcArea,
