@@ -14,12 +14,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(param1, param2) {
-  let frase = "go trybe";
-  let resultado = frase.split(" ");
-  return(resultado[0], resultado[1]);
+function splitSentence(param1) {
+  let resultado = param1.split(" ");
+  return(resultado);
 }
-//console.log(resultado);
+//console.log(splitSentence("go trybe eu o mestre"));
 
 
 // Desafio 4
