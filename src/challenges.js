@@ -214,36 +214,6 @@ function hydrate(drinks) {
   }
 }
 
-console.log('Exercício 1: ' + compareTrue(true, true));
-
-console.log('Exercício 2: ' + calcArea(30,30));
-
-console.log('Exercício 3: ' + splitSentence('go Trybe'));
-
-console.log('Exercício 4: ' + concatName(['Vagner','Pereira','de','Sousa']));
-
-console.log('Exercício 5: ' + footballPoints(8,4));
-
-console.log('Exercício 6: ' + highestCount([9, 1, 2, 3, 9, 5, 7]));
-
-console.log('Exercício 7: ' + catAndMouse(10, 12, 8));
-
-console.log('Exercício 8: ' + fizzBuzz([2, 15, 7, 9, 45]));
-
-console.log('Exercício 9: ' + encode('hi there!'));
-
-console.log('Exercício 9: ' + decode('h3 th2r2!'));
-
-console.log('Exercício 10: ' + techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Vagner"));
-
-console.log('Exercício 11: ' + generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
-console.log('Exercício 12: ' + triangleCheck(10, 14, 8));
-
-console.log('Exercício 13: ' + hydrate("1 cachaça"));
-
-
-
 module.exports = {
   calcArea,
   catAndMouse,
