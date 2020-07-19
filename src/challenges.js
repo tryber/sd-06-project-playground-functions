@@ -75,8 +75,6 @@ function fizzBuzz(arr) {
   return answer
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
 // Desafio 9
 function encode(str) {
   let code = {
@@ -209,7 +207,7 @@ function generatePhoneNumber(arr) {
 
     addCounter(arr[i], counter)
 
-    if (badNumbers(arr, i, counter) {
+    if (badNumbers(arr, i, counter)) {
       return erroNums
     }
 
