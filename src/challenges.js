@@ -200,13 +200,16 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinks) {
-  let num = drinks.match(/\d/g);
+  let num = drinks.match(/\d+/g).map(Number);
   let cont = 0;
   for(index in num){
-    if(num[index] < 1 && num[index] > 9){
+    if(parseInt(num[index]) < 1 || parseInt(num[index]) > 9){
       return 'número inválido!'
     }
     cont += parseInt(num[index]); 
+  }
+  if(cont === 1){
+    return cont + " copo de água";
   }
   return cont + " copos de água";
 }
