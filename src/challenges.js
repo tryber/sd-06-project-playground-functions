@@ -79,27 +79,45 @@ return f07rapido;
 // Desafio 8
 function fizzBuzz(f08numeros = []) 
 {
-  f08nomes = [];
-  for (let f08cont = 1; f08cont < f08numeros.length; f08cont += 1)
-    {
-      if ((f08numeros[f08cont] % 3 === 0) && (f08numeros[f08cont] % 5 === 0)) 
-      {
-        f08nomes = f08nomes + "fizzBuzz, ";
-      } 
-      if ((f08numeros[f08cont] % 3 === 0) && (f08numeros[f08cont] % 5 !== 0)) 
-      {
-        f08nomes = f08nomes + "fizz, ";
-      }      
-      if ((f08numeros[f08cont] % 5 === 0) &&  (f08numeros[f08cont] % 3 !== 0)) 
-      {
-        f08nomes = f08nomes + "buzz, ";
-      }
-      if ((f08numeros[f08cont] % 3 !== 0) && (f08numeros[f08cont] % 5 !== 0)) 
-      {
-        f08nomes = f08nomes + "bug!, ";
-      }
-    }
-  return f08nomes;
+    f08nomes = [];
+    f08cont=0;
+    if ((f08numeros[f08cont] % 3 === 0) && (f08numeros[f08cont] % 5 === 0)) 
+                {
+                    f08nomes = f08nomes + '"fizzBuzz"';
+                } 
+            if ((f08numeros[f08cont] % 3 === 0) && (f08numeros[f08cont] % 5 !== 0)) 
+                {
+                    f08nomes = f08nomes + '"fizz"';
+                }
+            if ((f08numeros[f08cont] % 5 === 0) &&  (f08numeros[f08cont] % 3 !== 0)) 
+                {
+                    f08nomes = f08nomes + '"buzz"';
+                } 
+            if ((f08numeros[f08cont] % 3 !== 0) && (f08numeros[f08cont] % 5 !== 0)) 
+                {
+                    f08nomes = f08nomes + '"bug!"';
+                }
+
+    for (let f08cont = 1; f08cont < f08numeros.length; f08cont += 1)
+        {
+            if ((f08numeros[f08cont] % 3 === 0) && (f08numeros[f08cont] % 5 === 0)) 
+                {
+                    f08nomes = f08nomes + ', "fizzBuzz"';
+                } 
+            if ((f08numeros[f08cont] % 3 === 0) && (f08numeros[f08cont] % 5 !== 0)) 
+                {
+                    f08nomes = f08nomes + ', "fizz"';
+                }
+            if ((f08numeros[f08cont] % 5 === 0) &&  (f08numeros[f08cont] % 3 !== 0)) 
+                {
+                    f08nomes = f08nomes + ', "buzz"';
+                } 
+            if ((f08numeros[f08cont] % 3 !== 0) && (f08numeros[f08cont] % 5 !== 0)) 
+                {
+                    f08nomes = f08nomes + ', "bug!"';
+                }
+        }
+        return f08nomes;
 }
 
 // Desafio 9
