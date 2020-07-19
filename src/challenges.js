@@ -42,10 +42,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function divBy3or5(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'both'
+  } else if (num % 3 === 0) {
+    return 3
+  } else if (num % 5 === 0) {
+    return 5
+  } else {
+    return false
+  }
+}
+
 function fizzBuzz(arr) {
   let answer = [];
   for (let i = 0; i < arr.length; i += 1) {
-    switch(divBy3or5(arr[i])) {
+    switch (divBy3or5(arr[i])) {
       case 'both':
         answer.push('fizzBuzz');
         break;
@@ -61,16 +73,6 @@ function fizzBuzz(arr) {
     }
   }
   return answer
-}
-
-function divBy3or5(num) {
-  if (num % 3 === 0 & num % 5 === 0) {
-    return 'both'
-  } else if (num % 3 === 0) {
-    return 3
-  } else if (num % 5 === 0) {
-    return 5
-  }
 }
 
 // Desafio 9
@@ -150,10 +152,34 @@ function techList(arr, name) {
 
 // Desafio 11
 
- /* atencao! O keys retorna um array com as keys em string,
-  enquanto o includes checa === com os numeros!
-  Para isso precisamos checar como string
-  (Object.keys(counter).includes(`${arr[i]}`)) ? counter[arr[i]] += 1 : counter[arr[i]] = 1; */
+/* atencao! O keys retorna um array com as keys em string,
+enquanto o includes checa === com os numeros!
+Para isso precisamos checar como string
+(Object.keys(counter).includes(`${arr[i]}`)) ? counter[arr[i]] += 1 : counter[arr[i]] = 1; */
+
+function addCounter(element, counter) {
+  if (`${element}` in counter) {
+    counter[element] += 1;
+    return
+  }
+
+  counter[element] = 1;
+  return
+}
+
+function buildNumber(tel, index) {
+  switch (index) {
+    case 1:
+      tel += `${arr[i]}) `;
+      break;
+    case 6:
+      tel += `${arr[i]}-`;
+      break;
+    default:
+      tel += String(arr[i]);
+      break;
+  }
+}
 
 function generatePhoneNumber(arr) {
   let erroTamanho = 'Array com tamanho incorreto.'
@@ -170,33 +196,15 @@ function generatePhoneNumber(arr) {
       return erroNums
     }
 
-    createCounter(arr[i], counter)
+    addCounter(arr[i], counter)
 
     if (counter[arr[i]] >= 3) {
       return erroNums
     }
 
-    switch (i) {
-      case 1:
-        tel += `${arr[i]}) `;
-        break;
-      case 6:
-        tel += `${arr[i]}-`;
-        break;
-      default:
-        tel += String(arr[i]);
-        break;
-    }
+    buildNumber(tel, i);
   }
   return tel
-}
-
-function createCounter(element, counter) {
-  if (`${element}` in counter) {
-    return counter[element] += 1;
-  } else {
-    return counter[element] = 1;
-  }
 }
 
 // Desafio 12
