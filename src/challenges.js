@@ -93,36 +93,36 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
-  encodedString = '';
-  for (let index in string) {
-    if (string[index] === "a") {
-      string[index] = "1";
-      encodedString += string[index];
-    }
-    else if (string[index] === "e") {
-      string[index] = "2";
-      encodedString += string[index];
-    }
-    else if (string[index] === "i") {
-      string[index] = "3";
-      encodedString += string[index];
-    }
-    else if (string[index] === "o") {
-      string[index] = "4";
-      encodedString += string[index];
-    }
-    else if (string[index] === "u") {
-      string[index] = "5";
-      encodedString += string[index];
-    }
-    else {
-      string[index] = string[index];
-      encodedString += string[index];
-    }
-  }
-  return encodedString;
-}
+// function encode(string) {
+//   encodedString = '';
+//   for (let index in string) {
+//     if (string[index] === "a") {
+//       string[index] = "1";
+//       encodedString += string[index];
+//     }
+//     else if (string[index] === "e") {
+//       string[index] = "2";
+//       encodedString += string[index];
+//     }
+//     else if (string[index] === "i") {
+//       string[index] = "3";
+//       encodedString += string[index];
+//     }
+//     else if (string[index] === "o") {
+//       string[index] = "4";
+//       encodedString += string[index];
+//     }
+//     else if (string[index] === "u") {
+//       string[index] = "5";
+//       encodedString += string[index];
+//     }
+//     else {
+//       string[index] = string[index];
+//       encodedString += string[index];
+//     }
+//   }
+//   return encodedString;
+// }
 
 
 // function decode(string) {
