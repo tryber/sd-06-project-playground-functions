@@ -189,8 +189,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
+  let arrayNumbers = drinks.replace(/[^0-9]/g, '');
+  let sum = 0;
+  let text = ' copos de água';
+  for (let index in arrayNumbers) {
+    sum += parseInt(arrayNumbers[index]);
+  }
+  return sum + text;
 }
 
 
