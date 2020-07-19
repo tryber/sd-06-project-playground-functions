@@ -130,8 +130,46 @@ function techList(arrayTech) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+// console.log(generatePhoneNumber([0, 2, 4, 3, 5, 5, 6, 8, 9, 2, 1]))
+function checkRepeatedNumber(arrayPhone) {
+  let nRepeat;
+  for (let index = 0; index < arrayPhone.length; index += 1) {
+    let nRepeat = 0;
+    for (let index2 = 0; index2 < arrayPhone.length; index2 += 1) {
+      if (arrayPhone[index] === arrayPhone[index2]) {
+        nRepeat += 1;
+      }
+      if (nRepeat >= 3) {
+        return nRepeat;
+      }
+    }
+  }
+  return nRepeat;
+}
+function generate(arrayPhone) {
+  let numberPhone = '(';
+  for (let index = 0; index < arrayPhone.length; index += 1) {
+    if (index === 2) {
+      numberPhone += ') ';
+    } else if (index === 7) {
+      numberPhone += '-';
+    }
+    numberPhone += arrayPhone[index];
+  }
+  return numberPhone;
+}
+function generatePhoneNumber(arrayPhone) {
   // seu código aqui
+  if (arrayPhone.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  let nRepeat = checkRepeatedNumber(arrayPhone);
+  for (let index = 0; index < arrayPhone.length; index += 1) {
+    if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || nRepeat >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return generate(arrayPhone);
 }
 
 // Desafio 12
