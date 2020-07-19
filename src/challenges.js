@@ -54,7 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
       return 'cat2'
   }else {
   ((cat1 - mouse) < cat2)
-      return "cat 1"
+      return "cat1"
   }
 }
 
