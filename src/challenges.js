@@ -145,9 +145,13 @@ function techList(tech, name) {
   // seu código aqui
   let listaOrdenada = tech.sort()
   let listaTech = []
+  if (listaOrdenada.length > 0){
     for (i in listaOrdenada) {
-      listaTech.push ({ tech: listaOrdenada[i], name: name,})
+    listaTech.push ({ tech: listaOrdenada[i], name: name,})
     }
+  }else{
+  return "Vazio!"
+  }
   return listaTech
 }
 
