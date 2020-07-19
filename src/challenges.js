@@ -43,7 +43,7 @@ function highestCount(arrayNumbers) {
   // seu código aqui
   let highest = Math.max.apply(null, arrayNumbers);
   let count = 0;
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
+  for (let index in arrayNumbers) {
     if (arrayNumbers[index] === highest) {
       count += 1;
     }
@@ -193,10 +193,11 @@ function hydrate(drinks) {
   // seu código aqui
   let arrayNumbers = drinks.replace(/[^0-9]/g, '');
   let sum = 0;
-  let text = ' copos de água';
+  let text = '';
   for (let index in arrayNumbers) {
     if (sum >= 0) {
       sum += parseInt(arrayNumbers[index], 10);
+      text = (sum === 1 ? ' copo de água' : ' copos de água');
     }
   }
   return sum + text;
