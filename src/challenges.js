@@ -89,8 +89,15 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(arrayTec, name) {
   // seu código aqui
+  let newArray = [];
+  arrayTec.sort();
+
+  for(i = 0; i <= arrayTec.length -1; i+= 1) {
+    newArray.push({tech:arrayTec[i], nome:name});
+  }
+  return newArray;
 }
 
 // Desafio 11
