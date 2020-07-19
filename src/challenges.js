@@ -175,11 +175,12 @@ function decode(stringDecode) {
 // partir do campo tech no objeto
 // Para cada tecnologia no array, crie um objeto
 // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech
-function techList(arrayTechList) {
-  arrayTechList = {
-    tech: 
-    name: 
-  }
+function techList() {
+ 
+  // arrayTechList = {
+  //   tech: 
+  //   name: 
+  // }
 }
 
 // Desafio 11
