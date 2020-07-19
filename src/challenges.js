@@ -1,18 +1,18 @@
 // Desafio 1
 function compareTrue(first,second) {
-  first && second ? true : false;
+  return first && second ? true : false;
   // seu código aqui
 }
 
 // Desafio 2
 function calcArea(base,height) {
-  return base*height/2
+  return height**2*base/2
   // seu código aqui
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  return console.log(frase.split(' '))
+  return frase.split(' ')
 }
 // Desafio 4
 function concatName(listaStrings) {
@@ -23,7 +23,7 @@ function concatName(listaStrings) {
     primeiro = minhaLista[0];
   }
   else{
-    return console.log(minhaLista.length)
+    return minhaLista
   }
   minhaLista.shift();
   minhaLista.unshift(ultimo);
@@ -46,7 +46,8 @@ function concatName2(listaStrings){
 
 // Desafio 5
 function footballPoints(wins,ties) {
-  return wins*3+ties;
+  let pontos = wins*3 + ties;
+  return pontos
 
   // seu código aqui
 }
