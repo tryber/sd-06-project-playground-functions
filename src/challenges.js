@@ -161,7 +161,6 @@ function generatePhoneNumber(arrayNumber) {
       numbersRepeated +=1;
     }
   }
-  let numbersRepeated = 1;
   if (arrayNumber.length !== 11) {
     return "Array com tamanho incorreto.";
   } else if (numbersRepeated >= 2) {
