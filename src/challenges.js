@@ -114,13 +114,60 @@ function fizzBuzz(numbers) {
 fizzBuzz([2, 15, 7, 9, 45]); 
 
 // Desafio 9
-function encode(string) {
 
+function encode(string) {
+  let newString = "";
+  for (let index in string) {
+    if (string[index] === "a") {
+      newString += "1";
+    }
+    else if (string[index] === "e") {
+      newString += "2";
+    }
+    else if (string[index] === "i") {
+      newString += "3";
+    }
+    else if (string[index] === "o") {
+      newString += "4";
+    }
+    else if (string[index] === "u") {
+      newString += "5";
+    }
+    else {
+      newString += string[index];
+    }
+  }
+  return newString;
 }
+console.log(encode("hi there isabella"));
 
 function decode(numbers) {
+  let decodedString = "";
 
-}
+    for (let index in numbers) {
+      if (numbers[index] === "1") {
+        decodedString += "a";
+      }
+      else if (numbers[index] === "2") {
+        decodedString += "e";
+      }
+      else if (numbers[index] === "3") {
+        decodedString += "i";
+      }
+      else if (numbers[index] === "4") {
+        decodedString += "o";
+      }
+      else if (numbers[index] === "5") {
+        decodedString += "u";
+      }
+      else {
+        decodedString += numbers[index];
+      }
+    }
+    return decodedString;
+  }
+  console.log(decode("h3 th2r2 3s1b2ll1"));
+
 
 // Desafio 10
 function techList(arrayTechnology,name) {
@@ -135,7 +182,7 @@ function techList(arrayTechnology,name) {
   return techInfo;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella"));
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella");
 
 // Desafio 11
 function generatePhoneNumber() {
