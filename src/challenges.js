@@ -186,9 +186,31 @@ function generatePhoneNumber(arrayNumber) {
 
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  // Para que formarTriangulo = true ->
+  // A + B > C e A - B < C
+  // A + C > B e A - C
+  // B + C > A
+  // 
+  let formarTriangulo = false;
+  let somaAB = lineA + lineB;
+  let somaAC = lineA + lineC;
+  let somaBC = lineB + lineC;
+  let diferencaAB = Math.abs(lineA - lineB);
+  let diferencaAC = Math.abs(lineA - lineC);
+  let diferencaBC = Math.abs(lineB - lineC);
+  if (somaAB < lineC || somaAC < lineB || somaBC < lineA) {
+    formarTriangulo = false;
+  } else if (diferencaAB > lineC || diferencaAC > lineB || diferencaBC > lineC) {
+    formarTriangulo = false;
+  } else {
+    formarTriangulo = true;
+  }
+  return formarTriangulo;
 }
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
