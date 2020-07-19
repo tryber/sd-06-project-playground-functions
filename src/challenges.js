@@ -103,11 +103,63 @@ function fizzBuzz(f08numeros = [])
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encString = "") 
+{
+  encStringNew = "";
+  for (let encCont = 0; encCont < encString.length; encCont += 1)
+  {
+    switch (encString[encCont])
+    {
+      case "a":
+          encStringNew += "1";
+      break;
+      case ("e"):
+          encStringNew += "2";
+      break;
+      case "i":
+          encStringNew += "3";
+      break;
+      case "o":
+          encStringNew += "4";
+      break;
+      case "u":
+          encStringNew += "5";
+      break;
+      
+      default:
+        encStringNew += encString[encCont];
+    }
+  }
+  return encStringNew
 }
-function decode() {
-  // seu código aqui
+function decode(decString = "") 
+{
+  decStringNew = "";
+  for (let decCont = 0; decCont < decString.length; decCont += 1)
+  {
+      switch (decString[decCont])
+      {
+        case "1":
+          decStringNew += "a";
+        break;
+        case ("2"):
+          decStringNew += "e";
+        break;
+        case "3":
+          decStringNew += "i";
+        break;
+        case "4":
+          decStringNew += "o";
+        break;
+        case "5":
+          decStringNew += "u";
+        break;
+        
+        default:
+          decStringNew += decString[decCont];
+      }
+  }
+  return decStringNew
 }
 
 // Desafio 10
