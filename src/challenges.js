@@ -135,24 +135,24 @@ function generatePhoneNumber(numbers) {
   let arraySize = numbers.length;
   let result = `${numbers.slice(0, 2)} ${numbers.slice(2, 7)}-${numbers.slice(7, 12)}`;
   if (arraySize !== 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
-  numbers.sort()  
+  numbers.sort()
   let nextIndex = 1;
   let invalidNumbers = false;
-  for (index = 0; index < arraySize - 1; index += 1) {
+  for (let index = 0; index < arraySize - 1; index += 1) {
     if (countRepeated > 3 || numbers[index] > 9 || numbers[index] < 0) {
       invalidNumbers = true;
       break;
     }
     if (numbers[index] === numbers[nextIndex]) {
       countRepeated += 1;
-    } else {      
+    } else {
       countRepeated = 0;
     }
     nextIndex += 1;
   }
-  if (invalidNumbers){
+  if (invalidNumbers) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return result.replace(/,/g, '');
