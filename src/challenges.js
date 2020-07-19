@@ -192,17 +192,17 @@ function hydrate(drinks) {
   let num = drinks.match(/\d+/g).map(Number);
   let cont = 0;
   for (let index in num) {
-    if (parseInt(num[index], radix) < 1 || parseInt(num[index], radix) > 9) {
+    if (parseInt(num[index]) < 1 || parseInt(num[index]) > 9) {
       return 'número inválido!'
     }
-    cont += parseInt(num[index], radix);
+    cont += parseInt(num[index]);
   }
   if (cont === 1) {
     return cont + ' copo de água';
   }
   return cont + ' copos de água';
 }
-
+console.log( hydrate("1 cachaça"));
 module.exports = {
   calcArea,
   catAndMouse,
