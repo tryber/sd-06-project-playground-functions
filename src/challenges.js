@@ -5,14 +5,14 @@ function compareTrue(value1, value2) {
   } else if (value1 === false || value2 === false) {
     return false;
   }
-} console.log(compareTrue(false, false));
+} console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
   let calc = (base * height) / 2;
   return calc;
 }
-console.log(calcArea(10, 10));
+console.log(calcArea(2, 10));
 
 // Desafio 3
 function splitSentence(string) {
@@ -53,7 +53,7 @@ function highestCount(numeros) {
   return count;
 }
 
-console.log(highestCount(array = [9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount(array = [9, 1, 2, 3, 9, 5, 7, 9]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -69,11 +69,32 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
-console.log(catAndMouse(10, 2, 7));
+console.log(catAndMouse(15, 12, 10));
 
 // Desafio 8
 function fizzBuzz() {
-}  
+  
+//  let array = [];
+
+//    for (let i = 0; i < numbers.length; i += 1) {
+//
+//        if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+//            array.push("fizzbuzz");
+//        } 
+//        else if (numbers[i] % 3 === 0) {
+//            array.push("fizz");
+//        }
+//        else if (numbers[i] % 5 === 0) {
+//            array.push("buzz");
+//        }
+//        else {
+//            array.push("bug!");
+//        }
+//    } 
+//    return array;
+}
+//console.log(fizzBuzz(arr = [2, 15, 7, 9, 45]));
+
 
 // Desafio 9
 function encode() {
