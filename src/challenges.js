@@ -176,13 +176,45 @@ function generatePhoneNumber(arrayNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumAB = lineA + lineB;
+  let sumBC = lineB + lineA; 
+  let sumAC = lineA + lineC;
+  let valueAC = Math.abs(lineA - lineC);
+  let valueBC = Math.abs(lineB - lineC);
+  let valueAB = Math.abs(lineA - lineB);
+  if (((lineA < sumBC) && (lineA > valueBC)) && ((lineB < sumAC) && (lineB > valueAC)) && ((lineC < sumAB) && (lineC > valueAB))) {
+    return true;
+  } return false;
 }
 
 // Desafio 13
 function hydrate() {
   // seu código aqui
+  
+// Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
+
+// Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
+
+// String recebida:
+//   "1 cerveja"
+// String retornada:
+//   "1 copo de água"
+// String recebida:
+//   "1 cachaça, 5 cervejas e 1 copo de vinho"
+// String retornada:
+//   "7 copos de água"
+// String recebida:
+//   "1 cachaça, 5 cervejas e 1 copo de vinho"
+// String retornada:
+//   "7 copos de água"
+// Notas
+
+// Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida.
+
+// O número na frente de cada bebida está no intervalo entre 1 e 9.
+
+// Dica: pesquise por algo similar a get all integers inside a string js.
 }
 
 
