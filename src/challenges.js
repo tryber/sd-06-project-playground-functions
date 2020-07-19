@@ -42,7 +42,7 @@ function highestCount(array) {
       result = array[i];
       count = 1;
     }
-    if (array[i] === result) { 
+    if (array[i] === result) {
       count += 1;
     }
   }
