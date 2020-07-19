@@ -77,7 +77,7 @@ function fizzBuzz(numbers){
     for (let i = 0; i < numbers.length; i += 1) {
 
         if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
-            array.push("fizzbuzz");
+            array.push("fizzBuzz");
         }
         else if (numbers[i] % 3 === 0) {
             array.push("fizz");
@@ -91,7 +91,7 @@ function fizzBuzz(numbers){
     }
     return array;
 }
-console.log(fizzBuzz(arr = [2, 15, 7, 9, 45]));
+console.log(fizzBuzz(arr = [7, 9]));
 
 // Desafio 9
 function encode() {
