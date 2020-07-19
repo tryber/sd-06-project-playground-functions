@@ -39,9 +39,9 @@ console.log(splitSentence('Me dê papai'));
 // Receber uma array de strings, retorne uma string com o formato
 // 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
 function concatName(stringDesafio4) {
-  firstDesafio4 = stringDesafio4[0];
-  lastDesafio4 = stringDesafio4[stringDesafio4.length - 1]
-  separatorDesafio4 = [', ']
+  let firstDesafio4 = stringDesafio4[0];
+  let lastDesafio4 = stringDesafio4[stringDesafio4.length - 1];
+  let separatorDesafio4 = [', '];
   return lastDesafio4.concat(separatorDesafio4, firstDesafio4);
 }
 
@@ -50,9 +50,16 @@ console.log(concatName(['Mais', 'um', 'desafio', 'concluído']));
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let scoreWins = wins * 3;
+  let scoreTies = ties * 1;
+  let totalScore = scoreWins + scoreTies;
+  return totalScore;
 }
+
+// console.log('<---- Desafio 5 ---->');
+console.log(footballPoints(14, 8));
+
 
 // Desafio 6
 function highestCount() {
