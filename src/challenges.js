@@ -45,8 +45,6 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = 0;
-  let dist2 = 0;
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return 'cat1';
   } else
@@ -175,13 +173,13 @@ function generatePhoneNumber(number) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if ((Math.abs(lineB - lineC) > lineA || lineA > lineB + lineC)){
+  if ((Math.abs(lineB - lineC) > lineA || lineA > lineB + lineC)) {
     return false;
-  }else
-  if ((Math.abs(lineA - lineC) > lineB || lineB > lineA + lineC)){
+  } else
+  if ((Math.abs(lineA - lineC) > lineB || lineB > lineA + lineC)) {
     return false;
-  }else
-  if((Math.abs(lineB - lineA) > lineC || lineC > lineB + lineA)){
+  } else
+  if ((Math.abs(lineB - lineA) > lineC || lineC > lineB + lineA)) {
     return false;
   }
   return true;
@@ -198,11 +196,12 @@ function hydrate(drinks) {
     cont += parseInt(num[index]);
   }
   if (cont === 1) {
-    return cont + ' copo de água';
+    cont += ' copo de água';
+    return cont;
   }
-  return cont + ' copos de água';
+  cont += ' copos de água';
+  return cont;
 }
-console.log( hydrate("1 cachaça"));
 module.exports = {
   calcArea,
   catAndMouse,
