@@ -102,7 +102,6 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(string) {
-
   let arrayS = string.split("");
   for(let i = 0; i < arrayS.length; i++){
     if(arrayS[i] == "a"){
@@ -149,8 +148,18 @@ function decode(string) {
   return arrayString;
 }
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  let techSorted = techs.sort();
+  let list = [];
+  for(i=0; i < techs.length; i++){
+    list.push(
+      {
+        tech: techSorted[i],
+        nome: name 
+      },
+    )
+  }
+  return list;
 }
 
 // Desafio 11
