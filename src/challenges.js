@@ -70,18 +70,17 @@ console.log(highestCount(lista));
 function catAndMouse(mouse, cat1, cat2) {
   let positioncat1 = Math.abs(cat1 - mouse);
   let positioncat2 = Math.abs(cat2 - mouse);
-  let position;
+  let position2;
   if (positioncat1 > positioncat2) {
-    position = 'cat2';
+    position2 = 'cat2';
   } else if (positioncat1 < positioncat2) {
-    position = 'cat1';
+    position2 = 'cat1';
   } else {
-    position = 'os gatos trombam e o rato foge';
+    position2 = 'os gatos trombam e o rato foge';
   }
-  return position;
+  return position2;
 }
-catAndMouse(45, 30, 30);
-console.log(position);
+console.log(catAndMouse(45, 30, 30));
 
 // Desafio 8 - FizzBuzz
 let arrayNumeros = [2, 3, 5, 15];
@@ -104,7 +103,7 @@ console.log(fizzBuzz(arrayNumeros));
 
 // Desafio 9
 function encode(arrayCode) {
-  let arrayCode2 = arrayCode.split();
+  let arrayCode2 = arrayCode.split('');
   let newArrayEncode = [];
     for (let indceCode in arrayCode2) {
       if (arrayCode2[indceCode] === 'a') {
@@ -119,16 +118,16 @@ function encode(arrayCode) {
             newArrayEncode[indceCode] = '5';
         } else {
             newArrayEncode[indceCode] = arrayCode2[indceCode];
-        }
+         }
     }
- return newArrayEncode;
+ return (newArrayEncode);
 }
 
 function decode(retEncode) {
   arrayCode2 = retEncode;
   let newArrayEncode = [];
   for (let indceCode in arrayCode2) {
-    if (arrayCode2[indceCode] == ='1') {
+    if (arrayCode2[indceCode] ==='1') {
         newArrayEncode[indceCode] = 'a';
       } else if (arrayCode2[indceCode] === '2') {
         newArrayEncode[indceCode] = 'e';
@@ -142,7 +141,7 @@ function decode(retEncode) {
          newArrayEncode[indceCode] = arrayCode2[indceCode];
        }
   }
-return (newArrayEncode);
+return newArrayEncode;
 }
 
 let arrayCode = 'hi there!'
@@ -151,9 +150,20 @@ console.log(retEncode);
 retDecode = decode(retEncode);
 console.log(retDecode);
 
-function techList() {
-  // seu código aqui
+ // Desafio 10
+function techList(tech, nome) {
+  let techSort = tech.sort();
+  let tecnologias = [];
+  for(index in techSort){
+    tecnologias.push(techSort[index] = {tech: techSort[index], nome : nome});
+
+  }
+  return tecnologias;
 }
+let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let nome = "Lucas";
+console.log(techList(tech, nome));
+
 
 // Desafio 11
 
@@ -164,12 +174,12 @@ function generatePhoneNumber() {
 
 function triangleCheck(lineA, lineB, lineC) {
     if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-      return true;
-    } else if(lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
-      return true;
-    } else if(lineC < Math.abs(lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
-      return true;
-    }
+       return true;
+    } else if (lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+       return true;
+    } else if (lineC < Math.abs(lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
+        return true;
+     }
   return false;
 }
 desafio = triangleCheck(1, 2, 2);
