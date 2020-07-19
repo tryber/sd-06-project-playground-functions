@@ -40,10 +40,10 @@ function highestCount(f06par01 = []) {
   f06maior = f06par01[0];
   for (let f06cont01 = 1; f06cont01 <= f06par01.length; f06cont01 += 1)
       {
-          if (f06maior<f06par01[f06cont01])
-          {
-              f06maior = f06par01[f06cont01]
-          }
+        if (f06maior<f06par01[f06cont01])
+        {
+            f06maior = f06par01[f06cont01]
+        }
       }
   
   f06repeticoes = 0
@@ -55,7 +55,7 @@ function highestCount(f06par01 = []) {
       }
   }
   
-return f06repeticoes
+  return f06repeticoes
 }
 
 // Desafio 7
@@ -77,8 +77,29 @@ return f07rapido;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(f08numeros = []) 
+{
+  f08nomes = [];
+  for (let f08cont = 1; f08cont < f08numeros.length; f08cont += 1)
+    {
+      if ((f08numeros[f08cont] % 3 === 0) && (f08numeros[f08cont] % 5 === 0)) 
+      {
+        f08nomes = f08nomes + "fizzBuzz, ";
+      } 
+      if ((f08numeros[f08cont] % 3 === 0) && (f08numeros[f08cont] % 5 !== 0)) 
+      {
+        f08nomes = f08nomes + "fizz, ";
+      }      
+      if ((f08numeros[f08cont] % 5 === 0) &&  (f08numeros[f08cont] % 3 !== 0)) 
+      {
+        f08nomes = f08nomes + "buzz, ";
+      }
+      if ((f08numeros[f08cont] % 3 !== 0) && (f08numeros[f08cont] % 5 !== 0)) 
+      {
+        f08nomes = f08nomes + "bug!, ";
+      }
+    }
+  return f08nomes;
 }
 
 // Desafio 9
