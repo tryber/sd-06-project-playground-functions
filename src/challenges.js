@@ -80,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let respostas = [];
   for (let indice = 0; indice < numeros.length; indice += 1) {
-    if (numeros[indice] % 3 === 0 && numeros[indice] % 5 === 0) {
+    if (numeros[indice] % (3 && 5) === 0) {
       respostas.push('fizzBuzz');
     } else if (numeros[indice] % 3 !== 0 && numeros[indice] % 5 !== 0) {
       respostas.push('bug!');
@@ -91,7 +91,7 @@ function fizzBuzz(numeros) {
     }
   } return respostas
 }
-// let n = [7,9]; console.log(fizzBuzz(n));
+let n = [7, 9, 15]; console.log(fizzBuzz(n));
 // Desafio 9
 function comparaEsubstituiVog(vogal, subVogais) {
   switch (vogal) {
@@ -113,7 +113,7 @@ function comparaEsubstituiVog(vogal, subVogais) {
     default:
       console.log('variavel não encontrada')
       break;
-  }return subVogais;
+  } return subVogais;
 }
 function encode(subVogais) {
   let vogal = ['a', 'e', 'i', 'o', 'u'];
@@ -125,7 +125,6 @@ function encode(subVogais) {
     }
   } return subVogais;
 }
-// 
 // console.log(encode('uoieaaaa'));
 // -- ------------
 function comparaEsubstituiNum(num, subNum) {
@@ -148,7 +147,7 @@ function comparaEsubstituiNum(num, subNum) {
     default:
       console.log('variavel não encontrada')
       break;
-  }return subNum
+  } return subNum
 }
 function decode(subNum) {
   let numList = ['1', '2', '3', '4', '5'];
@@ -160,12 +159,22 @@ function decode(subNum) {
     }
   } return subNum;
 }
-c// onsole.log(decode('11 22 33 44 55'));
+// console.log(decode('11 22 33 44 55'));
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(listaTec, name) {
+  listaTec.sort();
+  let novaLista = [];
+  //let tecnologias;
+  for (let indice = 0; indice < listaTec.length; indice += 1) {
+   let tecnologias = {
+      tech: listaTec[indice],
+      name: name
+    }
+    novaLista.push(tecnologias);
+    } return novaLista;
 }
-
+// let listaTeste = ['javascript', 'html'];
+// console.log(techList(listaTeste, 'paulo'));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
