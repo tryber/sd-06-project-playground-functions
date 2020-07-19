@@ -160,16 +160,20 @@ function techList(tecnologias, name) {
 function generatePhoneNumber(numeros) {
   // seu código aqui
   
-  let contagem = 0;
+  contagemMaior = false;
   for (let n = 0; n < numeros.length; n += 1) {
-    for (let j = 1; j < numeros.length; j += 1){
+    let contagem = 0;
+    for (let j = 0; j < numeros.length; j += 1){
       if (numeros[n] === numeros[j]) {
         contagem += 1
+      }
+      if (contagem >= 3) {
+        contagemMaior = true;
       }
     }
   }
   let condicaoMenor0Maior9 = false;
-  for (let k = 0; k < numeros.length; k+=1) {
+  for (let k = 0; k < numeros.length; k += 1) {
     if (numeros[k] < 0 || numeros[k] > 9) {
       condicaoMenor0Maior9 = true;
     }
@@ -179,9 +183,9 @@ function generatePhoneNumber(numeros) {
     return 'Array com tamanho incorreto.';
   } else if (condicaoMenor0Maior9 === true) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else if (contagem >= 2) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  } else {
+    } else if (contagemMaior === true){
+      return 'contagem';
+    } else {
     telefone += '(';
     telefone += numeros[0];
     telefone += numeros[1];
