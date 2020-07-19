@@ -152,10 +152,13 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(arrayNumber) {
   // seu código aqui
-  let numeroTelefoneCompleto = '';
   // Se algum dos numeros for >9 e <0 e repetiver 3+ "não é possível gerar um número de telefone com esses valores"
-  // else if tamanho do array !== 11 "Array com tamanho incorreto."
+  // Se tamanho do array !== 11 "Array com tamanho incorreto."
   // Se for td ok, retorna numeroTelefoneCompleto.
+  // Verificando se o tamanho é 11
+  if (arrayNumber.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
   //Verificando se repete
   let arrayVerificar = arrayNumber;
   let contador = 0;
@@ -173,12 +176,13 @@ function generatePhoneNumber(arrayNumber) {
   //Verificando numeros e condicao de repeticao
   for (let j = 0; j < arrayNumber.length; j += 1) {
     if (arrayNumber[j] < 0 || arrayNumber[j] > 9 || limiteVezesRepetidas === true) {
-      numeroTelefoneCompleto = 'não é possível gerar um número de telefone com esses valores';
-    } else if (arrayNumber.length !== 11) {
-      numeroTelefoneCompleto = 'Array com tamanho incorreto.'
-    } else {
-      numeroTelefoneCompleto = '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber[4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10];
+      return 'não é possível gerar um número de telefone com esses valores';
+    } 
     }
+  //Caso não retorne nenhuma das outras
+  let numeroTelefoneCompleto = '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber[4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10];
+  
+  return numeroTelefoneCompleto;
   }
   //Retornando numero
   return numeroTelefoneCompleto;
