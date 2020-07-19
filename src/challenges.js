@@ -126,7 +126,6 @@ function encode(string) {
     else {
       encodedString += string[index];
     }
-    return encodedString;
   }
 }
 
@@ -151,7 +150,6 @@ function decode(string) {
     else {
       decodedString += string[index];
     }
-    return decodedString;
   }
 }
 
