@@ -26,8 +26,8 @@ function concatName(param1) {
   let resultado = param1.split(" ");
   let primeiraPosicao = resultado;
   let ultimaPosicao = resultado[resultado.length - 1];
-  return ultimaPosicao + " , " + primeiraPosicao[0];
-  //return `${ultimaPosicao}, ${primeiraPosicao[0]}`
+  return `${ultimaPosicao}, ${primeiraPosicao[0]}`
+  //return ultimaPosicao + " , " + primeiraPosicao[0];
 }
 console.log(concatName("Aluno trybe junho 2020 turma 06"));
 
