@@ -25,7 +25,7 @@ function splitSentence(string) {
     // seu código aqui
 
 
-    return string.split('');
+    return string.split(" ");
 
 
 
