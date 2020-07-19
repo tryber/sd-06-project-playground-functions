@@ -53,15 +53,13 @@ function highestCount(array) {
 function catAndMouse(rato, gato1, gato2) {
   let distanciaGato1 = rato - gato1;
   let distanciaGato2 = rato - gato2;
-  let result = null;
   if (distanciaGato1 > distanciaGato2) {
-    result = 'gato1';
+    return 'gato1';
   } else if (distanciaGato1 === distanciaGato2) {
-    result = 'os gatos trombam e o rato foge';
+    return'os gatos trombam e o rato foge';
   } else {
-    result = 'gato2';
+    return 'gato2';
   }
-  return result;
 }
 
 // Desafio 8
