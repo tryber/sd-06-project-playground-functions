@@ -135,8 +135,29 @@ function fizzBuzz(ArrNumeros) {
     return (ArrayDeString)
 }
 // Desafio 9
-function encode() {
-    // seu código aqui
+function encode(palavra) {
+    for (let index = 0; index < palavra.length; index++) {
+
+        switch (palavra[index]) {
+            case "a":
+                palavra = palavra.replace(palavra[index], 1);
+                break;
+            case "e":
+                palavra = palavra.replace(palavra[index], 2);
+                break;
+            case "i":
+                palavra = palavra.replace(palavra[index], 3);
+                break;
+            case "o":
+                palavra = palavra.replace(palavra[index], 4);
+                break;
+            case "u":
+                palavra = palavra.replace(palavra[index], 5);
+                break;
+        }
+    }
+
+    return palavra;
 }
 
 function decode() {
