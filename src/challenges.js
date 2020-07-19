@@ -85,7 +85,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let phrase=string.split('');
+  let phrase = string.split('');
   for (let i = 0; i < phrase.length; i +=1) {
     if (phrase[i] === 'a') {
       phrase[i] = 1;
@@ -99,7 +99,7 @@ function encode(string) {
       phrase[i] = 5
     }
   }
-  phrase=phrase.join('');
+  phrase = phrase.join('');
 
   return phrase;
 }
