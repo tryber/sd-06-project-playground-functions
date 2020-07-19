@@ -197,11 +197,11 @@ function generatePhoneNumber(phoneNumber) {
       if (phoneNumber[number] === phoneNumber[cont]) {
         repCounter += 1;
         // console.log(repCounter + " rep")
-      } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9 || repCounter >= 3) {
-        phoneError = "não é possível gerar um número de telefone com esses valores";
       } else if (phoneNumber.length != 11) {
         phoneError = "Array com tamanho incorreto.";
-      } else {
+      } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9 || repCounter >= 3) {
+        phoneError = "não é possível gerar um número de telefone com esses valores";
+      }  else {
         phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
       }
     }
@@ -213,11 +213,12 @@ function generatePhoneNumber(phoneNumber) {
   }
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, 7, 0, 1, 10]))
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  //if (lineA < (lineB + lineC && lineA >  ))
 }
 
 // Desafio 13
