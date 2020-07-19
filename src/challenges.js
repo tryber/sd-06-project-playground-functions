@@ -57,18 +57,17 @@ function fizzBuzz(numeros) {
   let resposta = '';
   for (let i = 0; i <= numeros.length; i += 1) {
     if (i % 3 === 0) {
-      resposta = resposta + resposta['fizz'];
+      resposta = resposta + "fizz";
     } else if (i % 5 === 0) {
-      resposta = resposta + resposta['buzz'];
+      resposta = resposta + "buzz";
     } else if (i % 3 === 0 && i % 5 === 0) {
-      resposta = resposta + resposta['fizzBuzz'];
+      resposta = resposta + "fizzBuzz";
     } else {
-      resposta = resposta + resposta['bug!'];
+      resposta = resposta + "bug!";
     }
   }
   return resposta;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
