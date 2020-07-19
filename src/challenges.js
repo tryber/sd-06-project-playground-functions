@@ -185,11 +185,8 @@ function techList(arrayTechnology,name) {
 techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella");
 
 // Desafio 11
-function generatePhoneNumber(arrayNumber) {
-  let generatedPhone = [];
-  if (arrayNumber.length() >= 11) {
-    return "Array com tamanho incorreto";
-  }
+function generatePhoneNumber() {
+  // seu código aqui
 }
 
 // Desafio 12
