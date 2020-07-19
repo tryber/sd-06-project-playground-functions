@@ -178,11 +178,12 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(drinks) {
   let num = drinks.match(/\d+/g).map(Number);
   let cont = 0;
+  let radix;
   for (let index in num) {
-    if (parseInt(num[index]) < 1 || parseInt(num[index]) > 9) {
+    if (parseInt(num[index], radix) < 1 || parseInt(num[index], radix) > 9) {
       return 'número inválido!'
     }
-    cont += parseInt(num[index]);
+    cont += parseInt(num[index], radix);
   }
   if (cont === 1) {
     cont += ' copo de água';
