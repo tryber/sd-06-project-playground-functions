@@ -115,7 +115,7 @@ fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode(string) {
-  
+
 }
 
 function decode(numbers) {
@@ -125,16 +125,17 @@ function decode(numbers) {
 // Desafio 10
 function techList(arrayTechnology,name) {
   let technologyList = arrayTechnology.sort();
-    for (let index = 0; index < technologyList.length; index += 1) {
-      let object = {
-      tech: technologyList[index],
-      nome: name,
-      };
-    }
-  return object;
+  let techInfo = []
+
+  for (let index in technologyList) {
+    let technologyItem = technologyList[index];
+    techInfo.push({technologyItem, name});
+  }
+
+  return techInfo;
 }
 
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella");
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella"));
 
 // Desafio 11
 function generatePhoneNumber() {
