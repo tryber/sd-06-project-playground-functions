@@ -57,18 +57,17 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-
-  if (cat1 <= mouse && cat2 <= mouse || cat >= mouse && cat2 >= mouse){
+  if (cat1 === cat2 ){
     return "os gatos trombam e o rato foge";
   } else if ( cat1 === mouse || cat1 <= mouse){
-    return "Gato 01 ganha";
+    return cat1 + "Gato 01 ganha";
   } else if ( cat2 === mouse || cat2 <= mouse){
-    return "Gato 02 ganha";
+    return cat2 + "Gato 02 ganha";
   } else{
     return "POWWW";
   }
 }
-console.log(catAndMouse(5,2,5))
+console.log(catAndMouse(5,3,2))
 
 
 // Desafio 8
