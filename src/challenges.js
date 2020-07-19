@@ -187,8 +187,15 @@ function decode(messageToBeDecoded) {
 decode("33 th2re!");
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(nameArray, name) {
+  let sortedTechList = nameArray.sort();
+  let outputObjectArray = [];
+  
+  for (index in sortedTechList){
+      outputObjectArray.push({"tech": sortedTechList[index], "name": name});
+  
+  }
+  return outputObjectArray;
 }
 
 // Desafio 11
