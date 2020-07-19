@@ -88,35 +88,25 @@ function encDec(phrase) {
   for (let index = 0; index < phrase.length; index += 1) {
     switch (phrase[index]) {
       case 'a':
-        newPhrase += '1';
-        break;
+        newPhrase += '1'; break;
       case 'e':
-        newPhrase += '2';
-        break;
+        newPhrase += '2'; break;
       case 'i':
-        newPhrase += '3';
-        break;
+        newPhrase += '3'; break;
       case 'o':
-        newPhrase += '4';
-        break;
+        newPhrase += '4'; break;
       case 'u':
-        newPhrase += '5';
-        break;
+        newPhrase += '5'; break;
       case '1':
-        newPhrase += 'a';
-        break;
+        newPhrase += 'a'; break;
       case '2':
-        newPhrase += 'e';
-        break;
+        newPhrase += 'e'; break;
       case '3':
-        newPhrase += 'i';
-        break;
+        newPhrase += 'i'; break;
       case '4':
-        newPhrase += 'o';
-        break;
+        newPhrase += 'o'; break;
       case '5':
-        newPhrase += 'u';
-        break;
+        newPhrase += 'u'; break;
       default:
         newPhrase += phrase[index];
     }
