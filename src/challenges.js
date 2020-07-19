@@ -31,9 +31,21 @@ function concatName(param1) {
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  if (wins === 3 ){
+    let vitoria = 3;
+    vitoria = 3;
+    return "O time venceu ganhou: " + vitoria;
+  } else if ( ties === 1 ){
+    let empate = 1;
+    empate = 1;
+    return "O time empatou ganhou: " + empate;
+  }
+  else{
+  console.log("O time perdeu.");
+  }
 }
+console.log(footballPoints(3,0));
 
 // Desafio 6
 function highestCount() {
