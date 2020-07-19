@@ -82,43 +82,44 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(vogais) {
-  let arrayVogais = [];
+  let arrayVogais = '';
   for (let i = 0; i < vogais.length; i += 1) {
-    if (vogais[i] = a) {
-      arrayVogais[i] += 1;
-    } else if (vogais[i] = e) {
-      arrayVogais[i] += 2;
-    } else if (vogais[i] = i) {
-      arrayVogais[i] += 3;
-    } else if (vogais[i] = o) {
-      arrayVogais[i] += 4;
-    } else if (vogais[i] = u) {
-      arrayVogais[i] += 5;
-    }else {
-      arrayVogais[i] += arrayVogais[i];
+    if (vogais = 'a') {
+      arrayVogais += '1';
+    } else if (vogais = 'e') {
+      arrayVogais += '2';
+    } else if (vogais = 'i') {
+      arrayVogais += '3';
+    } else if (vogais = 'o') {
+      arrayVogais += '4';
+    } else if (vogais = 'u') {
+      arrayVogais += '5';
+    } else {
+      arrayVogais += arrayVogais;
     }
   }
-  return arrayVogais;
 }
 function decode(numeros) {
-  let arrayNumeros = [];
+  let arrayNumeros = '';
   for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] = 1) {
-      arrayNumeros[i] += a;
-    } else if (numeros[i] = 2) {
-      arrayNumeros[i] += e;
-    } else if (numeros[i] = 3) {
-      arrayNumeros[i] += 1;
-    } else if (numeros[i] = 4) {
-      arrayNumeros[i] += o;
-    } else if (numeros[i] = 5) {
-      arrayNumeros[i] += u;
+    if (numeros = 1) {
+      arrayNumeros += 'a';
+    } else if (numeros = '2') {
+      arrayNumeros += 'e';
+    } else if (numeros = '3') {
+      arrayNumeros += '1';
+    } else if (numeros = '4') {
+      arrayNumeros += 'o';
+    } else if (numeros = '5') {
+      arrayNumeros += 'u';
     }else {
-      arrayNumeros[i] += arrayNumeros[i];
+      arrayNumeros += arrayNumeros;
     }
   }
-  return arrayNumeros;
+return arrayVogais + arrayNumeros;
 }
+
+
 
 // Desafio 10
 function techList() {
