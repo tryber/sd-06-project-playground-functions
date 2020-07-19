@@ -201,12 +201,21 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-// console.log(triangleCheck(10, 17, 8));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  const regex = /\d+/g;
+  const numbers = string.match(regex);
+  let water = 0;
+  for (num in numbers) {
+    water += parseInt(numbers[num]);
+  }
+  if (water === 1) {
+    return water + " copo de água"
+  }
+  return water + " copos de água";
 }
+
+// console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 module.exports = {
