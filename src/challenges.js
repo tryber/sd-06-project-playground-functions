@@ -58,10 +58,10 @@ function highestCount(numeros) {
 function catAndMouse(mouse, cat1, cat2){
   let result = '';
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    result = 'cat1';
+    result = "cat1";
   }
   else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
-    result = 'cat2';
+    result = "cat2";
   }
   else {
     result = 'os gatos trombam e o rato foge';
