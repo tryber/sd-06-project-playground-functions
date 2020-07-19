@@ -202,7 +202,7 @@ function generatePhoneNumber(phoneNumber) {
       } else if (phoneNumber.length != 11) {
         phoneError = "Array com tamanho incorreto.";
       } else {
-        phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + "-" + phoneNumber[6] + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
+        phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
       }
     }
   }
@@ -213,7 +213,7 @@ function generatePhoneNumber(phoneNumber) {
   }
 }
 
-console.log(generatePhoneNumber([3, 1, 9, 8, 6, 5, 4, 0, 0, 1, 8]))
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
