@@ -225,6 +225,7 @@ function triangleCheck(lineA, lineB, lineC) {
       }
     }
   }
+  return triangulo;
 }
 
 // Desafio 13
