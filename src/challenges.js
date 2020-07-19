@@ -98,19 +98,18 @@ function highestCount(numbersDesafio6) {
 // sendo aquele que estará mais perto
 // Caso os gatos estejam na mesma distância do rato
 // a função deverá retornar a string "os gatos trombam e o rato foge"
-function catAndMouse(cat1, cat2, mouse) {
-  let killMouse = ('');
+function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = cat1 - mouse;
   let positionCat2 = cat2 - mouse;
   if (positionCat1 - positionCat2 === 0) {
-    return killMouse = ('os gatos trombam e o rato foge');
+    return 'os gatos trombam e o rato foge';
   } else if (positionCat1 < positionCat2 - mouse) {
-    return killMouse = ('cat1');
-  } return killMouse = ('cat2');
+    return 'cat1';
+  } return 'cat2';
 }
 
 // console.log('<---- Desafio 6 ---->');
-console.log(catAndMouse(30, 3, 0));
+console.log(catAndMouse());
 
 
 // Desafio 8
