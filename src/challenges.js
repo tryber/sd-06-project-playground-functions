@@ -152,6 +152,9 @@ function techList(techs, name) {
   let techSorted = techs.sort();
   let list = [];
   for(i=0; i < techs.length; i++){
+    if(techs == ""){
+      return "Vazio!";
+    }
     list.push(
       {
         tech: techSorted[i],
