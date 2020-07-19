@@ -144,11 +144,11 @@ function decode(string) {
 }
 // Desafio 10
 function techList(techArray, name) {
+  let sortedTechArray = techArray.sort();
+  let newTechArray = [];
   if (techArray === []) {
     return "Vazio!";
   }
-  let sortedTechArray = techArray.sort();
-  let newTechArray = [];
   for (i = 0; i < sortedTechArray.length; i += 1) {
     let tech = sortedTechArray[i];
     newTechArray.push ({tech, name,});
