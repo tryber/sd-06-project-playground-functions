@@ -163,8 +163,61 @@ function decode(decString = "")
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(f10array = [], name = "") 
+{
+    f10arrayNew = f10array.sort()
+
+    let obj01 = 
+    {
+        tech: f10arrayNew[0],
+        nome: name
+    }
+    let obj02 = 
+    {
+        tech: f10arrayNew[1],
+        nome: name
+    }
+    let obj03 = 
+    {
+        tech: f10arrayNew[2],
+        nome: name
+    }
+    let obj04 = 
+    {
+        tech: f10arrayNew[3],
+        nome: name
+    }
+    let obj05 = 
+    {
+        tech: f10arrayNew[4],
+        nome: name
+    }
+    let obj06 = 
+    {
+        tech: f10arrayNew[5],
+        nome: name
+    }
+    let obj07 = 
+    {
+        tech: f10arrayNew[6],
+        nome: name
+    }
+    let obj08 = 
+    {
+        tech: f10arrayNew[7],
+        nome: name
+    }
+    let obj09 = 
+    {
+        tech: f10arrayNew[8],
+        nome: name
+    }
+    let obj10 = 
+    {
+        tech: f10arrayNew[9],
+        nome: name
+    }
+return obj01 + name + obj02 + name + obj03 + name + obj014+ name + obj05 + name + obj06 + name + obj07 + name;
 }
 
 // Desafio 11
