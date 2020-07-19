@@ -251,13 +251,25 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-//console.log(triangleCheck(10, 14, 8));
-
 // Desafio
-function hydrate() {
-  // seu código aqui
+function hydrate(stringInput) {
+  let stringCopy = stringInput;
+  let numberInString = /\d+/g;
+  let matches = stringCopy.match(numberInString);
+  let numberOfGlasses = 0;
+
+  for (let index in matches) {
+    numberOfGlasses += Number(matches[index]);
+  }
+
+  if (numberOfGlasses === 1) {
+    return numberOfGlasses + ' copo de água';
+  } 
+
+  return numberOfGlasses + ' copos de água'; 
 }
 
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   calcArea,
