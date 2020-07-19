@@ -190,7 +190,7 @@ function generatePhoneNumber(number) {
     switch (i) {
       case '0': numberResponse += '(' + number[i];
         break;
-      case '1': numberResponse += number[i] + ')';
+      case '1': numberResponse += number[i] + ') ';
         break;
       case '2': numberResponse += number[i];
         break;
@@ -216,7 +216,7 @@ function generatePhoneNumber(number) {
   }
   return numberResponse;
 }
-
+console.log(generatePhoneNumber([1, 1, 3, 4, 5, 6, 7, 8, 9, 0, 1, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
