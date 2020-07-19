@@ -94,7 +94,28 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-
+  let encodedString = "";
+  for (index in string) {
+    if (string[index] === "a") {
+      encodedString += "1";
+    }
+    else if (string[index] === "e") {
+      encodedString += "2";
+    }
+    else if (string[index] === "i") {
+      encodedString += "3";
+    }
+    else if (string[index] === "o") {
+      encodedString += "4";
+    }
+    else if (string[index] === "u") {
+      encodedString += "5";
+    }
+    else {
+      encodedString += string[index];
+    }
+    return encodedString;
+  }
 }
 
 function decode(string) {
