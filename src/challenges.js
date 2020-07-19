@@ -82,11 +82,36 @@ function footballPoints(wins, ties) {
 // TESTE
 // console.log(footballPoints(12, 4));
 
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+// Repetição do maior número
+// Escreva uma função chamada highestCount que, ao receber uma array de números,
+// retorne a quantidade de vezes que o maior deles se repete.
+
+// Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7],
+// a função deverá retornar 2, que é a quantidade de vezes que o número 9
+// (maior número do array) se repete.
+
+function highestCount(numbersArray) {
+  let highestNumber = 0;
+  let counter = 0;
+  let index;
+
+  for (index in numbersArray) {
+    if (numbersArray[index] > highestNumber) {
+      highestNumber = numbersArray [index];
+    }
+  }
+  for (index in numbersArray) {
+    if (numbersArray[index] === highestNumber) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
+
+// let testArray = [9, 10, 2, 3, 9, 5, 7, 9];
+// console.log(highestCount(testArray));
 
 // Desafio 7
 
@@ -259,17 +284,27 @@ function decode(numbersString) {
 // Estes objetos devem ser inseridos em uma nova lista em ordem crescente
 // a partir do campo tech no objeto.
 
-// A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
+// A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos
+// com o formato acima.
 
+function compare(a,b) {
+  if (a.tech < b.tech){
+    return -1;
+  }
+  if (a.tech > b.tech) {
+    return 1;
+  }
+  return 0;
+}
 
 function techList(techName, name) {
   let index;
-  let myobject = {};
+  let myObject = {};
   let myList = [];
 
   if (techName.length !== 0) {
     for (index in techName) {
-      myList[index] = myObject = {tech: techName[index], name: name,};
+      myList[index] = myObject = { tech: techName[index], name: name, };
     }
     return myList.sort(compare);
   } else {
@@ -277,18 +312,9 @@ function techList(techName, name) {
   }
 }
 
-function compare(a,b) {
-  if (a.tech < b.tech)
-     return -1;
-  if (a.tech > b.tech)
-    return 1;
-  return 0;
-}
-
 // let testArray = [];
-let testArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-console.log(techList(testArray, 'Zeca'));
-
+// let testArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// console.log(techList(testArray, 'Zeca'));
 
 // Desafio 11
 function generatePhoneNumber() {
