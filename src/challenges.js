@@ -36,7 +36,22 @@ function footballPoints(wins, ties) {
 }
 
 function highestCount(array) {
-  // seu código aqui
+  let repete = 0;
+  let repeteMais = 0;
+  
+  for(let i = 0; i <= array.length - 1; i += 1) {
+      let a = array[i]
+      for(let j = 0; j <= array.length -1; j += 1){
+          if (a == array[j]) {
+              repete = repete + 1;
+          }
+      }
+      if (repete > repeteMais) {
+          repeteMais = repete;
+      }
+      repete = 0;
+}
+  return repeteMais;
 }
 
 // Desafio 7
@@ -103,12 +118,6 @@ function techList(arrayTec, name) {
   }  
   return newArray;
 }
-
-
-
-
-
-
 
 // Desafio 11
 function generatePhoneNumber() {
