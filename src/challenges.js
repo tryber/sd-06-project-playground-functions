@@ -55,7 +55,6 @@ let  = 0;
 let  = 0;
 let trombada = "os gatos trombam e o rato foge";
 if (gato1 > rato) {
-  = 
 }
 }
 
