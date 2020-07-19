@@ -93,7 +93,7 @@ function catAndMouse(mouse, cat1, cat2) {
     } else {
 
 
-        return "os gatos trombam o rato foge";
+        return "os gatos trombam e o rato foge";
     }
 
 
