@@ -114,8 +114,8 @@ function encode(string) {
     else {
       encodedString += string[index];
     }
-    return encodedString;
   }
+  return encodedString;
 }
 
 function decode(string) {
