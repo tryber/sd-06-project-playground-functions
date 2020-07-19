@@ -46,24 +46,30 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {//cat1, cat2) {
-  //let numeroCat1 = cat1[0];
-  //let numeroCat2 = cat2[0];
-  // seu código aqui
+function catAndMouse() {mouse, cat1, cat2) {
+  let numeroCat1 = mouse - cat1;
+  let numeroCat2 = mouse - cat2;
+  if (numeroCat1 < numeroCat2) {
+    return "cat2";
+  } else if (numeroCat1 > numeroCat2) {
+    return "cat1";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
 function fizzBuzz(numeros) {
-  let resposta = '';
-  for (let i = 0; i <= numeros.length; i += 1) {
-    if (i % 3 === 0) {
-      resposta = resposta + "fizz";
-    } else if (i % 5 === 0) {
-      resposta = resposta + "buzz";
-    } else if (i % 3 === 0 && i % 5 === 0) {
-      resposta = resposta + "fizzBuzz";
+  let resposta = [];
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (numeros[i] % 3 === 0) {
+      resposta[i] = "fizz";
+    } else if (numeros[i] % 5 === 0) {
+      resposta[i] = "buzz";
+    } else if (numeros[i] % 3 === 0 && i % 5 === 0) {
+      resposta[i] = "fizzBuzz";
     } else {
-      resposta = resposta + "bug!";
+      resposta[i] = "bug!";
     }
   }
   return resposta;
