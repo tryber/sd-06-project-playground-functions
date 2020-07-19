@@ -157,8 +157,48 @@ function techList(tecnologias, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numeros) {
   // seu código aqui
+  
+  let contagem = 0;
+  for (let n = 0; n < numeros.length; n += 1) {
+    for (let j = 1; n < numeros.length - 1; n += 1){
+      if (numeros[n] === numeros[j]) {
+        contagem += 1
+      }
+    }
+  }
+  let condicaoMenor0Maior9 = false;
+  for (let k = 0; k < numeros.length; k+=1) {
+    if (numeros[k] < 0 || numeros[k] > 9) {
+      condicaoMenor0Maior9 = true;
+    }
+  }
+  let telefone = '';
+  if (numeros.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } else if (condicaoMenor0Maior9 === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else if (contagem >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    telefone += '(';
+    telefone += numeros[0];
+    telefone += numeros[1];
+    telefone += ')';
+    telefone += ' ';
+    telefone += numeros[2];
+    telefone += numeros[3];
+    telefone += numeros[4];
+    telefone += numeros[5];
+    telefone += numeros[6];
+    telefone += '-';
+    telefone += numeros[7];
+    telefone += numeros[8];
+    telefone += numeros[9];
+    telefone += numeros[10];
+    return telefone
+  }
 }
 
 // Desafio 12
