@@ -57,13 +57,13 @@ function fizzBuzz(numeros) {
   let resposta = '';
   for (let i = 0; i <= numeros.length; i += 1) {
     if (i % 3 === 0) {
-      resposta = 'fizz' += 1;
+      resposta = resposta + 'fizz';
     } else if (i % 5 === 0) {
-      resposta = 'buzz' += 1;
+      resposta = resposta + 'buzz';
     } else if (i % 3 === 0 && i % 5 === 0) {
-      resposta = 'fizzBuzz' += 1;
+      resposta = resposta + 'fizzBuzz';
     } else {
-      resposta = 'bug!' += 1;
+      resposta = resposta + 'bug!';
     }
   }
   return resposta;
