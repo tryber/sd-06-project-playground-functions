@@ -18,12 +18,13 @@ function calcArea(b,h) {
 }
 
 // Desafio 3
+let b = "go trybe";
+let a = /(:\s|,\s)/;
 function splitSentence() {
-  /*let splitText = "Go Trybe"
-  let arrayText = splitText.split(" ")
-  return arrayText[0] + "," + arrayText[1]*/
-  // seu código aqui
-  splitSentence('go Trybe')).toEqual(['go', ',', 'Trybe']
+  
+  let strArray = b.split(a);
+  return strArray;
+  console.log(strArray)
 }
 
 // Desafio 4
