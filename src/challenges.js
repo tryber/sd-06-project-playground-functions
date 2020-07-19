@@ -83,11 +83,24 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(entrada) {
+  let codigo = entrada.replace(/a|á|ã|â/gi, 1)
+  .replace(/e|ê|é/gi, 2)
+  .replace(/i|í/gi, 3)
+  .replace(/o|õ|ó|ô/gi, 4)
+  .replace(/u|ú/gi, 5);
+
+  return codigo;
 }
-function decode() {
-  // seu código aqui
+
+function decode(entrada) {
+  let codigo = entrada.replace(/1/gi, "a")
+      .replace(/2/gi, "e")
+      .replace(/3/gi, "i")
+      .replace(/4/gi, "o")
+      .replace(/5/gi, "u");
+
+  return codigo;
 }
 
 // Desafio 10
