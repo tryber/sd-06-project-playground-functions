@@ -191,12 +191,17 @@ function techList(nameArray, name) {
   let sortedTechList = nameArray.sort();
   let outputObjectArray = [];
   
+  if (nameArray.length == 0){
+    return "Vazio!"
+  }
   for (index in sortedTechList){
       outputObjectArray.push({"tech": sortedTechList[index], "name": name});
   
   }
   return outputObjectArray;
 }
+
+techList([], "lucas");
 
 // Desafio 11
 function generatePhoneNumber() {
