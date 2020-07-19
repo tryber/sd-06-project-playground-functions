@@ -171,6 +171,7 @@ function generatePhoneNumber(arrayNumber) {
         return "não é possível gerar um número de telefone com esses valores";
       } phoneNumber = `(${arrayNumber[0]}${arrayNumber[1]})${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}-${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`;
     }
+  }
   return phoneNumber;
 }
 
