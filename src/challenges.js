@@ -181,10 +181,8 @@ function generatePhoneNumber(numeros) {
   let telefone = '';
   if (numeros.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else if (condicaoMenor0Maior9 === true) {
+  } else if (condicaoMenor0Maior9 === true || contagemMaior === true) {
     return 'não é possível gerar um número de telefone com esses valores';
-    } else if (contagemMaior === true){
-      return 'contagem';
     } else {
     telefone += '(';
     telefone += numeros[0];
