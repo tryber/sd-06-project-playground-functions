@@ -189,29 +189,32 @@ function generatePhoneNumber(phoneNumber) {
   let repCounter;
   let phoneError;
   let phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + " " + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
-
-  for (number in phoneNumber) {
-    repCounter = 0;
-    if (phoneNumber.length != 11) {
-      return phoneError = "Array com tamanho incorreto.";
-    } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9) {
-      return phoneError = "não é possível gerar um número de telefone com esses valores";
-    } else {
-      for (cont = 0; cont < phoneNumber.length; cont += 1) {
-        if (phoneNumber[number] === phoneNumber[cont]) {
-          repCounter += 1;
-          console.log(repCounter)
-          if (repCounter === 3) {
-            return phoneError = "não é possível gerar um número de telefone com esses valores";
+  if (phoneNumber.length != 11) {
+    return phoneError = "Array com tamanho incorreto.";
+  } else {
+    for (number in phoneNumber) {
+      repCounter = 0;
+      if (phoneNumber.length != 11) {
+        return phoneError = "Array com tamanho incorreto.";
+      } else if (phoneNumber[number] < 0 || phoneNumber[number] > 9) {
+        return phoneError = "não é possível gerar um número de telefone com esses valores";
+      } else {
+        for (cont = 0; cont < phoneNumber.length; cont += 1) {
+          if (phoneNumber[number] === phoneNumber[cont]) {
+            repCounter += 1;
+            console.log(repCounter)
+            if (repCounter === 3) {
+              return phoneError = "não é possível gerar um número de telefone com esses valores";
+            }
           }
         }
       }
     }
+    return phoneSintaxe;
   }
-  return phoneSintaxe;
 }
 
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]))
+console.log(generatePhoneNumber([]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
