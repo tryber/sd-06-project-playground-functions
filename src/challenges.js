@@ -126,14 +126,15 @@ function fizzBuzz(numberD8) {
       resultDesafio8.push('fizz');
     } else if (numberD8[i] % 5 === 0) {
       resultDesafio8.push('buzz');
-    }
-    resultDesafio8.push('bug!');
+    } else {
+      resultDesafio8.push('bug!');
   }
+}
   return resultDesafio8;
 }
 
 // console.log('<---- Desafio 8 ---->');
-// console.log(fizzBuzz());
+// console.log(fizzBuzz(2, 15, 7, 9, 45));
 
 // Desafio 9
 // Crie duas funções: a primeira deverá se chamar encode e, ao receber uma
@@ -163,8 +164,20 @@ function decode(stringDecode) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+// Crie uma função que recebe um array de nomes de tecnologias que você quer
+// aprender. Essa função deve receber também um segundo parâmetro chamado name
+// com um nome. Com a seguinte estrutura
+// {
+//   tech: "NomeTech",
+//   nome: name
+// }
+// Estes objetos devem ser inseridos em uma nova lista em ordem crescente a
+// partir do campo tech no objeto
+// Para cada tecnologia no array, crie um objeto
+function techList(objectListD10) {
+  let objectListD10 = {
+
+  }
 }
 
 // Desafio 11
