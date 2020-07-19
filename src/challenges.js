@@ -49,9 +49,9 @@ function divBy3or5(num) {
     return 3
   } else if (num % 5 === 0) {
     return 5
-  } else {
-    return false
   }
+
+  return false
 }
 
 function fizzBuzz(arr) {
@@ -68,12 +68,14 @@ function fizzBuzz(arr) {
         answer.push('buzz');
         break;
       default:
-        answer.push('bug');
+        answer.push('bug!');
         break;
     }
   }
   return answer
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode(str) {
@@ -160,24 +162,32 @@ Para isso precisamos checar como string
 function addCounter(element, counter) {
   if (`${element}` in counter) {
     counter[element] += 1;
-    return
   }
 
   counter[element] = 1;
-  return
 }
 
-function buildNumber(tel, index) {
+function buildNumber(tel, array, index) {
   switch (index) {
     case 1:
-      tel += `${arr[i]}) `;
+      tel += `${array[index]}) `;
       break;
     case 6:
-      tel += `${arr[i]}-`;
+      tel += `${array[index]}-`;
       break;
     default:
-      tel += String(arr[i]);
+      tel += String(array[index]);
       break;
+  }
+}
+
+function badNumbers(array, index, counter = {}) {
+  if (array[index] < 0 || array[index] > 9) {
+    return true
+  } else if ((counter[array[index]] >= 3)) {
+    return true
+  } else {
+    return false
   }
 }
 
@@ -191,18 +201,19 @@ function generatePhoneNumber(arr) {
   }
 
   let counter = {};
+
   for (let i = 0; i < 11; i += 1) {
-    if (arr[i] < 0 || arr[i] > 9) {
+    if (badNumbers(arr, i)) {
       return erroNums
     }
 
     addCounter(arr[i], counter)
 
-    if (counter[arr[i]] >= 3) {
+    if (badNumbers(arr, i, counter) {
       return erroNums
     }
 
-    buildNumber(tel, i);
+    buildNumber(tel, arr, i);
   }
   return tel
 }
