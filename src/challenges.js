@@ -1,4 +1,4 @@
-// Desafio 1 ## DONE!!! ##
+// Desafio 1
 function compareTrue(boolean1, boolean2) {
   if (boolean1 === true && boolean2 === true) {
     return true;
@@ -6,12 +6,12 @@ function compareTrue(boolean1, boolean2) {
   return false;
 }
 
-// Desafio 2 ## DONE!!! ##
+// Desafio 2
 function calcArea(base, height) {
   return (base*height)/2
 }
 
-// Desafio 3 ## DONE!!! ##
+// Desafio 3
 function splitSentence(phrase) {
   let sentenceArr = [];
   let phraseSplited = "";
@@ -30,12 +30,12 @@ function splitSentence(phrase) {
   return (sentenceArr);
 }
 
-// Desafio 4 ## DONE!!! ##
+// Desafio 4
 function concatName(arrayStrings) {
-  return arrayStrings[arrayStrings.length-1] + ", " +arrayStrings[0];
+  return arrayStrings[arrayStrings.length-1] + ", " + arrayStrings[0];
 }
 
-// Desafio 5 ## DONE!!! ##
+// Desafio 5
 function footballPoints(wins, ties) {
   return 3*wins + ties;
 }
@@ -60,9 +60,7 @@ function highestCount(arrNumbers) {
   return countNumber;
 }
 
-console.log(highestCount([9, 19, 29, 39]));
-
-// Desafio 7 ## DONE!!! ##
+// Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let d1 = mouse - cat1;
   let d2 = mouse - cat2;
@@ -84,7 +82,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8 ## DONE!!! ##
+// Desafio 8
 function fizzBuzz(arrayNumbers) {
   let fizzBuzzArr = arrayNumbers;
 
@@ -104,7 +102,7 @@ function fizzBuzz(arrayNumbers) {
   return fizzBuzzArr;
 }
 
-// Desafio 9 ## DONE!!! ##
+// Desafio 9
 function encode(inputStringToEncode) {
   let changes = {
     a: 1,
@@ -244,9 +242,17 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > Math.abs(lineB - lineC) && lineA < lineB + lineC) {
+    if(lineB > Math.abs(lineA - lineC) && lineB < lineA + lineC) {
+      if (lineC > Math.abs(lineA - lineB) && lineC < lineA + lineB) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
+
 
 // Desafio 13
 function hydrate() {
