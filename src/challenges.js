@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2){
   }
   return result;
 }
-console.log(catAndMouse(10, 12, 12));
+//console.log(catAndMouse(10, 12, 12));
 // Desafio 8
 function fizzBuzz(){
 //  let array = [];
