@@ -171,7 +171,7 @@ function techList(listaTec, name) {
     for (let indice = 0; indice < listaTec.length; indice += 1) {
       let tecnologias = {
         tech: listaTec[indice],
-        nome: name,
+        name: name,
       }
       novaLista.push(tecnologias);
     }
