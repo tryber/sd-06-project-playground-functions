@@ -44,7 +44,9 @@ function concatName2(listaStrings){
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
+  return wins*3+ties;
+
   // seu código aqui
 }
 
