@@ -243,7 +243,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate([bebidas]) {
+function hydrate(bebidas) {
   // seu código aqui
   let numStr = [];
   let qtd;
