@@ -230,7 +230,9 @@ function hydrate(frase) {
       }
     } if (count > 9) {
       return 9 + ' copos de água'
-    } if ( count < 10 && count > 0) {
+    } if (count === 1) {
+      return 1 + ' copo de água'
+    } if ( count < 10 && count > 1) {
       return count + ' copos de água'
     }
 }
