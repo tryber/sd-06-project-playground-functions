@@ -27,7 +27,7 @@ function footballPoints(win, ties) {
   for (let i = 1; i <= win; i +=1) {
     points += 3;
   }
-  for (j = 1; j <= ties; j +=1) {
+  for (let j = 1; j <= ties; j += 1) {
     points +=1;
   }
   return points;
@@ -35,16 +35,16 @@ function footballPoints(win, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let greater =0;
+  let greater = 0;
   let count = 0;
-  for (let i = 0; i < array.length; i +=1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] > greater) {
       greater = array[i];
     }
   }
-  for (let j = 0; j < array.length; j +=1) {
+  for (let j = 0; j < array.length; j += 1) {
     if (array[j] === greater) {
-      count +=1;
+      count += 1;
     }
   }
   return count;
@@ -66,14 +66,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let phrase = []
-  for (let i = 0; i < array.length; i +=1) {
-    if (array[i] % 3 === 0 && array[i] % 5 ==0) {
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] % 3 === 0 && array[i] % 5 == 0) {
       phrase.push('fizzBuzz');
     }
-    else if (array[i] % 3 ===0) {
+    else if (array[i] % 3 === 0) {
       phrase.push('fizz');
     }
-    else if (array[i] % 5 ===0) {
+    else if (array[i] % 5 === 0) {
       phrase.push('buzz');
     }
     else {
@@ -86,7 +86,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let phrase = string.split('');
-  for (let i = 0; i < phrase.length; i +=1) {
+  for (let i = 0; i < phrase.length; i += 1) {
     if (phrase[i] === 'a') {
       phrase[i] = 1;
     } else if (phrase[i] === 'e') {
@@ -106,7 +106,7 @@ function encode(string) {
 
 function decode(string) {
   let phrase2 = string.split('');
-  for (let i = 0; i < phrase2.length; i +=1) {
+  for (let i = 0; i < phrase2.length; i += 1) {
     if (phrase2[i] === '1') {
       phrase2[i] = 'a';
     } else if (phrase2[i] === '2') {
@@ -127,26 +127,32 @@ function decode(string) {
 // Desafio 10
 function techList(array, name) {
   array = array.sort();
-  let objects = []; 
+  let objects = [];
   if (array.length > 0) {
-    for (i = 0; i < array.length; i +=1) {
-      let techs = {tech: array[i], name: name};
+    for (let i = 0; i < array.length; i += 1) {
+      let techs = { tech: array[i], name: name };
       objects.push(techs);
     }
   } else {
-    return "Vazio!"
+    return 'Vazio!'
   }
   return objects;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let triangle = false;
+  if ((lineA < (lineB + lineC)) && (lineB < (lineA + lineC)) && (lineC < (lineA + lineB))) {
+    triangle = true;
+  }
+  if ((lineA > Math.abs(lineB - lineC)) && (lineB > Math.abs(lineA - lineC)) && (lineC > (lineA - lineB))) {
+    triangle = true;
+  }
+  return triangle
 }
 
 // Desafio 13
