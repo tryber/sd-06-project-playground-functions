@@ -253,7 +253,7 @@ function hydrate(bebidas) {
     qtd = parseInt(numStr);
     soma += qtd;
   }
-  return soma + ' copos de água';
+  return soma + ' copo de água';
 }
 
 
