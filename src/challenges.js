@@ -60,19 +60,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  let list = []
   for (let i in array) {
       if (array[i] % 5 === 0 && array[i] % 3 === 0){
-         console.log('fizzbuzz')
+         list.push ("fizzBuzz");
       }
       else if (array[i] % 5 === 0) {
-         console.log('buzz')
+          list.push ("fizz");
       }
       else if (array[i] % 3 === 0){
-         console.log('fizz')
+          list.push ("buzz");
       }else{
-         console.log('bug!')
+          list.push ("bug!");
       }
       }
+  return list
   }
 
 // Desafio 9
