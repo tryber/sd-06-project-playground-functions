@@ -200,9 +200,17 @@ let telefone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(telefone))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA >= (lineB + lineC) || lineA <= Math.abs(lineB - lineC) || lineA <= Math.abs(lineC - lineB)) {
+    return false
+  } else if (lineB >= (lineA + lineC) || lineB <= Math.abs(lineA - lineC) || lineB <= Math.abs(lineC - lineA)) {
+    return false
+  } else if (lineC >= (lineB + lineA) || lineC <= Math.abs(lineB - lineA) || lineC <= Math.abs(lineA - lineB)) {
+    return false
+  } return true
 }
+
+console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate() {
