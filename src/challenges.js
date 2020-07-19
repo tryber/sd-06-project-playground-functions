@@ -120,11 +120,11 @@ function techList(arrayTech) {
   }
   arrayTech.sort();
   let objectTech = [];
-  for (let index = 0; index < arrayTech.length; index++) {
+  for (let index = 0; index < arrayTech.length; index += 1) {
     objectTech.push({
-        tech: arrayTech[index],
-        name: 'Dilenio', 
-      },);
+      tech: arrayTech[index],
+      name: 'Dilenio',
+    });
   }
   return objectTech;
 }
