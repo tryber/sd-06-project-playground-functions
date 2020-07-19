@@ -83,19 +83,23 @@ function isDivisibleByFive(number) {
   return number % 5 === 0;
 }
 
+function fizzBuzzEvaluator(number) {
+  if (isDivisibleByThree(number) && isDivisibleByFive(number)) {
+    return 'fizzBuzz';
+  } else if (isDivisibleByFive(number) && !isDivisibleByThree(number)) {
+    return 'buzz';
+  } else if (isDivisibleByThree(number) && !isDivisibleByFive(number)) {
+    return 'fizz';
+  }
+
+  return 'bug!';
+}
+
 function fizzBuzz(numbers) {
   const fizzBuzzArray = [];
 
   for (let i = 0; i < numbers.length; i += 1) {
-    if (isDivisibleByThree(numbers[i]) && isDivisibleByFive(numbers[i])) {
-      fizzBuzzArray.push('fizzBuzz');
-    } else if (isDivisibleByFive(numbers[i]) && !isDivisibleByThree(numbers[i])) {
-      fizzBuzzArray.push('buzz');
-    } else if (isDivisibleByThree(numbers[i]) && !isDivisibleByFive(numbers[i])) {
-      fizzBuzzArray.push('fizz');
-    } else {
-      fizzBuzzArray.push('bug!');
-    }
+    fizzBuzzArray.push(fizzBuzzEvaluator(numbers[i]));
   }
 
   return fizzBuzzArray;
