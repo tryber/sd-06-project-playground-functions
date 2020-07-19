@@ -69,8 +69,42 @@ function distancia(posA,posB){
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let meusNumeros = [].concat(numeros);
+  let resposta = [];
+  let element;
+  for(i in meusNumeros){
+    let n = meusNumeros[i];
+    switch (true){
+      case (divisivel(n,3) && !divisivel(n,5)):
+        element ='fizz';
+      break;
+
+      case (!divisivel(n,3) && divisivel(n,5)):
+        element = 'buzz';
+      break;
+
+    case (divisivel(n,3) && divisivel(n,5)):
+      element = 'fizzbuzz';
+      break;
+    case (!divisivel(n,3) && !divisivel(n,5)):
+      element = 'bug!';
+      break;
+    }
+    resposta.push(element);
+  }
+  return console.log(resposta)
+}
+
+fizzBuzz([2, 15, 7, 9, 45]);
+
+function divisivel(numero,indice){
+  if(numero % indice === 0){
+    return true
+  }
+  else{
+    return false
+  }
 }
 
 // Desafio 9
