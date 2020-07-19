@@ -221,17 +221,15 @@ function triangleCheck(lineA, lineB, lineC) {
   let checkThree = Math.abs(lineA - lineB);
   let triangleReturn = false;
 
-  if (lineA < (lineB + lineC && lineA > checkOne)) {
-    triangleReturn = true;
-  } else if (lineB < (lineA + lineC && lineB > checkTwo)) {
-    triangleReturn = true;
-  } else if (lineC < (lineA + lineB && lineC > checkThree)) {
-    triangleReturn = true;
+  if (lineA < (lineB + lineC) && lineB < (lineC + lineA) && lineC < (lineA + lineB)) {
+    if (lineA > checkOne && lineB > checkTwo && lineC > checkThree) {
+      triangleReturn = true;
+    }
   }
   return triangleReturn;
 }
 
-console.log(triangleCheck(12, 17, 4))
+console.log(triangleCheck(10, 2, 18))
 
 // Desafio 13
 function hydrate() {
