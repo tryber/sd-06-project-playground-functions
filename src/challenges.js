@@ -33,13 +33,16 @@ function splitSentence(string) {
 console.log(splitSentence("go trybe"));
 
 // Desafio 4
-function concatName(arrays) {
-
-    let string = []
-        //for ()
-
-
+function concatName(arrayDeString) {
     // seu código aqui
+
+    let stringConcatenada = "";
+    stringConcatenada = arrayDeString[arrayDeString.length - 1] + " " + arrayDeString[0];
+
+
+
+    return stringConcatenada;
+
 }
 
 // Desafio 5
