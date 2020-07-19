@@ -87,14 +87,10 @@ function encDec(phrase) {
   let newPhrase = '';
   for (let index = 0; index < phrase.length; index += 1) {
     switch (phrase[index]) {
-      case 'a':
-        newPhrase += '1'; break;
-      case 'e':
-        newPhrase += '2'; break;
-      case 'i':
-        newPhrase += '3'; break;
-      case 'o':
-        newPhrase += '4'; break;
+      case 'a': newPhrase += '1'; break;
+      case 'e': newPhrase += '2'; break;
+      case 'i': newPhrase += '3'; break;
+      case 'o': newPhrase += '4'; break;
       case 'u':
         newPhrase += '5'; break;
       case '1':
