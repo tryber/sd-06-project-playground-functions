@@ -189,6 +189,7 @@ function generatePhoneNumber(phoneNumber) {
   let repCounter;
   let phoneError;
   let phoneSintaxe = ("(" + phoneNumber[0] + phoneNumber[1] + ")" + " " + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + "-" + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10]);
+
   if (phoneNumber.length != 11) {
     return phoneError = "Array com tamanho incorreto.";
   } else {
@@ -214,7 +215,7 @@ function generatePhoneNumber(phoneNumber) {
   }
 }
 
-console.log(generatePhoneNumber([]))
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -235,9 +236,18 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 2, 18))
 
 // Desafio 13
-function hydrate() {
+function hydrate(orderNotes) {
   // seu código aqui
+  let getNumber = orderNotes.match(/\d+/g).map(Number)
+  sum = 0
+
+  for (number in getNumber) {
+    sum += getNumber[number]
+  }
+  return (sum + " copos de água")
 }
+
+console.log(hydrate('1 cerveja, 5 cachaças e 1 copo de vinho'))
 
 
 module.exports = {
