@@ -151,12 +151,10 @@ function techList(nameTech, name) {
     return 'Vazio!';
   }
   let result = [];
-  techSort = nameTech.sort();
-  for (let i in techSort) {
-    result.push({ tech: techSort[i], name: name });
-
-    return result;
+  for (let i in nameTech.sort()) {
+    result.push({ tech: nameTech[i], name: name });
   }
+  return result;
 }
 
 // Desafio 11
@@ -185,40 +183,8 @@ function generatePhoneNumber(number) {
       }
     }
   }
-
-  let numberResponse = '';
-
-  for (let i in number) {
-    switch (i) {
-      case '0': numberResponse += '(' + number[i];
-        break;
-      case '1': numberResponse += number[i] + ')';
-        break;
-      case '2': numberResponse += number[i];
-        break;
-      case '3': numberResponse += number[i];
-        break;
-      case '4': numberResponse += number[i];
-        break;
-      case '5': numberResponse += number[i] + '-';
-        break;
-      case '6': numberResponse += number[i];
-        break;
-      case '7': numberResponse += number[i];
-        break;
-      case '8': numberResponse += number[i];
-        break;
-      case '9': numberResponse += number[i];
-        break;
-      case '10': numberResponse += number[i];
-        break;
-      default:
-        break;
-    }
-  }
-  return numberResponse;
+  numberResponse = '';
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
