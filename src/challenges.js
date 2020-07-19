@@ -34,14 +34,19 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 function footballPoints(wins, ties) {
   let vitoria = wins * 3;
   let empate = ties * 1;
-  return `${vitoria} , ${empate}`;
+  let somaPontos = vitoria + empate;
+  return somaPontos;
 }
 console.log(footballPoints(1,5));
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  let maior = ""
+
+
 }
+console.log([9, 1, 2, 3, 9, 5, 7]);
+
 
 // Desafio 7
 function catAndMouse() {
