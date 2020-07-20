@@ -1,11 +1,7 @@
 // Desafio 1
 function compareTrue(v1, v2) {
   // seu código aqui
-  if (v1 === true && v2 === true) {
-    return true
-  } else {
-    return false
-  }
+  return (v1 === true && v2 === true) ? true : false;
 }
 
 // Desafio 2
@@ -24,7 +20,7 @@ function splitSentence(frase) {
 function concatName(array) {
   // seu código aqui
   let ultimoPrimeiro = '';
-  ultimoPrimeiro += (array[array.length - 1] + ', ' + array[0])
+  ultimoPrimeiro += array[array.length - 1] + ', ' + array[0]
   return ultimoPrimeiro;
 }
 
@@ -71,7 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let arrayResultado = [];
-  for (let i=0;i<array.length;i+=1) {
+  for (let i=0; i<array.length; i+=1) {
     if ((array[i]%3===0)&&(array[i]%5===0)) {
       arrayResultado.push('fizzBuzz');
     } else if (array[i]%3===0) {
@@ -89,7 +85,6 @@ function fizzBuzz(array) {
 function encode(string) {
   // seu código aqui
   let encodeArray = string.split('')
-
   for (let index in encodeArray) {
     switch (encodeArray[index]) {
       case 'a':
@@ -176,7 +171,7 @@ function hydrate(string) {
     water += parseInt(numberOfDrinks[i]);
   }
   water > 1 ? glassesOfWater = ' copos de água' : glassesOfWater = ' copo de água';
-  alert = water + glassesOfWater; 
+  alert = water + glassesOfWater;
   return alert;
 }
 
