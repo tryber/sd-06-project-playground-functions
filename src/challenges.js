@@ -61,17 +61,17 @@ function catAndMouse(mouse, cat1, cat2) {
   if (dist1 < dist2) {
     return 'cat1';
   }
-    return 'os gatos trombam e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(vetNumbers) {
   let array2 = [];
   for (let i in vetNumbers) {
-    if (vetNumbers[i] % 3 === 0 && vetNumbers[i] % 5 != 0) {
+    if (vetNumbers[i] % 3 === 0 && vetNumbers[i] % 5 !== 0) {
       array2.push('fizz');
     }
-    else if (vetNumbers[i] % 5 === 0 && vetNumbers[i] % 3 != 0) {
+    else if (vetNumbers[i] % 5 === 0 && vetNumbers[i] % 3 !== 0) {
       array2.push('buzz');
     }
     else if (vetNumbers[i] % 5 === 0 && vetNumbers[i] % 3 === 0) {
@@ -94,15 +94,7 @@ function encode(word2) {
     u: 5,
   };
   let vet1 = [];
-  for (let i = 0; i < word2.length; i += 1) {
-    let char = word2.charAt(i);
-    if (char in vogais) {
-      vet1.push(vogais[char]);
-    }
-    else {
-      vet1.push([char]);
-    }
-  }
+  vet1 = mesclian(word2, vogais);
   let retorno = vet1.join('');
   return retorno;
 }
@@ -116,34 +108,41 @@ function decode(word3) {
     5: 'u',
   };
   let vet1 = [];
-  for (let i = 0; i < word3.length; i += 1) {
-    let char = word3.charAt(i);
-    if (char in numbers) {
-      vet1.push(numbers[char]);
+  vet1 = mesclian(word3, numbers);
+  let retorno = vet1.join('');
+  return retorno;
+}
+// fazer um func pra juntar o encode e o decode
+  function mesclian (word4, subst) {
+    let vet1 = [];
+  for (let i = 0; i < word4.length; i += 1) {
+    let char = word4.charAt(i);
+    if (char in subst) {
+      vet1.push(subst[char]);
     }
     else {
       vet1.push([char]);
     }
   }
-  let retorno = vet1.join('');
-  return retorno;
-}
+  return vet1;
+  }
 
 // Desafio 10
 function techList(array1, name) {
   // seu código aqui
-  
-    let sort = array1.sort();
-    let final = [];
-    for (i in sort) {
-      final.push({"tech" : sort[i], "name" : name});
+
+  let sort = array1.sort();
+  let final = [];
+  if (name != "") {
+  for (let i in sort) {
+      final.push({ 'tech': sort[i], 'name': name });
     }
-    if (array1.length === 0) {
-      return "Vazio!";
-    } else {
-      return final;
-    } 
- }
+    }
+  if (array1.length === 0) {
+    return 'Vazio!';
+    }
+        return final;  
+  }
 
 // Desafio 11
 function generatePhoneNumber() {
