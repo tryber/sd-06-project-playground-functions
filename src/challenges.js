@@ -161,12 +161,11 @@ function decode(subNum) {
 }
 // console.log(decode('11 22 33 44 55'));
 // Desafio 10
+//-------------
 function techList(listaTec, name) {
   let novaLista = [];
   // let tecnologias;
-  if (listaTec =='') {
-    return ('Vazio!');
-  } else {
+  if (listaTec != '') {
     listaTec.sort();
     for (let indice = 0; indice < listaTec.length; indice += 1) {
       let tecnologias = {
@@ -174,16 +173,67 @@ function techList(listaTec, name) {
         name: name,
       }
       novaLista.push(tecnologias);
-    }
-  } return novaLista;
+    } return novaLista;
+  } return ('Vazio!');
 }
 // let listaTeste = [];
 // console.log(techList(listaTeste, 'paulo'));
-// Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// _____________________________________________________________________________________
+function numMaisRepetido(lista) {
+  let qtdNumIguaisAtual = 0;
+  let resposta = false;
+  for (let contador = 0; contador <= lista.length; contador += 1) {
+    for (let indice = 0; indice <= lista.length; indice += 1) {
+      if (lista[contador] === lista[indice]) {
+        qtdNumIguaisAtual += 1;
+      }
+    } if (qtdNumIguaisAtual >= 3) {
+      resposta = true;
+      break
+    } qtdNumIguaisAtual = 0;
+  } return (resposta);
 }
-
+// - - - - --  - -
+function numMenorOrMaior(lista) {
+  let resposta = false;
+  for (let contador = 0; contador <= lista.length; contador += 1) {
+    for (let indice = 0; indice <= lista.length; indice += 1) {
+      if ((lista[contador] < 0) || (lista[contador] > 9)) {
+        resposta = true;
+        break;
+      }
+    } if (resposta === true) {
+      break;
+    }
+  } return (resposta);
+}
+// let listaa = [-2, 3, 3, 2, 2, 2,9];
+// console.log(numMenor(listaa));
+// Desafio 11
+function generatePhoneNumber(listaNum) {
+  let respostaRepete = numMaisRepetido(listaNum);
+  let respostaNumM = numMenorOrMaior(listaNum);
+  let telefone = '';
+  if (listaNum.length !== 11) {
+    return ('Array com tamanho incorreto');
+  } else if (respostaRepete === true || respostaNumM === true) {
+    return ('não é possível gerar um número de telefone com esses valores')
+  } else {
+    for (let indice = 0; indice < listaNum.length; indice += 1) {
+      if (indice < 1) {
+        telefone += '(' + listaNum[indice] + listaNum[indice + 1] + ') ';
+      } else if (indice > 1 && indice <= 6) {
+        telefone += listaNum[indice];
+      } else if (indice === 7) {
+        telefone += '-';
+      } if (indice >= 7) {
+        telefone += listaNum[indice];
+      }
+    }
+  } return telefone;
+}
+// let testando = [1, 1, 9, 6, 7, 2, 3, 4, 2, 0, 0];
+// console.log(generatePhoneNumber(testando));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
