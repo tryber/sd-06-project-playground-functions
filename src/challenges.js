@@ -69,16 +69,16 @@ function fizzBuzz(vetNumbers) {
   let array2 = [];
   for (let i in vetNumbers) {
     if (vetNumbers[i] % 3 === 0 && vetNumbers[i] % 5 != 0) {
-      array2[i] = 'fizz';
+      array2[i] += 'fizz';
     }
     else if (vetNumbers[i] % 5 === 0 && vetNumbers[i] % 3 != 0) {
-      array2[i] = 'buzz';
+      array2[i] += 'buzz';
     }
     else if (vetNumbers[i] % 5 === 0 && vetNumbers[i] % 3 === 0) {
-      array2[i] = 'fizzbuzz';
+      array2[i] += 'fizzbuzz';
     }
     else {
-      array2[i] = 'bug';
+      array2[i] += 'bug';
     }
   }
   return array2;
@@ -130,7 +130,7 @@ function decode(word3) {
 }
 
 // Desafio 10
-function techList() {
+function techList(array1) {
   // seu código aqui
   
     let sort = array1.sort();
