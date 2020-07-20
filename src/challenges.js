@@ -24,7 +24,7 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   arrayNumbers.sort();
   let count = 1;
   for (let i = arrayNumbers.length - 1; i > 0; i -= 1) {
