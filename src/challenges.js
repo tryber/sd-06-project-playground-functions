@@ -31,21 +31,15 @@ function footballPoints(wins = 3, ties = 1) {
 }
 
 // Desafio 6
-function highestCount(a = [9, 1, 2, 3, 9, 5, 7], i = 0) {
-  let contHigher = 0;
-  for (let x = 0; x < a.length; x += 1) {
-    let y = a[x];
-    if (y > i) {
-      i = y;
+function highestCount(numbers = [9, 1, 2, 3, 9, 5, 7]) {
+  let max = Math.max(...numbers);
+  let count = 0;
+  for (let x = 0; x < numbers.length; x += 1) {
+    if (numbers[x] === max) {
+      count += 1;
     }
   }
-  for (let x = 0; x < a.length; x += 1) {
-    let y = a[x];
-    if (y === i) {
-      contHigher += 1;
-    }
-  }
-  return contHigher;
+  return count;
 }
 
 // Desafio 7
