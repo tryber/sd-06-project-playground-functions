@@ -81,49 +81,51 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode(vogais) {
+function encode(palavra) {
   let arrayVogais = '';
-  for (let i = 0; i < vogais.length; i += 1) {
-    if (vogais = 'a') {
+  for (let i = 0; i < palavra.length; i += 1) {
+    if (palavra[i] === 'a') {
       arrayVogais += '1';
-    } else if (vogais = 'e') {
+    } else if (palavra[i] === 'e') {
       arrayVogais += '2';
-    } else if (vogais = 'i') {
+    } else if (palavra[i] === 'i') {
       arrayVogais += '3';
-    } else if (vogais = 'o') {
+    } else if (palavra[i] === 'o') {
       arrayVogais += '4';
-    } else if (vogais = 'u') {
+    } else if (palavra[i] === 'u') {
       arrayVogais += '5';
     } else {
-      arrayVogais += arrayVogais;
+      arrayVogais += palavra[i];
     }
   }
+  return arrayVogais;
 }
-function decode(numeros) {
+function decode(palavras) {
   let arrayNumeros = '';
-  for (let i = 0; i < numeros.length; i += 1) {
-    if (numeros = 1) {
+  for (let i = 0; i < palavras.length; i += 1) {
+    if (palavras[i] === '1') {
       arrayNumeros += 'a';
-    } else if (numeros = '2') {
+    } else if (palavras[i] === '2') {
       arrayNumeros += 'e';
-    } else if (numeros = '3') {
+    } else if (palavras[i] === '3') {
       arrayNumeros += '1';
-    } else if (numeros = '4') {
+    } else if (palavras[i] === '4') {
       arrayNumeros += 'o';
-    } else if (numeros = '5') {
+    } else if (palavras[i] === '5') {
       arrayNumeros += 'u';
-    }else {
-      arrayNumeros += arrayNumeros;
+    } else {
+      arrayNumeros += palavras[i];
     }
   }
-return arrayVogais + arrayNumeros;
+  return arrayNumeros;
 }
-
-
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList([React, Jest, HTML, CSS, JavaScript]) {
+  let React = {
+    tech: 'CSS',
+    name: 'Cássio' 
+  }
 }
 
 // Desafio 11
