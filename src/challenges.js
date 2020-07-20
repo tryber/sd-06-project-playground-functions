@@ -153,7 +153,7 @@ switch(inputStr[index]) {
 }
   return outputStr;
 }
-  console.log(decode('h3 th2r2!!!'))
+ 
 // Desafio 10
 function techList(arrayTec, name) {
   // seu código aqui
@@ -171,9 +171,38 @@ function techList(arrayTec, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(array) {
   // seu código aqui
+  //var array = [1,1,9,8,0,8,4,4,7,4,7]
+var repeatNumber = 0;
+var repete = 0;
+var correctNumber = '';
+var formatedNumber = '';
+
+if (array.length != 11) {
+    console.log("Array com tamanho incorreto.");
 }
+for(i = 0; i <= array.length - 1; i ++) {
+    if (array[i] < 0 || array[i] > 9) {
+        return "não é possível gerar um número de telefone com esses valores";
+    }
+    repete = 0;
+    let a = array[i];
+    for(let j = 0; j <= array.length -1; j += 1) {
+        if (a == array[j]) {
+            repete = repete + 1;
+        }
+    }
+    if (repete > 3) {
+        return "não é possível gerar um número de TELEFONE com esses valores";
+        break;    
+}  
+    correctNumber += array[i];
+} 
+    formatedNumber = '('+correctNumber[0]+ correctNumber[1]+')'+correctNumber[2]+correctNumber[3]+correctNumber[4]+correctNumber[5]+correctNumber[6]+'-'+correctNumber[7]+correctNumber[8]+correctNumber[9]+correctNumber[10];
+    return formatedNumber;
+}
+  
 
 // Desafio 12
 function triangleCheck() {
