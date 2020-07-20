@@ -215,7 +215,7 @@ function generatePhoneNumber(listaNum) {
   let respostaNumM = numMenorOrMaior(listaNum);
   let telefone = '';
   if (listaNum.length !== 11) {
-    return ('Array com tamanho incorreto');
+    return ('Array com tamanho incorreto.');
   } else if (respostaRepete === true || respostaNumM === true) {
     return ('não é possível gerar um número de telefone com esses valores')
   } else {
@@ -233,7 +233,7 @@ function generatePhoneNumber(listaNum) {
     }
   } return telefone;
 }
-// let testando = [1, 1, 9, 6, 7, 2, 3, 4, 2, 0, 90];
+// let testando = [0, 1, 6];
 // console.log(generatePhoneNumber(testando))
 // Desafio 12
 function triangleCheck() {
