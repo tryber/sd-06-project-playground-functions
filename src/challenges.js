@@ -180,7 +180,7 @@ var correctNumber = '';
 var formatedNumber = '';
 
 if (array.length != 11) {
-    console.log("Array com tamanho incorreto.");
+    return("Array com tamanho incorreto.");
 }
 for(i = 0; i <= array.length - 1; i ++) {
     if (array[i] < 0 || array[i] > 9) {
@@ -201,7 +201,7 @@ for(i = 0; i <= array.length - 1; i ++) {
 } 
     formatedNumber = '('+correctNumber[0]+ correctNumber[1]+')'+correctNumber[2]+correctNumber[3]+correctNumber[4]+correctNumber[5]+correctNumber[6]+'-'+correctNumber[7]+correctNumber[8]+correctNumber[9]+correctNumber[10];
     return formatedNumber;
-}
+} console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]))
   
 
 // Desafio 12
