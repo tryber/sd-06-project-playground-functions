@@ -66,7 +66,7 @@ function fizzBuzz(arrayNumber) {
       arrayString[i] = 'fizz';
     } else if (arrayNumber[i] % 3 !== 0 && arrayNumber[i] % 5 === 0){
       arrayString[i] = 'buzz';
-    } else if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 === 0){
+    } else if (arrayNumber[i] % 3 !== 1 && arrayNumber[i] % 5 !== 1){
       arrayString[i] = 'fizzBuzzz';
     } else {
     arrayString[i] = 'bug!';
@@ -75,7 +75,7 @@ function fizzBuzz(arrayNumber) {
   return arrayString;
 }
 
-// let array = [2, 15, 7, 9, 45];
+// let array = [5, 15, 7, 9, 45];
 // console.log(fizzBuzz(array));
 
 // Desafio 9
