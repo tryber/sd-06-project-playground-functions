@@ -42,7 +42,7 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
+  if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
     return 'cat2';
   } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     return 'cat1';
@@ -78,10 +78,11 @@ function decode() {
 
 // Desafio 10
 function techList(arrayTech, name) {
-  for (tech of arrayTech) {
+  let arrayResponse = [];
+  for (let tech of arrayTech) {
     let objectResponse = {};
-    objectResponse['tech'] = tech;
-    objectResponse['name'] = name;
+    objectResponse.tech = tech;
+    objectResponse.name = name;
     arrayResponse.push(objectResponse)
   }
   return arrayResponse;
