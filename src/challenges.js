@@ -34,14 +34,16 @@ function footballPoints(wins = 3, ties = 1) {
 function highestCount(a = [9, 1, 2, 3, 9, 5, 7]) {
   let contHigher = 0;
   let i = 0;
-  for (let x in a) {
-    if (x > i) {
-      i = a[x];
+  for (let x = 0; x < a.length; x += 1) {
+    let y = a[x];
+    if (y > i) {
+      i = y;
     }
   }
-  for (let x in a) {
-    if (a[x] === i) {
-      contHigher += contHigher;
+  for (let x = 0; x < a.length; x += 1) {
+    let y = a[x];
+    if (y === i) {
+      contHigher += 1;
     }
   }
   return contHigher;
@@ -78,59 +80,46 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
 }
 
 // Desafio 9
-function encode(a = 'hi there, this is your new house', coded = [], toCode = []) {
+function encode(a = ['hi there, this is your new house'], coded = []) {
   for (let x = 0; x < a.length; x += 1) {
-    let j = a[x];
-    toCode += j;
-  }
-  for (let x = 0; x < toCode.length; x += 1) {
-    let i = toCode[x];
-    if (i === 'a') {
-      i = '1'
-      coded += i
-    } else if (i === 'e') {
-      i = '2'
-      coded += i
-    } else if (i === 'i') {
-      i = '3'
-      coded += i
-    } else if (i === 'o') {
-      i = '4'
-      coded += i
-    } else if (i === 'u') {
-      i = '5'
-      coded += i
+    let l = a[x];
+    if (l === 'a'){
+      coded += '1';
+    } else if (l === 'e') {
+      coded += '2';
+    } else if (l === 'i') {
+      coded += '3';
+    } else if (l === 'o') {
+      coded += '4';
+    } else if (l === 'u') {
+      coded += '5';
     } else {
-      coded += i;
+      coded += l;
     }
   }
   return coded;
 }
 
-function decode(a = 'h3 th2r2!', decoded = []) {
+function decode(a = 'h3 th2r2! wh1ts 5p', decoded = []) {
   for (let x = 0; x < a.length; x += 1) {
-    let i = a[x];
-    if (i === '1') {
-      i = 'a'
-      decoded += i
-    } else if (i === '2') {
-      i = 'e'
-      decoded += i
-    } else if (i === '3') {
-      i = 'i'
-      decoded += i
-    } else if (i === '4') {
-      i = 'o'
-      decoded += i
-    } else if (i === '5') {
-      i = 'u'
-      decoded += i
+    let l = a[x];
+    if (l === '1'){
+      decoded += 'a';
+    } else if (l === '2') {
+      decoded += 'e';
+    } else if (l === '3') {
+      decoded += 'i';
+    } else if (l === '4') {
+      decoded += 'o';
+    } else if (l === '5') {
+      decoded += 'u';
     } else {
-      decoded += i
+      decoded += l;
     }
-  return decoded
   }
+  return decoded;
 }
+
 // Desafio 10
 function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lucas') {
   let valid = t.length;
