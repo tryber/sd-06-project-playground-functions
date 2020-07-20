@@ -74,28 +74,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  let results = [];
-  if (array === 1) {
-    return '1';
-  } else {
-      if (n % 3 === 0 && array % 5 === 0) {
-        results.push('FizzBuzz');
-        if (array % 3 != 0 && array % 5 != 0){
-          results.push('bug!');
-        } else if (array % 5 === 0) {
-            results.push('Buzz');
-        } else if (array % 3 === 0) {
-            results.push('Fizz');
-            if (array % 3 != 0 && array % 5 != 0){
-              results.push('bug!');
-            } else {
-                results.push(''+ array);
-              }
-          }
-      }
+function fizzBuzz(arr) {
+  let resultados = [];
+  for ( let i in arr ) {
+    if ( (arr[i] % 3 === 0) && (arr[i] % 5 === 0) ) {
+      resultados.push('fizzBuzz');
+    } else if ( arr[i] % 3 === 0 ) {
+        resultados.push('fizz');
+    } else if ( arr[i] % 5 === 0 ) {
+        resultados.push('buzz');
+    } else {
+      resultados.push('bug!');
     }
+  }
+  return resultados;
 }
+
 // Desafio 9
 function encode() {
   // seu código aqui
