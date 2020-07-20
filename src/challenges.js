@@ -287,7 +287,14 @@ function hydrate(bebidas) {
   for (let i in quantidades) {
     total += quantidades[i];
   }
-  return `${total} copos de água`;  
+  let copos = '';
+
+  if (quantidades == 1) {
+    copos = 'copo';  
+  } else {
+    copos = 'copos';
+  }
+  return `${total} ${copos} de água`;  
 }
 
 
