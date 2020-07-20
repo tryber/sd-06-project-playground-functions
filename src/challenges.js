@@ -68,7 +68,7 @@ function highestCount(numbers) {
   return repetitionCount;
 }
 
-highestCount([9, 1, 2, 3, 9, 5, 7]);
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 
 // Desafio 7
@@ -92,14 +92,14 @@ function fizzBuzz(numbers) {
   let newArray = [];
 
   for (let index in numbers) {
-    if (numbers[index]%3 === 0) {
+    if (numbers[index]%3 === 0 && numbers[index]%5 === 0) {
+      newArray.push("fizzBuzz");
+    }
+    else if (numbers[index]%3 === 0) {
       newArray.push("fizz");
     }
     else if (numbers[index]%5 === 0) {
       newArray.push("buzz");
-    }
-    else if (numbers[index]%3 === 0 || numbers[index]%5 === 0) {
-      newArray.push("fizzBuzz");
     }
     else {
       newArray.push("bug!");
