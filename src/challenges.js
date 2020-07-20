@@ -64,11 +64,9 @@ function highestCount(numberArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
   let chaseStatus;
   let pos1;
   let pos2;
-
   if (mouse > cat1 && mouse > cat2) {
     pos1 = mouse - cat1;
     pos2 = mouse - cat2;
@@ -215,7 +213,7 @@ function generatePhoneNumber(phoneNumber) {
   }
 }
 
-console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]))
+// console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -233,7 +231,7 @@ function triangleCheck(lineA, lineB, lineC) {
   return triangleReturn;
 }
 
-console.log(triangleCheck(10, 2, 18))
+// console.log(triangleCheck(10, 2, 18))
 
 // Desafio 13
 function hydrate(orderNotes) {
@@ -244,10 +242,14 @@ function hydrate(orderNotes) {
   for (number in getNumber) {
     sum += getNumber[number]
   }
-  return (sum + " copos de água")
+  if (sum === 1) {
+    return (sum + " copo de água")
+  } else {
+    (sum + " copos de água")
+  }
 }
 
-console.log(hydrate('1 cerveja, 5 cachaças e 1 copo de vinho'))
+// console.log(hydrate('1 cerveja, 5 cachaças e 1 copo de vinho'))
 
 
 module.exports = {
