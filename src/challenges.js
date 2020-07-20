@@ -204,9 +204,10 @@ function triangleCheck(arrayTriangle) {
     return true;
   } else {
     return false;}
-  
 }
-console.log(triangleCheck([16, 20, 30]))
+
+
+// console.log(triangleCheck([16, 20, 30]))
 
 // Desafio 13
 function hydrate() {
