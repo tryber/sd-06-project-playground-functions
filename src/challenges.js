@@ -151,6 +151,15 @@ function techList(list, item) {
 // console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11
+function howManyTimesResult(howManyTimesList) {
+  let result = false;
+  for (let j in howManyTimesList) {
+    if (howManyTimesList[j] >= 3) {
+      result = true;
+    }
+  }
+  return result;
+}
 function timesCount(list) {
   let howManyTimes = {};
   for (let i in list) {
@@ -160,12 +169,7 @@ function timesCount(list) {
       howManyTimes[list[i]] = 1;
     }
   }
-  let result = false;
-  for (let j in howManyTimes) {
-    if (howManyTimes[j] >= 3) {
-      result = true;
-    }
-  }
+  let result = howManyTimesResult(howManyTimes);
   return result;
 }
 
