@@ -199,7 +199,7 @@ for(i = 0; i <= array.length - 1; i ++) {
 }  
     correctNumber += array[i];
 } 
-    formatedNumber = '('+correctNumber[0]+ correctNumber[1]+')'+correctNumber[2]+correctNumber[3]+correctNumber[4]+correctNumber[5]+correctNumber[6]+'-'+correctNumber[7]+correctNumber[8]+correctNumber[9]+correctNumber[10];
+    formatedNumber = '('+correctNumber[0]+ correctNumber[1]+')'+' '+correctNumber[2]+correctNumber[3]+correctNumber[4]+correctNumber[5]+correctNumber[6]+'-'+correctNumber[7]+correctNumber[8]+correctNumber[9]+correctNumber[10];
     return formatedNumber;
 }
   
