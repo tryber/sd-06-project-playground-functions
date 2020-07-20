@@ -28,7 +28,7 @@ function splitSentence(frase) {
 // Desafio 4
 array = ['a','b','c']
 function concatName(array) {
-  return array[0]+", "+array[array.length -1 ]
+  return `${array[0]}, ${array[array.length -1]}`
   // seu código aqui
 }
 
