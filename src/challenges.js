@@ -1,3 +1,18 @@
+// tools used //
+function divisivel(numero,indice){
+  if(numero % indice === 0){
+    return true
+  }
+  else{
+    return false
+  }
+}
+
+function distancia(posA,posB){
+  return Math.abs(posA-posB)
+}
+
+
 // Desafio 1
 function compareTrue(first,second) {
   return first && second ? true : false;
@@ -64,12 +79,10 @@ function catAndMouse(posMouse,posCat1,posCat2) {
   }
 }
 
-function distancia(posA,posB){
-  return Math.abs(posA-posB)
-}
+
 
 // Desafio 8
-function fizzBuzz(numeros) {
+ /*function fizzBuzz(numeros) {
   let meusNumeros = [].concat(numeros);
   let resposta = [];
   let element;
@@ -95,23 +108,58 @@ function fizzBuzz(numeros) {
   }
   return resposta
 }
-
-
-
-function divisivel(numero,indice){
-  if(numero % indice === 0){
-    return true
+*/
+function fizzBuzz(arrayNumbers) {
+  let arrayFizzBuzz = [];
+  for (let i in arrayNumbers) {
+    if ((arrayNumbers[i] % 3)===0 && (arrayNumbers[i] % 5)===0) {
+        arrayFizzBuzz.push('fizzBuzz!');
+    } else if ((arrayNumbers[i] % 5)===0 && (arrayNumbers[i] % 3)!==0) {
+        arrayFizzBuzz.push('buzz!');
+    } else if ((arrayNumbers[i] % 3)===0 && (arrayNumbers[i] % 5)!==0) {
+        arrayFizzBuzz.push('fizz!');
+    } else {
+        arrayFizzBuzz.push('bug!');
+    }
   }
-  else{
-    return false
-  }
+  return console.log(arrayFizzBuzz);
 }
 
-// Desafio 9
-function encode() {
-  //trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+fizzBuzz([1,2,5,60,20,15,3,7,15]);
 
-/*a -> 1 \
+// Desafio 9
+function encode(string) {
+    //trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+  // inicializando mapa
+  let letras = string.split('');
+  let vogais = ['a','e','i','o','u'];
+  let myMap = new Map();
+
+  //setando mapa
+  for(let i=0;i<vogais.length;i+=1){
+    myMap.set(vogais[i], i+1);
+  }
+  console.log(myMap.get('a'));
+
+  for(let i in letras){
+    const letra = letras[i];
+    if(myMap.has(letra)){
+      letras[i] = myMap.get(letra)
+    }    /* */
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+ /*a -> 1 \
 e -> 2 \
 i -> 3 \
 o -> 4 \
@@ -119,6 +167,14 @@ u -> 5 */
    //varrer o array
 
 }
+function comparaElemArray(element,array){
+
+}
+
+
+
+encode('Paulo eiei');
+
 function decode() {
   /*A segunda função deverá se chamar `decode` e faz o contrário de `encode` - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de `decode` seja `"h3 th2r2!"`, o retorno deverá ser `"hi there!"`).*/
   // seu código aqui
