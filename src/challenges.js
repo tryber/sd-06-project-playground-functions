@@ -49,16 +49,14 @@ footballPoints(1,4);
 
 // Desafio 6
 function highestCount(numbers) {
-  let repetitionCount = 0; //Armazena a quantidade que o maior número se repete.
-  let highestNumber = 0; //Armazena o maior número.
-  let numberCount = 0; //Contabiliza a quantidade de repetição.
+  let repetitionCount = 0;
+  let highestNumber = 0;
+  let numberCount = 0;
 
-  //Loop para percorrer todos os elementos do array e retornar o maior número.
   for (let index in numbers) {
         if (numbers[index] > highestNumber) {
           highestNumber = numbers[index];      
         }
-        //Loop para contar quantas vezes o maior número se repete.
         for (let index2 in numbers) {
           if (highestNumber === numbers[index2]) {
             numberCount += 1;
@@ -72,20 +70,20 @@ function highestCount(numbers) {
   return repetitionCount;
 }
 
-highestCount([9, 9, 9, 9, 3, 9, 5, 7]);
+highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  let distanceCat1 = mouse - cat1;
-  let distanceCat2 = mouse - cat2;
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 < distanceCat2) {
     return "cat1";
   } 
   else if (distanceCat2 < distanceCat1) {
     return "cat2";
   } else {
-    return "Os gatos trombam e o rato foge.";
+    return "os gatos trombam e o rato foge";
   }
 }
 
@@ -139,7 +137,7 @@ function encode(string) {
   }
   return newString;
 }
-encode("hi there isabella");
+encode("hi there!");
 
 function decode(numbers) {
   let decodedString = "";
@@ -166,7 +164,7 @@ function decode(numbers) {
     }
     return decodedString;
   }
-  decode("h3 th2r2 3s1b2ll1");
+  decode("h3 th2r2!");
 
 
 // Desafio 10
@@ -180,7 +178,7 @@ function techList(arrayTechnology,name) {
   }
   return techInfo;
 } else {
-  return "vazio"
+  return "Vazio!";
 }
 }
 
@@ -204,11 +202,11 @@ function triangleCheck(lineA,lineB,lineC) {
     evaluator = true;
   }
   else {
-    evaluator = false
+    evaluator = false;
   }
   return evaluator;
 }
-triangleCheck(10, 13, 2);
+triangleCheck(10, 14, 8);
 
 // Desafio 13
 function hydrate() {
