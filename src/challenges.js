@@ -25,12 +25,6 @@ function concatName(meuArray) {
   let resposta = '';
   resposta += (ultimaPalavra + ', ' + primeiraPalavra);
   return resposta;
-
-//  function concatName(names) {
-//    let resultadoNome = "";
-//    resultadoNome = names[names.length - 1] + ", " + names[0];
-//    return resultadoNome
-//  }
 }
 
 // Desafio 5
@@ -144,8 +138,17 @@ function generatePhoneNumber(meusNumeros) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(linha1, linha2, linha3) {
   // seu código aqui
+  resposta = false;
+  if (linha1 < linnha2 + linha3 && linha1 > Math.abs(linha2 - linha3)) {
+    resposta = true;
+  } else if (linha2 < linha1 + linha3 && linha2 > Math.abs(linha1 - linha3)) {
+    resposta = true;
+  } else if (linha3 < linha1 + linha2 && linha3 > Math.abs(linha1 - linha2)) {
+    resposta = true;
+  }
+  return resposta;
 }
 
 // Desafio 13
