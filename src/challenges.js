@@ -108,7 +108,7 @@ function decode(palavras) {
     } else if (palavras[i] === '2') {
       arrayNumeros += 'e';
     } else if (palavras[i] === '3') {
-      arrayNumeros += '1';
+      arrayNumeros += 'i';
     } else if (palavras[i] === '4') {
       arrayNumeros += 'o';
     } else if (palavras[i] === '5') {
