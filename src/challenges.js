@@ -55,32 +55,16 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 }
 
 // Desafio 8
-function fizzBuzz(out = []) {
-  let entrada = [2, 15, 7, 9, 45];
-  function multTres(numero) {
-    if (numero % 3 === 0) {
-      return true;
-    } return false;
+function fizzBuzz(array = [2, 15, 7, 9, 45]) {
+  for (let i = 0; i < array.length; i += 1) {
+    let n = array[i];
+    if (n % 15 === 0) {return 'fizzBuzz'}
+    if (n % 5 === 0) {return 'Buzz'}
+    if (n % 3 === 0) {return 'fizz'}
+    return 'bug!';
   }
-  function  multCinco(numero) {
-    if (numero % 5 === 0) {
-      return true;
-    } return false;
-  }
-
-  for ( let i = 0; i < entrada.length; i += 1) {
-    let numero = entrada[i];
-    if (multTres(numero) && multCinco(numero)) {
-      out += 'fizzBuzz';
-    } else if (multTres(numero)) {
-      out += 'fizz';
-    } else if (multCinco(numero)) {
-      out += 'Buzz';
-    } out += 'bug!';
-  }
-  return out;
 }
-
+fizzBuzz();
 // Desafio 9
 function encode(a = 'hi there, this is your new house') {
   let code = { a: '1', e: '2', i: '3', o: '4', u: '5' };
