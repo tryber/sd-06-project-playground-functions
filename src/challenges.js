@@ -55,16 +55,16 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 }
 
 // Desafio 8
-function fizzBuzz(numero = 0) {
+function fizzBuzz() {
   let out = [];
   let entrada = [2, 15, 7, 9, 45];
-  function multTres(numero){
-    if (numero % 3 === 0){
+  function multTres(numero) {
+    if (numero % 3 === 0) {
       return true;
     } return false;
   }
-  function  multCinco(numero){
-    if (numero % 5 === 0){
+  function  multCinco(numero) {
+    if (numero % 5 === 0) {
       return true;
     } return false;
   }
