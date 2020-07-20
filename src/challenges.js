@@ -26,8 +26,8 @@ function splitSentence(str) {
       strArray[counter] = txt;
     } else {
       if (txt != '') {
-          counter += 1;
-          txt = '';
+        counter += 1;
+        txt = '';
       }
     }
   }
@@ -37,13 +37,13 @@ function splitSentence(str) {
 // Desafio 4
 function concatName(strArray) {
   // seu código aqui
-  return strArray[strArray.length-1] + ', ' + strArray[0];
+  return strArray[strArray.length - 1] + ', ' + strArray[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return (3*wins) + (1*ties);
+  return (3 * wins) + (1 * ties);
 }
 
 // Desafio 6
@@ -68,13 +68,15 @@ function highestCount(numArray) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let res;
   if (((cat1 - mouse) ** 2) ** 0.5 < ((cat2 - mouse) ** 2) ** 0.5) {
-    return 'cat1';
+    res = 'cat1';
   } else if (((cat1 - mouse) ** 2) ** 0.5 > ((cat2 - mouse) ** 2) ** 0.5) {
-    return 'cat2';
+    res = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    res 'os gatos trombam e o rato foge';
   }
+  return res;
 }
 
 // Desafio 8
@@ -98,52 +100,58 @@ function fizzBuzz(numArray) {
 // Desafio 9
 function encode(strEntry) {
   // seu código aqui
-  let str = '';
-  for (let i = 0; i < strEntry.length; i += 1) {
-    switch (strEntry[i]) {
-      case 'a':
-        str += '1';
-        break;
-      case 'e':
-        str += '2';
-        break;
-      case 'i':
-        str += '3';
-        break;
-      case 'o':
-        str += '4';
-        break;
-      case 'u':
-        str += '5';
-        break;
-      default:
-        str += strEntry[i];
-    }
-  }
-  return str;
+  return encodeOrDecode(stEntry, 'encode');
 }
 function decode(strEntry) {
   // seu código aqui
-  let str = '';
-  for (let i = 0; i < strEntry.length; i += 1) {
-    switch (strEntry[i]) {
-      case '1':
-        str += 'a';
-        break;
-      case '2':
-        str += 'e';
-        break;
-      case '3':
-        str += 'i';
-        break;
-      case '4':
-        str += 'o';
-        break;
-      case '5':
-        str += 'u';
-        break;
-      default:
-        str += strEntry[i];
+  return encodeOrDecode(stEntry, 'decode');
+}
+
+function decodeOrEncode (strEntry, operation) {
+  et str = '';
+  if (operation === 'decode') {
+    for (let i = 0; i < strEntry.length; i += 1) {
+      switch (strEntry[i]) {
+        case '1':
+          str += 'a';
+          break;
+        case '2':
+          str += 'e';
+          break;
+        case '3':
+          str += 'i';
+          break;
+        case '4':
+          str += 'o';
+          break;
+        case '5':
+          str += 'u';
+          break;
+        default:
+          str += strEntry[i];
+      }
+    }
+  } else if (operation === 'encode') {
+    for (let i = 0; i < strEntry.length; i += 1) {
+      switch (strEntry[i]) {
+        case 'a':
+          str += '1';
+          break;
+        case 'e':
+          str += '2';
+          break;
+        case 'i':
+          str += '3';
+          break;
+        case 'o':
+          str += '4';
+          break;
+        case 'u':
+          str += '5';
+          break;
+        default:
+          str += strEntry[i];
+      }
     }
   }
   return str;
@@ -152,19 +160,21 @@ function decode(strEntry) {
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
+  let res;
   if (tech == '') {
-    return 'Vazio!';
+    res = 'Vazio!';
   } else {
     let str = [];
     tech = tech.sort();
     for (let i = 0; i < tech.length; i += 1) {
       str[i] = {
         tech: tech[i],
-        name: name,
+        name,
       };
     }
-    return str;
+    res = str;
   }
+  return res;
 }
 
 // Desafio 11
@@ -176,33 +186,33 @@ function generatePhoneNumber(numbersArray) {
     let phone = '';
     let i = 0;
     while (i < numbersArray.length) {
-      if (numbersArray[i] < 0 || numbersArray[i] > 9){
+      if (numbersArray[i] < 0 || numbersArray[i] > 9) {
         return 'não é possível gerar um número de telefone com esses valores';
-        break;
-      }
-      let hits = 0;
-      let ii = 0;
-      while(ii < numbersArray.length) {
-        if (numbersArray[ii] - numbersArray[i] == 0) {
-          hits += 1;
-          if (hits > 2) {
-            return 'não é possível gerar um número de telefone com esses valores';
-            break;
+      } else {
+        let hits = 0;
+        let ii = 0;
+        while(ii < numbersArray.length) {
+          if (numbersArray[ii] - numbersArray[i] == 0) {
+            hits += 1;
+            if (hits > 2) {
+              return 'não é possível gerar um número de telefone com esses valores';
+              break;
+            }
           }
+        ii++;
         }
-      ii++;
       }
-    if (i == 0){
-      phone += '(' + numbersArray[i];
-    } else if (i == 1) {
-      phone += numbersArray[i] + ') ';
-    } else if (i == 6) {
-      phone += numbersArray[i] + '-';
-    } else {
-      phone += numbersArray[i];
-    }
-    i++;
-    }
+      if (i == 0){
+        phone += '(' + numbersArray[i];
+      } else if (i == 1) {
+        phone += numbersArray[i] + ') ';
+      } else if (i == 6) {
+        phone += numbersArray[i] + '-';
+      } else {
+        phone += numbersArray[i];
+      }
+      i++;
+      }
     return phone;
   }
 }
