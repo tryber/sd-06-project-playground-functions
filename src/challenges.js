@@ -18,7 +18,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(nomeCompleto) {
-  let nome = nomeCompleto[nomeCompleto.length - 1] + ', ' + nomeCompleto[0];
+  let nome = nomeCompleto[nomeCompleto.length - 1];
+  nome += ', ';
+  nome += nomeCompleto[0];
   return nome;
 }
 
@@ -78,9 +80,8 @@ function encode(str) {
   let aux = str.split('');
   str = '';
   let teste;
-  for (let index = 0 ; index < aux.length; index += 1) {
-    teste = aux[index];
-    switch (teste) {
+  for (let index = 0; index < aux.length; index += 1) {
+    switch (aux[index]) {
       case 'a' :
         aux[index] = '1';
         break;
@@ -96,19 +97,20 @@ function encode(str) {
       case 'u' :
         aux[index] = '5';
         break;
+      default:
+        break;
     }
     str += aux[index];
   }
   return str;
 }
-console.log(encode("hi there!"));
+
 function decode(str) {
   let aux = str.split('');
   str = '';
   let teste;
-  for (let index = 0 ;index < aux.length; index += 1) {
-    teste = aux[index];
-    switch (teste) {
+  for (let index = 0; index < aux.length; index += 1) {
+    switch (aux[index]) {
       case '1' :
         aux[index] = 'a';
         break;
@@ -123,6 +125,8 @@ function decode(str) {
         break;
       case '5' :
         aux[index] = 'u';
+        break;
+      default:
         break;
     }
     str += aux[index];
