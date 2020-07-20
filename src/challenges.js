@@ -60,7 +60,7 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 // Desafio 8
 function fizzBuzz(a = [2, 15, 7, 9, 45]) {
   let b = [];
-  for (let x in a) {
+  for (let x = 0; x < a.length; x += x) {
     let i = a[x];
     if (i % 3 === 0 && i % 5 === 0) {
       b.push('fizzBuzz');
@@ -76,13 +76,12 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
 }
 
 // Desafio 9
-function encode(a = 'hi there, this is your new house', coded = []) {
-  let toCode = [];
-  for (let x in a) {
+function encode(a = 'hi there, this is your new house', coded = [], toCode = []) {
+  for (let x = 0; x < a.length; x += x) {
     let j = a[x];
     toCode += j;
   }
-  for (let x in toCode) {
+  for (let x = 0; x < toCode.length; x += x) {
     let i = toCode[x];
     if (i === 'a') {
       i = '1'
@@ -107,13 +106,8 @@ function encode(a = 'hi there, this is your new house', coded = []) {
 }
 
 function decode(a = 'h3 th2r2!', decoded = []) {
-  let toDecode = [];
   for (let x = 0; x < a.length; x += x) {
-    let j = a[x]
-    toDecode += j;
-  }
-  for (let x = 0; x < toDecode.length; x += x) {
-    let i = toDecode[x];
+    let i = a[x];
     if (i === '1') {
       i = 'a'
       decoded += i
@@ -152,13 +146,10 @@ function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lu
       if (a.tech > b.tech) return 1;
       return 0;
     })
-    console.log(i)
     return i;
   }
   return 'Vazio!';
 }
-
-techList();
 
 // Desafio 11
 function generatePhoneNumber() {
