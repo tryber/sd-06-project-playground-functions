@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(a = true , b =  false ) {
+function compareTrue(a = true, b = false) {
   if (a === true && b === true) {
     return true;
   }
@@ -83,7 +83,7 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
 function encode(a = ['hi there, this is your new house'], coded = []) {
   for (let x = 0; x < a.length; x += 1) {
     let l = a[x];
-    if (l === 'a'){
+    if (l === 'a') {
       coded += '1';
     } else if (l === 'e') {
       coded += '2';
@@ -103,7 +103,7 @@ function encode(a = ['hi there, this is your new house'], coded = []) {
 function decode(b = 'h3 th2r2! wh1ts 5p', deCoded = []) {
   for (let y = 0; y < b.length; y += 1) {
     let d = b[y];
-    if (d === '1'){
+    if (d === '1') {
       deCoded += 'a';
     } else if (d === '2') {
       deCoded += 'e';
