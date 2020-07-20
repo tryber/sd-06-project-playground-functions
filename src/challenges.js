@@ -89,9 +89,9 @@ function fizzBuzz(numeros) {
   for (let i in numeros) {
     if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
       retorno.push('fizzBuzz')
-    } else if (numeros[i] % 3 == 0 && numeros[i] % 5 !== 0) {
+    } else if (numeros[i] % 3 === 0 && numeros[i] % 5 !== 0) {
       retorno.push('fizz')
-    } else if (numeros[i] % 3 !== 0 && numeros[i] % 5 == 0) {
+    } else if (numeros[i] % 3 !== 0 && numeros[i] % 5 === 0) {
       retorno.push('buzz')
     } else {
       retorno.push('bug!')
@@ -129,15 +129,15 @@ function decode(palavras) {
   let result = [];
   let verifica = palavras.split('');
   for (let i in palavras) {
-    if (verifica[i] == '1') {
+    if (verifica[i] === '1') {
       verifica[i] = 'a';
-    } else if (verifica[i] == '2') {
+    } else if (verifica[i] === '2') {
       verifica[i] = 'e';
-    } else if (verifica[i] == '3') {
+    } else if (verifica[i] === '3') {
       verifica[i] = 'i';
-    } else if (verifica[i] == '4') {
+    } else if (verifica[i] === '4') {
       verifica[i] = 'o';
-    } else if (verifica[i] == '5') {
+    } else if (verifica[i] === '5') {
       verifica[i] = 'u';
     } else {
       verifica[i] = verifica[i];
@@ -170,7 +170,7 @@ function techList(nomesTech, nome) {
 function generatePhoneNumber(numeros) {
   // seu código aqui
   let telefone = `(${numeros[0]}${numeros[1]}) `;
-  if (numeros.length == 11) {
+  if (numeros.length === 11) {
     for (let i = 2; i < numeros.length; i += 1) {
       telefone += numeros[i]
       if (i === 6) {
@@ -188,7 +188,6 @@ function generatePhoneNumber(numeros) {
   let repetido = 0;
   let numero = 0;
   let iNumero = 0;
-  let number = 0;
   for (let i in numeros) {
     let verificaNumero = numeros[i];
     for (let i2 in numeros) {
@@ -201,7 +200,6 @@ function generatePhoneNumber(numeros) {
       iNumero = i;
     }
     numero = 0
-    number = numeros[iNumero];
   }
   for (let i in numeros) {
     if (numeros[iNumero] === numeros[i] && repetido >= 3) {
