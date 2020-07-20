@@ -16,7 +16,7 @@ function splitSentence(text) {
 // Desafio 4
 function concatName(stringArray) {
   let extractArray = (`${stringArray[stringArray.length - 1]}, ${stringArray[0]}`);
-  arrayToStr = extractArray.toString();
+  let arrayToStr = extractArray.toString();
   return arrayToStr;
 }
 
@@ -27,32 +27,51 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let highestNumbers = numbers[0];
+  let highestNumber = numbers[0];
   let countHighestNumber = 0;
 
-  for (let highIndex = 0; highIndex < arrayNumbers.length; highIndex += 1) {
-    if (numbers[highIndex] > highestNumbers) {
-      highestNumbers = numbers[highIndex]
+  for (let highIndex = 0; highIndex < numbers.length; highIndex += 1) {
+    if (numbers[highIndex] > highestNumber) {
+      countHighestNumber = 1;
+      highestNumber = numbers[highIndex];
+    } else if (numbers[highIndex] === highestNumber) {
+      countHighestNumber += 1;
     }
   }
-
-  for (let countIndex = 0; countIndex < arrayNumbers.length; countIndex += 1) {
-    if (highestNumbers === numbers[countIndex]) {
-      countHighestNumber += 1
-    }
-  }
-
   return countHighestNumber;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1 = mouse - cat1;
+  let distCat2 = mouse - cat2;
+  let reached = "";
+
+  if (Math.abs(distCat1) < Math.abs(distCat2)) {
+    reached = "cat1";
+  } else if (Math.abs(distCat2) < Math.abs(distCat1)) {
+    reached = "cat2";
+  } else {
+    reached = "os gatos trombam e o rato foge";
+  }
+  return reached;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
+      numbers[index] = "fizzBuzz";
+    } else if (numbers[index] % 3 === 0) {
+      numbers[index] = "fizz";
+    } else if (numbers[index] % 5 === 0) {
+      numbers[index] = "buzz";
+    } else {
+      numbers[index] = "bug!"
+    }
+  }
+  return numbers;
 }
 
 // Desafio 9
