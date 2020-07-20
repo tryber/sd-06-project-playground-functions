@@ -148,7 +148,7 @@ function generatePhoneNumber(numbers) {
     if (numbers[index] === numbers[nextIndex]) {
       countRepeated += 1;
     } else {
-      countRepeated = 0;
+      countRepeated = 1;
     }
     nextIndex += 1;
   }
@@ -175,7 +175,6 @@ function hydrate(str) {
   for (let s in str) {
     if (regex.test(str[s])) {
       count += parseInt(str[s]);
-      console.log (count);
     }
   }
   if (count > 1) {
