@@ -1,35 +1,36 @@
 // Desafio 1
 function compareTrue(coisa1, coisa2) {
- let comparado;
- comparado = coisa1 && coisa2;
- return comparado;
+  let comparado;
+  comparado = coisa1 && coisa2;
+  return comparado;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   let areatri;
-  areatri = (base * height) /2;
+  areatri = (base * height) / 2;
   return areatri;
 }
 
 // Desafio 3
 function splitSentence(frase) {
   let dividida;
-  dividida = frase.split(" ");
+  dividida = frase.split(' ');
   return dividida;
 }
 
 // Desafio 4
 function concatName(lista) {
   let extremos;
-  extremos = lista[lista.length - 1], lista[0];
+  extremos = `${lista[lista.length - 1]}, ${lista[0]}`;
   return extremos
+  //esse $ foi ideia do VScode, mas parece fazer sentido... não topei a ideia de colocar em outro arquivo .js
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let pontos
-  pontos = wins * 3 + ties
+  pontos = (wins * 3) + ties
   return pontos
 }
 
