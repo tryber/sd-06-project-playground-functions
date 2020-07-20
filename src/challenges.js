@@ -114,11 +114,56 @@ function fizzBuzz(bArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(bString) {
+  let aString = bString.split('');
+  let num = [1,2,3,4,5];
+  let rString = ""
+
+for (let index = 0; index < aString.length; index +=1) {
+
+  if (aString[index] === 'a') {
+  aString[index] = num[0];
+  }else if (aString[index] === 'e') {
+  aString[index] = num[1];     
+  }else if (aString[index] === 'i') {
+  aString[index] = num[2];    
+  }else if (aString[index] === 'o') {
+  aString[index] = num[3];
+  }else if (aString[index] === 'u') {
+  aString[index] = num[4];
+  }             
+} 
+
+for (let index = 0; index < aString.length; index++) {
+  rString += aString[index];    
 }
-function decode() {
-  // seu código aqui
+  return rString;
+}
+
+function decode(bString) {
+  let aString = bString.split('');
+  let word = ['a','e','i','o','u'];
+  let rString = ""
+
+for (let index = 0; index < aString.length; index +=1) {
+
+  if (aString[index] === '1') {
+  aString[index] = word[0];
+  }else if (aString[index] === '2') {
+  aString[index] = word[1];     
+  }else if (aString[index] === '3') {
+  aString[index] = word[2];    
+  }else if (aString[index] === '4') {
+  aString[index] = word[3];
+  }else if (aString[index] === '5') {
+  aString[index] = word[4];
+  }             
+} 
+
+for (let index = 0; index < aString.length; index++) {
+  rString += aString[index];    
+}
+  return rString;
 }
 
 // Desafio 10
