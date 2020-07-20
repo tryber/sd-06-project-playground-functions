@@ -74,13 +74,13 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
 
 // Desafio 9
 function encode(a = 'hi there, this is your new house') {
-  let code = { a : '1', e : '2', i : '3', o : '4', u : '5' };
+  let code = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   a = a.replace(/[aeiou]/g, m => code[m]);
   return a;
 }
 
 function decode(b = 'h3 th2r2! wh1ts 5p') {
-  let code = { 1 : 'a', 2 : 'e', 3 : 'i', 4 : 'o', 5 : 'u' };
+  let code = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   b = b.replace(/[12345]/g, m => code[m]);
   return b;
 }
