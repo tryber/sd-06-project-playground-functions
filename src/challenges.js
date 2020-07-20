@@ -111,38 +111,17 @@ function encodeDecodeCore(string) {
 
   for (let i = 0; i < string.length; i += 1) {
     switch (string[i]) {
-      case 'a':
-        processedString += '1';
-        break;
-      case 'e':
-        processedString += '2';
-        break;
-      case 'i':
-        processedString += '3';
-        break;
-      case 'o':
-        processedString += '4';
-        break;
-      case 'u':
-        processedString += '5';
-        break;
-      case '1':
-        processedString += 'a';
-        break;
-      case '2':
-        processedString += 'e';
-        break;
-      case '3':
-        processedString += 'i';
-        break;
-      case '4':
-        processedString += 'o';
-        break;
-      case '5':
-        processedString += 'u';
-        break;
-      default:
-        processedString += string[i];
+      case 'a': processedString += '1'; break;
+      case 'e': processedString += '2'; break;
+      case 'i': processedString += '3'; break;
+      case 'o': processedString += '4'; break;
+      case 'u': processedString += '5'; break;
+      case '1': processedString += 'a'; break;
+      case '2': processedString += 'e'; break;
+      case '3': processedString += 'i'; break;
+      case '4': processedString += 'o'; break;
+      case '5': processedString += 'u'; break;
+      default: processedString += string[i];
     }
   }
 
