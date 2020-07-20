@@ -34,16 +34,44 @@ function footballPoints(wins, ties) {
     // definir variavel que vai receber o numero de pontos
     let campeonato = 0
         //definir pontuação
-    campeonato = (3 * wins) + ties
+        //ties = 1 ponto
+        //wins = 3 pontos
+    campeonato = ties + (3 * wins)
         //retornar pontos
     return campeonato
 }
 console.log(footballPoints(1, 2))
 
 // Desafio 6
-function highestCount() {
-    // seu código aqui
+function highestCount(numbers) {
+    let freq = 0
+    let biggerNumber = numbers[0]
+        // criar iteração para percorrer array
+    for (let index = 0; index < numbers.length; index++) {
+        //criar condição de parada
+        //se o maior numero for maior que numero de indice x
+        if (biggerNumber < numbers[index]) {
+            //condição de parada
+            biggerNumber = numbers[index]
+
+        }
+    }
+    // percorrendo o array de numeros para encontrar a frequencia
+    for (let indice = 0; indice < numbers.length; indice++) {
+        if (biggerNumber === numbers[indice]) {
+            // condição para contagem de frequencia
+            freq = freq + 1
+        }
+    }
+    //retornar contagem
+    return freq
 }
+
+
+let entrada = [1, 2, 3, 5, 5, 5, 5]
+console.log(highestCount(entrada))
+
+
 
 // Desafio 7
 function catAndMouse() {
