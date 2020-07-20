@@ -196,11 +196,11 @@ function triangleCheck(arrayTriangle) {
   let sideMod2 = lineA - lineC;
   let sideMod3 = lineA - lineB;
 
-  if ( match.abs(sideMod1) < lineA && (lineB + lineC) > a ) {
+  if ( Math.abs(sideMod1) < lineA && (lineB + lineC) > a ) {
     return true;
-  } else if (match.abs(sideMod2) < lineA && (lineA + lineC) > b) {
+  } else if (Math.abs(sideMod2) < lineA && (lineA + lineC) > b) {
     return true;
-  } else if (match.abs(sideMod3) < lineC && (lineA + lineB) > b) {
+  } else if (Math.abs(sideMod3) < lineC && (lineA + lineB) > b) {
     return true;
   } return false;
   
