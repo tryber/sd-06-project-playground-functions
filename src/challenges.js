@@ -55,21 +55,29 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 }
 
 // Desafio 8
-function fizzBuzz(entrada = [2, 15, 7, 9, 45], saida = []) {
-  for (let x = 0; numero < entrada.length; x += 1) {
-    let i = entrada[numero];
-    // declarar a regra em uma variável
-    if (i % 3 === 0 && i % 5 === 0) {
-      saida.push('fizzBuzz');
-    } else if (i % 3 === 0) {
-      saida.push('fizz');
-    } else if (i % 5 === 0) {
-      saida.push('buzz');
-    } else {
-      saida.push('bug!');
-    }
+function fizzBuzz(numero = 0) {
+  let entrada = [2, 15, 7, 9, 45];
+  function multTres(numero){
+    if (numero % 3 === 0){
+      return true;
+    } return false;
   }
-  return saida;
+  function  multCinco(numero){
+    if (numero % 5 === 0){
+      return true;
+    } return false;
+  }
+
+  for ( let i = 0; i < entrada.length; i += 1) {
+    let numero = entrada[i];
+    if (multTres(numero) && multCinco(numero)) {
+      return 'fizzBuzz';
+    } else if (multTres(numero)) {
+      return 'fizz';
+    } else if (multCinco(numero)) {
+      return 'Buzz';
+    } return 'bug!';
+  }
 }
 
 // Desafio 9
