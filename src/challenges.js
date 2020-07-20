@@ -152,8 +152,19 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+    let waterCup = 0;
+    let numbers = string.match(/\d+/g).map(Number);
+    for (let i = 0; i < numbers.length; i++){
+      waterCup += numbers[i];
+    }
+    let stringHydrate = ""
+    if (waterCup === 1){
+      stringHydrate = waterCup + " copo de água";
+    } else {
+      stringHydrate = waterCup + " copos de água";
+    }
+    return stringHydrate;
 }
 
 
