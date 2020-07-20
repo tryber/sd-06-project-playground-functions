@@ -1,22 +1,15 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  // seu código aqui
-  let res = false;
-  if ((bool1 && bool2) === true) {
-    res = true;
-  }
-  return res;
+  return (bool1 === true && bool2 === true) ? true : false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
   return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(str) {
-  // seu código aqui
   let txt = '';
   let strArray = [];
   let counter = 0;
@@ -24,11 +17,9 @@ function splitSentence(str) {
     if (str[i] != ' ') {
       txt += str[i];
       strArray[counter] = txt;
-    } else {
-      if (txt != '') {
+    } else if (str[i] == ' ' && txt != '') {
         counter += 1;
         txt = '';
-      }
     }
   }
   return strArray;
@@ -36,38 +27,30 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(strArray) {
-  // seu código aqui
   return strArray[strArray.length - 1] + ', ' + strArray[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
   return (3 * wins) + (1 * ties);
 }
 
 // Desafio 6
 function highestCount(numArray) {
-  // seu código aqui
   let greater = 0;
   for (let i = 0; i < numArray.length; i += 1) {
-    if (numArray[i] > greater) {
-      greater = numArray[i];
-    }
+    (numArray[i] > greater) ? greater = numArray[i] : greater = greater;
   }
 
   let counter = 0;
   for (let i = 0; i < numArray.length; i += 1) {
-    if (numArray[i] === greater) {
-      counter += 1;
-    }
+    (numArray[i] === greater) ? counter += 1 : counter = counter;
   }
   return counter;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
   let res;
   if (((cat1 - mouse) ** 2) ** 0.5 < ((cat2 - mouse) ** 2) ** 0.5) {
     res = 'cat1';
@@ -81,7 +64,6 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numArray) {
-  // seu código aqui
   let strArray = [];
   for (let i = 0; i < numArray.length; i += 1) {
     if (numArray[i] % 5 === 0 && numArray[i] % 3 === 0) {
@@ -98,60 +80,25 @@ function fizzBuzz(numArray) {
 }
 
 // Desafio 9
-function encode(strEntry) {
-  // seu código aqui
-  return encodeOrDecode(strEntry, 'encode');
+function encode(strMsg) {
+  return encodeOrDecode(strMsg, 'encode');
 }
-function decode(strEntry) {
-  // seu código aqui
-  return encodeOrDecode(strEntry, 'decode');
+function decode(strMsg) {
+  return encodeOrDecode(strMsg, 'decode');
 }
 
 function encodeOrDecode (strEntry, operation) {
-  let str = '';
-  if (operation === 'decode') {
+  let pair = {number : ['1', '2', '3', '4', '5'],
+              letter : ['a', 'e', 'i', 'o', 'u'],
+            }
+  let str= '';
+  if (operation == 'encode') {
     for (let i = 0; i < strEntry.length; i += 1) {
-      switch (strEntry[i]) {
-        case '1':
-          str += 'a';
-          break;
-        case '2':
-          str += 'e';
-          break;
-        case '3':
-          str += 'i';
-          break;
-        case '4':
-          str += 'o';
-          break;
-        case '5':
-          str += 'u';
-          break;
-        default:
-          str += strEntry[i];
-      }
-    }
-  } else if (operation === 'encode') {
+      str += (strEntry[i] == 'a' || strEntry[i] === 'e' || strEntry[i] === 'i' || strEntry[i] === 'o' || strEntry[i] === 'u') ? pair.number[pair.letter.indexOf(strEntry[i])] : strEntry[i];
+    } 
+  } else if (operation == 'decode') {
     for (let i = 0; i < strEntry.length; i += 1) {
-      switch (strEntry[i]) {
-        case 'a':
-          str += '1';
-          break;
-        case 'e':
-          str += '2';
-          break;
-        case 'i':
-          str += '3';
-          break;
-        case 'o':
-          str += '4';
-          break;
-        case 'u':
-          str += '5';
-          break;
-        default:
-          str += strEntry[i];
-      }
+      str += (strEntry[i] === '1' || strEntry[i] === '2' || strEntry[i] === '3' || strEntry[i] === '4' || strEntry[i] === '5') ? pair.letter[pair.number.indexOf(strEntry[i])] : strEntry[i];
     }
   }
   return str;
@@ -159,27 +106,24 @@ function encodeOrDecode (strEntry, operation) {
 
 // Desafio 10
 function techList(tech, name) {
-  // seu código aqui
   let res;
   if (tech == '') {
     res = 'Vazio!';
   } else {
-    let str = [];
+    res = [];
     tech = tech.sort();
     for (let i = 0; i < tech.length; i += 1) {
-      str[i] = {
+      res[i] = {
         tech: tech[i],
         name,
       };
     }
-    res = str;
   }
   return res;
 }
 
 // Desafio 11
 function generatePhoneNumber(numbersArray) {
-  // seu código aqui
   if (numbersArray.length != 11) {
     return 'Array com tamanho incorreto.';
   } else {
@@ -223,11 +167,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let condA = ((lineA < (lineB + lineC)) && (lineA > ((lineB - lineC) ** 2) ** 0.5)) ? true : false;
   let condB = ((lineB < (lineA + lineC)) && (lineB > ((lineA - lineC) ** 2) ** 0.5)) ? true : false;
   let condC = ((lineC < (lineB + lineA)) && (lineC > ((lineB - lineA) ** 2) ** 0.5)) ? true : false;
-  if (condA == true && condB == true && condC == true){
-    return true;
-  } else {
-    return false;
-  }
+  return (condA == true && condB == true && condC == true) ? true : false;
 }
 
 // Desafio 13
@@ -235,18 +175,13 @@ function hydrate(str) {
   // seu código aqui
   let nCopos = 0;
   for (let i = 0; i < str.length; i += 1){
-    if ( parseInt(str[i]) > 0) {
+    if (parseInt(str[i]) > 0) {
       nCopos += parseInt(str[i]);
     }
   }
 
-  if (parseInt(nCopos) > 1) {
-    return nCopos + ' copos de água';
-  } else {
-    return nCopos + ' copo de água';
-  }
+  return (parseInt(nCopos) > 1) ? nCopos + ' copos de água' : nCopos + ' copo de água';
 }
-
 
 module.exports = {
   calcArea,
@@ -265,7 +200,6 @@ module.exports = {
   triangleCheck,
 }
 
-//Tests
 function checkCompareTrue() {
   (compareTrue (true, true) === true && compareTrue (true, false) === false && compareTrue (false, false) === false) ? console.log('Function compareTrue validated!') : console.log('Function compareTrue invalidated!'); 
 }
@@ -325,9 +259,8 @@ function checkHydrate() {
   (hydrate('0 cachaça, 5 cervejas e 4 copo de vinho') === '9 copos de água' && hydrate('1 cachaça, 0 cervejas e 0 copo de vinho') === '1 copo de água') ? console.log('Function hydrate validated!') : console.log('Function hydrate invalidated!') ;
 }
 
-//Call to tests
 function testAll() {
-  checkCompareTrue();
+  checkCompareTrue(); 
   checkCalcArea();
   checkSplitSentence();
   checkConcatName();
@@ -341,7 +274,5 @@ function testAll() {
   checkGeneratePhoneNumber();
   checkTriangleCheck();
   checkHydrate();
-
 }
-
 testAll();
