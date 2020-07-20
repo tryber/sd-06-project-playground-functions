@@ -117,9 +117,27 @@ function encode(param1) {
 }
 console.log(encode('hi there!'))
 
-function decode() {
-  // seu código aqui
+function decode(param1) {
+  if (param1) {
+    expressao = param1.replace(/1/gi, 'a');
+  }
+  if (expressao) {
+    expressao = expressao.replace(/2/gi, 'e');
+  }
+  if (expressao) {
+    expressao = expressao.replace(/3/gi, 'i');
+  }
+  if (expressao) {
+    expressao = expressao.replace(/4/gi, 'o');
+  }
+  if (expressao) {
+    expressao = expressao.replace(/5/gi, 'u');
+  }
+  return expressao;
 }
+console.log(decode('h3 th2r2!'))
+
+
 
 // Desafio 10
 function techList() {
