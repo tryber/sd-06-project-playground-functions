@@ -150,7 +150,7 @@ function techList(recArray, name) {
   }
 }
 
-// Desafio 11
+// Desafio 11 - OK
 function generatePhoneNumber(phoneNumber) {
   // seu código aqui
 
@@ -195,10 +195,33 @@ function generatePhoneNumber(phoneNumber) {
   }
 }
 
-// Desafio 12
-function triangleCheck() {
+// Desafio 12 - ANDAMENTO
+
+/* para ser um triângulo:
+  | b - c | < a < b + c
+  | a - c | < b < a + c
+  | a - b | < c < a + b
+*/
+
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-}
+  let bmenosC = Math.abs(lineB - lineC);
+  let amenosC = Math.abs(lineA - lineC);
+  let amenosB = Math.abs(lineA - lineB);
+  let bmaisC = lineB + lineC;
+  let amaisC = lineA + lineC;
+  let amaisB = lineA + lineB;
+  if (
+    (bmenosC < lineA) && (lineA < bmaisC) ||
+    (amenosC < lineB) && (lineB < amaisC) ||
+    (amenosB < lineC) && (lineC < amaisB)
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+
+  }
 
 // Desafio 13
 function hydrate() {
