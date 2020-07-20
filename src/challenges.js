@@ -155,17 +155,6 @@ function techList(list, name) {
 // console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11
-function generatePhoneNumber(n) {
-  let foneNumber = '';
-  if (n.length !== 11) {
-    foneNumber = 'Array com tamanho incorreto.';
-  } else if (checkNumbers(n)) {
-    foneNumber = 'não é possível gerar um número de telefone com esses valores';
-  }
-  foneNumber = `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]} - ${n[7]}${n[8]}${n[9]}${n[10]}`;
-  return foneNumber;
-}
-
 function timesCount(list) {
   let howManyTimes = {};
   for (let i in list) {
@@ -175,11 +164,13 @@ function timesCount(list) {
       howManyTimes[list[i]] = 1;
     }
   }
+  let result = false;
   for (let j in howManyTimes) {
     if (howManyTimes[j] >= 3) {
-      return true;
+      result = true;
     }
   }
+  return result;
 }
 
 function checkNumbers(numbers) {
@@ -192,6 +183,19 @@ function checkNumbers(numbers) {
       return true;
     }
   }
+  return false;
+}
+
+function generatePhoneNumber(n) {
+  let result = '';
+  if (n.length !== 11) {
+    result = 'Array com tamanho incorreto.';
+  } else if (checkNumbers(n)) {
+    result = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    result = `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]} - ${n[7]}${n[8]}${n[9]}${n[10]}`;
+  }
+  return result;
 }
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
