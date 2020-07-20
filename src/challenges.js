@@ -121,7 +121,27 @@ function decode(palavras) {
 }
 
 // Desafio 10
-function techList() {
+function techList(tecnologias, name) {
+  let listaObjetos = [];
+  for (i = 0; i < tecnologias.length; i += 1) {
+    let objeto = {
+      tech: tecnologias[i],
+      nome: name
+    }
+    listaObjetos[i] = objeto;
+  }
+  if (tecnologias.length === 0) {
+    return 'Vazio!';
+  }
+  return listaObjetos.sort(compare);
+}
+function compare(a, b) {
+  if (a.tech < b.tech) {
+    return -1;
+  } else if (a.tech > b.tech) {
+    return 1;
+  }
+  return 0;
 }
 
 // Desafio 11
