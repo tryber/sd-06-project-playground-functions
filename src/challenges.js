@@ -62,10 +62,22 @@ function catAndMouse(rato, gato1, gato2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumber) {
+let arrayString = [];
+  for (i = 0; i < arrayNumber.length; i += 1) {
+    if ((arrayNumber[i] % 3 === 0) && (arrayNumber[i] % 5 !== 0)) {
+      arrayString.push('fizz');
+    }
+    if ((arrayNumber[i] % 5 === 0) && (arrayNumber[i] % 3 !== 0)) {
+      arrayString.push('buzz');
+    }
+    if ((arrayNumber[i] % 5 === 0) && (arrayNumber[i] % 3 === 0)) {
+      arrayString.push('FizzBuzz');
+    }
+    arrayString.push('bug!');
+  }
+  return arrayString;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
