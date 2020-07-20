@@ -73,50 +73,16 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
 }
 
 // Desafio 9
-function encode(a = 'hi there, this is your new house', coded = []) {
-  for (let x = 0; x < a.length; x += 1) {
-    let l = a[x];
-    if (l === 'a') {
-      coded += '1';
-    } else if (l === 'e') {
-      coded += '2';
-    } else if (l === 'i') {
-      coded += '3';
-    } else if (l === 'o') {
-      coded += '4';
-    } else if (l === 'u') {
-      coded += '5';
-    } else {
-      coded += l;
-    }
-  }
-  return coded;
+function encode(a = 'hi there, this is your new house') {
+  let code = {'a':'1', 'e': '2', 'i': '3', 'o': '4', 'u': '5'};
+  a = a.replace(/[aeiou]/g, m => code[m]);
+  return a;
 }
 
 function decode(b = 'h3 th2r2! wh1ts 5p') {
-  let deCoded = [];
-  function dictionary(character) {
-    let x = null;
-    if (character === '1') {
-      x = 'a';
-    } else if (character === '2') {
-      x = 'e';
-    } else if (character === '3') {
-      x = 'i';
-    } else if (character === '4') {
-      x = 'o';
-    } else if (character === '5') {
-      x = 'u';
-    } else {
-      x = character;
-    }
-    return x;
-    }
-  for (let y = 0; y < b.length; y += 1) {
-    let d = b[y];
-    deCoded += dictionary(d);
-  }
-  return deCoded;
+  let code = {'1':'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u'};
+  b = b.replace(/[12345]/g, m => code[m]);
+  return b;
 }
 
 // Desafio 10
