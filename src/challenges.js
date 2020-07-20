@@ -56,6 +56,7 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 
 // Desafio 8
 function fizzBuzz(numero = 0) {
+  let out = [];
   let entrada = [2, 15, 7, 9, 45];
   function multTres(numero){
     if (numero % 3 === 0){
@@ -71,13 +72,14 @@ function fizzBuzz(numero = 0) {
   for ( let i = 0; i < entrada.length; i += 1) {
     let numero = entrada[i];
     if (multTres(numero) && multCinco(numero)) {
-      return 'fizzBuzz';
+      out += 'fizzBuzz';
     } else if (multTres(numero)) {
-      return 'fizz';
+      out += 'fizz';
     } else if (multCinco(numero)) {
-      return 'Buzz';
-    } return 'bug!';
+      out += 'Buzz';
+    } out += 'bug!';
   }
+  return out;
 }
 
 // Desafio 9
