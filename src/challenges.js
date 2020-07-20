@@ -78,7 +78,7 @@ function fizzBuzz(numeros) {
 // Desafio 9
 function encode(str) {
   str = str.split('');
-  aux = '';
+  let aux = '';
   for (let index = 0; index < str.length; index += 1) {
     switch (str[index]) {
       case 'a' :
