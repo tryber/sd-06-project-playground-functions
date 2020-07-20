@@ -55,11 +55,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumbers) {
   let arrayResponse = [];
   for (let number of arrayNumbers) {
-    if (number % 3 == 0 && number % 5 == 0) {
+    if (number % 3 === 0 && number % 5 === 0) {
       arrayResponse.push('fizzBuzz');
-    } else if (number % 3 == 0) {
+    } else if (number % 3 === 0) {
       arrayResponse.push('fizz');
-    } else if (number % 5 == 0) {
+    } else if (number % 5 === 0) {
       arrayResponse.push('buzz');
     } else {
       arrayResponse.push('bug!');
@@ -77,8 +77,14 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTech, name) {
+  for (tech of arrayTech) {
+    let objectResponse = {};
+    objectResponse['tech'] = tech;
+    objectResponse['name'] = name;
+    arrayResponse.push(objectResponse)
+  }
+  return arrayResponse;
 }
 
 // Desafio 11
