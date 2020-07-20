@@ -32,7 +32,7 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(lista) {
   let guardaNomes = '';
-  guardaNomes = lista[lista.length - 1] + ', ' + lista[0];
+  guardaNomes = `${lista[lista.length - 1]}, ${lista[0]}`;
   return guardaNomes;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));teste questão 4
@@ -93,79 +93,70 @@ function fizzBuzz(numeros) {
 }
 // let n = [9,25,15]; console.log(fizzBuzz(n));
 // Desafio 9
-function comparaEsubstituiVog(vogal, subVogais) {
+function comparaEsubstituiNumOuVog(vogal, numOuVogal) {
   switch (vogal) {
     case 'a':
-      subVogais = subVogais.replace('a', '1');
+      numOuVogal = numOuVogal.replace('a', '1');
       break;
     case 'e':
-      subVogais = subVogais.replace('e', '2');
+      numOuVogal = numOuVogal.replace('e', '2');
       break;
     case 'i':
-      subVogais = subVogais.replace('i', '3');
+      numOuVogal = numOuVogal.replace('i', '3');
       break;
     case 'o':
-      subVogais = subVogais.replace('o', '4');
+      numOuVogal = numOuVogal.replace('o', '4');
       break;
     case 'u':
-      subVogais = subVogais.replace('u', '5');
+      numOuVogal = numOuVogal.replace('u', '5');
       break;
-    default:
-      console.log('variavel não encontrada')
-      break;
-  } return subVogais;
-}
-function encode(subVogais) {
-  let vogal = ['a', 'e', 'i', 'o', 'u'];
-  for (let contador = 0; contador < subVogais.length; contador += 1) {
-    for (let indice = 0; indice < subVogais.length; indice += 1) {
-      if (vogal[contador] === subVogais[indice]) {
-        subVogais = comparaEsubstituiVog(vogal[contador], subVogais);
-      }
-    }
-  } return subVogais;
-}
-// console.log(encode('uoieaaaa'));
-// -- ------------
-function comparaEsubstituiNum(num, subNum) {
-  switch (num) {
     case '1':
-      subNum = subNum.replace('1', 'a');
+      numOuVogal = numOuVogal.replace('1', 'a');
       break;
     case '2':
-      subNum = subNum.replace('2', 'e');
+      numOuVogal = numOuVogal.replace('2', 'e');
       break;
     case '3':
-      subNum = subNum.replace('3', 'i');
+      numOuVogal = numOuVogal.replace('3', 'i');
       break;
     case '4':
-      subNum = subNum.replace('4', 'o');
+      numOuVogal = numOuVogal.replace('4', 'o');
       break;
     case '5':
-      subNum = subNum.replace('5', 'u');
+      numOuVogal = numOuVogal.replace('5', 'u');
       break;
     default:
       console.log('variavel não encontrada')
       break;
-  } return subNum
+  } return numOuVogal;
 }
-function decode(subNum) {
-  let numList = ['1', '2', '3', '4', '5'];
-  for (let contador = 0; contador < subNum.length; contador += 1) {
-    for (let indice = 0; indice < subNum.length; indice += 1) {
-      if (numList[contador] === subNum[indice]) {
-        subNum = comparaEsubstituiNum(numList[contador], subNum);
+function encode(vogal, subVogais) {
+
+  for (let contador = 0; contador < vogal.length; contador += 1) {
+    for (let indice = 0; indice < subVogais.length; indice += 1) {
+      if (vogal[contador] === subVogais[indice]) {
+        subVogais = comparaEsubstituiNumOuVog(vogal[contador], subVogais);
       }
     }
-  } return subNum;
+  } return subVogais;
 }
-// console.log(decode('11 22 33 44 55'));
+let vogal = ['a', 'e', 'i', 'o', 'u'];
+// console.log(encode(vogal,'se ta malucoooooouuuuuuaaaa'));
+// -- ------------
+function decode(entrada, subNum) {
+
+  subNum = encode(entrada, subNum);
+
+  return subNum;
+}
+let listasNums = ['1', '2', '3', '4', '5'];
+// console.log(decode(listasNums,'s2 t1 m1l5c4444445555551111'));
 // Desafio 10
 //-------------
 function techList(listaTec, name) {
   let novaLista = [];
   // let tecnologias;
-  if (listaTec != '') {
+  if (listaTec.length !== 0) {
     listaTec.sort();
     for (let indice = 0; indice < listaTec.length; indice += 1) {
       let tecnologias = {
@@ -176,7 +167,7 @@ function techList(listaTec, name) {
     } return novaLista;
   } return ('Vazio!');
 }
-// let listaTeste = [];
+// let listaTeste=[]; // quando array esta Vazio ja se inicia em tamanho Zero, ao adicionar algo ele aumenta 1 no tamanho;
 // console.log(techList(listaTeste, 'paulo'));
 // _____________________________________________________________________________________
 function numMaisRepetido(lista) {
@@ -197,7 +188,7 @@ function numMaisRepetido(lista) {
 function numMenorOrMaior(lista) {
   let resposta = false;
   for (let contador = 0; contador <= lista.length; contador += 1) {
-    for (let indice = 0; indice <= lista.length; indice += 1) {
+    for (let indice = 0; indice <= lista.length; indice += 1) { // Indice não é reutilizavel, apenas para contar o laço interno;
       if ((lista[contador] < 0) || (lista[contador] > 9)) {
         resposta = true;
         break;
@@ -221,7 +212,7 @@ function generatePhoneNumber(listaNum) {
   } else {
     for (let indice = 0; indice < listaNum.length; indice += 1) {
       if (indice < 1) {
-        telefone += '(' + listaNum[indice] + listaNum[indice + 1] + ') ';
+        telefone += `(${listaNum[indice]}${listaNum[indice + 1]}) `;
       } else if (indice > 1 && indice <= 6) {
         telefone += listaNum[indice];
       } if (indice >= 7) {
@@ -233,18 +224,60 @@ function generatePhoneNumber(listaNum) {
     }
   } return telefone;
 }
-// let testando = [0, 1, 6];
+// let testando = [1, 1, 9,9,8,8,7,7,5,5,];
 // console.log(generatePhoneNumber(testando))
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// _______________________________________________________________________________________________________
+function somaLadosTri(listaMedidas, indice) {
+  let somar;
+  if (indice === 0) {
+    somar = listaMedidas[indice + 1] + listaMedidas[indice + 2];
+  } else if (indice === 1) {
+    somar = listaMedidas[indice - 1] + listaMedidas[indice + 1];
+  } else if (indice === 2) {
+    somar = listaMedidas[indice - 2] + listaMedidas[indice - 1];
+  } return somar;
 }
-
+function subtLadosTri(listaMedidass, indice) {
+  let subt;
+  if (indice === 0) {
+    subt = listaMedidass[indice + 1] - listaMedidass[indice + 2];
+    subt = Math.abs(subt);
+  } else if (indice === 1) {
+    subt = listaMedidass[indice - 1] - listaMedidass[indice + 1];
+    subt = Math.abs(subt);
+  } else if (indice === 2) {
+    subt = listaMedidass[indice - 1] - listaMedidass[indice - 2];
+    subt = Math.abs(subt);
+  } return subt;
+}
+function triangleCheck(lineA, lineB, lineC) {
+  let resposta = false;
+  let soma;
+  let sub;
+  let encapsulamento = [lineA, lineB, lineC];
+  for (let indice = 0; indice < encapsulamento.length; indice += 1) {
+    soma = somaLadosTri(encapsulamento, indice);
+    sub = subtLadosTri(encapsulamento, indice);
+    if (encapsulamento[indice] < soma && encapsulamento[indice] > sub) {
+      resposta = true;
+      break;
+    }
+  } return resposta;
+}
+// console.log(triangleCheck(10, 13, 2))
+// ___________________________________________________________________________________________________________________
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  let numFrase;
+  let numFraseSomado = 0;
+  // numFrase = parseInt(frase.match(/\d/g).join(''));
+  numFrase = frase.match(/\d/g); // criando um arreio de strings numeros separado em cada indice; ex['1','2','3'];
+  for (let contador = 0; contador < numFrase.length; contador += 1) {
+    numFraseSomado += parseInt(numFrase[contador]);
+  } return (numFraseSomado + ' copos de água')
 }
-
+// console.log(hydrate('1 copos de cerveja, 3 copos de wisky e 4 copos de vodka'));
 
 module.exports = {
   calcArea,
