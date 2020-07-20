@@ -95,41 +95,65 @@ function fizzBuzz(array) {
  
 // Desafio 9
 function encode(inputStr) {
-  // seu código aqui
-  var code;
-//var inputStr = 'hi there!';
-var outputStr = '';
+    var code;
+    var outputStr = '';
+
+  for(index = 0; index <= inputStr.length - 1; index ++){
+
+  switch(inputStr[index]) {
+      case 'a':
+          code = '1';
+          break;
+      case 'e':
+          code = '2';
+          break;
+      case 'i':
+          code = '3';
+          break
+      case 'o':
+          code = '4';
+          break
+      case 'u':
+          code = '5';
+          break;
+      default:
+          code = inputStr[index];
+  }    
+      outputStr += code
+}
+    return outputStr;
+}
+
+function decode(inputStr) {
+  var decoder;
+  var outputStr = '';
 
 for(index = 0; index <= inputStr.length - 1; index ++){
 
 switch(inputStr[index]) {
-    case 'a':
-        code = '1';
+    case '1':
+        decoder = 'a';
         break;
-    case 'e':
-        code = '2';
+    case '2':
+        decoder = 'e';
         break;
-    case 'i':
-        code = '3';
+    case '3':
+        decoder = 'i';
         break
-    case 'o':
-        code = '4';
+    case '4':
+        decoder = 'o';
         break
-    case 'u':
-        code = '5';
+    case '5':
+        decoder = 'u';
         break;
     default:
-        code = inputStr[index];
+        decoder = inputStr[index];
 }    
-    outputStr += code
+    outputStr += decoder
 }
   return outputStr;
 }
-console.log(encode('hi there!!!'))
-function decode() {
-  // seu código aqui
-}
-
+  console.log(decode('h3 th2r2!!!'))
 // Desafio 10
 function techList(arrayTec, name) {
   // seu código aqui
