@@ -230,10 +230,10 @@ function generatePhoneNumber(myPhone) {
 // let lin3 = 8;
 function triangleCheck(lineA, lineB, lineC) {
   let result = false;
-  if ( (Math.abs(lineB - lineC) < lineA) && (lineB + lineC > lineA) && 
-       (Math.abs(lineA - lineC) < lineB) && (lineA + lineC > lineB) && 
-       (Math.abs(lineA - lineB) < lineC) && (lineA + lineB > lineC) ) {
-      result = true;
+  if ((Math.abs(lineB - lineC) < lineA) && (lineB + lineC > lineA) && 
+      (Math.abs(lineA - lineC) < lineB) && (lineA + lineC > lineB) && 
+      (Math.abs(lineA - lineB) < lineC) && (lineA + lineB > lineC)) {
+    result = true;
   }
   return result;
 }
@@ -241,9 +241,22 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// let text = "1 cachaça, 5 cervejas e 1 copo de vinho";
+function hydrate(myText) {
+  let myNumbers = myText.match(/\d+/g).map(Number);
+  let sumNumbers = 0;
+  for (let i = 0; i < myNumbers.length; i += 1){
+    sumNumbers += myNumbers[i];
+  }
+  let result = '';
+  if (sumNumbers === 1) {
+    result = '1 copo de água';
+  } else {
+    result = sumNumbers + ' copos de água';
+  }
+  return result;
 }
+// console.log(hydrate(text));
 
 
 module.exports = {
