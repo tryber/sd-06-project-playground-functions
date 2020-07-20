@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  return (bool1 === true && bool2 === true) ? true : false;
+  return (bool1 == true && bool2 == true) ? true : false;
 }
 
 // Desafio 2
@@ -17,9 +17,9 @@ function splitSentence(str) {
     if (str[i] != ' ') {
       txt += str[i];
       strArray[counter] = txt;
-    } else if (str[i] == ' ' && txt != '') {
-        counter += 1;
-        txt = '';
+    } else if (str[i] === ' ' && txt !== '') {
+      counter += 1;
+      txt = '';
     }
   }
   return strArray;
@@ -39,7 +39,7 @@ function footballPoints(wins, ties) {
 function highestCount(numArray) {
   let greater = 0;
   for (let i = 0; i < numArray.length; i += 1) {
-    (numArray[i] > greater) ? greater = numArray[i] : greater = greater;
+    greater = (numArray[i] > greater) ? numArray[i] : greater;
   }
 
   let counter = 0;
@@ -80,23 +80,16 @@ function fizzBuzz(numArray) {
 }
 
 // Desafio 9
-function encode(strMsg) {
-  return encodeOrDecode(strMsg, 'encode');
-}
-function decode(strMsg) {
-  return encodeOrDecode(strMsg, 'decode');
-}
-
 function encodeOrDecode (strEntry, operation) {
-  let pair = {number : ['1', '2', '3', '4', '5'],
-              letter : ['a', 'e', 'i', 'o', 'u'],
-            }
-  let str= '';
-  if (operation == 'encode') {
+  let pair = { number: ['1', '2', '3', '4', '5'],
+    letter: ['a', 'e', 'i', 'o', 'u'],
+  }
+  let str = '';
+  if (operation === 'encode') {
     for (let i = 0; i < strEntry.length; i += 1) {
-      str += (strEntry[i] == 'a' || strEntry[i] === 'e' || strEntry[i] === 'i' || strEntry[i] === 'o' || strEntry[i] === 'u') ? pair.number[pair.letter.indexOf(strEntry[i])] : strEntry[i];
-    } 
-  } else if (operation == 'decode') {
+      str += (strEntry[i] === 'a' || strEntry[i] === 'e' || strEntry[i] === 'i' || strEntry[i] === 'o' || strEntry[i] === 'u') ? pair.number[pair.letter.indexOf(strEntry[i])] : strEntry[i];
+    }
+  } else if (operation === 'decode') {
     for (let i = 0; i < strEntry.length; i += 1) {
       str += (strEntry[i] === '1' || strEntry[i] === '2' || strEntry[i] === '3' || strEntry[i] === '4' || strEntry[i] === '5') ? pair.letter[pair.number.indexOf(strEntry[i])] : strEntry[i];
     }
@@ -104,10 +97,17 @@ function encodeOrDecode (strEntry, operation) {
   return str;
 }
 
+function encode(strMsg) {
+  return encodeOrDecode(strMsg, 'encode');
+}
+function decode(strMsg) {
+  return encodeOrDecode(strMsg, 'decode');
+}
+
 // Desafio 10
 function techList(tech, name) {
   let res;
-  if (tech == '') {
+  if (tech === '') {
     res = 'Vazio!';
   } else {
     res = [];
@@ -124,7 +124,7 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(numbersArray) {
-  if (numbersArray.length != 11) {
+  if (numbersArray.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else {
     let phone = '';
@@ -136,26 +136,26 @@ function generatePhoneNumber(numbersArray) {
         let hits = 0;
         let ii = 0;
         while(ii < numbersArray.length) {
-          if (numbersArray[ii] - numbersArray[i] == 0) {
+          if (numbersArray[ii] - numbersArray[i] === 0) {
             hits += 1;
             if (hits > 2) {
               return 'não é possível gerar um número de telefone com esses valores';
               break;
             }
           }
-        ii++;
+        ii += 1;
         }
       }
-      if (i == 0){
+      if (i === 0) {
         phone += '(' + numbersArray[i];
-      } else if (i == 1) {
+      } else if (i === 1) {
         phone += numbersArray[i] + ') ';
-      } else if (i == 6) {
+      } else if (i === 6) {
         phone += numbersArray[i] + '-';
       } else {
         phone += numbersArray[i];
       }
-      i++;
+      i += 1;
       }
     return phone;
   }
@@ -174,7 +174,7 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(str) {
   // seu código aqui
   let nCopos = 0;
-  for (let i = 0; i < str.length; i += 1){
+  for (let i = 0; i < str.length; i += 1) {
     if (parseInt(str[i]) > 0) {
       nCopos += parseInt(str[i]);
     }
@@ -201,16 +201,16 @@ module.exports = {
 }
 
 function checkCompareTrue() {
-  (compareTrue (true, true) === true && compareTrue (true, false) === false && compareTrue (false, false) === false) ? console.log('Function compareTrue validated!') : console.log('Function compareTrue invalidated!'); 
+  (compareTrue(true, true) === true && compareTrue(true, false) === false && compareTrue(false, false) === false) ? console.log('Function compareTrue validated!') : console.log('Function compareTrue invalidated!');
 }
 
 function checkCalcArea() {
-  (calcArea(10,1.2) === 6) ? console.log('Function calcArea validated!') : console.log('Function calcArea invalidated!') ;
+  (calcArea(10, 1.2) === 6) ? console.log('Function calcArea validated!') : console.log('Function calcArea invalidated!') ;
 }
 
 function checkSplitSentence() {
   let res = splitSentence('  I study at Trybe every week   ');
-  (res[0] == 'I' && res[1] == 'study' && res[2] == 'at' && res[3] == 'Trybe' && res[4] == 'every' && res[5] == 'week') ? console.log('Function splitSentence validated!') : console.log('Function splitSentence invalidated!') ;
+  (res[0] === 'I' && res[1] === 'study' && res[2] === 'at' && res[3] === 'Trybe' && res[4] === 'every' && res[5] === 'week') ? console.log('Function splitSentence validated!') : console.log('Function splitSentence invalidated!') ;
 }
 
 function checkConcatName() {
@@ -218,7 +218,7 @@ function checkConcatName() {
 }
 
 function checkFootballPoints() {
-  (footballPoints(30,10) === 100) ? console.log('Function footballPoints validated!') : console.log('Function footballPoints invalidated!') ;
+  (footballPoints(30, 10) === 100) ? console.log('Function footballPoints validated!') : console.log('Function footballPoints invalidated!') ;
 }
 
 function checkHighestCount() {
@@ -244,7 +244,7 @@ function checkDecode() {
 
 function checkTechList() {
   let res = techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],'Lucas');
-  (res[0].tech == 'CSS' && res[0].name == 'Lucas' && res[1].tech == 'HTML' && res[1].name == 'Lucas' && res[2].tech == 'JavaScript' && res[2].name == 'Lucas' && res[3].tech == 'Jest' && res[3].name == 'Lucas' && res[4].tech == 'React' && res[4].name == 'Lucas')? console.log('Function techList validated!') : console.log('Function techList invalidated!') ;
+  (res[0].tech === 'CSS' && res[0].name === 'Lucas' && res[1].tech === 'HTML' && res[1].name === 'Lucas' && res[2].tech === 'JavaScript' && res[2].name === 'Lucas' && res[3].tech === 'Jest' && res[3].name === 'Lucas' && res[4].tech === 'React' && res[4].name === 'Lucas') ? console.log('Function techList validated!') : console.log('Function techList invalidated!') ;
 }
 
 function checkGeneratePhoneNumber() {
@@ -260,7 +260,7 @@ function checkHydrate() {
 }
 
 function testAll() {
-  checkCompareTrue(); 
+  checkCompareTrue();
   checkCalcArea();
   checkSplitSentence();
   checkConcatName();
