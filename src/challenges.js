@@ -127,19 +127,19 @@ function swapVogals(letter) {
 function swapNumbers(letter) {
   switch (letter) {
     case '1':
-      return "a";
+      return 'a';
       break;
     case '2':
-      return "e";
+      return 'e';
       break;
     case '3':
-      return "i";
+      return 'i';
       break;
     case '4':
-      return "o";
+      return 'o';
       break;
     case '5':
-      return "u";
+      return 'u';
       break;
     default:
       return letter;
@@ -172,7 +172,7 @@ function decode(frase) {
 // Desafio 10
 function techList(tecnologias, name) {
   // seu código aqui
-  if (tecnologias.length == 0) {
+  if (tecnologias.length === 0) {
     return 'Vazio!';
   }
   tecnologias.sort();
@@ -189,7 +189,7 @@ function techList(tecnologias, name) {
 
 // Desafio 11
 function verificaTamanhoArray(lista) {
-  let tamanhoValido = lista.length == 11;
+  let tamanhoValido = lista.length === 11;
   return tamanhoValido;
 }
 
@@ -259,7 +259,8 @@ function triangleCheck(lineA, lineB, lineC) {
     primeiraCondicao = true;
   }
   // Segunda condição
-  // A medida de qualquer um dos lados é maior que o valor absoluto da diferença entre essas medidas (as outras).
+  // A medida de qualquer um dos lados é maior que o valor absoluto
+  // da diferença entre essas medidas (as outras).
   if (
     (lineA > Math.abs(lineB - lineC)) &&
     (lineB > Math.abs(lineA - lineC)) &&
@@ -273,15 +274,15 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(bebidas) {
   // seu código aqui
-  var regex = /\d+/g;
-  var string = bebidas;
-  var quantidades = string.match(regex).map(Number);
-  var total = 0;
+  let regex = /\d+/g;
+  let string = bebidas;
+  let quantidades = string.match(regex).map(Number);
+  let total = 0;
   for (let i in quantidades) {
     total += quantidades[i];
   }
   let copos = '';
-  if (quantidades == 1) {
+  if (quantidades === 1) {
     copos = 'copo';
   } else {
     copos = 'copos';
