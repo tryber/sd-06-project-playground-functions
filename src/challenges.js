@@ -81,6 +81,7 @@ function techList(arrayTech, name) {
   if (arrayTech.length === 0) {
     return 'Vazio!';
   }
+  arrayTech.sort()
   let arrayResponse = [];
   for (let tech of arrayTech) {
     let objectResponse = {};
