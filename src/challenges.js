@@ -133,7 +133,7 @@ function techList(tec, namePassed) {
 function generatePhoneNumber(numbers) {
   let countRepeated = 0;
   let arraySize = numbers.length;
-  let result = `${numbers.slice(0, 2)} ${numbers.slice(2, 7)}-${numbers.slice(7, 12)}`;
+  let result = `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 12)}`;
   if (arraySize !== 11) {
     return 'Array com tamanho incorreto.';
   }
@@ -169,8 +169,19 @@ function triangleCheck(a, b, c) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let count = 0;
+  let regex = /\d+/;
+  for (let s in str) {
+    if (regex.test(str[s])) {
+      count += parseInt(str[s]);
+      console.log (count);
+    }
+  }
+  if (count > 1) {
+    return `${count} copos de água`
+  }
+  return `${count} copo de água`
 }
 
 
