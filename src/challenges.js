@@ -285,9 +285,14 @@ function hydrate(inputString) {
       sum += numberExtract[index];
   }
 
-  outputString = sum + " copos de água"
-
-  return outputString;
+  if(outputString = 1){
+    outputString = sum + " copo de água";
+    return outputString;
+  } else{
+    outputString = sum + " copos de água";
+    return outputString;
+  }
+  
   }
 
 
