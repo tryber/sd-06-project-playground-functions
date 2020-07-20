@@ -105,22 +105,16 @@ function swapVogals(letter) {
   switch (letter) {
     case 'a':
       return 1;
-      break;
     case 'e':
       return 2;
-      break;
     case 'i':
       return 3;
-      break;
     case 'o':
       return 4;
-      break;
     case 'u':
       return 5;
-      break;
     default:
       return letter;
-      break;
   }
 }
 
@@ -128,22 +122,16 @@ function swapNumbers(letter) {
   switch (letter) {
     case '1':
       return 'a';
-      break;
     case '2':
       return 'e';
-      break;
     case '3':
       return 'i';
-      break;
     case '4':
       return 'o';
-      break;
     case '5':
       return 'u';
-      break;
     default:
       return letter;
-      break;
   }
 }
 
