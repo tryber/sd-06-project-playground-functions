@@ -1,10 +1,11 @@
 // Desafio 1
-function compareTrue(a = 1, b = 1) {
-  if (a ===1 && b === 1) {
+function compareTrue(a = true , b =  false ) {
+  if (a === true && b === true) {
     return true;
-  } 
+  }
   return false;
 }
+
 // Desafio 2
 function calcArea(base = 10, height = 8) {
   return (base * height) / 2
