@@ -65,23 +65,23 @@ function footballPoints(wins, ties) {
 
 
 // --------------- Desafio 6
-// let arr = [9, 1, 2, 3, 9, 5, 7, 3, 1, 3];
+let arr = [0, 4, 4, 4, 9, 2, 1];
 function highestCount(myArray) {
-  let contMaior = 1;
-  for (let i = 0; i < myArray.length; i += 1) {
-    let contAtual = 1;
-    for (let x = 0; x < myArray.length; x += 1) {
-      if ((i !== x) && (myArray[i] === myArray[x])) {
-        contAtual += 1;
-      }
+  let contMaior = 0;
+  let maior = 0;
+  for (let y = 0; y < myArray.length; y += 1) {
+    if ((myArray[y] > maior)) {
+      maior = myArray[y];
     }
-    if (contAtual > contMaior) {
-      contMaior = contAtual;
+  }
+  for (let i = 0; i < myArray.length; i += 1) {
+    if ((myArray[i] === maior)) {
+      contMaior += 1;
     }
   }
   return contMaior;
 }
-// console.log("Maior quantidade de vezes: " + highestCount(arr));
+console.log(highestCount(arr));
 
 
 // ---------- Desafio 7
