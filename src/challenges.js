@@ -116,6 +116,8 @@ for (let index in array){
   if (sum >= 0) {
   sum += parseInt(array[index], 10);
   frase = (sum === 1 ? ' copo de água' : ' copos de água');
+
+  return frase
 }
 }
 }
