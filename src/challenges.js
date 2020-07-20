@@ -189,12 +189,23 @@ function techList(myArray, myName) {
 // console.log(techList(arr, name));
 
 // Desafio 11
-// let numPhone = [1, 1, 3, 1, 5, 6, 7, 8, 9, 0, 1];
+let numPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 function verifyNumber(myPhone) {
   let result = true;
-  let highCont = highestCount(myPhone);
+  let contMaior = 0;
+  for (let y = 0; y < myPhone.length; y += 1) {
+    let contAtual = 0;
+    for (let x = 0; x < myPhone.length; x += 1) {
+      if ((myPhone[y] === myPhone[x])) {
+        contAtual += 1;
+      }
+    }
+    if (contAtual > contMaior) {
+      contMaior = contAtual;  
+    }
+  }
   for (let i = 0; i < myPhone.length; i += 1) {
-    if (myPhone[i] < 0 || myPhone[i] > 9 || highCont >= 3) {
+    if (myPhone[i] < 0 || myPhone[i] > 9 || contMaior >= 3) {
       result = false;
     }
   }
@@ -222,7 +233,7 @@ function generatePhoneNumber(myPhone) {
   }
   return result;
 }
-// console.log(generatePhoneNumber(numPhone));
+console.log(generatePhoneNumber(numPhone));
 
 // Desafio 12
 // let lin1 = 10;
