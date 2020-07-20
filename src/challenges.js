@@ -1,16 +1,18 @@
 // Desafio 1
 function compareTrue(value1, value2) {
+  let compare;
   if (value1 && value2) {
-    return true;
+    compare = true;
   } else {
-    return false;
+    compare = false;
   }
+  return compare;
 }
 // console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 // console.log(calcArea(10, 5));
@@ -23,7 +25,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(lista) {
-  return lista[lista.length - 1] + ', ' + lista[0];
+  let concat = `${lista[lista.length - 1]}, ${lista[0]}`;
+  return concat;
 }
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -36,7 +39,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(list) {
-  let greater = list[0];  
+  let greater = list[0];
   for (let i of list) {
     if (i > greater) {
       greater = i;
@@ -57,13 +60,15 @@ function highestCount(list) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = Math.abs(mouse - cat1);
   let distCat2 = Math.abs(mouse - cat2);
+  let msg = '';
   if (distCat1 > distCat2) {
-    return 'cat2';
+    msg = 'cat2';
   } else if (distCat1 < distCat2) {
-    return 'cat1';
+    msg = 'cat1';
   } else {
-    return 'os gatos trombam e o rato foge';
+    msg = 'os gatos trombam e o rato foge';
   }
+  return msg;
 }
 // console.log(catAndMouse(1, 2, 3));
 
@@ -89,17 +94,24 @@ function fizzBuzz(list) {
 // Desafio 9
 function encode(string) {
   let newString = string;
-  for (i in string) {
-    if (string[i] === 'a') {
-      newString = newString.replace('a', '1');
-    } else if (string[i] === 'e') {
-      newString = newString.replace('e', '2');
-    } else if (string[i] === 'i') {
-      newString = newString.replace('i', '3');
-    } else if (string[i] === 'o') {
-      newString = newString.replace('o', '4');
-    }  else if (string[i] === 'u') {
-      newString = newString.replace('u', '5');
+  for (let i in string) {
+    switch (string[i]) {
+      case 'a':
+        newString = newString.replace('a', '1');
+        break;
+      case 'e':
+        newString = newString.replace('e', '2');
+        break;
+      case 'i':
+        newString = newString.replace('i', '3');
+        break;
+      case 'o':
+        newString = newString.replace('o', '4');
+        break;
+      case 'u':
+        newString = newString.replace('u', '5');
+        break;
+      default:
     }
   }
   return newString;
@@ -108,7 +120,7 @@ function encode(string) {
 
 function decode(string) {
   let newString = string;
-  for (i in string) {
+  for (let i in string) {
     if (string[i] === '1') {
       newString = newString.replace('1', 'a');
     } else if (string[i] === '2') {
@@ -117,7 +129,7 @@ function decode(string) {
       newString = newString.replace('3', 'i');
     } else if (string[i] === '4') {
       newString = newString.replace('4', 'o');
-    }  else if (string[i] === '5') {
+    } else if (string[i] === '5') {
       newString = newString.replace('5', 'u');
     }
   }
@@ -132,11 +144,11 @@ function techList(list, name) {
   }
   let nameTech = [];
   let sortedList = list.sort();
-  for (i in sortedList) {
+  for (let i in sortedList) {
     nameTech[i] = {
-      'name': name,
-      'tech': sortedList[i],
-    }
+      name: name,
+      tech: sortedList[i],
+    };
   }
   return nameTech;
 }
@@ -144,30 +156,19 @@ function techList(list, name) {
 
 // Desafio 11
 function generatePhoneNumber(n) {
+  let foneNumber = '';
   if (n.length !== 11) {
-    return "Array com tamanho incorreto.";
+    foneNumber = 'Array com tamanho incorreto.';
   } else if (checkNumbers(n)) {
-    return "não é possível gerar um número de telefone com esses valores";
+    foneNumber = 'não é possível gerar um número de telefone com esses valores';
   }
-  let foneNumber = '(' + n[0] + n[1] + ') ' + n[2] + n[3] + n[4] + n[5] + n[6] + '-' + n[7] + n[8] + n[9] + n[10];
+  foneNumber = `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]} - ${n[7]}${n[8]}${n[9]}${n[10]}`;
   return foneNumber;
-  
-}
-
-function checkNumbers(numbers) {
-  if (timesCount(numbers)) {
-    return true;
-  }
-  for (i in numbers) {
-    if (numbers[i] > 9 || numbers[i] < 0) {
-      return true;
-    }
-  }
 }
 
 function timesCount(list) {
-  let howManyTimes = {};  
-  for (i in list) {
+  let howManyTimes = {};
+  for (let i in list) {
     if (list[i] in howManyTimes) {
       howManyTimes[list[i]] += 1;
     } else {
@@ -178,37 +179,48 @@ function timesCount(list) {
     if (howManyTimes[j] >= 3) {
       return true;
     }
-  }  
+  }
 }
 
+function checkNumbers(numbers) {
+  let test = timesCount(numbers);
+  if (test) {
+    return true;
+  }
+  for (let i in numbers) {
+    if (numbers[i] > 9 || numbers[i] < 0) {
+      return true;
+    }
+  }
+}
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(a, b, c) {
+  let result = false;
   if (((a < (b + c)) && (a > Math.abs(b - c))) && ((b < (a + c)) && (b > Math.abs(a - c))) && ((c < (b + a)) && (c > Math.abs(b - a)))) {
-    return true;
-  } else {
-    return false;
+    result = true;
   }
+  return result;
 }
 // console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(string) {
-  let numbers = string.replace(/\D/g, "");
+  let numbers = string.replace(/\D/g, '');
   let soma = 0;
   let msg = '';
-  for (i in numbers) {
-    soma += parseInt(numbers[i])
+  for (let i in numbers) {
+    soma += parseInt(numbers[i]);
   }
   if (soma === 1) {
     msg = '1 copo de água';
   } else if (soma > 1) {
-    msg = soma + ' copos de água';
+    msg = `${soma} copos de água`;
   }
   return msg;
 }
-console.log(hydrate('1 iauseh 7 saehsaiuh e 2 uashsuha'));
+// console.log(hydrate('1 iauseh 7 saehsaiuh e 2 uashsuha'));
 
 module.exports = {
   calcArea,
@@ -225,4 +237,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
