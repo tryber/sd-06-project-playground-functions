@@ -75,7 +75,7 @@ function fizzBuzz(vetNumbers) {
       array2.push('buzz');
     }
     else if (vetNumbers[i] % 5 === 0 && vetNumbers[i] % 3 === 0) {
-      array2.push('fizzbuzz!');
+      array2.push('fizzbuzz');
     }
     else {
       array2.push('bug!');
