@@ -55,20 +55,21 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 }
 
 // Desafio 8
-function fizzBuzz(entrada = [2, 15, 7, 9, 45], b = []) {
+function fizzBuzz(entrada = [2, 15, 7, 9, 45], saida = []) {
   for (let x = 0; numero < entrada.length; x += 1) {
     let i = entrada[numero];
+    // declarar a regra em uma variável
     if (i % 3 === 0 && i % 5 === 0) {
-      b.push('fizzBuzz');
+      saida.push('fizzBuzz');
     } else if (i % 3 === 0) {
-      b.push('fizz');
+      saida.push('fizz');
     } else if (i % 5 === 0) {
-      b.push('buzz');
+      saida.push('buzz');
     } else {
-      b.push('bug!');
+      saida.push('bug!');
     }
   }
-  return b;
+  return saida;
 }
 
 // Desafio 9
