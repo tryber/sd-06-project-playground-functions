@@ -159,49 +159,51 @@ function techList(techArray, nameUser) {
 }
 
 // Desafio 11
-function verifyNumber(vNumber, arrayPhone) {
+function verifyNumber(number, numberArray) {
   let numberRepeat = 0;
-  for (let index = 0; index < arrayPhone.length; index += 1) {
-    if (arrayPhone[index] === vNumber) {
+  for (let index = 0; index < numberArray.length; index += 1) {
+    if (numberArray[index] === number) {
       numberRepeat += 1;
     }
   }
   return numberRepeat;
 }
 
-function checkRepeatedNumber(arrayPhone) {
+function checkRepeatedNumber(numberArray) {
   let numberRepeat = 0;
-  for (let index = 0; index < arrayPhone.length; index += 1) {
-    numberRepeat = verifyNumber(arrayPhone[index], arrayPhone);
+  for (let index = 0; index < numberArray.length; index += 1) {
+    numberRepeat = verifyNumber(numberArray[index], numberArray);
     if (numberRepeat >= 3) {
       return numberRepeat;
     }
   }
   return numberRepeat;
 }
-function generate(arrayPhone) {
-  let numberPhone = '(';
-  for (let index = 0; index < arrayPhone.length; index += 1) {
+
+function generate(numberArray) {
+  let phoneNumber = '(';
+  for (let index = 0; index < numberArray.length; index += 1) {
     if (index === 2) {
-      numberPhone += ') ';
+      phoneNumber += ') ';
     } else if (index === 7) {
-      numberPhone += '-';
+      phoneNumber += '-';
     }
-    numberPhone += arrayPhone[index];
+    phoneNumber += numberArray[index];
   }
-  return numberPhone;
+  return phoneNumber;
 }
-function generatePhoneNumber(arrayPhone) {
-  if (arrayPhone.length !== 11) {
+
+function generatePhoneNumber(numberArray) {
+  if (numberArray.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let numberRepeat = checkRepeatedNumber(arrayPhone);
-  for (let index = 0; index < arrayPhone.length; index += 1) {
-    if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || numberRepeat >= 3) {
+  let numberRepeat = checkRepeatedNumber(numberArray);
+  for (let index = 0; index < numberArray.length; index += 1) {
+    if (numberArray[index] < 0 || numberArray[index] > 9 || numberRepeat >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  return generate(arrayPhone);
+  return generate(numberArray);
 }
 
 // Desafio 12
@@ -218,15 +220,15 @@ function triangleCheck(side1, side2, side3) {
 
 // Desafio 13
 function hydrate(alcoholicBeverages) {
-  let alcoholicArray = alcoholicBeverages.replace(/[^0-9]/g, '');
-  let sum = 0;
-  for (let index in alcoholicArray) {
-    if (sum >= 0) {
-      sum += parseInt(alcoholicArray[index], 10);
-      // text = (sum === 1 ? ' copo de água' : ' copos de água');
+  let stringNumber = alcoholicBeverages.replace(/[^0-9]/g, '');
+  let sumOfWaterGlasses = 0;
+  for (let index in stringNumber) {
+    if (sumOfWaterGlasses >= 0) {
+      sumOfWaterGlasses += parseInt(stringNumber[index], 10);
+      // text = (sumOfWaterGlasses === 1 ? ' copo de água' : ' copos de água');
     }
   }
-  return sum + (sum === 1 ? ' copo de água' : ' copos de água');
+  return sumOfWaterGlasses + (sumOfWaterGlasses === 1 ? ' copo de água' : ' copos de água');
 }
 
 module.exports = {
