@@ -29,7 +29,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  array.sort((a,b) => a-b);
+  array.sort((a, b) => a - b);
   let highNumber = array[(array.length - 1)];
   let count = 0;
   for (let j in array) {
@@ -120,7 +120,7 @@ function techList(tec, name) {
     object[indice] = { tech: tec[indice] };
     object[indice].name = name;
   }
-  object.sort(function(a, b) {
+  object.sort(function (a, b) {
     if (a.tech > b.tech) {
       return 1;
     }
@@ -135,7 +135,7 @@ function techList(tec, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   let repete = 0;
-  if (numbers.length != 11) {
+  if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < numbers.length; i += 1) {
@@ -144,15 +144,15 @@ function generatePhoneNumber(numbers) {
     }
     repete = 0;
     for (let j = 1; j < numbers.length; j += 1) {
-      if(numbers[i] === numbers[j]) {
-        repete +=1;  
+      if (numbers[i] === numbers[j]) {
+        repete += 1;
       }
     }
   }
-  return `(${numbers[0]}${numbers[1]})${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-//console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 4, 7, 8, 9, 4]));
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && lineA > Math.abs((lineB - lineC))) {
@@ -172,7 +172,7 @@ function hydrate(string) {
   let r = /\d+/g;
   let total = 0;
   r = string.match(r);
-  for (indice in r) {
+  for (let indice = 0; indice < string.length; indice += 1) {
     total += Number(r[indice]);
   }
   if (total === 1) {
