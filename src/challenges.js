@@ -188,13 +188,15 @@ function generatePhoneNumber(numeros) {
   let repetido = 0;
   let numero = 0;
   let iNumero = 0;
-  for (let i in numeros) {
+  if (numeros !== 0) {
+    for (let i in numeros) {
     let verificaNumero = numeros[i];
     for (let i2 in numeros) {
       if (verificaNumero === numeros[i2]) {
         numero += 1;
       }
     }
+  }
     if (numero > repetido) {
       repetido = numero;
       iNumero = i;
