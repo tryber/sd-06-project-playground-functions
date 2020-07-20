@@ -174,16 +174,16 @@ function generatePhoneNumber(numeros) {
     for (let i = 2; i < numeros.length; i += 1) {
       telefone += numeros[i]
       if (i === 6) {
-        telefone += `-`;
+        telefone += '-';
       }
     }
     for (let i in numeros) {
       if (numeros[i] < 0 || numeros[i] > 9) {
-        telefone = `não é possível gerar um número de telefone com esses valores`;
+        telefone = 'não é possível gerar um número de telefone com esses valores';
       }
     }
   } else {
-    telefone = `Array com tamanho incorreto.`;
+    telefone = 'Array com tamanho incorreto.';
   }
   let repetido = 0;
   let numero = 0;
@@ -205,7 +205,7 @@ function generatePhoneNumber(numeros) {
   }
   for (let i in numeros) {
     if (numeros[iNumero] === numeros[i] && repetido >= 3) {
-      telefone = `não é possível gerar um número de telefone com esses valores`;
+      telefone = 'não é possível gerar um número de telefone com esses valores';
     }
   }
   return telefone;
