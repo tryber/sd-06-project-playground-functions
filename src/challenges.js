@@ -186,10 +186,21 @@ function triangleCheck(lineA, lineB, lineC) {
 console.log(triangleCheck(10, 14, 100));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
 
+let regex = /\d+/g;
+let matches = string.match(regex);
+let contador = 0;
+  
+for (let index in matches) {
+    contador = contador + parseInt(matches[index], 10);    
+  } if (contador < 2) {
+    return contador + " copo de água";
+  } else {
+    return contador + " copos de água";
+  }
+}
+console.log(hydrate("1 cachaça, 7 cervejas e 2 copo de vinho")); 
 
 module.exports = {
   calcArea,
