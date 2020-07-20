@@ -158,6 +158,7 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
+}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
