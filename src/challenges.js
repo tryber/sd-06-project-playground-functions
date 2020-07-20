@@ -15,7 +15,7 @@ function splitSentence(frase) {
   // seu código aqui
   let acumulador = '';
   let novaLista = [];
-  for (let i = 0; i <= frase.length - 1; i += 1) {
+  for (let i = 0; i < frase.length; i += 1) {
     let elemento = frase[i]
     if (elemento !== ' ') {
       acumulador += elemento;
@@ -83,7 +83,7 @@ function catAndMouse(mousePos, cat1Pos, cat2Pos) {
 function fizzBuzz(arrayNumeros) {
   // seu código aqui
   let novaArray = [];
-  for (let i = 0; i <= arrayNumeros.length; i += 1) {
+  for (let i = 0; i < arrayNumeros.length; i += 1) {
     let numero = arrayNumeros[i];
     if (numero % 3 === 0 && numero % 5 === 0) {
       novaArray.push('fizzBuzz');
@@ -136,7 +136,7 @@ function swapNumbers(letter) {
 function encode(frase) {
   // seu código aqui
   let novaFrase = [];
-  for (let i = 0; i <= frase.length; i += 1) {
+  for (let i = 0; i < frase.length; i += 1) {
     let letra = frase[i];
     let conversao = swapVogals(letra);
     novaFrase.push(conversao);
@@ -147,7 +147,7 @@ function encode(frase) {
 function decode(frase) {
   // seu código aqui
   let novaFrase = [];
-  for (let i = 0; i <= frase; i+= 1) {
+  for (let i = 0; i < frase.length; i+= 1) {
     let letra = frase[i];
     let conversao = swapNumbers(letra);
     novaFrase.push(conversao);
@@ -163,7 +163,7 @@ function techList(tecnologias, nome) {
   }
   tecnologias.sort();
   let novaLista = [];
-  for (let i in tecnologias) {
+  for (let i = 0; i < tecnologias.length; i += 1) {
     let objeto = {
       tech: tecnologias[i],
       name: nome,
@@ -181,7 +181,7 @@ function verificaTamanhoArray(lista) {
 
 function verificaNumerosInvalidos(lista) {
   let valorInvalido = false;
-  for (let i in lista) {
+  for (let i = 0; i < lista.length; i += 1) {
     let elemento = lista[i];
     if (elemento < 0 || elemento > 9) {
       valorInvalido = true;
@@ -192,9 +192,9 @@ function verificaNumerosInvalidos(lista) {
 
 function verificaExcessoOcorrencias(lista) {
   let maxOcorrencias = 3;
-  for (let indice in lista) {
+  for (let indice = 0; indice < lista.length; indice += 1) {
     let ocorrencias = 0;
-    for (let indiceAux in lista) {
+    for (let indiceAux = 0; indiceAux < lista.length; indiceAux += 1) {
       if (lista[indice] === lista[indiceAux]) {
         ocorrencias += 1;
         if (ocorrencias === maxOcorrencias) {
