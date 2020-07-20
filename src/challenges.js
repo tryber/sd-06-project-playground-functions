@@ -134,7 +134,7 @@ function techList(tecnologias, name) {
   for (let i = 0; i < tecnologias.length; i += 1) {
     let objeto = {
       tech: tecnologias[i],
-      name: name,
+      name,
     }
     listaObjetos[i] = objeto;
   }
