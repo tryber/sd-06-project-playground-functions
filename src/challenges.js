@@ -77,8 +77,10 @@ function fizzBuzz(numeros) {
 function encode(str) {
   let aux = str.split('');
   str = '';
+  let teste;
   for (let index = 0 ; index < aux.length; index += 1) {
-    switch (aux[index]) {
+    teste = aux[index];
+    switch (teste) {
       case 'a' :
         aux[index] = '1';
         break;
@@ -99,12 +101,14 @@ function encode(str) {
   }
   return str;
 }
-
+console.log(encode("hi there!"));
 function decode(str) {
   let aux = str.split('');
   str = '';
-  for (let index = 0 ; index < aux.length; index += 1) {
-    switch (aux[index]) {
+  let teste;
+  for (let index = 0 ;index < aux.length; index += 1) {
+    teste = aux[index];
+    switch (teste) {
       case '1' :
         aux[index] = 'a';
         break;
