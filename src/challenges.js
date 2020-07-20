@@ -51,13 +51,13 @@ function highestCount(arrayNumeros) {
   let maiorValor = arrayNumeros[0];
   let ocorrencias = 0;
 
-  for (let i = 0; i <= arrayNumeros.length; i+= 1) {
+  for (let i = 0; i <= arrayNumeros.length; i += 1) {
     if (arrayNumeros[i] > maiorValor) {
       maiorValor = arrayNumeros[i];
     }
   }
 
-  for (let i = 0; i <= arrayNumeros.length; i+= 1) {
+  for (let i = 0; i <= arrayNumeros.length; i += 1) {
     if (arrayNumeros[i] === maiorValor) {
       ocorrencias += 1;
     }
@@ -147,7 +147,7 @@ function encode(frase) {
 function decode(frase) {
   // seu código aqui
   let novaFrase = [];
-  for (let i = 0; i < frase.length; i+= 1) {
+  for (let i = 0; i < frase.length; i += 1) {
     let letra = frase[i];
     let conversao = swapNumbers(letra);
     novaFrase.push(conversao);
