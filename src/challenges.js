@@ -66,14 +66,10 @@ function highestCount(arrayNumeros) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse(mousePos, cat1Pos, cat2Pos) {
   // seu código aqui
-  let mousePos = mouse;
-  let cat1Pos = cat1;
-  let cat2Pos = cat2;
   let distMouseCat1 = Math.abs(mousePos - cat1Pos);
   let distMouseCat2 = Math.abs(mousePos - cat2Pos);
-
   if (distMouseCat1 === distMouseCat2) {
     return 'os gatos trombam e o rato foge';
   }
@@ -194,7 +190,7 @@ function techList(tecnologias, name) {
 // Desafio 11
 function verificaTamanhoArray(lista) {
   let tamanhoValido = lista.length == 11;
-  return tamanhoValido; 
+  return tamanhoValido;
 }
 
 function verificaNumerosInvalidos(lista) {
@@ -231,19 +227,16 @@ function generatePhoneNumber(numeros) {
   if (!tamanhoValido) {
     return 'Array com tamanho incorreto.';
   }
-
   // Verifica número menor que 0 ou maior que 9
   let valorInvalido = verificaNumerosInvalidos(numeros);
   if (valorInvalido) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-
   // Verifica a ocorrência de 3 números iguais
   let excessoRepeticoes = verificaExcessoOcorrencias(numeros);
   if (excessoRepeticoes) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-
   // Criação do número
   let ddd = numeros.slice(0, 2).join('');
   let prefixo = numeros.slice(2, 7).join('');
@@ -288,13 +281,12 @@ function hydrate(bebidas) {
     total += quantidades[i];
   }
   let copos = '';
-
   if (quantidades == 1) {
-    copos = 'copo';  
+    copos = 'copo';
   } else {
     copos = 'copos';
   }
-  return `${total} ${copos} de água`;  
+  return `${total} ${copos} de água`;
 }
 
 
