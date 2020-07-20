@@ -121,20 +121,6 @@ function decode(palavras) {
 }
 
 // Desafio 10
-function techList(tecnologias, name) {
-  let listaObjetos = [];
-  for (let i = 0; i < tecnologias.length; i += 1) {
-    let objeto = {
-      tech: tecnologias[i],
-      nome: name,
-    }
-    listaObjetos[i] = objeto;
-  }
-  if (tecnologias.length === 0) {
-    return 'Vazio!';
-  }
-  return listaObjetos.sort(compare);
-}
 function compare(a, b) {
   if (a.tech < b.tech) {
     return -1;
@@ -142,6 +128,20 @@ function compare(a, b) {
     return 1;
   }
   return 0;
+}
+function techList(tecnologias, name) {
+  let listaObjetos = [];
+  for (let i = 0; i < tecnologias.length; i += 1) {
+    let objeto = {
+      tech: tecnologias[i],
+      name: name,
+    }
+    listaObjetos[i] = objeto;
+  }
+  if (tecnologias.length === 0) {
+    return 'Vazio!';
+  }
+  return listaObjetos.sort(compare);
 }
 
 // Desafio 11
