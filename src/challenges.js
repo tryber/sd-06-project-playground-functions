@@ -93,29 +93,33 @@ function encode(a = 'hi there, this is your new house', coded = []) {
   return coded;
 }
 
-function decode(b = 'h3 th2r2! wh1ts 5p', deCoded = []) {
-  function dictionary(character){
+function decode(b = 'h3 th2r2! wh1ts 5p') {
+  let deCoded = [];
+  function dictionary(character) {
     if (character === '1') {
-      return 'a';
+      x = 'a';
     } else if (character === '2') {
-      return 'e';
+      x = 'e';
     } else if (character === '3') {
-      return 'i';
+      x = 'i';
     } else if (character === '4') {
-      return 'o';
+      x = 'o';
     } else if (character === '5') {
-      return 'u';
+      x = 'u';
     } else {
-      return character;
+      x = character;
     }
-  }
+    return x;
+    }
+
   for (let y = 0; y < b.length; y += 1) {
     let d = b[y];
     deCoded += dictionary(d);
   }
+  console.log(deCoded);
   return deCoded;
 }
-
+decode();
 // Desafio 10
 function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lucas') {
   let valid = t.length;
