@@ -151,7 +151,8 @@ function generatePhoneNumber(numbers) {
   }
   return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -172,8 +173,10 @@ function hydrate(string) {
   let r = /\d+/g;
   let total = 0;
   r = string.match(r);
-  for (let indice = 0; indice < string.length; indice += 1) {
+  for (let indice = 0; indice < r.length; indice += 1) {
     total += Number(r[indice]);
+    // console.log(total);
+    // console.log(Number(r[indice]));
   }
   if (total === 1) {
     return `${total} copo de água`;
