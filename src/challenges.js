@@ -178,8 +178,9 @@ function generatePhoneNumber(phoneArray) {
     }
   }
   for (index in phoneArray){
-    return '(' + phoneArray.slice(0,2) + ')' + phoneArray.slice(2,7) + '-' + phoneArray.slice(7,11);
+    let phoneNumber = '(' + phoneArray.slice(0,2) + ')' + phoneArray.slice(2,7) + '-' + phoneArray.slice(7,11);
   }
+  return phoneNumber.replace(/,/g, '');
 }
 
 // Desafio 12
