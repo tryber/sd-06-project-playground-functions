@@ -158,22 +158,22 @@ function techList(techArray, name) {
 
 // Desafio 11
 function generatePhoneNumber(phoneArray) {
-  let repeatcounter = 0;
   if (phoneArray.length !== 11) {
     return "Array com tamanho incorreto."
   }
   for (index in phoneArray){
+    let repeatcounter = 0;
     for (indexTwo in phoneArray) {
       if (phoneArray[index] === phoneArray[indexTwo]) {
         repeatcounter += 1;
       }
+      if (repeatcounter >= 3) {
+        return "não é possível gerar um número de telefone com esses valores"
+      }
     }
   }
-  if (repeatcounter >= 3) {
-    return "não é possível gerar um número de telefone com esses valores"
-  }
   for (let index = 0; index < phoneArray.length; index += 1) {
-    if (phoneArray[index] < 0 && phoneArray[index] > 9) {
+    if (phoneArray[index] < 0 || phoneArray[index] > 9) {
       return "não é possível gerar um número de telefone com esses valores"
     }
   }
