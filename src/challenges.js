@@ -121,11 +121,7 @@ function decode(palavras) {
 }
 
 // Desafio 10
-function techList([React, Jest, HTML, CSS, JavaScript]) {
-  let React = {
-    tech: 'CSS',
-    name: 'Cássio' 
-  }
+function techList() {
 }
 
 // Desafio 11
