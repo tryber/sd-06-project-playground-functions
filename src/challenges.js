@@ -340,10 +340,13 @@ function generatePhoneNumber(phoneNumber) {
   let numbers = 0;
   let index;
   let threeTimesCounter = 0;
-  let returnMessage = 'Array com tamanho incorreto.';
-  let testResult = '';
+  let returnMessage = '';
+  let testResult1 = false;
+  let testResult2 = false;
 
-  if (phoneNumber.length === 11) {
+  if (phoneNumber.length !== 11) {
+    testResult1 = true;
+  } else {
     for (index in phoneNumber) {
       numbers = phoneNumber[index];
       for (let j = 0; j < phoneNumber.length; j += 1) {
@@ -352,12 +355,14 @@ function generatePhoneNumber(phoneNumber) {
         }
       }
         if (threeTimesCounter >= 3 || numbers < 0 ||numbers > 9) {
-          testResult = true
+          testResult2 = true
         }
     threeTimesCounter = 0;
     }
   }
-  if (testResult === true) {
+  if (testResult1 === true) {
+    returnMessage = 'Array com tamanho incorreto.';
+  } else if (testResult2 === true) {
     returnMessage = 'não é possível gerar um número de telefone com esses valores';
   } else {
     returnMessage = `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
@@ -365,8 +370,8 @@ function generatePhoneNumber(phoneNumber) {
   return returnMessage;
 }
 
-let testArray = [1, 5, 9, 9, 7, 7, 4, 6, 4, 5, 8];
-console.log(generatePhoneNumber(testArray));
+// let testArray = [1, 5, 9, 9, 9, 7, 4, 6, 4, 5, 8];
+// console.log(generatePhoneNumber(testArray));
 
 // Desafio 12
 function triangleCheck() {
