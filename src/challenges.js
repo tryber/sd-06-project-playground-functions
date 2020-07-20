@@ -53,8 +53,8 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
   if (cat1 == cat2) {
     return 'os gatos trombam e o rato foge';
   } if (cat1 < cat2) {
-      return 'cat1';
-    } return 'cat2';
+    return 'cat1';
+  } return 'cat2';
 }
 
 // Desafio 8
@@ -77,8 +77,6 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
 
 // Desafio 9
 function encode(a = 'hi there, this is your new house', coded = []) {
-  l = a.length;
-  r = 0;
   toCode = [];
   for (x in a) {
     j = a[x];
@@ -109,8 +107,6 @@ function encode(a = 'hi there, this is your new house', coded = []) {
 }
 
 function decode(a = 'h3 th2r2!', decoded = []) {
-  l = a.length;
-  r = 0;
   toDecode = [];
   for (x in a) {
     j = a[x]
