@@ -79,24 +79,20 @@ console.log(catAndMouse(5, 3, 2))
 
 // Desafio 8
 function fizzBuzz(param1) {
-  let diviTres = 0;
-  let diviCinco = 0;
-  let array = 0;
+  let array = [];
   for (let index = 0; index < param1.length; index++) {
-    if (param1[index] % 3 === 0 && param1[index] % 5 === 0 ) {
-      array = 'fizz';
+    if (param1[index] % 3 === 0 && param1[index] % 5 === 0  || param1[index] % 3 === 5 && param1[index] % 5 === 3) {
+      array.push('fizzBuzz');
     } else if (param1[index] % 5 === 0 ) {
-      array = 'buzz';
+      array.push('buzz');
     } else if (param1[index] % 3 === 0 ) {
-      array = 'fizzBuzz';
-    } else{
-      array = 'bug'
+      array.push('fizz');
+    } else {
+      array.push('bug!');
     }
-  
   }
   return array;
   }
-
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
