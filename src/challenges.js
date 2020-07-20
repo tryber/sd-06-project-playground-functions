@@ -2,10 +2,7 @@
 function compareTrue(a = 1, b = 1) {
   if (a && b == 1) {
     return true;
-  }
-  else {
-    return false;
-  }
+  } return false;
 }
 // Desafio 2
 function calcArea(base = 10, height = 8) {
@@ -20,8 +17,9 @@ function splitSentence(a = 'go Trybe') {
 
 // Desafio 4
 function concatName(a = ['foguete', 'nao', 'tem', 'ré']) {
-  last = a[a.length - 1] + ', ' + a[0];
-  return last;
+  last = a[a.length - 1];
+  first = a[0];
+  return `${last}, ${first}`;
 }
 
 // Desafio 5
@@ -54,13 +52,9 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 
   if (cat1 == cat2) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    if (cat1 < cat2) {
+  } if (cat1 < cat2) {
       return 'cat1';
-    } else {
-      return 'cat2';
-    }
-  }
+    } return 'cat2';
 }
 
 // Desafio 8
@@ -68,17 +62,13 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
   let b = [];
   for (x in a) {
     let i = a[x];
-    
     if (i % 3 == 0 && i % 5 == 0) {
       b.push('fizzBuzz');
-    }
-    else if (i % 3 == 0) {
+    } else if (i % 3 == 0) {
       b.push('fizz');
-    }
-    else if (i % 5 == 0) {
+    } else if (i % 5 == 0) {
       b.push('buzz');
-    }
-    else {
+    } else {
       b.push('bug!');
     }
   }
@@ -90,9 +80,8 @@ function encode(a = 'hi there, this is your new house', coded = []) {
   l = a.length;
   r = 0;
   toCode = [];
-  
   for (x in a) {
-    j = a[x]
+    j = a[x];
     toCode += j;
   }
   for (x in toCode) {
@@ -100,61 +89,51 @@ function encode(a = 'hi there, this is your new house', coded = []) {
     if (i == 'a') {
       i = '1'
       coded += i
-    }
-    else if (i == 'e') {
+    } else if (i == 'e') {
       i = '2'
       coded += i
-    }
-    else if (i == 'i') {
+    } else if (i == 'i') {
       i = '3'
       coded += i
-    }
-    else if (i == 'o') {
+    } else if (i == 'o') {
       i = '4'
       coded += i
-    }
-    else if (i == 'u') {
+    } else if (i == 'u') {
       i = '5'
       coded += i
-    }
-    else {
-      coded += i
+    } else {
+      coded += i;
     }
   }
-  return coded
+  return coded;
 }
 
 function decode(a = 'h3 th2r2!', decoded = []) {
   l = a.length;
   r = 0;
   toDecode = [];
-  for ( x in a) {
+  for (x in a) {
     j = a[x]
     toDecode += j;
   }
   for (x in toDecode) {
     i = toDecode[x];
-    if ( i == '1') {
+    if (i == '1') {
       i = 'a'
       decoded += i
-    }
-    else if (i == '2') {
+    } else if (i == '2') {
       i = 'e'
       decoded += i
-    }
-    else if (i == '3') {
+    } else if (i == '3') {
       i = 'i'
       decoded += i
-    }
-    else if (i == '4') {
+    } else if (i == '4') {
       i = 'o'
       decoded += i
-    }
-    else if (i == '5') {
+    } else if (i == '5') {
       i = 'u'
       decoded += i
-    }
-    else {
+    } else {
       decoded += i
     }
   }
@@ -167,7 +146,7 @@ function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lu
   valid = t.length
   if (valid > 0) {
     for (x in t) {
-      let obj = new Object();
+      let obj = {};
       obj.tech = t[x];
       obj.name = name;
       i.push(obj);
@@ -179,13 +158,13 @@ function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lu
   //   return 0;
   // })
 
-      i.sort((a, b) => {
-        if (a.tech < b.tech) return -1;
-        if (a.tech > b.tech) return 1;
-        return 0;
-      })
+    i.sort((a, b) => {
+      if (a.tech < b.tech) return -1;
+      if (a.tech > b.tech) return 1;
+      return 0;
+    })
 
-      return i;
+    return i;
   }
   return 'Vazio!';
 }
