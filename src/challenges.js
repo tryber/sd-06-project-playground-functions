@@ -196,16 +196,17 @@ function triangleCheck(arrayTriangle) {
   let sideMod2 = lineA - lineC;
   let sideMod3 = lineA - lineB;
 
-  if ( Math.abs(sideMod1) < lineA && (lineB + lineC) > a ) {
+  if ( Math.abs(sideMod1) < lineA && (lineB + lineC) > lineA ) {
     return true;
-  } else if (Math.abs(sideMod2) < lineA && (lineA + lineC) > b) {
+  } else if (Math.abs(sideMod2) < lineA && (lineA + lineC) > lineB) {
     return true;
-  } else if (Math.abs(sideMod3) < lineC && (lineA + lineB) > b) {
+  } else if (Math.abs(sideMod3) < lineC && (lineA + lineB) > lineC) {
     return true;
-  } return false;
+  } else {
+    return false;}
   
 }
-
+console.log(triangleCheck([16, 20, 30]))
 
 // Desafio 13
 function hydrate() {
