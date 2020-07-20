@@ -276,9 +276,19 @@ function triangleCheck(lineA, lineB, lineC) {
 triangleCheck(10, 14, 8);
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(inputString) {
+  let numberExtract = inputString.match(/\d+/g).map(Number);
+  let sum = 0;
+  let outputString = "";
+
+  for (index in numberExtract){
+      sum += numberExtract[index];
+  }
+
+  outputString = sum + " copos de água"
+
+  return outputString;
+  }
 
 
 module.exports = {

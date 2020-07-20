@@ -1,22 +1,15 @@
-let lineA = 1;
-let lineB = 14;
-let lineC = 8;
+let inputString = "1 cachaça, 5 cervejas e 1 copo de vinho";
 
-checkOutput = false;
+let numberExtract = inputString.match(/\d+/g).map(Number);
+let sum = 0;
+let outputString = "";
 
-checkOneSide(lineA, lineB, lineC);
-checkOneSide(lineB, lineA, lineC);
-checkOneSide(lineC, lineA, lineB);
+console.log(numberExtract);
 
-
-
-function checkOneSide(sideToCheck, otherSide1, otherSide2){
-    if (sideToCheck < otherSide1 + otherSide2 && sideToCheck > Math.abs(otherSide1 - otherSide2) && sideToCheck > Math.abs(otherSide2 - otherSide1)){
-        checkOutput = true;
-    } else{
-        checkOutput = false;
-    }
+for (index in numberExtract){
+    sum += numberExtract[index];
 }
 
+outputString = sum + " copos de água"
 
-console.log(checkOutput);
+console.log(outputString);
