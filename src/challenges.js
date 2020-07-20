@@ -83,21 +83,20 @@ function fizzBuzz(param1) {
   let diviCinco = 0;
   let array = 0;
   for (let index = 0; index < param1.length; index++) {
-    if (param1[index] / 3 === 0) {
-      array.push('fizz');
+    if (param1[index] % 3 === 0 && param1[index] % 5 === 0 ) {
+      array = 'fizz';
+    } else if (param1[index] % 5 === 0 ) {
+      array = 'buzz';
+    } else if (param1[index] % 3 === 0 ) {
+      array = 'fizzBuzz';
+    } else{
+      array = 'bug'
     }
-    if (param1[index] / 5 === 0) {
-      array.push('buzz');
-    }
-    if (param1[index] / 3 === 0 && param1[index] / 5 === 0) {
-      array.push('fizzBuzz');
-    }
-    if (param1[index] / 3 != 0 && param1[index] / 5 != 0) {
-      array.push('bug');
-    }
+  
   }
   return array;
-}
+  }
+
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
