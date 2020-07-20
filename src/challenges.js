@@ -63,16 +63,20 @@ function fizzBuzz(arrayNumber) {
   let arrayString = [];
   for (let i = 0; i < arrayNumber.length; i += 1) {
     if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 !== 0) {
-      arrayString.push('fizz');
+      arrayString[i] = 'fizz';
     } else if (arrayNumber[i] % 3 !== 0 && arrayNumber[i] % 5 === 0){
-      arrayString.push('buzz');
+      arrayString[i] = 'buzz';
     } else if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 === 0){
-      arrayString.push('fizzBuzzz');
+      arrayString[i] = 'fizzBuzzz';
+    } else {
+    arrayString[i] = 'bug!';
     }
-    arrayString.push('bug!');
   }
   return arrayString;
 }
+
+// let array = [2, 15, 7, 9, 45];
+// console.log(fizzBuzz(array));
 
 // Desafio 9
 function encode() {
