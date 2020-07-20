@@ -285,7 +285,7 @@ function hydrate(inputString) {
       sum += numberExtract[index];
   }
 
-  if(sum = 1){
+  if(sum === 1){
     outputString = sum + " copo de água";
     return outputString;
   } else{
@@ -293,8 +293,9 @@ function hydrate(inputString) {
     return outputString;
   }
   
-  }
+}
 
+hydrate("1 cerveja")
 
 module.exports = {
   calcArea,
