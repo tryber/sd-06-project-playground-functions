@@ -58,18 +58,25 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arr) {
   let result = [];
-  function checkNumber(n) {
-    let fiveModulo = n % 5;
-    let threeModulo = n % 3;
-    if (threeModulo === 0 && fiveModulo === 0) {
-      result.push('fizzBuzz');
-    } else if (threeModulo === 0) {
-      result.push('fizz');
-    } else if (fiveModulo === 0) {
-      result.push('buzz');
+  function calcModulo(nbr) {
+    let fiveModulo = nbr % 5;
+    let threeModulo = nbr % 3;
+    return [fiveModulo, threeModulo];
+  }
+  function moduloResults(mod) {
+    if (mod[0] === 0 && mod[1] === 0) {
+      return 'fizzBuzz';
+    } else if (mod[1] === 0) {
+      return 'fizz';
+    } else if (mod[0] === 0) {
+      return 'buzz';
     } else {
-      result.push('bug!');
+      return 'bug!';
     }
+  }
+  function checkNumber(n) {
+    modulos = calcModulo(n);
+    result.push(moduloResults(modulos));
   }
   arr.forEach(checkNumber);
   return result;
@@ -174,7 +181,7 @@ function hydrate(str) {
   let regex = /\d+/;
   for (let s in str) {
     if (regex.test(str[s])) {
-      count += parseInt(str[s]);
+      count += parseInt(str[s], 10);
     }
   }
   if (count > 1) {
