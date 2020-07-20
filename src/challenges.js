@@ -18,7 +18,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(itens) {
-  let string = itens[itens.length - 1] + ', ' + itens[0];
+  let string = `${itens[itens.length - 1]}, ${itens[0]}`;
   return string;
 }
 
@@ -49,22 +49,9 @@ function highestCount(valores) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let posicaoCat1 = 0;
-  let posicaoCat2 = 0;
+  let posicaoCat1 = Math.abs(mouse - cat1);
+  let posicaoCat2 = Math.abs(mouse - cat2);
   let pegaOuNaoPega = '';
-// os valores (mouse, cat1, cat2) não necessariamente incorrem em uma subtração
-// de resultado positivo. Há que considerar a unidade da posição.
-  if (mouse > cat1) {
-    posicaoCat1 = mouse - cat1;
-  } else {
-    posicaoCat1 = cat1 - mouse;
-  } // valor da posição do gato1
-  if (mouse > cat2) {
-    posicaoCat2 = mouse - cat2;
-  } else {
-    posicaoCat2 = cat2 - mouse;
-  }// valor da posição do gato2
-
   if (posicaoCat2 > posicaoCat1) {
     pegaOuNaoPega = 'cat1';
   } else if (posicaoCat1 > posicaoCat2) {
