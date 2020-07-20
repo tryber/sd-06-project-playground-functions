@@ -79,19 +79,19 @@ function decode() {
 }
 
 // Desafio 10
-function techList(techArray) {
-  if (techArray.length === 0) {
+function techList(lista, objeto) {
+if (lista.length === 0) {
     return 'Vazio!';
   }
-  techArray.sort();
-  let objeto = [];
-  for (let index = 0; index < techArray.length; index += 1) {
-    objeto.push({
-      tech: techArray[index],
-      name: 'Vinicin',
-    });
+  let nameTech = [];
+  let sortedLista = lista.sort();
+  for (let i = 0; i < sortedLista.length; i ++) {
+    nameTech[i] = {
+      name: objeto,
+      tech: sortedLista[i],
+    };
   }
-  return objectTech;
+  return nameTech;
 }
 // Desafio 11
 function generatePhoneNumber() {
