@@ -278,8 +278,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(bebidas) {
   // seu código aqui
+  var regex = /\d+/g;
+  var string = bebidas;
+  var quantidades = string.match(regex).map(Number);
+  var total = 0;
+  for (let i in quantidades) {
+    total += quantidades[i];
+  }
+  return `${total} copos de água`;  
 }
 
 
