@@ -224,15 +224,16 @@ function generatePhoneNumber(listaNum) {
         telefone += '(' + listaNum[indice] + listaNum[indice + 1] + ') ';
       } else if (indice > 1 && indice <= 6) {
         telefone += listaNum[indice];
-      } else if (indice === 7) {
-        telefone += '-';
       } if (indice >= 7) {
+        if (indice === 7) {
+          telefone += '-';
+        }
         telefone += listaNum[indice];
       }
     }
   } return telefone;
 }
-// let testando = [1, 1, 9, 6, 7, 2, 3, 4, 2, 0, 0];
+// let testando = [1, 1, 9, 6, 7, 2, 3, 4, 2, 0, 90];
 // console.log(generatePhoneNumber(testando));
 // Desafio 12
 function triangleCheck() {
