@@ -70,22 +70,22 @@ let entrada = [1, 2, 3, 5, 5, 5, 5]
 console.log(highestCount(entrada))
 
 
-
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-    // seu código aqui
-    if (cat1 === cat2) {
+    let cat1Mouse = Math.abs(cat1 - mouse)
+    let cat2Mouse = Math.abs(cat2 - mouse)
+    if (cat1Mouse === cat2Mouse) {
         console.log("os gatos trombam e o rato foge")
-    } else if ((cat1 - mouse) < (cat2 - mouse)) {
+    } else if (cat1Mouse < cat2Mouse) {
         console.log("cat1")
-    } else if ((cat1 - mouse) > (cat2 - mouse)) {
+    } else if (cat1Mouse > cat2Mouse) {
         console.log("cat2")
     }
 }
 /*let cat1 = 10
 let cat2 = 12
-let mouse = 2*/
-console.log(catAndMouse(12, 12, 2))
+let mouse = 12*/
+catAndMouse(3, 5, 2)
 
 // Desafio 8
 function fizzBuzz() {
