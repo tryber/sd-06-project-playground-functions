@@ -100,31 +100,31 @@ function encode(a = ['hi there, this is your new house'], coded = []) {
   return coded;
 }
 
-function decode(a = 'h3 th2r2! wh1ts 5p', decoded = []) {
-  for (let x = 0; x < a.length; x += 1) {
-    let l = a[x];
-    if (l === '1'){
-      decoded += 'a';
-    } else if (l === '2') {
-      decoded += 'e';
-    } else if (l === '3') {
-      decoded += 'i';
-    } else if (l === '4') {
-      decoded += 'o';
-    } else if (l === '5') {
-      decoded += 'u';
+function decode(b = 'h3 th2r2! wh1ts 5p', deCoded = []) {
+  for (let y = 0; y < b.length; y += 1) {
+    let d = b[y];
+    if (d === '1'){
+      deCoded += 'a';
+    } else if (d === '2') {
+      deCoded += 'e';
+    } else if (d === '3') {
+      deCoded += 'i';
+    } else if (d === '4') {
+      deCoded += 'o';
+    } else if (d === '5') {
+      deCoded += 'u';
     } else {
-      decoded += l;
+      deCoded += d;
     }
   }
-  return decoded;
+  return deCoded;
 }
 
 // Desafio 10
 function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lucas') {
   let valid = t.length;
   let i = [];
-  if (valid > 0) {    
+  if (valid > 0) {
     for (let x = 0; x < t.length; x += 1) {
       let obj = {};
       obj.tech = t[x];
