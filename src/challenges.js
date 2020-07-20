@@ -195,7 +195,7 @@ function generatePhoneNumber(phoneNumber) {
   }
 }
 
-// Desafio 12 - ANDAMENTO
+// Desafio 12 - OK
 
 /* para ser um triângulo:
   | b - c | < a < b + c
@@ -223,11 +223,17 @@ function triangleCheck(lineA, lineB, lineC) {
 
   }
 
-// Desafio 13
-function hydrate() {
+// Desafio 13 - OK
+function hydrate(bebidas) {
   // seu código aqui
-}
+  var res = bebidas.replace(/\D/g, "");
 
+  let soma = 0;
+  for (let i = 0; i < res.length; i += 1) {
+    soma += parseInt(res[i], 10);
+  }
+  return soma + " copos de água";
+}
 
 module.exports = {
   calcArea,
