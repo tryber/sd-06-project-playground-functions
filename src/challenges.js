@@ -77,20 +77,21 @@ function encode() {
 function decode() {
 // seu código aqui
 }
+
 // Desafio 10
-function techList(TechArray) {
-if (TechArray.length === 0) {
-  return 'Vazio!';
-}
-TechArray.sort();
-let objectTech = [];
-for (let index = 0; i < TechArray.length; index += 1) {
-  objectTech.push({
-    tech: TechArray[index],
-    name: 'Vinicin',
-  });
-}
-return objectTech;
+function techList(techArray) {
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
+  techArray.sort();
+  let objeto = [];
+  for (let index = 0; index < techArray.length; index += 1) {
+    objeto.push({
+      tech: techArray[index],
+      name: 'Vinicin',
+    });
+  }
+  return objectTech;
 }
 // Desafio 11
 function generatePhoneNumber() {
@@ -109,18 +110,15 @@ return false;
 }
 // Desafio 13
 function hydrate(bebidas) {
-let array = bebidas.replace(/[^0-9]/g, '');
-let sum = 0;
-let frase = '';
-for (let index in array){
-  if (sum >= 0) {
-  sum += parseInt(array[index], 10);
-  frase = (sum === 1 ? ' copo de água' : ' copos de água');
-
-  return frase
-}
-}
-}
+    let lista = bebidas.replace(/[^0-9]/g, '');
+    let sum = 0;
+    for (let index in lista) {
+      if (sum >= 0) {
+        sum += parseInt(lista[index], 10);
+      }
+    }
+    return sum + (sum === 1 ? ' copo de água' : ' copos de água');
+  }
 
 module.exports = {
 calcArea,
