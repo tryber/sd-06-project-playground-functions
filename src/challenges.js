@@ -122,10 +122,10 @@ function fizzBuzz(arrayNumbers) {
         arrayFizzBuzz.push('bug!');
     }
   }
-  return console.log(arrayFizzBuzz);
+  return arrayFizzBuzz;
 }
 
-fizzBuzz([1,2,5,60,20,15,3,7,15]);
+
 
 // Desafio 9
 function encode(string) {
