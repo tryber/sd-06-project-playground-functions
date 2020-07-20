@@ -234,7 +234,7 @@ function generatePhoneNumber(listaNum) {
   } return telefone;
 }
 // let testando = [1, 1, 9, 6, 7, 2, 3, 4, 2, 0, 90];
-// console.log(generatePhoneNumber(testando));
+// console.log(generatePhoneNumber(testando))
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
