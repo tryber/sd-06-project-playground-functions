@@ -62,11 +62,11 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
   let b = [];
   for (x in a) {
     let i = a[x];
-    if (i % 3 == 0 && i % 5 == 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
       b.push('fizzBuzz');
-    } else if (i % 3 == 0) {
+    } else if (i % 3 === 0) {
       b.push('fizz');
-    } else if (i % 5 == 0) {
+    } else if (i % 5 === 0) {
       b.push('buzz');
     } else {
       b.push('bug!');
@@ -77,26 +77,26 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
 
 // Desafio 9
 function encode(a = 'hi there, this is your new house', coded = []) {
-  toCode = [];
+  let toCode = [];
   for (x in a) {
-    j = a[x];
+    let j = a[x];
     toCode += j;
   }
   for (x in toCode) {
-    i = toCode[x];
-    if (i == 'a') {
+    let i = toCode[x];
+    if (i === 'a') {
       i = '1'
       coded += i
-    } else if (i == 'e') {
+    } else if (i === 'e') {
       i = '2'
       coded += i
-    } else if (i == 'i') {
+    } else if (i === 'i') {
       i = '3'
       coded += i
-    } else if (i == 'o') {
+    } else if (i === 'o') {
       i = '4'
       coded += i
-    } else if (i == 'u') {
+    } else if (i === 'u') {
       i = '5'
       coded += i
     } else {
@@ -107,26 +107,26 @@ function encode(a = 'hi there, this is your new house', coded = []) {
 }
 
 function decode(a = 'h3 th2r2!', decoded = []) {
-  toDecode = [];
+  let toDecode = [];
   for (x in a) {
-    j = a[x]
+    let j = a[x]
     toDecode += j;
   }
   for (x in toDecode) {
-    i = toDecode[x];
-    if (i == '1') {
+    let i = toDecode[x];
+    if (i === '1') {
       i = 'a'
       decoded += i
-    } else if (i == '2') {
+    } else if (i === '2') {
       i = 'e'
       decoded += i
-    } else if (i == '3') {
+    } else if (i === '3') {
       i = 'i'
       decoded += i
-    } else if (i == '4') {
+    } else if (i === '4') {
       i = 'o'
       decoded += i
-    } else if (i == '5') {
+    } else if (i === '5') {
       i = 'u'
       decoded += i
     } else {
@@ -138,28 +138,20 @@ function decode(a = 'h3 th2r2!', decoded = []) {
 
 // Desafio 10
 function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lucas') {
-  i = [];
-  valid = t.length
-  if (valid > 0) {
+  let i = [];
+  let valid = t.length
+  while (valid > 0) {
     for (x in t) {
       let obj = {};
       obj.tech = t[x];
       obj.name = name;
       i.push(obj);
     }
-
-  // i.sort(function(a,b) {
-  //   if(a.tech < b.tech) return -1;
-  //   if(a.tech > b.tech) return 1;
-  //   return 0;
-  // })
-
     i.sort((a, b) => {
       if (a.tech < b.tech) return -1;
       if (a.tech > b.tech) return 1;
       return 0;
     })
-
     return i;
   }
   return 'Vazio!';
