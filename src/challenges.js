@@ -55,8 +55,7 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 }
 
 // Desafio 8
-function fizzBuzz(a = [2, 15, 7, 9, 45]) {
-  let b = [];
+function fizzBuzz(a = [2, 15, 7, 9, 45], b = []) {
   for (let x = 0; x < a.length; x += 1) {
     let i = a[x];
     if (i % 3 === 0 && i % 5 === 0) {
