@@ -91,15 +91,28 @@ function fizzBuzz(numbers){
     }
     return array;
 }
-console.log(fizzBuzz(arr = [7, 9]));
+//console.log(fizzBuzz(arr = [7, 9]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(nameNumber) {
+  let nome = "";
+    for (let i = 0; i < nameNumber.length; i += 1 ) {
+        nome = nome + nameNumber[i].replace(/a/g, 1)
+        .replace(/e/gi, 2).replace(/i/gi, 3).replace(/o/gi, 4).replace(/u/gi, 5);
+    }
+    return nome;
 }
-function decode() {
-  // seu código aqui
+//console.log(encode("Jean Victor Machado Pelais u"));
+
+function decode(numberName) {
+  let number = ""
+    for (let i = 0; i < numberName.length; i += 1 ) {
+      number = number + numberName[i].replace(/1/g, "a")
+      .replace(/2/gi, "e").replace(/3/gi, "i").replace(/4/gi, "o").replace(/5/gi, "u");
+    }
+    return number;
 }
+//console.log(decode("J21n V3ct4r M1ch1d4 P2l13s 5"));
 
 // Desafio 10
 function techList() {
