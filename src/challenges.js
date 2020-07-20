@@ -30,7 +30,7 @@ function concatName(arrayDeNomes) {
   // seu código aqui
   let primeiroItem = arrayDeNomes[0];
   let ultimoItem = arrayDeNomes[arrayDeNomes.length - 1];
-  return (ultimoItem + ", " + primeiroItem);
+  return (`${ultimoItem}, ${primeiroItem}`);
 }
 
 // Desafio 5
@@ -74,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let result;
   if (dCat1 > dCat2) {
     result = 'cat2';
-  } else if (dCat1 < dCat2){
+  } else if (dCat1 < dCat2) {
     result = 'cat1';
   } else {
     result = 'os gatos trombam e o rato foge';
@@ -87,7 +87,7 @@ function fizzBuzz(numeros) {
   // seu código aqui
   let retorno = [];
   for (let i in numeros) {
-    if (numeros[i] % 3 == 0 && numeros[i] % 5 == 0) {
+    if (numeros[i] % 3 === 0 && numeros[i] % 5 === 0) {
       retorno.push('fizzBuzz')
     } else if (numeros[i] % 3 == 0 && numeros[i] % 5 !== 0) {
       retorno.push('fizz')
@@ -106,15 +106,15 @@ function encode(palavras) {
   let result = [];
   let verifica = palavras.split('');
   for (let i in palavras) {
-    if (verifica[i] == 'a') {
+    if (verifica[i] === 'a') {
       verifica[i] = 1;
-    } else if (verifica[i] == 'e') {
+    } else if (verifica[i] === 'e') {
       verifica[i] = 2;
-    } else if (verifica[i] == 'i') {
+    } else if (verifica[i] === 'i') {
       verifica[i] = 3;
-    } else if (verifica[i] == 'o') {
+    } else if (verifica[i] === 'o') {
       verifica[i] = 4;
-    } else if ( verifica[i] == 'u') {
+    } else if ( verifica[i] === 'u') {
       verifica[i] = 5;
     } else {
       verifica[i] = verifica[i];
@@ -153,7 +153,7 @@ function techList(nomesTech, nome) {
   let listaTech = [];
   if (nomesTech.length !== 0) {
     nomesTech = nomesTech.sort();
-    for (let i = 0; i < nomesTech.length; i++) {
+    for (let i = 0; i < nomesTech.length; i += 1) {
       let lista = {
         tech: nomesTech[i],
         name: nome,
@@ -169,12 +169,11 @@ function techList(nomesTech, nome) {
 // Desafio 11
 function generatePhoneNumber(numeros) {
   // seu código aqui
-  let telefone;
-  telefone = '(' + numeros[0] + numeros[1] + ')' + " ";
+  let telefone = '(' + numeros[0] + numeros[1] + ')' + " ";
   if (numeros.length == 11) {
-    for ( let i = 2; i < numeros.length; i++) {
+    for ( let i = 2; i < numeros.length; i += 1) {
       telefone += numeros[i]
-      if (i == 6) {
+      if (i === 6) {
         telefone += '-';
       }
     }
@@ -194,7 +193,7 @@ function generatePhoneNumber(numeros) {
     let verificaNumero = numeros[i];
     for (let i2 in numeros) {
       if (verificaNumero === numeros[i2]) {
-        numero++;
+        numero += 1;
       }
     }
     if (numero > repetido) {
@@ -222,17 +221,17 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     ladoA = true;
   } else {
-      ladoA = false;
+    ladoA = false;
   }
   if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
     ladoB = true;
   } else {
-      ladoB = false;
+    ladoB = false;
   }
   if (lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
     ladoC = true;
   } else {
-      ladoC = false;
+    ladoC = false;
   }
   if (ladoA === true && ladoB === true && ladoC === true) {
     triangulo = true;
@@ -249,15 +248,15 @@ function hydrate(bebidas) {
   let qtd;
   let soma = 0;
   let result;
-  for (let i = 0; i < bebidas.length; i++) {
-    numStr = bebidas[i].replace(/[^0-9]/g,'');
+  for (let i = 0; i < bebidas.length; i += 1) {
+    numStr = bebidas[i].replace(/[^0-9]/g, '');
     qtd = parseInt(numStr);
     soma += qtd;
   }
   if (soma > 1) {
-    result = soma + ' copos de água';
+    result = `${soma} copos de água`;
   } else {
-    result = soma + ' copo de água';
+    result = `${soma} copo de água`;
   }
   return result;
 }
