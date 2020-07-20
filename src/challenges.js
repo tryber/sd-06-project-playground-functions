@@ -140,22 +140,26 @@ function decode(a = 'h3 th2r2!', decoded = []) {
 function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lucas') {
   let i = [];
   let valid = t.length
-  while (valid > 0) {
-    for (x in t) {
+  if (valid > 0) {
+    
+    for ( let x = 0; x < t.length; x++ ) {
       let obj = {};
       obj.tech = t[x];
       obj.name = name;
       i.push(obj);
-    }
+    }   
     i.sort((a, b) => {
       if (a.tech < b.tech) return -1;
       if (a.tech > b.tech) return 1;
       return 0;
     })
+    console.log(i)
     return i;
   }
   return 'Vazio!';
 }
+
+techList();
 
 // Desafio 11
 function generatePhoneNumber() {
