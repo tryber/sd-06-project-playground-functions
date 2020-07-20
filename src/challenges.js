@@ -71,15 +71,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let arrayFizzBuzz = [];
-  for (let i = 0; i <= arrayNumbers.length; i += 1) {
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (((arrayNumbers[i] % 3) === 0) && ((arrayNumbers[i] % 5) === 0)) {
-      arrayFizzBuzz[i] = 'fizzBuzz';
+      arrayFizzBuzz.push('fizzBuzz');
     } else if ((arrayNumbers[i] % 3) === 0) {
-      arrayFizzBuzz[i] = 'fizz';
+      arrayFizzBuzz.push('fizz');
     } else if ((arrayNumbers[i] % 5) === 0) {
-      arrayFizzBuzz[i] = 'buzz';
+      arrayFizzBuzz.push('buzz');
     } else {
-      arrayFizzBuzz[i] = 'bug!';
+      arrayFizzBuzz.push('bug!');
     }
   }
   return arrayFizzBuzz;
@@ -87,9 +87,32 @@ function fizzBuzz(arrayNumbers) {
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
+function encode(codigo) {
+  let code = [];
+    for (let i = 0; i < codigo.length; i += 1) {
+      switch (codigo[i]) {
+        case 'a':
+          code[i] = 1;
+          break;
+        case 'e':
+          code[i] = 2;
+          break;
+        case 'i':
+          code[i] = 3;
+          break;
+        case 'o':
+          code[i] = 4;
+          break;
+        case 'u':
+          code[i] = 5;
+          break;
+        default:
+          code[i] = codigo[i];
+          break;
+      }
+    }
+    return code.join(' '); 
+  }
 function decode() {
   // seu código aqui
 }
