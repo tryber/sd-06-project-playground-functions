@@ -32,13 +32,13 @@ function splitSentence(word) {
 function concatName(array) {
   let last = array[array.length - 1];
   let first = array[0];
-  let lastFirst = last + ', ' + first;
+  let lastFirst = `${last}, ${first}`;
   return lastFirst;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = 3 * wins + ties;
+  let points = (3 * wins) + ties;
   return points;
 }
 
@@ -70,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
     distance2 *= -1;
   }
   if (distance1 === distance2) {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   } else if (distance1 < distance2) {
     return 'cat1';
   }
@@ -82,13 +82,13 @@ function fizzBuzz(array) {
   let fizz = [];
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
-      fizz.push("fizz");
+      fizz.push('fizz');
     } else if (array[i] % 5 === 0 && array[i] % 3 !== 0) {
-      fizz.push("buzz");
+      fizz.push('buzz');
     } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-      fizz.push("fizzBuzz");
+      fizz.push('fizzBuzz');
     } else if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
-      fizz.push("bug!");
+      fizz.push('bug!');
     }
   }
   return fizz;
@@ -147,11 +147,11 @@ function decode(string) {
 function techList(technologies, user) {
   let learning = [];
   if (technologies.length === 0) {
-    return 'Vazio!'
+    return 'Vazio!';
   }
-  techs = technologies.sort(); 
-  for (technos in techs) {
-    learning.push({tech: techs[technos], name: user});
+  let techs = technologies.sort();
+  for (let i = 0; i < techs.length; i += 1) {
+    learning.push({ tech: techs[i], name: user });
   }
   return learning;
 }
@@ -161,42 +161,46 @@ function generatePhoneNumber(phone) {
   let count = 0;
   let phoneNumber = '(';
   if (phone.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   }
-  for (num1 in phone) {
+  for (let num1 = 0; num1 < phone.length; num1 += 1) {
     count = 0;
-    for (num2 in phone) {
+    for (let num2 in phone) {
       if (phone[num1] === phone[num2]) {
         count += 1;
       }
     }
     if (phone[num1] < 0 || phone[num1] > 9 || count >= 3) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
-    if (num1 < 2) {
-      phoneNumber += phone[num1];
-    } else if (num1 == 2) {
-      phoneNumber += ") ";
-      phoneNumber += phone[num1];
-    } else if (num1 > 2 && num1 < 7) {
-      phoneNumber += phone[num1];
-    } else if (num1 == 7) {
-      phoneNumber += '-';
-      phoneNumber += phone[num1];
+    if (num1 === 2) {
+      phoneNumber += `) ${phone[num1]}`;
+    } else if (num1 === 7) {
+      phoneNumber += `-${phone[num1]}`;
     } else {
       phoneNumber += phone[num1];
     }
   }
   return phoneNumber;
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineC) {
-    if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineB - lineA)) {
-      return true;
-    }
-    return false;
+  let checkA = false;
+  let checkB = false;
+  let checkC = false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    checkA = true;
+  }
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    checkB = true;
+  }
+  if (lineC < lineA + lineC && lineC > Math.abs(lineB - lineA)) {
+    checkC = true;
+  }
+  if (checkA === true && checkB === true && checkC === true) {
+    return true;
   }
   return false;
 }
@@ -206,20 +210,18 @@ function hydrate(string) {
   const regex = /\d+/g;
   const numbers = string.match(regex);
   let water = 0;
-  for (num in numbers) {
-    water += parseInt(numbers[num]);
+  for (let num = 0; num < numbers.length; num += 1) {
+    water += parseInt(numbers[num], 10);
   }
   if (water === 1) {
-    let cup = "";
-    cup += water + " copo de água"
+    let cup = '';
+    cup += `${water} copo de água`;
     return cup;
   }
-  let cups = "";
-  cups += water + " copos de água"
+  let cups = '';
+  cups += `${water} copos de água`;
   return cups;
 }
-
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 module.exports = {
