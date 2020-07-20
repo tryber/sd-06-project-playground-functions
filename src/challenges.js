@@ -116,37 +116,37 @@ function techList(lista, nome) {
 
 // Desafio 11
 function generatePhoneNumber(meusNumeros) {
-  let resposta;
   // verificar se o numero é diferente de 11
   if (meusNumeros.length !== 11) {
-    resposta = "Array com tamanho incorreto."
+    return "Array com tamanho incorreto."
   } else { // se o array tiver exatamente 11 numeros
     for (let numero in meusNumeros) { //Passando numero por numero
+      if ( numero < 0) {
+        return "não é possível gerar um número de telefone com esses valores";
+      }
       let contador = 0;
       for (let duplicado in meusNumeros) { //Comparar cada numero para ver se tem repitido
         if (numero === duplicado) { // se tiver repetido
           contador += 1;
         }
         if (contador > 2) {
-          resposta = "não é possível gerar um número de telefone com esses valores";
+          return "não é possível gerar um número de telefone com esses valores";
         }
       }
     }
-    resposta = "(" + meusNumeros[0] + meusNumeros[1] + ") " + meusNumeros[2] + meusNumeros[3] + meusNumeros[4] + meusNumeros[5] + meusNumeros[6] + "-" + meusNumeros[7] + meusNumeros[8] + meusNumeros[9] + meusNumeros[10];
   }
-  return resposta;
+  return "(" + meusNumeros[0] + meusNumeros[1] + ") " + meusNumeros[2] + meusNumeros[3] + meusNumeros[4] + meusNumeros[5] + meusNumeros[6] + "-" + meusNumeros[7] + meusNumeros[8] + meusNumeros[9] + meusNumeros[10];
 }
 
 // Desafio 12
 function triangleCheck(linha1, linha2, linha3) {
   // seu código aqui
-  resposta = false;
   if (linha1 < linnha2 + linha3 && linha1 > Math.abs(linha2 - linha3)) {
-    resposta = true;
+    return true;
   } else if (linha2 < linha1 + linha3 && linha2 > Math.abs(linha1 - linha3)) {
-    resposta = true;
+    return true;
   } else if (linha3 < linha1 + linha2 && linha3 > Math.abs(linha1 - linha2)) {
-    resposta = true;
+    return true;
   }
   return resposta;
 }
