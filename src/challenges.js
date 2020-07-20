@@ -64,12 +64,12 @@ function fizzBuzz(arrayNumber) {
   for (let i = 0; i < arrayNumber.length; i += 1) {
     if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 !== 0) {
       arrayString[i] = 'fizz';
-    } else if (arrayNumber[i] % 3 !== 0 && arrayNumber[i] % 5 === 0){
+    } else if (arrayNumber[i] % 3 !== 0 && arrayNumber[i] % 5 === 0) {
       arrayString[i] = 'buzz';
-    } else if (arrayNumber[i] % 3 !== 1 && arrayNumber[i] % 5 !== 1){
+    } else if (arrayNumber[i] % 3 !== 1 && arrayNumber[i] % 5 !== 1) {
       arrayString[i] = 'fizzBuzzz';
     } else {
-    arrayString[i] = 'bug!';
+      arrayString[i] = 'bug!';
     }
   }
   return arrayString;
