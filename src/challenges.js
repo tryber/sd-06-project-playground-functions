@@ -32,7 +32,7 @@ function concatName(arrayString) {
   return concatenate;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints(wins,ties) {
@@ -90,6 +90,7 @@ catAndMouse(8,2,4);
 // Desafio 8
 function fizzBuzz(numbers) {
   let newArray = [];
+
   for (let index in numbers) {
     if (numbers[index]%3 === 0) {
       newArray.push("fizz");
@@ -180,7 +181,7 @@ function techList(arrayTechnology,name) {
 }
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas");
 
 // Desafio 11
 function generatePhoneNumber() {
