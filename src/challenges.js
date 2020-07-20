@@ -141,7 +141,7 @@ function generatePhoneNumber(numbers) {
   let nextIndex = 1;
   let invalidNumbers = false;
   for (let index = 0; index < arraySize - 1; index += 1) {
-    if (countRepeated > 3 || numbers[index] > 9 || numbers[index] < 0) {
+    if (countRepeated > 2 || numbers[index] > 9 || numbers[index] < 0) {
       invalidNumbers = true;
       break;
     }
