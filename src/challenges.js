@@ -219,7 +219,7 @@ function hydrate(string) {
   let soma = 0;
   let msg = '';
   for (let i = 0; i < numbers.length; i += 1) {
-    soma += parseInt(numbers[i]);
+    soma += parseInt(numbers[i], 10);
   }
   if (soma === 1) {
     msg = '1 copo de água';
@@ -228,7 +228,7 @@ function hydrate(string) {
   }
   return msg;
 }
-// console.log(hydrate('1 iauseh 7 saehsaiuh e 2 uashsuha'));
+// console.log(hydrate('1 iauseh 8 saehsaiuh e 2 uashsuha'));
 
 module.exports = {
   calcArea,
