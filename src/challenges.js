@@ -15,8 +15,8 @@ function splitSentence(frase) {
   // seu código aqui
   let acumulador = '';
   let novaLista = [];
-  for (let i = 0 ; i <= fase.length ; i += 1) {
-    let elemento = frase[indice]
+  for (let i = 0; i <= frase.length; i += 1) {
+    let elemento = frase[i]
     if (elemento !== ' ') {
       acumulador += elemento;
     } else {
@@ -51,13 +51,13 @@ function highestCount(arrayNumeros) {
   let maiorValor = arrayNumeros[0];
   let ocorrencias = 0;
 
-  for (let i in arrayNumeros) {
+  for (let i = 0; i <= arrayNumeros.length; i+= 1) {
     if (arrayNumeros[i] > maiorValor) {
       maiorValor = arrayNumeros[i];
     }
   }
 
-  for (let i in arrayNumeros) {
+  for (let i = 0; i <= arrayNumeros.length; i+= 1) {
     if (arrayNumeros[i] === maiorValor) {
       ocorrencias += 1;
     }
@@ -83,7 +83,7 @@ function catAndMouse(mousePos, cat1Pos, cat2Pos) {
 function fizzBuzz(arrayNumeros) {
   // seu código aqui
   let novaArray = [];
-  for (let i in arrayNumeros) {
+  for (let i = 0; i <= arrayNumeros.length; i += 1) {
     let numero = arrayNumeros[i];
     if (numero % 3 === 0 && numero % 5 === 0) {
       novaArray.push('fizzBuzz');
@@ -136,7 +136,7 @@ function swapNumbers(letter) {
 function encode(frase) {
   // seu código aqui
   let novaFrase = [];
-  for (let i in frase) {
+  for (let i = 0; i <= frase.length; i += 1) {
     let letra = frase[i];
     let conversao = swapVogals(letra);
     novaFrase.push(conversao);
@@ -147,7 +147,7 @@ function encode(frase) {
 function decode(frase) {
   // seu código aqui
   let novaFrase = [];
-  for (let i in frase) {
+  for (let i = 0; i <= frase; i+= 1) {
     let letra = frase[i];
     let conversao = swapNumbers(letra);
     novaFrase.push(conversao);
