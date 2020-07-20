@@ -77,62 +77,61 @@ function fizzBuzz(numeros) {
 
 // Desafio 9
 function encode(str) {
-  let aux = str.split('');
-  str = '';
-  let teste;
-  for (let index = 0; index < aux.length; index += 1) {
-    switch (aux[index]) {
+  str = str.split('');
+  aux = '';
+  for (let index = 0; index < str.length; index += 1) {
+    switch (str[index]) {
       case 'a' :
-        aux[index] = '1';
+        str[index] = '1';
         break;
       case 'e' :
-        aux[index] = '2';
+        str[index] = '2';
         break;
       case 'i' :
-        aux[index] = '3';
+        str[index] = '3';
         break;
       case 'o' :
-        aux[index] = '4';
+        str[index] = '4';
         break;
       case 'u' :
-        aux[index] = '5';
+        str[index] = '5';
         break;
       default:
         break;
     }
-    str += aux[index];
+    aux += str[index];
   }
-  return str;
+  return aux;
 }
 
 function decode(str) {
-  let aux = str.split('');
-  str = '';
-  let teste;
-  for (let index = 0; index < aux.length; index += 1) {
-    switch (aux[index]) {
+  str = str.split('');
+  let aux = '';
+  for (let index = 0; index < str.length; index += 1) {
+    switch (str[index]) {
       case '1' :
-        aux[index] = 'a';
+        str[index] = 'a';
         break;
       case '2' :
-        aux[index] = 'e';
+        str[index] = 'e';
         break;
       case '3' :
-        aux[index] = 'i';
+        str[index] = 'i';
         break;
       case '4' :
-        aux[index] = 'o';
+        str[index] = 'o';
         break;
       case '5' :
-        aux[index] = 'u';
+        str[index] = 'u';
         break;
       default:
         break;
     }
-    str += aux[index];
+    aux += str[index];
   }
-  return str;
+  return aux;
 }
+
 // Desafio 10
 function techList(tecno, name) {
   if (tecno.length === 0) {
