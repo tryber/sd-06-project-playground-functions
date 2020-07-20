@@ -240,7 +240,7 @@ function hydrate(bebidas) {
   let result;
   for (let i = 0; i < bebidas.length; i += 1) {
     numStr = bebidas[i].replace(/[^0-9]/g, '');
-    qtd = parseInt(numStr);
+    qtd = parseInt(numStr, 10);
     soma += qtd;
   }
   if (soma > 1) {
