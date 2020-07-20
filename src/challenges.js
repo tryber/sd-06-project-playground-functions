@@ -24,7 +24,7 @@ function splitSentence(frase) {
 function concatName(array) {
   // seu código aqui
   let ultimoPrimeiro = '';
-  ultimoPrimeiro += array[array.length - 1] + ', ' + array[0]
+  ultimoPrimeiro += (array[array.length - 1] + ', ' + array[0])
   return ultimoPrimeiro;
 }
 
@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge'
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1'
-  } else (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)); {
+  } else {
     return 'cat2'
   }
 }
@@ -71,15 +71,15 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let arrayResultado = [];
-  for(let i=0;i < array.length;i+=1){
-    if((array[i]%3===0) && (array[i]%5===0)){
-    arrayResultado.push('fizzBuzz');
-    }else if(array[i]%3===0){
-    arrayResultado.push('fizz');
-    }else if(array[i]%5===0){
-    arrayResultado.push('buzz');
-    }else{
-    arrayResultado.push('bug!');
+  for (let i=0;i<array.length;i+=1) {
+    if ((array[i]%3===0)&&(array[i]%5===0)) {
+      arrayResultado.push('fizzBuzz');
+    } else if (array[i]%3===0) {
+      arrayResultado.push('fizz');
+    } else if (array[i]%5===0) {
+      arrayResultado.push('buzz');
+    } else {
+      arrayResultado.push('bug!');
     }
   }
   return arrayResultado;
@@ -91,25 +91,25 @@ function encode(string) {
   let encodeArray = string.split('')
 
   for (let index in encodeArray) {
-    switch (encodeArray[index]){
-      case'a':
+    switch (encodeArray[index]) {
+      case 'a':
         encodeArray[index] = 1
         break;
-      case'e':
+      case 'e':
         encodeArray[index] = 2
         break;
-      case'i':
+      case 'i':
         encodeArray[index] = 3
-        break ;
-      case'o':
+        break;
+      case 'o':
         encodeArray[index] = 4
         break;
-      case'u':
+      case 'u':
         encodeArray[index] = 5
         break;
     }
   }
-  let encoded = encodeArray.join("");
+  let encoded = encodeArray.join('');
   return encoded;
 }
 
@@ -119,19 +119,19 @@ function decode(encoded) {
 
   for (let index in decodeArray) {
     switch (decodeArray[index]) {
-      case'1':
+      case '1':
         decodeArray[index] ='a'
         break;
-      case'2':
+      case '2':
         decodeArray[index] = 'e'
         break;
-      case'3':
+      case '3':
         decodeArray[index] = 'i'
         break;
-      case'4':
+      case '4':
         decodeArray[index] = 'o'
         break;
-      case'5':
+      case '5':
         decodeArray[index] = 'u'
         break;
     }
@@ -145,12 +145,12 @@ function techList(tech, name) {
   // seu código aqui
   let listaOrdenada = tech.sort()
   let listaTech = []
-  if (listaOrdenada.length > 0){
+  if (listaOrdenada.length > 0) {
     for (i in listaOrdenada) {
-    listaTech.push ({ tech: listaOrdenada[i], name: name,})
+      listaTech.push ({ tech:listaOrdenada[i], name:name, })
     }
-  }else{
-  return "Vazio!"
+  } else {
+    return 'Vazio!'
   }
   return listaTech
 }
@@ -158,24 +158,11 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
-  if (numbers.length != 11) {
-    return "Array com tamanho incorreto." }
-  for (let i of numbers) {
-    if (i < 0 || i > 10) {
-      return "não é possível gerar um número de telefone com esses valores"
-    }
-  }
-
-}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if(lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC), lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC), lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
-    return true
-  } else {
-    return false
-  }
+  return (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC), lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC), lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) ? true : false;
 }
 
 // Desafio 13
@@ -184,14 +171,12 @@ function hydrate(string) {
   let numbers = /\d+/g;
   let numberOfDrinks = string.match(numbers);
   let water = 0
-  for (let i = 0; i < numberOfDrinks.length; i++) {
-      water += parseInt(numberOfDrinks[i]);
+  for (let i = 0; i < numberOfDrinks.length; i+=1) {
+    water += parseInt(numberOfDrinks[i]);
   }
-  if (water > 1) 
-  {glassesOfWater = water + " copos de água";}
-  else
-  {glassesOfWater = water + " copo de água"}
-  return glassesOfWater;
+  water > 1 ? glassesOfWater = ' copos de água' : glassesOfWater = ' copo de água';
+  alert = water + glassesOfWater; 
+  return alert;
 }
 
 module.exports = {
