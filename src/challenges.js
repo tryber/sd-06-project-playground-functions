@@ -60,21 +60,20 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numeros) {
   let result = [];
   for (let index in numeros) {
-    if (numeros[index] % 3 === 0 && numeros[index] % 5 !== 0) {
-      result.push('fizz');
-    } else
-    if (numeros[index] % 3 !== 0 && numeros[index] % 5 === 0) {
-      result.push('buzz');
-    } else
     if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
       result.push('fizzBuzz');
+    } else
+    if (numeros[index] % 3 === 0) {
+      result.push('fizz');
+    } else
+    if (numeros[index] % 5 === 0) {
+      result.push('buzz');
     } else {
       result.push('bug!');
     }
   }
   return result;
 }
-
 // Desafio 9
 function encode(str) {
   str = str.split('');
