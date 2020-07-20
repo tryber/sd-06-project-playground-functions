@@ -108,11 +108,11 @@ function encode(a = 'hi there, this is your new house', coded = []) {
 
 function decode(a = 'h3 th2r2!', decoded = []) {
   let toDecode = [];
-  for (let x in a) {
+  for (let x = 0; x < a.length; x += x) {
     let j = a[x]
     toDecode += j;
   }
-  for (let x in toDecode) {
+  for (let x = 0; x < toDecode.length; x += x) {
     let i = toDecode[x];
     if (i === '1') {
       i = 'a'
