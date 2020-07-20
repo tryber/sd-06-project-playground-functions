@@ -25,8 +25,11 @@ function footballPoints() {
 
 // Desafio 6
 function highestCount(arrayNumbers) {
-  arrayNumbers.sort();
   let count = 1;
+  if(arrayNumbers.length == 1){
+    return count;
+  }
+  arrayNumbers.sort();
   for (let i = arrayNumbers.length - 1; i > 0; i -= 1) {
     if (arrayNumbers[i] != arrayNumbers[i - 1]) {
       return count;
@@ -38,8 +41,14 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if(Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
+    return 'cat2';
+  }else if(Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
+    return 'cat1';
+  }else{
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
