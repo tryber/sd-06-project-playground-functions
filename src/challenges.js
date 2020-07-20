@@ -68,7 +68,7 @@ function highestCount(numbers) {
   return repetitionCount;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 
 // Desafio 7
