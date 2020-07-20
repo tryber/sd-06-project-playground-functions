@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(a = 1, b = 1) {
-  if (a && b == 1) {
+  if (a && b === 1) {
     return true;
   } return false;
 }
@@ -17,29 +17,29 @@ function splitSentence(a = 'go Trybe') {
 
 // Desafio 4
 function concatName(a = ['foguete', 'nao', 'tem', 'ré']) {
-  last = a[a.length - 1];
-  first = a[0];
+  let last = a[a.length - 1];
+  let first = a[0];
   return `${last}, ${first}`;
 }
 
 // Desafio 5
 function footballPoints(wins = 3, ties = 1) {
-  points = (wins * 3) +  (ties * 1)
-  return points
+  let points = (wins * 3) + (ties * 1);
+  return points;
 }
 
 // Desafio 6
 function highestCount(a = [9, 1, 2, 3, 9, 5, 7]) {
-  contHigher = 0;
-  i = 0;
-  for (x in a) {
+  let contHigher = 0;
+  let i = 0;
+  for (let x in a) {
     if (x > i) {
       i = a[x];
     }
   }
-  for (x in a) {
-    if (a[x] == i) {
-      contHigher++;
+  for (let x in a) {
+    if (a[x] === i) {
+      contHigher += contHigher;
     }
   }
   return contHigher;
@@ -50,7 +50,7 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
   cat1 = Math.abs(cat1 - mouse);
   cat2 = Math.abs(cat2 - mouse);
 
-  if (cat1 == cat2) {
+  if (cat1 === cat2) {
     return 'os gatos trombam e o rato foge';
   } if (cat1 < cat2) {
     return 'cat1';
@@ -60,7 +60,7 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 // Desafio 8
 function fizzBuzz(a = [2, 15, 7, 9, 45]) {
   let b = [];
-  for (x in a) {
+  for (let x in a) {
     let i = a[x];
     if (i % 3 === 0 && i % 5 === 0) {
       b.push('fizzBuzz');
@@ -78,11 +78,11 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
 // Desafio 9
 function encode(a = 'hi there, this is your new house', coded = []) {
   let toCode = [];
-  for (x in a) {
+  for (let x in a) {
     let j = a[x];
     toCode += j;
   }
-  for (x in toCode) {
+  for (let x in toCode) {
     let i = toCode[x];
     if (i === 'a') {
       i = '1'
@@ -108,11 +108,11 @@ function encode(a = 'hi there, this is your new house', coded = []) {
 
 function decode(a = 'h3 th2r2!', decoded = []) {
   let toDecode = [];
-  for (x in a) {
+  for (let x in a) {
     let j = a[x]
     toDecode += j;
   }
-  for (x in toDecode) {
+  for (let x in toDecode) {
     let i = toDecode[x];
     if (i === '1') {
       i = 'a'
@@ -141,13 +141,12 @@ function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lu
   let i = [];
   let valid = t.length
   if (valid > 0) {
-    
-    for ( let x = 0; x < t.length; x++ ) {
+    for (let x = 0; x < t.length; x += x) {
       let obj = {};
       obj.tech = t[x];
       obj.name = name;
       i.push(obj);
-    }   
+    }
     i.sort((a, b) => {
       if (a.tech < b.tech) return -1;
       if (a.tech > b.tech) return 1;
