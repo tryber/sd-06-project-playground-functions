@@ -27,14 +27,12 @@ splitSentence("be trybe");
 
 // Desafio 4
 function concatName(arrayString) {
-  let concatenate = arrayString.toString();
-  for (let index in arrayString) {
-    concatenate = arrayString[index] + " , " + arrayString[0];
-  }
+  let concatenate = "";
+    concatenate = arrayString[arrayString.length -1] + " , " + arrayString[0];
   return concatenate;
 }
 
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins,ties) {
