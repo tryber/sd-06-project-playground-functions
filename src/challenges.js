@@ -96,9 +96,27 @@ function fizzBuzz(param1) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(param1) {
+  let expressao = '';
+  if (param1) {
+    expressao = param1.replace(/a/gi, '1');
+  }
+  if (expressao) {
+    expressao = expressao.replace(/e/gi, '2');
+  }
+  if (expressao) {
+    expressao = expressao.replace(/i/gi, '3');
+  }
+  if (expressao) {
+    expressao = expressao.replace(/o/gi, '4');
+  }
+  if (expressao) {
+    expressao = expressao.replace(/u/gi, '5');
+  }
+  return expressao;
 }
+console.log(encode('hi there!'))
+
 function decode() {
   // seu código aqui
 }
