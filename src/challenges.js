@@ -179,7 +179,7 @@ function generatePhoneNumber(phoneArray) {
     }
   }
   for (index in phoneArray){
-    phoneNumber = '(' + phoneArray.slice(0,2) + ')' + phoneArray.slice(2,7) + '-' + phoneArray.slice(7,11);
+    phoneNumber = '(' + phoneArray.slice(0,2) + ')' + ' ' + phoneArray.slice(2,7) + '-' + phoneArray.slice(7,11);
     break;
   }
   return phoneNumber.replace(/,/g, '');
