@@ -80,7 +80,7 @@ function fizzBuzz(a = [2, 15, 7, 9, 45]) {
 }
 
 // Desafio 9
-function encode(a = ['hi there, this is your new house'], coded = []) {
+function encode(a = 'hi there, this is your new house', coded = []) {
   for (let x = 0; x < a.length; x += 1) {
     let l = a[x];
     if (l === 'a') {
@@ -100,9 +100,10 @@ function encode(a = ['hi there, this is your new house'], coded = []) {
   return coded;
 }
 
-function decode(b = 'h3 th2r2! wh1ts 5p', deCoded = []) {
-  for (let y = 0; y < b.length; y += 1) {
-    let d = b[y];
+function decode(deCoded = []) {
+  let a = encode();
+  for (let y = 0; y < a.length; y += 1) {
+    let d = a[y];
     if (d === '1') {
       deCoded += 'a';
     } else if (d === '2') {
