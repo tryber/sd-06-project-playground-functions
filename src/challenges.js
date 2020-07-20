@@ -55,8 +55,7 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  let out = [];
+function fizzBuzz(out = []) {
   let entrada = [2, 15, 7, 9, 45];
   function multTres(numero) {
     if (numero % 3 === 0) {
