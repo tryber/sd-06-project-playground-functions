@@ -1,18 +1,16 @@
 // Desafio 1
-let valor1
-let valor2;
 function compareTrue(valor1, valor2) {
+  let valor1;
+  let valor2;
   if (valor1 && valor2 === true){
     return true;
   } return false;
 }
 // console.log(compareTrue(valor1,valor2));
-
-
 // Desafio 2
-let base;
-let altura;
 function calcArea(base, altura) {
+  let base;
+  let altura;
   let area = (base * altura) / 2;
   return area
 }
@@ -53,7 +51,7 @@ function highestCount(lista) {
     }
   }
   let contador = 0;
-  for( let indice of lista ){
+  for (let indice of lista){
     if (indice === maior){
       contador += 1;
     }
@@ -116,10 +114,10 @@ function generatePhoneNumber(arrayTelefone) {
   //regra => não pode se repetir um mesmo indice por mais de 3 vezes ou é aceitos até duas repetições
 }
 // Desafio 12
-let lineA;
-let lineB;
-let lineC;
 function triangleCheck(lineA, lineB, lineC) {
+  let lineA;
+  let lineB;
+  let lineC;
   if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)){
     return true;
   } else if (lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)){
