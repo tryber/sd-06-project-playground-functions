@@ -78,80 +78,71 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(1, 2, 3));
 
 // Desafio 8
+function isDivisibleFor(number) {
+  let test3 = (number % 3) === 0;
+  let test5 = (number % 5) === 0;
+  if (test3 && test5) {
+    return 'fizzBuzz';
+  } else if (test3) {
+    return 'fizz';
+  } else if (test5) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(list) {
   let newList = [];
-  for (let i in list) {
-    if ((list[i] % 3) === 0 && (list[i] % 5) === 0) {
-      newList[i] = 'fizzBuzz';
-    } else if ((list[i] % 3) === 0) {
-      newList[i] = 'fizz';
-    } else if ((list[i] % 5) === 0) {
-      newList[i] = 'buzz';
-    } else {
-      newList[i] = 'bug!';
-    }
+  for (let i = 0; i < list.length; i += 1) {
+    newList[i] = isDivisibleFor(list[i]);
   }
   return newList;
 }
+
 // let numbers = [2, 15, 7, 9, 45];
 // console.log(fizzBuzz(numbers));
 
 // Desafio 9
-function encode(string) {
+function encodeDecode(string) {
   let newString = string;
-  for (let i in string) {
+  for (let i = 0; i < string.length; i += 1) {
     switch (string[i]) {
-      case 'a':
-        newString = newString.replace('a', '1');
-        break;
-      case 'e':
-        newString = newString.replace('e', '2');
-        break;
-      case 'i':
-        newString = newString.replace('i', '3');
-        break;
-      case 'o':
-        newString = newString.replace('o', '4');
-        break;
-      case 'u':
-        newString = newString.replace('u', '5');
-        break;
-      default:
+      case 'a': newString = newString.replace('a', '1'); break;
+      case 'e': newString = newString.replace('e', '2'); break;
+      case 'i': newString = newString.replace('i', '3'); break;
+      case 'o': newString = newString.replace('o', '4'); break;
+      case 'u': newString = newString.replace('u', '5'); break;
+      case '1': newString = newString.replace('1', 'a'); break;
+      case '2': newString = newString.replace('2', 'e'); break;
+      case '3': newString = newString.replace('3', 'i'); break;
+      case '4': newString = newString.replace('4', 'o'); break;
+      case '5': newString = newString.replace('5', 'u'); break;
+      default: // no-action
     }
   }
   return newString;
+}
+
+function encode(string) {
+  return encodeDecode(string);
 }
 // console.log(encode('hi there!'));
 
 function decode(string) {
-  let newString = string;
-  for (let i in string) {
-    if (string[i] === '1') {
-      newString = newString.replace('1', 'a');
-    } else if (string[i] === '2') {
-      newString = newString.replace('2', 'e');
-    } else if (string[i] === '3') {
-      newString = newString.replace('3', 'i');
-    } else if (string[i] === '4') {
-      newString = newString.replace('4', 'o');
-    } else if (string[i] === '5') {
-      newString = newString.replace('5', 'u');
-    }
-  }
-  return newString;
+  return encodeDecode(string);
 }
 // console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-function techList(list, name) {
+function techList(list, item) {
   if (list.length === 0) {
     return 'Vazio!';
   }
   let nameTech = [];
   let sortedList = list.sort();
-  for (let i in sortedList) {
+  for (let i = 0; i < sortedList.length; i += 1) {
     nameTech[i] = {
-      name: name,
+      name: item,
       tech: sortedList[i],
     };
   }
