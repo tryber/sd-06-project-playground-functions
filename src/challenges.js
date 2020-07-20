@@ -15,7 +15,7 @@ function splitSentence(frase) {
   // seu código aqui
   let acumulador = '';
   let novaLista = [];
-  for (let indice in frase) {
+  for (let i = 0 ; i <= fase.length ; i += 1) {
     let elemento = frase[indice]
     if (elemento !== ' ') {
       acumulador += elemento;
