@@ -198,7 +198,11 @@ function generatePhoneNumber(n) {
 // Desafio 12
 function triangleCheck(a, b, c) {
   let result = false;
-  if (((a < (b + c)) && (a > Math.abs(b - c))) && ((b < (a + c)) && (b > Math.abs(a - c))) && ((c < (b + a)) && (c > Math.abs(b - a)))) {
+  let condA = (a < (b + c)) && (a > Math.abs(b - c));
+  let condB = (b < (a + c)) && (b > Math.abs(a - c));
+  let condC = (c < (b + a)) && (c > Math.abs(b - a));
+
+  if (condA && condB && condC) {
     result = true;
   }
   return result;
@@ -210,7 +214,7 @@ function hydrate(string) {
   let numbers = string.replace(/\D/g, '');
   let soma = 0;
   let msg = '';
-  for (let i in numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
     soma += parseInt(numbers[i]);
   }
   if (soma === 1) {
