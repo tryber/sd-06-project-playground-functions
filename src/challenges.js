@@ -249,25 +249,31 @@ function generatePhoneNumber(numberArray) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  checkOutput = false;
+  let checkOutput = false;
+  let counter = 0;
 
   checkOneSide(lineA, lineB, lineC);
   checkOneSide(lineB, lineA, lineC);
   checkOneSide(lineC, lineA, lineB);
 
-  return checkOutput;
-
+  if (counter === 3){
+    checkOutput = true;
+    return checkOutput;
+  } else {
+    checkOutput = false;
+    return checkOutput;
+  }
   function checkOneSide(sideToCheck, otherSide1, otherSide2){
-      if (sideToCheck < otherSide1 + otherSide2 && sideToCheck > Math.abs(otherSide1 - otherSide2) && sideToCheck > Math.abs(otherSide2 - otherSide1)){
-          checkOutput = true;
+      if (sideToCheck < otherSide1 + otherSide2 && sideToCheck > Math.abs(otherSide1 - otherSide2)){
+          counter += 1;
       } else{
-          checkOutput = false;
+          counter -= 1;
       }
   }
 
 }
 
-triangleCheck(15, 3, 4);
+triangleCheck(10, 14, 8);
 
 // Desafio 13
 function hydrate() {
