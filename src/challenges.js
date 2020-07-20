@@ -77,7 +77,7 @@ function fizzBuzz(numeros) {
 function encode(str) {
   let aux = str.split('');
   str = '';
-  for (let index in aux) {
+  for (let index = 0 ; index < aux.length; index += 1) {
     switch (aux[index]) {
       case 'a' :
         aux[index] = '1';
@@ -103,21 +103,23 @@ function encode(str) {
 function decode(str) {
   let aux = str.split('');
   str = '';
-  for (let index in aux) {
-    if (aux[index] === '1') {
-      aux[index] = 'a';
-    } else
-    if (aux[index] === '2') {
-      aux[index] = 'e';
-    } else
-    if (aux[index] === '3') {
-      aux[index] = 'i';
-    } else
-    if (aux[index] === '4') {
-      aux[index] = 'o';
-    } else
-    if (aux[index] === '5') {
-      aux[index] = 'u';
+  for (let index = 0 ; index < aux.length; index += 1) {
+    switch (aux[index]) {
+      case '1' :
+        aux[index] = 'a';
+        break;
+      case '2' :
+        aux[index] = 'e';
+        break;
+      case '3' :
+        aux[index] = 'i';
+        break;
+      case '4' :
+        aux[index] = 'o';
+        break;
+      case '5' :
+        aux[index] = 'u';
+        break;
     }
     str += aux[index];
   }
@@ -140,9 +142,13 @@ function techList(tecno, name) {
 // Desafio 11
 function generatePhoneNumber(number) {
   let cont = 0;
+  let numberFormat = '';
   if (number.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
+  number.splice(0, 0, '(');
+  number.splice(3, 0, ') ');
+  number.splice(9, 0, '-');
   for (let i = 0; i < number.length; i += 1) {
     if (number[i] < 0 || number[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
@@ -156,12 +162,11 @@ function generatePhoneNumber(number) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     cont = 0;
+    numberFormat += number[i];
   }
-  let numberFormat = '(' + number[0] + number[1];
-  numberFormat += ') ' + number[2] + number[3] + number[4] + number[5] + number[6];
-  numberFormat += '-' + number[7] + number[8] + number[9] + number[10];
   return numberFormat;
 }
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if ((Math.abs(lineB - lineC) > lineA || lineA > lineB + lineC)) {
