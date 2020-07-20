@@ -57,8 +57,8 @@ function highestCount(inteiros) {
   let numero = 0;
   for (let i in inteiros) {
     if (numMaior === inteiros[i]) {
-        numero++;
-      }
+      numero += 1;
+    }
     if (numero > repetido) {
       repetido = numero;
     }
@@ -114,15 +114,15 @@ function encode(palavras) {
       verifica[i] = 3;
     } else if (verifica[i] === 'o') {
       verifica[i] = 4;
-    } else if ( verifica[i] === 'u') {
+    } else if (verifica[i] === 'u') {
       verifica[i] = 5;
     } else {
       verifica[i] = verifica[i];
     }
     result += verifica[i];
   }
-    return result;
-  }
+  return result;
+}
 
 function decode(palavras) {
   // seu código aqui
@@ -137,7 +137,7 @@ function decode(palavras) {
       verifica[i] = 'i';
     } else if (verifica[i] == '4') {
       verifica[i] = 'o';
-    } else if ( verifica[i] == '5') {
+    } else if (verifica[i] == '5') {
       verifica[i] = 'u';
     } else {
       verifica[i] = verifica[i];
@@ -169,21 +169,21 @@ function techList(nomesTech, nome) {
 // Desafio 11
 function generatePhoneNumber(numeros) {
   // seu código aqui
-  let telefone = '(' + numeros[0] + numeros[1] + ')' + " ";
+  let telefone = `(${numeros[0]}${numeros[1]}) `;
   if (numeros.length == 11) {
-    for ( let i = 2; i < numeros.length; i += 1) {
+    for (let i = 2; i < numeros.length; i += 1) {
       telefone += numeros[i]
       if (i === 6) {
-        telefone += '-';
+        telefone += `-`;
       }
     }
     for (let i in numeros) {
       if (numeros[i] < 0 || numeros[i] > 9) {
-        telefone = 'não é possível gerar um número de telefone com esses valores';
+        telefone = `não é possível gerar um número de telefone com esses valores`;
       }
     }
   } else {
-    telefone = "Array com tamanho incorreto."
+    telefone = `Array com tamanho incorreto.`;
   }
   let repetido = 0;
   let numero = 0;
@@ -205,7 +205,7 @@ function generatePhoneNumber(numeros) {
   }
   for (let i in numeros) {
     if (numeros[iNumero] === numeros[i] && repetido >= 3) {
-      telefone = 'não é possível gerar um número de telefone com esses valores';
+      telefone = `não é possível gerar um número de telefone com esses valores`;
     }
   }
   return telefone;
