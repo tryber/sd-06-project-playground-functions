@@ -264,7 +264,7 @@ function hydrate(bebidas) {
   let string = bebidas;
   let quantidades = string.match(regex).map(Number);
   let total = 0;
-  for (let i in quantidades) {
+  for (let i = 0; i < quantidades.length; i += 1) {
     total += quantidades[i];
   }
   let copos = '';
