@@ -170,11 +170,11 @@ function decode(numbers) {
 // Desafio 10
 function techList(arrayTechnology,name) {
   let technologyList = arrayTechnology.sort();
+
+  if (technologyList.length != 0) {
   let techInfo = [];
-  if (technologyList != 0) {
-  for (let index in technologyList) {
-    let technologyItem = technologyList[index];
-    techInfo.push({technologyItem, name});
+    for (let index in technologyList) {
+    techInfo.push({tech: technologyList[index], name: name});
   }
   return techInfo;
 } else {
@@ -182,7 +182,7 @@ function techList(arrayTechnology,name) {
 }
 }
 
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Isabella");
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
 
 // Desafio 11
 function generatePhoneNumber() {
