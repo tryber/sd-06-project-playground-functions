@@ -28,7 +28,7 @@ splitSentence("be trybe");
 // Desafio 4
 function concatName(arrayString) {
   let concatenate = "";
-    concatenate = arrayString[arrayString.length -1] + " , " + arrayString[0];
+    concatenate = arrayString[arrayString.length -1] + ", " + arrayString[0];
   return concatenate;
 }
 
