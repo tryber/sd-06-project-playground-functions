@@ -123,10 +123,10 @@ function decode(palavras) {
 // Desafio 10
 function techList(tecnologias, name) {
   let listaObjetos = [];
-  for (i = 0; i < tecnologias.length; i += 1) {
+  for (let i = 0; i < tecnologias.length; i += 1) {
     let objeto = {
       tech: tecnologias[i],
-      nome: name
+      nome: name,
     }
     listaObjetos[i] = objeto;
   }
