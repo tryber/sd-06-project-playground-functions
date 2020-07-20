@@ -237,40 +237,58 @@ function techList(techArray, nameStudent) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneNumber) {
+  
+  if (phoneNumber.length != 11) {
+    return "Array com o tamanho incorreto.";
+  }
+
+  for (let index in phoneNumber) {
+    let countPhone = 0;
+
+    if (phoneNumber[index] < 0 || phoneNumber[index] > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    for (let indexInside in phoneNumber) {
+      if (phoneNumber[index] === phoneNumber[indexInside]) {
+        countPhone += 1;
+      }
+    }
+    if (countPhone >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+
+  let genPhoneNumber = "";
+
+  for (let i = 0; i < phoneNumber.length; i += 1) {
+    if (i === 0) {
+      genPhoneNumber += "(";
+    }
+    if (i === 2) {
+      genPhoneNumber += ") ";
+    }
+    if (i === 7) {
+      genPhoneNumber += "-";
+    }
+    let number = phoneNumber[i];
+    genPhoneNumber += number.toString();
+  }
+  return genPhoneNumber;
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < Math.abs(lineB - lineC)) {
-    return false;
+  if (lineA < Math.abs(lineB - lineC) && lineA < lineB + lineC) {
+    if(lineB > Math.abs(lineA - lineC) && lineB < lineA + lineC) {
+      if (lineC > Math.abs(lineA - lineB) && lineC < lineA + lineB) {
+        return true;
+      }
+    }
   }
-  
-  if (lineA > lineB + lineC) {
-    return false;
-  }
-  
-  if(lineB < Math.abs(lineA - lineC)) {
-    return false;
-  }
-  
-  if (lineB > lineA + lineC) {
-    return false;
-  }
-  
-  if (lineC < Math.abs(lineA - lineB)) {
-    return false;
-  }
-  
-  if (lineC > lineA + lineB) {
-    return false;
-  }
-  
-  return true;
+  return false;
 }
 
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
