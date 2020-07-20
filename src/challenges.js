@@ -130,8 +130,8 @@ function comparaEsubstituiNumOuVog(vogal, numOuVogal) {
       break;
   } return numOuVogal;
 }
-function encode(vogal, subVogais) {
-
+function encode(subVogais) {
+  let vogal = ['a', 'e', 'i', 'o', 'u'];
   for (let contador = 0; contador < vogal.length; contador += 1) {
     for (let indice = 0; indice < subVogais.length; indice += 1) {
       if (vogal[contador] === subVogais[indice]) {
@@ -140,17 +140,19 @@ function encode(vogal, subVogais) {
     }
   } return subVogais;
 }
-let vogal = ['a', 'e', 'i', 'o', 'u'];
-// console.log(encode(vogal,'se ta malucoooooouuuuuuaaaa'));
+// console.log(encode('se ta malucoooooouuuuuuaaaa'));
 // -- ------------
-function decode(entrada, subNum) {
-
-  subNum = encode(entrada, subNum);
-
-  return subNum;
+function decode(subNum) {
+  let numList = ['1', '2', '3', '4', '5'];
+  for (let contador = 0; contador < subNum.length; contador += 1) {
+    for (let indice = 0; indice < subNum.length; indice += 1) {
+      if (numList[contador] === subNum[indice]) {
+        subNum = comparaEsubstituiNumOuVog(numList[contador], subNum);
+      }
+    }
+  } return subNum;
 }
-let listasNums = ['1', '2', '3', '4', '5'];
-// console.log(decode(listasNums,'s2 t1 m1l5c4444445555551111'));
+// console.log(decode('s2 t1 m1l5c4444445555551111'));
 // Desafio 10
 //-------------
 function techList(listaTec, name) {
@@ -167,9 +169,8 @@ function techList(listaTec, name) {
     } return novaLista;
   } return ('Vazio!');
 }
-// let listaTeste=[]; // quando array esta Vazio ja se inicia em tamanho Zero, ao adicionar algo ele aumenta 1 no tamanho;
+// let listaTeste=[]; // quando array esta Vazio ja se inicia em tamanho Zero
 // console.log(techList(listaTeste, 'paulo'));
-// _____________________________________________________________________________________
 function numMaisRepetido(lista) {
   let qtdNumIguaisAtual = 0;
   let resposta = false;
@@ -188,7 +189,7 @@ function numMaisRepetido(lista) {
 function numMenorOrMaior(lista) {
   let resposta = false;
   for (let contador = 0; contador <= lista.length; contador += 1) {
-    for (let indice = 0; indice <= lista.length; indice += 1) { // Indice não é reutilizavel, apenas para contar o laço interno;
+    for (let indice = 0; indice <= lista.length; indice += 1) { // Indice laço interno;
       if ((lista[contador] < 0) || (lista[contador] > 9)) {
         resposta = true;
         break;
@@ -227,7 +228,6 @@ function generatePhoneNumber(listaNum) {
 // let testando = [1, 1, 9,9,8,8,7,7,5,5,];
 // console.log(generatePhoneNumber(testando))
 // Desafio 12
-// _______________________________________________________________________________________________________
 function somaLadosTri(listaMedidas, indice) {
   let somar;
   if (indice === 0) {
@@ -266,7 +266,6 @@ function triangleCheck(lineA, lineB, lineC) {
   } return resposta;
 }
 // console.log(triangleCheck(10, 13, 2))
-// ___________________________________________________________________________________________________________________
 // Desafio 13
 function hydrate(frase) {
   let numFrase;
@@ -275,9 +274,11 @@ function hydrate(frase) {
   numFrase = frase.match(/\d/g); // criando um arreio de strings numeros separado em cada indice; ex['1','2','3'];
   for (let contador = 0; contador < numFrase.length; contador += 1) {
     numFraseSomado += parseInt(numFrase[contador]);
-  } return (numFraseSomado + ' copos de água')
+  } if (numFraseSomado === 1) {
+    return (`${numFraseSomado} copo de água`);
+  }return (`${numFraseSomado} copos de água`);
 }
-// console.log(hydrate('1 copos de cerveja, 3 copos de wisky e 4 copos de vodka'));
+// console.log(hydrate('9 copos de cerveja'));
 
 module.exports = {
   calcArea,
