@@ -240,7 +240,7 @@ function techList(techArray, nameStudent) {
 function generatePhoneNumber(phoneNumber) {
   
   if (phoneNumber.length != 11) {
-    return "Array com o tamanho incorreto.";
+    return "Array com tamanho incorreto.";
   }
 
   for (let index in phoneNumber) {
@@ -279,7 +279,7 @@ function generatePhoneNumber(phoneNumber) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < Math.abs(lineB - lineC) && lineA < lineB + lineC) {
+  if (lineA > Math.abs(lineB - lineC) && lineA < lineB + lineC) {
     if(lineB > Math.abs(lineA - lineC) && lineB < lineA + lineC) {
       if (lineC > Math.abs(lineA - lineB) && lineC < lineA + lineB) {
         return true;
@@ -288,7 +288,6 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-
 
 // Desafio 13
 function hydrate() {
