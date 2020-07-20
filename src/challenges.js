@@ -176,22 +176,36 @@ function decode(stringDecode) {
 // Para cada tecnologia no array, crie um objeto
 // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech
 function techList() {
- 
-  // arrayTechList = {
-  //   tech: 
-  //   name: 
-  // }
 }
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma
+// função chamada triangleCheck que deverá receber as três linhas como
+// parâmetro e retornar se é possível formar um triângulo com os valores
+// apresentados de cada linha
+function triangleCheck(arrayTriangle) {
+  let lineA = arrayTriangle[0];
+  let lineB = arrayTriangle[1];
+  let lineC = arrayTriangle[2];
+  let sideMod1 = lineB - lineC;
+  let sideMod2 = lineA - lineC;
+  let sideMod3 = lineA - lineB;
+
+  if ( match.abs(sideMod1) < lineA && (lineB + lineC) > a ) {
+    return true;
+  } else if (match.abs(sideMod2) < lineA && (lineA + lineC) > b) {
+    return true;
+  } else if (match.abs(sideMod3) < lineC && (lineA + lineB) > b) {
+    return true;
+  } return false;
+  
 }
+
 
 // Desafio 13
 function hydrate() {
