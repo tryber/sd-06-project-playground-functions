@@ -94,21 +94,24 @@ function encode(a = 'hi there, this is your new house', coded = []) {
 }
 
 function decode(b = 'h3 th2r2! wh1ts 5p', deCoded = []) {
+  function dictionary(character){
+    if (character === '1') {
+      return 'a';
+    } else if (character === '2') {
+      return 'e';
+    } else if (character === '3') {
+      return 'i';
+    } else if (character === '4') {
+      return 'o';
+    } else if (character === '5') {
+      return 'u';
+    } else {
+      return character;
+    }
+  }
   for (let y = 0; y < b.length; y += 1) {
     let d = b[y];
-    if (d === '1') {
-      deCoded += 'a';
-    } else if (d === '2') {
-      deCoded += 'e';
-    } else if (d === '3') {
-      deCoded += 'i';
-    } else if (d === '4') {
-      deCoded += 'o';
-    } else if (d === '5') {
-      deCoded += 'u';
-    } else {
-      deCoded += d;
-    }
+    deCoded += dictionary(d);
   }
   return deCoded;
 }
