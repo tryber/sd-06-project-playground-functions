@@ -208,7 +208,7 @@ function generatePhoneNumber(arrayTelefone) {
       }else if (numero === "0"){
         escrevendoNumero += "(" + arrayTelefone[numero];
       }else if (numero === "1"){
-        escrevendoNumero += arrayTelefone[numero] + ")";
+        escrevendoNumero += arrayTelefone[numero] + ") ";
       }else if (numero === "6"){
         escrevendoNumero += arrayTelefone[numero] + "-";
       }else{
@@ -247,9 +247,19 @@ let valor3 = 1;
 console.log(triangleCheck(valor1, valor2, valor3)); */
 
 // Desafio 13
-function hydrate() {
+function hydrate(bebidas) {
   // seu código aqui
+  let coposDeAgua = 0;
+  for (let s in bebidas){
+    let x = parseFloat(bebidas[s]);
+    if(!isNaN(x)){
+      coposDeAgua += parseFloat(bebidas[s]);
+    }    
+  }
+  return coposDeAgua + " copos de água";  
 }
+/* let valor1 = "1 cachaça, 5 cervejas e 1 copo de vinho";
+console.log(hydrate(valor1)); */
 
 
 module.exports = {
