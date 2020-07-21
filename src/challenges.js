@@ -132,8 +132,13 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arr, name) {
+  let resultados = [];
+  let item = {};
+  for ( let i in arr ) {
+    resultados.push( {tech: arr[i], name: nome} );
+  }
+  return resultados;
 }
 
 // Desafio 11
