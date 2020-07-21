@@ -147,7 +147,7 @@ function generatePhoneNumber(numbers) {
   if (arraySize !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let sortedNumbers.sort(numbers) // [ 4, 0, 5, 4] (4,0) 5,4,
+  let sortedNumbers.sort(numbers);
   let nextIndex = 1;
   let invalidNumbers = false;
   for (let index = 0; index < arraySize - 1; index += 1) {
