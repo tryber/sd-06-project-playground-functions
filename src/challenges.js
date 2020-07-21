@@ -50,27 +50,20 @@ var numeros = [1, 5, 7, 7, 7, 5, 6, 7, 6, 3, 5, 7];
 console.log(highestCount(numeros));
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse(rato, cat1, cat2) {
   var distancia1 = 0;
   var distancia2 = 0;
-  if (mouse > cat1){
-    for (let c = cat1; c < mouse; c += 1) {
-      distancia1 += 1;
-    }
-  } else if (cat1 > mouse){
-    for (let c = mouse; mouse < cat1; mouse += 1){
-      distancia1 += 1;
-    }
+  if (rato > cat1){
+    distancia1 = rato - cat1;
   }
-  if (mouse > cat2){
-    for (let c = cat2; c < mouse; c += 1) {
-      distancia2 += 1;
-
-    }
-  } else if (cat2 > mouse){
-    for (let c = mouse; mouse < cat2; mouse += 1){
-      distancia2 += 1;
-    }
+  if (cat1 > rato){
+    distancia1 = car1 - rato;
+  }
+  if (rato > cat2){
+    distancia2 = rato - cat2;
+  }
+  if (cat2 > rato){
+    distancia2 = cat2 -rato
   }
   if (distancia1 < distancia2){
     return 'cat1';
@@ -80,12 +73,10 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
-console.log(catAndMouse( -5, -1, -2))
-
 // Desafio 8
 function fizzBuzz(array) {
   for (let c = 0; c < array.length; c += 1){
-    if (array[c] % 3 && array[c] % 5){
+    if (array[c] % 3 === 0 && array[c] % 5 === 0){
       console.log("fizzBuzz");
     } else if (array[c] % 3 === 0){
       console.log("fizz");
