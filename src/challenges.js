@@ -46,8 +46,11 @@ return pontos;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = array[0];
+  for(let i = 0; i< array.lenght; i+=1){
+    return maiorNumero
+  }
 }
 
 // Desafio 7
@@ -94,9 +97,28 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayDeNumeros) {
+  let cel = 0;
+  let lista = arrayDeNumeros.sort();
+  let repetidos = 0;
+  for(let i = 0; i < lista.lenght; i++){
+    if(lista[i] === lista[i-1]){
+      repetidos += 1;
+    }
+  }
+  if(arrayDeNumeros !== 11){
+    return "tamanho incorreto";
+  } else if (repetidos > 2){
+    return "nao e possivel gerar um numero com esses valores";
+  } else {
+    for(let j = 0; j < arrayDeNumeros.lenght; j++){
+      if(arrayDeNumeros[j]<0 || arrayDeNumeros[j>9]){
+        return "nao e possivel geral um numero de telefone com esses valores";
+      }
+    }
+  } 
 }
+  
 
 // Desafio 12
 function triangleCheck() {
