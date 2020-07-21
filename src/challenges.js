@@ -147,7 +147,7 @@ function generatePhoneNumber(numbers) {
   if (arraySize !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let sortedNumbers.sort(numbers);
+  numbers.sort();
   let nextIndex = 1;
   let invalidNumbers = false;
   for (let index = 0; index < arraySize - 1; index += 1) {
@@ -162,10 +162,7 @@ function generatePhoneNumber(numbers) {
     }
     nextIndex += 1;
   }
-  if (invalidNumbers) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  return result.replace(/,/g, '');
+  return invalidNumbers === true ? 'não é possível gerar um número de telefone com esses valores': `${result.replace(/,/g, '')};`
 }
 
 // Desafio 12
