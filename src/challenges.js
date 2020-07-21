@@ -21,7 +21,7 @@ let strArray = [];
 let novoArray = "";
 
 for (let i = 0; i <= input.length; i += 1) {
-  if (separador[i] === ' ' || i === separador.length) {
+  if (separador[i] === " " || i === separador.length) {
     strArray.push(novoArray);
     novoArray = "";
   } else {
@@ -75,19 +75,18 @@ function fizzBuzz(numerosArray) {
   let strArray = [];
 
   for (let i = 0; i < numerosArray.length; i += 1) {
-    if (numerosArray[i] % 3 === 0 && numerosArray[i] % 5 === 0) {
-      strArray.push('fizzBuzz');
+    if (numerosArray[i] % 15 === 0){
+      strArray.push("fizzBuzz");
     } else if (numerosArray[i] % 3 === 0) {
-      strArray.push('fizz');
+      strArray.push("fizz");
     } else if (numerosArray[i] % 5 === 0) {
-      strArray.push('buzz');
+      strArray.push("buzz");
     } else {
-      strArray.push('bug!');
+      strArray.push("bug!");
     }
   }
-
   return strArray;
-}
+} console.log(fizzBuzz([2, 8, 15, 90, 25]));
 
 // Desafio 9
 function encode() {
