@@ -116,9 +116,10 @@ function techList(tech, name){
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(array){
+  return phoneNumber
+  }
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(a,b,c) {
@@ -135,9 +136,12 @@ function triangleCheck(a,b,c) {
 
 // Desafio 13
 function hydrate(string){
-  var integer = parseInt(string)
-numeroBebida = integer
-return numeroBebida + " copo de água"
+  let num = string.match(/\d+/g)
+  soma = 0
+  for(i in num){
+    soma = soma + Number(num[i])
+  }
+  return soma + " copo de água"
 }
 
 module.exports = {

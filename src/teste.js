@@ -1,13 +1,11 @@
-// Desafio 12
-function triangleCheck(a,b,c) {
-  let absA = Math.abs(a);
-  let absB = Math.abs(b);
-  let absC = Math.abs(c);
-  if((a==0 || b==0 || c==0) || (a+b<c || a+c<b || b+c<a)){
-    return false
-
-  }else{
-    return true
+// Desafio 13
+function hydrate(string){
+  let num = string.match(/\d+/g)
+  soma = 0
+  for(i in num){
+    soma = soma + Number(num[i])
   }
+  return soma + " copo de água"
 }
-console.log(triangleCheck(16,20,30))
+
+console.log(hydrate('20 cachaça, 5 cervejas e 1 copo de vinho'))
