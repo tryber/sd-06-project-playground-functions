@@ -45,7 +45,6 @@ function highestCount(numbers) {
   let result = 0;
 
   for (let i = 0; i < numbers.length; i += 1) {
-    // colocar mais um for para comparar os numeros
     if (maiorNum < numbers[i]) {
       maiorNum = numbers[i];
     }
@@ -60,8 +59,8 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let gato1 = (mouse - cat1);
-  let gato2 = (mouse - cat2);
+  let gato1 = Math.abs(mouse - cat1);
+  let gato2 = Math.abs(mouse - cat2);;
 
   if (gato1 < gato2) {
     return 'cat1';
