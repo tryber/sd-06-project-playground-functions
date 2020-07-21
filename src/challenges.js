@@ -67,12 +67,12 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let arrayResultado = [];
-  for (let i=0; i<array.length; i+=1) {
-    if ((array[i]%3===0)&&(array[i]%5===0)) {
+  for (let i = 0; i<array.length; i += 1) {
+    if ((array[i] % 3===0)&&(array[i] % 5===0)) {
       arrayResultado.push('fizzBuzz');
-    } else if (array[i]%3===0) {
+    } else if(array[i] % 3===0) {
       arrayResultado.push('fizz');
-    } else if (array[i]%5===0) {
+    } else if(array[i] % 5===0) {
       arrayResultado.push('buzz');
     } else {
       arrayResultado.push('bug!');
@@ -102,6 +102,7 @@ function encode(string) {
       case 'u':
         encodeArray[index] = 5
         break;
+      default:
     }
   }
   let encoded = encodeArray.join('');
@@ -115,7 +116,7 @@ function decode(encoded) {
   for (let index in decodeArray) {
     switch (decodeArray[index]) {
       case '1':
-        decodeArray[index] ='a'
+        decodeArray[index] = 'a'
         break;
       case '2':
         decodeArray[index] = 'e'
@@ -129,6 +130,7 @@ function decode(encoded) {
       case '5':
         decodeArray[index] = 'u'
         break;
+      default:
     }
   }
   let decoded = decodeArray.join('');
@@ -141,8 +143,8 @@ function techList(tech, name) {
   let listaOrdenada = tech.sort()
   let listaTech = []
   if (listaOrdenada.length > 0) {
-    for (i in listaOrdenada) {
-      listaTech.push ({ tech:listaOrdenada[i], name:name, })
+    for (let i in listaOrdenada) {
+      listaTech.push ({tech : listaOrdenada[i], name : name})
     }
   } else {
     return 'Vazio!'
@@ -153,15 +155,16 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
-  if (numbers.length != 11) {
-      return 'Array com tamanho incorreto.' }      
+  if (numbers.length !== 11){
+    return 'Array com tamanho incorreto.'
+  }
   for (let i of numbers) {
-      if (i < 0 || i > 10) {
-        return 'não é possível gerar um número de telefone com esses valores'
-      }
+    if (i < 0 || i > 10) {
+      return 'não é possível gerar um número de telefone com esses valores'
     }
+  }
   for (let i in numbers) {
-    let count = 0;
+  let count = 0;
     for (let j in numbers) {
       if (numbers[i] === numbers[j]) {
         count += 1;
@@ -171,7 +174,7 @@ function generatePhoneNumber(numbers) {
       }
     }
   }
-  return '('+ numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]; 
+  return '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
 }
 
 
@@ -190,6 +193,7 @@ function hydrate(string) {
   for (let i = 0; i < numberOfDrinks.length; i+=1) {
     water += parseInt(numberOfDrinks[i]);
   }
+  let glassesOfWater = [];
   water > 1 ? glassesOfWater = ' copos de água' : glassesOfWater = ' copo de água';
   alert = water + glassesOfWater;
   return alert;
