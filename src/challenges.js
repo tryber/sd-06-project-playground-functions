@@ -58,9 +58,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 
-function fbNumber(number){
+function fbNumber(number) {
   if (number % 3 === 0 && number % 5 === 0) {
-    return 'fizzbuzz';
+    return 'fizzBuzz';
   } else if (number % 3 === 0) {
     return 'fizz';
   } else if (number % 5 === 0) {
@@ -126,6 +126,9 @@ function techList(tecno, name) {
 }
 
 // Desafio 11
+function formatNumber(){
+  
+}
 function generatePhoneNumber(number) {
   let cont = 0;
   let numberFormat = '';
