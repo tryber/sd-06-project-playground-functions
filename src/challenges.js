@@ -30,16 +30,21 @@ function splitSentence(string) {
   stringArray.push(word);
   return stringArray;
 }
+console.log(splitSentence(stringArray = "go trybe"));
+
 
 // Desafio 4
 function concatName(array) {
-  firstLast = array [0] + ", " + array[array.length-1];
-  return firstLast
+  lastFirst = array[array.length-1] + ", " + array[0] ;
+  return lastFirst;
 }
+
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+
+
+
 }
 
 // Desafio 6
@@ -101,42 +106,8 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
-let isValidNumber = [];
-  if (array.length !== 11){
-  return "Array de tamnanho incorreto"
+function generatePhoneNumber() {
 
-  let dddArray = [];
-for (let index = 0; index <=10; index +=1){
-
-let firstPart = [];
-for (let index = 2; index <=6; index +=1){
-  firstPart.push(array[index]);
-}
-
-let secondPart = [];
-for (let index = 7; index <=10; index +=1){
-  secondPart.push(array[index]);
-}
-}
-
-let dddFormated = dddArray.join("");
-let firstPartFormatted = firstPartFormatted.join("");
-let secondPartFormatted = secondPartFormatted.join("");
-let formattedNumber = "(" +dddFormated+") "+ firstPartFormatted + "-" + secondPartFormatted;
-return formattedNumber
-}
-let phone = [3, 1, 9, 9, 9, 9, 9, 0, 0, 0, 0];
-console.log(generatePhoneNumber(phone));
-
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
-}
-
-// Desafio 13
-function hydrate() {
-  // seu código aqui
 }
 
 
