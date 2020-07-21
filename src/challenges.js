@@ -146,36 +146,34 @@ function techList(tech, name) {
 
 
 // Desafio 11
-function generatePhoneNumber(arrayNumber) {
+function generatePhoneNumber(phoneNumber) {
   // seu código aqui
   // Se algum dos numeros for >9 e <0 e repetiver 3+ "não é possível gerar um número de telefone com esses valores"
   // Se tamanho do array !== 11 "Array com tamanho incorreto."
   // Se for td ok, retorna numeroTelefoneCompleto.
   // Verificando se o tamanho é 11
-  if (arrayNumber.length !== 11) {
+  if (phoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
     //Verificando se repete
-    let arrayVerificar = arrayNumber;
+    let arrayVerificar = phoneNumber;
     let contador = 0;
     let repetiu = false;
-    for (let index = 0; index < arrayNumber.length; index += 1) {
-      for (let i = 0; i < arrayVerificar.length; i += 1) {
-        if (arrayNumber[index] === arrayVerificar[i]) {
+    for (let i = 0; i < phoneNumber.length; i += 1) {
+      for (let j = 0; j < arrayVerificar.length; j += 1) {
+        if (arrayVerificar[j] === phoneNumber[i]) {
           contador += 1
         }
         if (contador >= 3) {
           repetiu = true;
-        } else {
-          repetiu = false;
         }
       }
-      contador = 0;
     }
+    contador = 0;
   
   //Verificando numeros e condicao de repeticao
-  for (let j = 0; j < arrayNumber.length; j += 1) {
-    if (arrayNumber[j] < 0 || arrayNumber[j] > 9 || repetiu === true) {
+  for (let k = 0; k < phoneNumber.length; k += 1) {
+    if (phoneNumber[k] < 0 || phoneNumber[k] > 9 || repetiu === true) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     }
