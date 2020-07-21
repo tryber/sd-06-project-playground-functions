@@ -66,8 +66,21 @@ function catAndMouse(cat1, mouse, cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  // seu código aqui	  let words = [];
+  for (let index in numbers) {
+    if ( numbers[index] % 5 === 0 &&  numbers[index] % 3 === 0) {
+      words[words.length] = 'fizzBuzz';
+    }else if (numbers[index] % 5 === 0) {
+        words[words.length] = 'buzz';
+    } else if (numbers[index] % 3 === 0) {
+      words[words.length] = 'fizz';
+    }  else {
+      words[words.length] = 'bug!';
+    }
+  }
+  return words;
+
 }
 
 // Desafio 9
