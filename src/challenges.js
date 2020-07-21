@@ -132,10 +132,10 @@ function decode(str) {
 }
 
 // Desafio 10
-function techList(arr, name) {
+function techList(arr, nome) {
   let resultados = [];
   let item = {};
-  let msg = 'Vazio';
+  let msg = 'Vazio!';
   if ( arr.length > 0) {
     for ( let i in arr ) {
       resultados.push( {tech: arr[i], name: nome} );
