@@ -66,20 +66,21 @@ function catAndMouse( mouse, cat1, cat2) {
 
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  // seu código aqui	  let words = [];
-  for (let index in numbers) {
-    if ( numbers[index] % 5 === 0 &&  numbers[index] % 3 === 0) {
-      words[words.length] = 'fizzBuzz';
-    }else if (numbers[index] % 5 === 0) {
-        words[words.length] = 'buzz';
-    } else if (numbers[index] % 3 === 0) {
-      words[words.length] = 'fizz';
+function fizzBuzz(comprimento) {
+  // seu código aqui	  
+  let string = [];
+  for (let index in comprimento) {
+    if ( comprimento[index] % 5 === 0 &&  comprimento[index] % 3 === 0) {
+      string[string.length] = 'fizzBuzz';
+    }else if (comprimento[index] % 5 === 0) {
+        string[string.length] = 'buzz';
+    } else if (comprimento[index] % 3 === 0) {
+      string[string.length] = 'fizz';
     }  else {
-      words[words.length] = 'bug!';
+      string[string.length] = 'bug!';
     }
   }
-  return words;
+  return string;
 
 }
 
