@@ -55,32 +55,35 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge'
 }
 
+function moduloResults(mod) {
+  if (mod[0] === 0 && mod[1] === 0) {
+    return 'fizzBuzz';
+  } else if (mod[1] === 0) {
+    return 'fizz';
+  } else if (mod[0] === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
+function calcModulo(nbr) {
+  let fiveModulo = nbr % 5;
+  let threeModulo = nbr % 3;
+  return [fiveModulo, threeModulo];
+}
+
 // Desafio 8
 function fizzBuzz(arr) {
   let result = [];
-  function calcModulo(nbr) {
-    let fiveModulo = nbr % 5;
-    let threeModulo = nbr % 3;
-    return [fiveModulo, threeModulo];
-  }
-  function moduloResults(mod) {
-    if (mod[0] === 0 && mod[1] === 0) {
-      return 'fizzBuzz';
-    } else if (mod[1] === 0) {
-      return 'fizz';
-    } else if (mod[0] === 0) {
-      return 'buzz';
-    } else {
-      return 'bug!';
-    }
-  }
   function checkNumber(n) {
-    modulos = calcModulo(n);
+    let modulos = calcModulo(n);
     result.push(moduloResults(modulos));
   }
   arr.forEach(checkNumber);
   return result;
 }
+
+
 
 // Desafio 9
 function encode(toEncode) {
@@ -144,7 +147,7 @@ function generatePhoneNumber(numbers) {
   if (arraySize !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  numbers.sort()
+  let sortedNumbers.sort(numbers) // [ 4, 0, 5, 4] (4,0) 5,4,
   let nextIndex = 1;
   let invalidNumbers = false;
   for (let index = 0; index < arraySize - 1; index += 1) {
