@@ -165,16 +165,31 @@ function techList(tech, name) {
 // Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
 
 function generatePhoneNumber(array) {
+  let cont = 0;
+  let confirm = false;
   let isPhone = array.length !== 11;
   if (isPhone) {
     return "Array com tamanho incorreto";
   }
 
   for (let position = 0; position <= array.length; position += 1) {
-    if (array[position] < 0 && array[position] > 9) {
+    for (let j = 0; j < array.length; j++) {
+      if (array[position] === array[j]) {
+        cont += 1;
+      }
+      if (cont === 3) {
+        confirm = true;
+      }
+    }
+    cont = 0;
+  }
+
+  for (let position = 0; position <= array.length; position += 1) {
+    if (array[position] < 0 || array[position] > 9 || confirm === true) {
       return "não é possivel gerar um número de telefone com esses valores";
     }
   }
+
 
   let ddd = [];
   for (let index = 0; index <= 1; index += 1) {
@@ -198,7 +213,8 @@ function generatePhoneNumber(array) {
 
   return formattedNumber;
 }
-let telephoneNumber = [1, 1, 9, 9, 9, 9, 9, 0, 0, 0, 0];
+
+let telephoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(telephoneNumber));
 
 
