@@ -22,9 +22,10 @@ console.log(calcArea(a, b));
 
 // Desafio 3
 function splitSentence(frase) {
-  let espaco = frase.split('');
+  let espaco = frase.split(' ');
   return espaco; 
 }
+console.log(splitSentence('Keila Julia Matheus')) //teste
 
 // Desafio 4
 let myArray = ['Keila', 'Matheus', 'Julia'] //teste p/ saber se está rodando 
@@ -36,9 +37,15 @@ function concatName(parametro) {
 concatName(myArray); //teste
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+let vitorias = 5;
+let empate = 5;
+function footballPoints(wins, ties) {
+  let resultadoVitoria = wins * 3;
+  let resultadoEmpate = ties;
+  console.log((resultadoVitoria) + (resultadoEmpate));
+  return((resultadoVitoria) + (resultadoEmpate));
 }
+footballPoints(vitorias, empate);
 
 // Desafio 6
 function highestCount() {
