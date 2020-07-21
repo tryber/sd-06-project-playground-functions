@@ -225,8 +225,7 @@ for( var i = 0; i <= array.length -1; i ++) {
     agua += dose 
 }
     return agua+' copos de água';
-} console.log(hydrate('3 copos de cerveja'))
-
+} 
 
  module.exports = {
   calcArea,
