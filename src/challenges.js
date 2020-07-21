@@ -105,8 +105,6 @@ function fizzBuzz(arrayNumbers) {
   return fizzBuzzArr;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
 function encode(inputStringToEncode) {
   let changes = {
@@ -295,8 +293,26 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringPedido) {
+  let waterCup = 0;
+  let arrayPedido = [];
+  // laço que converte em um array sem os espaços
+  for (let index = 0; index < stringPedido.length; index += 1) {
+    if (stringPedido[index] !== " ") {
+      arrayPedido.push(stringPedido[index]);
+    }
+  }
+  // faz o somatório dos números que aparecem na string fornecida
+  for (let index = 0; index < arrayPedido.length; index +=1) {
+    if (!isNaN(arrayPedido[index])) { 
+      waterCup += Number(arrayPedido[index]);
+    }
+  }
+  if (waterCup > 1) {
+    return waterCup + " copos de água";
+  } else {
+    return waterCup + " copo de água";
+  }
 }
 
 
