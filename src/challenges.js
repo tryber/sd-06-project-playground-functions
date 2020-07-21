@@ -104,8 +104,20 @@ function decode(expression) {
 }
 
 // Desafio 10
-function techList() {
- 
+function techList(arrayTech) {
+  // seu código aqui
+  if (arrayTech.length === 0) {
+    return 'Vazio!';
+  }
+  arrayTech.sort();
+  let objectTech = [];
+  for (let index = 0; index < arrayTech.length; index += 1) {
+    objectTech.push({
+      tech: arrayTech[index],
+      name: 'William',
+    });
+  }
+  return objectTech;
 }
 
 // Desafio 11
