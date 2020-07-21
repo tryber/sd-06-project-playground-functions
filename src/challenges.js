@@ -62,18 +62,20 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 // Desafio 8
-function fizzBuzz(array) {
-  for (let c = 0; c < array.length; c += 1) {
-    if (array[c] % 3 === 0 && array[c] % 5 === 0) {
-      console.log("fizzBuzz");
-    } else if (array[c] % 3 === 0) {
-      console.log("fizz");
-    } else if (array[c] % 5 === 0) {
-      console.log("buzz");
+function fizzBuzz(numeros) {
+  let resposta = [];
+  for (let c = 0; c < numeros.length; c += 1) {
+    if (numeros[c] % 3 === 0 && numeros[c] % 5 === 0) {
+      resposta.push("fizzBuzz");
+    } else if (numeros[c] % 3 === 0) {
+      resposta.push("fizz");
+    } else if (numeros[c] % 5 === 0) {
+      resposta.push("buzz");
     } else {
-      console.log("bug!");
+      resposta.push("bug!");
     }
   }
+  return resposta;
 }
 let numeros = [10, 20, 30, 40];
 console.log(fizzBuzz(numeros));
