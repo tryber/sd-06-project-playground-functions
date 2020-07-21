@@ -85,15 +85,18 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let fizzBuzzArr = arrayNumbers;
+  
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    let isMultiple3 = arrayNumbers[index] % 3 === 0;
+    let isMultiple5 = arrayNumbers[index] % 5 === 0;
 
-  for (let index in arrayNumbers) {
-    if (arrayNumbers[index] % 3 === 0) {
-      if (arrayNumbers[index] % 5 === 0) {
+    if (isMultiple3) {
+      if (isMultiple5) {
         fizzBuzzArr[index] = "fizzBuzz";
       } else {
         fizzBuzzArr[index] = "fizz";
       }
-    } else if (arrayNumbers[index] % 5 === 0) {
+    } else if (isMultiple5) {
       fizzBuzzArr[index] = "buzz";
     } else {
       fizzBuzzArr[index] = "bug!";
@@ -101,6 +104,8 @@ function fizzBuzz(arrayNumbers) {
   }
   return fizzBuzzArr;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(inputStringToEncode) {
