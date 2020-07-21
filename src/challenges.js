@@ -33,12 +33,12 @@ function concatName() {
  
  console.log("First element is "+ f);  
  console.log(" Last element is "+ l);  
-}concatName()
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-let pontos = (win *3) + ties;
+let pontos = (wins * 3) + ties;
 return pontos;
 }
 
@@ -144,14 +144,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-function Gfg() {  
-  let s= ["Geeks", "for", "geeks", "computer", "science"];
- let f=s[0];  
-
- let l=s[s.length-1];  
-
- console.log("First element is "+ f);  
- console.log("<br> Last element is "+ l);  
- }  
-Gfg();
