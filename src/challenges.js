@@ -167,9 +167,25 @@ return newVowelsNo.join('');
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  
+  let list = [];
+  let newList = tech.sort(a,b);
+
+  if (tech.length === 0){
+    return "Vazia!"
+  }else {
+    for(let i = 0; i < newList.length; i += 1){
+      list[i]={
+        tech: newList[i],
+        name: name,
+      }
+    }
+  }
+  return list;
 }
+
+console.log(techList(lista));
 
 // Desafio 11
 function generatePhoneNumber() {
