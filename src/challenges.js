@@ -186,10 +186,9 @@ function generatePhoneNumber(array) {
 
   for (let position = 0; position <= array.length; position += 1) {
     if (array[position] < 0 || array[position] > 9 || confirm === true) {
-      return "não é possivel gerar um número de telefone com esses valores";
+      return "não é possível gerar um número de telefone com esses valores";
     }
   }
-
 
   let ddd = [];
   for (let index = 0; index <= 1; index += 1) {
