@@ -55,15 +55,14 @@ function catAndMouse(rato, cat1, cat2) {
   var distancia2 = 0;
   if (rato > cat1){
     distancia1 = rato - cat1;
-  }
-  if (cat1 > rato){
+  } else {
     distancia1 = car1 - rato;
   }
+
   if (rato > cat2){
     distancia2 = rato - cat2;
-  }
-  if (cat2 > rato){
-    distancia2 = cat2 -rato
+  } else {
+    distancia2 = cat2 - rato;
   }
   if (distancia1 < distancia2){
     return 'cat1';
