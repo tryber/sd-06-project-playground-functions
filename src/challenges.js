@@ -1,17 +1,20 @@
 // Desafio 1
 function compareTrue( valor1 , valor2 ) {
-  return valor1 && valor2;
+  let resultado = valor1 && valor2
+  return resultado;
 }
 
 // Desafio 2
 function calcArea( base, heigth ) {
-  return (base * heigth ) / 2;
+  let resultado = (base * heigth ) / 2;
+  return resultado;
 }
 
 // Desafio 3
 function splitSentence( name ) {
   name = "Go Trybe";
-  return name.split(" ", 2);
+  resultado = name.split(" ", 2);
+  return resultado
 }
 
 // Desafio 4
