@@ -64,13 +64,12 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (gato1 < gato2) {
     return 'cat1';
-  } else if (cat1 === mouse && cat2 === mouse) {
+  } else if (gato1 === mouse && gato2 === mouse) {
     return 'os gatos trombam e o rato foge';
   }
-
   return 'cat2';
 }
-console.log(catAndMouse(4, 1, 2));
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz() {
