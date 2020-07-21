@@ -60,8 +60,8 @@ function catAndMouse(cat1, mouse, cat2) {
       return 'cat1';
     } else if (distCat2 < distCat1) {
       return 'cat2';
-    }
-    return 'os gatos trombam e o rato foge';
+    }else {
+    return 'os gatos trombam e o rato foge'}
   }
 
 
