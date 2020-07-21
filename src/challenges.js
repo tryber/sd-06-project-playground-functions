@@ -38,8 +38,7 @@ function highestCount(array) {
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] === maior) {
       cont += 1;
-    }
-    if (array[i] > maior) {
+    } if (array[i] > maior) {
       maior = array[i];
       cont = 1;
     }
@@ -57,8 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
   dist2 = Math.abs(dist2);
   if (dist1 > dist2) {
     return 'cat2';
-  }
-  if (dist1 < dist2) {
+  } if (dist1 < dist2) {
     return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
@@ -70,18 +68,28 @@ function fizzBuzz(vetNumbers) {
   for (let i in vetNumbers) {
     if (vetNumbers[i] % 3 === 0 && vetNumbers[i] % 5 !== 0) {
       array2.push('fizz');
-    }
-    else if (vetNumbers[i] % 5 === 0 && vetNumbers[i] % 3 !== 0) {
+    } else if (vetNumbers[i] % 5 === 0 && vetNumbers[i] % 3 !== 0) {
       array2.push('buzz');
-    }
-    else if (vetNumbers[i] % 5 === 0 && vetNumbers[i] % 3 === 0) {
+    } else if (vetNumbers[i] % 5 === 0 && vetNumbers[i] % 3 === 0) {
       array2.push('fizzBuzz');
-    }
-    else {
+    } else {
       array2.push('bug!');
     }
   }
   return array2;
+}
+
+function mesclian(word4, subst) {
+  let vet1 = [];
+  for (let i = 0; i < word4.length; i += 1) {
+  let char = word4.charAt(i);
+  if (char in subst) {
+    vet1.push(subst[char]);
+  } else {
+    vet1.push([char]);
+  }
+}
+  return vet1;
 }
 
 // Desafio 9
@@ -112,20 +120,6 @@ function decode(word3) {
   let retorno = vet1.join('');
   return retorno;
 }
-// fazer um func pra juntar o encode e o decode
-  function mesclian (word4, subst) {
-    let vet1 = [];
-  for (let i = 0; i < word4.length; i += 1) {
-    let char = word4.charAt(i);
-    if (char in subst) {
-      vet1.push(subst[char]);
-    }
-    else {
-      vet1.push([char]);
-    }
-  }
-  return vet1;
-  }
 
 // Desafio 10
 function techList(array1, name) {
@@ -133,16 +127,16 @@ function techList(array1, name) {
 
   let sort = array1.sort();
   let final = [];
-  if (name != "") {
-  for (let i in sort) {
-      final.push({ 'tech': sort[i], 'name': name });
-    }
-    }
+  if (name !== '') {
+    for (let i in sort) {
+    final.push({ 'tech': sort[i], 'name': name });
+  }
+  }
   if (array1.length === 0) {
     return 'Vazio!';
-    }
-        return final;  
   }
+  return final;
+}
 
 // Desafio 11
 function generatePhoneNumber() {
