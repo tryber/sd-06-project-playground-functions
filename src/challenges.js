@@ -155,7 +155,11 @@ function hydrate(string) {
   for (i = 0; i < somente_numeros.length; i += 1){
       soma += parseInt(somente_numeros[i]);
   }
-  soma += " copos de água"
+  if (soma === 1){
+    soma += " copo de água"
+  } else {
+    soma += " copos de água"
+  }
   return soma;
 }
 
