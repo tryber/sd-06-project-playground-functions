@@ -176,58 +176,9 @@ function techList(tech, name) {
 
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  let cont = 0;
-  let confirm = false;
-  let isPhone = array.length !== 11;
-  if (isPhone) {
-    return "Array com tamanho incorreto.";
-  }
-​
-  for (let position = 0; position <= array.length; position += 1) {
-    for (let j = 0; j < array.length; j++) {
-      if (array[position] === array[j]) {
-        cont += 1;
-      }
-      if (cont === 3) {
-        confirm = true;
-      }
-    }
-    cont = 0;
-  }
-​
-  for (let position = 0; position <= array.length; position += 1) {
-    if (array[position] < 0 || array[position] > 9 || confirm === true) {
-      return "não é possível gerar um número de telefone com esses valores";
-    }
-  }
-​
-  let ddd = [];
-  for (let index = 0; index <= 1; index += 1) {
-    ddd.push(array[index]);
-  }
-​
-  let firstNumbers = [];
-  for (let indexFirst = 2; indexFirst <= 6; indexFirst += 1) {
-    firstNumbers.push(array[indexFirst]);
-  }
-​
-  let secondNumbers = [];
-  for (let indexSecond = 7; indexSecond <= 10; indexSecond += 1) {
-    secondNumbers.push(array[indexSecond]);
-  }
-​
-  let dddFormatted = ddd.join("");
-  let firstNumbersFormatted = firstNumbers.join("");
-  let secondNumbersFormatted = secondNumbers.join("");
-  let formattedNumber = "(" + dddFormatted + ") " + firstNumbersFormatted + "-" + secondNumbersFormatted;
-​
-  return formattedNumber;
+function generatePhoneNumber() {
+  // seu código aqui
 }
-​
-let telephoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(telephoneNumber));
-
 
 // Desafio 12
 function triangleCheck() {
