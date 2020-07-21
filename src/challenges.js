@@ -81,11 +81,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaGato2 = mouse - cat2; //8
   if(distanciaGato1 > distanciaGato2) {
     console.log("cat2")
-    return cat2;
+    return "cat2";
   
   } else if (distanciaGato2 > distanciaGato1) {
     console.log("cat1")
-    return cat1;
+    return "cat1";
 
   } else {
     console.log("os gatos trombam e o rato foge");
@@ -98,7 +98,7 @@ function catAndMouse(mouse, cat1, cat2) {
 let arrayNumeros = [2, 15, 7, 9, 45];
 function fizzBuzz(array) {
   let retornoArray = [];
-  
+
   for(let i = 0; i < array.length; i += 1) {
     if((array[i] % 3) === 0 && (array[i] % 5) ===0) {
       retornoArray.push("fizzBuzz") 
