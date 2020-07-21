@@ -153,7 +153,27 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
+  if (numbers.length != 11) {
+      return 'Array com tamanho incorreto.' }      
+  for (let i of numbers) {
+      if (i < 0 || i > 10) {
+        return 'não é possível gerar um número de telefone com esses valores'
+      }
+    }
+  for (let i in numbers) {
+    let count = 0;
+    for (let j in numbers) {
+      if (numbers[i] === numbers[j]) {
+        count += 1;
+      }
+      if (count > 2) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+  }
+  return '('+ numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10]; 
 }
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
