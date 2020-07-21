@@ -57,10 +57,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  
+function fizz(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    return 'fizz';
+  } else if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
 }
-
+function fizzBuzz(arrayNumbers) {
+  let fb = [];
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    fb.push(fizz(arrayNumbers[index]));
+  }
+  return fb;
+}
+  
 // Desafio 9
 function encDec(phrase) {
   let newPhrase = '';
