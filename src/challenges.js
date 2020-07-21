@@ -11,6 +11,7 @@ function compareTrue(valor1, valor2) {
 }
 console.log(compareTrue(true, true));
 
+
 // Desafio 2
   let a = 10;
   let b = 5;
@@ -20,12 +21,14 @@ function calcArea(base, height) {
 } 
 console.log(calcArea(a, b));
 
+
 // Desafio 3
 function splitSentence(frase) {
   let espaco = frase.split(' ');
   return espaco; 
 }
 console.log(splitSentence('Keila Julia Matheus')) //teste
+
 
 // Desafio 4
 let myArray = ['Keila', 'Matheus', 'Julia'] //teste p/ saber se está rodando 
@@ -35,6 +38,7 @@ function concatName(parametro) {
   return(parametro[numberArray] + ", " + parametro[0]);
 }
 concatName(myArray); //teste
+
 
 // Desafio 5
 let vitorias = 5;
@@ -46,6 +50,7 @@ function footballPoints(wins, ties) {
   return((resultadoVitoria) + (resultadoEmpate));
 }
 footballPoints(vitorias, empate);
+
 
 // Desafio 6
 let arrayNumeros = [8, 9, 3, 4, 11, 10, 11];
@@ -93,6 +98,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   }
   catAndMouse(rato, gato1, gato2);
+
 
 // Desafio 8
 let arrayNumeros = [2, 15, 7, 9, 45];
