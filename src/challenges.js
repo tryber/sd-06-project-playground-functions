@@ -169,38 +169,40 @@ function techList(techs, name) {
 
 // Desafio 11
 function generatePhoneNumber(number) {
-    let acumulador = 0;
-    let odcc = 0;
   let numStr = number.join("");
   let ddd = numStr.split("", 2).join("");
   let num1 = numStr.slice(2,7);
   let num2 = numStr.slice(7,11);
   let nFinal = "(" + ddd + ")" + " " + num1 + "-" + num2;
+    
   
-  
-  for(let i = 0; i < number.length; i += 1){
-    if(number[i] == acumulador ){
-     odcc++; 
-    }else{
-      acumulador = number[i];
-    }
+if(number.length !== 11 ){
+    return "Array com tamanho incorreto."
   }
-   if(odcc > 3){
+
+  for(index in number){
+    let acumulador = 0;
+   for(jindex in number){
+      if(number[index] === number[jindex]){
+       acumulador += 1;
+       console.log(acumulador);
+       if(acumulador >= 3){
       return "não é possível gerar um número de telefone com esses valores";
-    }
+      }
+      }
+   }
+  }
+  
 
  for(let i = 0; i < number.length; i += 1){
     if(number[i] < 0 || number[i] > 9){
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
+
+  return nFinal;
   
-  if(number.length !== 11 ){
-    return "Array com tamanho incorreto."
-  }
-  else{
-    return nFinal;
-  }
+
 }
 console.log(generatePhoneNumber([1,1,9,5,7,7,3,3,8,2,6]))
 
