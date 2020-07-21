@@ -159,7 +159,7 @@ function generatePhoneNumber(numeros) {
       return impossivel;
   } else {
       numeros.splice(7,0,"-");
-      numeros.splice(2,0,")");
+      numeros.splice(2,0,") ");
       numeros.splice(0,0,"(");
       let telefone = numeros.join("");
       return telefone;
