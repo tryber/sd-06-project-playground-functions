@@ -182,8 +182,19 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bString) {
+  let aArray = bString.split('');
+  let num = 0;
+  let n = 0;
+  aArray.forEach(e => {
+    if (n = parseInt(e)) {
+      num += n; 
+    }
+  });
+ if (num === 1) {
+  return num + ' copo de água'; 
+ }
+  return num + ' copos de água';
 }
 
 
