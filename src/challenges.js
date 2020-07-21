@@ -111,7 +111,7 @@ function decode(strMsg) {
 // Desafio 10
 function techList(tech, name) {
   let res;
-  if (tech == []) {
+  if (tech.length == 0) {
     res = 'Vazio!';
   } else {
     res = [];
@@ -128,43 +128,41 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(numbersArray) {
-  let phone = '';
+  const isLower = (currentValue) => (currentValue >= 0 && currentValue <= 9);
+  let completePhone;     
   if (numbersArray.length !== 11) {
-    phone = 'Array com tamanho incorreto.';
+    completePhone = 'Array com tamanho incorreto.';
+  } else if (numbersArray.every(isLower) === false) {
+    completePhone = 'não é possível gerar um número de telefone com esses valores'; 
   } else {
     let i = 0;
     let stopSinal = 0;
-    while (i < numbersArray.length && stopSinal != 1) {
-      if (numbersArray[i] < 0 || numbersArray[i] > 9) {
-        phone = 'não é possível gerar um número de telefone com esses valores';
+    let numberParameters = {
+      prefix: '(',
+      suffix: ') ',
+      separator: '-',
+      regionCode: '',
+      firstNumerals: '',
+      lastNumerals: '',
+    }
+    while (i < numbersArray.length && stopSinal != 1){
+      let frequency = numbersArray.filter(currentValue => currentValue == numbersArray[i]);
+      if (frequency.length >= 3) {
+        completePhone = 'não é possível gerar um número de telefone com esses valores';
         stopSinal = 1;
       } else {
-        let hits = 0;
-        let ii = 0;
-        while(ii < numbersArray.length) {
-          if (numbersArray[ii] - numbersArray[i] === 0) {
-            hits += 1;
-            if (hits > 2) {
-              phone = 'não é possível gerar um número de telefone com esses valores';
-              stopSinal = 1;
-            }
-          }
-        ii += 1;
-        }
+        numberParameters.regionCode += (i == 0 || i == 1) ? numbersArray[i] : '';
+        numberParameters.firstNumerals += (i == 2 || i == 3 || i == 4 || i == 5 || i == 6) ? numbersArray[i] : '';
+        numberParameters.lastNumerals += (i == 7 || i == 8 || i == 9 || i == 10) ? numbersArray[i] : '';
       }
-      if (i === 0) {
-        phone += '(' + numbersArray[i];
-      } else if (i === 1) {
-        phone += numbersArray[i] + ') ';
-      } else if (i === 6) {
-        phone += numbersArray[i] + '-';
-      } else {
-        phone += numbersArray[i];
-      }
+
       i += 1;
-      }
-    return phone;
+    }
+    if (stopSinal === 0 ) {
+      completePhone = numberParameters.prefix.concat(numberParameters.regionCode).concat(numberParameters.suffix).concat(numberParameters.firstNumerals).concat(numberParameters.separator).concat(numberParameters.lastNumerals);    
+    }
   }
+  return completePhone;
 }
 
 // Desafio 12
