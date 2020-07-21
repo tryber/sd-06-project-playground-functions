@@ -54,6 +54,8 @@ function highestCount(arr) {
       if (arr[i] == highestNumber) {
         count += 1;
       }
+    }
+    for (let i = 0; i < arr.length; i+= 1){
       if (arr[i] > highestNumber) {
         highestNumber = arr[i];
         count = 1;
@@ -113,6 +115,14 @@ function techList() {
 // Desafio 11
 function generatePhoneNumber() {
 
+}
+
+// Desafio 12
+function triangleCheck() {
+}
+
+// Desafio 13
+function hydrate() {
 }
 
 
