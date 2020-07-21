@@ -218,14 +218,18 @@ var numero = 0;
 var dose ;
 var agua = 0;
 
-
 for( var i = 0; i <= array.length -1; i ++) {
     numero = array[i].replace(/\D/g,'');
     dose = numero * 1;
     agua += dose 
 }
+    if (agua > 1) {
     return agua+' copos de água';
-} 
+
+  } else {
+    return agua+' copo de água'
+  }
+} console.log(hydrate('2 pinga'));
 
  module.exports = {
   calcArea,
