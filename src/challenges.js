@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// array = [0, 4, 4, 4, 9, 2, 1]
+array = [0, 4, 4, 4, 9, 2, 9, 1]
 
 
 function highestCount(arrayPassado) {
@@ -51,12 +51,12 @@ function highestCount(arrayPassado) {
     
    
     }
-  } return count;
+  } return (count);
   
 }
 
 
-// highestCount(array)
+highestCount(array)
 
 
 // Desafio 7
