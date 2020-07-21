@@ -44,9 +44,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (distanceOfCat2 < distanceOfCat1) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -67,11 +66,55 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(word) {
+  newWord = '';
+  for (let index in word) {
+    switch (word[index]) {
+      case 'a':
+        newWord += '1';
+        break;
+      case 'e':
+        newWord += '2';
+        break;
+      case 'i':
+        newWord += '3';
+        break;
+      case 'o':
+        newWord += '4';
+        break
+      case 'u':
+        newWord += '5';
+        break;
+      default:
+        newWord += word[index];
+    }
+  }
+  return newWord;
 }
-function decode() {
-  // seu código aqui
+function decode(word) {
+  newWord = '';
+  for (let index in word) {
+    switch (word[index]) {
+      case '1':
+        newWord += 'a';
+        break;
+      case '2':
+        newWord += 'e';
+        break;
+      case '3':
+        newWord += 'i';
+        break;
+      case '4':
+        newWord += 'o';
+        break;
+      case '5':
+        newWord += 'u';
+        break;
+      default:
+        newWord += word[index];
+    }
+  }
+  return newWord;
 }
 
 // Desafio 10
