@@ -135,10 +135,15 @@ function decode(str) {
 function techList(arr, name) {
   let resultados = [];
   let item = {};
-  for ( let i in arr ) {
-    resultados.push( {tech: arr[i], name: nome} );
+  let msg = 'Vazio';
+  if ( arr.length > 0) {
+    for ( let i in arr ) {
+      resultados.push( {tech: arr[i], name: nome} );
+    }
+    return resultados;
+  } else {
+    return msg;
   }
-  return resultados;
 }
 
 // Desafio 11
