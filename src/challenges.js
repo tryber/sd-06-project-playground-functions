@@ -169,7 +169,7 @@ function generatePhoneNumber(number) {
     }
     for (let i = 0; i < number.length; i += 1) {
       let repetido = 1;
-      for (j = 0; j < number.length; j += 1) {
+      for (let j = 0; j < number.length; j += 1) {
         if (number[i] === number[j]) {
           repetido += 1;
         }
@@ -187,6 +187,7 @@ function generatePhoneNumber(number) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+
   if (((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) || ((lineB < lineA + lineC) && (lineB > Math.abs(lineA - lineC))) || ((lineC < lineA + lineB) && (lineC > Math.abs(lineA - lineB)))) {
     return true
   }
@@ -200,13 +201,18 @@ function hydrate(frase) {
   let temp1 = 0;
   let temp2 = 0;
   let soma = 0;
+  let resp = '';
 
   while ((comp = reg.exec(frase)) != null) {
     temp1 = comp[0];
     temp2 = parseInt(temp1);
     soma += temp2;
   }
-  let resp = soma + ' copos de água';
+  if (soma === 1) {
+    resp = soma + ' copo de água';
+    return resp;
+  }
+  resp = soma + ' copos de água';
   return resp;
 }
 
