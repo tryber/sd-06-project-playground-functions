@@ -3,16 +3,15 @@ function compareTrue(a, b) {
   // seu código aqui
   if (a === true && a === b) {
     return true;
-  } else {
-    return false;
   }
+    return false;
 }
 
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let area = (base * height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 
@@ -28,10 +27,9 @@ function splitSentence(string) {
 function concatName(array) {
   // seu código aqui
   // [a, b, c, d, e] -> 'e, a'
-  //retorna array[array.length - 1] + ', ' array[0]
+  // retorna array[array.length - 1] + ', ' array[0]
   let primeiraParalvra = array[array.length - 1];
   let stringConcat = primeiraParalvra + ', ' + array[0];
-
   return stringConcat;
 }
 
@@ -41,7 +39,7 @@ function footballPoints(wins, ties) {
   // seu código aqui
   // vitorias = wins * 3
   // empates = ties
-  //retorna a soma disso
+  // retorna a soma disso
   let points = (3 * wins) + ties
   return points;
 }
@@ -58,7 +56,7 @@ function highestCount(array) {
     }
   }
   for (let index = 0; index < array.length; index += 1) {
-    if (maiorNumero == array[index]) {
+    if (maiorNumero === array[index]) {
       repeticao += 1;
     }
   }
@@ -75,9 +73,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (distancia1 > distancia2) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+    return 'os gatos trombam e o rato foge';
 }
 
 
@@ -111,11 +108,11 @@ function encode(string) {
   // for cada i verificar se é vogal
   // Se for vogal trocar a vogal pelo numero
   // Transformar array em string
-  string = string.replace(/a/g, "1");
-  string = string.replace(/e/g, "2");
-  string = string.replace(/i/g, "3");
-  string = string.replace(/o/g, "4");
-  string = string.replace(/u/g, "5");
+  string = string.replace(/a/g, '1');
+  string = string.replace(/e/g, '2');
+  string = string.replace(/i/g, '3');
+  string = string.replace(/o/g, '4');
+  string = string.replace(/u/g, '5');
 
   return string;
 }
@@ -139,14 +136,13 @@ function techList(tech, name) {
   let resultado = [];
   if (tech.length === 0) {
     return 'Vazio!'
-  } else {
-    tech.sort();
-    for (i in tech) {
-      resultado.push({'tech': tech[i], 'name': name});
-    }
-    return resultado;
   }
-}
+  tech.sort();
+  for (i in tech) {
+    resultado.push({'tech': tech[i], 'name': name});
+  }
+  return resultado;
+  }
 
 
 // Desafio 11
@@ -159,25 +155,29 @@ function generatePhoneNumber(arrayNumber) {
   if (arrayNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  //Verificando se repete
-  let arrayVerificar = arrayNumber;
-  let contador = 0;
-  let limiteVezesRepetidas = false;
-  for (index in arrayNumber) {
-    for (i in arrayVerificar) {
-      if (arrayNumber[index] === arrayVerificar[i]) {
-        contador += 1
-      } else if (contador >= 3) {
-        limiteVezesRepetidas = true;
+    //Verificando se repete
+    let arrayVerificar = arrayNumber;
+    let contador = 0;
+    let repetiu = false;
+    for (let index = 0; index < arrayNumber.length; index += 1) {
+      for (let i = 0; i < arrayVerificar.length; i += 1) {
+        if (arrayNumber[index] === arrayVerificar[i]) {
+          contador += 1
+        }
+        if (contador >= 3) {
+          repetiu = true;
+        } else {
+          repetiu = false;
+        }
       }
+      contador = 0;
     }
-    contador = 0;
-  }
+  
   //Verificando numeros e condicao de repeticao
   for (let j = 0; j < arrayNumber.length; j += 1) {
-    if (arrayNumber[j] < 0 || arrayNumber[j] > 9 || limiteVezesRepetidas === true) {
+    if (arrayNumber[j] < 0 || arrayNumber[j] > 9 || repetiu === true) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } 
+    }
     }
   //Caso não retorne nenhuma das outras
   let numeroTelefoneCompleto = '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber[4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10];
@@ -185,6 +185,8 @@ function generatePhoneNumber(arrayNumber) {
   return numeroTelefoneCompleto;
   }
 
+arrayNumber = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 0];
+console.log(verificandoSeRepete(arrayNumber));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -193,7 +195,6 @@ function triangleCheck(lineA, lineB, lineC) {
   // A + B > C e A - B < C
   // A + C > B e A - C
   // B + C > A
-  // 
   let formarTriangulo = false;
   let somaAB = lineA + lineB;
   let somaAC = lineA + lineC;
@@ -211,7 +212,6 @@ function triangleCheck(lineA, lineB, lineC) {
   return formarTriangulo;
 }
 
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(drinks) {
