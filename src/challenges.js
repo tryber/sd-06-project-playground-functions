@@ -111,7 +111,7 @@ function encode(codigo) {
           break;
       }
     }
-    return code.join(' '); 
+    return code.join(''); 
   }
   function decode(encode) {
     let recode = encode.split('');
