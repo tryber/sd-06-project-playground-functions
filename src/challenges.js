@@ -16,30 +16,35 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(strSplit, separador) {
-  // seu código aqui
-let strArray = strSplit.split(separador)
-return (strArray.join(', '));
+function splitSentence(separador) {
+let strArray = [];
+let novoArray = "";
+
+for (let i = 0; i <= input.length; i += 1) {
+  if (separador[i] == ' ' || i == separador.length) {
+    strArray.push(novoArray);
+    novoArray = "";
+  } else {
+    newWord += input[i];
+  }
+}
+return strArray;
 }
 
 
 
 
 // Desafio 4
-function concatName() {
- let s= ["primeiro", "feiticeiro", "celeiro", "terceiro", "janeiro"];
- let f=s[0];  
- let l=s[s.length-1];
- 
- console.log("First element is "+ f);  
- console.log(" Last element is "+ l);  
+function concatName(primeiroUltimo) {
+  let newString = primeiroUltimo[primeiroUltimo.length - 1] + ', ' + primeiroUltimo[0];
+
+  return newString;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-let pontos = (wins * 3) + ties;
-return pontos;
+return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
