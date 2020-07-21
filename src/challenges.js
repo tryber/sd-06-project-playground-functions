@@ -44,7 +44,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let distancia2 = 0;
   let mesmaDistancia = 'os gatos trombam e o mouse foge';
   if (cat1 >= mouse) {
-    distancia1 = car1 - mouse;
+    distancia1 = cat1 - mouse;
   } else {
     distancia1 = mouse - cat1;
   }
