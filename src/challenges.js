@@ -192,44 +192,43 @@ function generatePhoneNumber(number) {
           numberCount += 1;
         }
       }
-      
       if (numberCount > maxNumberCount) {
         maxNumberCount = numberCount;
       }
       if (Math.sign(numberTest) !== -1 && Math.sign(numberTest !== 'NaN') && numberTest <= 9 && maxNumberCount < 3) {
         switch (i) {
-              case '0':
-                newNumber.push('(', number[i]);
-                break;
-              case '1':
-                newNumber.push(number[i], ')');
-                break;
-              case '2':
-                newNumber.push(number[i]);
-                break;
-              case '3':
-                newNumber.push(number[i]);
-                break;
-              case '4':
-                newNumber.push(number[i]);
-                break;
-              case '5':
-                newNumber.push(number[i]);
-                break;
-              case '6':
-                newNumber.push(number[i], '-');
-                break;
-              case '7':
-                newNumber.push(number[i]);
-                break;
-              case '8':
-                newNumber.push(number[i]);
-                break;
-              case '9':
-                newNumber.push(number[i]);
-                break;
-              case '10':
-                newNumber.push(number[i]);
+          case '0':
+            newNumber.push('(', number[i]);
+            break;
+          case '1':
+            newNumber.push(number[i], ') ');
+            break;
+          case '2':
+            newNumber.push(number[i]);
+            break;
+          case '3':
+            newNumber.push(number[i]);
+            break;
+          case '4':
+            newNumber.push(number[i]);
+            break;
+          case '5':
+            newNumber.push(number[i]);
+            break;
+          case '6':
+            newNumber.push(number[i], '-');
+            break;
+          case '7':
+            newNumber.push(number[i]);
+            break;
+          case '8':
+            newNumber.push(number[i]);
+            break;
+          case '9':
+            newNumber.push(number[i]);
+            break;
+          case '10':
+            newNumber.push(number[i]);
         }
       } else {
         return 'não é possível gerar um número de telefone com esses valores';
@@ -268,14 +267,14 @@ function hydrate(string) {
   // seu código aqui
   let bebidas = string.match(/[0-9]/g);
   let coposDeAgua = 0;
-  for (bebida of bebidas) {
+  for (let bebida of bebidas) {
     let integer = parseInt(bebida, 10);
     coposDeAgua += integer;
   }
   if (coposDeAgua === 1) {
     return coposDeAgua + ' copo de água';
   }
-  return coposDeAgua + ' copos de água'; 
+  return coposDeAgua + ' copos de água';
 }
 
 module.exports = {
