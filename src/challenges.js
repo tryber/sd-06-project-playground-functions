@@ -123,7 +123,7 @@ function decode(words) {
 // Desafio 10
 function techList(technologies, name) {
   if (technologies.length === 0) {
-      return "Vazio!";
+      return 'Vazio!';
   } else {       
       let objects = [];
       technologies.sort();
@@ -174,15 +174,15 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let somente_numeros = string.replace(/\D+/g, "");
+  let somenteNumeros = string.replace(/\D+/g, '');
   let soma = 0;
-  for (i = 0; i < somente_numeros.length; i += 1){
-      soma += parseInt(somente_numeros[i]);
+  for (i = 0; i < somenteNumeros.length; i += 1){
+      soma += parseInt(somenteNumeros[i]);
   }
   if (soma === 1){
-    soma += " copo de água";
+    soma += ' copo de água';
   } else {
-    soma += " copos de água";
+    soma += ' copos de água';
   }
   return soma;
 }
