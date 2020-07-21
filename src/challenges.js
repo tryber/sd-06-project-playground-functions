@@ -41,18 +41,23 @@ function concatName(array) {
 
 
 // Desafio 5
-function footballPoints() {
-
-
-
+function footballPoints(wins, ties) {
+return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
 function highestCount(arr) {
   // seu código aqui
     let highestNumber = arr[0];
+    let count = 0
     for (let i = 0; i < arr.length; i+= 1){
-      highestNumber
+      if (arr[i] == highestNumber) {
+        count += 1;
+      }
+      if (arr[i] > highestNumber) {
+        highestNumber = arr[i];
+        count = 1;
+      }
     }
 }
 
