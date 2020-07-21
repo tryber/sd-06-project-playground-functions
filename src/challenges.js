@@ -23,14 +23,11 @@ function splitSentence(exemplo) {
 function concatName(array) {
   return array[array.length -1] + ', ' + array[0]
 }
-var comidas = ['farinha', 'arroz', 'feijao', 'beterraba', 'oleo'];
-console.log(concatName(comidas))
 
 // Desafio 5
 function footballPoints(wins, ties) {
 return (wins * 3) + (ties * 1)
 }
-console.log(footballPoints(3, 4))
 
 // Desafio 6
 function highestCount(numero) {
@@ -46,22 +43,21 @@ function highestCount(numero) {
   }
   return repetidor
 }
-var numeros = [1, 5, 7, 7, 7, 5, 6, 7, 6, 3, 5, 7];
-console.log(highestCount(numeros));
 
 // Desafio 7
 function catAndMouse(rato, cat1, cat2) {
   var distancia1 = 0;
   var distancia2 = 0;
-  if (rato > cat1){
+  if (rato > cat1) {
     distancia1 = rato - cat1;
-  } else {
+  }
+  if (cat1 > rato) {
     distancia1 = car1 - rato;
   }
-
-  if (rato > cat2){
+  if (rato > cat2) {
     distancia2 = rato - cat2;
-  } else {
+  }
+  if (cat2 > rato) {
     distancia2 = cat2 - rato;
   }
   if (distancia1 < distancia2){
@@ -86,6 +82,8 @@ function fizzBuzz(array) {
     }
   }
 }
+let numeros = [ 10, 20 ,30 ,40]
+console.log(fizzBuzz(numeros))
 
 // Desafio 9
 function encode() {
