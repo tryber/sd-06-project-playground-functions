@@ -234,14 +234,11 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(bebidas) {
   // seu código aqui
-  let numStr = [];
-  let qtd;
+  let numStr = bebidas.match(/\d+/g).map(Number);
   let soma = 0;
   let result;
-  for (let i = 0; i < bebidas.length; i += 1) {
-    numStr = bebidas[i].replace(/[^0-9]/g, '');
-    qtd = parseInt(numStr, 10);
-    soma += qtd;
+  for (let i = 0; i < numStr.length; i += 1) {
+    soma += numStr[i];
   }
   if (soma > 1) {
     result = `${soma} copos de água`;
