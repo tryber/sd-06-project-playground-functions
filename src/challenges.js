@@ -45,41 +45,60 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = mouse - cat1;
   let distCat2 = mouse - cat2;
-  let reached = "";
+  let reached = '';
 
   if (Math.abs(distCat1) < Math.abs(distCat2)) {
-    reached = "cat1";
+    reached = 'cat1';
   } else if (Math.abs(distCat2) < Math.abs(distCat1)) {
-    reached = "cat2";
+    reached = 'cat2';
   } else {
-    reached = "os gatos trombam e o rato foge";
+    reached = 'os gatos trombam e o rato foge';
   }
   return reached;
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
-
   for (let index = 0; index < numbers.length; index += 1) {
     if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
-      numbers[index] = "fizzBuzz";
+      numbers[index] = 'fizzBuzz';
     } else if (numbers[index] % 3 === 0) {
-      numbers[index] = "fizz";
+      numbers[index] = 'fizz';
     } else if (numbers[index] % 5 === 0) {
-      numbers[index] = "buzz";
+      numbers[index] = 'buzz';
     } else {
-      numbers[index] = "bug!"
+      numbers[index] = 'bug!'
     }
   }
   return numbers;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phraseToEncode) {
+  let encodeArray = {a: 1, e: 2, i: 3, o: 4, u: 5};
+  let splitPhraseEncode = phraseToEncode.split('')
+
+  for (index = 0; index < splitPhraseEncode.length; index += 1) {
+    for (let chave in encodeArray) {
+      if (splitPhraseEncode[index] === chave) {
+        splitPhraseEncode[index] = encodeArray[chave];
+      }
+    }
+  }
+  return splitPhraseEncode.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(phraseToDecode) {
+  let decodeArray = {a: '1', e: '2', i: '3', o: '4', u: '5'};
+  let splitPhraseDecode = phraseToDecode.split('')
+
+  for (index = 0; index < splitPhraseDecode.length; index += 1) {
+    for (let chave in decodeArray) {
+      if (splitPhraseDecode[index] === decodeArray[chave]) {
+        splitPhraseDecode[index] = chave;
+      }
+    }
+  }
+  return splitPhraseDecode.join('');
 }
 
 // Desafio 10
