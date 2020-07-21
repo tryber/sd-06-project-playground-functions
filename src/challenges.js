@@ -101,7 +101,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 
 // Desafio 8
-let arrayNumeros = [2, 15, 7, 9, 45];
+let arrayNumbers = [2, 15, 7, 9, 45];
 function fizzBuzz(array) {
   let retornoArray = [];
 
@@ -122,7 +122,7 @@ function fizzBuzz(array) {
   }
   return retornoArray; 
 }
-console.log(fizzBuzz(arrayNumeros));
+console.log(fizzBuzz(arrayNumbers));
 
 
 // Desafio 9
