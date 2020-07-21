@@ -173,7 +173,7 @@ function techList(tech, name) {
   let newList = tech.sort();
 
   if (tech.length === 0){
-    return "Vazia!"
+    return "Vazio!"
   }else {
     for(let i = 0; i < newList.length; i += 1){
       list[i]={
