@@ -122,37 +122,39 @@ function decode(words) {
 
 // Desafio 10
 function techList(technologies, name) {
+  let results;
   if (technologies.length === 0) {
-      return 'Vazio!';
-  } else {       
-      let objects = [];
-      technologies.sort();
-      for (let i = 0; i < technologies.length; i += 1){
-          objects.push({tech:technologies[i], name:name});
-      }
-      return objects;
+    result = 'Vazio!';
+  } else {
+    let objects = [];
+    technologies.sort();
+    for (let i = 0; i < technologies.length; i += 1) {
+      objects.push({tech: technologies[i], name: name});
+    }
+    result = objects;
   }
+  return results;
 }
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
   let impossivel = null;
   let result;
-  for (i = 0; i < numeros.length; i += 1){
+  for (let i = 0; i < numeros.length; i += 1) {
       let repeticoes = 0;
-      for (j = 0; j < numeros.length; j += 1){
-          if (numeros[i] === numeros[j]){
+      for (let j = 0; j < numeros.length; j += 1) {
+          if (numeros[i] === numeros[j]) {
               repeticoes += 1;
           }
       }
-      if (repeticoes >= 3 || numeros[i] < 0 || numeros[i] > 9){
+      if (repeticoes >= 3 || numeros[i] < 0 || numeros[i] > 9) {
           impossivel = 'não é possível gerar um número de telefone com esses valores';
       }
   }
-  if (numeros.length != 11){
+  if (numeros.length != 11) {
       impossivel = 'Array com tamanho incorreto.';
   }
-  if (impossivel != null){
+  if (impossivel != null) {
       result = impossivel;
   } else {
       numeros.splice(7,0,'-');
@@ -176,10 +178,10 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let somenteNumeros = string.replace(/\D+/g, '');
   let soma = 0;
-  for (i = 0; i < somenteNumeros.length; i += 1){
+  for (i = 0; i < somenteNumeros.length; i += 1) {
       soma += parseInt(somenteNumeros[i]);
   }
-  if (soma === 1){
+  if (soma === 1) {
     soma += ' copo de água';
   } else {
     soma += ' copos de água';
