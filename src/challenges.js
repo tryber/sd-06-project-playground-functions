@@ -65,7 +65,7 @@ function catAndMouse(rato, gato1, gato2) {
 function fizzBuzz(arrayNumber) {
 let arrayString = [];
   for (i = 0; i < arrayNumber.length; i += 1) {
-    if (arrayNumber[i] % 3 === 0 && arrayNumber[i] % 5 === 0) {
+    if ((arrayNumber[i] % 3 === 0) && (arrayNumber[i] % 5 === 0)) {
       arrayString.push('fizzBuzz');
     } else if ((arrayNumber[i] % 5 === 0) && (arrayNumber[i] % 3 !== 0)) {
       arrayString.push('buzz');
