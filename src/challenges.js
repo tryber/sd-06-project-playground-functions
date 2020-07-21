@@ -22,14 +22,13 @@ function splitSentence(frase) {
 console.log(splitSentence('go trybe'));
 
 // Desafio 4
-let array = ['foguete', 'não', 'tem', 'ré'];
-function concatName() {
+function concatName(array) {
   let first = array[0];
   let last = array[array.length -1];
 
   return (last + ', ' + first);
 }
-// console.log(concatName(array));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -39,10 +38,9 @@ function footballPoints(wins, ties) {
 // console.log(footballPoints(2, 3));
 
 // Desafio 6
-let numbers = [0, 4, 4, 4, 9, 2, 1];
-console.log(highestCount(numbers));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
-function highestCount() {
+function highestCount(numbers) {
   let maiorNum = 0;
   let result = 0;
 
