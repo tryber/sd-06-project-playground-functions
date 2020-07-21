@@ -22,15 +22,18 @@ console.log(calcArea(a, b));
 
 // Desafio 3
 function splitSentence(frase) {
-  let espaco = frase.split(" ");
+  let espaco = frase.split('');
   return espaco; 
 }
-console.log(splitSentence("Keila Sales"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let myArray = ['Keila', 'Matheus', 'Julia'] //teste p/ saber se está rodando 
+function concatName(parametro) {
+  let numberArray = parametro.length -1
+  console.log(parametro[numberArray] + ", " + parametro[0]); //teste
+  return(parametro[numberArray] + ", " + parametro[0]);
 }
+concatName(myArray); //teste
 
 // Desafio 5
 function footballPoints() {
