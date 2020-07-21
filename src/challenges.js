@@ -36,8 +36,7 @@ console.log(concatName(nomes));
 
 // Desafio 5
 function footballPoints(wins,ties) {
-  let totalPontos = (wins*3) + (ties*1);
-  return totalPontos;
+  return totalPontos = (wins*3) + (ties*1);
 }
 console.log(footballPoints(3,4));
 
@@ -104,16 +103,64 @@ arrayNumbers = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(arrayNumbers));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(troca) {
+  newPhrase = "";
+  for(index in troca){
+    switch(troca[index]){
+      case 'a':
+        newPhrase += "1";
+        break;
+      case 'e':
+        newPhrase += "2";
+        break;
+      case 'i':
+        newPhrase += "3";
+        break;
+      case 'o':
+        newPhrase += "4";
+        break;
+      case 'u':
+        newPhrase += "5";
+        break;
+      default:
+        newPhrase += troca[index];  
+    }
+  }
+  return newPhrase;
 }
-function decode() {
-  // seu código aqui
+  mensagem = "hi there!";
+  console.log(encode(mensagem));
+  
+function decode(numberPhrase) {
+  normalPhrase = "";
+  for(index in numberPhrase){
+    switch(numberPhrase[index]){
+      case '1': 
+        normalPhrase += "a";
+      break;
+      case '2':
+        normalPhrase += "e";
+      break;
+      case '3':
+        normalPhrase += "i";
+      break;
+      case '4':
+        normalPhrase += "o";
+      break;
+      case '5':
+        normalPhrase += "u";
+      break;
+      default:
+        normalPhrase += numberPhrase[index];
+    }
+  }
+  return normalPhrase;
 }
+let fraseNumero = encode(mensagem);
+console.log(decode(fraseNumero));
 
 // Desafio 10
 function techList() {
-  // seu código aqui
 }
 
 // Desafio 11
