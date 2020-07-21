@@ -1,14 +1,13 @@
-// Desafio 10
-function techList(tech, name){
-    let techSort = tech.sort();
-    let lista = [];
-    for(i in techSort){
-        lista.push({tech: techSort[i], name: name})
-        }
-    if(lista.length === 0){
-        return 'Vazio!';
-    }else{
-        return lista
-    }
+// Desafio 12
+function triangleCheck(a,b,c) {
+  let absA = Math.abs(a);
+  let absB = Math.abs(b);
+  let absC = Math.abs(c);
+  if((a==0 || b==0 || c==0) || (a+b<c || a+c<b || b+c<a)){
+    return false
+
+  }else{
+    return true
   }
-  console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
+}
+console.log(triangleCheck(16,20,30))
