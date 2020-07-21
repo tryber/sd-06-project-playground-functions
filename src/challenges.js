@@ -113,9 +113,32 @@ function encode(codigo) {
     }
     return code.join(' '); 
   }
-function decode() {
-  // seu código aqui
-}
+  function decode(encode) {
+    let recode = encode.split('');
+      for (let i = 0; i < recode.length; i += 1) {
+        switch (recode[i]) {
+          case '1':
+            recode[i] = 'a';
+            break;
+          case '2':
+            recode[i] ='e';
+            break;
+          case '3':
+            recode[i] ='i';
+            break;
+          case '4':
+            recode[i] = 'o';
+            break;
+          case '5':
+            recode[i] = 'u';
+            break;
+          default:
+            recode[i] = recode[i];
+            break;
+        }
+      }
+      return recode.join('');
+  }
 
 // Desafio 10
 function techList() {
