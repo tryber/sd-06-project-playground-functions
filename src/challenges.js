@@ -64,7 +64,7 @@ function highestCount(numbers) {
   return repetitionCount;
 }
 
-console.log(highestCount([-101, -100, -101,-100, -100, -100, -1, -9, -9, -3, -9, -5, -7]));
+highestCount([-101, -100, -101,-100, -100, -100, -1, -9, -9, -3, -9, -5, -7]);
 
 
 // Desafio 7
