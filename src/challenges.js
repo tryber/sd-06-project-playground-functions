@@ -94,7 +94,7 @@ function encode(word) {
 function decode(deWord) {
   let newWord = '';
   for (let index in deWord) {
-    switch (word[index]) {
+    switch (deWord[index]) {
       case '1':
         newWord += 'a';
         break;
