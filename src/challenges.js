@@ -75,59 +75,38 @@ function fizzBuzz(numeros) {
   return result;
 }
 // Desafio 9
-function encode(str) {
-  str = str.split('');
+function convert(str) {
   let aux = '';
   for (let index = 0; index < str.length; index += 1) {
     switch (str[index]) {
-      case 'a' :
-        str[index] = '1';
-        break;
-      case 'e' :
-        str[index] = '2';
-        break;
-      case 'i' :
-        str[index] = '3';
-        break;
-      case 'o' :
-        str[index] = '4';
-        break;
-      case 'u' :
-        str[index] = '5';
-        break;
-      default:
-        break;
+      case 'a' : str[index] = '1'; break;
+      case 'e' : str[index] = '2'; break;
+      case 'i' : str[index] = '3'; break;
+      case 'o' : str[index] = '4'; break;
+      case 'u' : str[index] = '5'; break;
+      case '1' : str[index] = 'a'; break;
+      case '2' : str[index] = 'e'; break;
+      case '3' : str[index] = 'i'; break;
+      case '4' : str[index] = 'o'; break;
+      case '5' : str[index] = 'u'; break;
+      default: break;
     }
     aux += str[index];
   }
   return aux;
 }
 
+function encode(str) {
+  str = str.split('');
+  let aux = convert(str);
+  
+  return aux;
+}
+
 function decode(str) {
   str = str.split('');
-  let aux = '';
-  for (let index = 0; index < str.length; index += 1) {
-    switch (str[index]) {
-      case '1' :
-        str[index] = 'a';
-        break;
-      case '2' :
-        str[index] = 'e';
-        break;
-      case '3' :
-        str[index] = 'i';
-        break;
-      case '4' :
-        str[index] = 'o';
-        break;
-      case '5' :
-        str[index] = 'u';
-        break;
-      default:
-        break;
-    }
-    aux += str[index];
-  }
+  let aux = convert(str);
+  
   return aux;
 }
 
