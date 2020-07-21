@@ -156,7 +156,7 @@ function generatePhoneNumber(arrayNumber) {
   let phoneNumber = 0;
   let listNumber = arrayNumber.sort();
   for (let index4=0; index4<listNumber.length;index4++) {
-    if (listNumber[index4] === listNumber[index4 -1] === listNumber[index4 -2]) {
+    if (listNumber[index4] === listNumber[index4 -1] && listNumber[index4] === listNumber[index4 -2]) {
       return "não é possível gerar um número de telefone com esses valores";
     }
   }
