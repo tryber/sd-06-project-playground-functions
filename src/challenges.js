@@ -57,25 +57,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numeros) {
+
+function fbNumber(number){
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzbuzz';
+  } else if (number % 3 === 0) {
+    return 'fizz';
+  } else if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
+function fizzBuzz(numbers) {
   let result = [];
-  for (let index in numeros) {
-    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else
-    if (numeros[index] % 3 === 0) {
-      result.push('fizz');
-    } else
-    if (numeros[index] % 5 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
+  for (let index = 0; index < numbers.length; index += 1) {
+    result.push(fbNumber(numbers[index]));
   }
   return result;
 }
+
 // Desafio 9
-function convert(str) {
+function codeDeco(str) {
   let aux = '';
   for (let index = 0; index < str.length; index += 1) {
     switch (str[index]) {
@@ -98,15 +101,13 @@ function convert(str) {
 
 function encode(str) {
   str = str.split('');
-  let aux = convert(str);
-  
+  let aux = codeDeco(str);
   return aux;
 }
 
 function decode(str) {
   str = str.split('');
-  let aux = convert(str);
-  
+  let aux = codeDeco(str);
   return aux;
 }
 
