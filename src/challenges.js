@@ -221,9 +221,21 @@ function generatePhoneNumber(array) {
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(line) {
+  let lineA = line[0];
+  let lineB = line[1];
+  let lineC = line[2];
+  let sideAB = lineA + lineB;
+  let sideAC = lineA + lineC;
+  let sideBC = lineB + lineC;
+
+  if ((lineC < sideAB) && (lineB < sideAC) && (lineA < sideBC)){
+    return true;
+  }else {
+    return false;
+  }
 }
+
 
 // Desafio 13
 function hydrate() {
