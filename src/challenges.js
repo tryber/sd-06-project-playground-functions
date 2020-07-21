@@ -67,7 +67,7 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(word) {
-  newWord = '';
+  let newWord = '';
   for (let index in word) {
     switch (word[index]) {
       case 'a':
@@ -91,9 +91,9 @@ function encode(word) {
   }
   return newWord;
 }
-function decode(word) {
-  newWord = '';
-  for (let index in word) {
+function decode(deWord) {
+  let newWord = '';
+  for (let index in deWord) {
     switch (word[index]) {
       case '1':
         newWord += 'a';
@@ -111,7 +111,7 @@ function decode(word) {
         newWord += 'u';
         break;
       default:
-        newWord += word[index];
+        newWord += deWord[index];
     }
   }
   return newWord;
