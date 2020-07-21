@@ -65,15 +65,20 @@ function footballPoints(wins, ties) {
 
 
 // --------------- Desafio 6
-let arr = [0, 4, 4, 4, 9, 2, 1];
-function highestCount(myArray) {
-  let contMaior = 0;
+// let arr = [0, 4, 4, 4, 9, 2, 9];
+function verifyHighest(myArray) {
   let maior = 0;
   for (let y = 0; y < myArray.length; y += 1) {
     if ((myArray[y] > maior)) {
       maior = myArray[y];
     }
   }
+  return maior;
+}
+
+function highestCount(myArray) {
+  let maior = verifyHighest(myArray);
+  let contMaior = 0;
   for (let i = 0; i < myArray.length; i += 1) {
     if ((myArray[i] === maior)) {
       contMaior += 1;
@@ -81,7 +86,7 @@ function highestCount(myArray) {
   }
   return contMaior;
 }
-console.log(highestCount(arr));
+// console.log(highestCount(arr));
 
 
 // ---------- Desafio 7
@@ -188,8 +193,9 @@ function techList(myArray, myName) {
 }
 // console.log(techList(arr, name));
 
-// Desafio 11
-let numPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+
+// ------------- Desafio 11
+// let numPhone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 function verifyNumber(myPhone) {
   let result = true;
   let contMaior = 0;
@@ -233,22 +239,25 @@ function generatePhoneNumber(myPhone) {
   }
   return result;
 }
-console.log(generatePhoneNumber(numPhone));
+// console.log(generatePhoneNumber(numPhone));
 
-// Desafio 12
-// let lin1 = 10;
-// let lin2 = 14;
-// let lin3 = 8;
+
+// ------------ Desafio 12
+let lin1 = 10;
+let lin2 = 14;
+let lin3 = 8;
 function triangleCheck(lineA, lineB, lineC) {
   let result = false;
-  if ((Math.abs(lineB - lineC) < lineA) && (lineB + lineC > lineA) && 
-      (Math.abs(lineA - lineC) < lineB) && (lineA + lineC > lineB) && 
-      (Math.abs(lineA - lineB) < lineC) && (lineA + lineB > lineC)) {
-    result = true;
+  if ((Math.abs(lineB - lineC) < lineA) && (lineB + lineC > lineA)) {
+    if ((Math.abs(lineA - lineC) < lineB) && (lineA + lineC > lineB)) {
+      if ((Math.abs(lineA - lineB) < lineC) && (lineA + lineB > lineC)) {
+        result = true;
+      }
+    }
   }
   return result;
 }
-// console.log(triangleCheck(lin1, lin2, lin3));
+console.log(triangleCheck(lin1, lin2, lin3));
 
 
 // Desafio 13
