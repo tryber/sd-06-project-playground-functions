@@ -186,68 +186,82 @@ function generatePhoneNumber(number) {
     for (let i in number) {
       let numberTest = number[i];
       let numberCount = 0;
-      for (let testIndex in number) {
-        if (numberTest === number[testIndex + 1]) {
+      for (let testVerify of number) {
+        if (numberTest === testVerify) {
           numberCount += 1;
         }
       }
+      
       if (numberCount > maxNumberCount) {
         maxNumberCount = numberCount;
       }
-    }
-    if (maxNumberCount < 3) {
-      let newNumber = [];
-      for (let i in number) {
-        if (number[i] >= 0 && number[i] <= 9) {
+      if (number[i] >= 0 && number[i] <= 9 && maxNumberCount < 3) {
+        let newNumber = [];
+        for (let i in number) {
           switch (i) {
-            case '0':
-              newNumber.push('(', number[i]);
-              break;
-            case '1':
-              newNumber.push(number[i], ')');
-              break;
-            case '2':
-              newNumber.push(number[i]);
-              break;
-            case '3':
-              newNumber.push(number[i]);
-              break;
-            case '4':
-              newNumber.push(number[i]);
-              break;
-            case '5':
-              newNumber.push(number[i]);
-              break;
-            case '6':
-              newNumber.push(number[i], '-');
-              break;
-            case '7':
-              newNumber.push(number[i]);
-              break;
-            case '8':
-              newNumber.push(number[i]);
-              break;
-            case '9':
-              newNumber.push(number[i]);
-              break;
-            case '10':
-              newNumber.push(number[i]);
+              case '0':
+                newNumber.push('(', number[i]);
+                break;
+              case '1':
+                newNumber.push(number[i], ')');
+                break;
+              case '2':
+                newNumber.push(number[i]);
+                break;
+              case '3':
+                newNumber.push(number[i]);
+                break;
+              case '4':
+                newNumber.push(number[i]);
+                break;
+              case '5':
+                newNumber.push(number[i]);
+                break;
+              case '6':
+                newNumber.push(number[i], '-');
+                break;
+              case '7':
+                newNumber.push(number[i]);
+                break;
+              case '8':
+                newNumber.push(number[i]);
+                break;
+              case '9':
+                newNumber.push(number[i]);
+                break;
+              case '10':
+                newNumber.push(number[i]);
           }
-        } else {
-            return 'não é possível gerar um número de telefone com esses valores';
-          }
+        }
+        return newNumber.join('');
       }
-      return newNumber;
+      return 'não é possível gerar um número de telefone com esses valores';
     }
-  
-  } else {
-    return 'Array com tamanho incorreto.';
-  }
+  } 
+  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let trianglePoss = false;
+  let somaAB = lineA + lineB;
+  let somaAC = lineA + lineC;
+  let somaBC = lineB + lineC;
+  let difAB = Math.abs(lineA - lineB);
+  let difAC = Math.abs(lineA - lineC);
+  let difBC = Math.abs(lineB - lineC);
+  switch (true) {
+    case lineA < somaBC && lineA > difBC:
+      trianglePoss = true;
+      break;
+    case lineB < somaAC && lineB > difAC:
+      trianglePoss = true;
+      break;
+    case lineC < somaAB && lineC > difAB:
+      trianglePoss = true;
+  }
+  return trianglePoss;
 }
 
 // Desafio 13
