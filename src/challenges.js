@@ -201,8 +201,7 @@ for(i = 0; i <= array.length - 1; i ++) {
 } 
     formatedNumber = '('+correctNumber[0]+ correctNumber[1]+')'+' '+correctNumber[2]+correctNumber[3]+correctNumber[4]+correctNumber[5]+correctNumber[6]+'-'+correctNumber[7]+correctNumber[8]+correctNumber[9]+correctNumber[10];
     return formatedNumber;
-}
-  
+} 
 
 // Desafio 12
 function triangleCheck() {
@@ -210,9 +209,23 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(strDrink) {
+  
+var tiraE = strDrink.split(' e '); // Para construção do array - retiro qualquer letra e que posssa ter na String
+tiraE = tiraE.toString(); 
+var array = tiraE.split(','); // Para melhorar a construção do array aqui retiro a virgula
+var numero = 0;
+var dose ;
+var agua = 0;
+
+
+for( var i = 0; i <= array.length -1; i ++) {
+    numero = array[i].replace(/\D/g,'');
+    dose = numero * 1;
+    agua += dose 
 }
+    return agua+' copos de água';
+} console.log(hydrate('3 copos de cerveja'))
 
 
  module.exports = {
