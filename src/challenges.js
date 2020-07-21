@@ -18,8 +18,8 @@ function calcArea(b,h) {
 }
 
 // Desafio 3
-let string = "go trybe";
-function splitSentence(string) {
+let frase = "go trybe";
+function splitSentence(frase) {
   let strArray = frase.split(" ");
   return strArray;
   console.log(strArray)
@@ -28,7 +28,7 @@ function splitSentence(string) {
 // Desafio 4
 
 function concatName(array) {
-  array = ["a","b","c"];
+  array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
   return `${array[0]} , ${array[array.length - 1]}`;
   // seu código aqui
 }
