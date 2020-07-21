@@ -169,7 +169,7 @@ function generatePhoneNumber(array) {
   let confirm = false;
   let isPhone = array.length !== 11;
   if (isPhone) {
-    return "Array com tamanho incorreto";
+    return "Array com tamanho incorreto.";
   }
 
   for (let position = 0; position <= array.length; position += 1) {
