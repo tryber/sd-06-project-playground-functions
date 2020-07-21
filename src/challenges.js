@@ -106,17 +106,6 @@ return newFizz;
 
 
 // Desafio 9
-/*Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
-
-a -> 1
-e -> 2
-i -> 3
-o -> 4
-u -> 5
-
-Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
-
-A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").*/
 
 function encode(vowels) {
     
@@ -187,9 +176,56 @@ function techList(tech, name) {
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let cont = 0;
+  let confirm = false;
+  let isPhone = array.length !== 11;
+  if (isPhone) {
+    return "Array com tamanho incorreto.";
+  }
+​
+  for (let position = 0; position <= array.length; position += 1) {
+    for (let j = 0; j < array.length; j++) {
+      if (array[position] === array[j]) {
+        cont += 1;
+      }
+      if (cont === 3) {
+        confirm = true;
+      }
+    }
+    cont = 0;
+  }
+​
+  for (let position = 0; position <= array.length; position += 1) {
+    if (array[position] < 0 || array[position] > 9 || confirm === true) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+​
+  let ddd = [];
+  for (let index = 0; index <= 1; index += 1) {
+    ddd.push(array[index]);
+  }
+​
+  let firstNumbers = [];
+  for (let indexFirst = 2; indexFirst <= 6; indexFirst += 1) {
+    firstNumbers.push(array[indexFirst]);
+  }
+​
+  let secondNumbers = [];
+  for (let indexSecond = 7; indexSecond <= 10; indexSecond += 1) {
+    secondNumbers.push(array[indexSecond]);
+  }
+​
+  let dddFormatted = ddd.join("");
+  let firstNumbersFormatted = firstNumbers.join("");
+  let secondNumbersFormatted = secondNumbers.join("");
+  let formattedNumber = "(" + dddFormatted + ") " + firstNumbersFormatted + "-" + secondNumbersFormatted;
+​
+  return formattedNumber;
 }
+​
+
 
 // Desafio 12
 function triangleCheck() {
