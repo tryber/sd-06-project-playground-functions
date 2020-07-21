@@ -194,10 +194,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(frase) {
+  let reg = /\d+/g;
+  let comp;
+  let temp1 = 0;
+  let temp2 = 0;
+  let soma = 0;
 
+  while ((comp = reg.exec(frase)) != null) {
+    temp1 = comp[0];
+    temp2 = parseInt(temp1);
+    soma += temp2;
+  }
+  let resp = soma + ' copos de água';
+  return resp;
+}
 
 module.exports = {
   calcArea,
