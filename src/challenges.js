@@ -57,34 +57,12 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 // Desafio 8
 function fizzBuzz(array = [2, 15, 7, 9, 45]) {
   let out = [];
-  
-  function mult3 (number) {
-    if (number % 3 === 0) {
-      return true;
-    }
-  }
-
-  function mult5 (number) {
-    if (number % 5 === 0) {
-      return true;
-    }
-  }
-  
   for (let i = 0; i < array.length; i += 1) {
     let number = array[i];
-    if (mult3(number) && mult5(number)) {
-      out.push('fizzBuzz');
-    } else if (mult3(number)) {
-      out.push('fizz');
-    } else if (mult5(number)) {
-      out.push('buzz');
-    } else {
-      out.push('bug!');
-    }
+    out.push(((number % 15 === 0 ? 'fizzBuzz' : '') || (number % 3 === 0 ? 'fizz' : '') || (number % 5 === 0 ? 'buzz' : '') || 'bug!'))
   }
   return out;
 }
-fizzBuzz();
 
 // Desafio 9
 function encode(a = 'hi there, this is your new house') {
