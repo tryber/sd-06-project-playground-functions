@@ -170,7 +170,7 @@ return newVowelsNo.join('');
 function techList(tech, name) {
   
   let list = [];
-  let newList = tech.sort(a,b);
+  let newList = tech.sort();
 
   if (tech.length === 0){
     return "Vazia!"
@@ -185,7 +185,6 @@ function techList(tech, name) {
   return list;
 }
 
-console.log(techList(lista));
 
 // Desafio 11
 function generatePhoneNumber() {
