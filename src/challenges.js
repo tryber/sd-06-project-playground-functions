@@ -107,7 +107,8 @@ function decode(expression) {
 
 // Desafio 10
 function techList(arrayTech) {
- if (arrayTech.length === 0) {
+  // seu código aqui
+  if (arrayTech.length === 0) {
     return 'Vazio!';
   }
   arrayTech.sort();
@@ -115,7 +116,7 @@ function techList(arrayTech) {
   for (let index = 0; index < arrayTech.length; index += 1) {
     objectTech.push({
       tech: arrayTech[index],
-      name: 'William',
+      name: 'Lucas',
     });
   }
   return objectTech;
