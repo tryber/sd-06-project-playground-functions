@@ -163,7 +163,7 @@ function generatePhoneNumber(arrayNumber) {
   }
   if (arrayNumber.length !== 11) {
     return "Array com tamanho incorreto.";
-  } else if (numbersRepeated >= 2) {
+  } else if (numbersRepeated > 2) {
     return "não é possível gerar um número de telefone com esses valores";
   } else {
     for (let index3 =0; index3 <arrayNumber.length; index3++) {
@@ -174,6 +174,8 @@ function generatePhoneNumber(arrayNumber) {
   }
   return phoneNumber;
 }
+let testePhone = [3, 1, 9, 9, 8, 7, 6, 6, 8, 9, 8];
+generatePhoneNumber(testePhone);
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
