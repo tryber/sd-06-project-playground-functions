@@ -60,16 +60,16 @@ function fizzBuzz(array = [2, 15, 7, 9, 45]) {
   for (let i = 0; i < array.length; i += 1) {
     let number = array[i];
     if (number % 15 === 0) {
-      out += 'fizzBuzz';
+      out.push('fizzBuzz');
     } else if (number % 5 === 0) {
-      out += 'buzz';
+      out.push('buzz');
     } else if (number % 3 === 0) {
-      out += 'fizz';
+      out.push('fizz');
     } else {
-      out += 'bug!'
+      out.push('bug!');
     }
   }
-return out;
+  return out;
 }
 fizzBuzz();
 
