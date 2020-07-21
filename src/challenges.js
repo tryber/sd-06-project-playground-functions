@@ -60,11 +60,11 @@ function catAndMouse(mouse, cat1, cat2) {
 let distanciaPrimeiro = Math.abs(mouse - cat1);
 let distanciaSegundo = Math.abs(mouse - cat2);
   if(distanciaPrimeiro < distanciaSegundo){
-    return 'cat1';
+    return 'cat2';
   } else if (distanciaSegundo === distanciaPrimeiro){
     return 'os gatos trombam e o rato foge';
   } else {
-    return 'cat2';
+    return 'cat1';
   }
 }
 
@@ -134,7 +134,8 @@ function decode(string) {
   }
 
   return newString;
-}
+}console.log(decode())
+
 // Desafio 10
 function techList() {
   // seu código aqui
@@ -142,25 +143,6 @@ function techList() {
 
 // Desafio 11
 function generatePhoneNumber(arrayDeNumeros) {
-  let cel = 0;
-  let lista = arrayDeNumeros.sort();
-  let repetidos = 0;
-  for(let i = 0; i < lista.lenght; i++){
-    if(lista[i] === lista[i-1]){
-      repetidos += 1;
-    }
-  }
-  if(arrayDeNumeros !== 11){
-    return 'tamanho incorreto';
-  } else if (repetidos > 2){
-    return 'nao e possivel gerar um numero com esses valores';
-  } else {
-    for(let j = 0; j < arrayDeNumeros.lenght; j++){
-      if(arrayDeNumeros[j]<0 || arrayDeNumeros[j>9]){
-        return 'nao e possivel geral um numero de telefone com esses valores';
-      }
-    }
-  } 
 }
   
 
