@@ -95,18 +95,19 @@ function encDec(phrase) {
   }
   return newPhrase;
 }
-  function encode(sentence) {
+function encode(sentence) {
+  // seu código aqui
   let newSentence = encDec(sentence);
   return newSentence;
 }
 function decode(expression) {
+  // seu código aqui de novo
   return encDec(expression);
 }
 
 // Desafio 10
 function techList(arrayTech) {
-  // seu código aqui
-  if (arrayTech.length === 0) {
+ if (arrayTech.length === 0) {
     return 'Vazio!';
   }
   arrayTech.sort();
