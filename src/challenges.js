@@ -149,8 +149,14 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let somente_numeros = string.replace(/\D+/g, "");
+  let soma = 0;
+  for (i = 0; i < somente_numeros.length; i += 1){
+      soma += parseInt(somente_numeros[i]);
+  }
+  soma += " copos de água"
+  return soma;
 }
 
 
