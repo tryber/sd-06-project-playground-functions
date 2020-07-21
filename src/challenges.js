@@ -124,14 +124,14 @@ function decode(words) {
 function techList(technologies, name) {
   let results;
   if (technologies.length === 0) {
-    result = 'Vazio!';
+    results = 'Vazio!';
   } else {
     let objects = [];
     technologies.sort();
     for (let i = 0; i < technologies.length; i += 1) {
-      objects.push({tech: technologies[i], name: name});
+      objects.push({ tech: technologies[i], name: name });
     }
-    result = objects;
+    results = objects;
   }
   return results;
 }
@@ -141,26 +141,26 @@ function generatePhoneNumber(numeros) {
   let impossivel = null;
   let result;
   for (let i = 0; i < numeros.length; i += 1) {
-      let repeticoes = 0;
-      for (let j = 0; j < numeros.length; j += 1) {
-          if (numeros[i] === numeros[j]) {
-              repeticoes += 1;
-          }
-      }
-      if (repeticoes >= 3 || numeros[i] < 0 || numeros[i] > 9) {
-          impossivel = 'não é possível gerar um número de telefone com esses valores';
-      }
+    let repeticoes = 0;
+    for (let j = 0; j < numeros.length; j += 1) {
+        if (numeros[i] === numeros[j]) {
+          repeticoes += 1;
+        }
+    }
+    if (repeticoes >= 3 || numeros[i] < 0 || numeros[i] > 9) {
+      impossivel = 'não é possível gerar um número de telefone com esses valores';
+    }
   }
   if (numeros.length != 11) {
-      impossivel = 'Array com tamanho incorreto.';
+    impossivel = 'Array com tamanho incorreto.';
   }
   if (impossivel != null) {
-      result = impossivel;
+    result = impossivel;
   } else {
-      numeros.splice(7,0,'-');
-      numeros.splice(2,0,') ');
-      numeros.splice(0,0,'(');
-      result = numeros.join('');
+    numeros.splice(7,0,'-');
+    numeros.splice(2,0,') ');
+    numeros.splice(0,0,'(');
+    result = numeros.join('');
   }
   return result;
 }
