@@ -91,7 +91,7 @@ function encode(words) {
     u: '5',
   };
   for (let k = 0; k < words.length; k += 1) {
-    for (key in letters) {
+    for (let key in letters) {
       if (key === words[k]) {
         words[k] = letters[words[k]]
       }
@@ -121,8 +121,13 @@ function decode(words) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technologies, name) {
+  let objects = [];
+  technologies.sort();
+  for (let i = 0; i < technologies.length; i += 1){
+      objects.push({tech:technologies[i], name:name});
+  }
+  return objects;
 }
 
 // Desafio 11
