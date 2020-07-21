@@ -22,7 +22,7 @@ function splitSentence(string) {
     if (string[i] !== " "){
       word += string[i];
     }
-    else if (string[i == " "){
+    else if (string[i] == " "){
       stringArray.push(word);
       word = "";
     }
@@ -102,14 +102,12 @@ function techList() {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-let isValidNumber = array.lenght
+let isValidNumber = [];
   if (array.length !== 11){
   return "Array de tamnanho incorreto"
-  let ddArray = [];
+
+  let dddArray = [];
 for (let index = 0; index <=10; index +=1){
-
-
-}
 
 let firstPart = [];
 for (let index = 2; index <=6; index +=1){
@@ -119,6 +117,7 @@ for (let index = 2; index <=6; index +=1){
 let secondPart = [];
 for (let index = 7; index <=10; index +=1){
   secondPart.push(array[index]);
+}
 }
 
 let dddFormated = dddArray.join("");
