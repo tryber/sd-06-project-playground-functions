@@ -49,8 +49,7 @@ function splitSentence(myText) {
 // ---------------- Desafio 4
 
 function concatName(myName) {
-  let nameConcat = myName[myName.length - 1];
-  nameConcat += ", " + myName[0];
+  let nameConcat = '${myName[myName.length - 1]}, ${myName[0]}';
   return nameConcat;
 }
 // let name = ['Ricardo', 'Alexandre', 'de', 'Souza', 'Ribeiro']
@@ -285,7 +284,7 @@ function hydrate(myText) {
   if (sumNumbers === 1) {
     result = '1 copo de água';
   } else {
-    result = sumNumbers + " copos de água";
+    result = '${sumNumbers} copos de água';
   }
   return result;
 }
