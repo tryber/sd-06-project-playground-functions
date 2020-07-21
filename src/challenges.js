@@ -143,23 +143,23 @@ function generatePhoneNumber(numeros) {
   for (let i = 0; i < numeros.length; i += 1) {
     let repeticoes = 0;
     for (let j = 0; j < numeros.length; j += 1) {
-        if (numeros[i] === numeros[j]) {
-          repeticoes += 1;
-        }
+      if (numeros[i] === numeros[j]) {
+        repeticoes += 1;
+      }
     }
     if (repeticoes >= 3 || numeros[i] < 0 || numeros[i] > 9) {
       impossivel = 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  if (numeros.length != 11) {
+  if (numeros.length !== 11) {
     impossivel = 'Array com tamanho incorreto.';
   }
   if (impossivel != null) {
     result = impossivel;
   } else {
-    numeros.splice(7,0,'-');
-    numeros.splice(2,0,') ');
-    numeros.splice(0,0,'(');
+    numeros.splice(7, 0, '-');
+    numeros.splice(2, 0, ') ');
+    numeros.splice(0, 0, '(');
     result = numeros.join('');
   }
   return result;
@@ -178,8 +178,8 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   let somenteNumeros = string.replace(/\D+/g, '');
   let soma = 0;
-  for (i = 0; i < somenteNumeros.length; i += 1) {
-      soma += parseInt(somenteNumeros[i]);
+  for (let i = 0; i < somenteNumeros.length; i += 1) {
+    soma += parseInt(somenteNumeros[i], 10);
   }
   if (soma === 1) {
     soma += ' copo de água';
