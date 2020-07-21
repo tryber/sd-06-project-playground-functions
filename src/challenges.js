@@ -129,9 +129,6 @@ function techList(tecno, name) {
 function confereNumber(number) {
   let cont = 0;
   for (let i = 0; i < number.length; i += 1) {
-    if (number[i] < 0 || number[i] > 9) {
-      return true;
-    }
     for (let l = 0; l < number.length; l += 1) {
       if (number[i] === number[l]) {
         cont += 1;
@@ -144,18 +141,20 @@ function confereNumber(number) {
   }
 }
 function generatePhoneNumber(number) {
-  let cont = 0;
   let numberFormat = '';
   if (number.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else
-  if(confereNumber(number)){
+  if (confereNumber(number)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   number.splice(0, 0, '(');
   number.splice(3, 0, ') ');
   number.splice(9, 0, '-');
-  for(let index = 0; index < number.length; index += 1){
+  for (let index = 0; index < number.length; index += 1) {
+    if (number[index] < 0 || number[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
     numberFormat += number[index];
   }
   return numberFormat;
