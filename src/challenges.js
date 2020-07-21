@@ -21,11 +21,11 @@ let strArray = [];
 let novoArray = "";
 
 for (let i = 0; i <= input.length; i += 1) {
-  if (separador[i] == ' ' || i == separador.length) {
+  if (separador[i] === ' ' || i === separador.length) {
     strArray.push(novoArray);
     novoArray = "";
   } else {
-    newWord += input[i];
+    novoArray += separador[i];  
   }
 }
 return strArray;
@@ -72,7 +72,7 @@ let distanciaSegundo = mouse - cat2;
 function fizzBuzz(numerosArray) {
   // seu código aqui
   let strArray = [];
-  for (i=0; i<numerosArray.lenght; i+=1)
+  for (i=0; i < numerosArray.lenght; i += 1){
     if((numerosArray[i] % 3 === 0) && (numerosArray[i]% 5 === 0)){
       strArray.push = ("fizzBuz")
     } else if ((numerosArray[i] % 3 === 0) && (numerosArray[i]% 5 !== 0)){
@@ -83,6 +83,7 @@ function fizzBuzz(numerosArray) {
       strArray.push = ("bug!")
     }
     return strArray;
+  }
 }
 
 // Desafio 9
