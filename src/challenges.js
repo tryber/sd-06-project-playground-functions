@@ -18,12 +18,12 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(separador) {
 let strArray = [];
-let novoArray = "";
+let novoArray = '';
 
 for (let i = 0; i <= input.length; i += 1) {
-  if (separador[i] === " " || i === separador.length) {
+  if (separador[i] === ' ' || i === separador.length) {
     strArray.push(novoArray);
-    novoArray = "";
+    novoArray = '';
   } else {
     novoArray += separador[i];  
   }
@@ -57,16 +57,17 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let distanciaPrimeiro = mouse - cat1;
-let distanciaSegundo = mouse - cat2;
+let distanciaPrimeiro = Math.abs(mouse - cat1);
+let distanciaSegundo = Math.abs(mouse - cat2);
   if(distanciaPrimeiro < distanciaSegundo){
-    return "cat1";
+    return 'cat1';
   } else if (distanciaSegundo === distanciaPrimeiro){
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else {
-    return "cat2";
+    return 'cat2';
   }
 }
+
 
 // Desafio 8
 
@@ -76,26 +77,64 @@ function fizzBuzz(numerosArray) {
 
   for (let i = 0; i < numerosArray.length; i += 1) {
     if (numerosArray[i] % 15 === 0){
-      strArray.push("fizzBuzz");
+      strArray.push('fizzBuzz');
     } else if (numerosArray[i] % 3 === 0) {
-      strArray.push("fizz");
+      strArray.push('fizz');
     } else if (numerosArray[i] % 5 === 0) {
-      strArray.push("buzz");
+      strArray.push('buzz');
     } else {
-      strArray.push("bug!");
+      strArray.push('bug!');
     }
   }
   return strArray;
 } console.log(fizzBuzz([2, 8, 15, 90, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(string) {
+// seu código aqui 
+  let newString = '';
+
+  for (let char in string) {
+    if (string[char] === 'a') {
+      newString += '1';
+    } else if (string[char] === 'e') {
+      newString += '2';
+    } else if (string[char] === 'i') {
+      newString += '3';
+    } else if (string[char] === 'o') {
+      newString += '4';
+    } else if (string[char] === 'u') {
+      newString += '5';
+    } else {
+      newString += string[char];
+    }
+  }
+
+  return newString;
 }
 
+function decode(string) {
+// seu código aqui 
+  let newString = '';
+
+  for (let char in string) {
+    if (string[char] === '1') {
+      newString += 'a';
+    } else if (string[char] === '2') {
+      newString += 'e';
+    } else if (string[char] === '3') {
+      newString += 'i';
+    } else if (string[char] === '4') {
+      newString += 'o';
+    } else if (string[char] === '5') {
+      newString += 'u';
+    } else {
+      newString += string[char];
+    }
+  }
+
+  return newString;
+}
 // Desafio 10
 function techList() {
   // seu código aqui
@@ -112,13 +151,13 @@ function generatePhoneNumber(arrayDeNumeros) {
     }
   }
   if(arrayDeNumeros !== 11){
-    return "tamanho incorreto";
+    return 'tamanho incorreto';
   } else if (repetidos > 2){
-    return "nao e possivel gerar um numero com esses valores";
+    return 'nao e possivel gerar um numero com esses valores';
   } else {
     for(let j = 0; j < arrayDeNumeros.lenght; j++){
       if(arrayDeNumeros[j]<0 || arrayDeNumeros[j>9]){
-        return "nao e possivel geral um numero de telefone com esses valores";
+        return 'nao e possivel geral um numero de telefone com esses valores';
       }
     }
   } 
@@ -152,3 +191,4 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
