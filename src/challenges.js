@@ -118,8 +118,17 @@ function decode(deWord) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  tech.sort();
+  techLearnsList = [];
+  for (let index in tech) {
+    let techLearn = {
+      tech: tech[index],
+      name: name
+    }
+    techLearnsList.push(techLearn);
+  }
+  return techLearnsList;
 }
 
 // Desafio 11
