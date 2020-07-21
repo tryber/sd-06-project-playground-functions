@@ -120,13 +120,16 @@ function decode(deWord) {
 // Desafio 10
 function techList(tech, name) {
   tech.sort();
-  techLearnsList = [];
+  let techLearnsList = [];
   for (let index in tech) {
     let techLearn = {
       tech: tech[index],
-      name: name
+      name: name,
     }
     techLearnsList.push(techLearn);
+  }
+  if (tech.length === 0) {
+    return 'Vazio!';
   }
   return techLearnsList;
 }
