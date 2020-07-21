@@ -37,24 +37,25 @@ function footballPoints(wins, ties) {
 array = [9, 1, 2, 3, 9, 5, 7]
 
 let numMaior = 0;
-for (index = 0; index < array.length; index += 1){
-  console.log(array[index])
-     if (array[index] >= numMaior) {
-      numMaior = array[index]
-    }
-  }
-  let count = 0;
+let count = 0;
 function highestCount(arrayPassado) {
+  for (index = 0; index < array.length; index += 1){
+       if (array[index] >= numMaior) {
+        numMaior = array[index]
+      }
+    }
   for (i = 0; i < arrayPassado.length; i += 1){
     if (arrayPassado[i] === numMaior) {
     count += 1;
-    return count;
+    
+   
     }
-  }
+  } return count;
+  
 }
 
 
-
+highestCount(array)
 
 
 // Desafio 7
