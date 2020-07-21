@@ -129,9 +129,9 @@ function techList(technologies, name) {
     let objects = [];
     technologies.sort();
     for (let i = 0; i < technologies.length; i += 1) {
-      objects.push({ 
+      objects.push({
         tech: technologies[i],
-        name: name,
+        name: name
       });
     }
     results = objects;
