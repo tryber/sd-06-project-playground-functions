@@ -137,19 +137,22 @@ console.log(decode("h2ll4"));
 // Desafio 10
 function techList(array, name) {
     let objeto = {};
-//let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
     let arrayTwo = array.sort();
     let arrayThree = [];
     
-    //for (let i in arrayTwo) {
+    if (array.length === 0) {
+      return "Vazio!";
+    } else {
     for (let index = 0; index < arrayTwo.length; index += 1) {
     objeto.tech = arrayTwo[index];
     objeto.name = name;
     arrayThree.push(objeto);    
     objeto = {};    
-   } 
-return arrayThree;
+    }
+    return arrayThree;
+  }
 }
+
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Fabi"));
 
 // Desafio 11
@@ -179,7 +182,7 @@ if (array.length > 11 || array.length < 11) {
     }
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
