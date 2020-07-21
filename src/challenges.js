@@ -185,9 +185,7 @@ function generatePhoneNumber(arrayNumber) {
   return numeroTelefoneCompleto;
   }
 
-arrayNumber = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 0];
-console.log(verificandoSeRepete(arrayNumber));
-
+  
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
