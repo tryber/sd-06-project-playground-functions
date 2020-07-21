@@ -129,7 +129,10 @@ function techList(technologies, name) {
     let objects = [];
     technologies.sort();
     for (let i = 0; i < technologies.length; i += 1) {
-      objects.push({ tech: technologies[i], name: name });
+      objects.push({ 
+        tech: technologies[i],
+        name: name,
+      });
     }
     results = objects;
   }
@@ -168,7 +171,10 @@ function generatePhoneNumber(numeros) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let response = false;
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC) && lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC) && lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) {
+  let compare1 = lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC);
+  let compare2 = lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC);
+  let compare3 = lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA);
+  if (compare1 && compare2 && compare3) {
     response = true;
   }
   return response;
