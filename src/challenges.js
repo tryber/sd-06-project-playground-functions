@@ -1,8 +1,10 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
-  if ((boolean1) && (boolean2)) {
+  if ((boolean1) === (boolean2)) {
     return true;
-  } 
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -42,7 +44,7 @@ function fizzBuzz(args) {
       console.log('fizzBuzz');
     } else if ((args[index] % 3 !== 0) && (args[index] % 5 !== 0)) {
       console.log('bug!');
-    } else if (args[index] % 3 === 0){
+    } else if (args[index] % 3 === 0) {
       console.log('fizz');
     } else {
       console.log('buzz');
