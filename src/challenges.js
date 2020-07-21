@@ -56,15 +56,22 @@ function catAndMouse(mouse = 10, cat1 = 5, cat2 = 15) {
 
 // Desafio 8
 function fizzBuzz(array = [2, 15, 7, 9, 45]) {
+  let output = [];
   for (let i = 0; i < array.length; i += 1) {
-    let n = array[i];
-    if (n % 15 === 0) {return 'fizzBuzz'}
-    if (n % 5 === 0) {return 'Buzz'}
-    if (n % 3 === 0) {return 'fizz'}
-    return 'bug!';
+    let number = array[i];
+    if (number % 15 === 0) {
+      output.push('fizzBuzz');
+    } else if (number % 3 === 0) {
+      output.push('fizz');
+    } else if (number % 5 === 0) {
+      output.push('buzz');
+    } else {
+    output.push('bug!')
+    }
   }
+  return output;
 }
-fizzBuzz();
+
 // Desafio 9
 function encode(a = 'hi there, this is your new house') {
   let code = { a: '1', e: '2', i: '3', o: '4', u: '5' };
