@@ -122,12 +122,16 @@ function decode(words) {
 
 // Desafio 10
 function techList(technologies, name) {
-  let objects = [];
-  technologies.sort();
-  for (let i = 0; i < technologies.length; i += 1){
-      objects.push({tech:technologies[i], name:name});
+  if (technologies.length === 0) {
+      return "Vazio!";
+  } else {       
+      let objects = [];
+      technologies.sort();
+      for (let i = 0; i < technologies.length; i += 1){
+          objects.push({tech:technologies[i], name:name});
+      }
+      return objects;
   }
-  return objects;
 }
 
 // Desafio 11
