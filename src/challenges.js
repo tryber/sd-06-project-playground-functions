@@ -104,8 +104,16 @@ function decode(entrada) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let listaDeTecs = [];
+  let arrayTecs = [...array].sort();
+  if (array.length <= 0) {
+    return "Vazio!"
+  }
+  for (let i in arrayTecs) {
+    listaDeTecs[i] = {tech: arrayTecs[i], nome: name};
+  }
+  return listaDeTecs;
 }
 
 // Desafio 11
