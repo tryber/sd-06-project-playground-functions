@@ -113,7 +113,7 @@ function fizzBuzz(array) {
       retornoArray.push("buzz")
 
     } else if ((array[i] % 3) === 0) {
-      retornoArray.push("fizz")
+      retornoArray.push("fizz") 
 
     } else {
       retornoArray.push("bug!");
