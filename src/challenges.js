@@ -53,63 +53,64 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function analizaNumArray(number) {
+  let num3;
+  let num5;
+  num3 = number % 3 === 0;
+  num5 = number % 5 === 0;
+  if (num3 && num5) {
+    return 'fizzBuzz';
+  } else if (num3) {
+    return 'fizz';
+  } else if (num5) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(array) {
   let newArray = [];
-  for (let num in array) {
-    if (array[num] % 3 === 0 && array[num] % 5 === 0) {
-      newArray.push('fizzBuzz');
-    } else if ((array[num] % 3) === 0) {
-      newArray.push('fizz');
-    } else if (array[num] % 5 === 0) {
-      newArray.push('buzz');
-    } else {
-      newArray.push('bug!');
-    }
+  for (let num = 0; num < array.length; num += 1) {
+    newArray.push(analizaNumArray(array[num]));
   }
   return newArray;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode(string) {
-  let string2 = '';
-  for (let indice in string) {
-    if (string[indice] === 'a') {
-      string2 += '1';
-    } else if (string[indice] === 'e') {
-      string2 += '2';
-    } else if (string[indice] === 'i') {
-      string2 += '3';
-    } else if (string[indice] === 'o') {
-      string2 += '4';
-    } else if (string[indice] === 'u') {
-      string2 += '5';
-    } else {
-      string2 += string[indice];
-    }
-  }
-  return string2;
-}
-
-function decode(codestring) {
-  let newString = '';
-  for (let i in codestring) {
-    if (codestring[i] === '1') {
-      newString += 'a';
-    } else if (codestring[i] === '2') {
-      newString += 'e';
-    } else if (codestring[i] === '3') {
-      newString += 'i';
-    } else if (codestring[i] === '4') {
-      newString += 'o';
-    } else if (codestring[i] === '5') {
-      newString += 'u';
-    } else {
-      newString += codestring[i];
+function decodeEencode(string) {
+  let newString = [];
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case 'a': newString.push('1'); break;
+      case 'e': newString.push('2'); break;
+      case 'i': newString.push('3'); break;
+      case 'o': newString.push('4'); break;
+      case 'u': newString.push('5'); break;
+      case '1': newString.push('a'); break;
+      case '2': newString.push('e'); break;
+      case '3': newString.push('i'); break;
+      case '4': newString.push('o'); break;
+      case '5': newString.push('u'); break;
+      default: newString.push(string[i]);
     }
   }
   return newString;
 }
 
+function encode(string) {
+  let code = decodeEencode(string).toString().replace(/,/g, '');
+  return code;
+}
+
+function decode(codestring) {
+  let code = decodeEencode(codestring).toString().replace(/,/g, '');
+  return code;
+}
+
+// let code = encode('hi there!');
+// console.log(code);
+// console.log(decode(code));
 // Desafio 10
 function techList(tec, name) {
   let object = [];
@@ -149,6 +150,8 @@ function generatePhoneNumber(numbers) {
       }
     }
   }
+  // let numbers2 = numbers.toString();
+  // numbers2 = numbers2.replace(/,/gi, '');
   return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
 }
 
@@ -199,4 +202,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
