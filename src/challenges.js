@@ -19,24 +19,21 @@ function calcArea(base, height) {
 function splitSentence(strSplit, separador) {
   // seu código aqui
 let strArray = strSplit.split(separador)
-console.log(strArray.join(', '));
+return (strArray.join(', '));
 }
-let minhaString = "faz funcionar essa porcaria de codigo"  
-let space = " "
 
-splitSentence(minhaString, space)
 
 
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
-  let string = ["jucielei, Roberto, Juliano"];
-  let f=0;
-  let l=string[string.lenght-1];
-  console.log("primeiro item e: "+f );
-  console.log("ultimo elemento: "+l);
-}
+ let s= ["primeiro", "feiticeiro", "celeiro", "terceiro", "janeiro"];
+ let f=s[0];  
+ let l=s[s.length-1];
+ 
+ console.log("First element is "+ f);  
+ console.log(" Last element is "+ l);  
+}concatName()
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -147,3 +144,14 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
+
+function Gfg() {  
+  let s= ["Geeks", "for", "geeks", "computer", "science"];
+ let f=s[0];  
+
+ let l=s[s.length-1];  
+
+ console.log("First element is "+ f);  
+ console.log("<br> Last element is "+ l);  
+ }  
+Gfg();
