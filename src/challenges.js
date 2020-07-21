@@ -69,22 +69,24 @@ let distanciaSegundo = mouse - cat2;
 }
 
 // Desafio 8
+
 function fizzBuzz(numerosArray) {
-  // seu código aqui
+  // seu código aqui 
   let strArray = [];
-  
-  for (i=0; i < numerosArray.lenght; i += 1){
-    if(numerosArray[i] % 3 === 0 && numerosArray[i]% 5 === 0){
-      strArray.push("fizzBuz");
-    } else if (numerosArray[i] % 3 === 0){
-    strArray.push("fizz");
-    } else if (numerosArray[i]% 5 === 0){
-      strArray.push("buzz");
+
+  for (let i = 0; i < numerosArray.length; i += 1) {
+    if (numerosArray[i] % 3 === 0 && numerosArray[i] % 5 === 0) {
+      strArray.push('fizzBuzz');
+    } else if (numerosArray[i] % 3 === 0) {
+      strArray.push('fizz');
+    } else if (numerosArray[i] % 5 === 0) {
+      strArray.push('buzz');
     } else {
-      strArray.push("bug!");
+      strArray.push('bug!');
     }
-    return strArray;
   }
+
+  return strArray;
 }
 
 // Desafio 9
