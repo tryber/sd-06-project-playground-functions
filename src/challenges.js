@@ -111,7 +111,7 @@ function decode(strMsg) {
 // Desafio 10
 function techList(tech, name) {
   let res;
-  if (tech == '') {
+  if (tech == []) {
     res = 'Vazio!';
   } else {
     res = [];
