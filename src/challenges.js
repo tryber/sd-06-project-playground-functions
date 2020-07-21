@@ -171,35 +171,38 @@ function techList(techs, name) {
 function generatePhoneNumber(number) {
     let acumulador = 0;
     let odcc = 0;
-  for(let i = 0; i < number.length; i += 1){
-    if(number[i] === acumulador ){
-     odcc++; 
-    }else{
-      acumulador = number[i];
-    }
-  }
-
-   if(odcc >= 3){
-      return "não é possível gerar um número de telefone com esses valores";
-    }else{
-      return odcc;
-    }
   let numStr = number.join("");
   let ddd = numStr.split("", 2).join("");
   let num1 = numStr.slice(2,7);
   let num2 = numStr.slice(7,11);
   let nFinal = "(" + ddd + ")" + " " + num1 + "-" + num2;
+  
+  
+  for(let i = 0; i < number.length; i += 1){
+    if(number[i] == acumulador ){
+     odcc++; 
+    }else{
+      acumulador = number[i];
+    }
+  }
+   if(odcc > 3){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
 
-
-
-  if(number.length > 11 || number.length < 11 ){
+ for(let i = 0; i < number.length; i += 1){
+    if(number[i] < 0 || number[i] > 9){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }
+  
+  if(number.length !== 11 ){
     return "Array com tamanho incorreto."
   }
   else{
     return nFinal;
   }
 }
-console.log(generatePhoneNumber([1,1,9,5,7,7,4,3,8,2,6]))
+console.log(generatePhoneNumber([1,1,9,5,7,7,3,3,8,2,6]))
 
 // Desafio 12
 function triangleCheck() {
