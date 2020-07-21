@@ -83,8 +83,6 @@ function fizzBuzz(arr) {
   return result;
 }
 
-
-
 // Desafio 9
 function encode(toEncode) {
   let encoded = [];
@@ -162,7 +160,7 @@ function generatePhoneNumber(numbers) {
     }
     nextIndex += 1;
   }
-  return invalidNumbers === true ? 'não é possível gerar um número de telefone com esses valores': `${result.replace(/,/g, '')};`
+  return invalidNumbers === true ? 'não é possível gerar um número de telefone com esses valores' : `${result.replace(/,/g, '')};`
 }
 
 // Desafio 12
@@ -189,7 +187,6 @@ function hydrate(str) {
   }
   return `${count} copo de água`
 }
-
 
 module.exports = {
   calcArea,
