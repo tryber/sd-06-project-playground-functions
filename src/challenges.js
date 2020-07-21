@@ -160,7 +160,7 @@ function generatePhoneNumber(numbers) {
     }
     nextIndex += 1;
   }
-  return invalidNumbers === true ? 'não é possível gerar um número de telefone com esses valores' : `${result.replace(/,/g, '')};`
+  return invalidNumbers === true ? 'não é possível gerar um número de telefone com esses valores' : `${result.replace(/,/g, '')}`;
 }
 
 // Desafio 12
