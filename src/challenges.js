@@ -32,7 +32,7 @@ function splitSentence(stringDesafio3) {
 }
 
 // console.log('<---- Desafio 3 ---->');
-// console.log(splitSentence('Me dê papai'));
+console.log(splitSentence('Me dê papai'));
 
 
 // Desafio 4
@@ -180,20 +180,7 @@ function techList() {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // let n01 = phone[0]
-  // let n02 = phone[1]
-  // let n03 = phone[2]
-  // let n04 = phone[3]
-  // let n05 = phone[4]
-  // let n06 = phone[5]
-  // let n07 = phone[6]
-  // let n08 = phone[7]
-  // let n09 = phone[8]
-  // let n10 = phone[9]
-  // let n11 = phone[10]
-  // let n12 = phone[11]
-  // let nDdd = ('('n01 + n02')' 
-  // return ('(' + n01 + n02 + ')' + ' ' + n01 + n02 + n03 + n04 + n05 + n06 + n07 + n08 + n09 + n10);
+
 }
 
 // console.log([7, 7, 9, 9, 9, 3, 0, 4, 7, 5, 1])
@@ -203,25 +190,21 @@ function generatePhoneNumber() {
 // função chamada triangleCheck que deverá receber as três linhas como
 // parâmetro e retornar se é possível formar um triângulo com os valores
 // apresentados de cada linha
-function triangleCheck(arrayTriangle) {
-  let lineA = arrayTriangle[0];
-  let lineB = arrayTriangle[1];
-  let lineC = arrayTriangle[2];
-  let sideModA = Math.abs(lineB - lineC);
-  let sideModB = Math.abs(lineA - lineC);
-  let sideModC = Math.abs(lineA - lineB);
-  let sideA = lineB + lineC;
-  let sideB = lineA + lineC;
-  let sideC = lineA + lineB;
+function triangleCheck(lineA, lineB, lineC) {
+  let mdA = Math.abs(lineB - lineC);
+  let mdB = Math.abs(lineA - lineC);
+  let mdC = Math.abs(lineA - lineB);
+  let sdA = lineB + lineC;
+  let sdB = lineA + lineC;
+  let sdC = lineA + lineB;
 
-  if ( sideModA < lineA && sideA > lineA && sideModB < lineB && sideB > lineB && sideModC < lineC && sideC > lineC) {
+  if (mdA < lineA && sdA > lineA && mdB < lineB && sdB > lineB && mdC < lineC && sdC > lineC) {
     return true;
-  } else {
-    return false;}
+  } return false;
 }
 
 // console.log('<---- Desafio 12 ---->');
-// console.log(triangleCheck([10, 14, 8]))
+// console.log(triangleCheck(16, 20, 30))
 
 // Desafio 13
 function hydrate() {
