@@ -141,14 +141,66 @@ function decode(string) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let list = [];
+  let listNew = tech.sort();
+  if (tech.length === 0) {
+    return "Vazio!"
+  } else {
+    for (let i = 0; i < listNew.length; i += 1) {
+      list[i] = {
+        tech: listNew[i],
+        name: name,
+      }
+    }
+  }
+  return list;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+
+// Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
+// Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
+// Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto.".
+// Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
+
+function generatePhoneNumber(array) {
+  let isPhone = array.length !== 11;
+  if (isPhone) {
+    return "Array com tamanho incorreto";
+  }
+
+  for (let position = 0; position <= array.length; position += 1) {
+    if (array[position] < 0 && array[position] > 9) {
+      return "não é possivel gerar um número de telefone com esses valores";
+    }
+  }
+
+  let ddd = [];
+  for (let index = 0; index <= 1; index += 1) {
+    ddd.push(array[index]);
+  }
+
+  let firstNumbers = [];
+  for (let indexFirst = 2; indexFirst <= 6; indexFirst += 1) {
+    firstNumbers.push(array[indexFirst]);
+  }
+
+  let secondNumbers = [];
+  for (let indexSecond = 7; indexSecond <= 10; indexSecond += 1) {
+    secondNumbers.push(array[indexSecond]);
+  }
+
+  let dddFormatted = ddd.join("");
+  let firstNumbersFormatted = firstNumbers.join("");
+  let secondNumbersFormatted = secondNumbers.join("");
+  let formattedNumber = "(" + dddFormatted + ") " + firstNumbersFormatted + "-" + secondNumbersFormatted;
+
+  return formattedNumber;
 }
+let telephoneNumber = [1, 1, 9, 9, 9, 9, 9, 0, 0, 0, 0];
+console.log(generatePhoneNumber(telephoneNumber));
+
 
 // Desafio 12
 function triangleCheck() {
