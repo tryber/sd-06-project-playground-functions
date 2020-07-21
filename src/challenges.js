@@ -53,7 +53,7 @@ let arrayNumeros = [8, 9, 3, 4, 11, 10, 11];
 function highestCount(meuNumero) {
   let maiorNumero = 0;
   let contador = 0;
-  //for p/ saber qual o maior n°
+//for p/ saber qual o maior n°
   for(let i = 0; i < meuNumero.length; i += 1) { 
     if(maiorNumero <= meuNumero[i]) {
       maiorNumero = meuNumero[i];
@@ -73,9 +73,26 @@ function highestCount(meuNumero) {
  
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+let rato = 10;
+let gato1 = 2;
+let gato2 = 1;
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaGato1 = mouse - cat1; //9
+  let distanciaGato2 = mouse - cat2; //8
+  if(distanciaGato1 > distanciaGato2) {
+    console.log("cat2")
+    return cat2;
+  
+  } else if (distanciaGato2 > distanciaGato1) {
+    console.log("cat1")
+    return cat1;
+
+  } else {
+    console.log("os gatos trombam e o rato foge");
+    return('os gatos trombam e o rato foge');
+  }
+  }
+  catAndMouse(rato, gato1, gato2);
 
 // Desafio 8
 function fizzBuzz() {
