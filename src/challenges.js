@@ -75,13 +75,13 @@ function fizzBuzz(numerosArray) {
   
   for (i=0; i < numerosArray.lenght; i += 1){
     if(numerosArray[i] % 3 === 0 && numerosArray[i]% 5 === 0){
-      strArray.push = ("fizzBuz");
+      strArray.push("fizzBuz");
     } else if (numerosArray[i] % 3 === 0){
-    strArray.push = ("fizz");
+    strArray.push("fizz");
     } else if (numerosArray[i]% 5 === 0){
-      strArray.push = ("buzz");
+      strArray.push("buzz");
     } else {
-      strArray.push = ("bug!");
+      strArray.push("bug!");
     }
     return strArray;
   }
