@@ -7,7 +7,6 @@ function compareTrue(value1, value2) {
     return false
   }
 }
-console.log(compareTrue(true,true))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -30,7 +29,6 @@ function splitSentence(string) {
   stringArray.push(word);
   return stringArray;
 }
-console.log(splitSentence(stringArray = "go trybe"));
 
 
 // Desafio 4
@@ -76,7 +74,6 @@ let distCat2 = mouse - cat2;
     return "cat2";
    }
 }
-console.log(catAndMouse(10,6,6))
 
 // Desafio 8
 function fizzBuzz(arrayNumber) {
