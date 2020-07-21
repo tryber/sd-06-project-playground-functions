@@ -1,10 +1,6 @@
 // Desafio 1
-function compareTrue( valor1, valor2 ) {
-  valor1 = 10
-  valor2 = 15
-  if ( valor1 && valor2 ) {
-    return true 
-  } else { return false }
+function compareTrue( Valor1 , valor2 ) {
+  return valor1 && valor2
 }
 
 // Desafio 2
@@ -15,12 +11,14 @@ function calcArea( base, heigth ) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(" G0 Trybe " ) {
+  resultado = splitSentence.split ("")
+  splitSentence.push
+  console.log(resultado)// seu código aqui
 }
 
 // Desafio 4
-function concatName() {
+function concatName(["Olá mundo"]) {
   // seu código aqui
 }
 
