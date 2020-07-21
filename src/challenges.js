@@ -137,33 +137,30 @@ function techList(technologies, name) {
 // Desafio 11
 function generatePhoneNumber(numeros) {
   let impossivel = null;
-  let repeticoes = 0;
+  let result;
   for (i = 0; i < numeros.length; i += 1){
-      repeticoes = 0;
+      let repeticoes = 0;
       for (j = 0; j < numeros.length; j += 1){
           if (numeros[i] === numeros[j]){
               repeticoes += 1;
           }
       }
-      if (repeticoes >= 3){
-          impossivel = "não é possível gerar um número de telefone com esses valores";
-      }
-      if (numeros[i] < 0 || numeros[i] > 9){
-          impossivel = "não é possível gerar um número de telefone com esses valores";
+      if (repeticoes >= 3 || numeros[i] < 0 || numeros[i] > 9){
+          impossivel = 'não é possível gerar um número de telefone com esses valores';
       }
   }
   if (numeros.length != 11){
-      impossivel = "Array com tamanho incorreto.";
+      impossivel = 'Array com tamanho incorreto.';
   }
   if (impossivel != null){
-      return impossivel;
+      result = impossivel;
   } else {
-      numeros.splice(7,0,"-");
-      numeros.splice(2,0,") ");
-      numeros.splice(0,0,"(");
-      let telefone = numeros.join("");
-      return telefone;
+      numeros.splice(7,0,'-');
+      numeros.splice(2,0,') ');
+      numeros.splice(0,0,'(');
+      result = numeros.join('');
   }
+  return result;
 }
 
 // Desafio 12
