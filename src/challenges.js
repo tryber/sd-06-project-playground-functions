@@ -44,7 +44,11 @@ function highestCount(numArray) {
 
   let counter = 0;
   for (let i = 0; i < numArray.length; i += 1) {
-    (numArray[i] === greater) ? counter += 1 : counter = counter;
+    if (numArray[i] === greater) {
+      counter += 1;
+    } else {
+      counter = counter;
+    }
   }
   return counter;
 }
@@ -107,7 +111,7 @@ function decode(strMsg) {
 // Desafio 10
 function techList(tech, name) {
   let res;
-  if (tech === '') {
+  if (tech == '') {
     res = 'Vazio!';
   } else {
     res = [];
@@ -124,14 +128,16 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(numbersArray) {
+  let phone = '';
   if (numbersArray.length !== 11) {
-    return 'Array com tamanho incorreto.';
+    phone = 'Array com tamanho incorreto.';
   } else {
-    let phone = '';
     let i = 0;
-    while (i < numbersArray.length) {
+    let stopSinal = 0;
+    while (i < numbersArray.length && stopSinal != 1) {
       if (numbersArray[i] < 0 || numbersArray[i] > 9) {
-        return 'não é possível gerar um número de telefone com esses valores';
+        phone = 'não é possível gerar um número de telefone com esses valores';
+        stopSinal = 1;
       } else {
         let hits = 0;
         let ii = 0;
@@ -139,8 +145,8 @@ function generatePhoneNumber(numbersArray) {
           if (numbersArray[ii] - numbersArray[i] === 0) {
             hits += 1;
             if (hits > 2) {
-              return 'não é possível gerar um número de telefone com esses valores';
-              break;
+              phone = 'não é possível gerar um número de telefone com esses valores';
+              stopSinal = 1;
             }
           }
         ii += 1;
