@@ -183,6 +183,7 @@ function generatePhoneNumber(number) {
   // seu código aqui
   if (number.length === 11) {
     let maxNumberCount = 0;
+    let newNumber = [];
     for (let i in number) {
       let numberTest = number[i];
       let numberCount = 0;
@@ -195,10 +196,8 @@ function generatePhoneNumber(number) {
       if (numberCount > maxNumberCount) {
         maxNumberCount = numberCount;
       }
-      if (number[i] >= 0 && number[i] <= 9 && maxNumberCount < 3) {
-        let newNumber = [];
-        for (let i in number) {
-          switch (i) {
+      if (Math.sign(numberTest) !== -1 && Math.sign(numberTest !== 'NaN') && numberTest <= 9 && maxNumberCount < 3) {
+        switch (i) {
               case '0':
                 newNumber.push('(', number[i]);
                 break;
@@ -231,13 +230,13 @@ function generatePhoneNumber(number) {
                 break;
               case '10':
                 newNumber.push(number[i]);
-          }
         }
-        return newNumber.join('');
+      } else {
+        return 'não é possível gerar um número de telefone com esses valores';
       }
-      return 'não é possível gerar um número de telefone com esses valores';
     }
-  } 
+    return newNumber.join('');
+  }
   return 'Array com tamanho incorreto.';
 }
 
@@ -265,10 +264,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let bebidas = string.match(/[0-9]/g);
+  let coposDeAgua = 0;
+  for (bebida of bebidas) {
+    let integer = parseInt(bebida, 10);
+    coposDeAgua += integer;
+  }
+  if (coposDeAgua === 1) {
+    return coposDeAgua + ' copo de água';
+  }
+  return coposDeAgua + ' copos de água'; 
 }
-
 
 module.exports = {
   calcArea,
