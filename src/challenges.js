@@ -187,13 +187,22 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
   let evaluator = 0;
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-    evaluator = true;
+  let arrayLines = [lineA,lineB,lineC];
+
+  for (let index in arrayLines) {
+  
+    if (arrayLines[0] < (arrayLines[1] + arrayLines[2]) && arrayLines[0] > Math.abs(arrayLines[1] - arrayLines[2])) {
+    evaluator += 1;
+    }
+    else if (arrayLines[1] < (arrayLines[0] + arrayLines[2]) && arrayLines[1] > Math.abs(arrayLines[0] - arrayLines[2])) {
+    evaluator +=1;
+    }
+    else if (arrayLines[2] < (arrayLines[0] + arrayLines[1]) && arrayLines[2] > Math.abs(arrayLines[0] - arrayLines[1])) {
+    evaluator += 1;
+    }
+
   }
-  else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
-    evaluator = true;
-  }
-  else if (lineC < (lineA + lineC) && lineC > Math.abs(lineA - lineC)) {
+  if (evaluator == 3) {
     evaluator = true;
   }
   else {
@@ -201,7 +210,7 @@ function triangleCheck(lineA,lineB,lineC) {
   }
   return evaluator;
 }
-triangleCheck(10, 14, 8);
+triangleCheck(5, 3, 2);
 
 // Desafio 13
 function hydrate() {
