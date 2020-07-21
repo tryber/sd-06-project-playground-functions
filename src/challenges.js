@@ -127,26 +127,26 @@ function fizzBuzz(myArray) {
 
 
 // Desafio 9
-// let text = 'hi there';
-// let text2 = 'h3 th2r2';
-function encode(myText) {
-  let result = '';
-  for (let i = 0; i < myText.length; i += 1) {
-    if (myText[i] === 'a') {
-      result += '1';
-    } else if (myText[i] === 'e') {
-      result += '2';
-    } else if (myText[i] === 'i') {
-      result += '3';
-    } else if (myText[i] === 'o') {
-      result += '4';
-    } else if (myText[i] === 'u') {
-      result += '5';
+let text = 'hi there';
+let text2 = 'h3 th2r2';
+function encode(myTextEncode) {
+  let myResult = '';
+  for (let x = 0; x < myTextEncode.length; x += 1) {
+    if (myTextEncode[x] === 'a') {
+      myResult += '1';
+    } else if (myTextEncode[x] === 'e') {
+      myResult += '2';
+    } else if (myTextEncode[x] === 'i') {
+      myResult += '3';
+    } else if (myTextEncode[x] === 'o') {
+      myResult += '4';
+    } else if (myTextEncode[x] === 'u') {
+      myResult += '5';
     } else {
-      result += myText[i];
+      myResult += myTextEncode[x];
     }
   }
-  return result;
+  return myResult;
 }
 
 function decode(myText) {
@@ -168,8 +168,8 @@ function decode(myText) {
   }
   return result2;
 }
-// console.log(encode(text));
-// console.log(decode(text2));
+console.log(encode(text));
+console.log(decode(text2));
 
 
 // ---------- Desafio 10
@@ -207,7 +207,7 @@ function verifyNumber(myPhone) {
       }
     }
     if (contAtual > contMaior) {
-      contMaior = contAtual;  
+      contMaior = contAtual;
     }
   }
   for (let i = 0; i < myPhone.length; i += 1) {
@@ -243,9 +243,9 @@ function generatePhoneNumber(myPhone) {
 
 
 // ------------ Desafio 12
-let lin1 = 10;
-let lin2 = 14;
-let lin3 = 8;
+// let lin1 = 10;
+// let lin2 = 14;
+// let lin3 = 8;
 function triangleCheck(lineA, lineB, lineC) {
   let result = false;
   if ((Math.abs(lineB - lineC) < lineA) && (lineB + lineC > lineA)) {
@@ -257,7 +257,7 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return result;
 }
-console.log(triangleCheck(lin1, lin2, lin3));
+// console.log(triangleCheck(lin1, lin2, lin3));
 
 
 // Desafio 13
@@ -265,7 +265,7 @@ console.log(triangleCheck(lin1, lin2, lin3));
 function hydrate(myText) {
   let myNumbers = myText.match(/\d+/g).map(Number);
   let sumNumbers = 0;
-  for (let i = 0; i < myNumbers.length; i += 1){
+  for (let i = 0; i < myNumbers.length; i += 1) {
     sumNumbers += myNumbers[i];
   }
   let result = '';
