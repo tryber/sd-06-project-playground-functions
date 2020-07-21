@@ -134,12 +134,16 @@ function decode(str) {
 // Desafio 10
 function techList(arr, nome) {
   let resultados = [];
-  let item = {};
   let msg = 'Vazio!';
   if ( arr.length > 0) {
     for ( let i in arr ) {
       resultados.push( {tech: arr[i], name: nome} );
     }
+    resultados.sort(function (a, b) {
+	
+    return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0);
+     
+    });
     return resultados;
   } else {
     return msg;
