@@ -48,23 +48,23 @@ footballPoints(1,4);
 // Desafio 6
 function highestCount(numbers) {
   let repetitionCount = 0;
-  let highestNumber = 0;
+  let highestNumber = numbers[0];
 
   for (let index = 1; index <= numbers.length; index +=1) {
-        if (numbers[index] > numbers[index - 1]) {
-          highestNumber = index;      
+        if (numbers[index] > highestNumber) {
+          highestNumber = numbers[index];      
         }
   }
   
   for (let index2 = 0; index2 <= numbers.length; index2 +=1) {
-          if (numbers[index2] === numbers[highestNumber]) {
+          if (numbers[index2] == highestNumber) {
             repetitionCount += 1;
           }
   }
   return repetitionCount;
 }
 
-highestCount([0, 100, 101, 0, 0, 100, 100, 100, 1, 9, 0, 9, 3, 9, 5, 7]);
+console.log(highestCount([-101, -100, -101,-100, -100, -100, -1, -9, -9, -3, -9, -5, -7]));
 
 
 // Desafio 7
