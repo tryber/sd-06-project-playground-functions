@@ -245,6 +245,7 @@ function generatePhoneNumber(param) {
 
         let fullNumber = "(" + param[0] + param[1] + ") " + param[2] + param[3] + param[4] + param[5] + param[6] + "-" + param[7] + param[8] + param[9] + param[10];
         console.log(fullNumber);
+        return fullNumber;
     } //else
 } //function
 generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
