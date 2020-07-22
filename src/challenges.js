@@ -146,7 +146,7 @@ function generatePhoneNumber(array){
     for (let i = 0; i < array.length; i++) {
       phoneNumber += (`${array[i]}`);
       if (i === 1){
-        phoneNumber += ')';
+        phoneNumber += ') ';
       }
       if (i === 6){
         phoneNumber += '-';
