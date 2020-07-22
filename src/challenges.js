@@ -292,9 +292,13 @@ function hydrate(fraseRecebida) {
     totalAgua+=parseInt(numeroCervejas[i]);
     
   }
-
-  return totalAgua.toString() + " copos de água"
-
+  if (totalAgua>1){
+    return totalAgua.toString() + " copos de água"
+  }
+  else {
+    return totalAgua.toString() + " copo de água"
+  }
+  
 }
 console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
