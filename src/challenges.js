@@ -178,7 +178,7 @@ function techList(tecnologias,name) {
       return techs;
   }
   else{
-    return "Vazio!"
+    return 'Vazio!'
   }
 
 }
