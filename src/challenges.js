@@ -46,7 +46,7 @@ function highestCount(numbers) {
   }
 
   let contador = 0;
-  for (let i = 0; i < numbers.length; i = i + 1) {
+  for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] === maiorNumero) {
       contador = contador + 1;
     }
@@ -173,7 +173,7 @@ function generatePhoneNumber(phoneNumber) {
             return 'não é possível gerar um número de telefone com esses valores';
           }
         }
-        j++;
+        j += 1;
       }
     // Não inconsistênicias começar a gerar o número conforme padrão
       if (i === 0) {
@@ -185,9 +185,9 @@ function generatePhoneNumber(phoneNumber) {
       } else {
         phone += phoneNumber[i];
       }
-      i++;
-      }
-      return phone;
+      i += 1;
+    }
+    return phone;
   }
 }
 
