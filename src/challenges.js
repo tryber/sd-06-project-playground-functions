@@ -17,16 +17,15 @@ function calcArea(base, height) {
 // Desafio 3 - OK
 function splitSentence(stringRecebida) {
   // seu código aqui
-  resultado = stringRecebida.split(" ");
+  let resultado = stringRecebida.split(' ');
   return resultado
-
 }
 
 // Desafio 4 - OK
 function concatName(string) {
   // seu código aqui
-  primeiroItem = string[0];
-  ultimoitem = string[string.length - 1];
+  let primeiroItem = string[0];
+  le tultimoitem = string[string.length - 1];
   return (ultimoitem + ', ' + primeiroItem);
 }
 
@@ -93,18 +92,18 @@ function encode(word) {
   // seu código aqui
   let newWord = [];
   for(let i = 0; i < word.length; i += 1) {
-    if(word[i] === 'a') {
-        newWord.push('1');
-    } else if(word[i] === 'e') {
-        newWord.push('2');
-    } else if(word[i] === 'i') {
-        newWord.push('3');
-    } else if(word[i] === 'o') {
-        newWord.push('4');
-    } else if(word[i] === 'u') {
-        newWord.push('5');
+    if (word[i] === 'a') {
+      newWord.push('1');
+    } else if (word[i] === 'e') {
+      newWord.push('2');
+    } else if (word[i] === 'i') {
+      newWord.push('3');
+    } else if (word[i] === 'o') {
+      newWord.push('4');
+    } else if (word[i] === 'u') {
+      newWord.push('5');
     } else {
-        newWord.push(word[i]);
+      newWord.push(word[i]);
     }
   }
   return newWord.join("");
@@ -113,19 +112,19 @@ function encode(word) {
 function decode(word) {
   // seu código aqui
   let newWord = [];
-  for(let i = 0; i < word.length; i += 1){
-    if(word[i] === '1') {
-        newWord.push('a');
-    } else if(word[i] === '2') {
-        newWord.push('e');
-    } else if(word[i] === '3') {
-        newWord.push('i');
-    } else if(word[i] === '4') {
-        newWord.push('o');
-    } else if(word[i] === '5') {
-        newWord.push('u');
+  for (let i = 0; i < word.length; i += 1) {
+    if (word[i] === '1') {
+      newWord.push('a');
+    } else if (word[i] === '2') {
+      newWord.push('e');
+    } else if (word[i] === '3') {
+      newWord.push('i');
+    } else if (word[i] === '4') {
+      newWord.push('o');
+    } else if (word[i] === '5') {
+      newWord.push('u');
     } else {
-        newWord.push(word[i]);
+      newWord.push(word[i]);
     }
   }
   return newWord.join('');
@@ -139,11 +138,11 @@ function techList(recArray, name) {
   } else {
     let retorno = [];
     recArray = recArray.sort();
-    for(let index = 0; index < recArray.length; index += 1) {
+    for (let index = 0; index < recArray.length; index += 1) {
       retorno[index] = {
         tech: recArray[index],
-        name: name
-        };
+        name: name,
+      };
     }
     return retorno;
   }
@@ -161,25 +160,24 @@ function generatePhoneNumber(phoneNumber) {
     let phone = '';
     let i = 0;
     while (i < phoneNumber.length) {
-      if (phoneNumber[i] < 0 || phoneNumber[i] > 9){ // números da array menor que 0, maior que 9
+      if (phoneNumber[i] < 0 || phoneNumber[i] > 9) { // números da array menor que 0, maior que 9
         return 'não é possível gerar um número de telefone com esses valores';
         break;
       }
       // 1a. e 2a. incosistências OK, verificar a 3a. antes de prosseguir
       let repeticao = 0;
       let j = 0;
-      while(j < phoneNumber.length) {
-        if (phoneNumber[j] - phoneNumber[i] == 0) {
+      while (j < phoneNumber.length) {
+        if (phoneNumber[j] - phoneNumber[i] === 0) {
           repeticao += 1;
           if (repeticao > 2) {
             return 'não é possível gerar um número de telefone com esses valores';
-            break;
           }
         }
-      j++;
+        j++;
       }
     // Não inconsistênicias começar a gerar o número conforme padrão
-    if (i == 0){
+    if (i === 0) {
       phone += '(' + phoneNumber[i];
     } else if (i == 1) {
       phone += phoneNumber[i] + ') ';
@@ -215,17 +213,17 @@ function triangleCheck(lineA, lineB, lineC) {
     (amenosC < lineB) && (lineB < amaisC) ||
     (amenosB < lineC) && (lineC < amaisB)
     ) {
-      return true;
-    } else {
-      return false;
-    }
-
+    return true;
+  } else {
+    return false;
   }
+
+}
 
 // Desafio 13 - OK
 function hydrate(bebidas) {
   // seu código aqui
-  var res = bebidas.replace(/\D/g, "");
+  let res = bebidas.replace(/\D/g, '');
 
   let soma = 0;
   for (let i = 0; i < res.length; i += 1) {
