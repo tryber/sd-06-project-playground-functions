@@ -126,11 +126,25 @@ console.log(fizzBuzz(arrayNumbers));
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(string) {
+  let vogaisNumeros = string.replace(/a/gi, 1);
+  vogaisNumeros = string.replace(/e/gi, 2);
+  vogaisNumeros = string.replace(/i/gi, 3);
+  vogaisNumeros = string.replace(/o/gi, 4);
+  vogaisNumeros = string.replace(/u/gi, 5);
+
+  console.log(vogaisNumeros);
+  return vogaisNumeros;
+} 
+
+function decode(numeros) {
+  let trocandopNumeros = numeros.replace(/1/gi, 'a');
+  trocandopNumeros = numeros.replace(/2/gi, 'b');
+  trocandopNumeros = numeros.replace(/3/gi, 'c');
+  trocandopNumeros = numeros.replace(/4/gi, 'd');
+  trocandopNumeros = numeros.replace(/5/gi, 'e');
+
+  return trocandopNumeros;
 }
 
 // Desafio 10
