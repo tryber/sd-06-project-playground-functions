@@ -212,15 +212,13 @@ function techList(array, name) {
 function generatePhoneNumber(param) {
     // seu código aqui
     if (param.length !== 11) {
-        console.log("Array com tamanho incorreto.");
-        return null;
+        return "Array com tamanho incorreto.";
     } else {
 
         for (let i = 0; i < param.length; i++) {
 
             if (param[i] < 0 || param[i] > 9) {
-                console.log("não é possível gerar um número de telefone com esses valores");
-                return null;
+                return "não é possível gerar um número de telefone com esses valores";
             }
 
             let numTimes = 1;
@@ -239,8 +237,7 @@ function generatePhoneNumber(param) {
             } // for interno
 
             if (numTimes >= 3) {
-                console.log("não é possível gerar um número de telefone com esses valores");
-                return null;
+                return "não é possível gerar um número de telefone com esses valores";
             }
 
 
