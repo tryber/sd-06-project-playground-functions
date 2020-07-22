@@ -1,14 +1,13 @@
-/// Iniciando o projeto JavaScript Desafio 1
+// Desafio 1
 function compareTrue(value1, value2) {
-  let conjunto;
+  let compare;
   if (value1 && value2) {
-    let conjunto = true;
+    compare = true;
   } else {
-    let conjunto = false;
+    compare = false;
   }
-  return conjunto;
+  return compare;
 }
-
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
