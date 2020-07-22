@@ -159,12 +159,7 @@ function decode(stringEncoded) {
 
 // Desafio 10
 function techList(tecnologias,name) {
-  //função sorte """ordena""" o array tecnologias
-  //para cada elemento em tecnologias essa função define um objeto baseado em um valor string deesse elemento do array.
-  // seta o atributo tech baseado no valor do literal 'name' da string,
-  // alem disso define outro atributo com o nome 'nome'
-  // atribui ao atributo 'name' de cada 'tecnologia' o valor da string 'name' passado como input para função principal.
-  if(tecnologias.length !== 0){
+  if(tecnologias.length != 0){
     let techs = tecnologias.sort().map(function(tecnologia) {
       if(tecnologia == ''){
       return{
@@ -183,7 +178,7 @@ function techList(tecnologias,name) {
       return techs;
   }
   else{
-    return 'Vazio!'
+    return "Vazio!"
   }
 
 }
