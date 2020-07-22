@@ -174,7 +174,7 @@ console.log(decode(valor2)); */
 // Desafio 10
 function techList(arrayTecnologias, name) {
   // seu código aqui
-  if (arrayTecnologias === undefined){
+  if (arrayTecnologias.length === 0){
     return "Vazio!";
   }else{
     let ordenarArray = arrayTecnologias;
