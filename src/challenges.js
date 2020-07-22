@@ -184,64 +184,52 @@ function decode(decString = "")
 // Desafio 10
 function techList(f10array = [], name = "") 
 {
-    f10arrayNew = f10array.sort()
+    let f10arrayresult=[];
+    let f10arrayNew = f10array.sort()
+    for (let  c= 0; c < f10array.length; c += 1)
+    {
+    let obj = 
+        {
+        tech: f10arrayNew[c],
+        nome: name
+        }
+    f10arrayresult[c]=obj;
+    }
 
-    let obj01 = 
-    {
-        tech: f10arrayNew[0],
-        nome: name
-    }
-    let obj02 = 
-    {
-        tech: f10arrayNew[1],
-        nome: name
-    }
-    let obj03 = 
-    {
-        tech: f10arrayNew[2],
-        nome: name
-    }
-    let obj04 = 
-    {
-        tech: f10arrayNew[3],
-        nome: name
-    }
-    let obj05 = 
-    {
-        tech: f10arrayNew[4],
-        nome: name
-    }
-    let obj06 = 
-    {
-        tech: f10arrayNew[5],
-        nome: name
-    }
-    let obj07 = 
-    {
-        tech: f10arrayNew[6],
-        nome: name
-    }
-    let obj08 = 
-    {
-        tech: f10arrayNew[7],
-        nome: name
-    }
-    let obj09 = 
-    {
-        tech: f10arrayNew[8],
-        nome: name
-    }
-    let obj10 = 
-    {
-        tech: f10arrayNew[9],
-        nome: name
-    }
-return obj01 + name + obj02 + name + obj03 + name + obj014+ name + obj05 + name + obj06 + name + obj07 + name;
+return f10arrayresult;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers=[])
+{
+    n11=1;
+    nv=1;
+    if (numbers.length!=11)
+        {
+        n11=0;
+        result="Array com tamanho incorreto.";
+        }
+    else
+        {
+        for (let  c= 0; c < 11; c += 1)
+            {
+            if ((numbers[c]<0)||(numbers[c]>9))
+                {
+                nv=0;
+                }
+            }
+        if (nv==0)
+            {
+            result="não é possível gerar um número de telefone com esses valores.";
+            }
+        }
+    if ((n11==1)&&(nv==1))
+        {
+            str="teste";
+        //str="(" + numbers[0] + numbers[1] + ")"+" "+numbers[2]+numbers[3]+numbers[4]+numbers[5]+numbers[6]+"-"numbers[7]+numbers[8]+numbers[9]+numbers[10];
+        result=str;
+        }
+return result;
 }
 
 // Desafio 12
