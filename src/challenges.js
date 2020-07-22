@@ -57,14 +57,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat2 = mouse - cat2;
   let modulo1 = (distCat1 * distCat1) / distCat1;
   let modulo2 = (distCat2 * distCat2) / distCat2;
-  if (modulo1 === modulo2) {
-    return 'os gatos trombam e o rato foge';
-  }
   if (modulo1 < modulo2) {
-    return 'cat2';
+   return 'cat2';
   } else if (modulo2 < modulo1) {
     return 'cat1';
-  }
+  } 
+    return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
