@@ -152,11 +152,11 @@ function generatePhoneNumber(array) {
         cont += 1;
       }
       if (cont >= 3) {
-        return "não é possivel gerar um número de telefone com esses valores";
+        return "não é possível gerar um número de telefone com esses valores";
       }
     }
     j = i + 1;
-    cont = 1;
+    cont = 0;
   }
 
   if (array.length === 11) {
@@ -176,7 +176,7 @@ function generatePhoneNumber(array) {
   return result;
   }
 }
-console.log (generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
