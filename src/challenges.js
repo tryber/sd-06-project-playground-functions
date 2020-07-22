@@ -1,21 +1,21 @@
 // Desafio 1
-function compareTrue(number1,number2) {
+function compareTrue(number1, number2) {
   let oddNumbers = 0;
-  if (number1%2 != 0 && number2%2 != 0) {
+  if (number1 % 2 !== 0 && number2 % 2 !== 0) {
     oddNumbers = true;
   } else {
     oddNumbers = false;
   }
   return oddNumbers;
 }
-compareTrue(2,3);
+compareTrue(2, 3);
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base*height)/2;
+  let area = (base * height) / 2;
   return area;
 }
-calcArea(4,8);
+calcArea(4, 8);
 
 // Desafio 3
 function splitSentence(string) {
@@ -23,107 +23,104 @@ function splitSentence(string) {
   return arrayString;
 }
 
-splitSentence("be trybe");
+splitSentence('be trybe');
 
 // Desafio 4
 function concatName(arrayString) {
-  let concatenate = "";
-    concatenate = arrayString[arrayString.length -1] + ", " + arrayString[0];
+  let concatenate = '';
+  concatenate = arrayString[arrayString.length - 1] + ", " + arrayString[0];
   return concatenate;
 }
 
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
-function footballPoints(wins,ties) {
-  let pointWins = 3*wins;
+function footballPoints(wins, ties) {
+  let pointWins = 3 * wins;
   let pointTies = ties;
 
   let totalPoints = pointWins + pointTies;
   return totalPoints;
 }
 
-footballPoints(1,4);
+footballPoints(1, 4);
 
 // Desafio 6
 function highestCount(numbers) {
   let repetitionCount = 0;
   let highestNumber = numbers[0];
 
-  for (let index = 1; index <= numbers.length; index +=1) {
-        if (numbers[index] > highestNumber) {
+  for (let index = 1; index <= numbers.length; index += 1) {
+    if (numbers[index] > highestNumber) {
           highestNumber = numbers[index];      
         }
   }
-  
-  for (let index2 = 0; index2 <= numbers.length; index2 +=1) {
-          if (numbers[index2] == highestNumber) {
+  for (let index2 = 0; index2 <= numbers.length; index2 += 1) {
+    if (numbers[index2] === highestNumber) {
             repetitionCount += 1;
           }
   }
   return repetitionCount;
 }
 
-highestCount([-101, -100, -101,-100, -100, -100, -1, -9, -9, -3, -9, -5, -7]);
+highestCount([-101, -100, -101, -100, -100, -100, -1, -9, -9, -3, -9, -5, -7]);
 
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(mouse - cat1);
   let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 < distanceCat2) {
-    return "cat1";
-  } 
-  else if (distanceCat2 < distanceCat1) {
-    return "cat2";
+    return 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
-catAndMouse(8,2,4);
+catAndMouse(8, 2, 4);
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let newArray = [];
 
   for (let index in numbers) {
-    if (numbers[index]%3 === 0 && numbers[index]%5 === 0) {
-      newArray.push("fizzBuzz");
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      newArray.push('fizzBuzz');
     }
-    else if (numbers[index]%3 === 0) {
-      newArray.push("fizz");
+    else if (numbers[index] % 3 === 0) {
+      newArray.push('fizz');
     }
-    else if (numbers[index]%5 === 0) {
-      newArray.push("buzz");
+    else if (numbers[index] % 5 === 0) {
+      newArray.push('buzz');
     }
     else {
-      newArray.push("bug!");
+      newArray.push('bug!');
     }
   }
   return newArray;
 }
-
 fizzBuzz([2, 15, 7, 9, 45]); 
 
 // Desafio 9
 
 function encode(string) {
-  let newString = "";
+  let newString = '';
   for (let index in string) {
-    if (string[index] === "a") {
+    if (string[index] === 'a') {
       newString += "1";
     }
-    else if (string[index] === "e") {
+    else if (string[index] === 'e') {
       newString += "2";
     }
-    else if (string[index] === "i") {
+    else if (string[index] === 'i') {
       newString += "3";
     }
-    else if (string[index] === "o") {
+    else if (string[index] === 'o') {
       newString += "4";
     }
-    else if (string[index] === "u") {
+    else if (string[index] === 'u') {
       newString += "5";
     }
     else {
@@ -132,7 +129,7 @@ function encode(string) {
   }
   return newString;
 }
-encode("hi there!");
+encode('hi there!');
 
 function decode(numbers) {
   let decodedString = "";
