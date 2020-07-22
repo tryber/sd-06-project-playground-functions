@@ -293,7 +293,7 @@ function hydrate(fraseRecebida) {
     
   }
 
-  return totalAgua + " copos de água"
+  return totalAgua.toString() + " copos de água"
 
 }
 console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
