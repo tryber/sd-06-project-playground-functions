@@ -39,7 +39,6 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
   function catAndMouse(mouse, cat1, cat2) {
     let run;
     let pino1;
@@ -68,7 +67,6 @@ function catAndMouse() {
     }
     return run;
   }
-}
 
 // Desafio 8
 
