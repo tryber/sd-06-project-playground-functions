@@ -158,12 +158,6 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-
-// Crie uma função chamada generatePhoneNumber que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
-// Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
-// Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto.".
-// Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
-
 function generatePhoneNumber(array) {
   let cont = 0;
   let confirm = false;
@@ -212,21 +206,53 @@ function generatePhoneNumber(array) {
 
   return formattedNumber;
 }
-
-let telephoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(telephoneNumber));
-
+// let telephoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+// console.log(generatePhoneNumber(telephoneNumber));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sideAB = lineA + lineB,
+      sideAC = lineA + lineC,
+      sideBC = lineB + lineC;
+
+  let differenceAB = Math.abs (lineA-lineB),
+      differenceAC = Math.abs (lineA-lineC),
+      differenceBC = Math.abs (lineB-lineC);
+
+  if (((lineC < sideAB) && (lineC > differenceAB)) &&
+    ((lineB < sideAC) && (lineB > differenceAC)) &&
+    ((lineA < sideBC) && (lineA > differenceBC))) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Entrada da função é uma string
+// Essa string vai ter o seguinte padrão
+// -> Número seguido do nome da bebida
+// onde o número significa a quantidade da bebida
+function hydrate(string) {
+  string = string.split(' ');
+  let int = '';
+
+  for (let index = 0; index < string.length; index += 1) {
+    if (let isNumber(string[index]) == false) {
+      int += string[index];
+    }
+  }
+
+
+
+  // pegar todos os números que estão na minha string
+  // vou somar todos os números que estão nessa string
+  // eu vou retornar
+  let amountOfGlassWater = // espera um inteiro;
+  return string(int);
 }
 
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   calcArea,
