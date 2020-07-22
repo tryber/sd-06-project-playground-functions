@@ -133,16 +133,15 @@ function encode(string) {
   vogaisNumeros = string.replace(/o/gi, 4);
   vogaisNumeros = string.replace(/u/gi, 5);
 
-  console.log(vogaisNumeros);
   return vogaisNumeros;
 } 
 
 function decode(numeros) {
   let trocandopNumeros = numeros.replace(/1/gi, 'a');
-  trocandopNumeros = numeros.replace(/2/gi, 'b');
-  trocandopNumeros = numeros.replace(/3/gi, 'c');
-  trocandopNumeros = numeros.replace(/4/gi, 'd');
-  trocandopNumeros = numeros.replace(/5/gi, 'e');
+  trocandopNumeros = numeros.replace(/2/gi, 'e');
+  trocandopNumeros = numeros.replace(/3/gi, 'i');
+  trocandopNumeros = numeros.replace(/4/gi, 'o');
+  trocandopNumeros = numeros.replace(/5/gi, 'u');
 
   return trocandopNumeros;
 }
@@ -158,8 +157,8 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(Python) {
+  
 }
 
 // Desafio 13
