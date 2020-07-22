@@ -115,25 +115,37 @@ function techList(lista, nome) {
 }
 
 // Desafio 11
+// criando uma função para ferificar se existem números duplicados
+function verificaNumeroRepetido(numero, arrayUtilizado) {
+  let verificarNumero;
+  for (let contador = 0; contador < numero.length; numero += 1) {
+    if (arrayUtilizado[contador] === numero) {
+      verificarNumero += 1;
+    }
+  }
+}
+// Vou pegar a função acima (verifica numero repetido) e passar ela numero por numero 
+function validaMenorQueTres(arrayUtilizado) {
+  let resposta;
+  for (let contador = 0; contador < arrayUtilizado.length; contador += 1) {
+    resposta = verificaNumeroRepetido(arrayUtilizado.contador, arrayUtilizado);
+    if ( resposta > 2) {
+      return true;
+    }
+  }
+  return false;
+}
+// juntando tudo
 function generatePhoneNumber(meusNumeros) {
   // verificar se o numero é diferente de 11
   if (meusNumeros.length !== 11) {
     return "Array com tamanho incorreto."
-  } else { // se o array tiver exatamente 11 numeros
-    for (let numero in meusNumeros) { //Passando numero por numero
-      if ( numero < 0) {
-        return "não é possível gerar um número de telefone com esses valores";
-      }
-      let contador = 0;
-      for (let duplicado in meusNumeros) { //Comparar cada numero para ver se tem repitido
-        if (numero === duplicado) { // se tiver repetido
-          contador += 1;
-        }
-        if (contador > 2) {
-          return "não é possível gerar um número de telefone com esses valores";
-        }
-      }
-    }
+  } 
+  for (let numero = 0; numero < meusNumeros.length; numero += 1) { //Passando numero por numero
+    let verRepetidos = validaMenorQueTres(numero);
+    if (meusNumeros[numero] < 0 || meusNumeros[numero] > 9 || verRepetidos) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }    
   }
   return "(" + meusNumeros[0] + meusNumeros[1] + ") " + meusNumeros[2] + meusNumeros[3] + meusNumeros[4] + meusNumeros[5] + meusNumeros[6] + "-" + meusNumeros[7] + meusNumeros[8] + meusNumeros[9] + meusNumeros[10];
 }
