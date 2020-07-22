@@ -1,7 +1,6 @@
  // Desafio 1
   function compareTrue(a,b) {
-  
-   if ( a && b) {
+     if ( a && b) {
     return true;}
   else {
     return false;
@@ -18,35 +17,27 @@ function calcArea(base, height) {
 
 function splitSentence(phrase) {
   return phrase.split(" ");
-  
 }
 
 // Desafio 4 
 function concatName(string) {
-  
   let first = string[0];
   let last = string[string.length -1];
   let join = last + ', ' + first;
-  
   return join;
   
 }
 
 // Desafio 5
-
 function footballPoints(wins, ties) {
-
   let result = (wins * 3) + ties;
   return result;
 }
 
 // Desafio 6 
- 
 function highestCount(array) {  
-   
   let position = 0;
   let cont = 0;
-
 for (let newArray in array){ 
   if (array[position] < array[newArray]){   
     position = newArray;
@@ -61,18 +52,14 @@ return cont;
 }
 
 // Desafio 7 
-
 function catAndMouse(mouse, cat1, cat2) {
-  
  let distance1 = cat1 - mouse;
  let distance2 = cat2 - mouse;
-
  if (distance1<0){
    distance1 = -(distance1);}
  if (distance2<0){
    distance1 = -(distance1);
  };
-
 if (distance1 < distance2) {
   return 'cat1'; 
 }else if (distance1> distance2){
@@ -87,9 +74,7 @@ if (distance1 < distance2) {
 // Desafio 8 
 
 function fizzBuzz(arrayNew) {
-  
   let newFizz = [];
-
   for (i = 0; i<arrayNew.length; i +=1 ){
     if ((arrayNew[i]%3==0) && (arrayNew[i]%5!==0)){
       newFizz[i] = 'fizz';
@@ -108,10 +93,8 @@ return newFizz;
 // Desafio 9
 
 function encode(vowels) {
-    
     let newVowels = '';
     newVowels = vowels.split('');
-    
     for (let i = 0; i < newVowels.length; i+= 1){
      if (newVowels[i]==='a'){
         newVowels[i]= '1';
@@ -132,10 +115,8 @@ function encode(vowels) {
 
 
 function decode(noVowels) {
-  
   let newVowelsNo = '';
   newVowelsNo = noVowels.split('');
-    
   for (let i = 0; i < newVowelsNo.length; i+= 1){
    if (newVowelsNo[i]==='1'){
       newVowelsNo[i]= 'a';
@@ -157,10 +138,8 @@ return newVowelsNo.join('');
 
 // Desafio 10
 function techList(tech, name) {
-  
   let list = [];
   let newList = tech.sort();
-
   if (tech.length === 0){
     return "Vazio!"
   }else {
@@ -228,7 +207,6 @@ function triangleCheck(lineA, lineB, lineC) {
   let differenceAB = Math.abs (lineA-lineB);
   let differenceAC = Math.abs (lineA-lineC);
   let differenceBC = Math.abs (lineB-lineC);
-
   if (((lineC < sideAB) &&  (lineC > differenceAB)) && ((lineB < sideAC) && (lineB > differenceAC)) && ((lineA < sideBC) && (lineA > differenceBC))){
     return true;
   }else {
