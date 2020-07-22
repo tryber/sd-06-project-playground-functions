@@ -74,11 +74,14 @@ function highestCount(numbers) {
 function catAndMouse(cat1, cat2, mouse) {
     let distCatMouse1 = Math.abs(cat1 - mouse);
     let distCatMouse2 = Math.abs(cat2 - mouse);
+
     if (distCatMouse1 > distCatMouse2) {
         return "cat2";
-    } else if (distCatMouse1 < distCatMouse2) {
+    }
+    if (distCatMouse1 < distCatMouse2) {
         return "cat1";
-    } else {
+    }
+    if (distCatMouse1 === distCatMouse2) {
         return 'os gatos trombam e o rato foge';
     }
 }
@@ -101,10 +104,10 @@ function fizzBuzz(sequel) {
             fizzBuzzArray.push("bug!");
         }
     }
-    console.log(fizzBuzzArray)
+    return fizzBuzzArray;
 }
 
-//fizzBuzz([1, 5, 15, 89, 100, 3, 7, 30])
+console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
