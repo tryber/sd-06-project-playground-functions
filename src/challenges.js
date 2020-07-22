@@ -157,19 +157,19 @@ function generatePhoneNumber(phoneNumber) {
   }
     //Verificando se repete
     let arrayVerificar = phoneNumber;
-    let contador = 0;
     let repetiu = false;
     for (let i = 0; i < phoneNumber.length; i += 1) {
+      let contador = 0;
       for (let j = 0; j < arrayVerificar.length; j += 1) {
         if (arrayVerificar[j] === phoneNumber[i]) {
           contador += 1
         }
-        if (contador >= 3) {
+        else if (contador >= 3) {
           repetiu = true;
+          break;
         }
       }
     }
-    contador = 0;
   
   //Verificando numeros e condicao de repeticao
   for (let k = 0; k < phoneNumber.length; k += 1) {
@@ -178,10 +178,12 @@ function generatePhoneNumber(phoneNumber) {
     }
     }
   //Caso não retorne nenhuma das outras
-  let numeroTelefoneCompleto = '(' + arrayNumber[0] + arrayNumber[1] + ') ' + arrayNumber[2] + arrayNumber[3] + arrayNumber[4] + arrayNumber[5] + arrayNumber[6] + '-' + arrayNumber[7] + arrayNumber[8] + arrayNumber[9] + arrayNumber[10];
+  let numeroTelefoneCompleto = '(' + phoneNumber[0] + phoneNumber[1] + ') ' + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + '-' + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10];
 
   return numeroTelefoneCompleto;
   }
+
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
   
 // Desafio 12
