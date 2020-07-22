@@ -199,7 +199,7 @@ function generatePhoneNumber(numeros) {
       }
     }
     if(count >= 3 || telNumber[i] > 9 || telNumber[i] < 0 ){
-      return 'não é possível gerar um numero de telefone com esses valores'
+      return 'não é possível gerar um número de telefone com esses valores'
     }
     else{
       if(telNumber.length === 11){
