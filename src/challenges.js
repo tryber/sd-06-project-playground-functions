@@ -210,9 +210,9 @@ let numAbsB = Math.abs(lineB);
 let numAbsC = Math.abs(lineC);
 
   if ((numAbsA < numAbsB + numAbsC) && (numAbsB < numAbsA + numAbsC) && (numAbsC < numAbsA + numAbsB)) {
-    return ('true');
+    return true;
   }else {
-    return ('false');
+    return false;
   }
 }
 
