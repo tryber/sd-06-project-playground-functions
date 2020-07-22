@@ -1,5 +1,13 @@
 /// Iniciando o projeto JavaScript Desafio 1
-function compareTrue() {
+function compareTrue(v1, v2) {
+  let teste;
+  if (v1 && v2) {
+    teste = true;
+  } else {
+    teste = false;
+  }
+  return teste;
+}
   // seu código aqui
 }
 
