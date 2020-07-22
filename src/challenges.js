@@ -66,8 +66,8 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Distance = Math.abs(mouse . cat1);
-  let cat2Distance = Math.abs(mouse . cat2);
+  let cat1Distance = Math.abs(mouse - cat1);
+  let cat2Distance = Math.abs(mouse - cat2);
   if (cat1Distance < cat2Distance) {
     return 'cat1';
   } else if (cat1Distance === cat2Distance){
@@ -170,32 +170,6 @@ function techList(tecArray, nameUser) {
 // Desafio 11
 function generatePhoneNumber() {
 
-    let isValidNumber = [];
-      if (array.length !== 11){
-      return "Array de tamnanho incorreto";
-    
-      let dddArray = [];
-        for (let index = 0; index <=10; index +=1){
-          let firstPart = [];
-            for (let index = 2; index <=6; index +=1){
-              firstPart.push(array[index]);
-    }
-    
-    
-    let secondPart = [];
-    for (let index = 7; index <=10; index +=1){
-      secondPart.push(array[index]);
-    }
-    }
-    
-    let dddFormated = dddArray.join("");
-    let firstPartFormatted = firstPartFormatted.join("");
-    let secondPartFormatted = secondPartFormatted.join("");
-    let formattedNumber = "(" +dddFormated+") "+ firstPartFormatted + "-" + secondPartFormatted;
-    return formattedNumber;
-    }
-    let phone = [3, 1, 9, 9, 9, 9, 9, 0, 0, 0, 0];
-    console.log(generatePhoneNumber(phone));
     }
 
 
