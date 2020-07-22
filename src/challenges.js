@@ -150,13 +150,13 @@ function techList(arr, name) {
 function checkIfRepeatedThreeTimes(arr) {
   let count = 0;
   let arrCount = [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0]];
-  let sortedArr = arr.sort();
 
-  for (let index = 0; index < sortedArr.length; index += 1) {
-    count = arrCount[sortedArr[index]][1];
-    arrCount[sortedArr[index]][1] = count + 1;
 
-    if (arrCount[sortedArr[index]][1] >= 3) {
+  for (let index = 0; index < arr.length; index += 1) {
+    count = arrCount[arr[index]][1];
+    arrCount[arr[index]][1] = count + 1;
+
+    if (arrCount[arr[index]][1] >= 3) {
       return false;
     }
   }
@@ -178,7 +178,7 @@ function generatePhoneNumber(arr) {
   return `(${arr.slice(0, 2).join('')}) ${arr.slice(2, 7).join('')}-${arr.slice(7, 11).join('')}`;
 }
 
-// console.log(generatePhoneNumber([1, 1, 3, 2, 9, 9, 3, 7, 6, 8, 7]));
+console.log(generatePhoneNumber([1, 1, 3, 2, 9, 9, 3, 9, 6, 8, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
