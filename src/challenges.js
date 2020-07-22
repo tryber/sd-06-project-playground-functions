@@ -57,9 +57,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge'
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return 'cat1' 
+  return 'cat1'
   }
-    return 'cat2'
+  return 'cat2'
 }
 
 
@@ -68,11 +68,11 @@ function fizzBuzz(array) {
   // seu código aqui
   let arrayResultado = [];
   for (let i = 0; i<array.length; i += 1) {
-    if ((array[i]%3 === 0)&&(array[i]%5 === 0)) {
+    if ((array[i] %3  === 0)&&(array[i] % 5 === 0)) {
       arrayResultado.push('fizzBuzz');
-    } else if(array[i]%3 === 0) {
+    } else if (array[i] % 3 === 0) {
       arrayResultado.push('fizz');
-    } else if(array[i]%5 === 0) {
+    } else if (array[i] % 5 === 0) {
       arrayResultado.push('buzz');
     } else {
       arrayResultado.push('bug!');
@@ -144,7 +144,7 @@ function techList(tech, name) {
   let listaTech = []
   if (listaOrdenada.length > 0) {
     for (let i in listaOrdenada) {
-      listaTech.push ({tech : listaOrdenada[i], name : name})
+      listaTech.push ({ tech : listaOrdenada[i],name : name })
     }
   } else {
     return 'Vazio!'
@@ -155,7 +155,7 @@ function techList(tech, name) {
 // Desafio 11
 function generatePhoneNumber(numbers) {
   // seu código aqui
-  if (numbers.length !== 11){
+  if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.'
   }
   for (let i of numbers) {
@@ -164,7 +164,7 @@ function generatePhoneNumber(numbers) {
     }
   }
   for (let i in numbers) {
-  let count = 0;
+    let count = 0;
     for (let j in numbers) {
       if (numbers[i] === numbers[j]) {
         count += 1;
@@ -174,7 +174,7 @@ function generatePhoneNumber(numbers) {
       }
     }
   }
-  return '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] 
+  return '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4]
   + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
 }
 
@@ -182,8 +182,9 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  return (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC), lineB < (lineA + lineC) &&
-   lineB > Math.abs(lineA - lineC), lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) ? true : false;
+  return (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC), 
+    lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC), 
+    lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) ? true : false;
 }
 
 // Desafio 13
@@ -192,7 +193,7 @@ function hydrate(string) {
   let numbers = /\d+/g;
   let numberOfDrinks = string.match(numbers);
   let water = 0
-  for (let i = 0; i < numberOfDrinks.length; i+=1) {
+  for (let i = 0; i < numberOfDrinks.length; i += 1) {
     water += parseInt(numberOfDrinks[i]);
   }
   let glassesOfWater = [];
