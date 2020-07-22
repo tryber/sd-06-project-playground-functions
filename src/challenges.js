@@ -168,7 +168,7 @@ function hydrate(string){
   for(i in num){
     soma = soma + Number(num[i])
   }
-  return soma + " copo de água"
+  return soma + " copos de água"
 }
 
 module.exports = {
