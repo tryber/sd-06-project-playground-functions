@@ -234,12 +234,10 @@ function generatePhoneNumber(arr) {
     if (arr[i]<0 || arr[i]>9 ){
       return "não é possível gerar um número de telefone com esses valores"
     }
-
-    arrRepetidos[n-1] += 1;
-  
   }
 
   if(arrRepetidos.length >= 3){
+    arrRepetidos[n-1] += 1;
     return "não é possível gerar um número de telefone com esses valores"
   }
 
@@ -250,10 +248,8 @@ function generatePhoneNumber(arr) {
 
     return "(" + ddd + ") " + num1 + "-" + num2
   }
-
 }
-
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7])
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7])
 )
 
 
