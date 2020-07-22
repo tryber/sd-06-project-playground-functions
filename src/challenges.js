@@ -180,9 +180,30 @@ function techList(arrayTechnology,name) {
 techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas");
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayPhoneNumber) {
+  let generatedNumber = "";
+  let repetitionCount = 0;
+  let repeatedNumber = 0;
+
+  for (let index in arrayPhoneNumber) {
+    //Checar se há número repetido, e quantas vezes ele repete.
+  }
+
+  for (let index2 in arrayPhoneNumber) {
+    if (arrayPhoneNumber.length == 10 && arrayPhoneNumber[index2] > 0 && arrayPhoneNumber[index2] < 9 && repetitionCount < 3) {
+  //Concatenar o arrayPhoneNumber
+  }
+  else {
+    if (arrayPhoneNumber.length != 10) {
+      return "Array com tamanho incorreto."
+    }
+    else {
+      return "Não é possível gerar um número de telefone com esses valores."
+    }
+  }
+  return generatedNumber;
 }
+generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
@@ -213,10 +234,21 @@ function triangleCheck(lineA,lineB,lineC) {
 triangleCheck(5, 3, 2);
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+let glassesOfWater = 0;
 
+  for (let index in string) {
+    let character = string[index];
+    let parsedCharacter = parseInt(character);
+    let checkCharacter = isNaN(parsedCharacter) === false;
+
+    if (checkCharacter) {
+      glassesOfWater += parsedCharacter;
+    }
+  }
+  return glassesOfWater + "copo(s) de água";  
+}
+hydrate("7 cachaça, 8 cervejas e 1 copo de vinho");
 
 module.exports = {
   calcArea,
