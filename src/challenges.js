@@ -75,7 +75,6 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function decodeEencode(string) {
@@ -108,9 +107,6 @@ function decode(codestring) {
   return code;
 }
 
-// let code = encode('hi there!');
-// console.log(code);
-// console.log(decode(code));
 // Desafio 10
 function techList(tec, name) {
   let object = [];
@@ -134,28 +130,37 @@ function techList(tec, name) {
 }
 
 // Desafio 11
+function repeteTresOuMais(numbers) {
+  let nums = {};
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (nums[numbers[i]] >= 3) {
+      return true;
+    } else if (numbers[i] in nums) {
+      nums[numbers[i]] += 1;
+    } else {
+      nums[numbers[i]] = 1;
+    }
+  }
+  return false;
+}
+function outrosNums(numbers) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] < 0 || numbers[i] > 9) {
+      return true;
+    }
+  }
+  return false;
+}
 function generatePhoneNumber(numbers) {
-  let repete = 0;
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
+  } else if (repeteTresOuMais(numbers) || outrosNums(numbers)) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (numbers[i] < 0 || numbers[i] > 9 || repete >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    repete = 0;
-    for (let j = 1; j < numbers.length; j += 1) {
-      if (numbers[i] === numbers[j]) {
-        repete += 1;
-      }
-    }
-  }
-  // let numbers2 = numbers.toString();
-  // numbers2 = numbers2.replace(/,/gi, '');
   return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
 }
 
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 3, 5, 6, 1, 5, 9, 0, 2]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -173,13 +178,10 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let r = /\d+/g;
   let total = 0;
-  r = string.match(r);
-  for (let indice = 0; indice < r.length; indice += 1) {
-    total += Number(r[indice]);
-    // console.log(total);
-    // console.log(Number(r[indice]));
+  let nums = string.match(/\d/g);
+  for (let indice = 0; indice < nums.length; indice += 1) {
+    total += Number(nums[indice]);
   }
   if (total === 1) {
     return `${total} copo de água`;
