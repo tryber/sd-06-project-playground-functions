@@ -147,9 +147,24 @@ function decode(numeros) {
 }
 
 // Desafio 10
-function techList(Python) {
+let teste10 = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+function techList(tech, name) {
+  let array10 = [];
+  if(tech.length >= 1) {
+    for(let i = 0; i < tech.length; i += 1) {
+      array10.push({
+        tech: tech[i], 
+        name: name
+      })
+    } return array10;
+  } else {
+    return "Vazio!"
+  }
   
 }
+console.log(techList(teste10, "Keila"));
+techList(teste10, "Keila"); 
+
 
 // Desafio 11
 function generatePhoneNumber() {
