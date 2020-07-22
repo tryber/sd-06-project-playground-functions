@@ -150,8 +150,9 @@ function decode(numeros) {
 let teste10 = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 function techList(tech, name) {
   let array10 = [];
+  let listaOrdenada = tech.sort()
   if(tech.length >= 1) {
-    for(let i = 0; i < tech.length; i += 1) {
+    for(let i = 0; i < listaOrdenada.length; i += 1) {
       array10.push({
         tech: tech[i], 
         name: name
