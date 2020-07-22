@@ -66,45 +66,29 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let turnPositiveArray = [cat1, cat2, mouse];
-    for (let i in turnPositiveArray) {
-      if (turnPositiveArray[i] < 0) {
-      turnPositiveArray[i] *= -1;
-    }
-  }
-
-  function closerToMouse(predator, prey) {
-    if (predator > prey) {
-      return predator - prey;
-    } else if (prey > predator) {
-      return prey - predator;
-    }
-
-    return 0;
-  }
-
-  if (closerToMouse(cat1, mouse) === closerToMouse(cat2, mouse)) {
-    return 'cats gonna colide';
-  } else if (closerToMouse(cat1, mouse) < closerToMouse(cat2, mouse)) {
+  let cat1Distance = Math.abs(mouse . cat1);
+  let cat2Distance = Math.abs(mouse . cat2);
+  if (cat1Distance < cat2Distance) {
     return 'cat1';
+  } else if (cat1Distance === cat2Distance){
+    return 'os gatos trombam e o rato foge';
+  } else {
+    return 'cat2';
   }
-
-  return 'cat2';
 }
-
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let arrayString = [];
   for (i=0; i<arrayNumber.length; i++) {
     
-    if ((arrayNumber[i] % 3 === 0)&& (arrayNumber[i] % 5 === 0)) {
-    arrayString.push("fizzBuzz")
+    if (arrayNumber[i] % 15 === 0) {
+    arrayString.push("fizzBuzz");
   }  //do if
   else if (arrayNumber[i] % 3 === 0) {
-    arrayString.push("fizz")
+    arrayString.push("fizz");
 }  // primeiro else if
 else if (arrayNumber[i] % 5 === 0) {
-  arrayString.push("buzz")
+  arrayString.push("buzz");
 } // segundo else if
 else {
   arrayString.push("bug!") 
