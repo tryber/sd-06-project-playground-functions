@@ -61,16 +61,30 @@ function catAndMouse(mouse, cat1, cat2) {
   if ( gatod2 < gatod1){ 
     resultado = "cat2";} else if 
     ( gatod1 < gatod2){
-    resultado = "cat1";} else
-     {resultado = "Os gatos trombam e o rato foge ";}
+    resultado = "cat1";} else if
+  (gatod2 = gatod1) 
+     {resultado = "Os gatos trombam e o rato foge";}
  return resultado; 
   } 
  console.log(catAndMouse(5,2,3))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(array8) {
+  let resultado = "";
+  for ( indice = 0; indice < array8.length; indice = indice +1 ){
+    if(array8[indice] % 3 ==0 && array8[indice] % 5 != 0){
+      resultado = "fizz";
+    } else if (array8[indice] % 5 ==0 && array8[indice] % 3 != 0){
+      resultado ="buzz";
+    } else if (array8[indice] % 5 ==0 && array8[indice] % 3 == 0) {
+      resultado = "fizzBuzz";
+    } else  { resultado = "bug";}
+      
+    }
+    return resultado;
+  }
+console.log(fizzBuzz([3,2,5,7,10,15]))
+
 
 // Desafio 9
 function encode() {
