@@ -181,9 +181,44 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Bruna"))
 
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(array) {
+  let numero = 0;
+  let cont = 0;
+  let numeroRepetido = 0;
+  let abencoado = 0;
+  if (array.length != 11) {
+    numero = "Array com tamanho incorreto."
+  } else {
+  for (let i in array) {
+    for (let b in array) {
+     if (array[i] === array[b]) { 
+      cont ++;
+      }
+    }
+    if(numeroRepetido<=cont){
+      numeroRepetido = cont;
+  }
+  cont = 0;
+  }
+    if (numeroRepetido >= 3) {
+      numero = "não é possível gerar um número de telefone com esses valores"
+      abencoado = 1;
+    }
+  for (let c = 0; c < array.length; c++) {
+    if (array[c] < 0 || array[c] > 9) {
+      numero = "não é possível gerar um número de telefone com esses valores"
+      abencoado = 1;
+    }
+    
+  }
+  if (array.length === 11 && abencoado != 1) {
+    numero = "(" + [array[0]] + [array[1]] + ")" + " " + [array[2]] + [array[3]] + [array[4]] + [array[5]] + [array[6]] + "-" + [array[7]] + [array[8]] + [array[9]] + [array[10]] + [array[11]];  
+  }
+  }
+  return numero;
+  }
+  console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+  
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
