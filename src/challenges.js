@@ -220,7 +220,7 @@ console.log(techList(nomesTec, nome))
 
 function generatePhoneNumber(arr) {
 
-  let arrRepetidos=[];
+  let arrRepetidos=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
   if (arr.length!==11){
     return "Array com tamanho incorreto."
@@ -230,33 +230,34 @@ function generatePhoneNumber(arr) {
 
     let n = arr[i];
 
-
     if (arr[i]<0 || arr[i]>9 ){
       return "não é possível gerar um número de telefone com esses valores"
     }
-  }
-
-  if(arrRepetidos.length >= 3){
     arrRepetidos[n-1] += 1;
+  }
+  console.log(arrRepetidos);
+
+  if(Math.max.apply(null, arrRepetidos) >= 3){
     return "não é possível gerar um número de telefone com esses valores"
   }
-
+  
   else {
     let ddd = arr.slice(0,2).join("");
     let num1 = arr.slice(2,7).join("");
     let num2 = (arr.slice(7,11)).join("");
-
+  
     return "(" + ddd + ") " + num1 + "-" + num2
   }
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])
+
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7])
 )
 
 
 
 // Desafio 12 // Condição de existência de um triângulo
 
-function triangleCheck() {
+function triangleCheck(linhaA,linhaB,linhaC) {
   // seu código aqui
 }
 
