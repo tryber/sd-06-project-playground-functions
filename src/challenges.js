@@ -136,12 +136,15 @@ function triangleCheck(a,b,c) {
 
 // Desafio 13
 function hydrate(string){
-var integer = parseInt(string)
-numeroBebida = integer
-return numeroBebida + " copo de água"
+  let num = string.match(/\d+/g)
+  soma = 0
+  for(i in num){
+    soma = soma + Number(num[i])
+  }
+  return soma + " copo de água"
 }
 
-orts = {
+module.exports = {
   calcArea,
   catAndMouse,
   compareTrue,
