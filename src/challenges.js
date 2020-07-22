@@ -432,28 +432,27 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida
 // e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida.
-  
+
 // O número na frente de cada bebida está no intervalo entre 1 e 9.
-  
+
 // Dica: pesquise por algo similar a get all integers inside a string js.
 
 function hydrate(string) {
-let number = string.replace(/\D/g, "");
-let sum = 0;
+  let number = string.replace(/\D/g, '');
+  let sum = 0;
 
-for (let index in number) {
-  sum += parseInt(number[index],10);
-}
-if (sum > 1) {
-  return `${sum} copos de água`;
-}
+  for (let index in number) {
+    sum += parseInt(number[index], 10);
+  }
+  if (sum > 1) {
+    return `${sum} copos de água`;
+  }
   return `${sum} copo de água`;
 }
 
 // TESTE
-console.log(hydrate('1 cerveja'));
+// console.log(hydrate('1 cerveja'));
 // console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
-
 
 module.exports = {
   calcArea,
