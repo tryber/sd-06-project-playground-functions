@@ -48,14 +48,20 @@ function highestCount(arr) {
   // seu código aqui
     let highestNumber = arr[0];
     let count = 0
+
     for (let i = 0; i < arr.length; i+= 1){
+      if (arr[i] > highestNumber) {
+        highestNumber = arr[i];
+      }
+    }
+
+    for (let i = 0; i < arr.length; i+= 1){
+
       if (arr[i] == highestNumber) {
         count += 1;}
-      if (arr[i] > highestNumber) {
-          highestNumber = arr[i];
-          count = 1;
-        }
+     
       }
+      return count
     }
 
 // Desafio 7
