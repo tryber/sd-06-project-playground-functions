@@ -49,7 +49,7 @@ function fizzBuzz(numb) {
   let newArray = []
 
   for (i in numb) {
-    if (numb[i] % 3 === 0 && numberArray[i] % 5 != 0) {
+    if (numb[i] % 3 === 0 && numb[i] % 5 != 0) {
       newArray.push("fizz");
     } else if (numb[i] % 5 === 0 && numb[i] % 3 != 0) {
       newArray.push("buzz");
