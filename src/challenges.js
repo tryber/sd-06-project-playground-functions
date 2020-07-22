@@ -78,7 +78,7 @@ return f07rapido;
 }
 
 // Desafio 8
-function fizzBuzz(f08numeros = []) 
+function fizzBuzzfunction fizzBuzz(f08numeros = []) 
 {
     f08nomes = [];
     f08cont=0;
