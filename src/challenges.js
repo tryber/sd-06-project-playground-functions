@@ -2,7 +2,6 @@
 function compareTrue(value1 , value2) {
   return value1 && value2
 }
-console.log(compareTrue(true, true))
 
 //Desafio 2
 function calcArea( base, heigth ) {
@@ -16,21 +15,16 @@ function splitSentence( prhase ) {
   let splitPhrase = prhase.split(" ");
   return splitPhrase;
 }
-console.log(splitSentence("Aurelio Scarante Taborda"));
-
 //Desafio 4
 function concatName([listaNomes]) {
   return listaNomes[listaNomes.lenght - 1] + ", " + listaNomes[0];
 }
-console.log(concatName["Aurelio, Lorenzo, Millena"]);
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalPoints = (wins  * 3) + ties;
   return totalPoints
 }
-
-console.log(footballPoints(5, 5));
 
 // Desafio 6
 function highestCount() {
