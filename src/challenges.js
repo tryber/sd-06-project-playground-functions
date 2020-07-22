@@ -60,11 +60,11 @@ function catAndMouse() {
       pino1 = mouse - cat1;
     }
     if (pino1 === pino2) {
-      run = "os gatos trombam e o rato foge";
+      run = "os gatos trombam e o rato foge"
     } else if (pino1 > pino2) {
-      run = "cat2";
+      run = "cat2"
     } else {
-      run = "cat1";
+      run = "cat1"
     }
     return run;
   }
