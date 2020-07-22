@@ -151,7 +151,7 @@ function techList(technologies,name) {
 } return 'Vazio!';
 }
 
-// Desafio 11
+// Desafio 11 
 function generatePhoneNumber(arrayNumber) {
   let phoneNumber = 0;
   let listNumber = arrayNumber.sort();
