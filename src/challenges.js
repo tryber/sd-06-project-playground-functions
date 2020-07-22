@@ -10,21 +10,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(phrase) {
-  let accumulator = '';
-  let newList = [];
-  for (let i = 0; i < phrase.length; i += 1) {
-    let element = phrase[i]
-    if (element !== ' ') {
-      accumulator += element;
-    } else {
-      newList.push(accumulator);
-      accumulator = '';
-    }
-  }
-  novaLista.push(accumulator)
-  return novaLista;
-}
+function splitSentence(string) {
+  return string.split(" ");
 }
 
 // Desafio 4
