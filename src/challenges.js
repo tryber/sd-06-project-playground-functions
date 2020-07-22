@@ -75,7 +75,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(sentence) {
-  let resultado = ' ';
+  let resultado = '';
   for (let i = 0; i < sentence.length; i += 1) {
     switch (sentence[i]) {
       case 'a':
@@ -101,7 +101,7 @@ function encode(sentence) {
 }
 
 function decode(sentence) {
-  let resultado = ' ';
+  let resultado = '';
   for (let i = 0; i < sentence.length; i += 1) {
     switch (sentence[i]) {
       case '1':
