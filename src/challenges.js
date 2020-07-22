@@ -203,7 +203,7 @@ function generatePhoneNumber(arrayTelefone) {
       if (phoneN1 === phoneN2) {
         maisDe3Vezes += 1;
       }
-      if (maisDe3Vezes < 3){
+      if (maisDe3Vezes >= 3){
         break;
       }
     }
@@ -213,7 +213,7 @@ function generatePhoneNumber(arrayTelefone) {
   }else{
     let escrevendoNumero = "";     
     for (let numero in arrayTelefone){
-      if (arrayTelefone[numero] < 0 || arrayTelefone[numero] > 9 || maisDe3Vezes < 3){        
+      if (arrayTelefone[numero] < 0 || arrayTelefone[numero] > 9 || maisDe3Vezes <= 3){        
         return "não é possível gerar um número de telefone com esses valores"      
         break;
       }else if (numero === "0"){
