@@ -235,12 +235,11 @@ function generatePhoneNumber(arr) {
     }
     arrRepetidos[n-1] += 1;
   }
-  console.log(arrRepetidos);
 
   if(Math.max.apply(null, arrRepetidos) >= 3){
     return "não é possível gerar um número de telefone com esses valores"
   }
-  
+
   else {
     let ddd = arr.slice(0,2).join("");
     let num1 = arr.slice(2,7).join("");
@@ -258,8 +257,26 @@ console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7])
 // Desafio 12 // Condição de existência de um triângulo
 
 function triangleCheck(linhaA,linhaB,linhaC) {
-  // seu código aqui
+  
+  let op1=linhaA<linhaB+linhaC
+  let op2=linhaB<linhaA+linhaC
+  let op3=linhaC<linhaA+linhaB
+  let op4=Math.abs(linhaA>linhaB-linhaC)
+  let op5=Math.abs(linhaB>linhaA-linhaC)
+  let op6=Math.abs(linhaC>linhaA-linhaB)
+
+  if (op1 && op2 && op3 && op4 && op5 && op6){
+    return true
+  }
+  else {
+    return false
+  }
+
+
 }
+
+console.log(triangleCheck(10, 14, 8));
+
 
 // Desafio 13 // Bem vindo ao Bar da Trybe!
 
