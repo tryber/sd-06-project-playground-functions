@@ -115,37 +115,38 @@ function techList(lista, nome) {
 }
 
 // Desafio 11
-// criando uma função para ferificar se existem números duplicados
+// criando uma função para verificar se existem números duplicados
 function verificaNumeroRepetido(numero, arrayUtilizado) {
-  let verificarNumero;
-  for (let contador = 0; contador < numero.length; numero += 1) {
+  let verificarNumero = 0;
+  for (let contador in arrayUtilizado) {
     if (arrayUtilizado[contador] === numero) {
       verificarNumero += 1;
     }
   }
+  return verificarNumero;
 }
 // Vou pegar a função acima (verifica numero repetido) e passar ela numero por numero 
 function validaMenorQueTres(arrayUtilizado) {
-  let resposta;
+  let resposta = 0;
   for (let contador = 0; contador < arrayUtilizado.length; contador += 1) {
-    resposta = verificaNumeroRepetido(arrayUtilizado.contador, arrayUtilizado);
-    if ( resposta > 2) {
-      return true;
+    resposta = verificaNumeroRepetido(arrayUtilizado[contador], arrayUtilizado);
+    if (resposta > 2) {
+      return resposta;
     }
   }
-  return false;
+  return resposta;
 }
 // juntando tudo
 function generatePhoneNumber(meusNumeros) {
   // verificar se o numero é diferente de 11
   if (meusNumeros.length !== 11) {
     return "Array com tamanho incorreto."
-  } 
+  }
   for (let numero = 0; numero < meusNumeros.length; numero += 1) { //Passando numero por numero
-    let verRepetidos = validaMenorQueTres(numero);
-    if (meusNumeros[numero] < 0 || meusNumeros[numero] > 9 || verRepetidos) {
+    let verRepetidos = validaMenorQueTres(meusNumeros);
+    if (meusNumeros[numero] < 0 || meusNumeros[numero] > 9 || verRepetidos > 2) {
       return "não é possível gerar um número de telefone com esses valores";
-    }    
+    }
   }
   return "(" + meusNumeros[0] + meusNumeros[1] + ") " + meusNumeros[2] + meusNumeros[3] + meusNumeros[4] + meusNumeros[5] + meusNumeros[6] + "-" + meusNumeros[7] + meusNumeros[8] + meusNumeros[9] + meusNumeros[10];
 }
