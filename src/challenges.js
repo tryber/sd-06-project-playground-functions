@@ -183,7 +183,7 @@ function techList(arrayTecnologias, name) {
     for (let indiceTec in ordenarArray){
       saidaTec.push({
         tech: ordenarArray[indiceTec],
-        nome: name,
+        nome: name
       });
     }
     return saidaTec;
