@@ -166,7 +166,7 @@ function techList(tecnologias,name) {
   // atribui ao atributo 'name' de cada 'tecnologia' o valor da string 'name' passado como input para função principal.
   let techs = tecnologias.sort().map(function(tecnologia) {return{tech: tecnologia,name:name}})
   // seu código aqui
-    return console.log(techs);
+    return techs;
 }
 
 
