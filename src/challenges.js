@@ -114,61 +114,60 @@ function catAndMouse(posMouse,posCat1,posCat2) {
 
 // Desafio 9
 function encode(string) {
-    //trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
-  // inicializando mapa
   let letras = string.split('');
   let vogais = ['a','e','i','o','u'];
   let myMap = new Map();
-
   //setando mapa
   for(let i=0;i<vogais.length;i+=1){
     myMap.set(vogais[i], i+1);
   }
-  console.log(myMap.get('a'));
-
   for(let i in letras){
     const letra = letras[i];
     if(myMap.has(letra)){
       letras[i] = myMap.get(letra)
     }    /* */
   }
+  return letras.join('');
+}
 
-
-
-
-
-
-
-
-
-
-
-
- /*a -> 1 \
+/*a -> 1 \
 e -> 2 \
 i -> 3 \
 o -> 4 \
 u -> 5 */
    //varrer o array
+function decode(stringEncoded) {
+  let myMap = new Map();
+  let vogais = ['a','e','i','o','u'];
+  let letras = stringEncoded.split('');
 
+  for(i in vogais){
+    myMap.set((parseInt(i)+1).toString(), vogais[i]);
+  }
+  for(i in letras){
+    let num = letras[i];
+    if(myMap.has(num)){
+      letras[i] = myMap.get(num);
+    }
+  }
+  return letras.join('');
 }
-function comparaElemArray(element,array){
-
-}
 
 
-
-encode('Paulo eiei');
-
-function decode() {
-  /*A segunda função deverá se chamar `decode` e faz o contrário de `encode` - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de `decode` seja `"h3 th2r2!"`, o retorno deverá ser `"hi there!"`).*/
-  // seu código aqui
-}
 
 // Desafio 10
-function techList() {
+function techList(tecnologias,name) {
+  //função sorte oganiza o array tecnologia
+  //para cada elemento em tecnologias essa função define um objeto baseado em um valor de string do array.
+  // seta o atributo tech baseado no valor da string,
+  // alem disso define outro atributo com o nome 'nome'
+  // atribui ao atributo nome de cada tecnologia o valor da string passado como input para função principal.
+  let techs = tecnologias.sort().map(function(tecnologia) {return{tech: tecnologia,nome:name}})
   // seu código aqui
+    return console.log(techs);
 }
+
+
 
 // Desafio 11
 function generatePhoneNumber() {
