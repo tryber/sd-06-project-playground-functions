@@ -3,22 +3,22 @@ function compareTrue(value1, value2) {
     //booleano simples
     return value1 && value2;
 }
-console.log(compareTrue(2, 2))
-    // Desafio 2
+//console.log(compareTrue(2, 2))
+// Desafio 2
 function calcArea(base, altura) {
     //fazer a conta
     let result = ((base * altura) / 2);
     return result;
 }
-console.log(calcArea(3, 2))
-    // Desafio 3
+//console.log(calcArea(3, 2))
+// Desafio 3
 function splitSentence(sentence) {
     //usar function split
     divisao = sentence.split(' ');
     return divisao;
 }
-console.log(splitSentence("hello world"))
-    // Desafio 4
+//console.log(splitSentence("hello world"))
+// Desafio 4
 function concatName(nomesConcatenados) {
     // criar const com o ultimo 
     let palavra1 = nomesConcatenados[nomesConcatenados.length - 1]
@@ -27,7 +27,7 @@ function concatName(nomesConcatenados) {
     return resultado
 }
 let array = ["asda", "qweqweq", "zxczxc", "poipo"]
-console.log(concatName(array))
+    //console.log(concatName(array))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -40,7 +40,7 @@ function footballPoints(wins, ties) {
         //retornar pontos
     return campeonato
 }
-console.log(footballPoints(1, 2))
+//console.log(footballPoints(1, 2))
 
 // Desafio 6
 function highestCount(numbers) {
@@ -66,20 +66,22 @@ function highestCount(numbers) {
     //retornar contagem
     return freq
 }
-let entrada = [1, 2, 3, 5, 5, 5, 5]
-console.log(highestCount(entrada))
+//let entrada = [1, 2, 3, 5, 5, 5, 5]
+//console.log(highestCount(entrada))
 
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-    let distCatMouse1 = cat1 - mouse;
-    let distCatMouse2 = cat2 - mouse;
-    if (distCatMouse1 < distCatMouse2) {
+    let distCatMouse1 = Math.abs(cat1 - mouse)
+    let distCatMouse2 = Math.abs(cat2 - mouse)
+    if (distCatMouse1 > distCatMouse2) {
         return "cat1";
-    } else if (distCatMouse1 > distCatMouse2) {
+    } else if (distCatMouse1 < distCatMouse2) {
         return "cat2";
     }
-    return "os gatos trombam e o rato foge";
+    if (distCatMouse1 === distCatMouse2) {
+        return "os gatos trombam e o rato foge";
+    }
 }
 console.log(catAndMouse(-6, 6, 0))
 
@@ -100,8 +102,8 @@ function fizzBuzz(numbers) {
         console.log(resposta)
     }
 }
-let dumb = [1, 5, 15, 89, 100, 3, 7]
-fizzBuzz(dumb)
+//let dumb = [1, 5, 15, 89, 100, 3, 7]
+//fizzBuzz(dumb)
 
 // Desafio 9
 function encode() {
