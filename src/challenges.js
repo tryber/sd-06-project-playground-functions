@@ -212,9 +212,9 @@ let soma = 0;
 
 soma = numAbsB - numAbsC ;
   if (soma < numAbsA && numAbsB + numAbsC) {
-    return ('TRUE');
+    return ('true');
   }else {
-    return ('FALSE');
+    return ('false');
   }
 }
 
