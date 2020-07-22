@@ -147,7 +147,6 @@ function generatePhoneNumber(array){
   }
   return phoneNumber
 }
-  console.log(generatePhoneNumber([4, 4, 1, 1, 5, 6, 7, 8, 9, 0, 0]))
 
 // Desafio 12
 function triangleCheck(a,b,c) {
@@ -171,7 +170,6 @@ function hydrate(string){
   }
   return soma + " copo de água"
 }
-
 
 module.exports = {
   calcArea,
