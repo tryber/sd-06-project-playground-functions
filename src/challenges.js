@@ -24,7 +24,7 @@ function splitSentence(phrase) {
 // Desafio 4
 
 function concatName(word) {
-  return (word[word.lenght - 1] + ", " + word[0]);
+  return (word[word.length - 1] + ", " + word[0]);
 }
 
 // Desafio 5
@@ -44,8 +44,22 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+function fizzBuzz(numb) {
+  let newArray = []
+
+  for (i in numb) {
+    if (numb[i] % 3 === 0 && numberArray[i] % 5 != 0) {
+      newArray.push("fizz");
+    } else if (numb[i] % 5 === 0 && numb[i] % 3 != 0) {
+      newArray.push("buzz");
+    } else if (numb[i] % 3 === 0 && numb[i] % 5 === 0) {
+      newArray.push("fizzBuzz")
+    } else {
+      newArray.push("bug!")
+    }
+  }
+  return (newArray)
 }
 
 // Desafio 9
