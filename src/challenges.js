@@ -186,7 +186,7 @@ function techList(nomesTec, nome) {
   if (nomesTec.length==0){
     return "Vazio!"
   }
-  
+
   for (let i in nomesTec){
     obj={
       tech:nomesTec[i],
@@ -228,19 +228,18 @@ function generatePhoneNumber(arr) {
 
   for (let i=0; i<arr.length; i+=1){
 
-    let idx = arr.indexOf(i);
+    let n = arr[i];
 
-    while (idx != -1) {
-      arrRepetidos.push(idx);
-      idx = arr.indexOf(i, idx + 1);
-    }
 
     if (arr[i]<0 || arr[i]>9 ){
       return "não é possível gerar um número de telefone com esses valores"
     }
+
+    arrRepetidos[n-1] += 1;
+  
   }
 
-  if(arrRepetidos.length>=3){
+  if(Math.max(arrRepetidos) >= 3){
     return "não é possível gerar um número de telefone com esses valores"
   }
 
@@ -254,7 +253,7 @@ function generatePhoneNumber(arr) {
 
 }
 
-console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8])
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7])
 )
 
 
