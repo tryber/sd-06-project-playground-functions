@@ -131,7 +131,7 @@ function techList(technologies, name) {
     for (let i = 0; i < technologies.length; i += 1) {
       objects.push({
         tech: technologies[i],
-        "name": name,
+        'name': name,
       });
     }
     results = objects;
