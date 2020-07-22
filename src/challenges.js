@@ -144,7 +144,7 @@ function generatePhoneNumber(array) {
 
   for (let i = 0; i < array.length; i += 1) {
     if (0 > array[i] || array[i] > 9) {
-      return "não é possivel gerar um número de telefone com esses valores";
+      return "não é possível gerar um número de telefone com esses valores";
       break;
     }
     for (let j = 1; j < array.length; j += 1) {
