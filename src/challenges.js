@@ -133,13 +133,50 @@ function techList(tech, name) {
   return "Vazio!";
 }
 
-console.log (techList([], "alexandre"));
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
-}
+function generatePhoneNumber(array) {
+  let result = "(";
+  let cont = 1;
 
+  if (array.length !== 11) {
+    return "Array com tamanho incorreto.";
+  }
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (0 > array[i] || array[i] > 9) {
+      return "não é possivel gerar um número de telefone com esses valores";
+      break;
+    }
+    for (let j = 1; j < array.length; j += 1) {
+      if (array[i] === array[j]) {
+        cont += 1;
+      }
+      if (cont >= 3) {
+        return "não é possivel gerar um número de telefone com esses valores";
+      }
+    }
+    j = i + 1;
+    cont = 1;
+  }
+
+  if (array.length === 11) {
+    for ( i = 0; i <= 1; i += 1) {
+      result += array[i];
+    }
+    result += ") "
+
+    for (i = 2; i <= 6; i+= 1) {
+      result += array[i];
+    }
+    result += "-";
+
+    for (i = 7; i <= 10; i += 1) {
+      result += array[i];
+    }
+  return result;
+  }
+}
+console.log (generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
