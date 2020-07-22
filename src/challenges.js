@@ -82,8 +82,8 @@ let rato = 10;
 let gato1 = 2;
 let gato2 = 1;
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaGato1 = mouse - cat1; //9
-  let distanciaGato2 = mouse - cat2; //8
+  let distanciaGato1 = Math.abs(mouse - cat1); //9
+  let distanciaGato2 = Math.abs(mouse - cat2); //8
   if(distanciaGato1 > distanciaGato2) {
     console.log("cat2")
     return "cat2";
