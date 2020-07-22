@@ -80,8 +80,7 @@ function catAndMouse(cat1, cat2, mouse) {
     }
     if (distCatMouse1 < distCatMouse2) {
         return "cat1";
-    }
-    if (distCatMouse1 === distCatMouse2) {
+    } else {
         return 'os gatos trombam e o rato foge';
     }
 }
@@ -94,11 +93,11 @@ function fizzBuzz(sequel) {
         //criar for in ou for 
     for (let position in sequel) {
         //condições de inserção de fizz, buzz e bug!
-        if (sequel[position] % 3 == 0 && sequel[position] % 5 == 0) {
+        if (sequel[position] % 3 === 0 && sequel[position] % 5 === 0) {
             fizzBuzzArray.push("fizzBuzz");
-        } else if (sequel[position] % 3 == 0) {
+        } else if (sequel[position] % 3 === 0) {
             fizzBuzzArray.push("fizz");
-        } else if (sequel[position] % 5 == 0) {
+        } else if (sequel[position] % 5 === 0) {
             fizzBuzzArray.push("Buzz");
         } else {
             fizzBuzzArray.push("bug!");
