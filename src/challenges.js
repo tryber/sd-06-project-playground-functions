@@ -1,36 +1,72 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(valueOne, valueTwo) {
+  if (valueOne && valueTwo) {
+    return true;
+  } else {
+    return false;
+  };
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringValue) {
+  let newArray = []; splitWord = "";
+  for (let i = 0; i < stringValue.length; i += 1) {
+    if (stringValue[i] != " ") {
+      splitWord = splitWord + stringValue[i];
+    } else {
+      newArray.push(splitWord);
+      splitWord = "";
+    };
+  };
+  return newArray;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayValue) {
+  return arrayValue[arrayValue.length - 1] + ", " + arrayValue[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winMatch = 3, tieMatch = 1;
+
+  return (winMatch * wins) + (tieMatch * ties);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highestValue = 0, count = 0;
+
+  for (value in array) {
+    if (array[value] > highestValue) {
+      highestValue = array[value];
+      count += 1;
+      if (highestValue === array[value]) {
+        count += 1;
+      };
+    };
+  };
+
+  return count;
+
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Dist = mouse - cat1, cat2Dist = mouse - cat2;
+
+  if (cat1Dist < cat2Dist) {
+    return "cat1";
+  } else if (cat2Dist < cat1Dist) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  };
 }
 
 // Desafio 8
