@@ -20,7 +20,7 @@ function concatName(array) {
   let primeiroItem = array[0];
   let ultimoitem = array[array.length - 1];
   result = (ultimoitem + ", " +  primeiroItem);
-  return 
+  return result ;
 }
 
 // Desafio 5
