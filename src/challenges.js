@@ -221,15 +221,15 @@ function generatePhoneNumber(array) {
 
 
 // Desafio 12
-function triangleCheck(line) {
-  let sideAB = line[0] + line[1];
-  let sideAC = line[0] + line[2];
-  let sideBC = line[1] + line[2];
-  let differenceAB = Math.abs (line[0]-line[1]);
-  let differenceAC = Math.abs (line[0]-line[2]);
-  let differenceBC = Math.abs (line[1]-line[2]);
+function triangleCheck(lineA, lineB, lineC) {
+  let sideAB = lineA + lineB;
+  let sideAC = lineA + lineC;
+  let sideBC = lineB + lineC;
+  let differenceAB = Math.abs (lineA-lineB);
+  let differenceAC = Math.abs (lineA-lineC);
+  let differenceBC = Math.abs (lineB-lineC);
 
-  if (((line[2] < sideAB) &&  (line[2] > differenceAB)) && ((line[1] < sideAC) && (line[1] > differenceAC )) && ((line[0] < sideBC) && (line[0] > differenceBC))){
+  if (((lineC < sideAB) &&  (lineC > differenceAB)) && ((lineB < sideAC) && (lineB > differenceAC)) && ((lineA < sideBC) && (lineA > differenceBC))){
     return true;
   }else {
     return false;
