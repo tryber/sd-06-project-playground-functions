@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(v1, v2) {
   // seu código aqui
-  return (v1 === true && v2 === true) ? true : false;
+  return v1 && v2 ? true : false;
 }
 
 // Desafio 2
@@ -57,22 +57,22 @@ function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge'
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return 'cat1'
-  } else {
-    return 'cat2'
+    return 'cat1' 
   }
+    return 'cat2'
 }
+
 
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
   let arrayResultado = [];
   for (let i = 0; i<array.length; i += 1) {
-    if ((array[i] % 3===0)&&(array[i] % 5===0)) {
+    if ((array[i]%3 === 0)&&(array[i]%5 === 0)) {
       arrayResultado.push('fizzBuzz');
-    } else if(array[i] % 3===0) {
+    } else if(array[i]%3 === 0) {
       arrayResultado.push('fizz');
-    } else if(array[i] % 5===0) {
+    } else if(array[i]%5 === 0) {
       arrayResultado.push('buzz');
     } else {
       arrayResultado.push('bug!');
@@ -174,14 +174,16 @@ function generatePhoneNumber(numbers) {
       }
     }
   }
-  return '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
+  return '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] 
+  + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
 }
 
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  return (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC), lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC), lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) ? true : false;
+  return (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC), lineB < (lineA + lineC) &&
+   lineB > Math.abs(lineA - lineC), lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) ? true : false;
 }
 
 // Desafio 13
