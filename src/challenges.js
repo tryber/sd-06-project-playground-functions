@@ -157,32 +157,35 @@ console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Fabi"));
 
 // Desafio 11
 function generatePhoneNumber(array) { 
-
-let contador = 0;
-
-if (array.length > 11 || array.length < 11) {
-    return "Array com tamanho incorreto.";
-    } else {
-        for (let index = 0; index < array.length; index += 1) {
-            if (array[index] < 0 || array[index] > 9) {
-            return "não é possível gerar um número de telefone com esses valores";
-            }
-            else if (array[index] === array[index + 1]) {
-                contador = contador + 1;
-                if (contador > 1) {
+  let contRepetido = 0;
+  let contNumero = 0; 
+  if (array.length > 11 || array.length < 11) {
+      return "Array com tamanho incorreto.";
+      } else {
+          for (let index in array) {              
+              for (let index2 in array) {
+              let verificaNumero = array[index];
+              if (array[index] < 0 || array[index] > 9) {
+                  return "não é possível gerar um número de telefone com esses valores";
+              } else if (verificaNumero === array[index2]) {
+                contNumero++;
+                }
+                }
+                if (contNumero > contRepetido) {
+                contRepetido = contNumero;
+                }
+                contNumero = 0;               
+               if(contRepetido > 2) {
                 return "não é possível gerar um número de telefone com esses valores";
-                break;
-                }                
-            } else {
-                if (index === array.length - 1) {
-                return "(" + array[0] + array[1] + ") " + array[2] + array[3] + array[4] + array[5] + array[6] + "-" + array[7] + array[8] + array[9] + array[10];
+               } else if (index == 10) {
+              //  if (index === array.length - 1) {
+                    return "(" + array[0] + array[1] + ") " + array[2] + array[3] + array[4] + array[5] + array[6] + "-" + array[7] + array[8] + array[9] + array[10];
+              //  }
+               } 
             }
-        } 
-    }
-    }
+          }
 }
-
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
