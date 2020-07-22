@@ -183,7 +183,7 @@ function techList(arrayTecnologias, name) {
     for (let indiceTec in ordenarArray){
       saidaTec.push({
         tech: ordenarArray[indiceTec],
-        nome: name
+        nome: name,
       });
     }
     return saidaTec;
@@ -197,12 +197,23 @@ console.log(techList(valor1, valor2)); */
 // Desafio 11
 function generatePhoneNumber(arrayTelefone) {
   // seu código aqui
+  for (let phoneN1 in arrayTelefone) {
+    let maisDe3Vezes = 0;
+    for (let phoneN2 in arrayTelefone) {
+      if (phoneN1 === phoneN2) {
+        maisDe3Vezes += 1;
+      }
+      if (maisDe3Vezes < 3){
+        break;
+      }
+    }
+  }
   if (arrayTelefone.length !== 11){
     return "Array com tamanho incorreto."    
   }else{
     let escrevendoNumero = "";     
     for (let numero in arrayTelefone){
-      if (arrayTelefone[numero] < 0 || arrayTelefone[numero] > 9){        
+      if (arrayTelefone[numero] < 0 || arrayTelefone[numero] > 9 || maisDe3Vezes < 3){        
         return "não é possível gerar um número de telefone com esses valores"      
         break;
       }else if (numero === "0"){
