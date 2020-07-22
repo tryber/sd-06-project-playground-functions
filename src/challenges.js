@@ -18,8 +18,8 @@ function splitSentence(string) {
 function concatName(array) {
   let result;
   let primeiroItem = array[0];
-  let ultimoitem = array[array.length - 1];
-  result = (ultimoitem + ", " +  primeiroItem);
+  let ultimoItem = array[array.length - 1];
+  result = (ultimoItem + ", " +  primeiroItem);
   return result ;
 }
 
