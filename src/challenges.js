@@ -72,8 +72,8 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-    let distCatMouse1 = Math.abs(cat1 - mouse)
-    let distCatMouse2 = Math.abs(cat2 - mouse)
+    let distCatMouse1 = Math.abs(cat1 - mouse);
+    let distCatMouse2 = Math.abs(cat2 - mouse);
     if (distCatMouse1 > distCatMouse2) {
         return "cat1";
     } else if (distCatMouse1 < distCatMouse2) {
