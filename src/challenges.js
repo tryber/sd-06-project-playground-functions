@@ -121,7 +121,7 @@ function decode(words) {
 }
 
 // Desafio 10
-function techList(technologies, name) {
+function techList(technologies, nameStudent) {
   let results;
   if (technologies.length === 0) {
     results = 'Vazio!';
@@ -131,7 +131,7 @@ function techList(technologies, name) {
     for (let i = 0; i < technologies.length; i += 1) {
       objects.push({
         tech: technologies[i],
-        name: name,
+        name: nameStudent,
       });
     }
     results = objects;
