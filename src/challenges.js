@@ -158,8 +158,6 @@ function generatePhoneNumber(array){
     return phoneNumber
   }
   
-console.log(generatePhoneNumber([1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1]))
-
 // Desafio 12
 function triangleCheck(a,b,c) {
   let absA = Math.abs(a);
