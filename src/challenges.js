@@ -49,7 +49,7 @@ function splitSentence(myText) {
 // ---------------- Desafio 4
 
 function concatName(myName) {
-  let nameConcat = `${myName[myName.length - 1]} , ${myName[0]}`;
+  let nameConcat = myName[myName.length - 1] + ' ,' + myName[0];
   return nameConcat;
 }
 // let name = ['Ricardo', 'Alexandre', 'de', 'Souza', 'Ribeiro']
