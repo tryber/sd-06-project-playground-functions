@@ -165,7 +165,7 @@ function techList(tecnologias,name) {
   // alem disso define outro atributo com o nome 'nome'
   // atribui ao atributo 'name' de cada 'tecnologia' o valor da string 'name' passado como input para função principal.
   let techs = tecnologias.sort().map(function(tecnologia) {
-    if(tecnologia == null){
+    if(tecnologia == ''){
     return{
       tech: 'Vazio!',
       name: name
@@ -181,6 +181,7 @@ function techList(tecnologias,name) {
   // seu código aqui
     return techs;
 }
+
 
 
 
