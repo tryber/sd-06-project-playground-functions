@@ -249,7 +249,7 @@ function generatePhoneNumber(arr) {
     return "(" + ddd + ") " + num1 + "-" + num2
   }
 }
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7])
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])
 )
 
 
