@@ -147,12 +147,15 @@ function techList(arr, name) {
 }
 
 // Desafio 11
-function checkIfRepeatedThreeTimes(arr) {
+function checkConditions(arr) {
   let count = 0;
   let arrCount = [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0]];
 
 
   for (let index = 0; index < arr.length; index += 1) {
+    if (!arrCount[arr[index]]) {
+      return false;
+    }
     count = arrCount[arr[index]][1];
     arrCount[arr[index]][1] = count + 1;
 
@@ -163,22 +166,18 @@ function checkIfRepeatedThreeTimes(arr) {
   return true;
 }
 
-function checkIfLessThanZeroOrGreaterThanNine(arr) {
-  return arr.every(element => element >= 0 && element <= 9);
-}
-
 function generatePhoneNumber(arr) {
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
-  if (!checkIfRepeatedThreeTimes(arr) || !checkIfLessThanZeroOrGreaterThanNine(arr)) {
+  if (!checkConditions(arr)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return `(${arr.slice(0, 2).join('')}) ${arr.slice(2, 7).join('')}-${arr.slice(7, 11).join('')}`;
 }
 
-console.log(generatePhoneNumber([1, 1, 3, 2, 9, 9, 3, 9, 6, 8, 7]));
+console.log(generatePhoneNumber([1, 1, 3, 2, 2, 9, 3, 9, 6, 8, 7]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
