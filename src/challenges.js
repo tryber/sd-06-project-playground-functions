@@ -154,7 +154,7 @@ function generatePhoneNumber(meusNumeros) {
 // Desafio 12
 function triangleCheck(linha1, linha2, linha3) {
   // seu código aqui
-  if (linha1 < linnha2 + linha3 && linha1 > Math.abs(linha2 - linha3)) {
+  if (linha1 < linha2 + linha3 && linha1 > Math.abs(linha2 - linha3)) {
     return true;
   } else if (linha2 < linha1 + linha3 && linha2 > Math.abs(linha1 - linha3)) {
     return true;
