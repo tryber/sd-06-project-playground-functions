@@ -201,36 +201,37 @@ function generatePhoneNumber(numeros) {
     if(count >= 3 || telNumber[i] > 9 || telNumber[i] < 0 ){
       return 'não é possível gerar um numero de telefone com esses valores'
     }
-  }
-
-
-  if(telNumber.length === 11){
-    let newNumber = [];
-    for(let i in telNumber){
-      let numero = telNumber[i]
-      if(i == 0){
-        newNumber.push('(');
-        newNumber.push(numero);
-      }
-      else if(i == 2 ){
-        newNumber.push(')');
-        newNumber.push(' ');
-        newNumber.push(numero);
-      }
-      else if(i == 7){
-        newNumber.push('-');
-        newNumber.push(numero);
+    else{
+      if(telNumber.length === 11){
+        let newNumber = [];
+        for(let i in telNumber){
+          let numero = telNumber[i]
+          if(i == 0){
+            newNumber.push('(');
+            newNumber.push(numero);
+          }
+          else if(i == 2 ){
+            newNumber.push(')');
+            newNumber.push(' ');
+            newNumber.push(numero);
+          }
+          else if(i == 7){
+            newNumber.push('-');
+            newNumber.push(numero);
+          }
+          else{
+            newNumber.push(numero);
+          }
+        }
+        return newNumber.join('');
       }
       else{
-        newNumber.push(numero);
+        return 'Array com tamanho incorreto.'
       }
+
     }
-    return newNumber.join('');
   }
-  else{
-    return 'Array com tamanho incorreto.'
-  }
-  // seu código aqui
+
 }
 
 
