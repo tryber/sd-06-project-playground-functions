@@ -95,7 +95,10 @@ else {
 } //else
 
   } // for
+  return arrayString
 } // function
+console.log(fizzBuzz([2, 8, 15, 90, 25]));
+
 
 // Desafio 9
 function encode() {
