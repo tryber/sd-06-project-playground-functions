@@ -218,18 +218,18 @@ function generatePhoneNumber(array) {
   return formattedNumber;
 
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 
 // Desafio 12
 function triangleCheck(line) {
-  let lineA = line[0];
-  let lineB = line[1];
-  let lineC = line[2];
-  let sideAB = lineA + lineB;
-  let sideAC = lineA + lineC;
-  let sideBC = lineB + lineC;
+  let sideAB = line[0] + line[1];
+  let sideAC = line[0] + line[2];
+  let sideBC = line[1] + line[2];
+  let differenceAB = Math.abs (line[0]-line[1]);
+  let differenceAC = Math.abs (line[0]-line[2]);
+  let differenceBC = Math.abs (line[1]-line[2]);
 
-  if ((lineC < sideAB) && (lineB < sideAC) && (lineA < sideBC)){
+  if (((line[2] < sideAB) &&  (line[2] > differenceAB)) && ((line[1] < sideAC) && (line[1] > differenceAC )) && ((line[0] < sideBC) && (line[0] > differenceBC))){
     return true;
   }else {
     return false;
