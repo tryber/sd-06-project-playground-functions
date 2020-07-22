@@ -183,18 +183,13 @@ function techList(tecnologias,name) {
 
 }
 
-console.log(techList([],'paulo'));
+
 
 
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
-  /*
-  Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], `generatePhoneNumber` deverá retornar `(12) 34567-8901`
 
-  Se a função receber um array com tamanho diferente de 11, a mesma deve retornar `"Array com tamanho incorreto."`.
-
-- Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, `generatePhoneNumber` deverá retornar a string `"não é possível gerar um número de telefone com esses valores"`.*/
   let telNumber = [].concat(numeros);
   for(i in telNumber){
     let count=0
@@ -203,7 +198,7 @@ function generatePhoneNumber(numeros) {
         count+=1;
       }
     }
-    if(count >= 3 ){
+    if(count >= 3 || telNumber[i] > 9 || telNumber[i] < 0 ){
       return 'não é possível gerar um numero de telefone com esses valores'
     }
   }
