@@ -19,12 +19,12 @@ function splitSentence(word) {
   for (let i = 0; i < word.length; i += 1) {
     if (word[i] !== ' ') {
       phrase += word[i];
-    }
-    if (word[i] === ' ' || i === word.length - 1) {
+    } else {
       array.push(phrase);
       phrase = '';
     }
   }
+  array.push(phrase);
   return array;
 }
 
@@ -49,10 +49,9 @@ function highestCount(array) {
   for (let i = 0; i < array.length; i += 1) {
     if (array[i] > bigger) {
       bigger = array[i];
+      counter = 0;
     }
-  }
-  for (let j = 0; j < array.length; j += 1) {
-    if (array[j] === bigger) {
+    if (array[i] === bigger) {
       counter += 1;
     }
   }
@@ -87,12 +86,13 @@ function fizzBuzz(array) {
       fizz.push('buzz');
     } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       fizz.push('fizzBuzz');
-    } else if (array[i] % 3 !== 0 && array[i] % 5 !== 0) {
+    } else {
       fizz.push('bug!');
     }
   }
   return fizz;
 }
+// console.log(fizzBuzz([2, 10, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
@@ -158,11 +158,11 @@ function techList(technologies, user) {
 
 // Desafio 11
 function generatePhoneNumber(phone) {
-  let count = 0;
-  let phoneNumber = '(';
   if (phone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
+  let count = 0;
+  let phoneNumber = '(';
   for (let num1 = 0; num1 < phone.length; num1 += 1) {
     count = 0;
     for (let num2 in phone) {
@@ -183,7 +183,6 @@ function generatePhoneNumber(phone) {
   }
   return phoneNumber;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
