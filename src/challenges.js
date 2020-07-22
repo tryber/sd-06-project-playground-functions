@@ -181,27 +181,7 @@ techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas");
 
 // Desafio 11
 function generatePhoneNumber(arrayPhoneNumber) {
-  let generatedNumber = "";
-  let repetitionCount = 0;
-  let repeatedNumber = 0;
 
-  for (let index in arrayPhoneNumber) {
-    //Checar se há número repetido, e quantas vezes ele repete.
-  }
-
-  for (let index2 in arrayPhoneNumber) {
-    if (arrayPhoneNumber.length == 10 && arrayPhoneNumber[index2] > 0 && arrayPhoneNumber[index2] < 9 && repetitionCount < 3) {
-  //Concatenar o arrayPhoneNumber
-  }
-  else {
-    if (arrayPhoneNumber.length != 10) {
-      return "Array com tamanho incorreto."
-    }
-    else {
-      return "Não é possível gerar um número de telefone com esses valores."
-    }
-  }
-  return generatedNumber;
 }
 generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
