@@ -60,16 +60,30 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-let distCat1 = mouse - cat1;
-let distCat2 = mouse - cat2;
-  if (distCat1 < distCat2){
-    return "cat2";
-  } else if (distCat1 === distCat2) {
-      return "Cats gonna colide";
-  } 
-  else {
-    return "cat1";
-   }
+  let turnPositiveArray = [cat1, cat2, mouse];
+    for (let i in turnPositiveArray) {
+      if (turnPositiveArray[i] < 0) {
+      turnPositiveArray[i] *= -1;
+    }
+  }
+
+  function closerToMouse(predator, prey) {
+    if (predator > prey) {
+      return predator - prey;
+    } else if (prey > predator) {
+      return prey - predator;
+    }
+
+    return 0;
+  }
+
+  if (closerToMouse(cat1, mouse) === closerToMouse(cat2, mouse)) {
+    return 'cats gonna colide';
+  } else if (closerToMouse(cat1, mouse) < closerToMouse(cat2, mouse)) {
+    return 'cat1';
+  }
+
+  return 'cat2';
 }
 
 // Desafio 8
