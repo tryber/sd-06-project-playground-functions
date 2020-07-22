@@ -16,9 +16,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
+  let result;
   let primeiroItem = array[0];
   let ultimoitem = array[array.length - 1];
-  return (ultimoitem + ", " +  primeiroItem);
+  result = (ultimoitem + ", " +  primeiroItem);
+  return 
 }
 
 // Desafio 5
