@@ -50,9 +50,18 @@ return (wins * 3) + (ties * 1);
 // Desafio 6
 function highestCount(array) {
   let maiorNumero = array[0];
+  let contador = 0;
   for(let i = 0; i< array.lenght; i+=1){
-    return maiorNumero
+    if(array[i] > maiorNumero){
+      maiorNumero = array[i];
+    }
   }
+  for(let j = 0; j < array.lenght; j++ ){
+    if(array[j] === maiorNumero ){
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
