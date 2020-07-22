@@ -1,20 +1,14 @@
-// Desafio 11
-function generatePhoneNumber(array){
-    var phoneNumber = '('
-    if (array.length != 11)
-      return "Array com tamanho incorreto."
-      for (let i = 0; i < array.length; i++) {
-        phoneNumber += (`${array[i]}`);
-      if (array[i] < 0 || array [i]> 9){
-        return "não é possível gerar um número de telefone com esses valores"
-      }
-        if (i === 1){
-          phoneNumber += ')';
-        }
-        if (i === 6){
-          phoneNumber += '-';
-        }
+// Desafio 13
+function hydrate(string){
+    let num = string.match(/\d+/g)
+    soma = 0
+    for(i in num){
+      soma = soma + Number(num[i])
     }
-    return phoneNumber
+    if(soma <= 1){
+        return soma + " copo de água"
+    }else{
+        return soma + " copos de água"
+    }
   }
-console.log(generatePhoneNumber([4, 1, 1, 1, 1, 1, 7, 8, 9, 0, 1]))
+console.log(hydrate('1'))
