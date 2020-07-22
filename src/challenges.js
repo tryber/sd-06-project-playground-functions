@@ -198,7 +198,7 @@ function generatePhoneNumber(numeros) {
         count+=1;
       }
     }
-    if(count >= 3 || telNumber[i] > 9 || telNumber[i] < 0 ){
+    if(count >= 3 || Number(telNumber[i]) > 9 || Number(telNumber[i]) < 0 ){
       return 'não é possível gerar um número de telefone com esses valores'
     }
     else{
