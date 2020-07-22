@@ -127,21 +127,21 @@ console.log(fizzBuzz(arrayNumbers));
 
 // Desafio 9
 function encode(letrasVogais) {
-  let vogaisNumeros = lyrics.replace(/a/gi, 1);
-  vogaisNumeros = lyrics.replace(/e/gi, 2);
-  vogaisNumeros = lyrics.replace(/i/gi, 3);
-  vogaisNumeros = lyrics.replace(/o/gi, 4);
-  vogaisNumeros = lyrics.replace(/u/gi, 5);
+  let vogaisNumeros = letrasVogais.replace(/a/gi, 1);
+  vogaisNumeros = vogaisNumeros.replace(/e/gi, 2);
+  vogaisNumeros = vogaisNumeros.replace(/i/gi, 3);
+  vogaisNumeros = vogaisNumeros.replace(/o/gi, 4);
+  vogaisNumeros = vogaisNumeros.replace(/u/gi, 5);
 
   return vogaisNumeros;
 } 
 
-function decode(trocandoParaNumeros) {
-  let trocandopNumeros = swap.replace(/1/gi, 'a');
-  trocandopNumeros = swap.replace(/2/gi, 'e');
-  trocandopNumeros = swap.replace(/3/gi, 'i');
-  trocandopNumeros = swap.replace(/4/gi, 'o');
-  trocandopNumeros = swap.replace(/5/gi, 'u');
+function decode(numeros) {
+  let trocandopNumeros = numeros.replace(/1/gi, 'a');
+  trocandopNumeros = trocandopNumeros.replace(/2/gi, 'e');
+  trocandopNumeros = trocandopNumeros.replace(/3/gi, 'i');
+  trocandopNumeros = trocandopNumeros.replace(/4/gi, 'o');
+  trocandopNumeros = trocandopNumeros.replace(/5/gi, 'u');
 
   return trocandopNumeros;
 }
