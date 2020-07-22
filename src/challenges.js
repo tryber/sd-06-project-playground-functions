@@ -209,9 +209,48 @@ function techList(array, name) {
 //techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Ricardo");
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(param) {
     // seu código aqui
-}
+    if (param.length !== 11) {
+        console.log("Array com tamanho incorreto.");
+        return null;
+    } else {
+
+        for (let i = 0; i < param.length; i++) {
+
+            if (param[i] < 0 || param[i] > 9) {
+                console.log("não é possível gerar um número de telefone com esses valores");
+                return null;
+            }
+
+            let numTimes = 1;
+            for (let j = 0; j < param.length; j++) {
+
+                if (i === j) {
+
+                } else {
+
+                    if (param[j] == param[i]) {
+                        numTimes += 1;
+                    }
+
+                }
+
+            } // for interno
+
+            if (numTimes >= 3) {
+                console.log("não é possível gerar um número de telefone com esses valores");
+                return null;
+            }
+
+
+        } // for externo 
+
+        let fullNumber = "(" + param[0] + param[1] + ") " + param[2] + param[3] + param[4] + param[5] + param[6] + "-" + param[7] + param[8] + param[9] + param[10];
+        console.log(fullNumber);
+    } //else
+} //function
+generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 // Desafio 12
 function triangleCheck() {
