@@ -152,12 +152,12 @@ function generatePhoneNumber(array){
         phoneNumber += '-';
       }
       if(condiction(array) === true){
-        return "não é possível gerar um número de telefone com esses valores"
+        return 'não é possível gerar um número de telefone com esses valores'
       }
     }
     return phoneNumber
   }
-  
+
 // Desafio 12
 function triangleCheck(a,b,c) {
   let absA = Math.abs(a);
