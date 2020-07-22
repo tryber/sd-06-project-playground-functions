@@ -208,10 +208,8 @@ function triangleCheck(lineA, lineB, lineC) {
 let numAbsA = Math.abs(lineA);
 let numAbsB = Math.abs(lineB);
 let numAbsC = Math.abs(lineC);
-let soma = 0;
 
-soma = numAbsB - numAbsC ;
-  if (soma < numAbsA && numAbsB + numAbsC) {
+  if ((numAbsA < numAbsB + numAbsC) && (numAbsB < numAbsA + numAbsC) && (numAbsC < numAbsA + numAbsB)) {
     return ('true');
   }else {
     return ('false');
