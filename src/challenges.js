@@ -9,7 +9,7 @@ function calcArea(base, height) {
 }
  
 //Desafio 3
-function splitSentence(str) {
+  function splitSentence(str) {
   let word = ''
   let array = [];
     for (index in str) {
@@ -19,7 +19,7 @@ function splitSentence(str) {
         array.push(word);
         word = "";
       }
-    } 
+    }
     array.push(word);
     return array;
 }
@@ -38,7 +38,6 @@ function footballPoints(wins, ties) {
 function highestCount(array) {
   let repete = 0;
   let maior = 0;
-  
   for(let i = 0; i <= array.length - 1; i += 1) {
     if (array[i] > maior) {
         maior = array[i]
@@ -54,14 +53,14 @@ for(let j = 0; j <= array.length -1; j += 1) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 ;
-  let distCat2 ; 
+  let distCat1;
+  let distCat2; 
   distCat1 = cat1 - mouse;
   distCat2 = cat2 - mouse;
 
   if (distCat1 < 0) {
     distCat1 = distCat1 * (-1);
-  } 
+  }
   if (distCat2 < 0) {
     distCat2 = distCat2 * (-1);
   }
@@ -74,12 +73,10 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
   
- // Desafio 8
+// Desafio 8
 function fizzBuzz(array) {
   let newArray = [];
-
   for(i = 0; i <= array.length -1; i += 1) {
-      
       if ((array[i] % 3 == 0) && (array[i] % 5 == 0)) {
           newArray.push('fizzBuzz');
       } else if ((array[i] % 3 != 0) && (array[i] % 5 != 0)) {
@@ -97,9 +94,7 @@ function fizzBuzz(array) {
 function encode(inputStr) {
     var code;
     var outputStr = '';
-
   for(index = 0; index <= inputStr.length - 1; index ++){
-
   switch(inputStr[index]) {
       case 'a':
           code = '1';
@@ -127,9 +122,7 @@ function encode(inputStr) {
 function decode(inputStr) {
   var decoder;
   var outputStr = '';
-
 for(index = 0; index <= inputStr.length - 1; index ++){
-
 switch(inputStr[index]) {
     case '1':
         decoder = 'a';
@@ -149,7 +142,7 @@ switch(inputStr[index]) {
     default:
         decoder = inputStr[index];
 }    
-    outputStr += decoder
+    outputStr += decoder;
 }
   return outputStr;
 }
@@ -159,11 +152,9 @@ function techList(arrayTec, name) {
   // seu código aqui
   let newArray = [];
   arrayTec.sort();
-
   if (arrayTec.length == 0) {
     return 'Vazio!'
   }
-
   for(i = 0; i <= arrayTec.length -1; i+= 1) {
     newArray.push({tech:arrayTec[i], name:name});
   }  
@@ -172,8 +163,6 @@ function techList(arrayTec, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  // seu código aqui
-  //var array = [1,1,9,8,0,8,4,4,7,4,7]
 var repeatNumber = 0;
 var repete = 0;
 var correctNumber = '';
@@ -208,7 +197,6 @@ function triangleCheck(lineA, lineB, lineC) {
 let numAbsA = Math.abs(lineA);
 let numAbsB = Math.abs(lineB);
 let numAbsC = Math.abs(lineC);
-
   if ((numAbsA < numAbsB + numAbsC) && (numAbsB < numAbsA + numAbsC) && (numAbsC < numAbsA + numAbsB)) {
     return true;
   }else {
@@ -218,7 +206,6 @@ let numAbsC = Math.abs(lineC);
 
 // Desafio 13
 function hydrate(strDrink) {
-  
 var tiraE = strDrink.split(' e '); // Para construção do array - retiro qualquer letra e que posssa ter na String
 tiraE = tiraE.toString(); 
 var array = tiraE.split(','); // Para melhorar a construção do array aqui retiro a virgula
