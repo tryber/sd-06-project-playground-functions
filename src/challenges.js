@@ -226,7 +226,7 @@ let glassesOfWater = 0;
       glassesOfWater += parsedCharacter;
     }
   }
-  return glassesOfWater + "copo de água";  
+  return glassesOfWater + " copo de água";  
 }
 hydrate("7 cachaça, 8 cervejas e 1 copo de vinho");
 
