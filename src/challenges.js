@@ -126,28 +126,28 @@ console.log(fizzBuzz(arrayNumbers));
 
 
 // Desafio 9
-function encode(string) {
-  let vogaisNumeros = string.replace(/a/gi, 1);
-  vogaisNumeros = string.replace(/e/gi, 2);
-  vogaisNumeros = string.replace(/i/gi, 3);
-  vogaisNumeros = string.replace(/o/gi, 4);
-  vogaisNumeros = string.replace(/u/gi, 5);
+function encode(lyrics) {
+  let vogaisNumeros = lyrics.replace(/a/gi, 1);
+  vogaisNumeros = lyrics.replace(/e/gi, 2);
+  vogaisNumeros = lyrics.replace(/i/gi, 3);
+  vogaisNumeros = lyrics.replace(/o/gi, 4);
+  vogaisNumeros = lyrics.replace(/u/gi, 5);
 
   return vogaisNumeros;
 } 
 
-function decode(numeros) {
-  let trocandopNumeros = numeros.replace(/1/gi, 'a');
-  trocandopNumeros = numeros.replace(/2/gi, 'e');
-  trocandopNumeros = numeros.replace(/3/gi, 'i');
-  trocandopNumeros = numeros.replace(/4/gi, 'o');
-  trocandopNumeros = numeros.replace(/5/gi, 'u');
+function decode(swap) {
+  let trocandopNumeros = swap.replace(/1/gi, 'a');
+  trocandopNumeros = swap.replace(/2/gi, 'e');
+  trocandopNumeros = swap.replace(/3/gi, 'i');
+  trocandopNumeros = swap.replace(/4/gi, 'o');
+  trocandopNumeros = swap.replace(/5/gi, 'u');
 
   return trocandopNumeros;
 }
 
 // Desafio 10
-function techList() {
+function techList(Python) {
   // seu código aqui
 }
 
@@ -157,7 +157,7 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck(Python) {
+function triangleCheck() {
   
 }
 
