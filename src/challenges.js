@@ -40,7 +40,34 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  function catAndMouse(mouse, cat1, cat2) {
+    let run;
+    let pino1;
+    let pino2;
+    if (mouse > cat1 && mouse > cat2) {
+      pino1 = mouse - cat1;
+      pino2 = mouse - cat2;
+    } else if (mouse < cat1 && mouse < cat2) {
+      pino1 = cat1 - mouse;
+      pino2 = cat2 - mouse;
+      console.log("Pino1 : " + pino1)
+      console.log("pino2 : " + pino2)
+    } else if (mouse > cat2 && mouse < cat1) {
+      pino2 = mouse - cat2;
+      pino1 = cat1 - mouse;
+    } else if (mouse < cat2 && mouse > cat1) {
+      pino2 = cat2 - mouse;
+      pino1 = mouse - cat1;
+    }
+    if (pino1 === pino2) {
+      run = "os gatos trombam e o rato foge";
+    } else if (pino1 > pino2) {
+      run = "cat2";
+    } else {
+      run = "cat1";
+    }
+    return run;
+  }
 }
 
 // Desafio 8
