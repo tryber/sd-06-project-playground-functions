@@ -28,45 +28,58 @@ function concatName(word) {
 }
 
 // Desafio 5
+
 function footballPoints(wins, ties) {
   let points = (wins * 3) + (ties);
   return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(numeros) {
+  let contador = 0;
+  let highestNumber = numeros[0];
+
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (highestNumber < numeros[i]) {
+      highestNumber = numeros[i];
+      contador = 1;
+    } else if (highestNumber === numeros[i]) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
-  function catAndMouse(mouse, cat1, cat2) {
-    let run;
-    let pino1;
-    let pino2;
-    if (mouse > cat1 && mouse > cat2) {
-      pino1 = mouse - cat1;
-      pino2 = mouse - cat2;
-    } else if (mouse < cat1 && mouse < cat2) {
-      pino1 = cat1 - mouse;
-      pino2 = cat2 - mouse;
-      console.log("Pino1 : " + pino1)
-      console.log("pino2 : " + pino2)
-    } else if (mouse > cat2 && mouse < cat1) {
-      pino2 = mouse - cat2;
-      pino1 = cat1 - mouse;
-    } else if (mouse < cat2 && mouse > cat1) {
-      pino2 = cat2 - mouse;
-      pino1 = mouse - cat1;
-    }
-    if (pino1 === pino2) {
-      run = "os gatos trombam e o rato foge"
-    } else if (pino1 > pino2) {
-      run = "cat2"
-    } else {
-      run = "cat1"
-    }
-    return run;
+function catAndMouse(mouse, cat1, cat2) {
+  let run;
+  let pino1;
+  let pino2;
+  if (mouse > cat1 && mouse > cat2) {
+    pino1 = mouse - cat1;
+    pino2 = mouse - cat2;
+  } else if (mouse < cat1 && mouse < cat2) {
+    pino1 = cat1 - mouse;
+    pino2 = cat2 - mouse;
+    console.log("Pino1 : " + pino1)
+    console.log("pino2 : " + pino2)
+  } else if (mouse > cat2 && mouse < cat1) {
+    pino2 = mouse - cat2;
+    pino1 = cat1 - mouse;
+  } else if (mouse < cat2 && mouse > cat1) {
+    pino2 = cat2 - mouse;
+    pino1 = mouse - cat1;
   }
+  if (pino1 === pino2) {
+    run = "os gatos trombam e o rato foge"
+  } else if (pino1 > pino2) {
+    run = "cat2"
+  } else {
+    run = "cat1"
+  }
+  return run;
+}
 
 // Desafio 8
 
