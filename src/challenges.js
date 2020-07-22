@@ -16,6 +16,7 @@ function compareTrue(value1, value2) {
 // TESTE
 // console.log(compareTrue(false, false));
 
+// _______________________________________________________________________________________________
 // Desafio 2
 
 // Escreva uma função com o nome calcArea que receba um valor de base
@@ -31,6 +32,7 @@ function calcArea(base, height) {
 // TESTE
 // console.log(calcArea(5, 4));
 
+// _______________________________________________________________________________________________
 // Desafio 3
 
 // Escreva uma função com o nome splitSentence, a qual receberá uma string e
@@ -46,6 +48,7 @@ function splitSentence(word) {
 // TESTE
 // console.log(splitSentence('Hello World'));
 
+// _______________________________________________________________________________________________
 // Desafio 4
 
 // Escreva uma função com o nome concatName que, ao receber uma array
@@ -56,19 +59,15 @@ function splitSentence(word) {
 // ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'],
 // a função deverá retornar // Paolillo, Lucas.
 
-function concatName(newArray) {
-  return newArray[newArray.length - 1] + ', ' + newArray[0];
-// let myString = '${newArray[newArray.length - 1]}, ${newArray[0]}';
-// return myString
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
-// CODE CLIMATE
-// var str = "Hello, " + name + "!";
-// var str = `Hello, ${name}!`;
 
 // TESTE
-// let testArray = ['Pedrina', 'Maria', 'Julieta', 'Catarina', 'Marieta'];
-// console.log(concatName(testArray));
+let testArray = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(testArray));
 
+// _______________________________________________________________________________________________
 // Desafio 5
 
 // Escreva uma função com o nome footballPoints que receba o número de
@@ -87,6 +86,7 @@ function footballPoints(wins, ties) {
 // TESTE
 // console.log(footballPoints(12, 4));
 
+// _______________________________________________________________________________________________
 // Desafio 6
 
 // Repetição do maior número
@@ -100,14 +100,13 @@ function footballPoints(wins, ties) {
 function highestCount(numbersArray) {
   let highestNumber = 0;
   let counter = 0;
-  let index;
 
-  for (index in numbersArray) {
+  for (let index in numbersArray) {
     if (numbersArray[index] > highestNumber) {
       highestNumber = numbersArray[index];
     }
   }
-  for (index in numbersArray) {
+  for (let index in numbersArray) {
     if (numbersArray[index] === highestNumber) {
       counter += 1;
     }
@@ -115,9 +114,11 @@ function highestCount(numbersArray) {
   return counter;
 }
 
+// TESTE
 // let testArray = [9, 10, 2, 3, 9, 5, 7, 9];
 // console.log(highestCount(testArray));
 
+// _______________________________________________________________________________________________
 // Desafio 7
 
 // Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2, e que
@@ -151,6 +152,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // TESTE
 // console.log(catAndMouse(0, 3, 2));
 
+// _______________________________________________________________________________________________
 // Desafio 8
 
 // Crie uma função chamada fizzBuzz que receba uma array de números e retorne
@@ -174,9 +176,8 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(myArray) {
   let newArray = [];
-  let index;
 
-  for (index in myArray) {
+  for (let index in myArray) {
     if (myArray[index] % 3 === 0 && myArray[index] % 5 === 0) {
       newArray[index] = 'fizzBuzz';
     } else if (myArray[index] % 5 === 0) {
@@ -194,7 +195,7 @@ function fizzBuzz(myArray) {
 // let testArray = [2, 15, 7, 9, 45];
 // console.log(fizzBuzz(testArray));
 
-
+// _______________________________________________________________________________________________
 // Desafio 9
 
 // Codifique e Decodifique
@@ -216,9 +217,8 @@ function fizzBuzz(myArray) {
 
 function encode(lettersString) {
   let myStringArray = lettersString.split('');
-  let index;
 
-  for (index in myStringArray) {
+  for (let index in myStringArray) {
     switch (myStringArray[index]) {
       case 'a':
         myStringArray[index] = 1;
@@ -249,9 +249,8 @@ function encode(lettersString) {
 
 function decode(numbersString) {
   let myStringArray = numbersString.split('');
-  let index;
 
-  for (index in myStringArray) {
+  for (let index in myStringArray) {
     switch (myStringArray[index]) {
       case '1':
         myStringArray[index] = 'a';
@@ -280,6 +279,7 @@ function decode(numbersString) {
 // let stringTest = 'h3 th2r2!';
 // console.log(decode(stringTest));
 
+// _______________________________________________________________________________________________
 // Desafio 10
 
 // Lista de tecnologias
@@ -317,10 +317,12 @@ function techList(techName, name) {
   }
 }
 
+// TESTE
 // let testArray = [];
 // let testArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
 // console.log(techList(testArray, 'Zeca'));
 
+// _______________________________________________________________________________________________
 // Desafio 11
 
 // Número de telefone
@@ -338,7 +340,6 @@ function techList(techName, name) {
 
 function generatePhoneNumber(phoneNumber) {
   let numbers = 0;
-  let index;
   let threeTimesCounter = 0;
   let returnMessage = '';
   let testResult1 = false;
@@ -347,16 +348,16 @@ function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) {
     testResult1 = true;
   } else {
-    for (index in phoneNumber) {
+    for (let index in phoneNumber) {
       numbers = phoneNumber[index];
       for (let j = 0; j < phoneNumber.length; j += 1) {
         if (numbers === phoneNumber[j]) {
           threeTimesCounter += 1;
         }
       }
-        if (threeTimesCounter >= 3 || numbers < 0 || numbers > 9) {
-          testResult2 = true;
-        }
+      if (threeTimesCounter >= 3 || numbers < 0 || numbers > 9) {
+        testResult2 = true;
+      }
       threeTimesCounter = 0;
     }
   }
@@ -370,13 +371,15 @@ function generatePhoneNumber(phoneNumber) {
   return returnMessage;
 }
 
+// TESTE
 // let testArray = [1, 5, 9, 9, 7, 7, 4, 6, 4, 5, 8];
 // console.log(generatePhoneNumber(testArray));
 
+// _______________________________________________________________________________________________
 // Desafio 12
 
 // Condição de existência de um triângulo
-//Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada
+// Um triângulo é composto de três linhas: lineA, lineB e lineC. Crie uma função chamada
 // triangleCheck que deverá receber as três linhas como parâmetro e retornar se
 // é possível formar um triângulo com os valores apresentados de cada linha
 
@@ -404,12 +407,52 @@ function triangleCheck(lineA, lineB, lineC) {
   return returnMessage;
 }
 
+// TESTE
 // console.log(triangleCheck(10, 18, 8));
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+// _______________________________________________________________________________________________
+// Desafio 13 (the last, but not the least)
+
+// Segundo as regras desse bar, a cada bebida deve-se beber um copo de água
+// para que não se tenha ressaca.
+
+// Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos
+// copos de água você deve beber. Exemplos:
+
+// String recebida:
+    // "1 cerveja"
+// String retornada:
+  // "1 copo de água"
+// String recebida:
+  // "1 cachaça, 5 cervejas e 1 copo de vinho"
+// String retornada:
+  // "7 copos de água"
+
+// Notas
+
+// Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida
+// e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida.
+  
+// O número na frente de cada bebida está no intervalo entre 1 e 9.
+  
+// Dica: pesquise por algo similar a get all integers inside a string js.
+
+function hydrate(string) {
+let number = string.replace(/\D/g, "");
+let sum = 0;
+
+for (let index in number) {
+  sum += parseInt(number[index],10);
 }
+if (sum > 1) {
+  return `${sum} copos de água`;
+}
+  return `${sum} copo de água`;
+}
+
+// TESTE
+console.log(hydrate('1 cerveja'));
+// console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 
 module.exports = {
