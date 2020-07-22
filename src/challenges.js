@@ -78,30 +78,33 @@ function catAndMouse(cat1, cat2, mouse) {
         return "cat2";
     } else if (distCatMouse1 < distCatMouse2) {
         return "cat1";
-    } else if (distCatMouse1 === distCatMouse2)
+    } else {
         return 'os gatos trombam e o rato foge';
-}
-//console.log(catAndMouse(-6, 6, 0))
-
-// Desafio 8
-function fizzBuzz(numbers) {
-    let fizzBuzzArray = numbers[0]
-    for (let index = 0; index <= numbers.length; index++) {
-        let resposta = []
-        if (index % 3 == 0) {
-            resposta += "Fizz"
-        }
-        if (index % 5 == 0) {
-            resposta += "Buzz"
-        }
-        if (resposta == "") {
-            resposta = index
-        }
-        console.log(resposta)
     }
 }
-//let dumb = [1, 5, 15, 89, 100, 3, 7]
-//fizzBuzz(dumb)
+console.log(catAndMouse(-6, 6, 0))
+
+// Desafio 8
+function fizzBuzz(sequel) {
+    //determinar array vazia
+    let fizzBuzzArray = []
+        //criar for in ou for 
+    for (let position in sequel) {
+        //condições de inserção de fizz, buzz e bug!
+        if (sequel[position] % 3 == 0 && sequel[position] % 5 == 0) {
+            fizzBuzzArray.push("fizzBuzz");
+        } else if (sequel[position] % 3 == 0) {
+            fizzBuzzArray.push("fizz");
+        } else if (sequel[position] % 5 == 0) {
+            fizzBuzzArray.push("Buzz");
+        } else {
+            fizzBuzzArray.push("bug!");
+        }
+    }
+    console.log(fizzBuzzArray)
+}
+
+fizzBuzz([1, 5, 15, 89, 100, 3, 7, 30])
 
 // Desafio 9
 function encode() {
