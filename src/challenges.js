@@ -91,7 +91,7 @@ function fizzBuzz(numbers) {
 function encode(word) {
   // seu código aqui
   let newWord = [];
-  for(let i = 0; i < word.length; i += 1) {
+  for (let i = 0; i < word.length; i += 1) {
     if (word[i] === 'a') {
       newWord.push('1');
     } else if (word[i] === 'e') {
@@ -106,7 +106,7 @@ function encode(word) {
       newWord.push(word[i]);
     }
   }
-  return newWord.join("");
+  return newWord.join('');
 }
 
 function decode(word) {
@@ -153,7 +153,7 @@ function generatePhoneNumber(phoneNumber) {
   // seu código aqui
 
   // verificando inconsistência de tamanho total, só aceita === 11
-  if (phoneNumber.length != 11) {
+  if (phoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
   } else {
     // primeira condição aceita, prosegue verificando inconsistência
@@ -162,7 +162,6 @@ function generatePhoneNumber(phoneNumber) {
     while (i < phoneNumber.length) {
       if (phoneNumber[i] < 0 || phoneNumber[i] > 9) { // números da array menor que 0, maior que 9
         return 'não é possível gerar um número de telefone com esses valores';
-        break;
       }
       // 1a. e 2a. incosistências OK, verificar a 3a. antes de prosseguir
       let repeticao = 0;
@@ -177,18 +176,18 @@ function generatePhoneNumber(phoneNumber) {
         j++;
       }
     // Não inconsistênicias começar a gerar o número conforme padrão
-    if (i === 0) {
-      phone += '(' + phoneNumber[i];
-    } else if (i == 1) {
-      phone += phoneNumber[i] + ') ';
-    } else if (i == 6) {
-      phone += phoneNumber[i] + '-';
-    } else {
-      phone += phoneNumber[i];
-    }
-    i++;
-    }
-    return phone;
+      if (i === 0) {
+        phone += '(' + phoneNumber[i];
+      } else if (i === 1) {
+        phone += phoneNumber[i] + ') ';
+      } else if (i === 6) {
+        phone += phoneNumber[i] + '-';
+      } else {
+        phone += phoneNumber[i];
+      }
+      i++;
+      }
+      return phone;
   }
 }
 
@@ -217,7 +216,6 @@ function triangleCheck(lineA, lineB, lineC) {
   } else {
     return false;
   }
-
 }
 
 // Desafio 13 - OK
