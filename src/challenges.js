@@ -239,7 +239,7 @@ function generatePhoneNumber(arr) {
   
   }
 
-  if(Math.max(arrRepetidos) >= 3){
+  if(arrRepetidos.length >= 3){
     return "não é possível gerar um número de telefone com esses valores"
   }
 
@@ -253,7 +253,7 @@ function generatePhoneNumber(arr) {
 
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, 1, 0, 7])
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 7, 7, 8, 9, 0, 7])
 )
 
 
