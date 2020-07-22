@@ -204,8 +204,18 @@ for(i = 0; i <= array.length - 1; i ++) {
 } 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+let numAbsA = Math.abs(lineA);
+let numAbsB = Math.abs(lineB);
+let numAbsC = Math.abs(lineC);
+let soma = 0;
+
+soma = numAbsB - numAbsC ;
+  if (soma < numAbsA && numAbsB + numAbsC) {
+    return ('TRUE');
+  }else {
+    return ('FALSE');
+  }
 }
 
 // Desafio 13
@@ -229,7 +239,7 @@ for( var i = 0; i <= array.length -1; i ++) {
   } else {
     return agua+' copo de água'
   }
-} console.log(hydrate('2 pinga'));
+} 
 
  module.exports = {
   calcArea,
