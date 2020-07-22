@@ -126,7 +126,7 @@ console.log(fizzBuzz(arrayNumbers));
 
 
 // Desafio 9
-function encode(lyrics) {
+function encode(letrasVogais) {
   let vogaisNumeros = lyrics.replace(/a/gi, 1);
   vogaisNumeros = lyrics.replace(/e/gi, 2);
   vogaisNumeros = lyrics.replace(/i/gi, 3);
@@ -136,7 +136,7 @@ function encode(lyrics) {
   return vogaisNumeros;
 } 
 
-function decode(swap) {
+function decode(trocandoParaNumeros) {
   let trocandopNumeros = swap.replace(/1/gi, 'a');
   trocandopNumeros = swap.replace(/2/gi, 'e');
   trocandopNumeros = swap.replace(/3/gi, 'i');
@@ -148,7 +148,7 @@ function decode(swap) {
 
 // Desafio 10
 function techList(Python) {
-  // seu código aqui
+  
 }
 
 // Desafio 11
