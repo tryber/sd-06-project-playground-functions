@@ -20,7 +20,7 @@ function splitSentence(separador) {
 let strArray = [];
 let novoArray = '';
 
-for (let i = 0; i <= input.length; i += 1) {
+for (let i = 0; i <= separador.length; i += 1) {
   if (separador[i] === ' ' || i === separador.length) {
     strArray.push(novoArray);
     novoArray = '';
@@ -60,11 +60,11 @@ function catAndMouse(mouse, cat1, cat2) {
 let distanciaPrimeiro = Math.abs(mouse - cat1);
 let distanciaSegundo = Math.abs(mouse - cat2);
   if(distanciaPrimeiro < distanciaSegundo){
-    return 'cat2';
+    return 'cat1';
   } else if (distanciaSegundo === distanciaPrimeiro){
     return 'os gatos trombam e o rato foge';
   } else {
-    return 'cat1';
+    return 'cat2';
   }
 }
 
