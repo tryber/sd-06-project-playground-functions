@@ -130,18 +130,24 @@ function techList(tec, name) {
 }
 
 // Desafio 11
-function repeteTresOuMais(numbers) {
+function checkTresOuMais(nums) {
+  for (let i in nums) {
+    if (nums[i] >= 3) {
+      return true;
+    }
+  }
+  return false;
+}
+function salvaTresOuMais(numbers) {
   let nums = {};
   for (let i = 0; i < numbers.length; i += 1) {
-    if (nums[numbers[i]] >= 3) {
-      return true;
-    } else if (numbers[i] in nums) {
+    if (numbers[i] in nums) {
       nums[numbers[i]] += 1;
     } else {
       nums[numbers[i]] = 1;
     }
   }
-  return false;
+  return checkTresOuMais(nums);
 }
 function outrosNums(numbers) {
   for (let i = 0; i < numbers.length; i += 1) {
@@ -154,13 +160,13 @@ function outrosNums(numbers) {
 function generatePhoneNumber(numbers) {
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else if (repeteTresOuMais(numbers) || outrosNums(numbers)) {
+  } else if (salvaTresOuMais(numbers) || outrosNums(numbers)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
 }
 
-// console.log(generatePhoneNumber([1, 2, 3, 3, 5, 6, 1, 5, 9, 0, 2]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
