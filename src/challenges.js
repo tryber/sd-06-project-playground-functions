@@ -278,12 +278,25 @@ function triangleCheck(linhaA,linhaB,linhaC) {
 console.log(triangleCheck(10, 14, 8));
 
 
+
 // Desafio 13 // Bem vindo ao Bar da Trybe!
 
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(fraseRecebida) {
+   
+  let numeroCervejas=fraseRecebida.split("").filter(Number);
 
+  let totalAgua=0;
+
+  for (let i=0; i<numeroCervejas.length; i+=1){
+
+    totalAgua+=parseInt(numeroCervejas[i]);
+    
+  }
+
+  return totalAgua
+
+}
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 
