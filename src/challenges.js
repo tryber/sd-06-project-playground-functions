@@ -57,9 +57,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge'
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-  return 'cat1'
+    return 'cat1'
   }
-  return 'cat2'
+    return 'cat2'
 }
 
 
@@ -67,8 +67,8 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let arrayResultado = [];
-  for (let i = 0; i<array.length; i += 1) {
-    if ((array[i] %3  === 0)&&(array[i] % 5 === 0)) {
+  for (let i = 0; i < array.length; i += 1) {
+    if ((array[i] % 3  === 0) && (array[i] % 5 === 0)) {
       arrayResultado.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {
       arrayResultado.push('fizz');
@@ -144,7 +144,11 @@ function techList(tech, name) {
   let listaTech = []
   if (listaOrdenada.length > 0) {
     for (let i in listaOrdenada) {
-      listaTech.push ({ tech : listaOrdenada[i],name : name })
+      listaTech.push 
+      ({
+        tech : listaOrdenada[i],
+        name : name 
+      })
     }
   } else {
     return 'Vazio!'
@@ -182,8 +186,8 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  return (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC), 
-    lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC), 
+  return (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC),
+    lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC),
     lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA)) ? true : false;
 }
 
