@@ -218,9 +218,48 @@ console.log(techList(nomesTec, nome))
 
 // Desafio 11 // Número de telefone
 
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arr) {
+
+  let arrRepetidos=[];
+
+  if (arr.length!==11){
+    return "Array com tamanho incorreto."
+  }
+
+  for (let i=0; i<arr.length; i+=1){
+
+    let idx = arr.indexOf(i);
+
+    while (idx != -1) {
+        
+      arrRepetidos.push(idx);
+      idx = arr.indexOf(i, idx + 1);
+    }
+
+    if (i<0 || i>9 ){
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+
+    else if(arrRepetidos.length>=3){
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+
+    else {
+      let ddd = arr.slice(0,2).join("");
+      let num1 = arr.slice(2,7).join("");
+      let num2 = (arr.slice(7,11)).join("");
+
+      return "(" + ddd + ") " + num1 + "-" + num2
+    }
+
+  }
+
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])
+)
+
+
 
 // Desafio 12 // Condição de existência de um triângulo
 
