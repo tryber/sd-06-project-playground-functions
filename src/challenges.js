@@ -65,19 +65,27 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(valoresFizzBuzz) {
   let novoFizzBuzz = [];
+  let fizzBuzzStr = '';
   for (let indice = 0; indice < valoresFizzBuzz.length; indice += 1) {
-    if (valoresFizzBuzz[indice] % 3 === 0 && valoresFizzBuzz[indice] % 5 === 0) {
-      novoFizzBuzz.push('fizzBuzz');
-    } else if (valoresFizzBuzz[indice] % 3 === 0) {
-      novoFizzBuzz.push('fizz');
-    } else if (valoresFizzBuzz[indice] % 5 === 0) {
-      novoFizzBuzz.push('buzz');
-    } else {
-      novoFizzBuzz.push('bug!');
+    switch (true) {
+      case (valoresFizzBuzz[indice] % 3 === 0 && valoresFizzBuzz[indice] % 5 === 0):
+        fizzBuzzStr = 'fizzBuzz';
+        break;
+      case (valoresFizzBuzz[indice] % 3 === 0):
+        fizzBuzzStr = 'fizz';
+        break;
+      case (valoresFizzBuzz[indice] % 5 === 0):
+        fizzBuzzStr = 'buzz';
+        break;
+      default:
+        fizzBuzzStr = 'bug!';
+        break;
     }
+    novoFizzBuzz.push(fizzBuzzStr);
   }
   return novoFizzBuzz;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(fraseParaNumero) {
