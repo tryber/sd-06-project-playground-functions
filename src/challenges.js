@@ -130,7 +130,7 @@ function encode(troca) {
 }
   mensagem = "hi there!";
   console.log(encode(mensagem));
-  
+
 function decode(numberPhrase) {
   normalPhrase = "";
   for(index in numberPhrase){
@@ -160,14 +160,28 @@ let fraseNumero = encode(mensagem);
 console.log(decode(fraseNumero));
 
 // Desafio 10
-function techList() {
+function techList(ferramentas,name) {
+  ferramentas.sort();
+  if(ferramentas == ""){
+    return "Vazio!"
+  }else{
+    for(index in ferramentas){
+      ferramentas[index] = {
+        tech: ferramentas[index],
+        name: name
+      }
+    }
+    return ferramentas;
+  }
 }
+let ferramentas = ["React","Jest","HTML","CSS","Javascript"], nome = "Anderson";
+console.log(techList(ferramentas,nome));
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  
 }
-
+ 
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
