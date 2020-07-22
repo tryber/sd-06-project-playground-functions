@@ -13,15 +13,17 @@ function distancia(posA,posB){
 }
 
 
+
+
 // Desafio 1
 function compareTrue(first,second) {
-  return first && second ? true : false;
+  return first && second ? true : false
   // seu código aqui
 }
 
 // Desafio 2
 function calcArea(base,height) {
-  return (height*base)/2;
+  return (height*base)/2
   // seu código aqui
 }
 
@@ -157,12 +159,12 @@ function decode(stringEncoded) {
 
 // Desafio 10
 function techList(tecnologias,name) {
-  //função sorte oganiza o array tecnologia
-  //para cada elemento em tecnologias essa função define um objeto baseado em um valor de string do array.
-  // seta o atributo tech baseado no valor da string,
+  //função sorte """ordena""" o array tecnologias
+  //para cada elemento em tecnologias essa função define um objeto baseado em um valor string deesse elemento do array.
+  // seta o atributo tech baseado no valor do literal 'name' da string,
   // alem disso define outro atributo com o nome 'nome'
-  // atribui ao atributo nome de cada tecnologia o valor da string passado como input para função principal.
-  let techs = tecnologias.sort().map(function(tecnologia) {return{tech: tecnologia,nome:name}})
+  // atribui ao atributo 'name' de cada 'tecnologia' o valor da string 'name' passado como input para função principal.
+  let techs = tecnologias.sort().map(function(tecnologia) {return{tech: tecnologia,name:name}})
   // seu código aqui
     return console.log(techs);
 }
@@ -170,9 +172,57 @@ function techList(tecnologias,name) {
 
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numeros) {
+  /*
+  Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], `generatePhoneNumber` deverá retornar `(12) 34567-8901`
+
+  Se a função receber um array com tamanho diferente de 11, a mesma deve retornar `"Array com tamanho incorreto."`.
+
+- Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, `generatePhoneNumber` deverá retornar a string `"não é possível gerar um número de telefone com esses valores"`.*/
+  let telNumber = [].concat(numeros);
+  for(i in telNumber){
+    let count=0
+    for(x in telNumber){
+      if(telNumber[x]===telNumber[i]){
+        count+=1;
+      }
+    }
+    if(count > 3 ){
+      return 'não é possível gerar um numero de telefone com esses valores'
+    }
+  }
+
+
+  if(telNumber.length === 11){
+    let newNumber = [];
+    for(let i in telNumber){
+      let numero = telNumber[i]
+      if(i == 0){
+        newNumber.push('(');
+        newNumber.push(numero);
+      }
+      else if(i == 2 ){
+        newNumber.push(')');
+        newNumber.push(' ');
+        newNumber.push(numero);
+      }
+      else if(i == 7){
+        newNumber.push('-');
+        newNumber.push(numero);
+      }
+      else{
+        newNumber.push(numero);
+      }
+    }
+    return newNumber.join('');
+  }
+  else{
+    return 'Array com tamanho incorreto.'
+  }
   // seu código aqui
 }
+
+
 
 // Desafio 12
 function triangleCheck() {
