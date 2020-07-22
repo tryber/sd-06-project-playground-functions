@@ -187,7 +187,7 @@ function generatePhoneNumber(numeros) {
         count+=1;
       }
     }
-    if(count > 3 ){
+    if(count >= 3 ){
       return 'não é possível gerar um numero de telefone com esses valores'
     }
   }
