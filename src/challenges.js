@@ -161,7 +161,7 @@ function triangleCheck(linha1, linha2, linha3) {
   } else if (linha3 < linha1 + linha2 && linha3 > Math.abs(linha1 - linha2)) {
     return true;
   }
-  return resposta;
+  return false;
 }
 
 // Desafio 13
