@@ -231,32 +231,30 @@ function generatePhoneNumber(arr) {
     let idx = arr.indexOf(i);
 
     while (idx != -1) {
-        
       arrRepetidos.push(idx);
       idx = arr.indexOf(i, idx + 1);
     }
 
-    if (i<0 || i>9 ){
+    if (arr[i]<0 || arr[i]>9 ){
       return "não é possível gerar um número de telefone com esses valores"
     }
+  }
 
-    else if(arrRepetidos.length>=3){
-      return "não é possível gerar um número de telefone com esses valores"
-    }
+  if(arrRepetidos.length>=3){
+    return "não é possível gerar um número de telefone com esses valores"
+  }
 
-    else {
-      let ddd = arr.slice(0,2).join("");
-      let num1 = arr.slice(2,7).join("");
-      let num2 = (arr.slice(7,11)).join("");
+  else {
+    let ddd = arr.slice(0,2).join("");
+    let num1 = arr.slice(2,7).join("");
+    let num2 = (arr.slice(7,11)).join("");
 
-      return "(" + ddd + ") " + num1 + "-" + num2
-    }
-
+    return "(" + ddd + ") " + num1 + "-" + num2
   }
 
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4])
 )
 
 
