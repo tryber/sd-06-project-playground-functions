@@ -178,16 +178,19 @@ function triangleCheck() {
 function hydrate(bString) {
   let aArray = bString.split('');
   let num = 0;
-  let n = 0;
+  let numString = '';
   aArray.forEach((e) => {
     if (n = parseInt(e)) {
       num += n;
     }
   });
   if (num === 1) {
-    return num + ' copo de água';
+    numString = num.toString();
+    return numString.concat(' copo de água');
+  } else if (num > 1) {
+    numString = num.toString();
+    return numString.concat(' copos de água');
   }
-  return num + ' copos de água';
 }
 
 
