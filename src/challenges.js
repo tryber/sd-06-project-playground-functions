@@ -1,9 +1,5 @@
 function divisivel(numero, indice) {
-  if (numero % indice === 0) {
-    return true
-  } else {
-      return false
-  }
+ return numero % indice === 0 ? true : false
 }
 
 function distancia(posA, posB) {
@@ -11,7 +7,7 @@ function distancia(posA, posB) {
 }
 // Desafio 1
 function compareTrue(first, second) {
-  return first , second ? true : false
+  return first && second
   // seu código aqui
 }
 // Desafio 2
@@ -123,7 +119,7 @@ e -> 2 \
 i -> 3 \
 o -> 4 \
 u -> 5 */
-   // varrer o array
+// varrer o array
 function decode(stringEncoded) {
   let myMap = new Map();
   let vogais = ['a', 'e', 'i', 'o', 'u'];
@@ -183,7 +179,7 @@ function generatePhoneNumber(numeros) {
               newNumber.push('(');
               newNumber.push(numero);
             }
-            else if (i == 2 ) {
+            else if (i == 2) {
               newNumber.push(')');
               newNumber.push(' ');
               newNumber.push(numero);
@@ -196,21 +192,27 @@ function generatePhoneNumber(numeros) {
             }
           }
         }
-        return newNumber.join('');
+      return newNumber.join('');
   } else {
       return 'Array com tamanho incorreto.'
   }
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  let lados = [...arguments];
+  let somas = lados.map((numero, indice, arr) => (arr[indice + 2] || indice) + (arr[indice + 1] || arr[0]));
+  let comparaSoma = lados.filter(function(numero,indice)  {return numero < somas[indice]} )
+  let dif = lados.map((numero, indice, arr) => (arr[indice + 2 ] || indice) - (arr[indice + 1] || arr[0]));
+  let comparaDif = lados.filter(function(numero,indice)  {return numero > dif[indice]})
+  return comparaSoma.length === 3 && comparaDif.length === 3
 
 }
+console.log(triangleCheck(1,2,3));
 
 // Desafio 13
 function hydrate() {
 
 }
-
 
 module.exports = {
   calcArea,
@@ -228,6 +230,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-
-
-
