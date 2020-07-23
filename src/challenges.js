@@ -32,7 +32,7 @@ function splitSentence(frase) {
   return frase.split(' ')
 }
 // Desafio 4
-function concatName(listaStrings){
+function concatName(listaStrings) {
   let minhaLista = [].concat(listaStrings);
   let ultimo = minhaLista[minhaLista.length-1];
   let primeiro = minhaLista[0];
@@ -52,13 +52,13 @@ function highestCount(numbers) {
   // percorrer o código e contar quantas vezes ele aparece
   let maior = -Infinity;
   let contaMaior = 0
-  for(let i in numbers){
-    if(numbers[i] > maior){
+  for (let i in numbers) {
+    if (numbers[i] > maior) {
       maior = numbers[i];
     }
   }
-  for(let x in numbers){
-    if(numbers[x] === maior){
+  for (let x in numbers) {
+    if (numbers[x] === maior) {
       contaMaior +=1;
     }
   }
