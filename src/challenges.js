@@ -82,15 +82,15 @@ function fizzBuzz(array) {
 function encode(string) {
   let code = '';
   for (let i = 0; i < string.length; i += 1) {
-    if ( string[i] === 'a') {
+    if (string[i] === 'a') {
       code += '1';
-    } else if ( string[i] === 'e') {
+    } else if (string[i] === 'e') {
       code += '2';
-    } else if ( string[i] === 'i') {
+    } else if (string[i] === 'i') {
       code += '3';
-    } else if ( string[i] === 'o') {
+    } else if (string[i] === 'o') {
       code += '4';
-    } else if ( string[i] === 'u') {
+    } else if (string[i] === 'u') {
       code += '5';
     } else {
       code += string[i];
@@ -104,13 +104,13 @@ function decode(string) {
   for (let i = 0; i < string.length; i += 1) {
     if ( string[i] === '1') {
       code += 'a';
-    } else if ( string[i] === '2') {
+    } else if (string[i] === '2') {
       code += 'e';
-    } else if ( string[i] === '3') {
+    } else if (string[i] === '3') {
       code += 'i';
-    } else if ( string[i] === '4') {
+    } else if (string[i] === '4') {
       code += 'o';
-    } else if ( string[i] === '5') {
+    } else if (string[i] === '5') {
       code += 'u';
     } else {
       code += string[i];
