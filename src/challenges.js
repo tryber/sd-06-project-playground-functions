@@ -66,19 +66,18 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(desafio8) {
-  let resposta8 = [];
   for (let i8 = 0; i8 < desafio8.length; i8 += 1) {
     if (desafio8[i8] % 5 === 0 && desafio8[i8] % 3 === 0) {
-      resposta8.push('fizzBuzz');
+      desafio8[i8] = 'fizzBuzz';
     } else if (desafio8[i8] % 5 === 0) {
-      resposta8.push('buzz');
-    } else if (desafio8[i8] % 5 !== 0) {
-      resposta8.push('fizz');
+      desafio8[i8] = 'buzz'
+    } else if (desafio8[i8] % 3 === 0) {
+      desafio8[i8] = 'fizz';
     } else {
-      resposta8.push('bug!');
+     desafio8[i8] = 'bug!';
     }
   }
-    return resposta8;
+    return desafio8;
   }
 
 // Desafio 9
