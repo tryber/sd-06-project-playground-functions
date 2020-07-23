@@ -22,7 +22,6 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   return wins * 3 + ties * 1;
 }
-
 // Desafio 6
 function highestCount(numero) {
   var maiorNumero = -10000;
@@ -37,7 +36,6 @@ function highestCount(numero) {
   }
   return repetidor;
 }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = 0;
@@ -77,16 +75,41 @@ function fizzBuzz(numeros) {
   }
   return resposta;
 }
-let numeros = [10, 20, 30, 40];
-console.log(fizzBuzz(numeros));
-
+let num = [10, 20, 30, 40, 50];
+console.log(fizzBuzz(num))
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(letras) {
+  let novasLetras = letras;
+  for(let c = 0; c < letras.length; c +=1 ){
+    switch (letras[c]) {
+      case 'a': novasLetras = novasLetras.replace('a', '1');break;
+      case 'e': novasLetras = novasLetras.replace('e', '2');break;
+      case 'i': novasLetras = novasLetras.replace('i', '3');break;
+      case 'o': novasLetras = novasLetras.replace('o', '4');break;
+      case 'u': novasLetras = novasLetras.replace('u', '5');break;
+      default:
+    }
+  }
+  return novasLetras
 }
-function decode() {
-  // seu código aqui
+let palavras = 'muitas pessoas estao loucas';
+palavras2 = encode(palavras)
+
+function decode(letras) {
+  let novasLetras = letras;
+  for(let c = 0; c < letras.length; c +=1 ){
+    switch (letras[c]) {
+      case '1': novasLetras = novasLetras.replace('1', 'a');break;
+      case '2': novasLetras = novasLetras.replace('2', 'e');break;
+      case '3': novasLetras = novasLetras.replace('3', 'i');break;
+      case '4': novasLetras = novasLetras.replace('4', 'o');break;
+      case '5': novasLetras = novasLetras.replace('5', 'u');break;
+      default:
+    }
+  }
+  return novasLetras
 }
+console.log(decode(encode(palavras)))
 
 // Desafio 10
 function techList() {
