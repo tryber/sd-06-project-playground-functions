@@ -253,22 +253,45 @@ function generatePhoneNumber(param) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
     // seu código aqui
-    if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineC + lineA && lineB > Math.abs(lineC - lineA) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    //Pasou, agora vou escrever mais limpo
+    let lado1 = false;
+    if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+        lado1 = true;
+    }
 
-        console.log(lineA + " é menor que " + (lineB + lineC) + " e maior que o módulo de " + (lineB - lineC) + ".");
+    let lado2 = false;
+    if (lineB < lineC + lineA && lineB > Math.abs(lineC - lineA)) {
+        lado2 = true;
+    }
 
-        console.log(lineB + " é menor que " + (lineC + lineA) + " e maior que o módulo de " + (lineC - lineA) + ".");
+    let lado3 = false;
+    if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+        lado3 = true;
+    }
 
-        console.log(lineC + " é menor que " + (lineA + lineB) + " e maior que o módulo de " + (lineA - lineB) + ".");
-
-        console.log("É um triângulo");
+    // Retorna o resultado
+    if (lado1 === true && lado2 === true && lado3 === true) {
         return true;
     } else {
-        console.log("Não é um triângulo");
         return false;
     }
+
+    // if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineC + lineA && lineB > Math.abs(lineC - lineA) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+
+    //     console.log(lineA + " é menor que " + (lineB + lineC) + " e maior que o módulo de " + (lineB - lineC) + ".");
+
+    //     console.log(lineB + " é menor que " + (lineC + lineA) + " e maior que o módulo de " + (lineC - lineA) + ".");
+
+    //     console.log(lineC + " é menor que " + (lineA + lineB) + " e maior que o módulo de " + (lineA - lineB) + ".");
+
+    //     console.log("É um triângulo");
+    //     return true;
+    // } else {
+    //     console.log("Não é um triângulo");
+    //     return false;
+    // }
 }
-triangleCheck(10, 14, 8);
+//triangleCheck(10, 14, 8);
 
 // Desafio 13
 function hydrate() {
