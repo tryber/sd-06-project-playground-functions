@@ -15,14 +15,14 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let newArray = [];
-  let arrayValue = "";
+  let arrayValue = '';
 
   for (let i = 0; i < string.length; i += 1) {
-    if (string[i] != " ") {
+    if (string[i] != ' ') {
       arrayValue = arrayValue + string[i];
     } else {
       newArray.push(arrayValue);
-      arrayValue = "";
+      arrayValue = '';
     };
   };
   newArray.push(arrayValue);
@@ -31,7 +31,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayValue) {
-  return arrayValue[arrayValue.length - 1] + ", " + arrayValue[0];
+  return arrayValue[arrayValue.length - 1] + ', ' + arrayValue[0];
 }
 
 // Desafio 5
@@ -66,13 +66,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Dist = mouse - cat1, cat2Dist = mouse - cat2;
 
   if (cat1Dist < cat2Dist) {
-    return "cat1";
+    return 'cat1';
   } else if (cat2Dist < cat1Dist) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   };
 }
+
+console.log(catAndMouse(10, 8, 3))
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -93,11 +95,11 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
-  let newString = "";
+function encode(stringEncode) {
+  let newString = '';
 
-  for (index in string) {
-    switch (string[index]) {
+  for (index in stringEncode) {
+    switch (stringEncode[index]) {
       case 'a':
         newString = newString + '1';
         break;
@@ -114,17 +116,17 @@ function encode(string) {
         newString = newString + '5';
         break;
       default:
-        newString = newString + string[index];
+        newString = newString + stringEncode[index];
     };
   };
   return newString
 }
 
-function decode(string) {
-  let newString = "";
+function decode(stringDecode) {
+  let newString = '';
 
-  for (index in string) {
-    switch (string[index]) {
+  for (index in stringDecode) {
+    switch (stringDecode[index]) {
       case '1':
         newString = newString + 'a';
         break;
@@ -141,7 +143,7 @@ function decode(string) {
         newString = newString + 'u';
         break;
       default:
-        newString = newString + string[index];
+        newString = newString + stringDecode[index];
     };
   };
   return newString
