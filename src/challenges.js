@@ -87,12 +87,27 @@ console.log(fizzBuzz([2,7,11]))
 
 
 // Desafio 9
-function encode() {
+function encode(parametro) {
+  parametro = parametro.replace(/a/gi, "1");
+  let result = parametro.replace(/e/gi, "2");
+   result = result.replace(/i/gi, "3");
+   result = result.replace(/o/gi, "4");
+   result = result.replace(/u/gi, "5");
+  return result;  
+  }
+  console.log(encode("valeriano"))
+
+function decode(parametro) {
+  parametro = parametro.replace(/1/gi, "a");
+  let result = parametro.replace(/2/gi, "e");
+   result = result.replace(/3/gi, "i");
+   result = result.replace(/4/gi, "0");
+   result = result.replace(/5/gi, "u");
+  return result;  
+  }
+  console.log(decode("v1l2r31n4"))
   // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+
 
 // Desafio 10
 function techList() {
