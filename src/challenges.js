@@ -198,11 +198,10 @@ function hydrate(drink) {
     water += parseInt(n[i]);
   }
   if (water > 1) {
-    return water + " copos de água"
+    return water + " copos de água";
   }
-  return water + " copo de água"
+  return water + " copo de água";
 }
-
 
 module.exports = {
   calcArea,
