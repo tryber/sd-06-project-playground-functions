@@ -70,13 +70,13 @@ function fizzBuzz(parametro) {
     let parametro3 = parametro[i] % 3 === 0;
     let parametro5 = parametro[i] % 5 === 0;
     if (parametro3 && parametro5) {
-      resultado.push('FizzBuzz');
+      resultado.push('fizzBuzz');
     } else if (parametro3) {
-      resultado.push('Fizz');
+      resultado.push('fizz');
     } else if (parametro5) {
-      resultado.push('Buzz');
+      resultado.push('buzz');
     } else {
-      resultado.push('Bug!');
+      resultado.push('bug!');
     }
   }
   return resultado;
