@@ -120,12 +120,12 @@ function encode(string) {
   let vogais = ['a','e','i','o','u'];
   let myMap = new Map();
   //setando mapa
-  for(let i=0;i<vogais.length;i+=1){
+  for (let i=0;i<vogais.length;i+=1) {
     myMap.set(vogais[i], i+1);
   }
-  for(let i in letras){
+  for (let i in letras) {
     const letra = letras[i];
-    if(myMap.has(letra)){
+    if (myMap.has(letra)) {
       letras[i] = myMap.get(letra)
     }    /* */
   }
@@ -143,12 +143,12 @@ function decode(stringEncoded) {
   let vogais = ['a','e','i','o','u'];
   let letras = stringEncoded.split('');
 
-  for(i in vogais){
+  for (i in vogais) {
     myMap.set((parseInt(i)+1).toString(), vogais[i]);
   }
-  for(i in letras){
+  for (i in letras) {
     let num = letras[i];
-    if(myMap.has(num)){
+    if (myMap.has(num)) {
       letras[i] = myMap.get(num);
     }
   }
@@ -159,10 +159,10 @@ function decode(stringEncoded) {
 
 // Desafio 10
 function techList(tecnologias,name) {
-  if(tecnologias.length != 0){
+  if (tecnologias.length != 0) {
     let techs = tecnologias.sort().map(function(tecnologia) {
-      if(tecnologia == ''){
-      return{
+      if (tecnologia == '') {
+      return {
         tech: 'Vazio!',
         name: name
       }
@@ -191,40 +191,40 @@ function techList(tecnologias,name) {
 function generatePhoneNumber(numeros) {
   let telNumber = [].concat(numeros);
   let newNumber = [];
-  if(telNumber.length === 11){
-  for(let i in telNumber){
+  if (telNumber.length === 11) {
+  for (let i in telNumber) {
     let count=0
     let numero = telNumber[i]
-      for(let x in telNumber){
-        if(telNumber[x]===telNumber[i]){
+      for (let x in telNumber) {
+        if (telNumber[x]===telNumber[i]) {
           count+=1;
         }
       }
-      if(count >= 3 || Number(telNumber[i]) > 9 || Number(telNumber[i]) < 0 ){
+      if (count >= 3 || Number(telNumber[i]) > 9 || Number(telNumber[i]) < 0 ) {
         return 'não é possível gerar um número de telefone com esses valores'
       }
       else{
-          if(i == 0){
+          if (i == 0) {
             newNumber.push('(');
             newNumber.push(numero);
             }
-          else if(i == 2 ){
+          else if (i == 2 ) {
             newNumber.push(')');
             newNumber.push(' ');
             newNumber.push(numero);
           }
-          else if(i == 7){
+          else if (i == 7) {
             newNumber.push('-');
             newNumber.push(numero);
           }
-          else{
+          else {
             newNumber.push(numero);
           }
         }
       }
           return newNumber.join('');
   }
-  else{
+  else {
     return 'Array com tamanho incorreto.'
   }
 }
