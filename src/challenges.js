@@ -78,12 +78,12 @@ function fizzBuzz(array8) {
       resultado = "fizz";
     } else if (array8[indice] % 5 ==0){
       resultado ="buzz";
-    } else  { resultado = "bug";}
+    } else  { resultado = "bug!";}
       
     }
     return resultado;
   }
-console.log(fizzBuzz([3,2,5,7,10,15]))
+console.log(fizzBuzz([2,7,11]))
 
 
 // Desafio 9
