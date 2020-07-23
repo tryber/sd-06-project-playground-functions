@@ -180,7 +180,10 @@ function triangleCheck(lineA, lineB, lineC) {
   let differenceLineC = Math.abs(lineA - lineB);
   let differenceLineB = Math.abs(lineA - lineC);
   let differenceLineA = Math.abs(lineB - lineC);
-  if (testLineC > lineC && testLineA > lineA && testLineB > lineB || differenceLineC < lineC && differenceLineA < lineA && differenceLineB < lineB) {
+  if (testLineC > lineC && testLineA > lineA && testLineB > lineB) {
+    return true;
+  }
+  if (differenceLineC < lineC && differenceLineA < lineA && differenceLineB < lineB) {
     return true;
   }
   return false;
@@ -188,13 +191,13 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(alcoolDrink) {
-  let resultNumbers= alcoolDrink.match(/\d/g);
+  let resultNumbers = alcoolDrink.match(/\d/g);
   let sum = 0;
   for (let index = 0; index < resultNumbers.length; index += 1) {
-    sum += Number.parseInt(resultNumbers[index]);
+    sum += Number(resultNumbers[index]);
   }
   if (sum === 1) {
-    return `${sum} copos de água`;
+    return `${sum} copo de água`;
   }
   return `${sum} copos de água`;
 }
