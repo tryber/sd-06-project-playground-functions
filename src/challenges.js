@@ -69,7 +69,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } if ((cat1 - mouse) > (cat2 - mouse)) {
     return 'cat2';
   } if ((cat1 - mouse) === (cat2 - mouse)) {
-    return 'os gatos se trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
   }
 }
 // console.log(catAndMouse(2, 5, 5));
