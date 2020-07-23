@@ -238,9 +238,21 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(str) {
+  let resultado = 0;
+  let abencoado = 0;
+      let numeros = str.match(/\d+/g, []);
+      for (let i = 0; i < numeros.length; i++) {
+      resultado += parseInt(numeros[i]) 
+  }
+  if (resultado === 1) {
+      abencoado = "1 copo de água"
+  } else {
+      abencoado = resultado + " copos de água"
+  }
+  return abencoado
+  }
+      console.log(hydrate("teste 1, 2, 3"))
 
 
 module.exports = {
