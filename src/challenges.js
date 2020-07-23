@@ -124,7 +124,7 @@ function techList(tech, name) {
   for (let index = 0; index < tech.length; index += 1) {
     let techLearn = {
       tech: tech[index],
-      name: name
+      name: name;
     }
     techLearnsList.push(techLearn);
   }
@@ -139,25 +139,24 @@ function verifyCounterRepeatedNumber(numbers) {
   let object = {};
   let repeatedNumber = 0;
   numbers.forEach((element) => {
-    if (!object[element]){
-      object[element] = 0;
+    if (!object[element]) object[element] = 0; {
       object[element] += 1;
     }
   })
   for (let count in object) {
     if (object[count] > 2) {
-      repeatedNumber = object[count];
-      return repeatedNumber;
+      return repeatedNumber = object[count];
     }
   }
+  return repeatedNumber;
 }
 
 function generateCompletePhoneNumber(numbers) {
   let phoneNumber = 0;
   for (let index = 0; index < numbers.length; index += 1) {
     phoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
-    return phoneNumber;
   }
+  return phoneNumber;
 }
 
 function generatePhoneNumber(numbers) {
