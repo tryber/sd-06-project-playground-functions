@@ -2,13 +2,13 @@
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true;
-  } 
-    return false;
+}
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height/2;
+  return base * height / 2;
 }
 
 // Desafio 3
@@ -45,7 +45,6 @@ function highestCount(numeral) {
 
       inicio = 1;
     }
-    
   }
   return inicio;
 }
@@ -80,7 +79,8 @@ function fizzBuzz(parametro) {
       resultado.push('Bug!');
     }
   }
-} 
+  return resultado;
+}
 
 // Desafio 9
 function encode() {
