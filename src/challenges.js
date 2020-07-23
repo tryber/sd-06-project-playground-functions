@@ -294,9 +294,29 @@ function triangleCheck(lineA, lineB, lineC) {
 //triangleCheck(10, 14, 8);
 
 // Desafio 13
-function hydrate() {
+function hydrate(param) {
     // seu código aqui 
+    //console.log(param.split(" "));
+    paramArray = param.split(" ");
+    let sum = 0;
+    for (let i = 0; i < paramArray.length; i += 1) {
+        if (isNaN(paramArray[i])) {
+            // console.log(paramArray[i]);
+            // console.log("Não é um número");
+        } else {
+            // console.log(paramArray[i]);
+            // console.log("É um número");
+            sum += Number(paramArray[i]);
+        }
+    }
+    //Pra fazer a diferença de 'copo' e 'copos'. Não ficou claro se é necessário isso.
+    if (sum > 1) {
+        console.log(sum + " copos de água");
+    } else {
+        console.log(sum + " copo de água");
+    }
 }
+hydrate("1 cachaça, 5 cervejas e 1 copo de vinho");
 
 
 module.exports = {
