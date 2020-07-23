@@ -201,9 +201,9 @@ function generatePhoneNumber(numeros) {
 function triangleCheck(lineA, lineB, lineC) {
   let lados = [...arguments];
   let somas = lados.map((numero, indice, arr) => (arr[indice + 2] || indice) + (arr[indice + 1] || arr[0]));
-  let comparaSoma = lados.filter(function(numero,indice)  {return numero < somas[indice]} )
-  let dif = lados.map((numero, indice, arr) => (arr[indice + 2 ] || indice) - (arr[indice + 1] || arr[0]));
-  let comparaDif = lados.filter(function(numero,indice)  {return numero > dif[indice]})
+  let comparaSoma = lados.filter(function(numero,indice)  {return numero < somas[indice]});
+  let dif = lados.map((numero, indice, arr) => Math.abs(arr[indice + 2 ] || indice) - (arr[indice + 1] || arr[0]));
+  let comparaDif = lados.filter(function(numero,indice)  {return numero > dif[indice]});
   return comparaSoma.length === 3 && comparaDif.length === 3
 
 }
