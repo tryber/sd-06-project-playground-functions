@@ -312,8 +312,10 @@ function hydrate(param) {
     //Pra fazer a diferença de 'copo' e 'copos'. Não ficou claro se é necessário isso.
     if (sum > 1) {
         console.log(sum + " copos de água");
+        return sum + " copos de água";
     } else {
         console.log(sum + " copo de água");
+        return sum + " copo de água";
     }
 }
 hydrate("1 cachaça, 5 cervejas e 1 copo de vinho");
