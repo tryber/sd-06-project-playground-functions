@@ -100,7 +100,7 @@ function encode(string) {
 }
 
 function decode(string) {
-  let code = ';
+  let code = '';
   for (let i = 0; i < string.length; i += 1) {
     if ( string[i] === '1') {
       code += 'a';
