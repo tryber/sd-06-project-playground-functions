@@ -22,6 +22,7 @@ function concatName(array) {
   primeiroItem=array[0]
   ultimoItem=array[array.lengh-1]
   return ultimoItem.concat(',',primeiroItem)
+}
 
 // Desafio 5
 function footballPoints(times,vitorias) {
