@@ -248,12 +248,25 @@ function generatePhoneNumber(param) {
         return fullNumber;
     } //else
 } //function
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+//generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
     // seu código aqui
+    if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineC + lineA && lineB > Math.abs(lineC - lineA) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+
+        console.log(lineA + " é menor que " + (lineB + lineC) + " e maior que o módulo de " + (lineB - lineC) + ".");
+
+        console.log(lineB + " é menor que " + (lineC + lineA) + " e maior que o módulo de " + (lineC - lineA) + ".");
+
+        console.log(lineC + " é menor que " + (lineA + lineB) + " e maior que o módulo de " + (lineA - lineB) + ".");
+
+        console.log("É um triângulo");
+    } else {
+        console.log("Não é um triângulo");
+    }
 }
+triangleCheck(10, 14, 8);
 
 // Desafio 13
 function hydrate() {
