@@ -186,7 +186,7 @@ function generatePhoneNumber(phoneNumber) {
   } else {
     for (let i = 0; i < phoneNumber.length; i += 1) {
     if (phoneNumber[i] < 0 || phoneNumber[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores!';
+      return 'não é possível gerar um número de telefone com esses valores';
     } else {
       if (checkOccurrences(phoneNumber[i], phoneNumber)) {
       moreThanThree = true;
