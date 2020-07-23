@@ -200,17 +200,18 @@ function generatePhoneNumber(numeros) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let lados = [...arguments];
-  let somas = lados.map((numero, indice, arr) => (arr[indice + 2] || indice) + (arr[indice + 1] || arr[0]));
-  let comparaSoma = lados.filter(function(numero,indice)  {return numero < somas[indice]});
-  let dif = lados.map((numero, indice, arr) => Math.abs(arr[indice + 2 ] || indice) - (arr[indice + 1] || arr[0]));
-  let comparaDif = lados.filter(function(numero,indice)  {return numero > dif[indice]});
+  let somas = lados.map((numero, i, arr) => (arr[i + 2] || i) + (arr[i + 1] || arr[0]));
+  let comparaSoma = lados.filter(function(numero,i)  {return numero < somas[i]});
+  let dif = lados.map((numero, i, arr) => Math.abs((arr[i + 2 ] || i) - (arr[i + 1] || arr[0])));
+  let comparaDif = lados.filter(function(numero,i)  {return numero > dif[i]});
   return comparaSoma.length === 3 && comparaDif.length === 3
 
 }
 console.log(triangleCheck(1,2,3));
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
+
 
 }
 
