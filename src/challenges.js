@@ -173,8 +173,17 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let testLineC = lineB + lineA;
+  let testLineB = lineA + lineC;
+  let testLineA = lineB + lineC;
+  let differenceLineC = Math.abs(lineA - lineB);
+  let differenceLineB = Math.abs(lineA - lineC);
+  let differenceLineA = Math.abs(lineB + lineC);
+  if (testLineC > lineC && testLineA > lineA && testLineB > lineB || differenceLineC < lineC && differenceLineA < lineA && differenceLineB < lineB) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
