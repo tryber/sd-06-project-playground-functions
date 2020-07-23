@@ -1,6 +1,8 @@
 function divisivel(numero, indice) {
   if (numero % indice === 0) {
     return true
+  } else {
+      return false
   }
 }
 
@@ -9,7 +11,7 @@ function distancia(posA, posB) {
 }
 // Desafio 1
 function compareTrue(first, second) {
-  return first && second ? true : false
+  return first , second ? true : false
   // seu código aqui
 }
 // Desafio 2
@@ -32,7 +34,7 @@ function concatName(listaStrings) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = 3 * wins + ties;
+  let pontos = (3 * wins) + ties;
   return pontos
   // seu código aqui
 }
@@ -70,8 +72,6 @@ function catAndMouse(posMouse, posCat1, posCat2) {
   }
 }
 
-
-
 // Desafio 8
 function fizzBuzz(numeros) {
   let meusNumeros = [].concat(numeros);
@@ -106,7 +106,7 @@ function encode(string) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let myMap = new Map();
   // setando mapa
-  for (let i=0; i<vogais.length; i += 1) {
+  for (let i = 0; i < vogais.length; i += 1) {
     myMap.set(vogais[i], i + 1);
   }
   for (let i in letras) {
@@ -123,14 +123,14 @@ e -> 2 \
 i -> 3 \
 o -> 4 \
 u -> 5 */
-   //varrer o array
+   // varrer o array
 function decode(stringEncoded) {
   let myMap = new Map();
-  let vogais = ['a','e','i','o','u'];
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   let letras = stringEncoded.split('');
 
   for (let i in vogais) {
-    myMap.set((parseInt(i)+1).toString(), vogais[i]);
+    myMap.set((parseInt(i) + 1).toString(), vogais[i]);
   }
   for (let i in letras) {
     let num = letras[i];
@@ -142,7 +142,7 @@ function decode(stringEncoded) {
 }
 
 // Desafio 10
-function techList(tecnologias,name) {
+function techList(tecnologias, name) {
   if (tecnologias.length != 0) {
     let techs = tecnologias.sort().map(function (tecnologia) {
       if (tecnologia === '') {
@@ -150,12 +150,11 @@ function techList(tecnologias,name) {
           tech: 'Vazio!',
           name: name,
         }
-      }
-      else {
-        return {
-          tech: tecnologia,
-          name: name,
-        }
+      } else {
+          return {
+            tech: tecnologia,
+            name: name,
+          }
       }
     })
     // seu código aqui
@@ -169,47 +168,41 @@ function generatePhoneNumber(numeros) {
   let telNumber = [].concat(numeros);
   let newNumber = [];
   if (telNumber.length === 11) {
-  for (let i in telNumber) {
-    let count=0
-    let numero = telNumber[i]
-      for (let x in telNumber) {
-        if (telNumber[x] === telNumber[i]) {
-          count+=1;
+    for (let i in telNumber) {
+      let count = 0;
+      let numero = telNumber[i]
+        for (let x in telNumber) {
+          if (telNumber[x] === telNumber[i]) {
+            count += 1;
+          }
         }
-      }
-      if (count >= 3 || Number(telNumber[i]) > 9 || Number(telNumber[i]) < 0 ) {
-        return 'não é possível gerar um número de telefone com esses valores'
-      }
-      else{
-          if (i == 0) {
-            newNumber.push('(');
-            newNumber.push(numero);
+        if (count >= 3||Number(telNumber[i]) > 9||Number(telNumber[i]) < 0 ) {
+          return 'não é possível gerar um número de telefone com esses valores'
+        } else {
+            if (i == 0) {
+              newNumber.push('(');
+              newNumber.push(numero);
             }
-          else if (i == 2 ) {
-            newNumber.push(')');
-            newNumber.push(' ');
-            newNumber.push(numero);
-          }
-          else if (i == 7) {
-            newNumber.push('-');
-            newNumber.push(numero);
-          }
-          else {
-            newNumber.push(numero);
+            else if (i == 2 ) {
+              newNumber.push(')');
+              newNumber.push(' ');
+              newNumber.push(numero);
+            }
+            else if (i == 7) {
+              newNumber.push('-');
+              newNumber.push(numero);
+            } else {
+              newNumber.push(numero);
+            }
           }
         }
-      }
-          return newNumber.join('');
-  }
-  else {
-    return 'Array com tamanho incorreto.'
+        return newNumber.join('');
+  } else {
+      return 'Array com tamanho incorreto.'
   }
 }
-
-
-
 // Desafio 12
-function triangleCheck(lineA,lineB,lineC) {
+function triangleCheck(lineA, lineB, lineC) {
 
 }
 
