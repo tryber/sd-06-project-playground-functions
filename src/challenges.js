@@ -115,8 +115,31 @@ function encode(string) {
   return newString
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let newString = "";
+
+  for (index in string) {
+    switch (string[index]) {
+      case '1':
+        newString = newString + 'a';
+        break;
+      case '2':
+        newString = newString + 'e';
+        break;
+      case '3':
+        newString = newString + 'i';
+        break;
+      case '4':
+        newString = newString + 'o';
+        break;
+      case '5':
+        newString = newString + 'u';
+        break;
+      default:
+        newString = newString + string[index];
+    };
+  };
+  return newString
 }
 
 // Desafio 10
