@@ -1,8 +1,6 @@
 function divisivel(numero, indice) {
   if (numero % indice === 0) {
     return true
-  } else {
-      return false
   }
 }
 
