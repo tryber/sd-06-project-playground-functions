@@ -100,6 +100,7 @@ function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lu
 
 // Desafio 11
 function generatePhoneNumber(numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 1]) {
+  checkIfRepeat(numbers);
   if (numbers.length != 11) { 
     return 'Array com tamanho incorreto.'; }
   let firsts = [];
@@ -123,6 +124,23 @@ function generatePhoneNumber(numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 1]) {
 
   return `(${ddd}) ${firsts}-${lasts}`;
 }
+
+function checkIfRepeat(numbers) {
+  let repeat = 0;
+  for (let i = 0; i < 11 ; i += 1){
+    let number = numbers[i];
+    for (let j = 0; j < numbers.length; j += 1) {
+      let number2 = numbers[j];
+      if (number === number2) {
+        repeat += 1;
+      }
+    }
+    if (repeat > 2) {
+      return 'não é possível gerar um número de telefone com esses valores'
+    }
+  } 
+}
+
 generatePhoneNumber();
 
 // Desafio 12
