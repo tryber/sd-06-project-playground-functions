@@ -142,7 +142,7 @@ function generatePhoneNumber(array) {
   }
 
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > 0 || array[i] > 9) {
+    if (array[i] < 0 || array[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     for (let j = 1; j < array.length; j += 1) {
