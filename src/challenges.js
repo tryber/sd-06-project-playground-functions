@@ -200,20 +200,31 @@ function generatePhoneNumber(numeros) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let lados = [...arguments];
-  let somas = lados.map((numero, i, arr) => (arr[i + 2] || i) + (arr[i + 1] || arr[0]));
+  let somas = lados.map((numero, i, arr) => (arr[i + 1] || arr[0]) + (arr[i + 2] || arr[i-1]));
   let comparaSoma = lados.filter(function(numero,i)  {return numero < somas[i]});
-  let dif = lados.map((numero, i, arr) => Math.abs((arr[i + 2 ] || i) - (arr[i + 1] || arr[0])));
+  let dif = lados.map((numero, i, arr) => Math.abs((arr[i + 1 ] || arr[0]) - (arr[i + 2] || arr[i-1])));
   let comparaDif = lados.filter(function(numero,i)  {return numero > dif[i]});
-  return comparaSoma.length === 3 && comparaDif.length === 3
 
+  return comparaSoma.length === 3 && comparaDif.length === 3
 }
-console.log(triangleCheck(1,2,3));
+console.log(triangleCheck(8,9,16));
 
 // Desafio 13
 function hydrate(string) {
-
+  let frase = []
+  let quantidades = [];
+  for(let i in string){
+    frase.push(string[i]);
+  }
+  let letras = frase.filter(function (letra)  { return (Number(letra)) == letra && letra != ' '} );
+  for(let i in letras){
+    if(letras[i] == Number(letras[i]) ){
+      return Number(letras[i])
+    }
+  }
 
 }
+hydrate('1 copo,2copos,1copo');
 
 module.exports = {
   calcArea,
