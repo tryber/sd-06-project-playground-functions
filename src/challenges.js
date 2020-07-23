@@ -124,7 +124,7 @@ function techList(tech, name) {
   for (let index = 0; index < tech.length; index += 1) {
     let techLearn = {
       tech: tech[index],
-      name: name;
+      name: name
     }
     techLearnsList.push(techLearn);
   }
