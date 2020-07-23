@@ -70,15 +70,15 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array8) {
-  let resultado = "";
+  let resultado = [];
   for ( indice = 0; indice < array8.length; indice = indice +1 ){
    if (array8[indice] % 5 ==0 && array8[indice] % 3 == 0) {
-      resultado = "fizzBuzz";} 
+      resultado[indice] = "fizzBuzz";} 
     else if (array8[indice] % 3 ==0){
-      resultado = "fizz";
+      resultado[indice] = "fizz";
     } else if (array8[indice] % 5 ==0){
-      resultado ="buzz";
-    } else  { resultado = "bug!";}
+      resultado[indice] = "buzz";
+    } else  { resultado[indice] = "bug!";}
       
     }
     return resultado;
