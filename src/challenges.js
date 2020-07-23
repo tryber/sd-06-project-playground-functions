@@ -100,7 +100,7 @@ function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lu
 
 // Desafio 11
 function generatePhoneNumber(numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]) {
-  if (numbers.length > 11) { console.log('Array com tamanho incorreto.') };
+  if (numbers.length != 11) { console.log('Array com tamanho incorreto.') };
   let firsts = [];
   let lasts = [];
   for (let i = 0; i < numbers.length; i += 1) {
