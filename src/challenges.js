@@ -48,10 +48,12 @@ function highestCount(array) {
   for (value in array) {
     if (array[value] > highestValue) {
       highestValue = array[value];
+    };
+  };
+
+  for (index in array) {
+    if (array[index] === highestValue) {
       count += 1;
-      if (highestValue === array[value]) {
-        count += 1;
-      };
     };
   };
 
