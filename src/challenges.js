@@ -59,9 +59,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (moduloCat2 < moduloCat1) {
     return 'cat2';
-   } else { 
-    return 'os gatos trombam e o rato foge';
   }
+return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -74,11 +73,11 @@ function fizzBuzz(desafio8) {
     } else if (desafio8[i8] % 3 === 0) {
       desafio8[i8] = 'fizz';
     } else {
-     desafio8[i8] = 'bug!';
+      desafio8[i8] = 'bug!';
     }
   }
-    return desafio8;
-  }
+ return desafio8;
+}
 
 // Desafio 9
 function encode() {
