@@ -53,17 +53,13 @@ function highestCount(numerosLista) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  cat1 -= mouse;
-  cat2 -= mouse;
-  let modulo1 = (cat1 * cat1)
-  let modulo2 = (cat2 * cat2)
-  console.log(mouse)
-  if (modulo1 < modulo2) {
-    return 'cat2';
-  } else if (modulo2 < modulo1) {
-    return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';}
+    if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+      return 'cat1';
+    } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+      return 'cat2';
+    } else { 
+      return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
@@ -79,6 +75,7 @@ function fizzBuzz(desafio8) {
     } else {
       resposta8.push('bug!')
     }
+  }
     return resposta8;
   }
 // - Para cada número da Array que seja divisível por 3, apresente uma string `"fizz"`;
