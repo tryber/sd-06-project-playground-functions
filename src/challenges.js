@@ -160,7 +160,7 @@ function generateCompletePhoneNumber(numbers) {
 }
 
 function generatePhoneNumber(numbers) {
-  if (numbers.length > 11) {
+  if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   let counterRepeatedNumber = verifyCounterRepeatedNumber(numbers);
