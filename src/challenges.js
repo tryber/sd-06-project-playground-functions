@@ -152,37 +152,69 @@ function generatePhoneNumber(phoneNumber) {
   // Se tamanho do array !== 11 "Array com tamanho incorreto."
   // Se for td ok, retorna numeroTelefoneCompleto.
   // Verificando se o tamanho é 11
+  // if (phoneNumber.length !== 11) {
+  //   return 'Array com tamanho incorreto.';
+  // }
+  //   //Verificando se repete
+  //   let arrayVerificar = phoneNumber;
+  //   let moreThanThree = false;
+  //   for (let i = 0; i < phoneNumber.length; i += 1) {
+  //     let contador = 0;
+  //     for (let j = 0; j < arrayVerificar.length; j += 1) {
+  //       if (arrayVerificar[j] === phoneNumber[i]) {
+  //         contador += 1
+  //       }
+  //       else if (contador >= 3) {
+  //         moreThanThree = true;
+  //         break;
+  //       }
+  //     }
+  //   }
+  
+  // //Verificando numeros e condicao de repeticao
+  // for (let k = 0; k < phoneNumber.length; k += 1) {
+  //   if (phoneNumber[k] < 0 || phoneNumber[k] > 9 || moreThanThree === true) {
+  //     return 'não é possível gerar um número de telefone com esses valores';
+  //   }
+  //   }
+  // //Caso não retorne nenhuma das outras
+  
+  // }
+  let moreThanThree = false;
   if (phoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
-  }
-    //Verificando se repete
-    let arrayVerificar = phoneNumber;
-    let moreThanThree = false;
+  } else {
     for (let i = 0; i < phoneNumber.length; i += 1) {
-      let contador = 0;
-      for (let j = 0; j < arrayVerificar.length; j += 1) {
-        if (arrayVerificar[j] === phoneNumber[i]) {
-          contador += 1
-        }
-        else if (contador >= 3) {
-          moreThanThree = true;
-          break;
-        }
+    if (phoneNumber[i] < 0 || phoneNumber[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores!';
+    } else {
+      if (checkOccurrences(phoneNumber[i], phoneNumber)) {
+      moreThanThree = true;
+      break;
+      } 
       }
     }
-  
-  //Verificando numeros e condicao de repeticao
-  for (let k = 0; k < phoneNumber.length; k += 1) {
-    if (phoneNumber[k] < 0 || phoneNumber[k] > 9 || moreThanThree === true) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    }
-  //Caso não retorne nenhuma das outras
-  let numeroTelefoneCompleto = '(' + phoneNumber[0] + phoneNumber[1] + ') ' + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + '-' + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10];
-
-  return numeroTelefoneCompleto;
   }
 
+  let numeroTelefoneCompleto = '(' + phoneNumber[0] + phoneNumber[1] + ') ' + phoneNumber[2] + phoneNumber[3] + phoneNumber[4] + phoneNumber[5] + phoneNumber[6] + '-' + phoneNumber[7] + phoneNumber[8] + phoneNumber[9] + phoneNumber[10];
+
+    if (moreThanThree === true) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      return numeroTelefoneCompleto;
+    }
+}
+
+function checkOccurrences(number, arrayNumbers) {
+  let contador = 0;
+  for(let n = 0; n < arrayNumbers.length; n += 1) {
+    if (number === arrayNumbers[n]) {
+      contador +=1;
+    }
+  }
+      
+  return (contador >= 3);
+}  
   
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
