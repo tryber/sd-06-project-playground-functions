@@ -191,8 +191,16 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drink) {
+  let n = drink.match(/\d+/g);
+  let water = 0;
+  for (let i = 0; i < n.length; i += 1) {
+    water += parseInt(n[i]);
+  }
+  if (water > 1) {
+    return water + " copos de água"
+  }
+  return water + " copo de água"
 }
 
 
