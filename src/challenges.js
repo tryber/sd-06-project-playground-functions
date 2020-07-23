@@ -179,7 +179,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let testLineA = lineB + lineC;
   let differenceLineC = Math.abs(lineA - lineB);
   let differenceLineB = Math.abs(lineA - lineC);
-  let differenceLineA = Math.abs(lineB + lineC);
+  let differenceLineA = Math.abs(lineB - lineC);
   if (testLineC > lineC && testLineA > lineA && testLineB > lineB || differenceLineC < lineC && differenceLineA < lineA && differenceLineB < lineB) {
     return true;
   }
