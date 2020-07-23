@@ -195,37 +195,37 @@ function generatePhoneNumber(numeros) {
   for(let i in telNumber){
     let count=0
     let numero = telNumber[i]
-    for(let x in telNumber){
-      if(telNumber[x]===telNumber[i]){
-        count+=1;
+      for(let x in telNumber){
+        if(telNumber[x]===telNumber[i]){
+          count+=1;
+        }
       }
-    }
-    if(count >= 3 || Number(telNumber[i]) > 9 || Number(telNumber[i]) < 0 ){
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-    else{
-        if(i == 0){
-          newNumber.push('(');
-          newNumber.push(numero);
+      if(count >= 3 || Number(telNumber[i]) > 9 || Number(telNumber[i]) < 0 ){
+        return 'não é possível gerar um número de telefone com esses valores'
+      }
+      else{
+          if(i == 0){
+            newNumber.push('(');
+            newNumber.push(numero);
+            }
+          else if(i == 2 ){
+            newNumber.push(')');
+            newNumber.push(' ');
+            newNumber.push(numero);
           }
-        else if(i == 2 ){
-          newNumber.push(')');
-          newNumber.push(' ');
-          newNumber.push(numero);
-        }
-        else if(i == 7){
-          newNumber.push('-');
-          newNumber.push(numero);
-        }
-        else{
-          newNumber.push(numero);
+          else if(i == 7){
+            newNumber.push('-');
+            newNumber.push(numero);
+          }
+          else{
+            newNumber.push(numero);
+          }
         }
       }
-    }
-        return newNumber.join('');
+          return newNumber.join('');
   }
   else{
-    return 'Array com tamanho incorreto'
+    return 'Array com tamanho incorreto.'
   }
 }
 
