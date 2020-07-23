@@ -5,13 +5,15 @@ function compareTrue(number1,number2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(altura,base) {
   // seu código aqui
+  return (base*altura)/2
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  return string.split()
 }
 
 // Desafio 4
