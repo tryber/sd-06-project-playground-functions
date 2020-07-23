@@ -189,14 +189,13 @@ function techList(tecnologias,name) {
 
 // Desafio 11
 function generatePhoneNumber(numeros) {
-
   let telNumber = [].concat(numeros);
   let newNumber = [];
   if(telNumber.length === 11){
-  for(i in telNumber){
+  for(let i in telNumber){
     let count=0
     let numero = telNumber[i]
-    for(x in telNumber){
+    for(let x in telNumber){
       if(telNumber[x]===telNumber[i]){
         count+=1;
       }
@@ -229,7 +228,7 @@ function generatePhoneNumber(numeros) {
     return 'Array com tamanho incorreto'
   }
 }
-console.log(generatePhoneNumber([1,2,5,7,6,3,4,7,8,8,6]));
+
 
 
 // Desafio 12
