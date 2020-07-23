@@ -185,9 +185,9 @@ function hydrate(bString) {
     }
   });
   if (num === 1) {
-    return num.concat(' copo de água');
+    return num + ' copo de água';
   }
-  return num.concat(' copos de água');
+  return num + ' copos de água';
 }
 
 
