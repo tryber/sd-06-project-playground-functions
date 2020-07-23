@@ -135,12 +135,9 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
+function verifyCounterRepeatedNumber(numbers) {
   let object = {};
-  let phoneNumber = 0;
-  if (numbers.length > 11) {
-    return 'Array com tamanho incorreto.';
-  }
+  let repeatedNumber = 0;
   numbers.forEach((element) => {
     if(!object[element])
       object[element] = 0;
@@ -148,16 +145,31 @@ function generatePhoneNumber(numbers) {
   })
   for (let count in object) {
     if(object[count] > 2) {
-      return 'não é possível gerar um número de telefone com esses valores'
+      return repeatedNumber = object[count];
     }
   }
+  return repeatedNumber;
+}
+
+function generateCompletePhoneNumber(numbers) {
+  let phoneNumber = 0;
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] < 0 || numbers[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    return phoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
+    return phoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
   }
   return phoneNumber;
+}
+
+function generatePhoneNumber(numbers) {
+  if (numbers.length > 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  let counterRepeatedNumber = verifyCounterRepeatedNumber(numbers);
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] < 0 || numbers[index] > 9 || counterRepeatedNumber > 2) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return generateCompletePhoneNumber(numbers);
 }
 
 // Desafio 12
