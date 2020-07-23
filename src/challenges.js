@@ -73,32 +73,58 @@ console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(numbers) {
-
   let result = [];
-  for (let i = 0; i < numbers.length; i++){
-    
+  for (let i = 0; i < numbers.length; i+= 1) {
     if (numbers[i] % 5 === 0 && numbers[i] % 3 === 0){
-      result[i] = "fizzBuzz"
-    } else if (numbers[i] % 5 === 0){
-      result[i] = "buzz"
-    }  else if (numbers[i] % 3 === 0){
-      result[i] = "fizz"
+      result[i] = 'fizzBuzz'
+    } else if (numbers[i] % 5 === 0) {
+      result[i] = 'buzz'
+    } else if (numbers[i] % 3 === 0) { 
+      result[i] = 'fizz'
     } else {
-      result[i] = "bug!"
+      result[i] = 'bug!'
     }
-    // console.log(result[i])
   }
   return result;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let string = '';
+  for (let i = 0; i <phrase.length; i += 1){
+    switch(phrase[i]){
+      case "a":
+        string += 1;
+        break;
+      case "e":
+        string += 2;
+        break;
+      case "i":
+        string += 3;
+        break;
+      case "o":
+        string += 4;
+        break;
+      case "u":
+        string += 5;
+        break;
+
+      default:
+        string += phrase[i];
+    }
+  }
+  return string;
 }
+console.log(encode("Hi there!"))
+
+
 function decode() {
   // seu código aqui
 }
+
+
+
 
 // Desafio 10
 function techList() {
