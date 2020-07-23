@@ -53,21 +53,40 @@ function highestCount(numerosLista) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distCat1 = mouse - cat1;
-  let distCat2 = mouse - cat2;
-  let modulo1 = (distCat1 * distCat1) / distCat1;
-  let modulo2 = (distCat2 * distCat2) / distCat2;
+  cat1 -= mouse;
+  cat2 -= mouse;
+  let modulo1 = (cat1 * cat1)
+  let modulo2 = (cat2 * cat2)
+  console.log(mouse)
   if (modulo1 < modulo2) {
-   return 'cat2';
+    return 'cat2';
   } else if (modulo2 < modulo1) {
     return 'cat1';
-  } 
-    return 'os gatos trombam e o rato foge';
+  } else {
+    return 'os gatos trombam e o rato foge';}
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(desafio8) {
+  let resposta8 = [];
+  for (let i8 = 0; i8 < desafio8.length; i8 += 1) {
+    if (desafio8[i8] % 5 === 0 && desafio8[i8] % 3 === 0) {
+      resposta8.push('fizzBuzz')
+    } else if (desafio8[i8] % 5 === 0 && desafio8[i8] % 3 !== 0) {
+      resposta8.push('buzz')
+    } else if (desafio8[i8] % 5 !== 0 && desafio8[i8] % 3 === 0) {
+      resposta8.push('fizz')
+    } else {
+      resposta8.push('bug!')
+    }
+    return resposta8;
+  }
+// - Para cada número da Array que seja divisível por 3, apresente uma string `"fizz"`;
+// - Para cada número da Array que seja divisível por 5, apresente uma string `"buzz"`;
+// - Caso o número seja divisível por 3 ou 5, retorne a string `"fizzBuzz"`;
+// - Caso o número não possa ser dividido por 3 nem por 5, retorne a string `"bug!"`;
+
+// Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar `["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]`.
 }
 
 // Desafio 9
