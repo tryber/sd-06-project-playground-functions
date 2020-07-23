@@ -5,7 +5,7 @@ function divisivel(numero, indice) {
 }
 
 function distancia(posA, posB) {
-  return Math.abs(posA-posB)
+  return Math.abs(posA - posB)
 }
 // Desafio 1
 function compareTrue(first, second) {
@@ -14,7 +14,7 @@ function compareTrue(first, second) {
 }
 // Desafio 2
 function calcArea(base, height) {
-  return (height*base)/2
+  return (height * base) / 2
   // seu código aqui
 }
 
@@ -25,21 +25,21 @@ function splitSentence(frase) {
 // Desafio 4
 function concatName(listaStrings) {
   let minhaLista = [].concat(listaStrings);
-  let ultimo = minhaLista[minhaLista.length-1];
+  let ultimo = minhaLista[minhaLista.length - 1];
   let primeiro = minhaLista[0];
   return `${ultimo}, ${primeiro}`;
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
-  let pontos = wins*3 + ties;
+function footballPoints(wins, ties) {
+  let pontos = 3 * wins + ties;
   return pontos
   // seu código aqui
 }
 
 // Desafio 6
 function highestCount(numbers) {
-  //percorrer o código e encontrar o maior numero
+  // percorrer o código e encontrar o maior numero
   // percorrer o código e contar quantas vezes ele aparece
   let maior = -Infinity;
   let contaMaior = 0
@@ -50,7 +50,7 @@ function highestCount(numbers) {
   }
   for (let x in numbers) {
     if (numbers[x] === maior) {
-      contaMaior +=1;
+      contaMaior += 1;
     }
   }
   return contaMaior;
@@ -58,16 +58,14 @@ function highestCount(numbers) {
 
 
 // Desafio 7
-function catAndMouse(posMouse,posCat1,posCat2) {
-  let mouseCat1 = distancia(posMouse,posCat1);
-  let mouseCat2 = distancia(posMouse,posCat2);
+function catAndMouse(posMouse, posCat1, posCat2) {
+  let mouseCat1 = distancia(posMouse, posCat1);
+  let mouseCat2 = distancia(posMouse, posCat2);
   if (mouseCat1 > mouseCat2) {
     return 'cat2'
-  }
-  else if (mouseCat1 < mouseCat2) {
+  } else if (mouseCat1 < mouseCat2) {
     return 'cat1'
-  }
-  else {
+  } else {
     return 'os gatos trombam e o rato foge'
   }
 }
@@ -79,40 +77,37 @@ function fizzBuzz(numeros) {
   let meusNumeros = [].concat(numeros);
   let resposta = [];
   let element;
-  for(i in meusNumeros){
+  for (let i in meusNumeros) {
     let n = meusNumeros[i];
-    switch (true){
-      case (divisivel(n,3) && !divisivel(n,5)):
-        element ='fizz';
-      break;
+    switch (true) {
+      case (divisivel(n, 3) && !divisivel(n, 5)):
+        element = 'fizz';
+        break;
 
-      case (!divisivel(n,3) && divisivel(n,5)):
+      case (!divisivel(n, 3) && divisivel(n, 5)):
         element = 'buzz';
-      break;
+        break;
 
-    case (divisivel(n,3) && divisivel(n,5)):
-      element = 'fizzBuzz';
-      break;
-    case (!divisivel(n,3) && !divisivel(n,5)):
-      element = 'bug!';
-      break;
+      case (divisivel(n, 3) && divisivel(n, 5)):
+        element = 'fizzBuzz';
+        break;
+      default:
+        element = 'bug!';
+        break;
     }
     resposta.push(element);
   }
   return resposta
 }
 
-
-
-
 // Desafio 9
 function encode(string) {
   let letras = string.split('');
-  let vogais = ['a','e','i','o','u'];
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
   let myMap = new Map();
-  //setando mapa
-  for (let i=0;i<vogais.length;i+=1) {
-    myMap.set(vogais[i], i+1);
+  // setando mapa
+  for (let i=0; i<vogais.length; i += 1) {
+    myMap.set(vogais[i], i + 1);
   }
   for (let i in letras) {
     const letra = letras[i];
@@ -123,7 +118,7 @@ function encode(string) {
   return letras.join('');
 }
 
-/*a -> 1 \
+/* a -> 1 \
 e -> 2 \
 i -> 3 \
 o -> 4 \
@@ -134,10 +129,10 @@ function decode(stringEncoded) {
   let vogais = ['a','e','i','o','u'];
   let letras = stringEncoded.split('');
 
-  for (i in vogais) {
+  for (let i in vogais) {
     myMap.set((parseInt(i)+1).toString(), vogais[i]);
   }
-  for (i in letras) {
+  for (let i in letras) {
     let num = letras[i];
     if (myMap.has(num)) {
       letras[i] = myMap.get(num);
@@ -146,32 +141,28 @@ function decode(stringEncoded) {
   return letras.join('');
 }
 
-
-
 // Desafio 10
 function techList(tecnologias,name) {
   if (tecnologias.length != 0) {
-    let techs = tecnologias.sort().map(function(tecnologia) {
-      if (tecnologia == '') {
-      return {
-        tech: 'Vazio!',
-        name: name
-      }
-    }
-      else{
-        return{
-          tech: tecnologia,
-          name: name
+    let techs = tecnologias.sort().map(function (tecnologia) {
+      if (tecnologia === '') {
+        return {
+          tech: 'Vazio!',
+          name: name,
         }
       }
-  })
+      else {
+        return {
+          tech: tecnologia,
+          name: name,
+        }
+      }
+    })
     // seu código aqui
-      return techs;
-  }
-  else{
+    return techs;
+  } else {
     return 'Vazio!'
   }
-
 }
 // Desafio 11
 function generatePhoneNumber(numeros) {
@@ -182,7 +173,7 @@ function generatePhoneNumber(numeros) {
     let count=0
     let numero = telNumber[i]
       for (let x in telNumber) {
-        if (telNumber[x]===telNumber[i]) {
+        if (telNumber[x] === telNumber[i]) {
           count+=1;
         }
       }
