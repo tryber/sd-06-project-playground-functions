@@ -75,8 +75,8 @@ function fizzBuzz(numeros) {
   }
   return resposta;
 }
-let num = [10, 20, 30, 40, 50];
-console.log(fizzBuzz(num))
+// let num = [10, 20, 30, 40, 50];
+// console.log(fizzBuzz(num))
 // Desafio 9
 function encode(letras) {
   let novasLetras = letras;
@@ -109,12 +109,26 @@ function decode(letras) {
   }
   return novasLetras
 }
-console.log(decode(encode(palavras)))
+// console.log(decode(encode(palavras)))
 
 // Desafio 10
-function techList() {
+function techList(list, name) {
   // seu código aqui
+  if (list.length === 0){
+    return 'Vazio!';
+  }
+  let objTech = [];
+  let pushList = list.sort();
+  for (let c = 0; c < pushList.length; c += 1){
+    objTech[c] = {
+      name: name,
+      tech: pushList[c],
+    }
+  }
+  return objTech;
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
