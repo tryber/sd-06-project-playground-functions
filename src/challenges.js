@@ -101,7 +101,7 @@ function decode(parametro) {
   parametro = parametro.replace(/1/gi, "a");
   let result = parametro.replace(/2/gi, "e");
    result = result.replace(/3/gi, "i");
-   result = result.replace(/4/gi, "0");
+   result = result.replace(/4/gi, "o");
    result = result.replace(/5/gi, "u");
   return result;  
   }
