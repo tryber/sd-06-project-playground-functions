@@ -24,8 +24,9 @@ function concatName(array) {
   return ultimoItem.concat(',',primeiroItem)
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(times,vitorias) {
   // seu código aqui
+  return (vitorias*3)+times
 }
 
 // Desafio 6
