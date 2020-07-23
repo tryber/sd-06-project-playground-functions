@@ -262,8 +262,10 @@ function triangleCheck(lineA, lineB, lineC) {
         console.log(lineC + " é menor que " + (lineA + lineB) + " e maior que o módulo de " + (lineA - lineB) + ".");
 
         console.log("É um triângulo");
+        return true;
     } else {
         console.log("Não é um triângulo");
+        return false;
     }
 }
 triangleCheck(10, 14, 8);
