@@ -58,16 +58,21 @@ function highestCount(array) {
       qtdDeVezes += 1;
     }
   }
-
   return qtdDeVezes;
 }
-
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((cat1 - mouse) < (cat2 - mouse)) {
+    return 'Cat1';
+  } if ((cat1 - mouse) > (cat2 - mouse)) {
+    return 'Cat2';
+  } if ((cat1 - mouse) === (cat2 - mouse)) {
+    return 'Os gatos se trombam e o rato foge';
+  }
 }
+console.log(catAndMouse(2, 5, 5));
 
 // Desafio 8
 function fizzBuzz() {
