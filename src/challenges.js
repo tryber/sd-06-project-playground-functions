@@ -1,28 +1,21 @@
-// tools used //
-function divisivel(numero,indice){
-  if(numero % indice === 0){
+function divisivel(numero, indice) {
+  if (numero % indice === 0) {
     return true
-  }
-  else{
-    return false
+  } else {
+      return false
   }
 }
 
-function distancia(posA,posB){
+function distancia(posA, posB) {
   return Math.abs(posA-posB)
 }
-
-
-
-
 // Desafio 1
-function compareTrue(first,second) {
+function compareTrue(first, second) {
   return first && second ? true : false
   // seu código aqui
 }
-
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   return (height*base)/2
   // seu código aqui
 }
@@ -70,13 +63,13 @@ function highestCount(numbers) {
 function catAndMouse(posMouse,posCat1,posCat2) {
   let mouseCat1 = distancia(posMouse,posCat1);
   let mouseCat2 = distancia(posMouse,posCat2);
-  if(mouseCat1 > mouseCat2){
+  if (mouseCat1 > mouseCat2) {
     return 'cat2'
   }
-  else if(mouseCat1 < mouseCat2){
+  else if (mouseCat1 < mouseCat2) {
     return 'cat1'
   }
-  else{
+  else {
     return 'os gatos trombam e o rato foge'
   }
 }
@@ -84,7 +77,7 @@ function catAndMouse(posMouse,posCat1,posCat2) {
 
 
 // Desafio 8
- function fizzBuzz(numeros) {
+function fizzBuzz(numeros) {
   let meusNumeros = [].concat(numeros);
   let resposta = [];
   let element;
@@ -182,11 +175,6 @@ function techList(tecnologias,name) {
   }
 
 }
-
-
-
-
-
 // Desafio 11
 function generatePhoneNumber(numeros) {
   let telNumber = [].concat(numeros);
@@ -232,13 +220,13 @@ function generatePhoneNumber(numeros) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA,lineB,lineC) {
+
 }
 
 // Desafio 13
 function hydrate() {
-  // seu código aqui
+
 }
 
 
