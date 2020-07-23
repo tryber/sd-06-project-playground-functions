@@ -187,10 +187,17 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(alcoolDrink) {
+  let resultNumbers= alcoolDrink.match(/\d/g);
+  let sum = 0;
+  for (let index = 0; index < resultNumbers.length; index += 1) {
+    sum += Number.parseInt(resultNumbers[index]);
+  }
+  if (sum === 1) {
+    return `${sum} copos de água`;
+  }
+  return `${sum} copos de água`;
 }
-
 
 module.exports = {
   calcArea,
