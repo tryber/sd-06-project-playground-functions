@@ -13,16 +13,19 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(stringValue) {
-  let newArray = []; splitWord = "";
-  for (let i = 0; i < stringValue.length; i += 1) {
-    if (stringValue[i] != " ") {
-      splitWord = splitWord + stringValue[i];
+function splitSentence(string) {
+  let newArray = [];
+  let arrayValue = "";
+
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] != " ") {
+      arrayValue = arrayValue + string[i];
     } else {
-      newArray.push(splitWord);
-      splitWord = "";
+      newArray.push(arrayValue);
+      arrayValue = "";
     };
   };
+  newArray.push(arrayValue);
   return newArray;
 }
 
@@ -140,10 +143,10 @@ function decode(string) {
     };
   };
   return newString
-}
+}  
 
 // Desafio 10
-function techList() {
+function techList(array, name) {
   // seu código aqui
 }
 
