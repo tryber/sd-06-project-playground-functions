@@ -53,12 +53,14 @@ function highestCount(numerosLista) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-    if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-      return 'cat1';
-    } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-      return 'cat2';
-    } else { 
-      return 'os gatos trombam e o rato foge';
+  let moduloCat1 = Math.abs(mouse - cat1);
+  let moduloCat2 = Math.abs(mouse - cat2);
+  if (moduloCat1 < moduloCat2) {
+    return 'cat1';
+  } else if (moduloCat2 < moduloCat1) {
+    return 'cat2';
+   } else { 
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -67,24 +69,17 @@ function fizzBuzz(desafio8) {
   let resposta8 = [];
   for (let i8 = 0; i8 < desafio8.length; i8 += 1) {
     if (desafio8[i8] % 5 === 0 && desafio8[i8] % 3 === 0) {
-      resposta8.push('fizzBuzz')
-    } else if (desafio8[i8] % 5 === 0 && desafio8[i8] % 3 !== 0) {
-      resposta8.push('buzz')
-    } else if (desafio8[i8] % 5 !== 0 && desafio8[i8] % 3 === 0) {
-      resposta8.push('fizz')
+      resposta8.push('fizzBuzz');
+    } else if (desafio8[i8] % 5 === 0) {
+      resposta8.push('buzz');
+    } else if (desafio8[i8] % 5 !== 0) {
+      resposta8.push('fizz');
     } else {
-      resposta8.push('bug!')
+      resposta8.push('bug!');
     }
   }
     return resposta8;
   }
-// - Para cada número da Array que seja divisível por 3, apresente uma string `"fizz"`;
-// - Para cada número da Array que seja divisível por 5, apresente uma string `"buzz"`;
-// - Caso o número seja divisível por 3 ou 5, retorne a string `"fizzBuzz"`;
-// - Caso o número não possa ser dividido por 3 nem por 5, retorne a string `"bug!"`;
-
-// Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar `["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]`.
-}
 
 // Desafio 9
 function encode() {
