@@ -157,7 +157,7 @@ function generatePhoneNumber(phoneNumber) {
   }
     //Verificando se repete
     let arrayVerificar = phoneNumber;
-    let repetiu = false;
+    let moreThanThree = false;
     for (let i = 0; i < phoneNumber.length; i += 1) {
       let contador = 0;
       for (let j = 0; j < arrayVerificar.length; j += 1) {
@@ -165,7 +165,7 @@ function generatePhoneNumber(phoneNumber) {
           contador += 1
         }
         else if (contador >= 3) {
-          repetiu = true;
+          moreThanThree = true;
           break;
         }
       }
@@ -173,7 +173,7 @@ function generatePhoneNumber(phoneNumber) {
   
   //Verificando numeros e condicao de repeticao
   for (let k = 0; k < phoneNumber.length; k += 1) {
-    if (phoneNumber[k] < 0 || phoneNumber[k] > 9 || repetiu === true) {
+    if (phoneNumber[k] < 0 || phoneNumber[k] > 9 || moreThanThree === true) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     }
