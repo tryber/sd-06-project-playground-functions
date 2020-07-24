@@ -2,10 +2,9 @@
 function compareTrue(valor1, valor2) {
   if (valor1 && valor2 === true){
     return true;
-  } else {
-    return false;
   }
-  } return false;
+  return false;
+  }
 // console.log(compareTrue(valor1,valor2));
 // Desafio 2
 function calcArea(base, altura) {
@@ -19,8 +18,8 @@ function splitSentence(testaString) {
   let verificaString = testaString.split(' ');
   return (verificaString);
 }
-//let resultSplit = splitSentence('Go Trybe');
-//console.log(resultSplit);
+let resultSplit = splitSentence('Go Trybe');
+console.log(resultSplit);
 
 
 // Desafio 4
