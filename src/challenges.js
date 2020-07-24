@@ -223,9 +223,15 @@ let glassesOfWater = 0;
       glassesOfWater += parsedCharacter;
     }
   }
-  return glassesOfWater + " copo de água";  
+  if (glassesOfWater == 1) {
+    return glassesOfWater + " copo de água"; 
+  }
+  else {
+    return glassesOfWater + " copos de água";
+  }
+   
 }
-hydrate("7 cachaça, 8 cervejas e 1 copo de vinho");
+hydrate("4 caipirinhas e 2 cervejas");
 
 module.exports = {
   calcArea,
