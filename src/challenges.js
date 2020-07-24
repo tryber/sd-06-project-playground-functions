@@ -173,7 +173,7 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, LineB, LineC) {
-  if(Math.abs(lineB - lineC) < lineA < (LineB + LineC) || Math.abs(lineA - lineC) < lineB < (lineA + LineC) || Math.abs(linea - lineB) < lineC < (lineA + LineB)){
+  if(Math.abs(lineB - lineC) < lineA < (LineB + LineC) || Math.abs(lineA - lineC) < lineB < (lineA + LineC) || Math.abs(lineA - lineB) < lineC < (lineA + LineB)){
     return true;
   } else {
     return false;
