@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  return (param1 === true && param2 === true) ? true : false;
+  return param1 === true && param2 === true;
 }
 
 // Desafio 2
 function calcArea(base, altura) {
-  return (base * altura / 2);
+  return base * altura / 2;
 }
 
 // Desafio 3
@@ -20,7 +20,7 @@ function concatName(itens) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3 + ties);
+  return wins * 3 + ties;
 }
 
 // Desafio 6
@@ -163,7 +163,7 @@ function techList(tecnologias, aluno) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numerosTelefone) {
+function generatePhoneNumber() {
   // seu código aqui
 }
 
