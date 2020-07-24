@@ -315,10 +315,11 @@ function hydrate(param) {
         return sum + " copos de água";
     } else {
         console.log(sum + " copo de água");
-        return sum + " copo de água";
+        return "1 copo de água";
     }
 }
-hydrate("1 cachaça, 5 cervejas e 1 copo de vinho");
+//
+//hydrate("1 cerveja");
 
 
 module.exports = {
