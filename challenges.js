@@ -1,37 +1,31 @@
 //01 - Compara valores booleanos
-compareTrue(true,true)
 function compareTrue(boolean1,boolean2){
   let firstValue = boolean1;
   let secondValue = boolean2;
   if(firstValue == true && secondValue == true){
-    return console.log('true');
+    return (true);
   }else{
-    return console.log('false');
+    return (false);
   }
 }
 
 //02 - Calcula área do triangulo
 function calcArea(base,height){
   let area = (base * height) / 2;
-  return console.log(area);
+  return area;
 }
-
-calcArea(10,20);
 
 //03 - Dividino a frase
 function splitSentence(string) {
   string.split(' ');
-  return console.log(string);
+  return string;
 }
-
-splitSentence("go Trybe");
+//splitSentence("go Trybe");
 
 //04 - Concatenação de strings
 function concatName(stringArray){
-  console.log(stringArray[stringArray.length -1] + ", " + stringArray[stringArray.length -2]);
+  return stringArray[stringArray.length -1] + ", " + stringArray[stringArray.length -2];
 }
-
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 //05 - Pontos no futebol
 function footballPoints(wins, ties){
@@ -45,17 +39,10 @@ function footballPoints(wins, ties){
   for(let j = 0; j < ties; j++){
     tiesPoints = ties;
   }
-
-calcArea();
-  return console.log(winsPoints,tiesPoints);
+  return winsPoints,tiesPoints;
 }
 
-footballPoints(5,6);
-
 //06 - Repetição do maior número
-// Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
-// Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
-
 function highestCount(arrayNumbers){
   let biggerNumber = [0];
   let timesRepeated = 0;
@@ -71,10 +58,8 @@ function highestCount(arrayNumbers){
       timesRepeated += 1;
     }
   }
-  return console.log("Maior numero foi repetido " + timesRepeated + " vezes");
+  return timesRepeated;
 }
-
-highestCount([9, 1, 2, 3, 9, 5, 7]);
 
 //07 - Caça ao rato
 function catAndMouse(cat1, cat2, mouse){
@@ -91,10 +76,7 @@ function catAndMouse(cat1, cat2, mouse){
   }
 }
 
-catAndMouse(1,2,2);
-
 //8 - FizzBuzz
-
 function fizzBuzz(arrayNumbers){
   result = [];
   for(i in arrayNumbers){
@@ -109,15 +91,10 @@ function fizzBuzz(arrayNumbers){
     }
   }
 
-  return console.log(result);
+  return result;
 }
 
-fizzBuzz([2, 15, 7, 9, 45]);
-
 //9 - Codifique e Decodifique
-
-// A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
-
 function encode(string) {
   let phrase = string.split('')
 
@@ -135,10 +112,9 @@ function encode(string) {
     }
   }
   let finalResult = phrase.join('');
-  return console.log(finalResult);
+  return finalResult;
 }
 
-encode('hi there!');
 
 function decode(string){
   let phrase = string.split('');
@@ -157,10 +133,8 @@ function decode(string){
     }
   }
   let finalResult = phrase.join('');
-  return console.log(finalResult);
+  return finalResult;
 }
-
-decode('h3 th2r2!');
 
 module.exports = {
   calcArea,
