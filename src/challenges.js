@@ -76,21 +76,21 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(parametro1) {
-  for(let i = 0; i < parametro1.lenght; i += 1){
-    if(parametro1[i]== "a"){
-      parametro1[i].push = 1;
-    }else if(parametro1[i]== "e"){
-      parametro1[i].push = 2;
-    }else if(parametro1[i]== "i"){
-      parametro1[i].push = 3;
-    }else if(parametro1[i]== "o"){
-      parametro1[i].push = 4;
-    }else (parametro1[i]== "u"){
-      parametro1[i].push = 5;
+function encode(parametro4) {
+  for(let i = 0; i < parametro4.lenght; i += 1){
+    if(parametro4[i]== "a"){
+      parametro4[i].push = 1;
+    }else if(parametro4[i]== "e"){
+      parametro4[i].push = 2;
+    }else if(parametro4[i]== "i"){
+      parametro4[i].push = 3;
+    }else if(parametro4[i]== "o"){
+      parametro4[i].push = 4;
+    }else (parametro4[i]== "u"){
+      parametro4[i].push = 5;
     }
   }
-
+  return parametro4;
 }
 function decode() {
   // seu código aqui
