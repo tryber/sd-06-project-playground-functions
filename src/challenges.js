@@ -107,12 +107,17 @@ function techList(techNameArray, named) {
   let arrayTechSort = techNameArray.sort();
   // create array
   let objectTechNameAndName = [];
-  // create objects and put in array
-  for (let index = 0; index < arrayTechSort.length; index += 1) {
-    objectTechNameAndName[index] = {
-      tech: arrayTechSort[index],
-      name: named,
-    };
+  // Verifing array condition
+  if (techNameArray == "") {
+    objectTechNameAndName = 'Vazio!';
+  } else {
+    // create objects and put in array
+    for (index = 0; index < arrayTechSort.length; index += 1) {
+      objectTechNameAndName[index] = {
+        tech: arrayTechSort[index],
+        name: named,
+      };
+    }
   }
   return objectTechNameAndName;
 }
