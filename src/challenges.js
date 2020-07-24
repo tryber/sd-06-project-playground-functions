@@ -39,6 +39,7 @@ function footballPoints(wins, ties) {
   total_pontos = wins*3 + ties*1;
   return total_pontos;
 }
+
 // Desafio 6
 function highestCount(lista) {
   let maior = lista[0];
@@ -56,27 +57,73 @@ function highestCount(lista) {
   return contador;
 }
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+/// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1 = Math.abs(cat1-mouse);
+  let dist2 = Math.abs(cat2-mouse);
+  let msg = "os gatos trombam e o rato foge";
+  if (dist1<dist2){
+    msg = "cat1";
+  }else if (dist2<dist1){
+    msg = "cat2";
+  }
+  return msg;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let result = [];
+  for(let i=0; i<array.length; i++){
+    let n = array[i];    
+    if(n%3===0 && n%5===0){
+      result.push('fizzbuzz');
+    }else if (n%3===0){
+      result.push('fizz');
+    }else if (n%5===0){
+      result.push('buzz');
+    }else{
+      result.push('bug!');
+    }
+  }
+  return result;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let vogais = {'a':1, 'e':2,'i':3,'o':4,'u':5};
+  code=[];
+  for(let i=0; i<string.length; i++){
+    let letra='';
+    if(string[i] in vogais){
+      letra = vogais[string[i]];
+    }else
+      letra = string[i];
+    code.push(letra);
+  }
+  return code.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let vogais = {'1':'a','2':'e','3':'i','4':'o','5':'u'};
+  code=[];
+  for(let i=0; i<string.length; i++){
+    let letra='';
+    if(string[i] in vogais){
+      letra = vogais[string[i]];
+    }else
+      letra = string[i];
+    code.push(letra);
+  }
+  return code.join('');
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  listaObjetos=[];
+  for(let i=0; i<tech.length; i++){
+    let tecnologia = { tech: tech[i], nome: name};
+    listaObjetos.push(tecnologia);
+  }
+  return listaObjetos;
 }
 
 // Desafio 11
