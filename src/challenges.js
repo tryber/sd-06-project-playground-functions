@@ -133,8 +133,8 @@ function generatePhoneNumber(numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]) {
 
 // retornar um numero no modelo (12) 34567-8901
 let ddd = '' + numbers[0] + numbers[1];
-let firsts = '' + numbers.slice(2,6);
-let lasts = '' + numbers.slice(6,);
+let firsts = '' + numbers.slice(2,7);
+let lasts = '' + numbers.slice(7,);
 firsts = firsts.replace(/[,]/g, ''); 
 lasts = lasts.replace(/[,]/g, ''); 
 
