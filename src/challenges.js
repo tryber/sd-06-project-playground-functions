@@ -261,12 +261,12 @@ function hydrate(bebidas) {
   for (let s in bebidas){
     let x = parseFloat(bebidas[s]);
     if(!isNaN(x)){
-      coposDeAgua += parseFloat(bebidas[s]);
+      coposDeAgua += parseInt(bebidas[s],10);
     }    
   }
-  return coposDeAgua + " copos de água";  
+  return `${coposDeAgua} copos de água`;  
 }
-/* let valor1 = "1 cachaça, 5 cervejas e 1 copo de vinho";
+/* let valor1 = "1 cachaça,  7 cervejas e  1 copo de vinho";
 console.log(hydrate(valor1)); */
 
 
