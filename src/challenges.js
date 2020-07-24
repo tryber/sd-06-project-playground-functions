@@ -34,8 +34,10 @@ function concatName() {
   concatenate = arrayString[arrayString.length - 1] + ", " + arrayString[0];
   return concatenate;
 }
-concatName(['Lucas', 'Souza', 'de', 'Miranda']);
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+
 // Desafio 5
+
 function footballPoints(wins, ties) {
   // seu código aqui
 return (wins * 3) + (ties * 1);
