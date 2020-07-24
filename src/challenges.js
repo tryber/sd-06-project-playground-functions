@@ -125,8 +125,21 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arraynomes, name) {
+  if (arraynomes.length == 0) {
+    return 'Vazio!'
+  } else {
+    let arrayfinal = [];
+    arraynomes = arraynomes.sort();
+    for(let i in arraynomes){
+      let add = {
+        tech: arraynomes[i],
+        name: name,
+      }
+    }
+    arrayfinal.push(add);
+    return arrayfinal;
+  }
 }
 
 // Desafio 11
