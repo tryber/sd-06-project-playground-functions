@@ -139,9 +139,8 @@ function techList(tecnologias, aluno) {
   if (tecnologias.length === 0) {
     return 'Vazio!';
   }
-  let aprenderTecnologias = [];
   // ordenar as tecnologias (alfabeticamente)
-  for (let indice = 0; indice < tecnologias.length; indice += 1) {
+  for (let indice = 1; indice < tecnologias.length; indice += 1) {
     for (let comparador = 0; comparador < indice; comparador += 1) {
       if (tecnologias[indice] < tecnologias[comparador]) {
         let alocaDado = tecnologias[indice];
@@ -151,13 +150,13 @@ function techList(tecnologias, aluno) {
       }
     }
   }
+  let aprenderTecnologias = [];
   // cria um objeto para cada tecnologia e seu aluno
-  for (let techs in tecnologias) {
-    let criarObjeto = {
+  for (let techs = 0; techs < tecnologias.length; techs += 1) {
+    aprenderTecnologias.push({
       tech: tecnologias[techs],
       name: aluno,
-    };
-    aprenderTecnologias.push(criarObjeto);
+    });
   }
   return aprenderTecnologias;
 }
