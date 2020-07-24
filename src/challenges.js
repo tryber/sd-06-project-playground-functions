@@ -30,9 +30,11 @@ function splitSentence(lucas) {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  let concatenate = '';
+  concatenate = arrayString[arrayString.length - 1] + ", " + arrayString[0];
+  return concatenate;
 }
-
+concatName(['Lucas', 'Souza', 'de', 'Miranda']);
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
