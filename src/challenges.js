@@ -219,7 +219,7 @@ function generatePhoneNumber(arrayPhoneNumber) {
      return "não é possível gerar um número de telefone com esses valores";
    }
    else {
-    generatedNumber = '(' + number[0] + number[1] + ') ' + number[2] + number [3] + number[4] + number[5] + number[6] + '-' + number[7] + number[8] + number[9] + number[10];
+    generatedNumber = '(' + arrayPhoneNumber[0] + arrayPhoneNumber[1] + ') ' + arrayPhoneNumber[2] + arrayPhoneNumber[3] + arrayPhoneNumber[4] + arrayPhoneNumber[5] + arrayPhoneNumber[6] + '-' + arrayPhoneNumber[7] + arrayPhoneNumber[8] + arrayPhoneNumber[9] + arrayPhoneNumber[10];
     return generatedNumber;
   }
   }
