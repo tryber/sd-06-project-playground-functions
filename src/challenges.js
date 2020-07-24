@@ -226,7 +226,9 @@ function hydrate(drinks) {
   
 };
 
-console.log(hydrate("1 cachaça"));
+console.log(hydrate("1 cerveja"));
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 
