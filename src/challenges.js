@@ -155,7 +155,7 @@ function generatePhoneNumber(array) {
       if (array[i] < 0 || array[i] > 9){
         count2 += 1;
       }
-      if(array[i] === array[j] && i !== j){
+      if(array[i] === array[j]){
         count += 1;
       }
       if(count > count3){
