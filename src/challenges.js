@@ -146,7 +146,7 @@ console.log(decode('Al2ss1ndr1!'))
 
 // Desafio 10
 function techList(array, nome) {
-  let arrayTech = array;
+  let arrayTech = array.sort(); 
   let finalList = [];
   
   if (array.length == 0){
@@ -157,7 +157,7 @@ function techList(array, nome) {
         tech: arrayTech[i],
         name: nome
       }
-      finalList.push(list)
+      finalList.push(list);
     }
     return finalList;
   }
