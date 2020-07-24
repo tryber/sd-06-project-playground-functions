@@ -129,19 +129,21 @@ function decode(string) {
 
 // Desafio 10
 function techList(array, name) {
+  let arrayTest = array;
   let objectList = [];
   let ordenedName = array.sort();
-  if (array.length = 0){
+  if (array.length == 0){
     return "Vazio!";
-  }
-  for(let i in ordenedName){
-      let object = {
+  } else {
+      for(let i in ordenedName){
+        let object = {
         tech: ordenedName[i],
         name: name
-      };
-      objectList[i] = object;
-  }
-  return objectList;   
+        };
+        objectList[i] = object;  
+      }
+    return objectList;  
+    }    
 }
 
 // Desafio 11
