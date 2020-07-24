@@ -70,7 +70,7 @@ function fizzBuzz(array) {
         array[i]='fizz'
         break
       case(array[i]%5===0):
-        array[i]='Buzz'
+        array[i]='buzz'
         break
       
       default:
@@ -78,6 +78,7 @@ function fizzBuzz(array) {
         break
     }
   }
+return array
 }
 // Desafio 9
 function encode() {
