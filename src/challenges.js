@@ -209,9 +209,21 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(drinks) {
+  let regex = /\d+/g;
+  var matches = drinks.match(regex);
+  let result = 0;
+
+  for (let i = 0; i < matches.length; i++) {
+      let numbers = Number(matches[i]);
+      result += numbers;
+  }
+
+  return `${result} copos de água`
+};
+
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+
 
 
 module.exports = {
