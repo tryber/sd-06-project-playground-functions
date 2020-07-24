@@ -234,21 +234,3 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-
-
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  generatePhoneNumber,
-  techList,
-  highestCount,
-  hydrate,
-  splitSentence,
-  triangleCheck,
-}
