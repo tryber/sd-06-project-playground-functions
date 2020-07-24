@@ -75,10 +75,10 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(phraseToEncode) {
-  let encodeArray = {a: 1, e: 2, i: 3, o: 4, u: 5};
+  let encodeArray = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   let splitPhraseEncode = phraseToEncode.split('')
 
-  for (index = 0; index < splitPhraseEncode.length; index += 1) {
+  for (let index = 0; index < splitPhraseEncode.length; index += 1) {
     for (let chave in encodeArray) {
       if (splitPhraseEncode[index] === chave) {
         splitPhraseEncode[index] = encodeArray[chave];
@@ -88,10 +88,10 @@ function encode(phraseToEncode) {
   return splitPhraseEncode.join('');
 }
 function decode(phraseToDecode) {
-  let decodeArray = {a: '1', e: '2', i: '3', o: '4', u: '5'};
+  let decodeArray = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let splitPhraseDecode = phraseToDecode.split('')
 
-  for (index = 0; index < splitPhraseDecode.length; index += 1) {
+  for (let index = 0; index < splitPhraseDecode.length; index += 1) {
     for (let chave in decodeArray) {
       if (splitPhraseDecode[index] === decodeArray[chave]) {
         splitPhraseDecode[index] = chave;
@@ -102,18 +102,18 @@ function decode(phraseToDecode) {
 }
 
 // Desafio 10
-function techList(techNameArray, name) {
+function techList(techNameArray, named) {
   // sort array alphabetically
   let arrayTechSort = techNameArray.sort();
   // create array
   let objectTechNameAndName = [];
   // create objects and put in array
-  for (index = 0; index < arrayTechSort.length; index += 1) {
+  for (let index = 0; index < arrayTechSort.length; index += 1) {
     objectTechNameAndName[index] = {
       tech: arrayTechSort[index],
-      name: name,
+      name: named,
     };
-  };
+  }
   return objectTechNameAndName;
 }
 
