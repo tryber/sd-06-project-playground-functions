@@ -89,28 +89,28 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(string) {
+function encode(codigo) {
   let vogais = {'a':1, 'e':2,'i':3,'o':4,'u':5};
   code=[];
-  for(let i=0; i<string.length; i++){
+  for(let i=0; i<codigo.length; i++){
     let letra='';
     if(string[i] in vogais){
       letra = vogais[string[i]];
     }else
-      letra = string[i];
-    code.push(letra);
+      letra = codigo[i];
+    code.push(codigo);
   }
   return code.join('');
 }
-function decode(string) {
+function decode(codigo) {
   let vogais = {'1':'a','2':'e','3':'i','4':'o','5':'u'};
   code=[];
-  for(let i=0; i<string.length; i++){
+  for(let i=0; i<codigo.length; i++){
     let letra='';
-    if(string[i] in vogais){
-      letra = vogais[string[i]];
+    if(codigo[i] in vogais){
+      letra = vogais[codigo[i]];
     }else
-      letra = string[i];
+      letra = codigo[i];
     code.push(letra);
   }
   return code.join('');
