@@ -29,12 +29,12 @@ function splitSentence(lucas) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(arrayString) {
   let concatenate = '';
   concatenate = arrayString[arrayString.length - 1] + ", " + arrayString[0];
   return concatenate;
 }
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+concatName(['Lucas', 'Souza', 'de', 'Miranda']);
 
 // Desafio 5
 
@@ -46,6 +46,7 @@ return (wins * 3) + (ties * 1);
 // Desafio 6
 function highestCount(numbers) {
   // seu código aqui
+
 
 
 }
