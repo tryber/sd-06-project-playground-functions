@@ -246,8 +246,34 @@ function generatePhoneNumber(numeros) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqu
+function triangleCheck(lineaA, lineaB, lineaC) {
+  let sumaA = lineaB + lineaC;
+  let absolutoA = Math.abs(lineaB - lineaC);
+  let ladoA = false;
+  let ladoB = false;
+  let ladoC = false;
+  if (lineaA < sumaA && lineaA > absolutoA) {
+    ladoA = true;
+  }
+
+  let sumaB = lineaA + lineaC;
+  let absolutoB = Math.abs(lineaA - lineaC);
+  if (lineaB < sumaB && lineaB > absolutoB) {
+    ladoB = true;
+  }
+
+  let sumaC = lineaB + lineaA;
+  let absolutoC = Math.abs(lineaB - lineaA);
+  if (lineaC < sumaC && lineaC > absolutoC) {
+    ladoC = true;
+  }
+
+  if (ladoA == true && ladoB == true && ladoC == true) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 13
