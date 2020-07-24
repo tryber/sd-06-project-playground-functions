@@ -151,18 +151,40 @@ function techList(arr, nome) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+let arr =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+function generatePhoneNumber(arr) {
+  let phoneNumber = '';
+  for (let i in arr) {
+    
+  }
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let evaluator = 0;
+  let arrayLines = [lineA, lineB, lineC];
+  for (let index in arrayLines) {
+    if (arrayLines[0] < (arrayLines[1] + arrayLines[2]) && arrayLines[0] > Math.abs(arrayLines[1] - arrayLines[2])) {
+      evaluator += 1;
+    } else if (arrayLines[1] < (arrayLines[0] + arrayLines[2]) && arrayLines[1] > Math.abs(arrayLines[0] - arrayLines[2])) {
+        evaluator +=1;
+    } else if (arrayLines[2] < (arrayLines[0] + arrayLines[1]) && arrayLines[2] > Math.abs(arrayLines[0] - arrayLines[1])) {
+        evaluator += 1;
+    }
+  }
+  if (evaluator == 3) {
+    evaluator = true;
+  } else {
+    evaluator = false;
+  }
+  return evaluator;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let bebida = parseInt(str[0]);
+  
 }
 
 
