@@ -178,19 +178,22 @@ techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas");
 
 // Desafio 11
 function verifyRepeatedNumbers(arrayPhoneNumber) {
-  let repeatedNumber = arrayPhoneNumber[0];
   let countRepeatedNumber = 0;
+  let sortedNumbers = arrayPhoneNumber.sort();
 
-  for (let index in arrayPhoneNumber) {
-    if (arrayPhoneNumber[index] == repeatedNumber) {
-      countRepeatedNumber += 1;
+  for (let index in sortedNumbers) {
+    for (let index2 in sortedNumbers) {
+      if (sortedNumbers[index] === sortedNumbers[index2]) {
+        countRepeatedNumber += 1;
+      }
     }
   }
+  
   if (countRepeatedNumber >= 3) {
-    return countRepeatedNumber = true;
+    return true;
   }
   else {
-    return countRepeatedNumber = false;
+    return false;
   }
 }
 verifyRepeatedNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
@@ -199,13 +202,12 @@ function verifyArrayNumbers(arrayPhoneNumber) {
 let verifyNumbers = 0;
   for (let index in arrayPhoneNumber) {
     if (arrayPhoneNumber[index] < 0 || arrayPhoneNumber[index] > 9) {
-      return verifyNumbers = true
+      return true;
     }
     else {
-      verifyNumbers = false;
+      return false;
     }
   }
-  return verifyNumbers;
 }
 verifyArrayNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
