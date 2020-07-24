@@ -36,14 +36,16 @@ function concatName(arrayValue) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winMatch = 3, tieMatch = 1;
+  let winMatch = 3;
+  let tieMatch = 1;
 
   return (winMatch * wins) + (tieMatch * ties);
 }
 
 // Desafio 6
 function highestCount(array) {
-  let highestValue = 0, count = 0;
+  let highestValue = 0;
+  let count = 0;
 
   for (value in array) {
     if (array[value] > highestValue) {
@@ -63,7 +65,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Dist = mouse - cat1, cat2Dist = mouse - cat2;
+  let cat1Dist = Math.abs(cat1 - mouse);
+  let cat2Dist = Math.abs(cat2 - mouse);
 
   if (cat1Dist < cat2Dist) {
     return 'cat1';
@@ -73,8 +76,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   };
 }
-
-console.log(catAndMouse(10, 8, 3))
 
 // Desafio 8
 function fizzBuzz(array) {
