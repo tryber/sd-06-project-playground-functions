@@ -5,7 +5,7 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, altura) {
-  return base * altura / 2;
+  return (base * altura) / 2;
 }
 
 // Desafio 3
@@ -20,7 +20,7 @@ function concatName(itens) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
