@@ -5,28 +5,23 @@ function compareTrue(number1,number2) {
 }
 
 // Desafio 2
-function calcArea(altura,base) {
-  // seu código aqui
   return (base*altura)/2;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  // seu código aqui
   return string.split(  );
 }
 
 // Desafio 4
 function concatName(array) {
-  // seu código aqui
-  primeiroItem = array[0];
-  ultimoItem = array[array.lengh-1];
-  return ultimoItem.concat(',',primeiroItem);
+  let primeiroItem = array[0];
+  let ultimoItem = array[array.lengh-1];
+  return ultimoItem.concat(', ', primeiroItem);
 }
 
 // Desafio 5
 function footballPoints(times,vitorias) {
-  // seu código aqui
   return (vitorias*3)+times;
 }
 
