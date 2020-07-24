@@ -196,21 +196,14 @@ function verifyRepeatedNumbers(arrayPhoneNumber) {
     return false;
   }
 }
-verifyRepeatedNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 function verifyArrayNumbers(arrayPhoneNumber) {
 let verifyNumbers = 0;
   for (let index in arrayPhoneNumber) {
-    if (arrayPhoneNumber[index] < 0 || arrayPhoneNumber[index] > 9) {
-      return true;
-    }
-    else {
-      return false;
-    }
+    return (arrayPhoneNumber[index] < 0 || arrayPhoneNumber[index] > 9) 
   }
+ 
 }
-verifyArrayNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
-
 
 function generatePhoneNumber(arrayPhoneNumber) {
   let generatedNumber = '';
@@ -226,7 +219,7 @@ function generatePhoneNumber(arrayPhoneNumber) {
   }
   }
 
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA,lineB,lineC) {
