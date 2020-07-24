@@ -75,6 +75,7 @@ console.log(catAndMouse(1, 0, 2));
 function fizzBuzz(numbers) {
   let result = [];
   for (let i = 0; i < numbers.length; i+= 1) {
+    // 
     if (numbers[i] % 5 === 0 && numbers[i] % 3 === 0){
       result[i] = 'fizzBuzz'
     } else if (numbers[i] % 5 === 0) {
@@ -116,13 +117,35 @@ function encode(phrase) {
   }
   return string;
 }
-console.log(encode("Hi there!"))
+console.log(encode("Alessandra!"))
 
 
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  let string = '';
+  for (let i = 0; i <phrase.length; i += 1) {
+    switch(phrase[i]){
+      case "1":
+        string += "a";
+        break;
+      case "2":
+        string += "e";
+        break;
+      case "3":
+        string += "i";
+        break;
+      case "4":
+        string += "o";
+        break;
+      case "5":
+        string += "u";
+        break;
+      default:
+        string += phrase[i];
+    }
+  }
+  return string;
 }
-
+console.log(decode("Al2ss1ndr1!"))
 
 
 
