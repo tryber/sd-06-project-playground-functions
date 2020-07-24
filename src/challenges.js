@@ -156,7 +156,7 @@ function generatePhoneNumber(arrayNumber) {
   if (arrayNumber.length !== 11) {
       return "Array com tamanho incorreto.";
   } else {
-    let listNumber = arrayNumber.sort();
+    let listNumber = arrayNumber.concat().sort();
     for (let i=0; i<listNumber.length-2;i++) {
         if (listNumber[i] === listNumber[i+1] && listNumber[i] === listNumber[i+2]) {
           return "não é possível gerar um número de telefone com esses valores";
