@@ -206,11 +206,11 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
       return true
-  } else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
       return true
-  } else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineC)) {
+  } else if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
       return true
   } else {
       return false;
@@ -219,6 +219,9 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10, 13, 2));
+console.log(triangleCheck(12, 17, 4));
+console.log(triangleCheck(5, 10, 3));
 
 // Desafio 13
 function hydrate(drinks) {
