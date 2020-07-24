@@ -18,7 +18,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let primeiroItem = array[0];
-  let ultimoItem = array[array.lengh-1];
+  let ultimoItem = array[array.lengh - 1];
   return ultimoItem.concat(', ', primeiroItem);
 }
 
