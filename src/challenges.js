@@ -57,26 +57,21 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let contadorCat1 = 0;
-  let contadorCat2 = 0;
-  if (mouse > cat1) {
-    for (let i = cat1; i <= mouse; i += 1) {
-      contadorCat1 += 1;
+  let contadorCat1 = catPlaces(mouse, cat1);
+  let contadorCat2 = catPlaces(mouse, cat2);
+  function catPlaces (mouse, cat) {
+    let counter = 0;
+    if (mouse > cat) {
+      for (let i = cat; i <= mouse; i += 1) {
+        counter += 1;
+      }
+      return counter;
     }
-  }
-  else {
-    for (let e = mouse; e <= cat1; e += 1) {
-      contadorCat1 += 1;
-    }
-  }
-  if (mouse > cat2) {
-    for (let i = cat2; i <= mouse; i += 1) {
-      contadorCat2 += 1;
-    }
-  }
-  else {
-    for (let e = mouse; e <= cat2; e += 1) {
-      contadorCat2 += 1;
+    else {
+      for (let i = mouse; i <= cat; i += 1) {
+        counter += 1;
+      }
+      return counter;
     }
   }
   if (contadorCat1 > contadorCat2) {
