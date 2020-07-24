@@ -74,15 +74,14 @@ console.log(catAndMouse(1, 0, 2));
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = [];
-  for (let i = 0; i < numbers.length; i+= 1) {
-    // 
-    if (numbers[i] % 5 === 0 && numbers[i] % 3 === 0){
+  for (let i = 0; i < numbers.length; i+= 1 ) {
+    if (numbers[i] % 5 === 0 && numbers[i] % 3 === 0) {
       result[i] = 'fizzBuzz'
-    } else if (numbers[i] % 5 === 0) {
+    }else if (numbers[i] % 5 === 0) {
       result[i] = 'buzz'
-    } else if (numbers[i] % 3 === 0) { 
+    }else if (numbers[i] % 3 === 0) { 
       result[i] = 'fizz'
-    } else {
+    }else {
       result[i] = 'bug!'
     }
   }
@@ -93,21 +92,21 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode(phrase) {
   let string = '';
-  for (let i = 0; i <phrase.length; i += 1){
-    switch(phrase[i]){
-      case "a":
+  for (let i = 0; i < phrase.length; i += 1 ) {
+    switch (phrase[i]) {
+      case 'a':
         string += 1;
         break;
-      case "e":
+      case 'e:
         string += 2;
         break;
-      case "i":
+      case 'i':
         string += 3;
         break;
-      case "o":
+      case 'o':
         string += 4;
         break;
-      case "u":
+      case 'u':
         string += 5;
         break;
 
@@ -117,27 +116,27 @@ function encode(phrase) {
   }
   return string;
 }
-console.log(encode("Alessandra!"))
+console.log(encode('Alessandra!'))
 
 
 function decode(phrase) {
   let string = '';
-  for (let i = 0; i <phrase.length; i += 1) {
-    switch(phrase[i]){
-      case "1":
-        string += "a";
+  for (let i = 0; i < phrase.length; i += 1 ) {
+    switch(phrase[i]) {
+      case '1':
+        string += 'a';
         break;
-      case "2":
-        string += "e";
+      case '2':
+        string += 'e';
         break;
-      case "3":
-        string += "i";
+      case '3':
+        string += 'i';
         break;
-      case "4":
-        string += "o";
+      case '4':
+        string += 'o';
         break;
-      case "5":
-        string += "u";
+      case '5':
+        string += 'u';
         break;
       default:
         string += phrase[i];
@@ -145,14 +144,23 @@ function decode(phrase) {
   }
   return string;
 }
-console.log(decode("Al2ss1ndr1!"))
-
-
+console.log(decode('Al2ss1ndr1!'))
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, nome) {
+  let arrayTech = array;
+  let finalList = [];
+  
+  for (let i in arrayTech) {
+    let list = {
+      tech: arrayTech[i],
+      name: nome
+    }
+    finalList.push(list)
+  }
+  return finalList;
 }
+console.log(techList(["água", "fogo", "ar", "terra", "éter"], "Jorginho"))
 
 // Desafio 11
 function generatePhoneNumber() {
