@@ -16,11 +16,11 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(array) {
-  let primeiroItem = array[0];
-  let ultimoItem = array[array.lengh - 1];
-  return ultimoItem.concat(', ', primeiroItem);
-}
+function concatName(arr) {
+  let arrFirst = arr[0];
+  let arrLast = arr[arr.length - 1];
+  return arrLast.concat(', ', arrFirst);
+}	
 
 // Desafio 5
 function footballPoints(times,vitorias) {
