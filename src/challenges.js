@@ -151,16 +151,21 @@ function techList(array, nome) {
   let arrayTech = array;
   let finalList = [];
   
-  for (let i in arrayTech) {
-    let list = {
-      tech: arrayTech[i],
-      name: nome
+  if (array.length == 0){
+    return "Vazio!"
+  } else {
+    for (let i in arrayTech) {
+      let list = {
+        tech: arrayTech[i],
+        name: nome
+      }
+      finalList.push(list)
     }
-    finalList.push(list)
+    return finalList;
   }
-  return finalList;
+ 
 }
-console.log(techList(["água", "fogo", "ar", "terra", "éter"], "Jorginho"))
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Jorginho"))
 
 // Desafio 11
 function generatePhoneNumber() {
