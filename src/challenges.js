@@ -175,7 +175,7 @@ console.log(decode(valor2)); */
 function techList(arrayTecnologias, name) {
   // seu código aqui
   if (arrayTecnologias.length === 0){
-    return "Vazio!";
+    return 'Vazio!';
   }else{
     let ordenarArray = arrayTecnologias;
     ordenarArray.sort();
@@ -189,9 +189,9 @@ function techList(arrayTecnologias, name) {
     return saidaTec;
   }
 }
-/* let valor1 = ["Python", "React", "Ruby", "Jest"];
-let valor2 = "Clayton Miguel";
-console.log(techList(valor1, valor2)); */
+let valor1 = ["React", "Jest", "HTML", "CSS", "JavaScript" ];
+let valor2 = "Lucas";
+console.log(techList(valor1, valor2));
 
 
 // Desafio 11
