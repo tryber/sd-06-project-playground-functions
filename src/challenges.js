@@ -99,46 +99,47 @@ function techList(t = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], name = 'Lu
 }
 
 // Desafio 11
-function generatePhoneNumber(numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 1]) {
-  checkIfRepeat(numbers);
-  if (numbers.length != 11) { 
-    return 'Array com tamanho incorreto.'; }
-  let firsts = [];
-  let lasts = [];
-  for (let i = 0; i < numbers.length; i += 1) {
+function generatePhoneNumber(numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]) {
+  let arrayLenght = numbers.length;
+  
+  // se o Array tiver tamanho diferente de 11, retornar  "Array com tamanho incorreto."
+  if (arrayLenght != 11) {
+    return 'Array com tamanho incorreto.';
+  } 
+
+// caso algum numero > 9 e < 0; erro "não é possível gerar um número de telefone com esses valores"
+  for (let i = 0; i < arrayLenght; i += 1) {
     let number = numbers[i];
-    if (number < 0 || number > 9) { 
-      return 'não é possível gerar um número de telefone com esses valores';
+    if (number < 0 || number > 9) {
+      return "não é possível gerar um número de telefone com esses valores";
     }
-  }
+  }  
 
-  for (let i = 0; i < numbers.length; i += 1) {
+// caso algum numero se repita três vezes erro "não é possível gerar um número de telefone com esses valores"
+  for (let i = 0; i < arrayLenght; i += 1) {
+    let count = 0;
     let number = numbers[i];
-    if (i > 1 && i < 7) {
-      firsts += number;
-    } else if (i > 6) {
-      lasts += number;
-    }
-  }
-  let ddd = '' + numbers[0] + numbers[1];
-
-  return `(${ddd}) ${firsts}-${lasts}`;
-}
-
-function checkIfRepeat(numbers) {
-  let repeat = 0;
-  for (let i = 0; i < 11 ; i += 1){
-    let number = numbers[i];
-    for (let j = 0; j < numbers.length; j += 1) {
-      let number2 = numbers[j];
+    for (let i2 = 0; i2 < arrayLenght; i2 += 1) {
+      let number2 = numbers[i2];
       if (number === number2) {
-        repeat += 1;
+        count += 1;
       }
     }
-    if (repeat > 2) {
-      return 'não é possível gerar um número de telefone com esses valores'
-    }
-  } 
+  
+  if (count >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+}
+
+// retornar um numero no modelo (12) 34567-8901
+let ddd = '' + numbers[0] + numbers[1];
+let firsts = '' + numbers.slice(2,6);
+let lasts = '' + numbers.slice(6,);
+firsts = firsts.replace(/[,]/g, ''); 
+lasts = lasts.replace(/[,]/g, ''); 
+
+return `(${ddd}) ${firsts}-${lasts}`;
+
 }
 
 generatePhoneNumber();
