@@ -13,7 +13,7 @@ function calcArea(altura,base) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  return string.split();
+  return string.split(  );
 }
 
 // Desafio 4
@@ -58,10 +58,26 @@ function catAndMouse(mouse,cat1,cat2) {
   }
   return 'os gatos trombam e o rato foge';
   }	
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(array) {
+  for(let i=0;i<array.lengh;i++){
+    switch(true){
+      case(array[i] % 3 === 0 && array[i] % 5 === 0):
+        array[i]='fizzBuzz'
+        break
+      case(array[i]%3===0):
+        array[i]='fizz'
+        break
+      case(array[i]%5===0):
+        array[i]='Buzz'
+        break
+      
+      default:
+        array[i]='bug!'
+        break
+    }
+  }
 
 // Desafio 9
 function encode() {
