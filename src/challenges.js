@@ -20,8 +20,9 @@ function splitSentence(parametroString) {
 }
 
 // Desafio 4
-function concatName(array) {
-  return array[array.lenght-1]+','+array[0];
+function concatName (array) {
+  let lastIndice = array.lenght - 1;
+  return array[lastIndice]+','+array[0];
 }
 
 // Desafio 5
@@ -61,18 +62,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+let resDesafio = [];
 function fizzBuzz(array) {
-  for(let i in array) {
-    if(((array[i]%3) == 0)&&((array[i]%5) == 0)) {
-      return "fizzBuzz";
-    } else if((array[i]%5) == 0) {
-      return "buzz";
-    } else if((array[i]%3) == 0) {
-      return "fizz";
+  for (let i in array) {
+    if (((array[i]%3) == 0)&&((array[i]%5) == 0)) {
+      resDesafio.push = ("fizzBuzz");
+    } else if ((array[i]%5) == 0) {
+      resDesafio.push = ("buzz");
+    } else if ((array[i]%3) == 0) {
+      resDesafio.push = ("fizz");
     } else {
-      return "bug!";
+      resDesafio.push = ("bug");
     }
   }
+  return resDesafio;
 }
 
 // Desafio 9
