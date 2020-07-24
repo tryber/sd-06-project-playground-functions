@@ -206,11 +206,11 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineA, lineB, lineC)) {
       return true
-  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA, lineB, lineC)) {
       return true
-  } else if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
+  } else if (lineC < (lineA + lineB) && lineC > Math.abs(lineA, lineB, lineC)) {
       return true
   } else {
       return false;
