@@ -146,12 +146,12 @@ return `(${ddd}) ${firsts}-${lasts}`;
 function triangleCheck(lineA, lineB, lineC) {
   let aB = Math.abs(lineA + lineB);
   let bC = Math.abs(lineB + lineC);
-  
-  if (lineC <= aB && lineA <= bC) {
+  let cA = Math.abs(lineC + lineA);
+  if (lineC <= aB && lineA <= bC && lineB <= cA) {
     return true;
   } return false;
 }
-
+triangleCheck(10,13,2)
 // Desafio 13
 function hydrate() {
 }
