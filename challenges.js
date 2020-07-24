@@ -1,183 +1,254 @@
-//01 - Compara valores booleanos
-compareTrue(true,true)
-
-function compareTrue(boolean1,boolean2){
-  let firstValue = boolean1;
-  let secondValue = boolean2;
-
-  if(firstValue == true && secondValue == true){
-    return console.log('true');
-  }else{
-    return console.log('false');
+// Desafio 1
+function compareTrue(param1, param2) {
+  // seu código aqui
+  if (param1 == true && param2 == true) {
+      return (true);
+  } else {
+      return (false);
   }
 }
 
-//02 - Calcula área do triangulo
-function calcArea(base,height){
-  let area = (base * height) / 2;
-  return console.log(area);
+console.log(compareTrue(true, true));
+
+// Desafio 2
+function calcArea(base, height) {
+  // seu código aqui
+  let result = 1;
+  result = (base * height) / 2
+
+  return (result)
+
 }
 
-calcArea(10,20);
-
-//03 - Dividino a frase
+// Desafio 3
 function splitSentence(string) {
-  string.split(' ');
-  return console.log(string);
+  // seu código aqui
+
+
+  return string.split(" ");
+
+
+
 }
+console.log(splitSentence("go trybe"));
 
-splitSentence("go Trybe");
+// Desafio 4
+function concatName(arrayDeString) {
+  // seu código aqui
 
-//04 - Concatenação de strings
-function concatName(stringArray){
-  console.log(stringArray[stringArray.length -1] + ", " + stringArray[stringArray.length -2]);
-}
+  let stringConcatenada = "";
+  stringConcatenada = arrayDeString[arrayDeString.length - 1] + ", " + arrayDeString[0];
 
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
-//05 - Pontos no futebol
-function footballPoints(wins, ties){
-  let winsPoints = 0;
-  let tiesPoints = 0;
 
-  for(let i = 0; i < wins; i++){
-    winsPoints = wins * 3;
-  }
-
-  for(let j = 0; j < ties; j++){
-    tiesPoints = ties;
-  }
-
-  return console.log(winsPoints,tiesPoints);
-}
-
-footballPoints(5,6);
-
-//06 - Repetição do maior número
-// Escreva uma função chamada highestCount que, ao receber uma array de números, retorne a quantidade de vezes que o maior deles se repete.
-// Exemplo: caso o parâmetro de highestCount seja uma array com valores [9, 1, 2, 3, 9, 5, 7], a função deverá retornar 2, que é a quantidade de vezes que o número 9 (maior número do array) se repete.
-
-function highestCount(arrayNumbers){
-  let biggerNumber = [0];
-  let timesRepeated = 0;
-
-  for(let i in arrayNumbers){
-    if(arrayNumbers[i] > biggerNumber[0]){
-      biggerNumber = arrayNumbers[i];
-    }
-  }
-  
-  for(let j in arrayNumbers){
-    if(biggerNumber === arrayNumbers[j]){
-      timesRepeated += 1;
-    }
-  }
-  return console.log("Maior numero foi repetido " + timesRepeated + " vezes");
-}
-
-highestCount([9, 1, 2, 3, 9, 5, 7]);
-
-//07 - Caça ao rato
-function catAndMouse(cat1, cat2, mouse){
-  position = [cat1,cat2,mouse];
-
-  if(position[cat2] - position[mouse] == 1 && position[cat1] - position[mouse] == 2){
-    return console.log(position[cat2]);
-  }else if(position[cat1] == position[mouse]){
-    return console.log("os gatos trombam e o rato foge !!!");
-  }
-
-  if(position[cat1] || position[cat2]){
-    return;
-  }
-}
-
-catAndMouse(1,2,2);
-
-//8 - FizzBuzz
-
-function FizzBuzz(arrayNumbers){
-  result = [];
-  for(i in arrayNumbers){
-    if(arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0){
-      result.push("fizz");
-    }else if(arrayNumbers[i] % 5 === 0){
-      result.push("buzz");
-    }else if(arrayNumbers[i] % 3 === 0){
-      result.push("fizzBuzz");
-    }else{
-      result.push("bug");
-    }
-  }
-
-  return console.log(result);
-}
-
-FizzBuzz([2, 15, 7, 9, 45]);
-
-//9 - Codifique e Decodifique
-
-// A segunda função deverá se chamar decode e faz o contrário de encode - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
-
-function encode(string) {
-  let phrase = string.split('')
-
-  for (i in phrase) {
-    if (phrase[i] === 'a') {
-      phrase[i] = '1';
-    } else if (phrase[i] === 'e') {
-      phrase[i] = '2';
-    } else if (phrase[i] === 'i') {
-      phrase[i] = '3';
-    } else if (phrase[i] === 'o') {
-      phrase[i] = '4';
-    } else if (phrase[i] === 'u') {
-      phrase[i] = '5';
-    }
-  }
-  let finalResult = phrase.join('');
-  return console.log(finalResult);
-}
-
-encode('hi there!');
-
-function decode(string){
-  let phrase = string.split('')
-
-  for (i in phrase) {
-    if (phrase[i] === '1') {
-      phrase[i] = 'a';
-    } else if (phrase[i] === '2') {
-      phrase[i] = 'e';
-    } else if (phrase[i] === '3') {
-      phrase[i] = 'i';
-    } else if (phrase[i] === '4') {
-      phrase[i] = 'o';
-    } else if (phrase[i] === '5') {
-      phrase[i] = 'u';
-    }
-  }
-  let finalResult = phrase.join('');
-  return console.log(finalResult);
-}
-
-decode('h3 th2r2!');
-
-//Lista de tecnologias
-// Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado name com um nome.
-
-// Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
-
-// {
-//   tech: "NomeTech",
-//   nome: name
-// }
-// Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo tech no objeto.
-
-// A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos com o formato acima.
-
-function techList(tech,name){
+  return stringConcatenada;
 
 }
 
-techList('Javascript', 'Artur');
+// Desafio 5
+function footballPoints(wins, ties) {
+  // seu código aqui
+  return (wins * 3) + (ties);
+}
+
+
+
+
+// Desafio 6
+function highestCount(Arr) {
+
+  let highestNumber = returnHighestNumberArray(Arr)
+  let count = 0;
+
+  for (let index = 0; index > Arr.length; index += 1) {
+
+      if (highestNumber == Arr[index]) {
+
+          count += 1;
+      }
+
+  }
+  return count;
+
+}
+
+function returnHighestNumberArray(Arrayy) {
+
+  let highestNumber = Arrayy[0];
+
+  for (let index = 0; index > Arrayy.length; index += 1) {
+
+
+      if (Arrayy[index] > highestNumber) {
+
+          highestNumber = Arrayy[index];
+      }
+  }
+
+  return highestNumber;
+}
+// seu código aqui
+
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+
+  let distanciaCat1Mouse = cat1 - mouse;
+  let distanciaCat2Mouse = cat2 - mouse;
+
+
+  if (distanciaCat1Mouse < 0) {
+
+      distanciaCat1Mouse = distanciaCat1Mouse * -1;
+  }
+
+
+  if (distanciaCat2Mouse < 0) {
+
+      distanciaCat2Mouse = distanciaCat2Mouse * -1;
+
+  }
+
+  if (distanciaCat1Mouse > distanciaCat2Mouse) {
+
+
+      return "cat2";
+
+  } else if (distanciaCat2Mouse > distanciaCat1Mouse) {
+
+
+      return "cat1";
+
+
+  } else {
+
+
+      return "os gatos trombam e o rato foge";
+  }
+
+
+}
+
+
+
+
+
+// Desafio 8
+
+function fizzBuzz(ArrNumeros) {
+  let ArrayDeString = [];
+
+
+  for (let index = 0; index < ArrNumeros.length; index = index + 1) {
+
+      if (ArrNumeros[index] % 3 === 0 && ArrNumeros[index] % 5 !== 0) {
+
+          ArrayDeString.push("fizz");
+
+      } else if (ArrNumeros[index] % 5 === 0 && ArrNumeros[index] % 3 !== 0) {
+
+
+          ArrayDeString.push("buzz");
+
+      } else if (ArrNumeros[index] % 5 === 0 || ArrNumeros[index] % 3 === 0) {
+
+
+          ArrayDeString.push("fizzBuzz");
+
+
+      } else if (ArrNumeros[index] % 3 !== 0 && ArrNumeros[index] % 5 !== 0) {
+
+          ArrayDeString.push("bug!");
+      }
+
+  }
+  return (ArrayDeString)
+}
+// Desafio 9
+function encode(palavra) {
+  for (let index = 0; index < palavra.length; index++) {
+
+      switch (palavra[index]) {
+          case "a":
+              palavra = palavra.replace(palavra[index], 1);
+              break;
+          case "e":
+              palavra = palavra.replace(palavra[index], 2);
+              break;
+          case "i":
+              palavra = palavra.replace(palavra[index], 3);
+              break;
+          case "o":
+              palavra = palavra.replace(palavra[index], 4);
+              break;
+          case "u":
+              palavra = palavra.replace(palavra[index], 5);
+              break;
+      }
+  }
+
+  return palavra;
+}
+
+function decode(palavra) {
+  for (let index = 0; index < palavra.length; index++) {
+
+      switch (palavra[index]) {
+          case "1":
+              palavra = palavra.replace(palavra[index], "a");
+              break;
+          case "2":
+              palavra = palavra.replace(palavra[index], "e");
+              break;
+          case "3":
+              palavra = palavra.replace(palavra[index], "i");
+              break;
+          case "4":
+              palavra = palavra.replace(palavra[index], "o");
+              break;
+          case "5":
+              palavra = palavra.replace(palavra[index], "u");
+              break;
+      }
+  }
+
+  return palavra;
+}
+
+
+// Desafio 10
+function techList() {
+  // seu código aqui
+}
+
+// Desafio 11
+function generatePhoneNumber() {
+  // seu código aqui
+}
+
+// Desafio 12
+function triangleCheck() {
+  // seu código aqui
+}
+
+// Desafio 13
+function hydrate() {
+  // seu código aqui
+}
+
+
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  generatePhoneNumber,
+  techList,
+  highestCount,
+  hydrate,
+  splitSentence,
+  triangleCheck,
+}
