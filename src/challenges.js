@@ -172,8 +172,8 @@ function generatePhoneNumber(array) {
 
 
 // Desafio 12
-function triangleCheck(lineA, LineB, LineC) {
-  if(Math.abs(lineB - lineC) < lineA < (LineB + LineC) || Math.abs(lineA - lineC) < lineB < (lineA + LineC) || Math.abs(lineA - lineB) < lineC < (lineA + LineB)){
+function triangleCheck(lineA, lineB, lineC) {
+  if(Math.abs(lineB - lineC) < lineA < (lineB + lineC) || Math.abs(lineA - lineC) < lineB < (lineA + lineC) || Math.abs(lineA - lineB) < lineC < (lineA + lineB)){
     return true;
   } else {
     return false;
