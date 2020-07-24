@@ -104,7 +104,7 @@ function techList(technologylist, name) {
   let listObject = [];
   technologylist.sort ();
   for (let contador = 0; contador < technologylist.length; contador +=1) {
-    let = tech = technologylist[contador];
+    let tech = technologylist[contador];
     listObject.push({tech, name});
   }
   return listObject;
