@@ -131,9 +131,6 @@ function decode(string) {
 function techList(array, name) {
   let objectList = [];
   let ordenedName = array.sort();
-  if (array.length = 0){
-    return 'Vazio!';
-  }
   for(let i in ordenedName){
       let object = {
         tech: ordenedName[i],
@@ -176,7 +173,7 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if((Math.abs(lineB - lineC) < lineA && lineA < (lineB + lineC)) || (Math.abs(lineA - lineC) < lineB && lineB < (lineA + lineC)) || (Math.abs(lineA - lineB) < lineC && lineB < (lineA + lineB))){
+  if(Math.abs(lineB - lineC) < lineA < (lineB + lineC) || Math.abs(lineA - lineC) < lineB < (lineA + lineC) || Math.abs(lineA - lineB) < lineC < (lineA + lineB)){
     return true;
   } else {
     return false;
