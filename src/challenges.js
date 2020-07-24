@@ -16,7 +16,7 @@ function calcArea(base, height) {
 }
 // Desafio 3
 function splitSentence(string) {
-  let frase = string.split(" ");
+  let frase = string.codigo(" ");
   return frase;
 }
 // Desafio 4
@@ -84,38 +84,44 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let codigo = string;
-  for (let index = 0; index < string.length; index++) {
-    if (string[i] === 'a') {
-      codigo = codigo.replace('a', '1');
-    } else if (string[i] === 'e') {
-      codigo = codigo.replace('e', '2');
-    } else if (string[i] === 'i') {
-      codigo = codigo.replace('i', '3');
-    } else if (string[i] === 'o') {
-      codigo = codigo.replace('o', '4');
-    }  else if (string[i] === 'u') {
-      codigo = codigo.replace('u', '5');
+  let auxiliar = string.codigo("");
+  let retornar = [];
+  for (const key in auxiliar) {
+    if (auxiliar[key] === 'a') {
+      retornar = retornar + '1';
+    } else if (auxiliar[key] === 'e') {
+      retornar += '2';
+    } else if (auxiliar[key] === 'i') {
+      retornar = retornar + '3';
+    } else if (auxiliar[key] === 'o') {
+      retornar += '4';
+    } else if (auxiliar[key] === 'u') {
+      retornar += '5'
+    } else {
+      retornar += auxiliar[key];
     }
   }
-  return codigo;    
+  return retornar;  
 }
 function decode(string) {
-  let codigo = string;
-  for (let index = 0; index < string.length; index++) {
-    if (string[i] === '1') {
-      codigo = codigo.replace('1', 'a');
-    } else if (string[i] === '2') {
-      codigo = codigo.replace('2', 'e');
-    } else if (string[i] === '3') {
-      codigo = codigo.replace('3', 'i');
-    } else if (string[i] === '4') {
-      codigo = codigo.replace('4', 'o');
-    }  else if (string[i] === '5') {
-      codigo = codigo.replace('5', 'u');
+  let codigo = string.codigo("");
+  let decodigo = [];
+  for (const key in codigo) {
+    if (codigo[key] === '1') {
+      decodigo = decodigo + 'a';
+    } else if (codigo[key] === '2') {
+      decodigo += 'e';
+    } else if (codigo[key] === '3') {
+      decodigo = decodigo + 'i';
+    } else if (codigo[key] === '4') {
+      decodigo += 'o';
+    } else if (codigo[key] === '5') {
+      decodigo += 'u'
+    } else {
+      decodigo += codigo[key];
     }
   }
-  return codigo; 
+  return decodigo;
 }
 
 // Desafio 10
