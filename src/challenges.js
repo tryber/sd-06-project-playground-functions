@@ -1,33 +1,26 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === true && param2 === true) {
-    return true;
-  }
-  return false;
+  return (param1 === true && param2 === true) ? true : false;
 }
 
 // Desafio 2
 function calcArea(base, altura) {
-  return (base * altura) / 2;
+  return (base * altura / 2);
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(' '); // necessário refazer!!
+  return frase.split(' ');
 }
 
 // Desafio 4
 function concatName(itens) {
-  let string = `${itens[itens.length - 1]}, ${itens[0]}`;
-  return string;
+  return `${itens[itens.length - 1]}, ${itens[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let valorVitorias = wins * 3;
-  let valorEmpates = ties;
-  let pontos = valorVitorias + valorEmpates;
-  return pontos;
+  return (wins * 3 + ties);
 }
 
 // Desafio 6
@@ -85,7 +78,6 @@ function fizzBuzz(valoresFizzBuzz) {
   }
   return novoFizzBuzz;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(fraseParaNumero) {
@@ -157,7 +149,7 @@ function techList(tecnologias, aluno) {
         tecnologias[indice] = tecnologias[comparador];
         tecnologias[comparador] = alocaDado;
       }
-    } console.log(tecnologias);
+    }
   }
   // cria um objeto para cada tecnologia e seu aluno
   for (let techs in tecnologias) {
@@ -171,7 +163,7 @@ function techList(tecnologias, aluno) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numerosTelefone) {
   // seu código aqui
 }
 
