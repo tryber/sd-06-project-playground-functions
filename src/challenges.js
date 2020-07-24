@@ -201,22 +201,23 @@ function techList(techs, name) {
 // Desafio 11
 function generatePhoneNumber(numberArray) {
   let count;
+  let error;
 
-  if (numberArray.length > 11) {
-    return "Array com tamanho incorreto."
+  if (numberArray.length != 11) {
+    return error = "Array com tamanho incorreto.";
   } else {
     for (number in numberArray) {
       count = 0;
-      if (numberArray.length > 11) {
-        return "Array com tamanho incorreto."
+      if (numberArray.length != 11) {
+        return error = "Array com tamanho incorreto.";
       } else if (numberArray[number] < 0 || numberArray[number] > 9) {
-        return "não é possível gerar um número de telefone com esses valores"
+        return error = "não é possível gerar um número de telefone com esses valores";
       } else {
         for (let i = 0; i < numberArray.length; i += 1) {
           if (numberArray[number] === numberArray[i]) {
             count += 1;
-            if (count >= 3) {
-              return "não é possível gerar um número de telefone com esses valores"
+            if (count === 3) {
+              return error = "não é possível gerar um número de telefone com esses valores";
             }
           }
         }
@@ -231,7 +232,7 @@ function generatePhoneNumber(numberArray) {
 
 
 // console.log(generatePhoneNumber([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -1]));
-// console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 5, 9, 0]));
+// console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 5, 9, 0, 1]));
 // console.log(generatePhoneNumber([0, 2, 4, 3, 5, 5, 6, 8, 9, 2, 1]));
 // console.log(generatePhoneNumber([0, 2, 3, 4, 5, 8, 7, 9, -1, 0, 7]));
 
