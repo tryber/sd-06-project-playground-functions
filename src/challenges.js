@@ -131,6 +131,9 @@ function decode(string) {
 function techList(array, name) {
   let objectList = [];
   let ordenedName = array.sort();
+  if (array.length = 0;){
+    return 'Vazio!';
+  }
   for(let i in ordenedName){
       let object = {
         tech: ordenedName[i],
