@@ -1,6 +1,8 @@
 // Desafio 1
 function compareTrue(value1 , value2) {
-  return value1 && value2;
+  if ((value1 === true) && (value2 ===true)) {
+    return true
+  } else {return false}
 }
 
 //Desafio 2
@@ -16,10 +18,8 @@ function splitSentence(prhase) {
 }
 //Desafio 4
 function concatName(names) {
-  let lastName = names[names.length - 1];
-  let firstName = names[0];
-  let lastFirst = `${firstName}, ${lastName}`;
-  return lastFirst
+  let lastName = names.length - 1;
+  return (names[lastName] + ", " +names[0]);
 }
 
 // Desafio 5
@@ -32,15 +32,14 @@ function footballPoints(wins, ties) {
 function highestCount(numbersList) {
   let numMaior = 0;
   let count = 0;
-  for (let i in numbersList){
-    numMaior = 0
-    for (let i2 in numbersList) {
-      if(numbersList[i] >= numbersList[i2]) {
-        numMaior += 1;
-      }
+  for (let i =0; i < numbersList.length; i += 1){
+    if (numMaior <= numbersList[i]) {
+      numMaior = numbersList[i];
     }
-    if(numMaior === numbersList.length) {
-      count += 1;
+    for (let i2 =0; i2 <numbersList.length; i2 += 1) {
+      if(numMaior === numbersList[i2]) {
+        count += 1;
+      }
     }
   }
   return count;
@@ -56,10 +55,20 @@ function catAndMouse(mouse, cat1, cat2) {
     return "cat1";
   } else {return "cat2"};
 }
-console.log(catAndMouse(1, 7, 4));
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let returnArray = [];
+  for (index = 0; index <= array.length; index +=1) {
+    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
+      returnArray.push("fizzBuzz");
+    } else if ((array[index] % 3 ===0)) {
+      returnArray.push("fizz");
+    }else if ((array[index] % 5 === 0)) {
+      returnArray.push("buzz");
+    } else {returnArray.push("bug!")};
+  }
+  return returnArray
 }
 
 // Desafio 9
