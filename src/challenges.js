@@ -205,7 +205,7 @@ function generatePhoneNumber(numberArray) {
   for (number in numberArray) {
     count = 0;
     if (numberArray[number] < 0 || numberArray[number] > 9) {
-      return "não é possivel gerar um número de telefone com esses valores"
+      return "não é possível gerar um número de telefone com esses valores"
     } else if (numberArray.length != 11) {
       return "Array com tamanho incorreto."
     } else {
@@ -213,7 +213,7 @@ function generatePhoneNumber(numberArray) {
         if (numberArray[number] === numberArray[i]) {
           count += 1;
           if (count >= 3) {
-            return "não é possivel gerar um número de telefone com esses valores"
+            return "não é possível gerar um número de telefone com esses valores"
           }
         }
       }
