@@ -49,39 +49,65 @@ function highestCount(numbersList) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1Mouse = cat1 - mouse;
   let distanciaCat2Mouse = cat2 - mouse;
-  if (distanciaCat1Mouse === distanciaCat2Mouse) {
-    return "os gatos trombam e o rato foge";
-  } else if (distanciaCat1Mouse < distanciaCat2Mouse) {
+  if (distanciaCat1Mouse > distanciaCat2Mouse) {
+    return "cat2";
+  } else if (distanciaCat2Mouse > distanciaCat1Mouse) {
     return "cat1";
-  } else {return "cat2"};
+  } else {return "os gatos trombam e o rato foge"};
 }
-
+console.log(catAndMouse(1, 10, 10));
 // Desafio 8
 function fizzBuzz(array) {
   let returnArray = [];
-  for (index = 0; index <= array.length; index +=1) {
+  for (index = 0; index = array.length; index +=1) {
     if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
       returnArray.push("fizzBuzz");
-    } else if ((array[index] % 3 ===0)) {
+    }
+     else if ((array[index] % 3 === 0)) {
       returnArray.push("fizz");
-    }else if ((array[index] % 5 === 0)) {
+    }
+     else if ((array[index] % 5 === 0)) {
       returnArray.push("buzz");
-    } else {returnArray.push("bug!")};
+    }
+     else {returnArray.push("bug!")};
   }
   return returnArray
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+function encode(letrasVogais) {
+  let vogaisNumeros = letrasVogais.replace(/a/gi, 1);
+  vogaisNumeros = vogaisNumeros.replace(/e/gi, 2);
+  vogaisNumeros = vogaisNumeros.replace(/i/gi, 3);
+  vogaisNumeros = vogaisNumeros.replace(/o/gi, 4);
+  vogaisNumeros = vogaisNumeros.replace(/u/gi, 5);
+
+  return vogaisNumeros;
+} 
+
+function decode(numeros) {
+  let trocandopNumeros = numeros.replace(/1/gi, 'a');
+  trocandopNumeros = trocandopNumeros.replace(/2/gi, 'e');
+  trocandopNumeros = trocandopNumeros.replace(/3/gi, 'i');
+  trocandopNumeros = trocandopNumeros.replace(/4/gi, 'o');
+  trocandopNumeros = trocandopNumeros.replace(/5/gi, 'u');
+
+  return trocandopNumeros;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technologylist, name) {
+  if (technologylist.length === 0) {
+    return "Vazio!";
+  }
+  let listObject = [];
+  technologylist.sort ();
+  for (let contador = 0; contador < technologylist.length; contador +=1) {
+    let = tech = technologylist[contador];
+    listObject.push({tech, name});
+  }
+  return listObject;
 }
 
 // Desafio 11
