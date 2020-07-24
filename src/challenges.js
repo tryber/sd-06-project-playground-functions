@@ -77,7 +77,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(parametro4) {
-  for(let i = 0; i < parametro4.lenght; i += 1){
+  for(let i in parametro4){
     if(parametro4[i]== "a"){
       parametro4[i].push = 1;
     }else if(parametro4[i]== "e"){
