@@ -162,7 +162,7 @@ function techList(array, nome) {
     return finalList;
   }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Jorginho"))
+// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Jorginho"))
 
 // Desafio 11
 function generatePhoneNumber() {
