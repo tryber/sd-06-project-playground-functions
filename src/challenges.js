@@ -1,28 +1,26 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  let valor1;
-  let valor2;
   if (valor1 && valor2 === true){
     return true;
+  } else {
+    return false;
+  }
   } return false;
-}
 // console.log(compareTrue(valor1,valor2));
 // Desafio 2
 function calcArea(base, altura) {
-  let base;
-  let altura;
   let area = (base * altura) / 2;
   return area
 }
-// console.log(calcArea(5, 10));
+//console.log(calcArea(5, 10));
 
 // Desafio 3
 function splitSentence(testaString) {
   let verificaString = testaString.split(' ');
   return (verificaString);
 }
-let resultSplit = splitSentence('Go Trybe');
-console.log(resultSplit);
+//let resultSplit = splitSentence('Go Trybe');
+//console.log(resultSplit);
 
 
 // Desafio 4
@@ -39,10 +37,10 @@ function footballPoints(wins, ties) {
   let pontuacao = (wins * 3) + (ties * 1);
   return pontuacao;
 }
-let pontuacao = footballPoints(3, 2);
-console.log(pontuacao);
-// Desafio 6
+//let pontuacao = footballPoints(3, 2);
+//console.log(pontuacao);
 
+// Desafio 6
 function highestCount(lista) {
   let maior = lista[0];
   for( let indice of lista ){
@@ -103,21 +101,33 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tec, name) {
+  let object = [];
+  if (tec.length === 0) {
+    return 'Vazio!';
+  }
+  for (let indice = (tec.length - 1); indice >= 0; indice -= 1) {
+    object[indice] = { tech: tec[indice] };
+    object[indice].name = name;
+  }
+  object.sort(function (a, b) {
+    if (a.tech > b.tech) {
+      return 1;
+    }
+    if (a.tech < b.tech) {
+      return -1;
+    }
+    return 0;
+  });
+  return object;
 }
 
 // Desafio 11
 function generatePhoneNumber(arrayTelefone) {
-  //tamanho maximo array arrayTelefone.length
-  //tamanho minimo arrayTelefone = 0
-  //regra => não pode se repetir um mesmo indice por mais de 3 vezes ou é aceitos até duas repetições
+    //regra => não pode se repetir um mesmo indice por mais de 3 vezes ou é aceitos até duas repetições
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let lineA;
-  let lineB;
-  let lineC;
   if (lineA < Math.abs(lineB + lineC) && lineA > Math.abs(lineB - lineC)){
     return true;
   } else if (lineB < Math.abs(lineA + lineC) && lineB > Math.abs(lineA - lineC)){
@@ -130,8 +140,16 @@ function triangleCheck(lineA, lineB, lineC) {
 //console.log(triangleCheck(0,0,0));
 
 // Desafio 13
-function hydrate() {
-//ser codigo
+function hydrate(){
+  let total = 0;
+  let copos = string.match(/\d/g);
+  for (let i = 0; i < i.copos.length; i += 1){
+    total += Number(copos[i]); 
+  }
+  if(total === 1){
+    return `${total} copo de água`;
+  }
+  return `${total} copos de água`;
 }
 
 
