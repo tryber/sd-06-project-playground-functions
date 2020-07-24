@@ -247,28 +247,21 @@ function generatePhoneNumber(numeros) {
 
 // Desafio 12
 function triangleCheck(lineaA, lineaB, lineaC) {
-  let sumaA = lineaB + lineaC;
-  let absolutoA = Math.abs(lineaB - lineaC);
-  let ladoA = false;
-  let ladoB = false;
-  let ladoC = false;
-  if (lineaA < sumaA && lineaA > absolutoA) {
-    ladoA = true;
+  let result1 = sideCheck (lineaA, lineaB, lineaC);
+  let result2 = sideCheck (lineaB, lineaA, lineaC);
+  let result3 = sideCheck (lineaC, lineaB, lineaA);
+
+  function sideCheck(side1 ,side2, side3){
+    let sum = side2 + side3;
+    let absolute = Math.abs(side2 - side3);
+    let result = false;
+    if (side1 < sum && side1 > absolute) {
+      result = true;
+    }
+    return result;
   }
 
-  let sumaB = lineaA + lineaC;
-  let absolutoB = Math.abs(lineaA - lineaC);
-  if (lineaB < sumaB && lineaB > absolutoB) {
-    ladoB = true;
-  }
-
-  let sumaC = lineaB + lineaA;
-  let absolutoC = Math.abs(lineaB - lineaA);
-  if (lineaC < sumaC && lineaC > absolutoC) {
-    ladoC = true;
-  }
-
-  if (ladoA == true && ladoB == true && ladoC == true) {
+  if (result1 == true && result2 == true && result3 == true) {
     return true;
   }
   else {
