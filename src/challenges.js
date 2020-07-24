@@ -1,13 +1,12 @@
 // Desafio 1
 function compareTrue(number1,number2) {
-  // seu código aqui
   return number1 && number2;
 }
 
 // Desafio 2
-function calcArea(altura,base) {
-  // seu código aqui
-  return (base*altura)/2;
+function calcArea(base,altura) {
+  let calculadora = (base * altura) / 2;
+  return calculadora;
 }
 
 // Desafio 3
@@ -27,7 +26,6 @@ function concatName(string) {
 }
 // Desafio 5
 function footballPoints(times,vitorias) {
-  // seu código aqui
   return (vitorias*3)+times;
 }
 
