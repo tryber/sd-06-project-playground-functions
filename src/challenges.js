@@ -86,7 +86,7 @@ function encode(parametro4) {
       parametro4[i].push = 3;
     }else if(parametro4[i]== "o"){
       parametro4[i].push = 4;
-    }else (parametro4[i]== "u"){
+    }else if(parametro4[i]== "u"){
       parametro4[i].push = 5;
     }
   }
