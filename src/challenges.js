@@ -161,21 +161,23 @@ console.log(decode(fraseNumero));
 
 // Desafio 10
 function techList(ferramentas,name) {
-  ferramentas.sort();
-  if(ferramentas == ""){
-    return "Vazio!"
+
+  if(ferramentas == 0){
+    ferramentas = "Vazio!"
+    return ferramentas;
   }else{
+    ferramentas.sort();
     for(index in ferramentas){
       ferramentas[index] = {
-        tech: ferramentas[index],
-        name: name
+        name: name,
+        tech: ferramentas[index]
       }
     }
     return ferramentas;
   }
+  
 }
-let ferramentas = ["React","Jest","HTML","CSS","Javascript"], nome = "Anderson";
-console.log(techList(ferramentas,nome));
+console.log(techList([],"Anderson"));
 
 // Desafio 11
 function generatePhoneNumber() {
