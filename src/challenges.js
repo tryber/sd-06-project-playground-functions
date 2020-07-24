@@ -22,7 +22,7 @@ function splitSentence(parametroString) {
 // Desafio 4
 function concatName(array) {
   let lastIndice = array.lenght - 1;
-  return array[lastIndice]+','+array[0];
+  return array[lastIndice] + ',' + array[0];
 }
 
 // Desafio 5
