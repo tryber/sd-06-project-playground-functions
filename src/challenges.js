@@ -177,9 +177,53 @@ function techList(arrayTechnology,name) {
 techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas");
 
 // Desafio 11
-function generatePhoneNumber(arrayPhoneNumber) {
+function verifyRepeatedNumbers(arrayPhoneNumber) {
+  let repeatedNumber = arrayPhoneNumber[0];
+  let countRepeatedNumber = 0;
 
+  for (let index in arrayPhoneNumber) {
+    if (arrayPhoneNumber[index] == repeatedNumber) {
+      countRepeatedNumber += 1;
+    }
+  }
+  if (countRepeatedNumber >= 3) {
+    return countRepeatedNumber = true;
+  }
+  else {
+    return countRepeatedNumber = false;
+  }
 }
+verifyRepeatedNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+
+function verifyArrayNumbers(arrayPhoneNumber) {
+let verifyNumbers = 0;
+  for (let index in arrayPhoneNumber) {
+    if (arrayPhoneNumber[index] < 0 || arrayPhoneNumber[index] > 9) {
+      return verifyNumbers = true
+    }
+    else {
+      verifyNumbers = false;
+    }
+  }
+  return verifyNumbers;
+}
+verifyArrayNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+
+
+function generatePhoneNumber(arrayPhoneNumber) {
+  let generatedNumber = '';
+   if (arrayPhoneNumber.length !== 11) {
+     return 'Array com tamanho incorreto.';
+   }
+   else if (verifyArrayNumbers(arrayPhoneNumber) || verifyRepeatedNumbers(arrayPhoneNumber)) {
+     return "não é possível gerar um número de telefone com esses valores";
+   }
+   else {
+    generatedNumber = '(' + number[0] + number[1] + ') ' + number[2] + number [3] + number[4] + number[5] + number[6] + '-' + number[7] + number[8] + number[9] + number[10];
+    return generatedNumber;
+  }
+  }
+
 generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 
 // Desafio 12
