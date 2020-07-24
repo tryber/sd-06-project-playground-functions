@@ -218,11 +218,15 @@ function hydrate(drinks) {
       let numbers = Number(matches[i]);
       result += numbers;
   }
-
-  return `${result} copos de água`
+  if (result === 1 ){
+    return `${result} copo de água`
+  } else {
+    return `${result} copos de água`
+  }
+  
 };
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate("1 cachaça"));
 
 
 
