@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if( value1 == true && value2 == true){
+  if(value1==true && value2==true){
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -10,15 +10,15 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(base, height) {
   let areaTriang;
-  areaTriang = (base * height)/2;
- return areaTriang;
+  areaTriang = (base*height)/2;
+  return areaTriang;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let arrayString =[];
+  let arrayString = [];
   arrayString = string.split(" ");
-return arrayString;
+  return arrayString;
 }
 
 // Desafio 4
@@ -40,7 +40,7 @@ function footballPoints(wins, ties) {
 function highestCount(arra) {
 let higherNumber = arra[0];
 let qtdNumber = 0;
-let bigger=0;
+let bigger = 0;
 
   for(let index = 0; index <= arra.length -1; index +=1 ){
    if(arra[index]>higherNumber){
@@ -107,7 +107,6 @@ function encode(phrase) {
   return newPhrase1;
 }
 
-
 function decode(phrase) {
   let newPhrase1 = "";
   for(let index = 0; index <= phrase.length -1 ; index +=1){
@@ -131,18 +130,77 @@ function decode(phrase) {
 
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techno1, name) {
+  let techno2 ={
+    tech: "",
+    nome: "",
+  };
+  for(let index = 0; index <= techno1.length-1; index+=1){
+  
+  }
+
+    return techno2[indice];
+  
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(possiblePhone) {
+  let phoneNumber = "(";
+  let count = 1;
+  let possibleNumberClone = possiblePhone.slice(); //slice copia array sem precisar de um for
+  possibleNumberClone.sort(); //sort coloca array em ordem crescente 
+  if(possiblePhone.length != 11 ){
+    return "Array com tamanho incorreto."
+  }else {
+    
+    for(let index = 0; index <= possibleNumberClone.length -1 ; index+= 1){
+      if(possibleNumberClone[index] == possibleNumberClone[index + 1]){  //compara a possição index com a posição da frente
+        count+=1;
+        if(count >=3){
+          return "não é possível gerar um número de telefone com esses valores"
+        }
+      }else{
+        count = 1;
+      }
+      
+    }
+
+  for(let index = 0; index <= possiblePhone.length -1 ; index+= 1){
+    if((possiblePhone[index] < 0) || (possiblePhone[index] > 9)){
+      return "não é possível gerar um número de telefone com esses valores"
+   }else if(index == 2){
+      phoneNumber += ")"
+      phoneNumber += possiblePhone[index];
+   }else if(index == 7){
+      phoneNumber += "-"
+      phoneNumber += possiblePhone[index];
+    }else{
+      phoneNumber += possiblePhone[index];
+    }
+
+  }
 }
+return phoneNumber;
+}
+let tel = [1, 2, 3, 3, 5, 3, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(tel));
+//Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], generatePhoneNumber deverá retornar (12) 34567-8901.
+//Caso algum dos números da array seja menor que 0-ok, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+ let sumSides1 = lineA + lineB;
+ let sumSides2 = lineA + lineC;
+ let sumSides3 = lineB + lineC;
+ let dif1 = Math.abs(lineA - lineB);
+ let dif2 = Math.abs(lineA - lineC);
+ let dif3 = Math.abs(lineB - lineC);
+ let answer = false;
+
+ if((lineA < sumSides3) && (lineB < sumSides2) && (lineC < sumSides1)&& (lineA > dif3) && (lineB > dif2) && (lineC > dif1)){
+ answer = true;
+ }
+ return answer;
 }
 
 // Desafio 13
