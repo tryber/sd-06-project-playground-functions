@@ -54,7 +54,6 @@ function highestCount(numbers) {
   }
   return result;
 }
-
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
@@ -97,7 +96,7 @@ function encode(phrase) {
       case 'a':
         string += 1;
         break;
-      case 'e:
+      case 'e':
         string += 2;
         break;
       case 'i':
@@ -117,7 +116,6 @@ function encode(phrase) {
   return string;
 }
 console.log(encode('Alessandra!'))
-
 
 function decode(phrase) {
   let string = '';
@@ -163,7 +161,6 @@ function techList(array, nome) {
     }
     return finalList;
   }
- 
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Jorginho"))
 
