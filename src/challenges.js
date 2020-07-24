@@ -142,10 +142,14 @@ return `(${ddd}) ${firsts}-${lasts}`;
 
 }
 
-generatePhoneNumber();
-
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
+  let aB = Math.abs(lineA + lineB);
+  let bC = Math.abs(lineB + lineC);
+  
+  if (lineC <= aB && lineA <= bC) {
+    return true;
+  } return false;
 }
 
 // Desafio 13
