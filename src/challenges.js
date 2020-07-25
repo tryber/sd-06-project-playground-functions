@@ -266,10 +266,15 @@ function hydrate(bebidas) {
       coposDeAgua += parseInt(bebidas[s],10);
     }    
   }
-  return `${coposDeAgua} copo de água`;  
+  if (coposDeAgua > 1){
+    return `${coposDeAgua} copos de água`;
+  } else {
+    return `${coposDeAgua} copo de água`;
+  }
+    
 }
-/* let valor1 = "1 cachaça,  7 cervejas e  1 copo de vinho";
-console.log(hydrate(valor1)); */
+let valor1 = "1 cachaça,   7cervejas e   copo de vinho";
+console.log(hydrate(valor1));
 
 
 module.exports = {
