@@ -1,11 +1,9 @@
 //01 - Compara valores booleanos
-function compareTrue(boolean1,boolean2){
-  let firstValue = boolean1;
-  let secondValue = boolean2;
-  if(firstValue == true && secondValue == true){
-    return (true);
+function compareTrue(a,b) {
+  if (a === true && b === true){
+    return true
   }else{
-    return (false);
+    return false
   }
 }
 
