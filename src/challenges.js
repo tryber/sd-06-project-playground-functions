@@ -152,7 +152,7 @@ function numeroRepetido(num, numArry) {
       quantidadeRepeticao += 1;
     }
     if (quantidadeRepeticao >= 3) {
-      return true; 
+      return true;
     }
   }
   return false;
@@ -161,14 +161,13 @@ function numeroRepetido(num, numArry) {
 function generatePhoneNumber(telefone) {
   if (telefone.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else {
-    for (let i = 0; i < telefone.length; i += 1) {
-      if (telefone[i] < 0 || telefone[i] > 9 || numeroRepetido(telefone[i], telefone)) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+  }
+  for (let i = 0; i < telefone.length; i += 1) {
+    if (telefone[i] < 0 || telefone[i] > 9 || numeroRepetido(telefone[i], telefone)) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  return "(" + telefone[0] + telefone[1] + ") " + telefone[2] + telefone[3] + telefone[4] + telefone[5] + telefone[6] + "-" + telefone[7] + telefone[8] + telefone[9] + telefone[10]; 
+  return `(${telefone[0]}${telefone[1]}) ${telefone[2]}${telefone[3]}${telefone[4]}${telefone[5]}${telefone[6]}-${telefone[7]}${telefone[8]}${telefone[9]}${telefone[10]}`;
 }
 
 // Desafio 12
