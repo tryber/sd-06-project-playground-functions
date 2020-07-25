@@ -25,15 +25,25 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  let biggerNumber = numbers[0];
-  let countNumber = 0;
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] === biggerNumber) {
-      countNumber += 1;
+function foundBiggestNumber(numbers) {
+  let biggerNumber = -Infinity;
+  for(let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > biggerNumber) {
+      biggerNumber = numbers[index];
     }
   }
-  return countNumber;
+  return biggerNumber;
+}
+
+function highestCount(numbers) {
+  let count = 0;
+  let biggerNumber = foundBiggestNumber(numbers);
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (biggerNumber === numbers[i]) {
+      count += 1;
+    }    
+  }
+  return count;
 }
 
 // Desafio 7
@@ -49,20 +59,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  let words = [];
-  for (let index in numbers) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      words[words.length] = 'fizzBuzz';
-    } else if (numbers[index] % 3 === 0) {
-      words[words.length] = 'fizz';
-    } else if (numbers[index] % 5 === 0) {
-      words[words.length] = 'buzz';
-    } else {
-      words[words.length] = 'bug!';
-    }
+function analyzeNumber(numbers) {
+  if (numbers % 3 === 0 && numbers % 5 === 0) {
+    return 'fizzBuzz';
+  } else if (numbers % 3 === 0) {
+    return 'fizz';
+  } else if (numbers % 5 === 0) {
+    return 'buzz';
   }
-  return words;
+  return 'bug!';
+}
+function fizzBuzz(numbers) {
+  let word = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    word.push(analyzeNumber(numbers[index]));
+  }
+  return word;
 }
 
 // Desafio 9
@@ -99,10 +111,12 @@ function decode(word) {
 function techList(tech, name) {
   tech.sort();
   let techLearnsList = [];
+  let techLearn = {};
   for (let index = 0; index < tech.length; index += 1) {
-    let techLearn = {
-      tech: tech[index], name: name
-    }
+    techLearn = {
+      tech: tech[index],
+      name: name,
+    };
     techLearnsList.push(techLearn);
   }
   if (tech.length === 0) {
