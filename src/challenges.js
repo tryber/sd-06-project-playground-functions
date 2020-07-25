@@ -219,9 +219,9 @@ function hydrate(string) {
   }
   let letras = frase.filter(function (letra)  { return (Number(letra)) == letra && letra != ' '} ).reduce((acc,number) => Number(acc)+Number(number));
   if(letras > 1){
-    return `${letras} copos de agua`
+    return `${letras} copos de água`
   } else {
-    return `${letras} copo de agua`}
+    return `${letras} copo de água`}
 }
 
 
