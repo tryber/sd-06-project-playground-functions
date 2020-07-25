@@ -1,10 +1,11 @@
 /* começa mais um desafio */
 
 // Desafio 1
-/* 1 - Usando o operador && JavaScript possui um operador lógico &&, o qual recebe dois valores e 
-retorna true se ambos os valores são verdadeiros, e retorna false se algum dos valores não o for.
-Considerando isso, crie uma função chamada compareTrue que, ao receber dois booleanos:
-Retorne true se ambos os valores são verdadeiros;
+/* 1 - Usando o operador && JavaScript possui um operador lógico &&, o qual 
+recebe dois valores e retorna true se ambos os valores são verdadeiros, e 
+retorna false se algum dos valores não o for.
+Considerando isso, crie uma função chamada compareTrue que, ao receber 
+dois booleanos: Retorne true se ambos os valores são verdadeiros;
 Retorne false se um ou ambos os parâmetros forem falsos.
 Faça a função utilizando o operador &&.
 */
@@ -61,7 +62,7 @@ function splitSentence(frase) {
 // let array = ['Lucas','Cassiano', 'Ferraz', 'Paolillo']
 
 function concatName(array) {
-  var newString = `${array[array.length - 1]}, ${array[0]}`;
+  let newString = `${array[array.length - 1]}, ${array[0]}`;
   return newString;
 }
 // console.log(concatName(array))
