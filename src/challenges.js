@@ -41,14 +41,13 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numberList) {
-  let higherNumber = Math.max(numberList);
+  let higherNumber = Math.max(...numberList);
   let higherNumberCounter = 0;
   for (let i = 0; i < numberList.length; i += 1) {
     if (higherNumber === numberList[i]) {
       higherNumberCounter += 1;
     }
   }
-
   return higherNumberCounter;
 }
 
@@ -68,20 +67,23 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numberList) {
   let messages = [];
+  let result = '';
   for (let i = 0; i < numberList.length; i += 1) {
-    if (numberList[i] % 3 === 0) {
-      if (numberList[i] % 5 === 0) {
-        messages.push('fizzbuzz');
-      } else {
-        messages.push('fizz');
-      }
-    } else {
-      if (numberList[i] % 5 === 0) {
-        messages.push('buzz');
-      } else {
-        messages.push('bug!');
-      }
+    switch (numberList[i]) {
+      case numberList[i] % 15 === 0:
+        result = 'fizzBuzz';
+        break;
+      case numberList[i] % 3 === 0:
+        result = 'fizz';
+        break;
+      case numberList[i] % 5 === 0:
+        result = 'buzz';
+        break;
+      default:
+        result = 'bug';
+        break;
     }
+    messages.push(result);
   }
   return messages;
 }
@@ -96,7 +98,7 @@ function convert(encodes, decodes, word) {
       newWord.push(word[i]);
     }
   }
-  return newWord.join('')
+  return newWord.join('');
 }
 
 // Desafio 9
@@ -106,6 +108,16 @@ function encode(word) {
 
 function decode(word) {
   return convert(['a', 'e', 'i', 'o', 'u'], ['1', '2', '3', '4', '5'], word);
+}
+
+function comparador(first, last) {
+  if (first.nome < last.nome) {
+    return -1;
+  }
+  if (first.nome > last.nome) {
+    return 1;
+  }
+  return 0;
 }
 
 // Desafio 10
@@ -118,7 +130,7 @@ function techList(tech, name) {
     };
     objectList.push(technology);
   }
-  return objectList;
+  return objectList.sort(comparador);
 }
 
 // Desafio 11
@@ -152,4 +164,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
