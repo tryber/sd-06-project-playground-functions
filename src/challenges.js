@@ -205,7 +205,7 @@ function generatePhoneNumber(arrayPhone) {
   } else {
     for (let i = 0; i <= arrayPhone.length - 1; i += 1) {
       if (arrayPhone[i] < 0 || arrayPhone[i] > 9) {
-        return 'não é possível gerar um número de telefone com esses valores!';
+        return 'não é possível gerar um número de telefone com esses valores';
       } else {
         if (checkOccurrences(arrayPhone[i], arrayPhone)) {
           temMaisDeTresOcorrencias = true;
