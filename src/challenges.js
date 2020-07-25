@@ -17,7 +17,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(nameList) {
-  return `${nameList[nameList.length - 1]} , ${nameList[0]}`;
+  return `${nameList[nameList.length - 1]}, ${nameList[0]}`;
 }
 
 // Desafio 5
