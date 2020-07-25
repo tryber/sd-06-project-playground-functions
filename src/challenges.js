@@ -17,7 +17,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(nameList) {
-  return nameList[nameList.length - 1] + ', ' + nameList[0];
+  return '${nameList[nameList.length - 1]}, ${nameList[0]}';
 }
 
 // Desafio 5
@@ -52,25 +52,25 @@ function catAndMouse(mouse, cat1, cat2) {
     answer = 'cat1';
   } else if (distCat1 ** 2 > distCat2 ** 2) {
     answer = 'cat2';
-  } 
+  }
   return answer;
 }
 
 // Desafio 8
 function fizzBuzz(numList) {
-  let fizzBuzz = [];
+  let fizzyBuzzy = [];
   for (let i in numList) {
     if (numList[i] % 3 === 0 && numList[i] % 5 === 0) {
-      fizzBuzz.push('fizzBuzz');
+      fizzyBuzzy.push('fizzBuzz');
     } else if (numList[i] % 3 === 0 && numList[i] % 5 !== 0) {
-      fizzBuzz.push('fizz');
+      fizzyBuzzy.push('fizz');
     } else if (numList[i] % 3 !== 0 && numList[i] % 5 === 0) {
-      fizzBuzz.push('buzz');
+      fizzyBuzzy.push('buzz');
     } else {
-      fizzBuzz.push('bug!');
+      fizzyBuzzy.push('bug!');
     }
   }
-  return fizzBuzz;
+  return fizzyBuzzy;
 }
 
 // Desafio 9
@@ -93,6 +93,8 @@ function encode(message) {
         break;
       case 'u':
         letters[i] = '5';
+        break;
+      default:
         break;
     }
     encodedMessage += letters[i];
@@ -120,6 +122,8 @@ function decode(numberedMessage) {
       case '5':
         lettersAndNumbers[i] = 'u';
         break;
+      default:
+        break;
     }
     decodedMessage += lettersAndNumbers[i];
   }
@@ -128,10 +132,10 @@ function decode(numberedMessage) {
 
 // Desafio 10
 function techList(techNames, nameUsr) {
+  let listOfObj = [];
   if (techNames.length === 0) {
-    return 'Vazio!';
-  } else {
-    let listOfObj = [];
+    listOfObj = 'Vazio!';
+  } else {    
     let listOfTech = techNames.sort();
     for (let i in listOfTech) {
       let obj = {};
@@ -139,8 +143,8 @@ function techList(techNames, nameUsr) {
       obj.name = nameUsr;
       listOfObj.push(obj);
     }
-    return listOfObj;
   }
+  return listOfObj;
 }
 
 // Desafio 11
@@ -155,7 +159,7 @@ function generatePhoneNumber(stringPhone) {
       arrayPhone[i] = stringPhone[i];
     }
     for (let i = 0; i < arrayPhone.length; i += 1) {
-      arrayPhone[i] = parseInt(arrayPhone[i]);
+      arrayPhone[i] = parseInt(arrayPhone[i], 10);
       if (arrayPhone[i] < 0 || arrayPhone[i] > 9) {
         return erro;
       }
@@ -171,9 +175,9 @@ function generatePhoneNumber(stringPhone) {
         return erro;
       }
     }
-    let ddd = '(' + arrayPhone[0] + arrayPhone[1] + ')';
-    let firstPart = ' ' + arrayPhone[2] + arrayPhone[3] + arrayPhone[4] + arrayPhone[5] + arrayPhone[6];
-    let secondPart = '-' + arrayPhone[7] + arrayPhone[8] + arrayPhone[9] + arrayPhone[10];
+    let ddd = '(${arrayPhone[0]}${arrayPhone[1]})';
+    let firstPart = ' ${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}';
+    let secondPart = '-${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}';
     return ddd + firstPart + secondPart;
   }
 }
@@ -202,13 +206,13 @@ function hydrate(drinks) {
   let numDrinks = drinks.replace(/\D/g, '');
   let totalWater = 0;
   for (let i in numDrinks) {
-    let water = parseInt(numDrinks[i])
+    let water = parseInt(numDrinks[i], 10)
     totalWater += water;
   }
   if (totalWater === 1) {
-    return totalWater + ' copo de água';
+    return '${totalWater} copo de água';
   } else if (totalWater > 1) {
-    return totalWater + ' copos de água';
+    return '${totalWater} copos de água';
   } else {
     return 'Beba a quantidade de água que quiser'
   }
@@ -217,7 +221,7 @@ function hydrate(drinks) {
 module.exports = {
   calcArea,
   catAndMouse,
-  compareTrue,
+  compareTrue,' + 
   concatName,
   decode,
   encode,
