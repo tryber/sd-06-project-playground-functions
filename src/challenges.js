@@ -27,7 +27,7 @@ console.log (splitSentence("Oi eu sou o Matheus Carvalho"));
 // Desafio 4
 function concatName(firstLast) {
   // seu código aqui
-  let newString = firstLast[firstLast.length -1] + "," + firstLast[0];
+  let newString = firstLast[firstLast.length - 1] + "," + firstLast[0];
   return newString;
 }
 
@@ -41,19 +41,16 @@ function footballPoints(wins,ties) {
 function highestCount(arr) {
   // seu código aqui
       let heighestNumber = returnHighestNumberFromArray(arr)
-  
-     // Responsabilidade:
-     // Encontrar quantas vezes o maior numero se repete
-  
-     let count = 0;
-     for (let index =0; index < arr.length; index += 1) {
-       if (heighestNumber === arr[index]){
+      let count = 0;
+        for (let index =0; index < arr.length; index += 1) {
+           if (heighestNumber === arr[index]){
          count += 1;
        }
     }
      return count;
   
      } 
+     
   function returnHighestNumberFromArray(array){
     let heighestNumber = array [0];
     for(let index = 0; index < array.length; index +=1){
@@ -66,9 +63,19 @@ function highestCount(arr) {
   }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
-}
+    let distanceFirst = Math.abs(mouse - cat1);
+    let distanceSecond = Math.abs(mouse - cat2);
+      if(distanceFirst < distanceSecond){
+        return 'cat1';
+      } else if (distanceSecond === distanceFirst){
+        return 'os gatos trombam e o rato foge';
+      } else {
+        return 'cat2';
+      }
+  }
+
 
 // Desafio 8
 function fizzBuzz() {
