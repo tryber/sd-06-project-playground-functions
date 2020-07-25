@@ -214,14 +214,14 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   let frase = []
-  let quantidades = [];
   for(let i in string){
     frase.push(string[i]);
   }
   let letras = frase.filter(function (letra)  { return (Number(letra)) == letra && letra != ' '} ).reduce((acc,number) => Number(acc)+Number(number));
   if(letras > 1){
     return `${letras} copos de agua`
-  } return `${letras} copo de agua`
+  } else {
+    return `${letras} copo de agua`}
 }
 console.log(hydrate('1 copo,copos,copo'));
 
