@@ -127,14 +127,19 @@ function decode(m2ss1g2) {
 }
 
 // Desafio 10
-function techList(techNames, name) {
+function techList(techNames, nameUsr) {
   if (techNames.length === 0) {
     return "Vazio!";
   } else {
-    let listOfTech = [];
-    for (let i in techNames) {
-
+    let listOfObj = [];
+    let listOfTech = techNames.sort();
+    for (let i in listOfTech) {
+      let obj = {};
+      obj.tech = listOfTech[i];
+      obj.name = nameUsr;
+      listOfObj.push(obj);
     }
+    return listOfObj;
   }
 }
 
@@ -153,6 +158,18 @@ function hydrate() {
   // seu código aqui
 }
 
+
+// function test(strNum) {
+//   let arrNum = [];
+//   for (let i in strNum) {
+//     let numNum = strNum[i] * 1;
+//     arrNum.push(numNum);
+//     console.log(typeof(numNum));
+//   }
+//   return arrNum;
+// }
+// let sternum = "15864289635";
+// console.log(test(sternum));
 
 module.exports = {
   calcArea,
