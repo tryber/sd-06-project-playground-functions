@@ -109,7 +109,7 @@ function techList(techNameArray, named) {
   let objectTechNameAndName = [];
   // Verifing array condition
   if (techNameArray.length === 0) {
-    return 'Vazio!';
+    objectTechNameAndName = 'Vazio!';
   } else {
     // create objects and put in array
     for (let index = 0; index < arrayTechSort.length; index += 1) {
