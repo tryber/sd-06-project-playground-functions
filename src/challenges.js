@@ -75,21 +75,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 //Desafio 8
 function fizzBuzz(numeros) {
-  if (numeros % 3 === 0 && numeros % 5 === 0) {
-    return 'fizzBuzz';
-  } else if (numeros % 3 === 0) {
-    return 'fizz';
-  } else if (numeros % 5 === 0) {
-    return 'buzz';
+  let resultado = [];
+  for (let i = 0; i < numeros.length; i += 1) {
+      let n = numeros[i];
+      if (n % 3 === 0 && n % 5 === 0) {
+          resultado.push('fizzbuzz');
+      } else if (n % 3 === 0) {
+          resultado.push('fizz');
+      } else if (n % 5 === 0) {
+          resultado.push('buzz');
+      } else {
+          resultado.push('bug!');
+      }
   }
-  return 'bug!';
+  return resultado;
 }
-
-
-// function fizzBuzz() {
-
-// }
-
 
 
 // Desafio 9
