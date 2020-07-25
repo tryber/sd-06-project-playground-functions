@@ -34,8 +34,8 @@ function concatName(stringArray) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  winsScore = wins * 3;
-  tiesScore = ties * 1;
+  let winsScore = wins * 3;
+  let tiesScore = ties * 1;
   return winsScore + tiesScore;
 }
 
@@ -69,24 +69,29 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numberList) {
   let messages = [];
   for (let i = 0; i < numberList.length; i += 1) {
-    if (numberList[i] % 3 === 0 && numberList[i] % 5 === 0) {
-      messages.push('fizzbuzz');
-    } else if (numberList[i] % 3 === 0) {
-      messages.push('fizz');
-    } else if (numberList[i] % 5 === 0) {
-      messages.push('buzz');
+    if (numberList[i] % 3 === 0) {
+      if (numberList[i] % 5 === 0) {
+        messages.push('fizzbuzz');
+      } else {
+        messages.push('fizz');
+      }
     } else {
-      messages.push('bug!');
+      if (numberList[i] % 5 === 0) {
+        messages.push('buzz');
+      } else {
+        messages.push('bug!');
+      }
     }
   }
   return messages;
 }
 
-function checkDictionary(dictorionary, word) {
+function checkDictionary(dictionary, word) {
   let newWord = [];
   for (let i = 0; i < word.length; i += 1) {
-    if (word[i] in vowels) {
-      newWord.push(letter = dictorionary[word[i]]);
+    if (word[i] in dictionary) {
+      let convertChar = dictionary.indexOf(word[i]) + 1
+      newWord.push(convertChar.toString());
     } else {
       newWord.push(word[i]);
     }
@@ -96,14 +101,32 @@ function checkDictionary(dictorionary, word) {
 
 // Desafio 9
 function encode(word) {
-  let vowelsEncode = {
-    'a': 1,
-    'e': 2,
-    'i': 3,
-    'o': 4,
-    'u': 5
-  };
-  return checkDictionary(vowelsEncode, word);
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let newWord = [];
+  for (let i = 0; i < word.length; i += 1) {
+    if (vowels.includes(word[i])) {
+      let convertChar = vowels.indexOf(word[i]) + 1;
+      newWord.push(convertChar.toString());
+    } else {
+      newWord.push(word[i]);
+    }
+  }
+  return newWord.join('');
+}
+
+function decode(word) {
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = ['1', '2', '3', '4', '5'];
+  let newWord = [];
+  for (let i = 0; i < word.length; i += 1) {
+    if (numbers.includes(word[i])) {
+      let postion = numbers.indexOf(word[i]);
+      newWord.push(vowels[postion]);
+    } else {
+      newWord.push(word[i]);
+    }
+  }
+  return newWord.join('')
 }
 
 function decode(word) {
@@ -123,7 +146,7 @@ function techList(tech, name) {
   for (let i = 0; i < tech.length; i += 1) {
     let technology = {
       tech: tech[i],
-      nome: name
+      nome: name,
     };
     objectList.push(technology);
   }
