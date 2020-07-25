@@ -28,7 +28,7 @@ function concatName(arr) {
   // seu código aqui
   let primeiro = arr[0];
   let ultimo = arr[arr.length - 1];
-  let str = ultimo + ', '+ primeiro;
+  let str = ultimo + ',' + primeiro;
   return str;
 }
 
