@@ -242,11 +242,24 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate(str) {
-  let bebida = parseInt(str[0]);
+function hydrate(drink) {
   
+  let regex = /\d+/g;
+  let qtd = drink.match(regex).map(Number);
+  let total = 0;
+  for (let i in qtd) {
+    for (let i = 0; i < qtd.length; i += 1) {
+      total += qtd[i];
+    }
+    let copos = '';
+    if (total === 1) {
+      copos = 'copo';
+    } else {
+      copos = 'copos';
+    }
+    return `${total} ${copos} de água`;
+  }
 }
-
 
 module.exports = {
   calcArea,
