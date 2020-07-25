@@ -123,12 +123,16 @@ function comparador(first, last) {
 // Desafio 10
 function techList(tech, nameTech) {
   let objectList = [];
-  for (let i = 0; i < tech.length; i += 1) {
-    let technology = {
-      tech: tech[i],
-      name: nameTech,
-    };
-    objectList.push(technology);
+  if (tech.length > 0) {
+    for (let i = 0; i < tech.length; i += 1) {
+      let technology = {
+        tech: tech[i],
+        name: nameTech,
+      };
+      objectList.push(technology);
+    }
+  } else {
+    return 'Vazio!';
   }
   return objectList.sort(comparador);
 }
