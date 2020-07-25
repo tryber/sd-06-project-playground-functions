@@ -476,24 +476,3 @@ module.exports = {
   splitSentence,
   triangleCheck,
 }
-function highestCount(numbersArray) {
-  
-  let highestNumber = 0;
-  let counter = 0;
-
-  for (let index in numbersArray) {
-    if (numbersArray[index] > highestNumber) {
-      highestNumber = numbersArray[index];
-    }
-  }
-  for (let index in numbersArray) {
-    if (numbersArray[index] === highestNumber) {
-      counter += 1;
-    }
-  }
-  return counter;
-}
-
-// TESTE
-let testArray = [9, 10, 2, 9, 9, 5, 7, 9];
-console.log(highestCount(testArray));
