@@ -134,13 +134,17 @@ function techList(tech, name) {
   let techno2 = [];
      
   tech.sort();
-
+if(tech.length === 0){
+  return "Vazio!";
+}else{
   for( let index =0; index < tech.length;index+=1){
     
     techno2[index] = "{tech: "+tech[index]+ ", name: " + name + "}";
     
   } 
   return techno2;
+}
+ 
 }
 
 
