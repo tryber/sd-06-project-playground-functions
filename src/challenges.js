@@ -196,7 +196,9 @@ function generatePhoneNumber(numeros) {
   } else {
       return 'Array com tamanho incorreto.'
   }
+
 }
+console.log(generatePhoneNumber([1,4,3,4,5,6,7,8,9,1,2]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let lados = [...arguments];
@@ -207,7 +209,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
   return comparaSoma.length === 3 && comparaDif.length === 3
 }
-console.log(triangleCheck(8,9,16));
+
 
 // Desafio 13
 function hydrate(string) {
@@ -216,15 +218,12 @@ function hydrate(string) {
   for(let i in string){
     frase.push(string[i]);
   }
-  let letras = frase.filter(function (letra)  { return (Number(letra)) == letra && letra != ' '} );
-  for(let i in letras){
-    if(letras[i] == Number(letras[i]) ){
-      return Number(letras[i])
-    }
-  }
-
+  let letras = frase.filter(function (letra)  { return (Number(letra)) == letra && letra != ' '} ).reduce((acc,number) => Number(acc)+Number(number));
+  if(letras > 1){
+    return `${letras} copos de agua`
+  } return `${letras} copo de agua`
 }
-hydrate('1 copo,2copos,1copo');
+console.log(hydrate('1 copo,copos,copo'));
 
 module.exports = {
   calcArea,
