@@ -25,12 +25,12 @@ function calcArea(base, height) {
 // Função receberá uma string e retornará uma array de strings separadas por
 // cada espaço na string original
 function splitSentence(stringDesafio3) {
-  let arrayDesafio3 = stringDesafio3.split(" ");
+  let arrayDesafio3 = stringDesafio3.split(' ');
   return arrayDesafio3;
 }
 
 // console.log('<---- Desafio 3 ---->');
-console.log(splitSentence("Me dê papai"));
+// console.log(splitSentence('Me dê papai'));
 
 // Desafio 4
 // Receber uma array de strings, retorne uma string com o formato
@@ -38,7 +38,7 @@ console.log(splitSentence("Me dê papai"));
 function concatName(stringDesafio4) {
   let firstDesafio4 = stringDesafio4[0];
   let lastDesafio4 = stringDesafio4[stringDesafio4.length - 1];
-  let separatorDesafio4 = [", "];
+  let separatorDesafio4 = [', '];
   return lastDesafio4.concat(separatorDesafio4, firstDesafio4);
 }
 
@@ -91,7 +91,7 @@ function highestCount(numbersDesafio6) {
 // e os gatos e retorne qual dos felinos irá alcançar o rato primeiro
 // sendo aquele que estará mais perto
 // Caso os gatos estejam na mesma distância do rato
-// a função deverá retornar a string "os gatos trombam e o rato foge"
+// a função deverá retornar a string 'os gatos trombam e o rato foge'
 function catAndMouse(mouse, cat1, cat2) {
   let posCat1 = cat1 - mouse;
   let posCat2 = cat2 - mouse;
@@ -100,11 +100,11 @@ function catAndMouse(mouse, cat1, cat2) {
     posCat1 * -1 === posCat2 ||
     posCat2 * -1 === posCat1
   ) {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   } else if (posCat1 < posCat2) {
-    return "cat1";
+    return 'cat1';
   }
-  return "cat2";
+  return 'cat2';
 }
 
 // console.log('<---- Desafio 7 ---->');
@@ -119,13 +119,13 @@ function fizzBuzz(numberD8) {
   let resultDesafio8 = [];
   for (let i = 0; i < numberD8.length; i += 1) {
     if (numberD8[i] % 3 === 0 && numberD8[i] % 5 === 0) {
-      resultDesafio8.push("fizzBuzz");
+      resultDesafio8.push('fizzBuzz');
     } else if (numberD8[i] % 3 === 0) {
-      resultDesafio8.push("fizz");
+      resultDesafio8.push('fizz');
     } else if (numberD8[i] % 5 === 0) {
-      resultDesafio8.push("buzz");
+      resultDesafio8.push('buzz');
     } else {
-      resultDesafio8.push("bug!");
+      resultDesafio8.push('bug!');
     }
   }
   return resultDesafio8;
@@ -143,11 +143,11 @@ function fizzBuzz(numberD8) {
 // retornará uma string com vogais minúsculas no lugar dos números
 function encode(stringEncode) {
   let stringEncodeRet = stringEncode
-    .replace(/e/g, "2")
-    .replace(/a/g, "1")
-    .replace(/i/g, "3")
-    .replace(/u/g, "5")
-    .replace(/o/g, "4");
+    .replace(/e/g, '2')
+    .replace(/a/g, '1')
+    .replace(/i/g, '3')
+    .replace(/u/g, '5')
+    .replace(/o/g, '4');
 
   return stringEncodeRet;
 }
@@ -157,11 +157,11 @@ function encode(stringEncode) {
 
 function decode(stringDecode) {
   let stringDecodeRet = stringDecode
-    .replace(/1/g, "a")
-    .replace(/2/g, "e")
-    .replace(/3/g, "i")
-    .replace(/4/g, "o")
-    .replace(/5/g, "u");
+    .replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
 
   return stringDecodeRet;
 }
@@ -174,7 +174,7 @@ function decode(stringDecode) {
 // aprender. Essa função deve receber também um segundo parâmetro chamado name
 // com um nome. Com a seguinte estrutura
 // {
-//   tech: "NomeTech",
+//   tech: 'NomeTech',
 //   nome: name
 // }
 // Estes objetos devem ser inseridos em uma nova lista em ordem crescente a
@@ -189,6 +189,7 @@ function techList() {}
 // Desafio 11
 function checkOccurrences(number, arrayNumbers) {
   let contarArray = 0;
+  
   for (let n = 0; n <= arrayNumbers.length - 1; n += 1) {
     if (number === arrayNumbers[n]) {
       contarArray += 1;
@@ -202,18 +203,16 @@ function generatePhoneNumber(arrayPhone) {
   let temMaisDeTresOcorrencias = false;
   if (arrayPhone.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else {
-    for (let i = 0; i <= arrayPhone.length - 1; i += 1) {
-      if (arrayPhone[i] < 0 || arrayPhone[i] > 9) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      } else {
-        if (checkOccurrences(arrayPhone[i], arrayPhone)) {
-          temMaisDeTresOcorrencias = true;
-          break;
-        }
-      }
-    }
   }
+  for (let i = 0; i <= arrayPhone.length - 1; i += 1) {
+    if (arrayPhone[i] < 0 || arrayPhone[i] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+      if (checkOccurrences(arrayPhone[i], arrayPhone)) {
+        temMaisDeTresOcorrencias = true;
+        break;
+        }
+    }
 
   let arrayDdd = String(arrayPhone[0]) + String(arrayPhone[1]);
   let arrayIni =
@@ -237,12 +236,12 @@ function generatePhoneNumber(arrayPhone) {
   }
 }
 
-// console.log(generatePhoneNumber([3, 2, 1, 4, 5, 6, 7, 8, 9, 9, 8]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 // Um triângulo é composto de três linhas: lineA, lineB e lineC.
 // Crie uma função chamada triangleCheck que deverá receber
-// as três linhas como parâmetro e retornar se é 
+// as três linhas como parâmetro e retornar se é
 // possível formar um triângulo com os valores
 // apresentados de cada linha
 function triangleCheck(lineA, lineB, lineC) {
