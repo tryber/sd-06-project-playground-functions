@@ -123,7 +123,7 @@ function techList(tech, name) {
   }
   return techLearnsList;
 }
-a
+
 // Desafio 11
 function verifyCounterRepeatedNumber(numbers) {
   let object = {};
