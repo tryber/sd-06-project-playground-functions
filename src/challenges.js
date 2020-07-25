@@ -107,9 +107,23 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
+function techList(myArray, myName) {
   // seu código aqui
-}
+    let arrayObj = [];
+    if (myArray.length === 0) {
+      arrayObj = 'Vazio!';
+    } else {
+      myArray.sort();
+      for (let i = 0; i < myArray.length; i += 1) {
+        let obj = {
+          tech: myArray[i],
+          name: myName,
+        }
+        arrayObj.push(obj);
+      }
+    }
+    return arrayObj;
+  }
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -122,9 +136,21 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(myDrink) {
   // seu código aqui
-}
+    let myNumbers = myDrink.match(/\d+/g).map(Number);
+    let sumNumbers = 0;
+    for (let i = 0; i < myNumbers.length; i += 1) {
+      sumNumbers += myNumbers[i];
+    }
+    let result = '';
+    if (sumNumbers === 1) {
+      result = '1 copo de água';
+    } else {
+      result = `${sumNumbers} copos de água`;
+    }
+    return result;
+  }
 
 
 module.exports = {
