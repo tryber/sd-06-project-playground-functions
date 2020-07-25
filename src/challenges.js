@@ -66,55 +66,33 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(word) {
+function encodeDecode(word) {
   let newWord = '';
-  for (let index in word) {
+  for (let index = 0; index < word.length; index += 1) {
     switch (word[index]) {
-      case 'a':
-        newWord += '1';
-        break;
-      case 'e':
-        newWord += '2';
-        break;
-      case 'i':
-        newWord += '3';
-        break;
-      case 'o':
-        newWord += '4';
-        break
-      case 'u':
-        newWord += '5';
-        break;
-      default:
-        newWord += word[index];
+      case 'a': newWord += '1'; break;
+      case 'e': newWord += '2'; break;
+      case 'i': newWord += '3'; break;
+      case 'o': newWord += '4'; break;
+      case 'u': newWord += '5'; break;
+      case '1': newWord += 'a'; break;
+      case '2': newWord += 'e'; break;
+      case '3': newWord += 'i'; break;
+      case '4': newWord += 'o'; break;
+      case '5': newWord += 'u'; break;
+      default: newWord += word[index];
     }
   }
   return newWord;
 }
-function decode(deWord) {
-  let newWord = '';
-  for (let index in deWord) {
-    switch (deWord[index]) {
-      case '1':
-        newWord += 'a';
-        break;
-      case '2':
-        newWord += 'e';
-        break;
-      case '3':
-        newWord += 'i';
-        break;
-      case '4':
-        newWord += 'o';
-        break;
-      case '5':
-        newWord += 'u';
-        break;
-      default:
-        newWord += deWord[index];
-    }
-  }
-  return newWord;
+
+function encode(word) {
+  let code = encodeDecode(word);
+  return code;
+}
+function decode(word) {
+  let code = encodeDecode(word);
+  return code;
 }
 
 // Desafio 10
@@ -122,7 +100,9 @@ function techList(tech, name) {
   tech.sort();
   let techLearnsList = [];
   for (let index = 0; index < tech.length; index += 1) {
-    let techLearn = { tech: tech[index], name: name }
+    let techLearn = {
+      tech: tech[index], name: name
+    }
     techLearnsList.push(techLearn);
   }
   if (tech.length === 0) {
