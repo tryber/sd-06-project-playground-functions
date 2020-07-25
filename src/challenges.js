@@ -146,7 +146,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // console.log("distancia do range1 =" + range1)
   // console.log("distancia do range2 =" + range2)
   let messege = ''
-   if (range1 < range2) {
+  if (range1 < range2) {
     messege = 'cat1'
   } else if (range1 > range2) {
     messege = 'cat2'
