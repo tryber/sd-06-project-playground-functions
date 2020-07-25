@@ -73,8 +73,9 @@ function fizzBuzz(array) {
       resDesafio.push = ('buzz');
     } else if ((array[i] % 3) == 0) {
       resDesafio.push = ('fizz');
-    }
+    } else {
       resDesafio.push = ('bug!');
+    }
   }
   return resDesafio;
 }
@@ -83,21 +84,35 @@ function fizzBuzz(array) {
 function encode (parametro4) {
   for (let i in parametro4) {
     if (parametro4[i] === 'a') {
-      parametro4[i].push = 1;
+      parametro4[i].push = '1';
     } else if (parametro4[i] === 'e') {
-      parametro4[i].push = 2;
+      parametro4[i].push = '2';
     } else if (parametro4[i] === 'i') {
-      parametro4[i].push = 3;
+      parametro4[i].push = '3';
     } else if (parametro4[i] === 'o') {
-      parametro4[i].push = 4;
+      parametro4[i].push = '4';
     } else if (parametro4[i] === 'u') {
-      parametro4[i].push = 5;
+      parametro4[i].push = '5';
     }
   }
   return parametro4;
 }
-function decode() {
+function decode(parametro5) {
   // seu código aqui
+  for (let i in parametro5) {
+    if (parametro5[i] === '1') {
+      parametro5[i].push = 'a';
+    } else if (parametro5[i] === '2') {
+      parametro5[i].push = 'e';
+    } else if (parametro5[i] === '3') {
+      parametro5[i].push = 'i';
+    } else if (parametro5[i] === '4') {
+      parametro5[i].push = 'o';
+    } else if (parametro5[i] === '5') {
+      parametro5[i].push = 'u';
+    }
+  }
+  return parametro4;
 }
 
 // Desafio 10
