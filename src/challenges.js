@@ -149,7 +149,11 @@ function generatePhoneNumber(stringPhone) {
     return "Array com tamanho incorreto.";
   } else {
     const erro = "não é possível gerar um número de telefone com esses valores";
-    let arrayPhone = stringPhone.split("");
+    // let arrayPhone = stringPhone.split("");
+    let arrayPhone = [];
+    for (let i in stringPhone) {
+      arrayPhone[i] = stringPhone[i];
+    }
     for (let i = 0; i < arrayPhone.length; i += 1) {
       arrayPhone[i] = parseInt(arrayPhone[i]);
       if (arrayPhone[i] < 0 || arrayPhone[i] > 9) {
@@ -174,29 +178,24 @@ function generatePhoneNumber(stringPhone) {
   }
 }
 
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(sideA, sideB, sideC) {
+  let answer = false;
+  let sides = [sideA, sideB, sideC];
+  for (let i in sides) {
+    for (let j in sides) {
+      if (i !== j) {
+
+      }
+    }
+  }
 }
+
 
 // Desafio 13
 function hydrate() {
   // seu código aqui
 }
-
-
-// function test(strNum) {
-//   let arrNum = [];
-//   for (let i in strNum) {
-//     let numNum = strNum[i] * 1;
-//     arrNum.push(numNum);
-//     console.log(typeof(numNum));
-//   }
-//   return arrNum;
-// }
-// let sternum = "15864289635";
-// console.log(test(sternum));
 
 module.exports = {
   calcArea,
