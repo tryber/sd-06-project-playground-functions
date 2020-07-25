@@ -137,16 +137,18 @@ function techList(tech, name) {
 if(tech.length === 0){
   return "Vazio!";
 }else{
-  for( let index =0; index < tech.length;index+=1){
+  for( let index = 0; index < tech.length;index+=1){
     
-    techno2[index] = "{tech: "+tech[index]+ ", name: " + name + "}";
+    techno2[index] = {"tech" : tech[index],"name" : name};
     
   } 
   return techno2;
 }
  
 }
-
+let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let nome ="Lucas";
+console.log(techList(array, nome));
 
 // Desafio 11
 function generatePhoneNumber(possiblePhone) {
