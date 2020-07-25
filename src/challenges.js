@@ -40,7 +40,7 @@ function footballPoints(wins, ties){
   return winsPoints,tiesPoints;
 }
 
-//06 - Repetição do maior número
+//06 - Repetição do maior numero
 function highestCount(arrayNumbers){
   let biggerNumber = [0];
   let timesRepeated = 0;
