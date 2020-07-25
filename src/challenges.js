@@ -102,19 +102,19 @@ function funcGreaterNumber(array2) {
       greaterNumber = i;
     }
   }
-    return greaterNumber;
+  return greaterNumber;
 }
 // console.log(funcGreaterNumber(array2))
 
 function highestCount(array2) {
   let greaterNumber = funcGreaterNumber(array2);
   let counter = 0;
-    for (let i of array2) {
-      if (i === greaterNumber) {
+  for (let i of array2) {
+    if (i === greaterNumber) {
         counter += 1;
-      }
     }
-    return counter;
+  }
+  return counter;
 }
 // console.log(highestCount(array2))
 
