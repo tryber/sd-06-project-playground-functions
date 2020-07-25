@@ -42,24 +42,26 @@ function calcArea(base, height) {
 */
 // let frase = 'lilica linda';
 function splitSentence(frase) {
-  return frase.split(" ");
+  return frase.split(' ');
 
-  // seu código aqui
+// seu código aqui
 }
 // console.log(splitSentence(frase));
 
 // Desafio 4
 /* 4 - Concatenação de strings
-  Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma
-  string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
+  Escreva uma função com o nome concatName que, ao receber uma array de
+  strings, retorne uma   string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM',
+  independente do tamanho da array.
 
-  Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas',
-  'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
+  Isso quer dizer que, caso o parâmetro passado para concatName seja a
+  Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá
+  retornar Paolillo, Lucas.
 */
 // let array = ['Lucas','Cassiano', 'Ferraz', 'Paolillo']
 
 function concatName(array) {
-  var newString = `${array[array.length - 1]}, ${array[0]}`;	  
+  var newString = `${array[array.length - 1]}, ${array[0]}`;
   return newString;
 }
 // console.log(concatName(array))
