@@ -135,7 +135,7 @@ function techList(techNames, nameUsr) {
   let listOfObj = [];
   if (techNames.length === 0) {
     listOfObj = 'Vazio!';
-  } else {    
+  } else {
     let listOfTech = techNames.sort();
     for (let i in listOfTech) {
       let obj = {};
@@ -221,7 +221,7 @@ function hydrate(drinks) {
 module.exports = {
   calcArea,
   catAndMouse,
-  compareTrue, 
+  compareTrue,
   concatName,
   decode,
   encode,
