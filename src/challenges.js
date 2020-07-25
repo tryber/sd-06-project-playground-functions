@@ -69,7 +69,7 @@ function fizzBuzz(numberList) {
   let messages = [];
   let result = '';
   for (let i = 0; i < numberList.length; i += 1) {
-    switch (numberList[i]) {
+    switch (true) {
       case numberList[i] % 15 === 0:
         result = 'fizzBuzz';
         break;
@@ -111,10 +111,10 @@ function decode(word) {
 }
 
 function comparador(first, last) {
-  if (first.nome < last.nome) {
+  if (first.tech < last.tech) {
     return -1;
   }
-  if (first.nome > last.nome) {
+  if (first.tech > last.tech) {
     return 1;
   }
   return 0;
