@@ -6,34 +6,29 @@ function compareTrue(value1 , value2) {
     return false
   }
 }
-console.log(compareTrue(true, false));
 
 //Desafio 2
 function calcArea(base, heigth) {
   return ((base * heigth) / 2);
 }
-console.log(calcArea(10, 5));
  
 // Desafio 3
 function splitSentence(prhase) {
   let splitPhrase = prhase.split(" ");
   return splitPhrase;
 }
-console.log(splitSentence("Go Trybe"));
 
 //Desafio 4
 function concatName(names) {
   let lastName = names.length - 1;
   return (names[lastName] + ", " +names[0]);
 }
-console.log(concatName(["Aurelio", "Millena", "Lorenzo"]));
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalPoints = (wins * 3) + ties;
   return totalPoints
 }
-console.log(footballPoints(5, 2));
 
 // Desafio 6
 function highestCount(numbersList) {
@@ -51,7 +46,6 @@ function highestCount(numbersList) {
     }
   return repeatedNumber;
 }
-console.log(highestCount([9, 1, 2, 3, 5, 6, 9, 7, 8,]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -65,7 +59,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge"
   };
 }
-console.log(catAndMouse(1, 10, 10));
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -81,7 +74,6 @@ function fizzBuzz(array) {
   }
   return returnArray
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45, 50]));
 
 // Desafio 9
 function encode(myString) {
@@ -92,8 +84,6 @@ function decode(myString) {
   let decodificar = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' }
   return myString.replace(/[12345]/g, m => decodificar[m]);
 }
-console.log(encode("hi there!"));
-console.log(decode("h3 th2r2!"));
 
 // Desafio 10
 function techList(arrayTech, name) {
@@ -106,7 +96,6 @@ function techList(arrayTech, name) {
   }
   return techList
 }
-console.log(techList(["java", "php", "html"], "Aurelio"));
 
 // Desafio 11
 function generatePhoneNumber() {
