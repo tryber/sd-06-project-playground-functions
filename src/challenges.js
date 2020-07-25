@@ -57,29 +57,22 @@ function catAndMouse(mouse, cat1, cat2) {
   }
     return 'cat2'
 }
-  /*let resposta;
-  if (cat1 < cat2) {
-    return cat1;
-  } else if (cat2 < cat1) {
-    return cat2;
-  } else {
-    return resposta = 'os gatos trombam e o rato foge';
-  }*/
+
 // Desafio 8
-function fizzBuzz(array) {
-  let resDesafio = [];
+function fizzBuzz(arrayNumbers) {
+  let resultado = [];
   for (let i in array) {
-    if (((array[i] % 3) == 0) && ((array[i] % 5) == 0)) {
-      resDesafio.push = ('fizzBuzz');
-    } else if ((array[i] % 5) == 0) {
-      resDesafio.push = ('buzz');
-    } else if ((array[i] % 3) == 0) {
-      resDesafio.push = ('fizz');
+    if (arrayNumbers[i] % 3 == 0 && arrayNumbers[i] % 5 == 0) {
+      resultado.push = ("fizzBuzz");
+    } else if (array[i] % 5 == 0) {
+      resultado.push = ("buzz");
+    } else if (array[i] % 3 == 0) {
+      resultado.push = ("fizz");
     } else {
-      resDesafio.push = ('bug!');
+      resultado.push = ("bug");
     }
   }
-  return resDesafio;
+  return resultado;
 }
 
 // Desafio 9
@@ -118,8 +111,9 @@ function decode(parametro5) {
 }
 
 // Desafio 10
-function techList() {
+function techList(techList, name) {
   // seu código aqui
+  
 }
 
 // Desafio 11
