@@ -191,9 +191,9 @@ function techList(arrayTecnologias, name) {
     return saidaTec;
   }
 }
-let valor1 = ["React", "Jest", "HTML", "CSS", "JavaScript" ];
+/* let valor1 = ["React", "Jest", "HTML", "CSS", "JavaScript" ];
 let valor2 = "Lucas";
-console.log(techList(valor1, valor2));
+console.log(techList(valor1, valor2)); */
 
 
 // Desafio 11
