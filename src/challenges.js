@@ -122,7 +122,7 @@ function encode(stringEncode) {
 function decode(stringDecode) {
   let decodeString = '';
 
-  for (let i = 0; index < stringDecode.length; i += 1) {
+  for (let i = 0; i < stringDecode.length; i += 1) {
     switch (stringDecode[i]) {
       case '1':
         decodeString += 'a';
@@ -151,11 +151,11 @@ function techList(array, student) {
   let techArray = [];
   let orderArray = array.sort();
 
-  if (orderArray !== '') {
+  if (orderArray.length !== 0) {
     for (let i = 0; i < orderArray.length; i += 1) {
       techArray.push({
         tech: orderArray[i],
-        name: student
+        name: student,
       });
     }
   } else {
