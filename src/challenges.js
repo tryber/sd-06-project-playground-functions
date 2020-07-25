@@ -68,11 +68,11 @@ function catAndMouse(mouse,cat1,cat2) {
     let distanceFirst = Math.abs(mouse - cat1);
     let distanceSecond = Math.abs(mouse - cat2);
       if(distanceFirst < distanceSecond){
-        return 'cat1';
+        return "cat1";
       } else if (distanceSecond === distanceFirst){
-        return 'the cats hit each other and the mouse scapes';
+        return "the cats hit each other and the mouse scapes";
       } else {
-        return 'cat2';
+        return "cat2";
       }
   }
 
@@ -80,28 +80,65 @@ function catAndMouse(mouse,cat1,cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   // seu código aqui
-  let stringArray = [];
+  let stArray = [];
   for (let i = 0; i < arrayNumbers.length; i += 1) {
     if (arrayNumbers[i] % 15 === 0){
-      stringArray.push('fizzBuzz');
+      stArray.push("fizzBuzz");
     } else if (arrayNumbers[i] % 3 === 0) {
-      stringArray.push('fizz');
+      stArray.push("fizz");
     } else if (arrayNumbers[i] % 5 === 0) {
-      stringArray.push('buzz');
+      stArray.push("buzz");
     } else {
-      stringArray.push('bug!');
+      stArray.push("bug!");
     }
   }
-  return stringArray;
+  return stArray;
 }
+console.log(fizzBuzz([4, 8, 15, 95, 45]));
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let newString = " ";
+  for (let char in string) {
+    if (string[char] === "a") {
+      newString += "1";
+    } else if (string[char] === "e") {
+      newString += "2";
+    } else if (string[char] === "i") {
+      newString += "3";
+    } else if (string[char] === "o") {
+      newString += "4";
+    } else if (string[char] === "u") {
+      newString += "5";
+    } else {
+      newString += string[char];
+    }
+  }
+  return newString;
 }
 function decode() {
   // seu código aqui
+  let newString = " ";
+  for (let char in string) {
+    if (string[char] === "1") {
+      newString += "a";
+    } else if (string[char] === "2") {
+      newString += "e";
+    } else if (string[char] === "3") {
+      newString += "i";
+    } else if (string[char] === "4") {
+      newString += "o";
+    } else if (string[char] === "5") {
+      newString += "u";
+    } else {
+      newString += string[char];
+    }
+  }
+  return newString;
 }
+ console.log(decode())
+
 
 // Desafio 10
 function techList() {
