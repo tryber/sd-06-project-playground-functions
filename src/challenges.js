@@ -47,13 +47,13 @@ function highestCount(numList) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = cat1 - mouse;
   let distCat2 = cat2 - mouse;
+  let answer = 'os gatos trombam e o rato foge';
   if (distCat1 ** 2 < distCat2 ** 2) {
-    return "cat1";
+    answer = "cat1";
   } else if (distCat1 ** 2 > distCat2 ** 2) {
-    return "cat2";
-  } else {
-    return "os gatos trombam e o rato foge";
-  }
+    answer = "cat2";
+  } 
+  return answer;
 }
 
 // Desafio 8
@@ -187,7 +187,7 @@ function triangleCheck(sideA, sideB, sideC) {
   }
   if (sideA + sideC > sideB && Math.abs(sideA - sideC) < sideB) {
     conditionCount += 1
-  } 
+  }
   if (sideB + sideA > sideC && Math.abs(sideB - sideA) < sideC) {
     conditionCount += 1
   }
