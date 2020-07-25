@@ -28,7 +28,7 @@ function concatName(arr) {
   // seu código aqui
   let primeiro = arr[0];
   let ultimo = arr[arr.length - 1];
-  let str = ultimo + ',' + primeiro;
+  let str = ultimo + ', ' + primeiro;
   return str;
 }
 
@@ -43,20 +43,7 @@ function footballPoints(vitoria, empate) {
 // Desafio 6
 function highestCount(inteiros) {
   // seu código aqui
-  let indiceMaior = 0;
-  let contador = 0;
-
-  for (let indice in inteiros) {
-    if (inteiros [indiceMaior] < inteiros [indice]){
-      indiceMaior = indice;
-    }
-  }
-  for (let i in inteiros) {
-    if (inteiros [indiceMaior] === inteiros [i]) {
-      contador += 1;
-    }
-  }
-  return contador;
+  
 }
 
 // Desafio 7
