@@ -32,20 +32,22 @@ function calcArea(base, height) {
   return ((base * height) / 2);
 }
 // console.log (calcArea(base,height));
+
+// Desafio 3
 /* 3 - Dividindo a frase
   Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array
   de strings separadas por cada espaço na string original.
 
   Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
 */
-// Desafio 3
 // let frase = 'lilica linda';
 function splitSentence(frase) {
-  return frase.split(' ',);
+  return frase.split(" ");
 
   // seu código aqui
 }
 // console.log(splitSentence(frase));
+
 // Desafio 4
 /* 4 - Concatenação de strings
   Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma
@@ -54,9 +56,13 @@ function splitSentence(frase) {
   Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas',
   'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
 */
-function concatName() {
-  // seu código aqui
+// let array = ['Lucas','Cassiano', 'Ferraz', 'Paolillo']
+
+function concatName(array) {
+  var newString = `${array[array.length - 1]}, ${array[0]}`;	  
+  return newString;
 }
+// console.log(concatName(array))
 
 // Desafio 5
 function footballPoints() {
