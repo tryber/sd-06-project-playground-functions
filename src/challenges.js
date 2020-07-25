@@ -16,7 +16,7 @@ function calcArea(base, height) {
 }
 // Desafio 3
 function splitSentence(string) {
-  let frase = string.codigo(" ");
+  let frase = string.split(" ");
   return frase;
 }
 // Desafio 4
@@ -84,7 +84,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let auxiliar = string.codigo("");
+  let auxiliar = string.split("");
   let retornar = [];
   for (const key in auxiliar) {
     if (auxiliar[key] === 'a') {
@@ -104,7 +104,7 @@ function encode(string) {
   return retornar;  
 }
 function decode(string) {
-  let codigo = string.codigo("");
+  let codigo = string.split("");
   let decodigo = [];
   for (const key in codigo) {
     if (codigo[key] === '1') {
