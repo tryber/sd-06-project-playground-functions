@@ -34,9 +34,9 @@ function concatName(stringArray) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pointScore = 0;
-  pointScore = wins * 3 + ties * 1;
-  return pointScore;
+  winsScore = wins * 3;
+  tiesScore = ties * 1;
+  return winsScore + tiesScore;
 }
 
 // Desafio 6
@@ -48,10 +48,11 @@ function highestCount(numberList) {
       higherNumberCounter += 1;
     }
   }
+
   return higherNumberCounter;
 }
 
-/// Desafio 7
+// Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
@@ -66,56 +67,64 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numberList) {
-  let result = [];
+  let messages = [];
   for (let i = 0; i < numberList.length; i += 1) {
-    let n = numberList[i];
-    if (n % 3 === 0 && n % 5 === 0) {
-      result.push('fizzbuzz');
-    } else if (n % 3 === 0) {
-      result.push('fizz');
-    } else if (n % 5 === 0) {
-      result.push('buzz');
+    if (numberList[i] % 3 === 0 && numberList[i] % 5 === 0) {
+      messages.push('fizzbuzz');
+    } else if (numberList[i] % 3 === 0) {
+      messages.push('fizz');
+    } else if (numberList[i] % 5 === 0) {
+      messages.push('buzz');
     } else {
-      result.push('bug!');
+      messages.push('bug!');
     }
   }
-  return result;
+  return messages;
+}
+
+function checkDictionary(dictorionary, word) {
+  let newWord = [];
+  for (let i = 0; i < word.length; i += 1) {
+    if (word[i] in vowels) {
+      newWord.push(letter = dictorionary[word[i]]);
+    } else {
+      newWord.push(word[i]);
+    }
+  }
+  return newWord.join('')
 }
 
 // Desafio 9
 function encode(word) {
-  let vowels = { 'a': 1, 'e': 2, 'i': 3, 'o': 4, 'u': 5 };
-  let code = [];
-  for (let i = 0; i < word.length; i += 1) {
-    let letter = '';
-    if (string[i] in vowels) {
-      letter = vowels[string[i]];
-    } else
-      letter = word[i];
-    code.push(word);
-  }
-  return code.join('');
+  let vowelsEncode = {
+    'a': 1,
+    'e': 2,
+    'i': 3,
+    'o': 4,
+    'u': 5
+  };
+  return checkDictionary(vowelsEncode, word);
 }
 
 function decode(word) {
-  let vowels = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' };
-  let code = [];
-  for (let i = 0; i < word.length; i += 1) {
-    let letter = '';
-    if (word[i] in vowels) {
-      letter = vowels[word[i]];
-    } else
-      letter = word[i];
-    code.push(letter);
-  }
-  return code.join('');
+  let vowelsDecode = {
+    '1': 'a',
+    '2': 'e',
+    '3': 'i',
+    '4': 'o',
+    '5': 'u'
+  };
+  return checkDictionary(vowelsDecode, word);
 }
 
 // Desafio 10
 function techList(tech, name) {
   let objectList = [];
   for (let i = 0; i < tech.length; i += 1) {
-    let technology = { tech: tech[i], nome: name };
+    let technology = {
+      tech: tech[i],
+      nome: name
+    };
     objectList.push(technology);
   }
   return objectList;
@@ -136,7 +145,7 @@ function hydrate() {
   // seu código aqui
 }
 
-
+// Modulos
 module.exports = {
   calcArea,
   catAndMouse,
