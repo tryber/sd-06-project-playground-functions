@@ -204,6 +204,12 @@ function generatePhoneNumber(arr) {
   }
   let vr = verificaRepeticao(arr);
 
+  if (!vt) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (!vnc || !vr) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
   if (vt == true && vnc == true && vr == true) {
     let ddd = arr.slice(0, 2).join('');
     let prefixo = arr.slice(2, 7).join('');
@@ -211,7 +217,7 @@ function generatePhoneNumber(arr) {
     let numeroPronto = `(${ddd}) ${prefixo}-${sufixo}`;
     return numeroPronto;
   }
-  
+    
 }
 
 // Desafio 12
