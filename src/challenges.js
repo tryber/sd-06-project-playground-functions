@@ -73,20 +73,20 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-// Desafio 8
-// function fizzBuzz(numbers) {
-//   if (numbers % 3 === 0 && numbers % 5 === 0) {
-//     return 'fizzBuzz';
-//   } else if (numbers % 3 === 0) {
-//     return 'fizz';
-//   } else if (numbers % 5 === 0) {
-//     return 'buzz';
-//   }
-//   return 'bug!';
+Desafio 8
+function fizzBuzz(numbers) {
+  if (numbers % 3 === 0 && numbers % 5 === 0) {
+    return 'fizzBuzz';
+  } else if (numbers % 3 === 0) {
+    return 'fizz';
+  } else if (numbers % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
 
-function fizzBuzz() {
+// function fizzBuzz() {
 
-}
+// }
 
 
 
