@@ -60,23 +60,31 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (moduloCat2 < moduloCat1) {
     return 'cat2';
   }
-return 'os gatos trombam e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
+
+function bufizator(if8) {
+  if (if8 % 5 === 0 && if8 % 3 === 0) {
+    if8 = 'fizzBuzz';
+  } else if (if8 % 5 === 0) {
+    if8 = 'buzz'
+  } else if (if8 % 3 === 0) {
+    if8 = 'fizz';
+  } else {
+    if8 = 'bug!';
+  }
+return if8;
+}
+
+
+
 function fizzBuzz(desafio8) {
   for (let i8 = 0; i8 < desafio8.length; i8 += 1) {
-    if (desafio8[i8] % 5 === 0 && desafio8[i8] % 3 === 0) {
-      desafio8[i8] = 'fizzBuzz';
-    } else if (desafio8[i8] % 5 === 0) {
-      desafio8[i8] = 'buzz'
-    } else if (desafio8[i8] % 3 === 0) {
-      desafio8[i8] = 'fizz';
-    } else {
-      desafio8[i8] = 'bug!';
-    }
-  }
- return desafio8;
+    bufizator(desafio8[i8])
+}
+return desafio8;
 }
 
 // Desafio 9
