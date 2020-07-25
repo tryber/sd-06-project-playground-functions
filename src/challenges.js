@@ -36,6 +36,7 @@ function concatName(arrayString) {
 }
 concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
+
 // Desafio 5
 
 function footballPoints(wins, ties) {
@@ -44,9 +45,8 @@ return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
-function highestCount(numbers) {
+function highestCount() {
   // seu código aqui
-   
 }
 
 // Desafio 7
@@ -62,15 +62,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  if (numbers % 3 === 0 && numbers % 5 === 0) {
-    return 'fizzBuzz';
-  } else if (numbers % 3 === 0) {
-    return 'fizz';
-  } else if (numbers % 5 === 0) {
-    return 'buzz';
-  }
-  return 'bug!';
+// function fizzBuzz(numbers) {
+//   if (numbers % 3 === 0 && numbers % 5 === 0) {
+//     return 'fizzBuzz';
+//   } else if (numbers % 3 === 0) {
+//     return 'fizz';
+//   } else if (numbers % 5 === 0) {
+//     return 'buzz';
+//   }
+//   return 'bug!';
+
+function fizzBuzz() {
+
 }
 
 
