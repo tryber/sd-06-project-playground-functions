@@ -141,8 +141,17 @@ function encode(codigo) {
   }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tec, name) {
+  let newList = [];
+  if (tec.length > 0) {
+    tec.sort();
+    for (let i = 0; i < tec.length; i += 1) {
+      newList.push({ 'tech': tec[i], 'name': name });
+    }
+  } else {
+    newList = 'Vazio!';
+  }
+  return newList;
 }
 
 // Desafio 11
