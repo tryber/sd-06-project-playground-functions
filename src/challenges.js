@@ -159,28 +159,17 @@ function numeroRepetido(num, numArry) {
 }
 
 function generatePhoneNumber(telefone) {
-  // let numeroTelefone = [];
-  // for (let i = 0; i < telefone.length; i += 1) {
-  //   numeroTelefone += telefone[i];
-  // }
   if (telefone.length !== 11) {
-    return "Array com tamanho incorreto.";
+    return 'Array com tamanho incorreto.';
   } else {
     for (let i = 0; i < telefone.length; i += 1) {
       if (telefone[i] < 0 || telefone[i] > 9 || numeroRepetido(telefone[i], telefone)) {
-        return "não é possível gerar um número de telefone com esses valores";
+        return 'não é possível gerar um número de telefone com esses valores';
       }
     }
   }
   return "(" + telefone[0] + telefone[1] + ")" + telefone[2] + telefone[3] + telefone[4] + telefone[5] + telefone[6] + "-" + telefone[7] + telefone[8] + telefone[9] + numeroTelefone[10]; 
-  }
-
-//let prefixo = "(" + numeroTelefone[0] + numeroTelefone[1] + ")";
-//let primeiraCasa = numeroTelefone[2] + numeroTelefone[3] + numeroTelefone[4] + numeroTelefone[5] + numeroTelefone[6];
-//let segundaCasa = numeroTelefone[2] + numeroTelefone[3] + numeroTelefone[4] + numeroTelefone[5];
-//console.log(prefixo + primeiraCasa + segundaCasa);
-//return [prefixo] + [primeiraCasa] + [segundaCasa];
-//let telefone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+}
 
 // Desafio 12
 function triangleCheck() {
