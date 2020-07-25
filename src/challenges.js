@@ -51,26 +51,26 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = mouse - cat1;
   let dist2 = mouse - cat2;
   if(dist1 === dist2) {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   } else if (dist1 < dist2) {
-    return 'cat1'
+    return 'cat1';
   }
-    return 'cat2'
+    return 'cat2';
 }
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let resultado = [];
   for (let i in arrayNumbers) {
-    if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 !== 0) {
-      resultado.push = ("fizz");
-    } else if (arrayNumbers[i] % 5 === 0 && arrayNumbers[i] % 3 !== 0) {
-      resultado.push = ("buzz");
-    } else if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
+    if (arrayNumbers[i] % 3 === 0 && arrayNumbers[i] % 5 === 0) {
       resultado.push = ("fizzBuzz");
-    } else 
+    } else if (arrayNumbers[i] % 5 === 0) {
+      resultado.push = ("buzz");
+    } else if (arrayNumbers[i] % 3 === 0) {
+      resultado.push = ("fizz");
+    } else {
       resultado.push = ("bug");
-    
+    }    
   }
   return resultado;
 }
