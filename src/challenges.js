@@ -252,24 +252,24 @@ function decode(word2) {
 // 10 - Lista de tecnologias
 // let nametechnologies = ["React", "Jest", "HTML", "CSS", "JavaScript"]
 // let personName = 'Mario'
-function techList(technologies, person) {
+function techList(nametechnologies, personName) {
   let list;
-  if (technologies.length === 0) {
+  if (nametechnologies.length === 0) {
     list = 'Vazio!';
   } else {
     let objects = [];
-    technologies.sort();
-    for (let i = 0; i < technologies.length; i += 1) {
+    nametechnologies.sort();
+    for (let i = 0; i < nametechnologies.length; i += 1) {
       objects.push({
-        tech: technologies[i],
-        name: person,
+        tech: nametechnologies[i],
+        name: personName,
       });
     }
     list = objects;
   }
   return list;
 }
-console.log(techList(technologies, person))
+// console.log(techList(nametechnologies, personName))
 
 // Desafio 11
 function generatePhoneNumber() {
