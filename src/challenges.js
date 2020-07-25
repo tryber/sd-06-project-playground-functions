@@ -80,7 +80,7 @@ function fizzBuzz(numberList) {
         result = 'buzz';
         break;
       default:
-        result = 'bug';
+        result = 'bug!';
         break;
     }
     messages.push(result);
@@ -126,7 +126,7 @@ function techList(tech, name) {
   for (let i = 0; i < tech.length; i += 1) {
     let technology = {
       tech: tech[i],
-      nome: name,
+      name: name,
     };
     objectList.push(technology);
   }
