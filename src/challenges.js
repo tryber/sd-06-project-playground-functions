@@ -119,7 +119,8 @@ function highestCount(array2) {
 // console.log(highestCount(array2))
 
 // Desafio 7
-/* Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2,
+/* 7 - Caça ao rato
+Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2,
 e que ambos estão atrás de um rato chamado mouse. Imagine que cada um dos três
 animais está em uma posição representada por um número.
 
@@ -144,14 +145,14 @@ function catAndMouse() {
   let range2 = Math.abs(cat2 - mouse);
   // console.log("distancia do range1 =" + range1)
   // console.log("distancia do range2 =" + range2)
-  let messege = ""
+  let messege = ''
   console.log(messege)
-  if (range1 < range2){
-    messege = "cat1"
-  } else if (range1 > range2){
-    messege = "cat2"
+  if (range1 < range2) {
+    messege = 'cat1'
+  } else if (range1 > range2) {
+    messege = 'cat2'
   } else {
-    messege = "os gatos trombam e o rato foge"
+    messege = 'os gatos trombam e o rato foge'
   }
   return messege
 }
