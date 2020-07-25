@@ -73,9 +73,8 @@ function fizzBuzz(array) {
       resDesafio.push = ('buzz');
     } else if ((array[i] % 3) == 0) {
       resDesafio.push = ('fizz');
-    } else {
-      resDesafio.push = ('bug');
     }
+      resDesafio.push = ('bug!');
   }
   return resDesafio;
 }
