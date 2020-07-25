@@ -100,28 +100,28 @@ function encode(message) {
   return encodedMessage;
 }
 
-function decode(m2ss1g2) {
-  let l2tt2rs = m2ss1g2.split('');
+function decode(numberedMessage) {
+  let lettersAndNumbers = numberedMessage.split('');
   let decodedMessage = '';
-  for (let i in l2tt2rs) {
-    switch (l2tt2rs[i]) {
+  for (let i in lettersAndNumbers) {
+    switch (lettersAndNumbers[i]) {
       case '1':
-        l2tt2rs[i] = 'a';
+        lettersAndNumbers[i] = 'a';
         break;
       case '2':
-        l2tt2rs[i] = 'e';
+        lettersAndNumbers[i] = 'e';
         break;
       case '3':
-        l2tt2rs[i] = 'i';
+        lettersAndNumbers[i] = 'i';
         break;
       case '4':
-        l2tt2rs[i] = 'o';
+        lettersAndNumbers[i] = 'o';
         break;
       case '5':
-        l2tt2rs[i] = 'u';
+        lettersAndNumbers[i] = 'u';
         break;
     }
-    decodedMessage += l2tt2rs[i];
+    decodedMessage += lettersAndNumbers[i];
   }
   return decodedMessage;
 }
