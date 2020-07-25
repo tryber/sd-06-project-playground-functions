@@ -140,14 +140,13 @@ a string "os gatos trombam e o rato foge".
 // let cat2 = 20 //posição em uma reta
 // let mouse = 12 //posição em uma reta
 
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let range1 = Math.abs(cat1 - mouse);
   let range2 = Math.abs(cat2 - mouse);
   // console.log("distancia do range1 =" + range1)
   // console.log("distancia do range2 =" + range2)
   let messege = ''
-  console.log(messege)
-  if (range1 < range2) {
+   if (range1 < range2) {
     messege = 'cat1'
   } else if (range1 > range2) {
     messege = 'cat2'
