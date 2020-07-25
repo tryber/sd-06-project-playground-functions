@@ -26,10 +26,10 @@ function splitSentence(nome) {
 // Desafio 4
 function concatName(arr) {
   // seu código aqui
-  let primeiro = arr[0];
+  /*let primeiro = arr[0];
   let ultimo = arr[arr.length - 1];
   let str = ultimo + ', ' + primeiro;
-  return str;
+  return str;*/
 }
 
 // Desafio 5
@@ -43,7 +43,7 @@ function footballPoints(vitoria, empate) {
 // Desafio 6
 function highestCount(inteiros) {
   // seu código aqui
-  let indiceMaior = 0;
+  /*let indiceMaior = 0;
   let contador = 0;
 
   for (let indice in inteiros) {
@@ -56,12 +56,12 @@ function highestCount(inteiros) {
           contador += 1;
       }
   }
-  return contador;
+  return contador;*/
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaC1 = Math.abs(mouse - cat1);
+  /*let distanciaC1 = Math.abs(mouse - cat1);
   let distanciaC2 = Math.abs(mouse - cat2);
   let msg;
   if (mouse) {
@@ -74,13 +74,13 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     msg = "os gatos trombam e o rato foge";
   }
-  return msg;
+  return msg;*/
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
   // seu código aqui
-  let resultados = [];
+  /*let resultados = [];
   for ( let i in arr ) {
     if ( (arr[i] % 3 === 0) && (arr[i] % 5 === 0) ) {
       resultados.push('fizzBuzz');
@@ -92,7 +92,7 @@ function fizzBuzz(arr) {
       resultados.push('bug!');
     }
   }
-  return resultados;
+  return resultados;*/
 }
 
 // Desafio 9
@@ -106,7 +106,7 @@ function decode() {
 // Desafio 10
 function techList(arr, nome) {
   // seu código aqui
-  let resultados = [];
+  /*let resultados = [];
   let msg = 'Vazio!';
   if ( arr.length > 0) {
     for ( let i in arr ) {
@@ -118,7 +118,7 @@ function techList(arr, nome) {
     return resultados;
   } else {
     return msg;
-  }
+  }*/
 }
 
 // Desafio 11
