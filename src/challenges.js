@@ -189,12 +189,64 @@ function fizzBuzz(array3) {
 // console.log(fizzBuzz(array3))
 
 // Desafio 9
-function encode() {
+/*9 - Codifique e Decodifique
+Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string
+como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo
+com o formato a seguir:
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5
+Ou seja, caso o parâmetro de encode seja "hi there!",
+o retorno deverá ser "h3 th2r2!".
+
+A segunda função deverá se chamar decode e faz o contrário de encode - ou seja,
+recebe uma string contendo números no lugar de letras minúsculas e retornará uma
+string com vogais minúsculas no lugar dos números (então, caso o parâmetro de
+decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
+*/
+let palavra1 = 'cavaleiro'
+let palavra2 = 'c1v1l23r4'
+function encode(palavra1) {
   // seu código aqui
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  let array4 = palavra1.split('');
+  for (let i in array4) {
+    if (array4[i] in code) {
+      array4[i] = code[array4[i]];
+    }
+  }
+  return array4.join('')
 }
-function decode() {
+// console.log(encode(palavra1))
+
+function decode(palavra2) {
   // seu código aqui
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  let inverse = Object.entries(code);
+  let array5 = palavra2.split('');
+  for (let i in array5) {
+    if (Object.values(code).includes(+array5[i])) {
+      array5[i] = inverse[Object.values(code).indexOf(+array5[i])][0];
+    }
+  }
+  return array5.join('')
 }
+// console.log(decode(palavra2))
+
 
 // Desafio 10
 function techList() {
