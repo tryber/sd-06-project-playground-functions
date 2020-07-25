@@ -192,7 +192,7 @@ function fizzBuzz(array3) {
   }
   return newArray
 }
-console.log(fizzBuzz(array3))
+// console.log(fizzBuzz(array3))
 /* let array3 = [2, 15, 7, 9, 45]
 function fizzBuzz (array3[i]) {
   let newArray = [];
