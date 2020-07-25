@@ -180,15 +180,15 @@ function generatePhoneNumber(stringPhone) {
 
 // Desafio 12
 function triangleCheck(sideA, sideB, sideC) {
-  let answer = false;
-  let sides = [sideA, sideB, sideC];
-  for (let i in sides) {
-    for (let j in sides) {
-      if (i !== j) {
+  // let answer = false;
+  // let sides = [sideA, sideB, sideC];
+  // for (let i in sides) {
+  //   for (let j in sides) {
+  //     if (i !== j) {
 
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
 }
 
 
