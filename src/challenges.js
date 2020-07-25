@@ -210,7 +210,6 @@ function triangleCheck(lineA, lineB, lineC) {
   return comparaSoma.length === 3 && comparaDif.length === 3
 }
 
-
 // Desafio 13
 function hydrate(string) {
   let frase = []
@@ -223,7 +222,6 @@ function hydrate(string) {
   } else {
     return `${letras} copo de água`}
 }
-
 
 module.exports = {
   calcArea,
