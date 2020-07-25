@@ -156,12 +156,23 @@ function generatePhoneNumber(arrayNumber) {
   if (arrayNumber.length !== 11) {
       return "Array com tamanho incorreto.";
   } else {
-    let listNumber = arrayNumber.concat().sort();
-    for (let i=0; i<listNumber.length-2;i++) {
-        if (listNumber[i] === listNumber[i+1] && listNumber[i] === listNumber[i+2]) {
+    for (let i = 0; i < arrayNumber.length; i++){
+      let repeat = 0;
+      for (let j = 0; j < arrayNumber.length; j++){
+        if(arrayNumber[i] === arrayNumber[j]){
+          repeat += 1;
+        }
+        if(repeat >=3 ){
           return "não é possível gerar um número de telefone com esses valores";
         }
-    } 
+      }
+    }
+    // let listNumber = arrayNumber.concat().sort();
+    // for (let i=0; i<listNumber.length-2;i++) {
+    //     if (listNumber[i] === listNumber[i+1] && listNumber[i] === listNumber[i+2]) {
+    //       return "não é possível gerar um número de telefone com esses valores";
+    //     }
+    // } 
     for (let i=0; i <arrayNumber.length; i++) {
         if (arrayNumber[i]<0 || arrayNumber[i]>9) {
           return "não é possível gerar um número de telefone com esses valores";
