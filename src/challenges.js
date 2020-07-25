@@ -5,6 +5,7 @@ function compareTrue (parametro1, parametro2) {
   }
     return false;
 }
+
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
@@ -74,6 +75,7 @@ function fizzBuzz(arrayNumbers) {
   }
   return resultado;
 }
+console.log(fizzBuzz([2,3,5,15]));
 
 // Desafio 9
 function encode (parametro4) {
@@ -107,7 +109,7 @@ function decode(parametro5) {
       parametro5[i].push = 'u';
     }
   }
-  return parametro4;
+  return parametro5;
 }
 
 // Desafio 10
