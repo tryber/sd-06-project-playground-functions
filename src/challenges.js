@@ -130,20 +130,17 @@ function decode(phrase) {
 
 
 // Desafio 10
-function techList(tech, nome) {
-  let techno2 = new Object();
-  techno2.tech ="carro";
-  techno2.nome = nome;
-  let result = [];
-    
+function techList(tech, name) {
+  let techno2 = [];
+     
   tech.sort();
 
-  for( let index in techno2){
+  for( let index =0; index < tech.length;index+=1){
     
-    techno2.tech = tech[index];
-    return techno2;
+    techno2[index] = "{tech: "+tech[index]+ ", name: " + name + "}";
+    
   } 
- 
+  return techno2;
 }
 
 
