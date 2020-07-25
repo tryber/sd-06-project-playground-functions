@@ -79,7 +79,7 @@ function concatName(array) {
 // let wins = 20
 // let ties = 5
 
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   let points = (3 * wins) + (1 * ties)
   return points
 }
