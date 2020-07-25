@@ -201,7 +201,7 @@ function checkOccurrences(number, arrayNumbers) {
 function generatePhoneNumber(arrayPhone) {
   let temMaisDeTresOcorrencias = false;
   if (arrayPhone.length !== 11) {
-    return 'Impossível gerar número';
+    return 'Array com tamanho incorreto.';
   } else {
     for (let i = 0; i <= arrayPhone.length - 1; i += 1) {
       if (arrayPhone[i] < 0 || arrayPhone[i] > 9) {
