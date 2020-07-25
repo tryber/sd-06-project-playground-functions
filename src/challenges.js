@@ -136,8 +136,8 @@ function techList(arraynomes, name) {
         tech: arraynomes[i],
         name: name,
       }
+      arrayfinal.push(add);
     }
-    arrayfinal.push(add);
     return arrayfinal;
   }
 }
