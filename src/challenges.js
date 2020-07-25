@@ -2,9 +2,10 @@
 function compareTrue(valueOne, valueTwo) {
   if (valueOne && valueTwo) {
     return true;
-  } else {
-    return false;
-  };
+  }
+
+  return false;
+
 }
 
 // Desafio 2
@@ -23,8 +24,8 @@ function splitSentence(string) {
     } else {
       newArray.push(arrayValue);
       arrayValue = '';
-    };
-  };
+    }
+  }
   newArray.push(arrayValue);
   return newArray;
 }
