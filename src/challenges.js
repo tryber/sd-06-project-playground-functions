@@ -125,7 +125,7 @@ function techList(tech, name) {
     let techLearn = {
       tech: tech[index],
       name: name
-    }
+    };
     techLearnsList.push(techLearn);
   }
   if (tech.length === 0) {
@@ -133,19 +133,20 @@ function techList(tech, name) {
   }
   return techLearnsList;
 }
-
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'))
 // Desafio 11
 function verifyCounterRepeatedNumber(numbers) {
   let object = {};
   let repeatedNumber = 0;
   numbers.forEach((element) => {
-    if (!object[element]) object[element] = 0; {
-      object[element] += 1;
+    if (!object[element]) {
+      object[element] = 0; 
     }
+    object[element] += 1;
   })
   for (let count in object) {
     if (object[count] > 2) {
-      return repeatedNumber = object[count];
+      repeatedNumber = object[count];
     }
   }
   return repeatedNumber;
