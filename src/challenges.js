@@ -19,8 +19,8 @@ function splitSentence(string) {
   let arrayValue = '';
 
   for (let i = 0; i < string.length; i += 1) {
-    if (string[i] != ' ') {
-      arrayValue = arrayValue + string[i];
+    if (string[i] !== ' ') {
+      arrayValue += string[i];
     } else {
       newArray.push(arrayValue);
       arrayValue = '';
@@ -51,14 +51,14 @@ function highestCount(array) {
   for (value in array) {
     if (array[value] > highestValue) {
       highestValue = array[value];
-    };
-  };
+    }
+  }
 
   for (index in array) {
     if (array[index] === highestValue) {
       count += 1;
-    };
-  };
+    }
+  }
 
   return count;
 
@@ -75,7 +75,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
-  };
+  }
 }
 
 // Desafio 8
@@ -91,9 +91,9 @@ function fizzBuzz(array) {
       newArray.push('fizzBuzz');
     } else {
       newArray.push('bug!');
-    };
-  };
-  return newArray
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
@@ -119,9 +119,9 @@ function encode(stringEncode) {
         break;
       default:
         newString = newString + stringEncode[index];
-    };
-  };
-  return newString
+    }
+  }
+  return newString;
 }
 
 function decode(stringDecode) {
@@ -146,15 +146,15 @@ function decode(stringDecode) {
         break;
       default:
         newString = newString + stringDecode[index];
-    };
-  };
-  return newString
+    }
+  }
+  return newString;
 }
 
 // Desafio 10
 function techList(array, name) {
   let techList = [];
-  let orderArray = array.sort()
+  let orderArray = array.sort();
 
   if (orderArray != "") {
     for (value in orderArray) {
@@ -162,10 +162,10 @@ function techList(array, name) {
         tech: orderArray[value],
         nome: name
       });
-    };
+    }
   } else {
     return "Vazio!";
-  };
+  }
 
   return techList;
 }
@@ -181,7 +181,7 @@ function generatePhoneNumber(arrayOfNumbers) {
         count += 1;
     }
 
-    if (count >= 3 || arrayOfNumbers[i] < 0 || arrayOfNumbers[i] > 9) {
+    if (count > 3 || arrayOfNumbers[i] < 0 || arrayOfNumbers[i] > 9) {
       return "não é possível gerar um número de telefone com esses valores";
     } else if (arrayOfNumbers.length != 11) {
       return "Array com tamanho incorreto.";
@@ -191,7 +191,6 @@ function generatePhoneNumber(arrayOfNumbers) {
         + arrayOfNumbers[6] + '-' + arrayOfNumbers[7] + arrayOfNumbers[8] +
         arrayOfNumbers[9] + arrayOfNumbers[10];
     }
-
   }
 
   return telephoneNumber;
@@ -199,13 +198,20 @@ function generatePhoneNumber(arrayOfNumbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)
-    || lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)
-    || lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
+  let sumAB = lineA + lineB;
+  let sumAC = lineA + lineC;
+  let sumBC = lineB + lineC;
+  let distAB = Math.abs(lineA - lineB);
+  let distAC = Math.abs(lineA - lineC);
+  let distBC = Math.abs(lineB - lineC);
+
+  if (lineA < sumBC && lineA > distBC
+    || lineB < sumAC && lineB > distAC
+    || lineC < sumAB && lineC > distAB) {
     return true;
   } else {
     return false;
-  };
+  }
 }
 
 // Desafio 13
