@@ -19,7 +19,6 @@ function splitSentence(phrase) {
 function concatName(nameList) {
   return `${nameList[nameList.length - 1]} , ${nameList[0]}`;
 }
-console.log(concatName(['Lucas', 'Mariano', 'Ariel', 'Fernanda']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -177,7 +176,7 @@ function generatePhoneNumber(stringPhone) {
       }
     }
     let ddd = `(${arrayPhone[0]}${arrayPhone[1]})`;
-    let firstPart = `${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}`;
+    let firstPart = ` ${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}`;
     let secondPart = `-${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}`;
     return ddd + firstPart + secondPart;
   }
