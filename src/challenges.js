@@ -156,15 +156,15 @@ function techList(array, name) {
   let techList = [];
   let orderArray = array.sort();
 
-  if (orderArray != "") {
+  if (orderArray != '') {
     for (value in orderArray) {
       techList.push({
-        tech: orderArray[value],
-        nome: name
+        'tech': orderArray[value],
+        'name': name
       });
     }
   } else {
-    return "Vazio!";
+    return 'Vazio!';
   }
 
   return techList;
@@ -182,11 +182,11 @@ function generatePhoneNumber(arrayOfNumbers) {
     }
 
     if (count > 3 || arrayOfNumbers[i] < 0 || arrayOfNumbers[i] > 9) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     } else if (arrayOfNumbers.length != 11) {
-      return "Array com tamanho incorreto.";
+      return 'Array com tamanho incorreto.';
     } else {
-      telephoneNumber = '(' + arrayOfNumbers[0] + arrayOfNumbers[1] + ')' + " " +
+      telephoneNumber = '(' + arrayOfNumbers[0] + arrayOfNumbers[1] + ')' + ' ' +
         arrayOfNumbers[2] + arrayOfNumbers[3] + arrayOfNumbers[4] + arrayOfNumbers[5]
         + arrayOfNumbers[6] + '-' + arrayOfNumbers[7] + arrayOfNumbers[8] +
         arrayOfNumbers[9] + arrayOfNumbers[10];
@@ -209,9 +209,8 @@ function triangleCheck(lineA, lineB, lineC) {
     || lineB < sumAC && lineB > distAC
     || lineC < sumAB && lineC > distAB) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
@@ -226,11 +225,9 @@ function hydrate(string) {
 
   if (sumNumbers === 1) {
     return `${sumNumbers} copo de água`;
-  } else {
-    return `${sumNumbers} copos de água`;
   }
 
-  return sumNumbers;
+  return `${sumNumbers} copos de água`;
 }
 
 
