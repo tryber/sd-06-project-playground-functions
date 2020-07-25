@@ -27,7 +27,7 @@ console.log (splitSentence("Oi eu sou o Matheus Carvalho"));
 // Desafio 4
 function concatName(firstLast) {
   // seu código aqui
-  let newString = firstLast[firstLast.length - 1] + " , " + firstLast[0];
+  let newString = firstLast[firstLast.length - 1] + "," + firstLast[0];
   return newString;
 }
 
@@ -41,16 +41,19 @@ function footballPoints(wins,ties) {
 function highestCount(arr) {
   // seu código aqui
       let heighestNumber = returnHighestNumberFromArray(arr)
-      let count = 0;
-        for (let index =0; index < arr.length; index += 1) {
-           if (heighestNumber === arr[index]){
+  
+     // Responsabilidade:
+     // Encontrar quantas vezes o maior numero se repete
+  
+     let count = 0;
+     for (let index =0; index < arr.length; index += 1) {
+       if (heighestNumber === arr[index]){
          count += 1;
        }
     }
      return count;
   
      } 
-
   function returnHighestNumberFromArray(array){
     let heighestNumber = array [0];
     for(let index = 0; index < array.length; index +=1){
@@ -70,29 +73,16 @@ function catAndMouse(mouse,cat1,cat2) {
       if(distanceFirst < distanceSecond){
         return 'cat1';
       } else if (distanceSecond === distanceFirst){
-        return 'the cats hit each other and the mouse scapes';
+        return 'os gatos trombam e o rato foge';
       } else {
         return 'cat2';
       }
-  }
+    }
 
 
 // Desafio 8
-function fizzBuzz(arrayNumbers) {
+function fizzBuzz() {
   // seu código aqui
-  let stArray = [];
-  for (let i = 0; i < arrayNumbers.length; i += 1) {
-    if (arrayNumbers[i] % 15 === 0){
-      stringArray.push('fizzBuzz');
-    } else if (arrayNumbers[i] % 3 === 0) {
-      stringArray.push('fizz');
-    } else if (arrayNumbers[i] % 5 === 0) {
-      stringArray.push('buzz');
-    } else {
-      stringArray.push('bug!');
-    }
-  }
-  return stringArray;
 }
 
 // Desafio 9
