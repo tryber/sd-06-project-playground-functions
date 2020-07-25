@@ -174,6 +174,7 @@ function generatePhoneNumber(stringPhone) {
   }
 }
 
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
