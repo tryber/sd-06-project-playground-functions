@@ -193,8 +193,14 @@ function triangleCheck(sideA, sideB, sideC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let numDrinks = drinks.replace(/\D/g, "");
+  let totalWater = 0;
+  for (let i in numDrinks) {
+    let water = parseInt(numDrinks[i])
+    totalWater += water;
+  }
+  return totalWater + " copos de água";
 }
 
 module.exports = {
