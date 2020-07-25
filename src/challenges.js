@@ -191,15 +191,15 @@ function fizzBuzz(myArray) {
     } else if (myArray[index] % 3 === 0) {
       newArray.push('fizz');
     } else {
-    newArray.push('bug!');
+      newArray.push('bug!');
     }
   }
   return newArray;
 }
 
 // TESTE
-let testArray = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(testArray));
+// let testArray = [2, 15, 7, 9, 45];
+// console.log(fizzBuzz(testArray));
 
 // _______________________________________________________________________________________________
 // Desafio 9
@@ -325,9 +325,9 @@ function techList(techName, name) {
 }
 
 // TESTE
-let testArray = [];
-//let testArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-console.log(techList(testArray, 'Zeca'));
+// let testArray = [];
+// let testArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+// console.log(techList(testArray, 'Zeca'));
 
 // _______________________________________________________________________________________________
 // Desafio 11
@@ -351,7 +351,7 @@ function sizeOfArray(phoneNumber) {
   }
   return true;
 }
-function threeTimesTest (phoneNumber) {
+function threeTimesTest(phoneNumber) {
   let threeTimesCounter = 0;
 
   for (let index in phoneNumber) {
@@ -362,7 +362,7 @@ function threeTimesTest (phoneNumber) {
       }
     }
     if (threeTimesCounter > 2) {
-        return false;
+      return false;
     }
     threeTimesCounter = 0;
   }
