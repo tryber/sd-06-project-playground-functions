@@ -201,7 +201,7 @@ function generatePhoneNumber(arr) {
 
   let vt = verificaTamanho(arr);
   if (!vt) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
   let vnc = verficaNCorretos(arr);
   let vr = verificaRepeticao(arr);
