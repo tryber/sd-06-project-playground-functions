@@ -1,15 +1,15 @@
-// Desfio 1
+// Desafio 1
 function compareTrue(value1, value2) {
   if (value1 == true && value2 == true) {
     return true
-  } else { 
+  }  else { 
     return false
   }
 }
 
-console.log(compareTrue(true,true));
-  
-// Desafio 2
+  console.log(compareTrue(true,true));
+
+  // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   let area = (base * height) / 2
@@ -25,41 +25,45 @@ console.log (splitSentence("Oi eu sou o Matheus Carvalho"));
 
 
 // Desafio 4
-function concatName() {
+function concatName(firstLast) {
   // seu código aqui
+  let newString = firstLast[firstLast.length -1] + "," + firstLast[0];
+  return newString;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins,ties) {
   // seu código aqui
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
 function highestCount(arr) {
-  let heighestNumber = returnHighestNumberFromArray(arr)
-
-   // Responsabilidade:
-   // Encontrar quantas vezes o maior numero se repete
-
-   let count = 0;
-   for (let index =0; index < arr.length; index += 1) {
-     if (heighestNumber === arr[index]){
-       count += 1;
-     }
-  }
-   return count;
-
-   } 
-function returnHighestNumberFromArray(array){
-  let heighestNumber = array [0];
-  for(let index = 0; index < array.length; index +=1){
-    if(array[index] . heighestNumber){
-      heighestNumber = array[index];
+  // seu código aqui
+      let heighestNumber = returnHighestNumberFromArray(arr)
+  
+     // Responsabilidade:
+     // Encontrar quantas vezes o maior numero se repete
+  
+     let count = 0;
+     for (let index =0; index < arr.length; index += 1) {
+       if (heighestNumber === arr[index]){
+         count += 1;
+       }
     }
+     return count;
+  
+     } 
+  function returnHighestNumberFromArray(array){
+    let heighestNumber = array [0];
+    for(let index = 0; index < array.length; index +=1){
+      if(array[index] . heighestNumber){
+        heighestNumber = array[index];
+      }
+    }
+  
+    return heighestNumber
   }
-
-  return heighestNumber
-}
 
 // Desafio 7
 function catAndMouse() {
