@@ -17,8 +17,9 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(nameList) {
-  return '${nameList[nameList.length - 1]}, ${nameList[0]}';
+  return `${nameList[nameList.length - 1]} , ${nameList[0]}`;
 }
+console.log(concatName(['Lucas', 'Mariano', 'Ariel', 'Fernanda']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -175,9 +176,9 @@ function generatePhoneNumber(stringPhone) {
         return erro;
       }
     }
-    let ddd = '(${arrayPhone[0]}${arrayPhone[1]})';
-    let firstPart = ' ${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}';
-    let secondPart = '-${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}';
+    let ddd = `(${arrayPhone[0]}${arrayPhone[1]})`;
+    let firstPart = `${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}`;
+    let secondPart = `-${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}`;
     return ddd + firstPart + secondPart;
   }
 }
@@ -210,9 +211,9 @@ function hydrate(drinks) {
     totalWater += water;
   }
   if (totalWater === 1) {
-    return '${totalWater} copo de água';
+    return `${totalWater} copo de água`;
   } else if (totalWater > 1) {
-    return '${totalWater} copos de água';
+    return `${totalWater} copos de água`;
   } else {
     return 'Beba a quantidade de água que quiser'
   }
