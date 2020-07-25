@@ -64,7 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (pos2 < pos1) {
     return 'cat2';
   }
-  return 'cat1'; 
+  return 'cat1';
 }
 
 // Desafio 8
@@ -105,12 +105,12 @@ function encode(codigo) {
       case 'u':
         code[i] = 5;
         break;
-        default:
-          code[i] = codigo[i];
-          break;
-        }
-      }
-      return code.join('');
+      default:
+        code[i] = codigo[i];
+        break;
+    }
+  }
+  return code.join('');
 }
 function decode(encode) {
   let recode = encode.split('');
@@ -120,10 +120,10 @@ function decode(encode) {
         recode[i] = 'a';
         break;
       case '2':
-        recode[i] ='e';
+        recode[i] = 'e';
         break;
       case '3':
-        recode[i] ='i';
+        recode[i] = 'i';
         break;
       case '4':
         recode[i] = 'o';
@@ -131,10 +131,10 @@ function decode(encode) {
       case '5':
         recode[i] = 'u';
         break;
-        default:
-          recode[i] = recode[i];
-          break;
-        }
+      default:
+        recode[i] = recode[i];
+        break;
+    }
   }
   return recode.join('');
 }
@@ -161,19 +161,19 @@ function generatePhoneNumber(numbers) {
   }
   for (let i = 0; i < numbers.length; i += 1) {
     if ((numbers[i] < 0) || (numbers[i] > 9) || (cont > 2)) {
-      return "não é possível gerar um número de telefone com esses valores";
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     cont = 0;
     for (let j = 0; j < numbers.length; j += 1) {
       if (numbers[i] === (numbers[j])) {
-      cont += 1;
+        cont += 1;
       }
-    } 
+    }
   }
-  numbers.splice (2, 0, ') ');
-  numbers.splice (9, 0, '-');
-  numbers.unshift ('(');
-  return numbers.join ('');
+  numbers.splice(2, 0, ') ');
+  numbers.splice(8, 0, '-');
+  numbers.unshift('(');
+  return numbers.join('');
 }
 
 // Desafio 12
