@@ -165,7 +165,8 @@ function generatePhoneNumber(arr) {
   
   function verficaNCorretos(arr){
     for (let i = 0; i < arr.length; i += 1) {
-      if ( arr[i] < 0 || arr[i] > 9) {
+      let teste = arr[i]
+      if ( teste >= 0 && teste <= 9) {
         numerosCorretos = true;
       }
     }
