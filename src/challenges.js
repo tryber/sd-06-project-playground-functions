@@ -155,8 +155,26 @@ function techList(tec, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let cont;
+  if (numbers.length !== 11) {
+    return 'Array com tamanho incorreto';
+  }
+  for (let i = 0; i < numbers.length; i += 1) {
+    if ((numbers[i] < 0) || (numbers[i] > 9) || (cont > 2)) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    cont = 0; 
+    for (let j = 0; j < numbers.length; j += 1) {
+      if (numbers[i] === (numbers[j])) {
+      cont += 1;
+      }
+    }  
+  }
+  numbers.splice (2, 0, ')');
+  numbers.splice (8, 0, '-');
+  numbers.unshift ('(');
+  return numbers.join ('');
 }
 
 // Desafio 12
