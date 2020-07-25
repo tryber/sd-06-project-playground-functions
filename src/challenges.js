@@ -74,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse(1, 2, 3));
+// console.log(catAndMouse(1, 2, 3));
 
 // Desafio 8
 function fizzBuzz(arrayNumeros) {
@@ -95,12 +95,47 @@ function fizzBuzz(arrayNumeros) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(array) {
+  let frase = '';
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === 'a') {
+      frase += '1';
+    } else if (array[index] === 'e') {
+      frase += '2';
+    } else if (array[index] === 'i') {
+      frase += '3';
+    } else if (array[index] === 'o') {
+      frase += '4';
+    } else if (array[index] === 'u') {
+      frase += '5';
+    } else {
+      frase += array[index];
+    }
+  }
+  return frase;
 }
-function decode() {
-  // seu código aqui
+// console.log(encode('ola'));
+
+function decode(array2) {
+  let frase = '';
+  for (let index = 0; index < array2.length; index += 1) {
+    if (array2[index] === '1') {
+      frase += 'a';
+    } else if (array2[index] === '2') {
+      frase += 'e';
+    } else if (array2[index] === '3') {
+      frase += 'i';
+    } else if (array2[index] === '4') {
+      frase += 'o';
+    } else if (array2[index] === '5') {
+      frase += 'u';
+    } else {
+      frase += array2[index];
+    }
+  }
+  return frase;
 }
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
