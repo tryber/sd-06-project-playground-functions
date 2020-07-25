@@ -28,7 +28,7 @@ function concatName(arr) {
   // seu código aqui
   let primeiro = arr[0];
   let ultimo = arr[arr.length - 1];
-  let str = ultimo + ',' + primeiro;
+  let str = ultimo + ', ' + primeiro;
   return str;
 }
 
@@ -46,7 +46,21 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  // seu código aqui
+  let distanciaC1 = Math.abs(mouse - cat1);
+  let distanciaC2 = Math.abs(mouse - cat2);
+  let msg;
+  if (mouse) {
+  }
+  if (distanciaC1 > distanciaC2) {
+    msg = "cat2";
+  } else if (distanciaC2 > distanciaC1) {
+    msg = "cat1";
+  } else {
+    msg = "os gatos trombam e o rato foge";
+  }
+  return msg;
 }
 
 // Desafio 8
