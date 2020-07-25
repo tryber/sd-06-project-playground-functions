@@ -189,7 +189,7 @@ function fizzBuzz(array3) {
 // console.log(fizzBuzz(array3))
 
 // Desafio 9
-/*9 - Codifique e Decodifique
+/* 9 - Codifique e Decodifique
 Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string
 como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo
 com o formato a seguir:
@@ -206,8 +206,8 @@ recebe uma string contendo números no lugar de letras minúsculas e retornará 
 string com vogais minúsculas no lugar dos números (então, caso o parâmetro de
 decode seja "h3 th2r2!", o retorno deverá ser "hi there!").
 */
-let palavra1 = 'cavaleiro'
-let palavra2 = 'c1v1l23r4'
+// let palavra1 = 'cavaleiro'
+// let word2 = 'c1v1l23r4'
 function encode(palavra1) {
   // seu código aqui
   let code = {
@@ -227,7 +227,7 @@ function encode(palavra1) {
 }
 // console.log(encode(palavra1))
 
-function decode(palavra2) {
+function decode(word2) {
   // seu código aqui
   let code = {
     a: 1,
@@ -237,7 +237,7 @@ function decode(palavra2) {
     u: 5,
   }
   let inverse = Object.entries(code);
-  let array5 = palavra2.split('');
+  let array5 = word2.split('');
   for (let i in array5) {
     if (Object.values(code).includes(+array5[i])) {
       array5[i] = inverse[Object.values(code).indexOf(+array5[i])][0];
