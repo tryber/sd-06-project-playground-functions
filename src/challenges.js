@@ -66,13 +66,13 @@ function fizzBuzz(numbers) {
 
     // verifying numbers conditions to be multiple or not and apply the correct term
     if (isMultipleThree && isMultipleFive) {
-      numbers[index] = "fizzBuzz";
+      numbers[index] = 'fizzBuzz';
     } else if (isMultipleThree) {
-      numbers[index] = "fizz";
+      numbers[index] = 'fizz';
     } else if (isMultipleFive) {
-      numbers[index] = "buzz";
+      numbers[index] = 'buzz';
     } else {
-      numbers[index] = "bug!"
+      numbers[index] = 'bug!'
     }
   }
   return numbers;
