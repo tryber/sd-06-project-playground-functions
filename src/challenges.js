@@ -152,7 +152,21 @@ function decode(stringDecode) {
 
 // Desafio 10
 function techList(array, name) {
-  // seu código aqui
+  let techList = [];
+  let orderArray = array.sort()
+
+  if (orderArray != "") {
+    for (value in orderArray) {
+      techList.push({
+        tech: orderArray[value],
+        nome: name
+      });
+    };
+  } else {
+    return "Vazio!";
+  };
+
+  return techList;
 }
 
 // Desafio 11
