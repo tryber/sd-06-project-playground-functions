@@ -27,7 +27,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function foundBiggestNumber(numbers) {
   let biggerNumber = -Infinity;
-  for(let index = 0; index < numbers.length; index += 1) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > biggerNumber) {
       biggerNumber = numbers[index];
     }
@@ -41,7 +41,7 @@ function highestCount(numbers) {
   for (let i = 0; i < numbers.length; i += 1) {
     if (biggerNumber === numbers[i]) {
       count += 1;
-    }    
+    }
   }
   return count;
 }
@@ -114,8 +114,7 @@ function techList(tech, name) {
   let techLearn = {};
   for (let index = 0; index < tech.length; index += 1) {
     techLearn = {
-      tech: tech[index],
-      name: name,
+      tech: tech[index], name,
     };
     techLearnsList.push(techLearn);
   }
@@ -124,7 +123,7 @@ function techList(tech, name) {
   }
   return techLearnsList;
 }
-
+a
 // Desafio 11
 function verifyCounterRepeatedNumber(numbers) {
   let object = {};
