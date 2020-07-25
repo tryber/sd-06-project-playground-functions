@@ -24,8 +24,7 @@ function splitSentence(nome) {
 }
 
 // Desafio 4
-function concatName() {
-  
+function concatName() {  
 }
 
 // Desafio 5
@@ -38,18 +37,15 @@ function footballPoints(vitoria, empate) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
-  
+  // seu código aqui  
 }
 
 // Desafio 7
-function catAndMouse() {
-  
+function catAndMouse() {  
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz() {  
 }
 
 // Desafio 9
@@ -61,8 +57,7 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  
+function techList() {  
 }
 
 // Desafio 11
