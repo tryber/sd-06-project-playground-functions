@@ -247,11 +247,29 @@ function decode(word2) {
 }
 // console.log(decode(palavra2))
 
-
+// seu código aqui
 // Desafio 10
-function techList() {
-  // seu código aqui
+// 10 - Lista de tecnologias
+let nametechnologies = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+let personName = 'Mario'
+function techList(nametechnologies, personName) {
+  let list;
+  if (nametechnologies.length === 0) {
+    list = 'Vazio!';
+  } else {
+    let objects = [];
+    nametechnologies.sort();
+    for (let i = 0; i < nametechnologies.length; i += 1){
+      objects.push({
+        tech: nametechnologies[i],
+        name: personName,
+      });
+    }
+    list = objects;
+  }
+  return list;
 }
+console.log (techList(nametechnologies, personName))
 
 // Desafio 11
 function generatePhoneNumber() {
