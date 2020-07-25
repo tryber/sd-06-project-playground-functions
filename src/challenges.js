@@ -170,7 +170,7 @@ Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar
 ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
 */
 // seu código aqui
-let number2 = 22
+// let number2 = 22
 function multiple3or5 (number2) {
 let multiple3 = (number2 % 3) === 0;
 let multiple5 = (number2 % 5) === 0;
@@ -184,7 +184,7 @@ let multiple5 = (number2 % 5) === 0;
     return 'bug!'
   }
 }
-let array3 = [2, 15, 7, 9, 45]
+// let array3 = [2, 15, 7, 9, 45]
 function fizzBuzz(array3) {
   let newArray = [];
   for (let i=0; i<array3.length; i+= 1) {
