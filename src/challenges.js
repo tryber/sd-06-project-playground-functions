@@ -185,21 +185,21 @@ function fizzBuzz(myArray) {
 
   for (let index in myArray) {
     if (myArray[index] % 3 === 0 && myArray[index] % 5 === 0) {
-      newArray[index] = 'fizzBuzz';
+      newArray.push('fizzBuzz');
     } else if (myArray[index] % 5 === 0) {
-      newArray[index] = 'buzz';
+      newArray.push('buzz');
     } else if (myArray[index] % 3 === 0) {
-      newArray[index] = 'fizz';
+      newArray.push('fizz');
     } else {
-      newArray[index] = 'bug!';
+    newArray.push('bug!');
     }
   }
   return newArray;
 }
 
 // TESTE
-// let testArray = [2, 15, 7, 9, 45];
-// console.log(fizzBuzz(testArray));
+let testArray = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(testArray));
 
 // _______________________________________________________________________________________________
 // Desafio 9
@@ -298,6 +298,8 @@ function decode(numbersString) {
 // A saída da sua função deve ser uma lista de objetos ordenada pelo campo tech dos objetos
 // com o formato acima.
 
+// Caso o array venha vazio sua função deve retornar 'Vazio!'
+
 function compare(a, b) {
   if (a.tech < b.tech) {
     return -1;
@@ -314,19 +316,18 @@ function techList(techName, name) {
 
   if (techName.length !== 0) {
     for (index in techName) {
-      myObject = { tech: techName[index], name: name };
+      let myObject = { tech: techName[index], name: name };
       myList[index] = myObject;
     }
     return myList.sort(compare);
-  } else {
-    return 'Vazio!';
   }
+  return 'Vazio!';
 }
 
 // TESTE
-// let testArray = [];
-// let testArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-// console.log(techList(testArray, 'Zeca'));
+let testArray = [];
+//let testArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+console.log(techList(testArray, 'Zeca'));
 
 // _______________________________________________________________________________________________
 // Desafio 11
@@ -344,37 +345,51 @@ function techList(techName, name) {
 // Caso algum dos números da array seja menor que 0, maior que 9 ou
 // "não é possível gerar um número de telefone com esses valores".
 
-function generatePhoneNumber(phoneNumber) {
-  let numbers = 0;
-  let threeTimesCounter = 0;
-  let returnMessage = '';
-  let testResult1 = false;
-  let testResult2 = false;
-
+function sizeOfArray(phoneNumber) {
   if (phoneNumber.length !== 11) {
-    testResult1 = true;
-  } else {
-    for (let index in phoneNumber) {
-      numbers = phoneNumber[index];
-      for (let j = 0; j < phoneNumber.length; j += 1) {
-        if (numbers === phoneNumber[j]) {
-          threeTimesCounter += 1;
-        }
+    return false;
+  }
+  return true;
+}
+function threeTimesTest (phoneNumber) {
+  let threeTimesCounter = 0;
+
+  for (let index in phoneNumber) {
+    let threeTimesNumbers = phoneNumber[index];
+    for (let j = 0; j < phoneNumber.length; j += 1) {
+      if (threeTimesNumbers === phoneNumber[j]) {
+        threeTimesCounter += 1;
       }
-      if (threeTimesCounter >= 3 || numbers < 0 || numbers > 9) {
-        testResult2 = true;
-      }
-      threeTimesCounter = 0;
+    }
+    if (threeTimesCounter > 2) {
+        return false;
+    }
+    threeTimesCounter = 0;
+  }
+  return true;
+}
+
+function numbersTest(phoneNumber) {
+  for (let index in phoneNumber) {
+    let numbers = phoneNumber[index];
+    if (numbers < 0 || numbers > 9) {
+      return false;
     }
   }
-  if (testResult1 === true) {
-    returnMessage = 'Array com tamanho incorreto.';
-  } else if (testResult2 === true) {
-    returnMessage = 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    returnMessage = `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
+  return true;
+}
+
+function generatePhoneNumber(phoneNumber) {
+  let testResult1 = sizeOfArray(phoneNumber);
+  let testResult2 = threeTimesTest(phoneNumber);
+  let testResult3 = numbersTest(phoneNumber);
+
+  if (testResult1 === false) {
+    return 'Array com tamanho incorreto.';
+  } else if (testResult2 === false || testResult3 === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  return returnMessage;
+  return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
 }
 
 // TESTE
@@ -401,20 +416,20 @@ function generatePhoneNumber(phoneNumber) {
 
 // Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
 
-function triangleCheck(lineA, lineB, lineC) {
+function triangleCheck(lA, lB, lC) {
   let returnMessage = false;
 
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+  if (lA < lB + lC && lB < lA + lC && lC < lA + lB) {
     returnMessage = true;
   }
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+  if (lA > Math.abs(lB - lC) && lB > Math.abs(lA - lC) && lC > Math.abs(lA - lB)) {
     returnMessage = true;
   }
   return returnMessage;
 }
 
 // TESTE
-// console.log(triangleCheck(10, 18, 8));
+// console.log(triangleCheck(10, 14, 8));
 
 // _______________________________________________________________________________________________
 // Desafio 13 (the last, but not the least)
