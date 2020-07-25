@@ -158,9 +158,64 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log (catAndMouse())
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+/* FizzBuzz
+Crie uma função chamada fizzBuzz que receba uma array de números e retorne 
+uma array da seguinte forma:
+
+Para cada número da Array que seja divisível por 3, apresente uma string "fizz";
+Para cada número da Array que seja divisível por 5, apresente uma string "buzz";
+Caso o número seja divisível por 3 ou 5, retorne a string "fizzBuzz";
+Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar 
+["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
+*/
+// seu código aqui
+let number2 = 22
+function multiple3or5 (number2) {
+let multiple3 = (number2 % 3) === 0;
+let multiple5 = (number2 % 5) === 0;
+  if (multiple3 && multiple5){
+    return 'fizzBuzz';
+  } else if (multiple3){
+    return 'fizz'
+  } else if (multiple5){
+    return 'buzz'
+  } else {
+    return 'bug!'
+  }
 }
+let array3 = [2, 15, 7, 9, 45]
+function fizzBuzz(array3) {
+  let newArray = [];
+  for (let i=0; i<array3.length; i+= 1) {
+    newArray[i] = multiple3or5(array3[i]) 
+  }
+  return newArray
+}
+console.log(fizzBuzz(array3))
+/* let array3 = [2, 15, 7, 9, 45]
+function fizzBuzz (array3[i]) {
+  let newArray = [];
+  for (let i=0; i<array3.length; i += 1) {
+  let multiple3 = array3[i] % 3 === 0;
+  let multiple5 = array3[i] % 5 === 0;
+  if (multiple3 && multiple5) {
+    newArray.push ('fizzBuzz');
+  } else if (multiple5) {
+    newArray.push ('buzz');
+  } else if (multiple3) {
+    newArray.push ('fizz');
+  } else {
+    newArray.push ('bug!');
+  }
+  return newArray
+  }
+}
+console.log (fizzBuzz (array3))
+
+
+
+*/
 
 // Desafio 9
 function encode() {
