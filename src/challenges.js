@@ -148,7 +148,7 @@ function decode(stringDecode) {
     };
   };
   return newString
-}  
+}
 
 // Desafio 10
 function techList(array, name) {
@@ -171,7 +171,7 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+
 }
 
 // Desafio 12
@@ -186,8 +186,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let findInteger = /\d+/g;
+  let arrayOfNumbers = string.match(findInteger);
+  let sumNumbers = 0;
+
+  for (value in arrayOfNumbers) {
+    sumNumbers += parseInt(arrayOfNumbers[value]);
+  }
+
+  if (sumNumbers === 1) {
+    return `${sumNumbers} copo de água`;
+  } else {
+    return `${sumNumbers} copos de água`;
+  }
+
+  return sumNumbers;
 }
 
 
