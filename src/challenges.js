@@ -3,9 +3,7 @@ function compareTrue(valueOne, valueTwo) {
   if (valueOne && valueTwo) {
     return true;
   }
-
   return false;
-
 }
 
 // Desafio 2
@@ -59,9 +57,7 @@ function highestCount(array) {
       count += 1;
     }
   }
-
   return count;
-
 }
 
 // Desafio 7
@@ -73,9 +69,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (cat2Dist < cat1Dist) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -98,57 +93,57 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(stringEncode) {
-  let newString = '';
+  let encodeString = '';
 
-  for (index in stringEncode) {
+  for (let index = 0; index < stringEncode.length; index += 1) {
     switch (stringEncode[index]) {
       case 'a':
-        newString = newString + '1';
+        encodeString += '1';
         break;
       case 'e':
-        newString = newString + '2';
+        encodeString += '2';
         break;
       case 'i':
-        newString = newString + '3';
+        encodeString += '3';
         break;
       case 'o':
-        newString = newString + '4';
+        encodeString += '4';
         break;
       case 'u':
-        newString = newString + '5';
+        encodeString += '5';
         break;
       default:
-        newString = newString + stringEncode[index];
+        encodeString += stringEncode[index];
     }
   }
-  return newString;
+  return encodeString;
 }
 
 function decode(stringDecode) {
-  let newString = '';
+  let decodeString = '';
 
-  for (index in stringDecode) {
+  for (let index = 0; index < stringDecode.length; index += 1) {
     switch (stringDecode[index]) {
       case '1':
-        newString = newString + 'a';
+        decodeString += 'a';
         break;
       case '2':
-        newString = newString + 'e';
+        decodeString += 'e';
         break;
       case '3':
-        newString = newString + 'i';
+        decodeString += 'i';
         break;
       case '4':
-        newString = newString + 'o';
+        decodeString += 'o';
         break;
       case '5':
-        newString = newString + 'u';
+        decodeString += 'u';
         break;
       default:
-        newString = newString + stringDecode[index];
+        decodeString += stringDecode[index];
     }
   }
-  return newString;
+  return decodeString;
 }
 
 // Desafio 10
