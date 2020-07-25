@@ -231,7 +231,7 @@ function generatePhoneNumber(arrayPhone) {
   if (temMaisDeTresOcorrencias) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-    return (numberPhone =
+  return (numberPhone =
       '(' + arrayDdd + ')' + ' ' + arrayIni + '-' + arrayFin);
 }
 
