@@ -24,12 +24,12 @@ function splitSentence(nome) {
 }
 
 // Desafio 4
-function concatName(arr) {
+function concatName(/*arr*/) {
   // seu código aqui
-  /*let primeiro = arr[0];
-  let ultimo = arr[arr.length - 1];
-  let str = ultimo + ', ' + primeiro;
-  return str;*/
+  //let primeiro = arr[0];/
+  //let ultimo = arr[arr.length - 1];
+  //let str = ultimo + ', ' + primeiro;
+  //return str;
 }
 
 // Desafio 5
@@ -41,12 +41,12 @@ function footballPoints(vitoria, empate) {
 }
 
 // Desafio 6
-function highestCount(inteiros) {
+function highestCount(/*inteiros*/) {
   // seu código aqui
-  /*let indiceMaior = 0;
-  let contador = 0;
+  //let indiceMaior = 0;
+  //let contador = 0;
 
-  for (let indice in inteiros) {
+  /*for (let indice in inteiros) {
       if(inteiros[indiceMaior] < inteiros[indice]){
           indiceMaior = indice;
       }
@@ -60,13 +60,13 @@ function highestCount(inteiros) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  /*let distanciaC1 = Math.abs(mouse - cat1);
-  let distanciaC2 = Math.abs(mouse - cat2);
-  let msg;
-  if (mouse) {
+function catAndMouse(/*mouse, cat1, cat2*/) {
+  //let distanciaC1 = Math.abs(mouse - cat1);
+  //let distanciaC2 = Math.abs(mouse - cat2);
+  //let msg;
+  //if (mouse) {
 
-  }
+  /*}
   if (distanciaC1 > distanciaC2) {
     msg = "cat2";
   } else if (distanciaC2 > distanciaC1) {
@@ -78,10 +78,10 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arr) {
+function fizzBuzz(/*arr*/) {
   // seu código aqui
-  /*let resultados = [];
-  for ( let i in arr ) {
+  //let resultados = [];
+  /*for ( let i in arr ) {
     if ( (arr[i] % 3 === 0) && (arr[i] % 5 === 0) ) {
       resultados.push('fizzBuzz');
     } else if ( arr[i] % 3 === 0 ) {
@@ -104,16 +104,16 @@ function decode() {
 }
 
 // Desafio 10
-function techList(arr, nome) {
+function techList(/*arr, nome*/) {
   // seu código aqui
-  /*let resultados = [];
-  let msg = 'Vazio!';
-  if ( arr.length > 0) {
+  //let resultados = [];
+  //let msg = 'Vazio!';
+  /*if ( arr.length > 0) {
     for ( let i in arr ) {
       resultados.push( {tech: arr[i], name: nome} );
     }
     resultados.sort(function (a, b) {
-      return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0);    
+      return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0);
     });
     return resultados;
   } else {
