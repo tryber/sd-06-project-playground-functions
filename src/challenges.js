@@ -135,11 +135,11 @@ function decode(array2) {
   }
   return frase;
 }
-console.log(decode('h3 th2r2!'));
+// console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
-  // seu código aqui
+  
 }
 
 // Desafio 11
