@@ -121,12 +121,12 @@ function comparador(first, last) {
 }
 
 // Desafio 10
-function techList(tech, name) {
+function techList(tech, nameTech) {
   let objectList = [];
   for (let i = 0; i < tech.length; i += 1) {
     let technology = {
       tech: tech[i],
-      name: name,
+      name: nameTech,
     };
     objectList.push(technology);
   }
