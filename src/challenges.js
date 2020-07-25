@@ -138,9 +138,29 @@ function techList(tech, nameTech) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function getSlice(list, first, last) {
+  return list.slice(first, last).join('');
 }
+
+function generatePhoneNumber(numberList) {
+  let result = 0;
+  let phoneNumber = [];
+  if (numberList.length === 11) {
+    for (let i = 0; i < 11; i += 1) {
+      if (numberList[i] < 0 || numberList[i] > 9) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    }
+    phoneNumber = ['(', getSlice(numberList, 0, 2), ') ',
+      getSlice(numberList, 2, 7), '-',
+      getSlice(numberList, 7, 11),
+    ];
+  } else {
+    return 'Array com tamanho incorreto.';
+  }
+  return phoneNumber.join('');
+}
+
 
 // Desafio 12
 function triangleCheck() {
