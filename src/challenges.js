@@ -262,7 +262,7 @@ function hydrate(bebidas) {
       coposDeAgua += parseInt(bebidas[s],10);
     }    
   }
-  return `${coposDeAgua} copos de água`;  
+  return `${coposDeAgua} copo de água`;  
 }
 /* let valor1 = "1 cachaça,  7 cervejas e  1 copo de vinho";
 console.log(hydrate(valor1)); */
