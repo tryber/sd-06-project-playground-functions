@@ -27,7 +27,7 @@ console.log (splitSentence("Oi eu sou o Matheus Carvalho"));
 // Desafio 4
 function concatName(firstLast) {
   // seu código aqui
-  let newString = firstLast[firstLast.length - 1] + "," + firstLast[0];
+  let newString = firstLast[firstLast.length - 1] + ", " + firstLast[0];
   return newString;
 }
 
@@ -81,9 +81,22 @@ function catAndMouse(mouse,cat1,cat2) {
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(myArray) {
   // seu código aqui
-}
+    let arrayFizzBuzz = [];
+    for (let i = 0; i < myArray.length; i += 1) {
+      let result = 'bug!';
+      if ((myArray[i] % 3 === 0) && (myArray[i] % 5 === 0)) {
+        result = 'fizzBuzz';
+      } else if (myArray[i] % 3 === 0) {
+        result = 'fizz';
+      } else if (myArray[i] % 5 === 0) {
+        result = 'buzz';
+      }
+      arrayFizzBuzz.push(result);
+    }
+    return arrayFizzBuzz;
+  }
 
 // Desafio 9
 function encode() {
