@@ -140,7 +140,7 @@ a string "os gatos trombam e o rato foge".
 // let cat2 = 20 //posição em uma reta
 // let mouse = 12 //posição em uma reta
 
-function catAndMouse() {
+function catAndMouse(cat1,cat2,mouse) {
   let range1 = Math.abs(cat1 - mouse);
   let range2 = Math.abs(cat2 - mouse);
   // console.log("distancia do range1 =" + range1)
