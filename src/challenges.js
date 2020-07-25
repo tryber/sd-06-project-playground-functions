@@ -180,17 +180,22 @@ function generatePhoneNumber(stringPhone) {
 
 // Desafio 12
 function triangleCheck(sideA, sideB, sideC) {
-  // let answer = false;
-  // let sides = [sideA, sideB, sideC];
-  // for (let i in sides) {
-  //   for (let j in sides) {
-  //     if (i !== j) {
-
-  //     }
-  //   }
-  // }
+  let conditionCount = 0;
+  let answer = false;
+  if (sideB + sideC > sideA && Math.abs(sideB - sideC) < sideA) {
+    conditionCount += 1
+  }
+  if (sideA + sideC > sideB && Math.abs(sideA - sideC) < sideB) {
+    conditionCount += 1
+  } 
+  if (sideB + sideA > sideC && Math.abs(sideB - sideA) < sideC) {
+    conditionCount += 1
+  }
+  if (conditionCount === 3) {
+    answer = true;
+  }
+  return answer;
 }
-
 
 // Desafio 13
 function hydrate(drinks) {
