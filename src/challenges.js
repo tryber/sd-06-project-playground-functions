@@ -79,10 +79,11 @@ function bufizator(if8) {
 }
 
 function fizzBuzz(desafio8) {
+  let resposta8 = [];
   for (let i8 = 0; i8 < desafio8.length; i8 += 1) {
-    bufizator(desafio8[i8])
+    resposta8[i8] = bufizator(desafio8[i8])
   }
-  return desafio8;
+  return resposta8;
 }
 
 // Desafio 9
