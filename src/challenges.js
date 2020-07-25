@@ -2,8 +2,8 @@
 function compareTrue (parametro1, parametro2) {
   if (parametro1 && parametro2) {
     return true;
-  } 
-    return false;  
+  }
+    return false;
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -52,9 +52,9 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge'
   } else if (cat1 < cat2) {
     return 'cat1'
-  } 
-    return 'cat2'    
   }
+    return 'cat2'
+}
   /*let resposta;
   if (cat1 < cat2) {
     return cat1;
@@ -63,8 +63,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return resposta = 'os gatos trombam e o rato foge';
   }*/
-}
-
 // Desafio 8
 function fizzBuzz(array) {
   let resDesafio = [];
@@ -83,7 +81,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(parametro4) {
+function encode (parametro4) {
   for (let i in parametro4) {
     if (parametro4[i] === 'a') {
       parametro4[i].push = 1;
