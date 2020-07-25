@@ -73,21 +73,20 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-//Desafio 8
+
 function fizzBuzz(numeros) {
   let resultado = [];
-  for (let i = 0; i < numeros.length; i += 1) {
-      let n = numeros[i];
-      if (n % 3 === 0 && n % 5 === 0) {
-          resultado.push('fizzbuzz');
-      } else if (n % 3 === 0) {
-          resultado.push('fizz');
-      } else if (n % 5 === 0) {
-          resultado.push('buzz');
+  for(i = 0; i <= numeros.length -1; i += 1) {
+      if ((numeros[i] % 3 == 0) && (numeros[i] % 5 == 0)) {
+        resultado.push('fizzBuzz');
+      } else if ((numeros[i] % 3 != 0) && (numeros[i] % 5 != 0)) {
+        resultado.push('bug!');
+      } else if (numeros[i] % 3 == 0) {
+        resultado.push('fizz');
       } else {
-          resultado.push('bug!');
+        resultado.push('buzz');
       }
-  }
+} 
   return resultado;
 }
 
