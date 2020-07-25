@@ -250,8 +250,8 @@ function decode(word2) {
 // seu código aqui
 // Desafio 10
 // 10 - Lista de tecnologias
-let nametechnologies = ["React", "Jest", "HTML", "CSS", "JavaScript"]
-let personName = 'Mario'
+// let nametechnologies = ["React", "Jest", "HTML", "CSS", "JavaScript"]
+// let personName = 'Mario'
 function techList(nametechnologies, personName) {
   let list;
   if (nametechnologies.length === 0) {
@@ -259,7 +259,7 @@ function techList(nametechnologies, personName) {
   } else {
     let objects = [];
     nametechnologies.sort();
-    for (let i = 0; i < nametechnologies.length; i += 1){
+    for (let i = 0; i < nametechnologies.length; i += 1) {
       objects.push({
         tech: nametechnologies[i],
         name: personName,
@@ -269,7 +269,7 @@ function techList(nametechnologies, personName) {
   }
   return list;
 }
-console.log (techList(nametechnologies, personName))
+console.log(techList(nametechnologies, personName))
 
 // Desafio 11
 function generatePhoneNumber() {
