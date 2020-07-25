@@ -151,7 +151,6 @@ function techList(arr, nome) {
 }
 
 // Desafio 11
-//let arr =   [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 function generatePhoneNumber(arr) {
   let tamanhoCorreto = false;
   let numerosCorretos = false;
@@ -166,7 +165,7 @@ function generatePhoneNumber(arr) {
   function verficaNCorretos(arr){
     for (let i = 0; i < arr.length; i += 1) {
       let teste = arr[i]
-      if ( teste >= 0 && teste <= 9) {
+      if ( teste < 0 || teste > 9) {
         numerosCorretos = true;
       }
     }
@@ -204,12 +203,14 @@ function generatePhoneNumber(arr) {
   if (!vt) {
     return 'Array com tamanho incorreto.';
   }
+
   let vnc = verficaNCorretos(arr);
   let vr = verificaRepeticao(arr);
-  if (!vnc || !vr) {
+  if (vnc || !vr) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  if (vt == true && vnc == true && vr == true) {
+  
+  if (vt == true && vnc == false && vr == true) {
     let ddd = arr.slice(0, 2).join('');
     let prefixo = arr.slice(2, 7).join('');
     let sufixo = arr.slice(7).join('');
@@ -218,7 +219,6 @@ function generatePhoneNumber(arr) {
   }
     
 }
-//console.log(generatePhoneNumber(arr));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
