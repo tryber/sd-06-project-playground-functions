@@ -189,7 +189,7 @@ function techList() {}
 // Desafio 11
 function checkOccurrences(number, arrayNumbers) {
   let contarArray = 0;
-  
+
   for (let n = 0; n <= arrayNumbers.length - 1; n += 1) {
     if (number === arrayNumbers[n]) {
       contarArray += 1;
@@ -208,11 +208,11 @@ function generatePhoneNumber(arrayPhone) {
     if (arrayPhone[i] < 0 || arrayPhone[i] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-      if (checkOccurrences(arrayPhone[i], arrayPhone)) {
-        temMaisDeTresOcorrencias = true;
-        break;
-        }
+    if (checkOccurrences(arrayPhone[i], arrayPhone)) {
+      temMaisDeTresOcorrencias = true;
+      break;
     }
+  }
 
   let arrayDdd = String(arrayPhone[0]) + String(arrayPhone[1]);
   let arrayIni =
@@ -230,13 +230,12 @@ function generatePhoneNumber(arrayPhone) {
 
   if (temMaisDeTresOcorrencias) {
     return 'não é possível gerar um número de telefone com esses valores';
-  } else {
+  }
     return (numberPhone =
       '(' + arrayDdd + ')' + ' ' + arrayIni + '-' + arrayFin);
-  }
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 // Um triângulo é composto de três linhas: lineA, lineB e lineC.
