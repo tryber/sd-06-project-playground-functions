@@ -46,14 +46,14 @@ function highestCount(array) {
   let highestValue = 0;
   let count = 0;
 
-  for (value in array) {
-    if (array[value] > highestValue) {
-      highestValue = array[value];
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > highestValue) {
+      highestValue = array[i];
     }
   }
 
-  for (index in array) {
-    if (array[index] === highestValue) {
+  for (let j = 0; j < array.length; j += 1) {
+    if (array[j] === highestValue) {
       count += 1;
     }
   }
@@ -152,9 +152,9 @@ function techList(array, name) {
   let orderArray = array.sort();
 
   if (orderArray != '') {
-    for (value in orderArray) {
+    for (let i = 0; i < orderArray.length; i += 1) {
       techList.push({
-        'tech': orderArray[value],
+        'tech': orderArray[i],
         'name': name
       });
     }
@@ -218,8 +218,8 @@ function hydrate(string) {
   let arrayOfNumbers = string.match(findInteger);
   let sumNumbers = 0;
 
-  for (value in arrayOfNumbers) {
-    sumNumbers += parseInt(arrayOfNumbers[value]);
+  for (let i = 0; i < arrayOfNumbers.length; i += 1) {
+    sumNumbers += parseInt(arrayOfNumbers[i]);
   }
 
   if (sumNumbers === 1) {
