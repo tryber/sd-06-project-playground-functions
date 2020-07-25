@@ -176,9 +176,7 @@ function multiple3or5(number2) {
     return 'fizz'
   } else if (multiple5) {
     return 'buzz'
-  } else {
-    return 'bug!'
-  }
+  } return 'bug!'
 }
 // let array3 = [2, 15, 7, 9, 45]
 function fizzBuzz(array3) {
