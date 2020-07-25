@@ -64,8 +64,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (pos2 < pos1) {
     return 'cat2';
   }
-    return 'cat1';
-  
+  return 'cat1'; 
 }
 
 // Desafio 8
@@ -89,56 +88,56 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(codigo) {
   let code = [];
-    for (let i = 0; i < codigo.length; i += 1) {
-      switch (codigo[i]) {
-        case 'a':
-          code[i] = 1;
-          break;
-        case 'e':
-          code[i] = 2;
-          break;
-        case 'i':
-          code[i] = 3;
-          break;
-        case 'o':
-          code[i] = 4;
-          break;
-        case 'u':
-          code[i] = 5;
-          break;
+  for (let i = 0; i < codigo.length; i += 1) {
+    switch (codigo[i]) {
+      case 'a':
+        code[i] = 1;
+        break;
+      case 'e':
+        code[i] = 2;
+        break;
+      case 'i':
+        code[i] = 3;
+        break;
+      case 'o':
+        code[i] = 4;
+        break;
+      case 'u':
+        code[i] = 5;
+        break;
         default:
           code[i] = codigo[i];
           break;
-      }
-    }
-    return code.join(''); 
-  }
-  function decode(encode) {
-    let recode = encode.split('');
-      for (let i = 0; i < recode.length; i += 1) {
-        switch (recode[i]) {
-          case '1':
-            recode[i] = 'a';
-            break;
-          case '2':
-            recode[i] ='e';
-            break;
-          case '3':
-            recode[i] ='i';
-            break;
-          case '4':
-            recode[i] = 'o';
-            break;
-          case '5':
-            recode[i] = 'u';
-            break;
-          default:
-            recode[i] = recode[i];
-            break;
         }
       }
-      return recode.join('');
+      return code.join('');
+}
+function decode(encode) {
+  let recode = encode.split('');
+  for (let i = 0; i < recode.length; i += 1) {
+    switch (recode[i]) {
+      case '1':
+        recode[i] = 'a';
+        break;
+      case '2':
+        recode[i] ='e';
+        break;
+      case '3':
+        recode[i] ='i';
+        break;
+      case '4':
+        recode[i] = 'o';
+        break;
+      case '5':
+        recode[i] = 'u';
+        break;
+        default:
+          recode[i] = recode[i];
+          break;
+        }
   }
+  return recode.join('');
+}
 
 // Desafio 10
 function techList(tec, name) {
@@ -164,15 +163,15 @@ function generatePhoneNumber(numbers) {
     if ((numbers[i] < 0) || (numbers[i] > 9) || (cont > 2)) {
       return "não é possível gerar um número de telefone com esses valores";
     }
-    cont = 0; 
+    cont = 0;
     for (let j = 0; j < numbers.length; j += 1) {
       if (numbers[i] === (numbers[j])) {
       cont += 1;
       }
-    }  
+    } 
   }
-  numbers.splice (2, 0, ')');
-  numbers.splice (8, 0, '-');
+  numbers.splice (2, 0, ') ');
+  numbers.splice (9, 0, '-');
   numbers.unshift ('(');
   return numbers.join ('');
 }
