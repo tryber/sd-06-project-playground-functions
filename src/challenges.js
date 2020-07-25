@@ -13,11 +13,7 @@ Faça a função utilizando o operador &&.
 // let value1 = 'true'
 // let value2 = 'true'
 function compareTrue(value1, value2) {
-  if (value1 && value2) {
-    return true
-  } else {
-    return false
-  }
+  return value1 && value2;
 }
 // console.log(compareTrue(value1, value2))
 
@@ -188,7 +184,7 @@ function multiple3or5(number2) {
 function fizzBuzz(array3) {
   let newArray = [];
   for (let i = 0; i < array3.length; i += 1) {
-    newArray[i] = multiple3or5(array3[i]); 
+    newArray[i] = multiple3or5(array3[i]);
   }
   return newArray
 }
