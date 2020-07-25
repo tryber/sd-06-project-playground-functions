@@ -95,20 +95,20 @@ que o número 9 (maior número do array) se repete.
 */
   // seu código aqui
 // let array2 = [9, 10, 2, 3, 9, 5, 7, 9, 9, 9]
-function funcGreaterNumber(array2){
+function funcGreaterNumber(array2) {
   let greaterNumber = array2[0];
-    for (let i of array2){
-      if (i > greaterNumber){
-        greaterNumber = i;
-      }
+  for (let i of array2) {
+    if (i > greaterNumber) {
+      greaterNumber = i;
     }
+  }
     return greaterNumber;
-    }
+}
 // console.log(funcGreaterNumber(array2))
-  
-  function highestCount(array2) {
+
+function highestCount(array2) {
   let greaterNumber = funcGreaterNumber(array2);
-    let counter = 0;
+  let counter = 0;
     for (let i of array2) {
       if (i === greaterNumber) {
         counter += 1;
