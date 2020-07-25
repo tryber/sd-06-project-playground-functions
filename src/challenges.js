@@ -119,9 +119,43 @@ function highestCount(array2) {
 // console.log(highestCount(array2))
 
 // Desafio 7
+/* Imagine que existem dois gatos, os quais chamaremos de cat1 e cat2,
+e que ambos estão atrás de um rato chamado mouse. Imagine que cada um dos três
+animais está em uma posição representada por um número.
+
+Sabendo disso, crie uma função chamada catAndMouse que, ao receber a posição
+de mouse, cat1 e cat2, nessa ordem, calcule as distâncias entre o rato e os
+gatos e retorne qual dos felinos irá alcançar o rato primeiro
+(sendo aquele que estará mais perto).
+
+Exemplo: caso o gato cat2 esteja a 2 unidades de distância do rato, e cat1
+esteja a 3 unidades, sua função deverá retornar cat2.
+
+Caso os gatos estejam na mesma distância do rato, a função deverá retornar
+a string "os gatos trombam e o rato foge".
+*/
+// seu código aqui
+// let cat1 = 6 //posição em uma reta
+// let cat2 = 20 //posição em uma reta
+// let mouse = 12 //posição em uma reta
+
 function catAndMouse() {
-  // seu código aqui
+  let range1 = Math.abs(cat1 - mouse);
+  let range2 = Math.abs(cat2 - mouse);
+  // console.log("distancia do range1 =" + range1)
+  // console.log("distancia do range2 =" + range2)
+  let messege = ""
+  console.log(messege)
+  if (range1 < range2){
+    messege = "cat1"
+  } else if (range1 > range2){
+    messege = "cat2"
+  } else {
+    messege = "os gatos trombam e o rato foge"
+  }
+  return messege
 }
+// console.log (catAndMouse())
 
 // Desafio 8
 function fizzBuzz() {
