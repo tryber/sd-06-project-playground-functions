@@ -64,7 +64,6 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaC1 = Math.abs(mouse - cat1);
   let distanciaC2 = Math.abs(mouse - cat2);
   let msg;
-  
   if (mouse) {
 
   }
@@ -114,9 +113,7 @@ function techList(arr, nome) {
       resultados.push( {tech: arr[i], name: nome} );
     }
     resultados.sort(function (a, b) {
-	
-    return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0);
-     
+      return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0);    
     });
     return resultados;
   } else {
