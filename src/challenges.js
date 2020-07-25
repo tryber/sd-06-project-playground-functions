@@ -256,7 +256,7 @@ function encode(lettersString) {
 function decode(numbersString) {
   let myStringArray = numbersString.split('');
 
-  for (let index in myStringArray) {
+  for (let index = 0; index < myStringArray.length; index += 1) {
     switch (myStringArray[index]) {
       case '1':
         myStringArray[index] = 'a';
@@ -311,11 +311,10 @@ function compare(a, b) {
 }
 
 function techList(techName, name) {
-  let index;
   let myList = [];
 
   if (techName.length !== 0) {
-    for (index in techName) {
+    for (let index = 0; index < techName.length; index += 1) {
       let myObject = { tech: techName[index], name: name };
       myList[index] = myObject;
     }
@@ -353,8 +352,7 @@ function sizeOfArray(phoneNumber) {
 }
 function threeTimesTest(phoneNumber) {
   let threeTimesCounter = 0;
-
-  for (let index in phoneNumber) {
+  for (let index = 0; index < phoneNumber.length; index += 1) {
     let threeTimesNumbers = phoneNumber[index];
     for (let j = 0; j < phoneNumber.length; j += 1) {
       if (threeTimesNumbers === phoneNumber[j]) {
@@ -370,7 +368,7 @@ function threeTimesTest(phoneNumber) {
 }
 
 function numbersTest(phoneNumber) {
-  for (let index in phoneNumber) {
+  for (let index = 0; index < phoneNumber.length; index += 1) {
     let numbers = phoneNumber[index];
     if (numbers < 0 || numbers > 9) {
       return false;
@@ -462,7 +460,7 @@ function hydrate(string) {
   let number = string.replace(/\D/g, '');
   let sum = 0;
 
-  for (let index in number) {
+  for (let index = 0; index < number.length; index += 1) {
     sum += parseInt(number[index], 10);
   }
   if (sum > 1) {
