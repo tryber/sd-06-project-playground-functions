@@ -86,12 +86,12 @@ function fizzBuzz(numberList) {
   return messages;
 }
 
-function checkDictionary(dictionary, word) {
+function convert(encodes, decodes, word) {
   let newWord = [];
   for (let i = 0; i < word.length; i += 1) {
-    if (word[i] in dictionary) {
-      let convertChar = dictionary.indexOf(word[i]) + 1
-      newWord.push(convertChar.toString());
+    if (decodes.includes(word[i])) {
+      let postion = decodes.indexOf(word[i]);
+      newWord.push(encodes[postion]);
     } else {
       newWord.push(word[i]);
     }
@@ -101,43 +101,11 @@ function checkDictionary(dictionary, word) {
 
 // Desafio 9
 function encode(word) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  let newWord = [];
-  for (let i = 0; i < word.length; i += 1) {
-    if (vowels.includes(word[i])) {
-      let convertChar = vowels.indexOf(word[i]) + 1;
-      newWord.push(convertChar.toString());
-    } else {
-      newWord.push(word[i]);
-    }
-  }
-  return newWord.join('');
+  return convert(['1', '2', '3', '4', '5'], ['a', 'e', 'i', 'o', 'u'], word);
 }
 
 function decode(word) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  let numbers = ['1', '2', '3', '4', '5'];
-  let newWord = [];
-  for (let i = 0; i < word.length; i += 1) {
-    if (numbers.includes(word[i])) {
-      let postion = numbers.indexOf(word[i]);
-      newWord.push(vowels[postion]);
-    } else {
-      newWord.push(word[i]);
-    }
-  }
-  return newWord.join('')
-}
-
-function decode(word) {
-  let vowelsDecode = {
-    '1': 'a',
-    '2': 'e',
-    '3': 'i',
-    '4': 'o',
-    '5': 'u'
-  };
-  return checkDictionary(vowelsDecode, word);
+  return convert(['a', 'e', 'i', 'o', 'u'], ['1', '2', '3', '4', '5'], word);
 }
 
 // Desafio 10
