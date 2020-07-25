@@ -111,7 +111,7 @@ function highestCount(array2) {
   let counter = 0;
   for (let i of array2) {
     if (i === greaterNumber) {
-        counter += 1;
+      counter += 1;
     }
   }
   return counter;
