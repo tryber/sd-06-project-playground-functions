@@ -200,7 +200,13 @@ function hydrate(drinks) {
     let water = parseInt(numDrinks[i])
     totalWater += water;
   }
-  return totalWater + " copos de água";
+  if (totalWater === 1) {
+    return totalWater + " copo de água";
+  } else if (totalWater > 1) {
+    return totalWater + " copos de água";
+  } else {
+    return "Beba a quantidade de água que quiser"
+  }
 }
 
 module.exports = {
