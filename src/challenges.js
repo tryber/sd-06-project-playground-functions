@@ -223,7 +223,7 @@ function hydrate(string) {
   } else {
     return `${letras} copo de agua`}
 }
-console.log(hydrate('1 copo,copos,copo'));
+
 
 module.exports = {
   calcArea,
