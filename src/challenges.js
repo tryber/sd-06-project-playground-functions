@@ -221,7 +221,7 @@ function hydrate(drinks) {
 module.exports = {
   calcArea,
   catAndMouse,
-  compareTrue,' + 
+  compareTrue, 
   concatName,
   decode,
   encode,
