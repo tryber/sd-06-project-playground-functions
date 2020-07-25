@@ -124,7 +124,7 @@ function techList(techNameArray, named) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  //variables
+  // variables
   let formattedPhoneNumber = null;
   let ddd = `(${array[0]}${array[1]})`;
   let firstPartPhoneNumber = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}`;
@@ -132,7 +132,7 @@ function generatePhoneNumber(array) {
 
   // verifying permitted length conditions to generate a phone number
   if (array.length !== 11) {
-    formattedPhoneNumber = "Array com tamanho incorreto."
+    formattedPhoneNumber = 'Array com tamanho incorreto.'
   } else {
     // compare repeated numbers within array
     for (let index = 0; index < array.length; index += 1) {
@@ -146,7 +146,7 @@ function generatePhoneNumber(array) {
       }
       // Verifying impossible conditions to generate a phone number
       if (countRepeat >= 3 || array[index] < 0 || array[index] > 9) {
-        formattedPhoneNumber = "não é possível gerar um número de telefone com esses valores"
+        formattedPhoneNumber = 'não é possível gerar um número de telefone com esses valores'
       }
     }
   }
@@ -176,8 +176,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  // variables
+  let highlightedNumbers = phrase.replace(/\D+/g, '');
+  let result = 0;
+
+  // convert numbers from string to interger in base 10. then add all numbers
+  for (let index = 0; index < highlightedNumbers.length; index += 1) {
+    result += parseInt(highlightedNumbers[index], 10);
+  }
+  // verifying conditions if they are just one or more glasses of water
+  if (result === 1) {
+    result += ' copo de água';
+  } else {
+    result += ' copos de água';
+  }
+  return result;
 }
 
 
