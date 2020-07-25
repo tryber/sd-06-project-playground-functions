@@ -182,8 +182,7 @@ function techList(arrayTecnologias, name) {
     let saidaTec = [];
     for (let indiceTec in ordenarArray){
       saidaTec.push({
-        name: name,
-        nome: name,
+        name: name,        
         tech: ordenarArray[indiceTec],
       });
       /* saidaTec[indiceTec].nome = name;  */     
@@ -270,11 +269,10 @@ function hydrate(bebidas) {
     return `${coposDeAgua} copos de água`;
   } else {
     return `${coposDeAgua} copo de água`;
-  }
-    
+  }    
 }
-let valor1 = "1 cachaça,   7cervejas e   copo de vinho";
-console.log(hydrate(valor1));
+/* let valor1 = "1 cachaça,   7cervejas e   copo de vinho";
+console.log(hydrate(valor1)); */
 
 
 module.exports = {
