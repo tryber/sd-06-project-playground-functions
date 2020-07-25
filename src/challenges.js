@@ -187,35 +187,12 @@ function multiple3or5(number2) {
 // let array3 = [2, 15, 7, 9, 45]
 function fizzBuzz(array3) {
   let newArray = [];
-  for (let i=0; i<array3.length; i+= 1) {
-    newArray[i] = multiple3or5(array3[i]) 
+  for (let i = 0; i < array3.length; i += 1) {
+    newArray[i] = multiple3or5(array3[i]); 
   }
   return newArray
 }
 // console.log(fizzBuzz(array3))
-/* let array3 = [2, 15, 7, 9, 45]
-function fizzBuzz (array3[i]) {
-  let newArray = [];
-  for (let i=0; i<array3.length; i += 1) {
-  let multiple3 = array3[i] % 3 === 0;
-  let multiple5 = array3[i] % 5 === 0;
-  if (multiple3 && multiple5) {
-    newArray.push ('fizzBuzz');
-  } else if (multiple5) {
-    newArray.push ('buzz');
-  } else if (multiple3) {
-    newArray.push ('fizz');
-  } else {
-    newArray.push ('bug!');
-  }
-  return newArray
-  }
-}
-console.log (fizzBuzz (array3))
-
-
-
-*/
 
 // Desafio 9
 function encode() {
