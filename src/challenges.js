@@ -78,9 +78,9 @@ function fizzBuzz(array) {
   let newArray = [];
 
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 === 0 && array[i] % 5 != 0) {
+    if (array[i] % 3 === 0 && array[i] % 5 !== 0) {
       newArray.push('fizz');
-    } else if (array[i] % 3 != 0 && array[i] % 5 === 0) {
+    } else if (array[i] % 3 !== 0 && array[i] % 5 === 0) {
       newArray.push('buzz');
     } else if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       newArray.push('fizzBuzz');
@@ -122,8 +122,8 @@ function encode(stringEncode) {
 function decode(stringDecode) {
   let decodeString = '';
 
-  for (let index = 0; index < stringDecode.length; index += 1) {
-    switch (stringDecode[index]) {
+  for (let i = 0; index < stringDecode.length; i += 1) {
+    switch (stringDecode[i]) {
       case '1':
         decodeString += 'a';
         break;
@@ -140,29 +140,29 @@ function decode(stringDecode) {
         decodeString += 'u';
         break;
       default:
-        decodeString += stringDecode[index];
+        decodeString += stringDecode[i];
     }
   }
   return decodeString;
 }
 
 // Desafio 10
-function techList(array, name) {
-  let techList = [];
+function techList(array, student) {
+  let techArray = [];
   let orderArray = array.sort();
 
-  if (orderArray != '') {
+  if (orderArray !== '') {
     for (let i = 0; i < orderArray.length; i += 1) {
-      techList.push({
-        'tech': orderArray[i],
-        'name': name
+      techArray.push({
+        tech: orderArray[i],
+        name: student
       });
     }
   } else {
     return 'Vazio!';
   }
 
-  return techList;
+  return techArray;
 }
 
 // Desafio 11
@@ -170,30 +170,25 @@ function generatePhoneNumber(arrayOfNumbers) {
   let telephoneNumber = '';
   let count = 0;
 
-  if (arrayOfNumbers.length != 11) {
+  if (arrayOfNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
   for (let i = 0; i < arrayOfNumbers.length; i += 1) {
     for (let j = 0; j < i; j += 1) {
-      if (arrayOfNumbers[i] === arrayOfNumbers[j])
+      if (arrayOfNumbers[i] === arrayOfNumbers[j]) {
         count += 1;
-    }
-
-    if (count > 3 || arrayOfNumbers[i] < 0 || arrayOfNumbers[i] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } else {
+      } else if (count > 3 || arrayOfNumbers[i] < 0 || arrayOfNumbers[i] > 9) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
       telephoneNumber = '(' + arrayOfNumbers[0] + arrayOfNumbers[1] + ')' + ' ' +
         arrayOfNumbers[2] + arrayOfNumbers[3] + arrayOfNumbers[4] + arrayOfNumbers[5]
         + arrayOfNumbers[6] + '-' + arrayOfNumbers[7] + arrayOfNumbers[8] +
         arrayOfNumbers[9] + arrayOfNumbers[10];
     }
   }
-
   return telephoneNumber;
 }
-
-console.log(generatePhoneNumber([]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
