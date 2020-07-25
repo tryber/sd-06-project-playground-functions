@@ -224,7 +224,7 @@ function fizzBuzz(myArray) {
 function encode(lettersString) {
   let myStringArray = lettersString.split('');
 
-  for (let index in myStringArray) {
+  for (let index = 0; index < myStringArray.length; index += 1) {
     switch (myStringArray[index]) {
       case 'a':
         myStringArray[index] = 1;
