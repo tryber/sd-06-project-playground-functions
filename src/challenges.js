@@ -74,16 +74,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 //Desafio 8
-function fizzBuzz(numbers) {
-  if (numbers % 3 === 0 && numbers % 5 === 0) {
+function fizzBuzz(numeros) {
+  if (numeros % 3 === 0 && numeros % 5 === 0) {
     return 'fizzBuzz';
-  } else if (numbers % 3 === 0) {
+  } else if (numeros % 3 === 0) {
     return 'fizz';
-  } else if (numbers % 5 === 0) {
+  } else if (numeros % 5 === 0) {
     return 'buzz';
   }
   return 'bug!';
 }
+
+
 // function fizzBuzz() {
 
 // }
