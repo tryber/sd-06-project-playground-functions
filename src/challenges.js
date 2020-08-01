@@ -295,7 +295,7 @@ function hydrate(fraseRecebida) {
   if (totalAgua>1){
     return totalAgua.toString() + " copos de água"
   }
-  else {
+  else if (totalAgua=1){
     return totalAgua.toString() + " copo de água"
   }
   
