@@ -138,26 +138,42 @@ function techList(tech, nameTech) {
 }
 
 // Desafio 11
+function repeatedCounter(numberList) {
+  let counts = {};
+  let checker = false;
+  numberList.forEach((number) => {
+    counts[number] = (counts[number] || 0) + 1;
+    if (counts[number] >= 3) {
+      checker = true;
+    }
+    if (number < 0) {
+      checker = true;
+    }
+    if (number > 9) {
+      checker = true;
+    }
+  });
+  return checker;
+}
+
 function getSlice(list, first, last) {
   return list.slice(first, last).join('');
 }
 
 function generatePhoneNumber(numberList) {
-  let result = 0;
   let phoneNumber = [];
+  let numErrorMsg = 'não é possível gerar um número de telefone com esses valores';
   if (numberList.length === 11) {
-    for (let i = 0; i < 11; i += 1) {
-      if (numberList[i] < 0 || numberList[i] > 9) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+    if (repeatedCounter(numberList)) {
+      return numErrorMsg;
     }
-    phoneNumber = ['(', getSlice(numberList, 0, 2), ') ',
-      getSlice(numberList, 2, 7), '-',
-      getSlice(numberList, 7, 11),
-    ];
   } else {
     return 'Array com tamanho incorreto.';
   }
+  phoneNumber.push('(', getSlice(numberList, 0, 2), ') ',
+    getSlice(numberList, 2, 7), '-',
+    getSlice(numberList, 7, 11),
+  );
   return phoneNumber.join('');
 }
 
