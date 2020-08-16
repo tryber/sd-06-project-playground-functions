@@ -204,8 +204,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(beerText) {
+  const re = /\d/g;
+  let cupMsg = 'copo';
+  let finalMsg = ' de água';
+  let arrResult = [];
+  let cupsCount = beerText.match(re);
+  let total = cupsCount.reduce(function (acumulador, valorAtual) {
+    return acumulador + Number(valorAtual);
+  }, 0);
+  arrResult.push(total, ' ', cupMsg);
+  if (total > 1) {
+    arrResult.push('s');
+  }
+  arrResult.push(finalMsg);
+  return arrResult.join('');
 }
 
 // Modulos
