@@ -179,8 +179,28 @@ function generatePhoneNumber(numberList) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function calculate(a, b, c) {
+  if (a < (b + c) && a > Math.abs(b - c)) {
+    return true;
+  }
+  return false;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let measures = [lineA, lineB, lineC];
+  let sideA = 1;
+  let sideB = 2;
+  for (let i = 0; i < measures.length; i += 1) {
+    if (!calculate(measures[i], measures[sideA], measures[sideB])) {
+      return false;
+    }
+    sideA -= 1;
+    if (i === 1) {
+      sideA = 0;
+      sideB -= 1;
+    }
+  }
+  return true;
 }
 
 // Desafio 13
