@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
- return boolean1 && boolean2;
+  return boolean1 && boolean2;
 }
 
 // Desafio 2
@@ -11,7 +11,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentence) {
   let wordsSentence = sentence.split(' ');
-  return wordsSentence
+  return wordsSentence;
 }
 
 // Desafio 4
@@ -21,8 +21,8 @@ function concatName(arrayString) {
 
   newString += arrayString[arrayString.length - 1];
   newString += comma;
-  newString += arrayString[0]
-  
+  newString += arrayString[0];
+
   return newString;
 }
 
@@ -32,17 +32,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(highNumbers) {
-  let highNumber = 0;
-    let countHighNumber = 0;
+function highestCount(numbers) {
+  let highNumber = numbers[0];
+  let countHighNumber = 0;
 
-    for (let i = 0; i < highNumbers.length; i += 1) {
-        highNumber < highNumbers[i] ? highNumber = highNumbers[i] : highNumber;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] === highNumber) {
+      countHighNumber += 1;
     }
-
-    for (let i = 0; i < highNumbers.length; i += 1) {
-        highNumbers[i] === highNumber ? countHighNumber += 1 : countHighNumber;
+    if (highNumber < numbers[i]) {
+      highNumber = numbers[i];
+      countHighNumber = 1;
     }
+  }
 
   return countHighNumber;
 }
@@ -51,35 +53,37 @@ function highestCount(highNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = mouse - cat1;
   let distCat2 = mouse - cat2;
+  let answer = '';
 
   if (distCat1 ** 2 === distCat2 ** 2) {
-    return 'os gatos trombam e o rato foge';
+    answer = 'os gatos trombam e o rato foge';
   } else if ((distCat1 ** 2) > (distCat2 ** 2)) {
-    return 'cat2';
+    answer = 'cat2';
   } else {
-    return 'cat1';
+    answer = 'cat1';
   }
-     
+
+  return answer;
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumbers) {
-  let newArray = [];
+function analyzeNumber(number) {
+  if (number % 5 === 0 && number % 3 === 0) {
+    return 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    return 'fizz';
+  } else if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
 
-    for (let i = 0; i < arrayNumbers.length; i += 1) {
-    
-        if (arrayNumbers[i]%5===0 && arrayNumbers[i]%3===0) {
-            newArray.push("fizzBuzz");
-        } else if (arrayNumbers[i]%3===0) {
-            newArray.push("fizz");
-        } else if (arrayNumbers[i]%5===0) {
-            newArray.push("buzz");
-        } else {
-            newArray.push("bug!");
-        }
-    }
-    
-    return newArray;
+function fizzBuzz(array) {
+  let newArray = [];
+  for (let i = 0; i < array.length; i += 1) {
+    newArray.push(analyzeNumber(array[i]));
+  }
+  return newArray;
 }
 
 // Desafio 9
@@ -101,8 +105,14 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  const sumABC = [lineA + lineB, lineA + lineC, lineB + lineC];
+
+  if (lineA < sumABC[2] && lineB < sumABC[1] && lineC < sumABC[0]) {
+    return true;
+  }
+
+  return false;
 }
 
 // Desafio 13
@@ -126,4 +136,4 @@ module.exports = {
   hydrate,
   splitSentence,
   triangleCheck,
-}
+};
