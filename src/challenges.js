@@ -95,8 +95,18 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, userName) {
+  if (techArray.length === 0) {
+    return 'Vazio!';
+  }
+
+  let techInfo = [];
+
+  techArray.sort().forEach((technology) => {
+    techInfo.push({ tech: technology, name: userName });
+  });
+
+  return techInfo;
 }
 
 // Desafio 11
