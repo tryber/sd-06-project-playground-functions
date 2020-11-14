@@ -1,71 +1,265 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(valor1, valor2) {
+  let teste;
+  if (valor1 && valor2 === true) {
+    teste = true;
+  } else {
+    teste = false;
+  }
+  return teste;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let arr = str.split(' ');
+  return arr;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  let primeiro = arr[0];
+  let ultimo = arr[arr.length - 1];
+  let str = ultimo + ', ' + primeiro;
+  return str;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let points = winsPoints + ties;
+  return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(inteiros) {
+  let indiceMaior = 0;
+  let contador = 0;
+
+  for (let indice in inteiros) {
+      if(inteiros[indiceMaior] < inteiros[indice]){
+          indiceMaior = indice;
+      }
+  }
+  for (let i in inteiros) {
+      if (inteiros[indiceMaior] === inteiros[i]) {
+          contador += 1;
+      }
+  }
+  return contador;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaC1 = Math.abs(mouse - cat1);
+  let distanciaC2 = Math.abs(mouse - cat2);
+  let msg;
+  
+  if (mouse) {
+
+  }
+  if (distanciaC1 > distanciaC2) {
+    msg = "cat2";
+  } else if (distanciaC2 > distanciaC1) {
+    msg = "cat1";
+  } else {
+    msg = "os gatos trombam e o rato foge";
+  }
+  return msg;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let resultados = [];
+  for ( let i in arr ) {
+    if ( (arr[i] % 3 === 0) && (arr[i] % 5 === 0) ) {
+      resultados.push('fizzBuzz');
+    } else if ( arr[i] % 3 === 0 ) {
+        resultados.push('fizz');
+    } else if ( arr[i] % 5 === 0 ) {
+        resultados.push('buzz');
+    } else {
+      resultados.push('bug!');
+    }
+  }
+  return resultados;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let strEncode = '';
+  for (let i in str) {
+    if(str.charAt(i) === 'a') {
+      strEncode = strEncode + '1';
+    } else if (str.charAt(i) === 'e') {
+        strEncode = strEncode + '2';
+    } else if (str.charAt(i) === 'i') {
+        strEncode = strEncode + '3';
+    } else if (str.charAt(i) === 'o') { 
+        strEncode = strEncode + '4';
+    } else if (str.charAt(i) === 'u') {
+        strEncode = strEncode + '5';
+    } else {
+       strEncode = strEncode + str.charAt(i);
+    }
+  }
+  return strEncode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(str) {
+  let strDecode = '';
+  for (let i in str) {
+    if(str.charAt(i) === '1') {
+      strDecode = strDecode + 'a';
+    } else if (str.charAt(i) === '2') {
+        strDecode = strDecode + 'e';
+    } else if (str.charAt(i) === '3') {
+        strDecode = strDecode + 'i';
+    } else if (str.charAt(i) === '4') { 
+        strDecode = strDecode + 'o';
+    } else if (str.charAt(i) === '5') {
+        strDecode = strDecode + 'u';
+    } else {
+        strDecode = strDecode + str.charAt(i);
+    }
+  }
+  return strDecode;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arr, nome) {
+  let resultados = [];
+  let msg = 'Vazio!';
+  if ( arr.length > 0) {
+    for ( let i in arr ) {
+      resultados.push( {tech: arr[i], name: nome} );
+    }
+    resultados.sort(function (a, b) {
+	
+    return (a.tech > b.tech) ? 1 : ((b.tech > a.tech) ? -1 : 0);
+     
+    });
+    return resultados;
+  } else {
+    return msg;
+  }
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arr) {
+  let tamanhoCorreto = false;
+  let numerosCorretos = false;
+  
+  function verificaTamanho(arr){
+    if (arr.length === 11) {
+      tamanhoCorreto = true;
+      return tamanhoCorreto;
+    }
+  }
+  
+  function verficaNCorretos(arr){
+    for (let i = 0; i < arr.length; i += 1) {
+      let teste = arr[i]
+      if ( teste < 0 || teste > 9) {
+        numerosCorretos = true;
+      }
+    }
+    return numerosCorretos;
+  }
+  
+  function verificaRepeticao(arr) {
+    let nTeste = 0;
+    let contador = 0;
+    let contRepetido = 0;
+    let nMaisRepetido;
+    
+    for(let i in arr){
+        nTeste = arr[i]
+        for(let indice in arr){
+            if(nTeste == arr[indice]){
+                contador += 1;
+                
+            }
+        }
+        if(contador > contRepetido){
+            contRepetido = contador;
+            nMaisRepetido = arr[i];
+        }
+        contador = 0;
+    }
+    if(contRepetido < 3) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  let vt = verificaTamanho(arr);
+  if (!vt) {
+    return 'Array com tamanho incorreto.';
+  }
+
+  let vnc = verficaNCorretos(arr);
+  let vr = verificaRepeticao(arr);
+  if (vnc || !vr) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  
+  if (vt == true && vnc == false && vr == true) {
+    let ddd = arr.slice(0, 2).join('');
+    let prefixo = arr.slice(2, 7).join('');
+    let sufixo = arr.slice(7).join('');
+    let numeroPronto = `(${ddd}) ${prefixo}-${sufixo}`;
+    return numeroPronto;
+  }
+    
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let evaluator = 0;
+  let arrayLines = [lineA, lineB, lineC];
+  for (let index in arrayLines) {
+    if (arrayLines[0] < (arrayLines[1] + arrayLines[2]) && arrayLines[0] > Math.abs(arrayLines[1] - arrayLines[2])) {
+      evaluator += 1;
+    } else if (arrayLines[1] < (arrayLines[0] + arrayLines[2]) && arrayLines[1] > Math.abs(arrayLines[0] - arrayLines[2])) {
+        evaluator +=1;
+    } else if (arrayLines[2] < (arrayLines[0] + arrayLines[1]) && arrayLines[2] > Math.abs(arrayLines[0] - arrayLines[1])) {
+        evaluator += 1;
+    }
+  }
+  if (evaluator == 3) {
+    evaluator = true;
+  } else {
+    evaluator = false;
+  }
+  return evaluator;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drink) {
+  
+  let regex = /\d+/g;
+  let qtd = drink.match(regex).map(Number);
+  let total = 0;
+  for (let i in qtd) {
+    for (let i = 0; i < qtd.length; i += 1) {
+      total += qtd[i];
+    }
+    let copos = '';
+    if (total === 1) {
+      copos = 'copo';
+    } else {
+      copos = 'copos';
+    }
+    return `${total} ${copos} de água`;
+  }
 }
-
 
 module.exports = {
   calcArea,
