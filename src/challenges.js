@@ -111,7 +111,8 @@ function encode(phrase) {
   return encodeDecode(phrase);
 }
 function decode(phrase) {
-  return encondeDecode(phrase);
+  return encodeDecode(phrase);
+}
 
 // Desafio 10
 function techList(techArray, userName) {
@@ -168,7 +169,6 @@ function hydrate(phrase) {
 
   return sum > 1 ? `${sum} copos de água` : `${sum} copo de água`;
 }
-
 
 module.exports = {
   calcArea,
