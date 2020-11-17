@@ -86,13 +86,32 @@ function fizzBuzz(array) {
   return newArray;
 }
 
+function encodeDecode(phrase) {
+  let newPhrase = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    switch (phrase[index]) {
+      case 'a': newPhrase += '1'; break;
+      case 'e': newPhrase += '2'; break;
+      case 'i': newPhrase += '3'; break;
+      case 'o': newPhrase += '4'; break;
+      case 'u': newPhrase += '5'; break;
+      case '1': newPhrase += 'a'; break;
+      case '2': newPhrase += 'e'; break;
+      case '3': newPhrase += 'i'; break;
+      case '4': newPhrase += 'o'; break;
+      case '5': newPhrase += 'u'; break;
+      default: newPhrase += phrase[index];
+    }
+  }
+  return newPhrase;
+}
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  return encodeDecode(phrase);
 }
-function decode() {
-  // seu código aqui
-}
+function decode(phrase) {
+  return encondeDecode(phrase);
 
 // Desafio 10
 function techList(techArray, userName) {
@@ -142,8 +161,12 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  let numbers = phrase.match(/\d+/g).map(Number);
+
+  let sum = numbers.reduce((accumulator, number) => (accumulator + number));
+
+  return sum > 1 ? `${sum} copos de água` : `${sum} copo de água`;
 }
 
 
