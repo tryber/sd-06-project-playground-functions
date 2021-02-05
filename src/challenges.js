@@ -1,41 +1,103 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+
+function splitSentence(phrase) {
+  return phrase.split(" ");
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+function concatName(word) {
+  return (word[word.length - 1] + ", " + word[0]);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + (ties);
+  return points;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(numeros) {
+  let contador = 0;
+  let highestNumber = numeros[0];
+
+  for (let i = 0; i < numeros.length; i += 1) {
+    if (highestNumber < numeros[i]) {
+      highestNumber = numeros[i];
+      contador = 1;
+    } else if (highestNumber === numeros[i]) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let run;
+  let pino1;
+  let pino2;
+  if (mouse > cat1 && mouse > cat2) {
+    pino1 = mouse - cat1;
+    pino2 = mouse - cat2;
+  } else if (mouse < cat1 && mouse < cat2) {
+    pino1 = cat1 - mouse;
+    pino2 = cat2 - mouse;
+    console.log("Pino1 : " + pino1)
+    console.log("pino2 : " + pino2)
+  } else if (mouse > cat2 && mouse < cat1) {
+    pino2 = mouse - cat2;
+    pino1 = cat1 - mouse;
+  } else if (mouse < cat2 && mouse > cat1) {
+    pino2 = cat2 - mouse;
+    pino1 = mouse - cat1;
+  }
+  if (pino1 === pino2) {
+    run = "os gatos trombam e o rato foge"
+  } else if (pino1 > pino2) {
+    run = "cat2"
+  } else {
+    run = "cat1"
+  }
+  return run;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+function fizzBuzz(numb) {
+  let newArray = []
+
+  for (i in numb) {
+    if (numb[i] % 3 === 0 && numb[i] % 5 != 0) {
+      newArray.push("fizz");
+    } else if (numb[i] % 5 === 0 && numb[i] % 3 != 0) {
+      newArray.push("buzz");
+    } else if (numb[i] % 3 === 0 && numb[i] % 5 === 0) {
+      newArray.push("fizzBuzz")
+    } else {
+      newArray.push("bug!")
+    }
+  }
+  return (newArray)
 }
 
 // Desafio 9
