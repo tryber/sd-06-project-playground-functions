@@ -1,16 +1,26 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(a, b) {
   // seu código aqui
+  let resultado;
+  if (a === true && b === true) {
+    resultado = true;
+  } else {
+    resultado = false;
+  }
+  return resultado;
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, altura) {
   // seu código aqui
+  return (base * altura) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(nome) {
   // seu código aqui
+  let resultado = nome.split(' ');
+  return resultado;
 }
 
 // Desafio 4
@@ -19,8 +29,11 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(vitoria, empate) {
   // seu código aqui
+  vitoria *= 3;
+  empate *= 1;
+  return vitoria + empate;
 }
 
 // Desafio 6
