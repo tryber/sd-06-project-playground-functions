@@ -1,54 +1,99 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1 , value2) {
+  if ((value1 === true) && (value2 ===true)) {
+    return true
+  } else {
+    return false
+  }
 }
 
-// Desafio 2
-function calcArea() {
-  // seu código aqui
+//Desafio 2
+function calcArea(base, heigth) {
+  return ((base * heigth) / 2);
 }
-
+ 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(prhase) {
+  let splitPhrase = prhase.split(" ");
+  return splitPhrase;
 }
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+//Desafio 4
+function concatName(names) {
+  let lastName = names.length - 1;
+  return (names[lastName] + ", " +names[0]);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = (wins * 3) + ties;
+  return totalPoints
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbersList) {
+  let repeatedNumber = 0;
+  let highestNumber = numbersList[0];
+  for (i in numbersList) {
+    if (numbersList[i] > highestNumber) {
+      highestNumber = numbersList[i];
+    }
+  }
+    for (i in numbersList) {
+      if(numbersList[i] === highestNumber) {
+        repeatedNumber+= 1;
+      }
+    }
+  return repeatedNumber;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = Math.abs(cat1 - mouse);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
+  if (distanciaCat1 === distanciaCat2) {
+    return "os gatos trombam e o rato foge"
+  } else if (distanciaCat2 < distanciaCat1) {
+    return "cat2";
+  } else {
+    return "cat1"};
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let returnArray = [];
+  for (let index = 0; index < array.length; index +=1) {
+    if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
+      returnArray.push("fizzBuzz");
+    } else if ((array[index] % 3 === 0)) {
+      returnArray.push("fizz");
+    } else if ((array[index] % 5 === 0)) {
+      returnArray.push("buzz");
+    } else {returnArray.push("bug!")};
+  }
+  return returnArray
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(myString) {
+  let codificar = { 'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5' }
+  return myString.replace(/[aeiou]/g, m => codificar[m])
 }
-function decode() {
-  // seu código aqui
+function decode(myString) {
+  let decodificar = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' }
+  return myString.replace(/[12345]/g, m => decodificar[m]);
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayTech, name) {
+  let techList = [];
+  let techObject = {};
+  for (iten in arrayTech.sort()) {
+    techList.push({tech : arrayTech[iten], name : name})
+  } if (arrayTech.length < 1) {
+    techList = "Vazio!"
+  }
+  return techList
 }
 
 // Desafio 11
