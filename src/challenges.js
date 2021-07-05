@@ -1,85 +1,138 @@
-// Desafio 1
-function compareTrue() {
-  // seu código aqui
+//Desafio 1
+function compareTrue( param1 , param2 ) {
+  if (param1 === true && param2 === true) {
+    return true;
+   } else {
+    return false;
+  }
 }
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea( base , height ) {
+let areaDoTri = (base * height) / 2;
+return areaDoTri
 }
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+return string.split(" ");
 }
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
-
+function concatName( StringArray ) {
+  return StringArray[StringArray.length-1] + ", " + StringArray[0];
+  }
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+let pontos = 3*wins + 1*ties;
+return pontos
 }
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(ArrayDeNum) { 
+var maior = 0;
+for (let i = 0; i < ArrayDeNum.length; i = i + 1) {
+  if (ArrayDeNum[i] > maior) {
+    maior = ArrayDeNum[i];
+  }
 }
-
+var contador = 0;
+for (let i = 0; i < ArrayDeNum.length; i = i + 1) {
+  if (ArrayDeNum[i] == maior) {
+    contador = contador + 1;
+  }
+}
+return contador; 
+}
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
+  if (distanciaCat1 < distanciaCat2){
+    return "cat1";
+   } else if (distanciaCat1 > distanciaCat2) {
+     return "cat2";
+   } else {
+     return "os gatos trombam e o rato foge";
+   }
 }
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
-
+function fizzBuzz(n) {
+  let fizzBuzz = [];
+    n.forEach(numero => {
+    
+    if (numero % 3==0 && numero % 5==0) {
+      fizzBuzz.push("fizzBuzz");
+    } else if (numero % 3 === 0) {
+      fizzBuzz.push("fizz");
+    } else if (numero % 5 === 0) {
+      fizzBuzz.push("buzz");
+    } else {
+      fizzBuzz.push("bug!")
+    }
+  }); 
+    return fizzBuzz;
+  }
 // Desafio 9
 function encode() {
-  // seu código aqui
+// seu código aqui
 }
+ 
 function decode() {
-  // seu código aqui
+// seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(lista, objeto) {
+if (lista.length === 0) {
+    return 'Vazio!';
+  }
+  let nameTech = [];
+  let sortedLista = lista.sort();
+  for (let i = 0; i < sortedLista.length; i ++) {
+    nameTech[i] = {
+      name: objeto,
+      tech: sortedLista[i],
+    };
+  }
+  return nameTech;
 }
-
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+// seu código aqui
 }
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+  return true;
+} else if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+  return true;
+} else if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+  return true;
 }
-
+return false;
+}
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
-
+function hydrate(bebidas) {
+    let lista = bebidas.replace(/[^0-9]/g, '');
+    let sum = 0;
+    for (let index in lista) {
+      if (sum >= 0) {
+        sum += parseInt(lista[index], 10);
+      }
+    }
+    return sum + (sum === 1 ? ' copo de água' : ' copos de água');
+  }
 
 module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  generatePhoneNumber,
-  techList,
-  highestCount,
-  hydrate,
-  splitSentence,
-  triangleCheck,
+calcArea,
+catAndMouse,
+compareTrue,
+concatName,
+decode,
+encode,
+fizzBuzz,
+footballPoints,
+generatePhoneNumber,
+techList,
+highestCount,
+hydrate,
+splitSentence,
+triangleCheck,
 }
