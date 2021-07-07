@@ -1,11 +1,15 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(boolean1, boolean2) {
+  if ((boolean1) === (boolean2)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -19,8 +23,8 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, teis) {
+  return (wins * 3) + teis;
 }
 
 // Desafio 6
@@ -34,8 +38,22 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(args) {
+  let vetor = [];
+  for (let index = 0; index < args.length; index += 1) {
+    if ((args[index] % 3 === 0) && (args[index] % 5 === 0)){ 
+      vetor[index] = "fizzBuzz";
+    } else if((args[index] % 3 !== 0) && (args[index] % 5 !== 0)){ 
+      vetor[index] = "bug!";
+    } else if (args[index] % 3 === 0){
+      vetor[index] = "fizz";
+    } else {
+      vetor[index] = "buzz";
+    } 
+  }
+  for (let index = 0; index < vetor.length; index += 1) {
+    console.log(vetor[index]);
+  }
 }
 
 // Desafio 9
